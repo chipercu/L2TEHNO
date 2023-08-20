@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="377" type="PARTY_ONE">
+		<name lang="en" val="Exploration of Giants Cave, Part 2"/>
+		<name lang="ru" val="Исследование Пещеры Гигантов, ч. 2"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="22661"/>	<!-- Lesser Giant Soldier -->
+			<event type="MOBKILLED" val="22662"/>	<!-- Lesser Giant Shooter -->
+			<event type="MOBKILLED" val="22663"/>	<!-- Lesser Giant Scout -->
+			<event type="MOBKILLED" val="22664"/>	<!-- Lesser Giant Mage -->
+			<event type="MOBKILLED" val="22665"/>	<!-- Lesser Giant Elder -->
+			<event type="MOBKILLED" val="22666"/>	<!-- Barif -->
+			<event type="MOBKILLED" val="22667"/>	<!-- Barifs Pet -->
+			<event type="MOBKILLED" val="22668"/>	<!-- Gamlin -->
+			<event type="MOBKILLED" val="22669"/>	<!-- Leogul -->
+			<event type="QUEST_START" val="31147"/>	<!-- Sobling -->
+			<event type="QUEST_TALK" val="31147"/>	<!-- Sobling -->
+			<event type="QUEST_TALK" val="31147"/>	<!-- Sobling -->
+			<item id="14847"/>	<!-- Titan Ancient Book -->
+		</setting>
+	</quest>
+</quests>

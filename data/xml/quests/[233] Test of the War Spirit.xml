@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="233" type="SOLO">
+		<name lang="en" val="Test of the War Spirit"/>
+		<name lang="ru" val="Испытание вестника"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20213"/>	<!-- Porta -->
+			<event type="MOBKILLED" val="20214"/>	<!-- Excuro -->
+			<event type="MOBKILLED" val="20215"/>	<!-- Mordeo -->
+			<event type="MOBKILLED" val="20089"/>	<!-- Noble Ant -->
+			<event type="MOBKILLED" val="20090"/>	<!-- Noble Ant Leader -->
+			<event type="MOBKILLED" val="20581"/>	<!-- Leto Lizardman Shaman -->
+			<event type="MOBKILLED" val="20582"/>	<!-- Leto Lizardman Overlord -->
+			<event type="MOBKILLED" val="20158"/>	<!-- Medusa -->
+			<event type="MOBKILLED" val="27108"/>	<!-- Stenoa Gorgon Queen -->
+			<event type="MOBKILLED" val="20601"/>	<!-- Tamlin Orc -->
+			<event type="MOBKILLED" val="20602"/>	<!-- Tamlin Orc Archer -->
+			<event type="QUEST_START" val="30510"/>	<!-- Somak -->
+			<event type="QUEST_TALK" val="30510"/>	<!-- Somak -->
+			<event type="QUEST_TALK" val="30030"/>	<!-- Vivyan -->
+			<event type="QUEST_TALK" val="30436"/>	<!-- Sarien -->
+			<event type="QUEST_TALK" val="30507"/>	<!-- Racoy -->
+			<event type="QUEST_TALK" val="30515"/>	<!-- Manakia -->
+			<event type="QUEST_TALK" val="30630"/>	<!-- Orim -->
+			<event type="QUEST_TALK" val="30649"/>	<!-- Ancestor Martankus -->
+			<event type="QUEST_TALK" val="30682"/>	<!-- Pekiron -->
+			<item id="2880"/>	<!-- Vendetta Totem -->
+			<item id="2881"/>	<!-- Tamlin Orc Head -->
+			<item id="2882"/>	<!-- Warspirit Totem -->
+			<item id="2883"/>	<!-- Orim's Contract -->
+			<item id="2884"/>	<!-- Porta's Eye -->
+			<item id="2885"/>	<!-- Excuro's Scale -->
+			<item id="2886"/>	<!-- Mordeos Talon -->
+			<item id="2887"/>	<!-- Braki's Remains -->
+			<item id="2888"/>	<!-- Pekiron's Totem -->
+			<item id="2889"/>	<!-- Tonar's Skull -->
+			<item id="2890"/>	<!-- Tonar's Rib Bone -->
+			<item id="2891"/>	<!-- Tonar's Spine -->
+			<item id="2892"/>	<!-- Tonar's Arm Bone -->
+			<item id="2893"/>	<!-- Tonar's Thigh Bone -->
+			<item id="2894"/>	<!-- Tonar's Remains -->
+			<item id="2895"/>	<!-- Manakia's Totem -->
+			<item id="2896"/>	<!-- Hermodt's Skull -->
+			<item id="2897"/>	<!-- Hermodt's Rib Bone -->
+			<item id="2898"/>	<!-- Hermodt's Spine -->
+			<item id="2899"/>	<!-- Hermodt's Arm Bone -->
+			<item id="2900"/>	<!-- Hermodt's Thigh Bone -->
+			<item id="2901"/>	<!-- Hermodt's Remains -->
+			<item id="2902"/>	<!-- Racoy's Totem -->
+			<item id="2903"/>	<!-- Vivyan's Letter -->
+			<item id="2904"/>	<!-- Insect Diagram Book -->
+			<item id="2905"/>	<!-- Kiruna's Skull -->
+			<item id="2906"/>	<!-- Kiruna's Rib Bone -->
+			<item id="2907"/>	<!-- Kiruna's Spine -->
+			<item id="2908"/>	<!-- Kiruna's Arm Bone -->
+			<item id="2909"/>	<!-- Kiruna's Thigh Bone -->
+			<item id="2910"/>	<!-- Kiruna's Remains -->
+			<item id="2911"/>	<!-- Braki's Remains -->
+			<item id="2912"/>	<!-- Tonar's Remains -->
+			<item id="2913"/>	<!-- Hermodt's Remains -->
+			<item id="2914"/>	<!-- Kiruna's Remains -->
+		</setting>
+	</quest>
+</quests>

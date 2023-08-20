@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- [RU] Настройки авто-потионов -->
+	<!-- [EN] Auto potions settings -->
+	<!-- [RU] 0 - выключено для всех (отключает все нижеперечисленные опции, интерфейс будет работать по дефолту) -->
+	<!-- [EN] 0 - disabled for all (disables all of the following options, the interface will work by default) -->
+	<!-- [RU] 1 - включено только для игроков с ПА -->
+	<!-- [EN] 1 - enabled only for PA players -->
+	<!-- [RU] 2 - включено для всех -->
+	<!-- [EN] 2 - enabled for all -->
+	<!-- [RU] Для отключения слотов с типом 4 (банки душ, для Камаэлей, тип так же следует поменять на 0 (NONE)) -->
+	<!-- [EN] To disable slots with type 4 (Soul Potions, for Kamaels, the type should also be changed to 0 (NONE)) -->
+	<interface_setting name="AutoPotionsMode" type="TYPE_CHAR" value="0"/>
+	
+	<!-- [RU] Айди предмета и задержка (в мс, 1 секунда = 1000 мс) для слота 0 -->
+	<!-- [EN] ItemID and delay (in ms, 1 second = 1000 ms) for slot 0 -->
+	<interface_setting name="ItemIdSlot0" type="TYPE_ARR_INT" value="10410"/>
+	<interface_setting name="DelaySlot0" type="TYPE_ARR_INT" value="0"/>
+	<!-- [RU] Фоновая текстура для слота 0 -->
+	<!-- [EN] Background texture for slot 0 -->
+	<interface_setting name="BackTextureSlot0" type="TYPE_TEXT" value="L2UI_CT2.AutoPotionsWnd.Souls"/>
+	<!-- [RU] Тип слота 0: 0 - NONE, 1 - CP, 2 - HP, 3 - MP, 4 - Soul Potions (Для 4 типа задержка на использование игнорируется) -->
+	<!-- [EN] Type slot 0: 0 - NONE, 1 - CP, 2 - HP, 3 - MP, 4 - Soul Potions (For type 4, the usage delay is ignored) -->
+	<interface_setting name="TypeSlot0" type="TYPE_INT" value="4"/>
+	<!-- [RU] Включить/выключить слот 0 -->
+	<!-- [EN] Enable/Disable slot 0 -->
+	<interface_setting name="ShowSlot0" type="TYPE_CHAR" value="1"/>
+
+
+	<!-- [RU] Айди предмета и задержка (в мс, 1 секунда = 1000 мс) для слота 1 -->
+	<!-- [EN] ItemID and delay (in ms, 1 second = 1000 ms) for slot 1 -->
+	<interface_setting name="ItemIdSlot1" type="TYPE_ARR_INT" value="8627"/>
+	<interface_setting name="DelaySlot1" type="TYPE_ARR_INT" value="300000"/>
+	<!-- [RU] Фоновая текстура для слота 1 -->
+	<!-- [EN] Background texture for slot 1 -->
+	<interface_setting name="BackTextureSlot1" type="TYPE_TEXT" value="L2UI_CT2.AutoPotionsWnd.Potions_Elixir_BoxHP"/>
+	<!-- [RU] Тип слота 1: 0 - NONE, 1 - CP, 2 - HP, 3 - MP, 4 - Soul Potions (Для 4 типа задержка на использование игнорируется) -->
+	<!-- [EN] Type slot 1: 0 - NONE, 1 - CP, 2 - HP, 3 - MP, 4 - Soul Potions (For type 4, the usage delay is ignored) -->
+	<interface_setting name="TypeSlot1" type="TYPE_INT" value="2"/>
+	<!-- [RU] Включить/выключить слот 1 -->
+	<!-- [EN] Enable/Disable slot 1 -->
+	<interface_setting name="ShowSlot1" type="TYPE_CHAR" value="1"/>
+
+
+	<!-- [RU] Айди предмета и задержка (в мс, 1 секунда = 1000 мс) для слота 2 -->
+	<!-- [EN] ItemID and delay (in ms, 1 second = 1000 ms) for slot 2 -->
+	<interface_setting name="ItemIdSlot2" type="TYPE_ARR_INT" value="8639"/>
+	<interface_setting name="DelaySlot2" type="TYPE_ARR_INT" value="300000"/>
+	<!-- [RU] Фоновая текстура для слота 2 -->
+	<!-- [EN] Background texture for slot 2 -->
+	<interface_setting name="BackTextureSlot2" type="TYPE_TEXT" value="L2UI_CT2.AutoPotionsWnd.Potions_Elixir_BoxCP"/>
+	<!-- [RU] Тип слота 2: 0 - NONE, 1 - CP, 2 - HP, 3 - MP, 4 - Soul Potions (Для 4 типа задержка на использование игнорируется) -->
+	<!-- [EN] Type slot 2: 0 - NONE, 1 - CP, 2 - HP, 3 - MP, 4 - Soul Potions (For type 4, the usage delay is ignored) -->
+	<interface_setting name="TypeSlot2" type="TYPE_INT" value="1"/>
+	<!-- [RU] Включить/выключить слот 2 -->
+	<!-- [EN] Enable/Disable slot 2 -->
+	<interface_setting name="ShowSlot2" type="TYPE_CHAR" value="1"/>
+
+
+	<!-- [RU] Айди предмета и задержка (в мс, 1 секунда = 1000 мс) для слота 3 -->
+	<!-- [EN] ItemID and delay (in ms, 1 second = 1000 ms) for slot 3 -->
+	<interface_setting name="ItemIdSlot3" type="TYPE_ARR_INT" value="5591"/>
+	<interface_setting name="DelaySlot3" type="TYPE_ARR_INT" value="500"/>
+	<!-- [RU] Фоновая текстура для слота 3 -->
+	<!-- [EN] Background texture for slot 3 -->
+	<interface_setting name="BackTextureSlot3" type="TYPE_TEXT" value="L2UI_CT2.AutoPotionsWnd.Potions_BoxSmallCP"/>
+	<!-- [RU] Тип слота 3: 0 - NONE, 1 - CP, 2 - HP, 3 - MP, 4 - Soul Potions (Для 4 типа задержка на использование игнорируется) -->
+	<!-- [EN] Type slot 3: 0 - NONE, 1 - CP, 2 - HP, 3 - MP, 4 - Soul Potions (For type 4, the usage delay is ignored) -->
+	<interface_setting name="TypeSlot3" type="TYPE_INT" value="1"/>
+	<!-- [RU] Включить/выключить слот 3 -->
+	<!-- [EN] Enable/Disable slot 3 -->
+	<interface_setting name="ShowSlot3" type="TYPE_CHAR" value="1"/>
+
+
+	<!-- [RU] Айди предмета и задержка (в мс, 1 секунда = 1000 мс) для слота Большого 4 -->
+	<!-- [EN] ItemID and delay (in ms, 1 second = 1000 ms) for slot Greater 4 -->
+	<interface_setting name="ItemIdSlot4" type="TYPE_ARR_INT" value="5592"/>
+	<interface_setting name="DelaySlot4" type="TYPE_ARR_INT" value="500"/>
+	<!-- [RU] Фоновая текстура для слота 4 -->
+	<!-- [EN] Background texture for slot 4 -->
+	<interface_setting name="BackTextureSlot4" type="TYPE_TEXT" value="L2UI_CT2.AutoPotionsWnd.Potions_BoxCP"/>
+	<!-- [RU] Тип слота 4: 0 - NONE, 1 - CP, 2 - HP, 3 - MP, 4 - Soul Potions (Для 4 типа задержка на использование игнорируется) -->
+	<!-- [EN] Type slot 4: 0 - NONE, 1 - CP, 2 - HP, 3 - MP, 4 - Soul Potions (For type 4, the usage delay is ignored) -->
+	<interface_setting name="TypeSlot4" type="TYPE_INT" value="1"/>
+	<!-- [RU] Включить/выключить слот 4 -->
+	<!-- [EN] Enable/Disable slot 4 -->
+	<interface_setting name="ShowSlot4" type="TYPE_CHAR" value="1"/>
+
+
+	<!-- [RU] Айди предмета и задержка (в мс, 1 секунда = 1000 мс) для слота 5 -->
+	<!-- [EN] ItemID and delay (in ms, 1 second = 1000 ms) for slot 5 -->
+	<interface_setting name="ItemIdSlot5" type="TYPE_ARR_INT" value="1539;1540"/>
+	<interface_setting name="DelaySlot5" type="TYPE_ARR_INT" value="10000;1500"/>
+	<!-- [RU] Фоновая текстура для слота 5 -->
+	<!-- [EN] Background texture for slot 5 -->
+	<interface_setting name="BackTextureSlot5" type="TYPE_TEXT" value="L2UI_CT2.AutoPotionsWnd.Potions_BoxHP"/>
+	<!-- [RU] Тип слота 5: 0 - NONE, 1 - CP, 2 - HP, 3 - MP, 4 - Soul Potions (Для 4 типа задержка на использование игнорируется) -->
+	<!-- [EN] Type slot 5: 0 - NONE, 1 - CP, 2 - HP, 3 - MP, 4 - Soul Potions (For type 4, the usage delay is ignored) -->
+	<interface_setting name="TypeSlot5" type="TYPE_INT" value="2"/>
+	<!-- [RU] Включить/выключить слот 5 -->
+	<!-- [EN] Enable/Disable slot 5 -->
+	<interface_setting name="ShowSlot5" type="TYPE_CHAR" value="1"/>
+
+
+	<!-- [RU] Айди предмета и задержка (в мс, 1 секунда = 1000 мс) для слота 6 -->
+	<!-- [EN] ItemID and delay (in ms, 1 second = 1000 ms) for slot 6 -->
+	<interface_setting name="ItemIdSlot6" type="TYPE_ARR_INT" value="728"/>
+	<interface_setting name="DelaySlot6" type="TYPE_ARR_INT" value="9000"/>
+	<!-- [RU] Фоновая текстура для слота 6 -->
+	<!-- [EN] Background texture for slot 6 -->
+	<interface_setting name="BackTextureSlot6" type="TYPE_TEXT" value="L2UI_CT2.AutoPotionsWnd.Potions_BoxMP"/>
+	<!-- [RU] Тип слота 6: 0 - NONE, 1 - CP, 2 - HP, 3 - MP, 4 - Soul Potions (Для 4 типа задержка на использование игнорируется) -->
+	<!-- [EN] Type slot 6: 0 - NONE, 1 - CP, 2 - HP, 3 - MP, 4 - Soul Potions (For type 4, the usage delay is ignored) -->
+	<interface_setting name="TypeSlot6" type="TYPE_INT" value="3"/>
+	<!-- [RU] Включить/выключить слот 6 -->
+	<!-- [EN] Enable/Disable slot 6 -->
+	<interface_setting name="ShowSlot6" type="TYPE_CHAR" value="1"/>
+	
+</list>

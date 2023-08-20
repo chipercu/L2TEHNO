@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="11416" name="Dark Crystal Shield" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
+		<set name="weight" val="1190" />
+		<set name="crystal_type" val="A" />
+		<set name="crystal_count" val="75" />
+		<set name="shield_def" val="243" />
+		<set name="shield_def_rate" val="20" />
+		<set name="price" val="935000" />
+		<skills>
+			<skill id="3729" lvl="1" />
+		</skills>
+		<set name="isRare" val="true" />
+        <set name="avoid_modify" val="-8" />
+	</weapon>
+	<weapon id="11425" name="Sealed Dark Crystal Shield" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_dark_crystal_shield_i02" />
+		<set name="weight" val="1190" />
+		<set name="crystal_type" val="A" />
+		<set name="crystal_count" val="75" />
+		<set name="shield_def" val="243" />
+		<set name="shield_def_rate" val="20" />
+		<set name="price" val="935000" />
+		<set name="isRare" val="true" />
+        <set name="avoid_modify" val="-8" />
+	</weapon>
+	<weapon id="11469" name="Sealed Shield of Nightmare" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_shield_of_nightmare_i02" />
+		<set name="weight" val="1180" />
+		<set name="crystal_type" val="A" />
+		<set name="crystal_count" val="114" />
+		<set name="shield_def" val="256" />
+		<set name="shield_def_rate" val="20" />
+		<set name="price" val="1422000" />
+		<set name="isRare" val="true" />
+        <set name="avoid_modify" val="-8" />
+	</weapon>
+	<weapon id="11480" name="Shield of Nightmare" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
+		<set name="weight" val="1180" />
+		<set name="crystal_type" val="A" />
+		<set name="crystal_count" val="114" />
+		<set name="shield_def" val="256" />
+		<set name="shield_def_rate" val="20" />
+		<set name="price" val="1422000" />
+		<skills>
+			<skill id="3774" lvl="1" />
+		</skills>
+		<set name="isRare" val="true" />
+        <set name="avoid_modify" val="-8" />
+	</weapon>
+</list>

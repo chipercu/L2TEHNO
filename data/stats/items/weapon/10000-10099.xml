@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="10003" name="Fleuret" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_rapier_i00"/>
+		<set name="weight" val="1500"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="915"/>
+		<set name="p_dam" val="46"/>
+		<set name="m_dam" val="32"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="495500"/>
+		<enchant4_skill id="3426" lvl="1"/>
+	</weapon>
+	<weapon id="10004" name="Dynasty Dual Sword" type="DUAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dual_sword_i00"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="405"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<enchant4_skill id="3411" lvl="1"/>
+	</weapon>
+	<weapon id="10005" name="Shadow Item: Fleuret" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_rapier_i00"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<set name="crystal_type" val="D"/>
+		<set name="p_dam" val="46"/>
+		<set name="m_dam" val="32"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="durability" val="90"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="kamaelAnalog" val="8822"/>
+	</weapon>
+	<weapon id="10006" name="Shadow Item: Military Talwar" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_tulwar_i00"/>
+		<set name="weight" val="693"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<set name="crystal_type" val="D"/>
+		<set name="p_dam" val="55"/>
+		<set name="m_dam" val="32"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="durability" val="90"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="kamaelAnalog" val="8821"/>
+	</weapon>
+	<weapon id="10007" name="Shadow Item: Hand Crossbow" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_hunting_gun_i00"/>
+		<set name="weight" val="693"/>
+		<set name="soulshots" val="4"/>
+		<set name="spiritshots" val="2"/>
+		<set name="crystal_type" val="D"/>
+		<set name="p_dam" val="64"/>
+		<set name="m_dam" val="32"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="durability" val="90"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="kamaelAnalog" val="8828"/>
+	</weapon>
+	<weapon id="10008" name="Shadow Item: Blinzlasher" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_blink_slasher_i00"/>
+		<set name="weight" val="467"/>
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<set name="crystal_type" val="C"/>
+		<set name="p_dam" val="126"/>
+		<set name="m_dam" val="76"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="durability" val="120"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="kamaelAnalog" val="8926"/>
+	</weapon>
+	<weapon id="10009" name="Shadow Item: Immortal Edge" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_invincible_blade_i00"/>
+		<set name="weight" val="660"/>
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<set name="crystal_type" val="C"/>
+		<set name="p_dam" val="151"/>
+		<set name="m_dam" val="76"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="durability" val="120"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="kamaelAnalog" val="8933"/>
+	</weapon>
+	<weapon id="10010" name="Shadow Item: Tathlum" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_taslam_i00"/>
+		<set name="weight" val="587"/>
+		<set name="soulshots" val="5"/>
+		<set name="spiritshots" val="3"/>
+		<set name="crystal_type" val="C"/>
+		<set name="p_dam" val="176"/>
+		<set name="m_dam" val="76"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="durability" val="120"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="kamaelAnalog" val="8932"/>
+	</weapon>
+	<weapon id="10011" name="Shadow Item - War Axe" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_war_axe_i00"/>
+		<set name="weight" val="533"/>
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<set name="crystal_type" val="C"/>
+		<set name="p_dam" val="139"/>
+		<set name="m_dam" val="76"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="durability" val="120"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</weapon>
+</list>

@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+
+    <armor id="16300" name="Moirai Gloves" type="NONE">
+		<set name="icon" val="icon.armor_t102_g_i00" />		
+		<set name="bodypart" val="GLOVES" />
+		<set name="crystal_count" val="404" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="510" />
+		<set name="price" val="8418000" />
+		<set name="p_def" val="64" />
+        <skills>
+			<skill id="8432" lvl="1" /> 			
+		</skills>	
+	</armor>
+	<armor id="16301" name="Moirai Boots" type="NONE">
+		<set name="icon" val="icon.armor_t100_b_i00" />		
+		<set name="bodypart" val="FEET" />       		
+		<set name="crystal_count" val="404" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="1070" />
+		<set name="price" val="8418000" />
+        <set name="p_def" val="64" />
+        <skills>
+			<skill id="8422" lvl="1" /> 			
+		</skills>				
+		
+	</armor>
+	<armor id="16302" name="Moirai Leather Boots" type="NONE">
+		<set name="icon" val="icon.armor_t101_b_i00" />		
+		<set name="bodypart" val="FEET" />		
+		<set name="crystal_count" val="404" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="1070" />
+		<set name="price" val="8418000" />
+        <set name="p_def" val="64" />
+        <skills>
+			<skill id="8428" lvl="1" /> 			
+		</skills>				
+	</armor>
+	<armor id="16303" name="Moirai Shoes" type="NONE">
+		<set name="icon" val="icon.armor_t102_b_i00" />
+		<set name="bodypart" val="FEET" />
+		<set name="crystal_count" val="404" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="1070" />
+		<set name="price" val="8418000" />
+        <set name="p_def" val="64" />
+        <skills>
+			<skill id="8433" lvl="1" /> 			
+		</skills>				
+	</armor>
+	<armor id="16305" name="Moirai Sigil" type="SIGIL">
+		<set name="icon" val="icon.weapon_tysandy_sigil_i01" />
+		<set name="bodypart" val="LHAND" />
+		<set name="crystal_count" val="424" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="920" />
+		<set name="price" val="8839000" />
+		<set name="avoid_modify" val="-8" />
+        <set name="p_def" val="16" />
+        <skills>
+			<skill id="8434" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="16306" name="Vesper Helmet" type="NONE">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="bodypart" val="HEAD" />
+		<set name="crystal_count" val="840" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="530" />
+		<set name="price" val="17500000" />
+		<set name="p_def" val="101" />
+        <skills>
+			<skill id="8435" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="16307" name="Vesper Leather Helmet" type="NONE">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />		
+		<set name="bodypart" val="HEAD" />		
+		<set name="crystal_count" val="840" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="530" />
+		<set name="price" val="17500000" />		
+        <set name="p_def" val="101" />
+        <skills>
+			<skill id="8441" lvl="1" />
+		</skills>		
+	</armor>
+	<armor id="16308" name="Vesper Circlet" type="NONE">
+		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="bodypart" val="HEAD" />
+		<set name="crystal_count" val="840" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="530" />
+		<set name="price" val="17500000" />
+        <set name="p_def" val="101" />
+        <skills>
+			<skill id="8446" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="16309" name="Vesper Breastplate" type="HEAVY">
+		<set name="icon" val="icon.armor_t94_u_i00" />
+		<set name="bodypart" val="CHEST" />
+		<set name="crystal_count" val="2240" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="7520" />
+		<set name="price" val="46668000" />
+        <set name="p_def" val="250" />
+        <skills>
+			<skill id="8436" lvl="1" />
+		</skills>        
+	</armor>
+	<armor id="16310" name="Vesper Leather Breastplate" type="LIGHT">
+		<set name="icon" val="icon.armor_t95_u_i00" />		
+		<set name="bodypart" val="CHEST" />
+		<set name="crystal_count" val="1680" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="4140" />
+		<set name="price" val="35000000" />
+        <set name="p_def" val="187" />			
+        <skills>
+			<skill id="8442" lvl="1" />
+		</skills>		
+	</armor>
+	<armor id="16311" name="Vesper Tunic" type="MAGIC">
+		<set name="icon" val="icon.armor_t96_u_i00" />		
+		<set name="bodypart" val="CHEST" />
+		<set name="crystal_count" val="1680" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="1750" />
+		<set name="price" val="35000000" />
+        <set name="p_def" val="125" />
+        <skills>
+			<skill id="8447" lvl="1" />
+		</skills>        
+	</armor>
+	<armor id="16312" name="Vesper Gaiter" type="HEAVY">
+		<set name="icon" val="icon.armor_t94_l_i00" />		
+		<set name="bodypart" val="LEGS" />
+		<set name="crystal_count" val="1400" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="3170" />
+		<set name="price" val="29168000" />
+        <set name="p_def" val="156" />
+        <skills>
+			<skill id="8437" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="16313" name="Vesper Leather Legging" type="LIGHT">
+		<set name="icon" val="icon.armor_t95_l_i00" />
+		<set name="bodypart" val="LEGS" />
+		<set name="crystal_count" val="1050" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="1320" />
+		<set name="price" val="21876000" />
+        <set name="p_def" val="117" />
+        <skills>
+			<skill id="8443" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="16314" name="Vesper Stockings" type="MAGIC">
+		<set name="icon" val="icon.armor_t96_l_i00" />
+		<set name="bodypart" val="LEGS" />
+		<set name="crystal_count" val="1050" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="850" />
+		<set name="price" val="21876000" />
+        <set name="p_def" val="78" />
+        <skills>
+			<skill id="8448" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="16315" name="Vesper Gauntlet" type="NONE">
+		<set name="icon" val="icon.armor_t94_g_i00" />
+		<set name="bodypart" val="GLOVES" />
+		<set name="crystal_count" val="560" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="510" />
+		<set name="price" val="11667000" />
+        <set name="p_def" val="68" />
+        <skills>
+			<skill id="8438" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="16316" name="Vesper Leather GLOVES" type="NONE">
+		<set name="icon" val="icon.armor_t95_g_i00" />
+		<set name="bodypart" val="GLOVES" />
+		<set name="crystal_count" val="560" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="510" />
+		<set name="price" val="11667000" />
+        <set name="p_def" val="68" />
+        <skills>
+			<skill id="8444" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="16317" name="Vesper GLOVES" type="NONE">
+		<set name="icon" val="icon.armor_t96_g_i00" />
+		<set name="bodypart" val="GLOVES" />
+		<set name="crystal_count" val="560" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="510" />
+		<set name="price" val="11667000" />
+        <set name="p_def" val="68" />
+        <skills>
+			<skill id="8449" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="16318" name="Vesper Boots" type="NONE">
+		<set name="icon" val="icon.armor_t94_b_i00" />
+		<set name="bodypart" val="FEET" />
+		<set name="crystal_count" val="560" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="1070" />
+		<set name="price" val="11667000" />
+        <set name="p_def" val="68" />
+        <skills>
+			<skill id="8439" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="16319" name="Vesper Leather Boots" type="NONE">
+		<set name="icon" val="icon.armor_t95_b_i00" />
+		<set name="bodypart" val="FEET" />
+		<set name="crystal_count" val="560" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="1070" />
+		<set name="price" val="11667000" />
+		<set name="item_skill" val="8445-1" />
+        <set name="p_def" val="68" />
+        <skills>
+			<skill id="8445" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="16320" name="Vesper Shoes" type="NONE">
+		<set name="icon" val="icon.armor_t96_b_i00" />
+		<set name="bodypart" val="FEET" />
+		<set name="crystal_count" val="560" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="1070" />
+		<set name="price" val="11667000" />
+        <set name="p_def" val="68" />
+        <skills>
+			<skill id="8450" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="16322" name="Vesper Sigil" type="SIGIL">
+		<set name="icon" val="icon.verper_sigil_i01" />
+		<set name="bodypart" val="LHAND" />
+		<set name="crystal_count" val="588" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="920" />
+		<set name="avoid_modify" val="-8" />
+		<set name="price" val="12250000" />
+        <set name="p_def" val="17" />
+        <skills>
+			<skill id="8451" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="16323" name="Sealed Moirai Helmet" type="NONE">
+		<set name="icon" val="icon.armor_helmet_i02" />
+		<set name="bodypart" val="HEAD" />
+		<set name="crystal_count" val="606" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="530" />
+		<set name="price" val="12627000" />
+        <set name="p_def" val="96" />
+	</armor>
+	<armor id="16324" name="Sealed Moirai Leather Helmet" type="NONE">
+		<set name="icon" val="icon.armor_leather_helmet_i02" />
+		<set name="bodypart" val="HEAD" />
+		<set name="crystal_count" val="606" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="530" />
+		<set name="price" val="12627000" />
+        <set name="p_def" val="96" />
+	</armor>
+	<armor id="16325" name="Sealed Moirai Circlet" type="NONE">
+		<set name="icon" val="icon.armor_circlet_i02" />
+		<set name="bodypart" val="HEAD" />
+		<set name="crystal_count" val="606" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="530" />
+		<set name="price" val="12627000" />
+        <set name="p_def" val="96" />
+	</armor>
+	<armor id="16326" name="Sealed Moirai Breastplate" type="HEAVY">
+		<set name="icon" val="icon.armor_t94_u_i02" />
+		<set name="bodypart" val="CHEST" />
+		<set name="crystal_count" val="1616" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="7520" />
+		<set name="price" val="33673000" />
+        <set name="p_def" val="225" />
+	</armor>
+	<armor id="16327" name="Sealed Moirai Leather Breastplate" type="LIGHT">
+		<set name="icon" val="icon.armor_t95_u_i02" />
+		<set name="bodypart" val="CHEST" />
+		<set name="crystal_count" val="1212" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="4140" />
+		<set name="price" val="25255000" />
+        <set name="p_def" val="169" />
+	</armor>
+	<armor id="16328" name="Sealed Moirai Tunic" type="MAGIC">
+		<set name="icon" val="icon.armor_t96_u_i02" />
+		<set name="bodypart" val="CHEST" />
+		<set name="crystal_count" val="1212" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="1750" />
+		<set name="price" val="25255000" />
+        <set name="p_def" val="112" />
+	</armor>
+	<armor id="16329" name="Sealed Moirai Gaiter" type="HEAVY">
+		<set name="icon" val="icon.armor_t94_l_i02" />
+		<set name="bodypart" val="LEGS" />
+		<set name="crystal_count" val="1010" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="3170" />
+		<set name="price" val="21046000" />
+        <set name="p_def" val="141" />
+	</armor>
+	<armor id="16330" name="Sealed Moirai Leather Legging" type="LIGHT">
+		<set name="icon" val="icon.armor_t95_l_i02" />
+		<set name="bodypart" val="LEGS" />
+		<set name="crystal_count" val="758" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="1320" />
+		<set name="price" val="15784000" />
+        <set name="p_def" val="105" />
+	</armor>
+	<armor id="16331" name="Sealed Moirai Stockings" type="MAGIC">
+		<set name="icon" val="icon.armor_t96_l_i02" />
+		<set name="bodypart" val="LEGS" />
+		<set name="crystal_count" val="758" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="850" />
+		<set name="price" val="15784000" />
+        <set name="p_def" val="70" />
+	</armor>
+	<armor id="16332" name="Sealed Moirai Gauntlet" type="NONE">
+		<set name="icon" val="icon.armor_t94_g_i02" />
+		<set name="bodypart" val="GLOVES" />
+		<set name="crystal_count" val="404" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="510" />
+		<set name="price" val="8418000" />
+        <set name="p_def" val="64" />
+	</armor>
+	<armor id="16333" name="Sealed Moirai Leather GLOVES" type="NONE">
+		<set name="icon" val="icon.armor_t95_g_i02" />
+		<set name="bodypart" val="GLOVES" />
+		<set name="crystal_count" val="404" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="510" />
+		<set name="price" val="8418000" />
+        <set name="p_def" val="64" />
+	</armor>
+	<armor id="16334" name="Sealed Moirai GLOVES" type="NONE">
+		<set name="icon" val="icon.armor_t96_g_i02" />
+		<set name="bodypart" val="GLOVES" />
+		<set name="crystal_count" val="404" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="510" />
+		<set name="price" val="8418000" />
+        <set name="p_def" val="64" />
+	</armor>
+	<armor id="16335" name="Sealed Moirai Boots" type="NONE">
+		<set name="icon" val="icon.armor_t94_b_i02" />
+		<set name="bodypart" val="FEET" />
+		<set name="crystal_count" val="404" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="1070" />
+		<set name="price" val="8418000" />
+        <set name="p_def" val="64" />
+	</armor>
+	<armor id="16336" name="Sealed Moirai Leather Boots" type="NONE">
+		<set name="icon" val="icon.armor_t95_b_i02" />
+		<set name="bodypart" val="FEET" />
+		<set name="crystal_count" val="404" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="1070" />
+		<set name="price" val="8418000" />
+        <set name="p_def" val="64" />
+	</armor>
+	<armor id="16337" name="Sealed Moirai Shoes" type="NONE">
+		<set name="icon" val="icon.armor_t96_b_i02" />
+		<set name="bodypart" val="FEET" />
+		<set name="crystal_count" val="404" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="1070" />
+		<set name="price" val="8418000" />
+        <set name="p_def" val="64" />
+	</armor>
+	<armor id="16338" name="Sealed Moirai Shield" type="NONE">
+		<set name="icon" val="icon.weapon_tysandy_shield_i00" />
+		<set name="bodypart" val="LHAND" />
+		<set name="crystal_count" val="424" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="1190" />
+		<set name="price" val="8839000" />		
+		<set name="shield_def" val="337" />
+		<set name="avoid_modify" val="-8" />
+		<set name="shield_def_rate" val="20" />		
+	</armor>
+	<armor id="16339" name="Sealed Moirai Sigil" type="SIGIL">
+		<set name="icon" val="icon.weapon_tysandy_sigil_i00" />		
+		<set name="crystal_count" val="424" />
+		<set name="crystal_type" val="S80" />
+		<set name="weight" val="920" />
+		<set name="price" val="8839000" />
+		<set name="avoid_modify" val="-8" />
+        <set name="p_def" val="16" />
+        <set name="isRare" val="true" />
+	</armor>
+	<armor id="16340" name="Sealed Vesper Helmet" type="NONE">
+		<set name="icon" val="icon.armor_helmet_i02" />
+		<set name="bodypart" val="HEAD" />
+		<set name="crystal_count" val="840" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="530" />
+		<set name="price" val="17500000" />
+        <set name="p_def" val="101" />
+	</armor>
+	<armor id="16341" name="Sealed Vesper Leather Helmet" type="NONE">
+		<set name="icon" val="icon.armor_leather_helmet_i02" />
+		<set name="bodypart" val="HEAD" />
+		<set name="crystal_count" val="840" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="530" />
+		<set name="price" val="17500000" />
+        <set name="p_def" val="101" />
+	</armor>
+	<armor id="16342" name="Sealed Vesper Circlet" type="NONE">
+		<set name="icon" val="icon.armor_circlet_i02" />
+		<set name="bodypart" val="HEAD" />
+		<set name="crystal_count" val="840" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="530" />
+		<set name="price" val="17500000" />
+        <set name="p_def" val="101" />
+	</armor>
+	<armor id="16343" name="Sealed Vesper Breastplate" type="HEAVY">
+		<set name="icon" val="icon.armor_t94_u_i02" />
+		<set name="bodypart" val="CHEST" />
+		<set name="crystal_count" val="2240" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="7520" />
+		<set name="price" val="46668000" />
+        <set name="p_def" val="250" />
+	</armor>
+	<armor id="16344" name="Sealed Vesper Leather Leather Breastplate" type="LIGHT">
+		<set name="icon" val="icon.armor_t95_u_i02" />
+		<set name="bodypart" val="CHEST" />
+		<set name="crystal_count" val="1680" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="4140" />
+		<set name="price" val="35000000" />
+        <set name="p_def" val="187" />
+	</armor>
+	<armor id="16345" name="Sealed Vesper Tunic" type="MAGIC">
+		<set name="icon" val="icon.armor_t96_u_i02" />
+		<set name="bodypart" val="CHEST" />
+		<set name="crystal_count" val="1680" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="1750" />
+		<set name="price" val="35000000" />
+        <set name="p_def" val="125" />
+	</armor>
+	<armor id="16346" name="Sealed Vesper Gaiter" type="HEAVY">
+		<set name="icon" val="icon.armor_t94_l_i02" />
+		<set name="bodypart" val="LEGS" />
+		<set name="crystal_count" val="1400" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="3170" />
+		<set name="price" val="29168000" />
+        <set name="p_def" val="148" />
+	</armor>
+	<armor id="16347" name="Sealed Vesper Leather Legging" type="LIGHT">
+		<set name="icon" val="icon.armor_t95_l_i02" />
+		<set name="bodypart" val="LEGS" />
+		<set name="crystal_count" val="1050" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="1320" />
+		<set name="price" val="21876000" />
+        <set name="p_def" val="111" />
+	</armor>
+	<armor id="16348" name="Sealed Vesper Stockings" type="MAGIC">
+		<set name="icon" val="icon.armor_t96_l_i02" />
+		<set name="bodypart" val="LEGS" />
+		<set name="crystal_count" val="1050" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="850" />
+		<set name="price" val="21876000" />
+        <set name="p_def" val="74" />
+	</armor>
+	<armor id="16349" name="Sealed Vesper Gauntlet" type="NONE">
+		<set name="icon" val="icon.armor_t94_g_i02" />
+		<set name="bodypart" val="GLOVES" />
+		<set name="crystal_count" val="560" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="510" />
+		<set name="price" val="11667000" />
+        <set name="p_def" val="68" />
+	</armor>
+	<armor id="16350" name="Sealed Vesper Leather GLOVES" type="NONE">
+		<set name="icon" val="icon.armor_t95_g_i02" />
+		<set name="bodypart" val="GLOVES" />
+		<set name="crystal_count" val="560" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="510" />
+		<set name="price" val="11667000" />
+        <set name="p_def" val="68" />
+	</armor>
+	<armor id="16351" name="Sealed Vesper GLOVES" type="NONE">
+		<set name="icon" val="icon.armor_t96_g_i02" />
+		<set name="bodypart" val="GLOVES" />
+		<set name="crystal_count" val="560" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="510" />
+		<set name="price" val="11667000" />
+        <set name="p_def" val="68" />
+	</armor>
+	<armor id="16352" name="Sealed Vesper Boots" type="NONE">
+		<set name="icon" val="icon.armor_t94_b_i02" />
+		<set name="bodypart" val="FEET" />
+		<set name="crystal_count" val="560" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="1070" />
+		<set name="price" val="11667000" />
+        <set name="p_def" val="68" />
+	</armor>
+	<armor id="16353" name="Sealed Vesper Leather Boots" type="NONE">
+		<set name="icon" val="icon.armor_t95_b_i02" />
+		<set name="bodypart" val="FEET" />
+		<set name="crystal_count" val="560" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="1070" />
+		<set name="price" val="11667000" />
+        <set name="p_def" val="68" />
+	</armor>
+	<armor id="16354" name="Sealed Vesper Shoes" type="NONE">
+		<set name="icon" val="icon.armor_t96_b_i02" />
+		<set name="bodypart" val="FEET" />
+		<set name="crystal_count" val="560" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="1070" />
+		<set name="price" val="11667000" />
+        <set name="p_def" val="68" />
+	</armor>
+	<armor id="16356" name="Sealed Vesper Sigil" type="NONE">
+		<set name="icon" val="icon.armor_verper_sigil_i01" />
+		<set name="armor_type" val="sigil" />
+		<set name="bodypart" val="LHAND" />
+		<set name="crystal_count" val="588" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="920" />
+		<set name="avoid_modify" val="-8" />
+		<set name="price" val="12250000" />
+        <set name="p_def" val="17" />
+	</armor>
+	<armor id="16369" name="Sealed Vesper Ring" type="NONE">
+		<set name="icon" val="icon.vesper_ring_i01" />
+		<set name="bodypart" val="LRFINGER" />
+		<set name="crystal_count" val="247" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="150" />
+		<set name="price" val="5142000" />
+        <set name="m_def" val="55" />
+	</armor>
+	<armor id="16370" name="Sealed Vesper Earring" type="NONE">
+		<set name="icon" val="icon.vesper_earring_i01" />
+		<set name="bodypart" val="LREAR" />
+		<set name="crystal_count" val="370" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="150" />
+		<set name="price" val="7713000" />
+        <set name="m_def" val="83" />
+	</armor>
+	<armor id="16371" name="Sealed Vesper Necklace" type="NONE">
+		<set name="icon" val="icon.vesper_necklace_i01" />
+		<set name="bodypart" val="NECK" />
+		<set name="crystal_count" val="494" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="150" />
+		<set name="price" val="10284000" />
+        <set name="m_def" val="110" />
+	</armor>
+	<armor id="16372" name="Sealed Moirai Ring" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="LRFINGER" />
+		<set name="icon" val="accessary_sealed_bluelycan_ring_i00" />
+		<set name="weight" val="150" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="263" />
+		<set name="m_def" val="54" />
+		<set name="price" val="5480000" />
+	</armor>
+	<armor id="16373" name="Sealed Moirai Earring" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="LREAR" />
+		<set name="icon" val="accessary_sealed_bluelycan_earring_i00" />
+		<set name="weight" val="150" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="395" />
+		<set name="m_def" val="76" />
+		<set name="price" val="8221000" />
+	</armor>
+	<armor id="16374" name="Sealed Moirai Necklace" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="NECK" />
+		<set name="icon" val="accessary_sealed_bluelycan_necklace_i00" />
+		<set name="weight" val="150" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="526" />
+		<set name="m_def" val="101" />
+		<set name="price" val="10961000" />
+	</armor>
+    <armor id="16375" name="Vesper Ring" type="NONE">
+		<set name="icon" val="icon.vesper_ring_i00" />
+		<set name="bodypart" val="LRFINGER" />
+		<set name="crystal_count" val="365" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="150" />
+		<set name="price" val="7596000" />
+        <set name="m_def" val="62" />
+		<set name="mp_bonus" val="25" />
+        <skills>
+			<skill id="8457" lvl="1" />
+		</skills>		
+	</armor>
+	<armor id="16376" name="Vesper Earring" type="NONE">
+		<set name="icon" val="icon.vesper_earring_i00" />
+		<set name="bodypart" val="LREAR" />
+		<set name="crystal_count" val="547" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="150" />
+		<set name="price" val="11394000" />
+        <set name="m_def" val="94" />
+		<set name="mp_bonus" val="37" />
+        <skills>
+			<skill id="8455" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="16377" name="Vesper Necklace" type="NONE">
+		<set name="icon" val="icon.vesper_Necklace_i00" />
+		<set name="bodypart" val="NECK" />
+		<set name="crystal_count" val="729" />
+		<set name="crystal_type" val="S84" />
+		<set name="weight" val="150" />
+		<set name="mp_bonus" val="50" />
+		<set name="price" val="15192000" />
+        <set name="m_def" val="125" />
+        <skills>
+			<skill id="8456" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="16378" name="Moirai Ring" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="LRFINGER" />
+		<set name="icon" val="accessary_bluelycan_ring_i00" />
+		<set name="weight" val="150" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="263" />
+		<set name="m_def" val="61" />
+		<set name="mp_bonus" val="24" />
+		<set name="price" val="5480000" />
+		<skills>
+			<skill id="8454" lvl="1"/>
+		</skills>
+	</armor>
+	<armor id="16379" name="Moirai Earring" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="LREAR" />
+		<set name="icon" val="accessary_bluelycan_earring_i00" />
+		<set name="weight" val="150" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="395" />
+		<set name="m_def" val="86" />
+		<set name="mp_bonus" val="36" />
+		<set name="price" val="8221000" />
+		<skills>
+			<skill id="8452" lvl="1"/>
+		</skills>
+	</armor>
+	<armor id="16380" name="Moirai Necklace" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="NECK" />
+		<set name="icon" val="accessary_bluelycan_necklace_i00" />
+		<set name="weight" val="150" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="526" />
+		<set name="m_def" val="115" />
+		<set name="mp_bonus" val="48" />
+		<set name="price" val="10961000" />
+		<skills>
+			<skill id="8453" lvl="1"/>
+		</skills>
+	</armor>
+
+	<armor id="16399" type="NONE" name="Teddy Boy Summon Bracelet - Permanent Use">
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
+		<set name="bodypart" val="LBRACELET" />
+		<set name="weight" val="150" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<skills>
+			<skill id="8458" lvl="1"/>
+			<skill id="8259" lvl="1"/>
+			<skill id="5958" lvl="1"/>
+		</skills>
+	</armor>
+</list>

@@ -1,0 +1,169 @@
+<html>
+<body>
+<center>
+<br>
+<img src="L2UI.SquareWhite" width=740 height=1>
+<table width="740" bgcolor="FFFFFF" border=0 height=32 cellspacing=0 cellpadding=0>
+	<tr>
+		<td>
+			<center>
+				%menu%
+			</center>
+		</td>
+	</tr>
+</table>
+<img src="L2UI.SquareWhite" width=740 height=1><br>
+<center><font color=3293F3>Добро пожаловать в панель управления ботами :)</font></center><br>
+<table border=0>
+	<tr>
+		<td>
+			<button value="Обновить" action="bypass -h admin_bot_create_point" width=120 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+		<td>
+			<button value="Назад" action="bypass -h admin_bot" width=120 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+	<tr>
+</table>
+<table width=680 bgcolor="eeeeee" border=0>
+	<tr>
+		<td width=22>
+			%cnopka%
+		</td>
+		<td width=22>
+			<button value="Удалить файл задач" action="bypass -h admin_bot_create_point_clear_file" width=140 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+		<td width=22>
+			<button value="Очистить шаги" action="bypass -h admin_bot_create_point_clear_node" width=140 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+		<td width=22>
+			<button value="Перезагрузить задачи" action="bypass -h admin_bot_reload_move" width=140 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+		<td width=22>
+			<button value="Список задач" action="bypass -h admin_bot_edit_list" width=114 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+	</tr>
+</table>
+%freeway_info%
+<table bgcolor=000000 border=0>
+	<tr>
+		<td>
+			<table>
+				<tr>
+					<td width=150>
+						<font align=center color=00FF00>              Разброс координат:</font>
+					</td>
+					<td height=25>
+						<edit var="rnd" width=35 height=13>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<font align=center color=00FF00>    Минимальная задержка:</font>
+					</td>
+					<td height=25>
+						<edit var="delay_min" width=60 height=13>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<font align=center color=00FF00>  Максимальная задержка:</font>
+					</td>
+					<td height=25>
+						<edit var="delay_max" width=60 height=13>
+					</td>
+				</tr>
+				<tr>
+					<td height=25>
+						<font align=center color=00FF00>                               Действие:</font>
+					</td>
+					<td>
+						<combobox width=90 var="action" list="move;teleport;pickup;action_move;action_teleport;action_pickup;move_atack;cast">
+					</td>
+				</tr>
+			</table>
+			<img src="L2UI.SquareWhite" width=300 height=1>
+			<table>
+				<tr>
+					<td height=25>
+						<font align=center color=00FF00>        Если Действие:</font>
+					</td>
+					<td>
+						<font align=center color=FF0000>action_move</font> или <font align=center color=FF0000>action_teleport</font>
+					</td>
+				</tr>
+				<tr>
+					<td height=25>
+						<font align=center color=00FF00>Следующая задача:</font>
+					</td>
+					<td>
+						<edit var="next_action" width=180 height=13>
+					</td>
+				</tr>
+				<tr>
+					<td height=25>
+						<font align=center color=00FF00>                        Шанс:</font>
+					</td>
+					<td>
+						<edit var="next_action_chance" width=180 height=13>
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td width=80></td>
+					<td width=22>
+						<button value="Новый шаг" action="bypass -h admin_bot_create_point node_begin $rnd $delay_min $delay_max $action $next_action $next_action_chance" width=150 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<br><br><br>
+<table width=630 border=0 cellpadding=0 cellspacing=0>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>
+			<font color=LEVEL>     Расса</font>
+		</td>
+		<td>
+			<font color=LEVEL>       Тип</font>
+		</td>
+		<td>
+			<font color=LEVEL>  Количество</font>
+		</td>
+		<td>
+			<font color=LEVEL>  ID задачи</font>
+		</td>
+		<td>
+			<font color=LEVEL>шаг задачи</font>
+		</td>
+	</tr>
+	<tr>
+		<td width=80></td>
+		<td align=left>
+			<button value="Тест" action="bypass -h admin_bot_create_point_test $race $class $count1 $id_point $index_point" width=120 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+		<td align=left>
+			<combobox width=80 var="race" list="Человек;Эльф;Темный Эльф;Орк;Гном;Камаэль">
+		</td>
+		<td align=left>
+			<combobox width=80 var="class" list="Воин;Мистик">
+		</td>
+		<td align=left>
+			<edit var="count1" width=90 height=13>
+		</td>
+		<td align=left>
+			<edit var="id_point" width=90 height=13>
+		</td>
+		<td align=left>
+			<edit var="index_point" width=90 height=13>
+		</td>
+		<td width=200></td>
+	</tr>
+</table>
+<br><br>
+</center>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="327" type="SOLO">
+		<name lang="en" val="Recover the Farmland"/>
+		<name lang="ru" val="Фермерские земли"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20495"/>	<!-- Turek Orc Warlord -->
+			<event type="MOBKILLED" val="20496"/>	<!-- Turek Orc Archer -->
+			<event type="MOBKILLED" val="20497"/>	<!-- Turek Orc Skirmisher -->
+			<event type="MOBKILLED" val="20498"/>	<!-- Turek Orc Supplier -->
+			<event type="MOBKILLED" val="20499"/>	<!-- Turek Orc Footman -->
+			<event type="MOBKILLED" val="20500"/>	<!-- Turek Orc Sentinel -->
+			<event type="MOBKILLED" val="20501"/>	<!-- Turek Orc Shaman -->
+			<event type="QUEST_START" val="30597"/>	<!-- Piotur -->
+			<event type="QUEST_TALK" val="30597"/>	<!-- Piotur -->
+			<event type="QUEST_TALK" val="30034"/>	<!-- Iris -->
+			<event type="QUEST_TALK" val="30313"/>	<!-- Asha -->
+			<item id="1847"/>	<!-- Turek Medallion -->
+			<item id="1846"/>	<!-- Turek Dog Tag -->
+		</setting>
+	</quest>
+</quests>

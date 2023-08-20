@@ -1,0 +1,398 @@
+<list>
+	<zone id="500024" name="[giran_harbor_no_trade]" type="dummy" >
+		<set name="enabled" val="false" />
+		<set name="blocked_actions" val="private store;private workshop;" />
+		<shape>
+			<coords loc="48148 186514 -3800 -3000" />
+			<coords loc="48304 186816 -3800 -3000" />
+			<coords loc="47681 187144 -3800 -3000" />
+			<coords loc="47506 186839 -3800 -3000" />
+		</shape>
+	</zone>
+	<zone id="500033" name="[parnassus_no_trade]" type="dummy" >
+		<set name="enabled" val="false" />
+		<set name="blocked_actions" val="private store;private workshop;" />
+		<shape>
+			<coords loc="149192 173160 -944 -844" />
+			<coords loc="149192 172408 -960 -860" />
+			<coords loc="149544 172424 -960 -860" />
+			<coords loc="149560 173160 -944 -844" />
+		</shape>
+	</zone>
+	<zone id="700001" name="[giran_non_trade]" type="dummy" >
+		<set name="blocked_actions" val="private store;private workshop;" />
+		<shape>
+			<coords loc="85792 147072 -3800 -3000" />
+			<coords loc="83605 147080 -3800 -3000" />
+			<coords loc="83560 147537 -3800 -3000" />
+			<coords loc="83440 147472 -3800 -3000" />
+			<coords loc="80780 147474 -3800 -3000" />
+			<coords loc="80692 147543 -3800 -3000" />
+			<coords loc="80691 149704 -3800 -3000" />
+			<coords loc="80786 149774 -3800 -3000" />
+			<coords loc="86445 149877 -3800 -3000" />
+		</shape>
+	</zone>
+	<zone id="700003" name="[dion_non_trade]" type="dummy" >
+		<set name="blocked_actions" val="private store;private workshop;" />
+		<shape>
+			<coords loc="17454 141289 -3400 -1900" />
+			<coords loc="14212 141173 -3400 -1900" />
+			<coords loc="13653 141785 -3400 -1900" />
+			<coords loc="13683 143126 -3400 -1900" />
+			<coords loc="14384 144206 -3400 -1900" />
+			<coords loc="15657 144696 -3400 -1900" />
+			<coords loc="16331 144682 -3400 -1900" />
+			<coords loc="17050 144403 -3400 -1900" />
+			<coords loc="17036 144066 -3400 -1900" />
+			<coords loc="17456 143264 -3400 -1900" />
+			<coords loc="18320 142733 -3400 -1900" />
+		</shape>
+	</zone>
+	<zone id="704004" name="[Hellbound_terrytory]" type="dummy" >
+		<set name="leaving_message_no" val="2206" />
+		<shape>
+			<coords loc="-32768 262144 -15000 11000" />
+			<coords loc="-32768 229376 -15000 11000" />
+			<coords loc="32768 229376 -15000 11000" />
+			<coords loc="32768 262144 -15000 11000" />
+		</shape>
+	</zone>
+	<zone id="704009" name="[tully1]" type="dummy" >
+		<set name="event" val="script;Util;CheckPlayerInTully1Zone" />
+		<shape>
+			<coords loc="-13224 274472 -15350 -15250" />
+			<coords loc="-13240 273400 -15350 -15250" />
+			<coords loc="-14040 273384 -15350 -15250" />
+			<coords loc="-14040 274504 -15350 -15250" />
+		</shape>
+	</zone>
+	<zone id="704010" name="[tully2]" type="dummy" >
+		<set name="event" val="script;Util;CheckPlayerInTully2Zone" />
+		<shape>
+			<coords loc="-12200 273928 -11624 -11524" />
+			<coords loc="-12504 274264 -11624 -11524" />
+			<coords loc="-12840 273944 -11624 -11524" />
+			<coords loc="-12504 273592 -11624 -11524" />
+		</shape>
+	</zone>
+	<zone id="705001" name="[Infinitum_1]" type="dummy" >
+		<shape>
+			<coords loc="-23192 280280 -15140 -14940" />
+			<coords loc="-21224 280280 -15140 -14940" />
+			<coords loc="-21224 276904 -15140 -14940" />
+			<coords loc="-23192 276904 -15140 -14940" />
+		</shape>
+		<restart_point>
+			<coords loc="-22204 277056 -15045 0" />
+		</restart_point>
+	</zone>
+	<zone id="705002" name="[Infinitum_2]" type="dummy" >
+		<shape>
+			<coords loc="-23192 280280 -13481 -13281" />
+			<coords loc="-21224 280280 -13481 -13281" />
+			<coords loc="-21224 276904 -13481 -13281" />
+			<coords loc="-23192 276904 -13481 -13281" />
+		</shape>
+		<restart_point>
+			<coords loc="-22204 277056 -13381 0" />
+		</restart_point>
+	</zone>
+	<zone id="705003" name="[Infinitum_3]" type="dummy" >
+		<shape>
+			<coords loc="-23192 280280 -11666 -11466" />
+			<coords loc="-21224 280280 -11666 -11466" />
+			<coords loc="-21224 276904 -11666 -11466" />
+			<coords loc="-23192 276904 -11666 -11466" />
+		</shape>
+		<restart_point>
+			<coords loc="-22204 277056 -11566 0" />
+		</restart_point>
+	</zone>
+	<zone id="705004" name="[Infinitum_4]" type="dummy" >
+		<shape>
+			<coords loc="-23192 280280 -10020 -9820" />
+			<coords loc="-21224 280280 -10020 -9820" />
+			<coords loc="-21224 276904 -10020 -9820" />
+			<coords loc="-23192 276904 -10020 -9820" />
+		</shape>
+		<restart_point>
+			<coords loc="-22204 277056 -9925 0" />
+		</restart_point>
+	</zone>
+	<zone id="705005" name="[Infinitum_5]" type="dummy" >
+		<shape>
+			<coords loc="-23192 280280 -8315 -8115" />
+			<coords loc="-21224 280280 -8315 -8115" />
+			<coords loc="-21224 276904 -8315 -8115" />
+			<coords loc="-23192 276904 -8315 -8115" />
+		</shape>
+		<restart_point>
+			<coords loc="-22204 277056 -8215 0" />
+		</restart_point>
+	</zone>
+	<zone id="705006" name="[Infinitum_6]" type="dummy" >
+		<shape>
+			<coords loc="-20008 280280 -8356 -8156" />
+			<coords loc="-18040 280280 -8356 -8156" />
+			<coords loc="-18040 276904 -8356 -8156" />
+			<coords loc="-20008 276904 -8356 -8156" />
+		</shape>
+		<restart_point>
+			<coords loc="-19017 277056 -8256 0" />
+		</restart_point>
+	</zone>
+	<zone id="705007" name="[Infinitum_7]" type="dummy" >
+		<shape>
+			<coords loc="-20008 280280 -10020 -9820" />
+			<coords loc="-18040 280280 -10020 -9820" />
+			<coords loc="-18040 276904 -10020 -9820" />
+			<coords loc="-20008 276904 -10020 -9820" />
+		</shape>
+		<restart_point>
+			<coords loc="-19017 277056 -9924 0" />
+		</restart_point>
+	</zone>
+	<zone id="705008" name="[Infinitum_8]" type="dummy" >
+		<shape>
+			<coords loc="-20008 280280 -11748 -11548" />
+			<coords loc="-18040 280280 -11748 -11548" />
+			<coords loc="-18040 276904 -11748 -11548" />
+			<coords loc="-20008 276904 -11748 -11548" />
+		</shape>
+		<restart_point>
+			<coords loc="-19017 277056 -11648 0" />
+		</restart_point>
+	</zone>
+	<zone id="705009" name="[Infinitum_9]" type="dummy" >
+		<shape>
+			<coords loc="-20008 280280 -13476 -13276" />
+			<coords loc="-18040 280280 -13476 -13276" />
+			<coords loc="-18040 276904 -13476 -13276" />
+			<coords loc="-20008 276904 -13476 -13276" />
+		</shape>
+		<restart_point>
+			<coords loc="-19017 277056 -13376 0" />
+		</restart_point>
+	</zone>
+	<zone id="705010" name="[Infinitum_10]" type="dummy" >
+		<shape>
+			<coords loc="-20008 280280 -15140 -14940" />
+			<coords loc="-18040 280280 -15140 -14940" />
+			<coords loc="-18040 276904 -15140 -14940" />
+			<coords loc="-20008 276904 -15140 -14940" />
+		</shape>
+		<restart_point>
+			<coords loc="-19017 277056 -15040 0" />
+		</restart_point>
+	</zone>
+	<zone id="705011" name="[Epic_Quest_IdentZone]" type="dummy" >
+		<set name="reflectionId" val="111" />
+		<shape>
+			<coords loc="-75624 213720 -7120 -7020" />
+			<coords loc="-75624 213112 -7120 -7020" />
+			<coords loc="-76360 213112 -7120 -7020" />
+			<coords loc="-76360 213720 -7120 -7020" />
+		</shape>
+	</zone>
+	<zone id="702118" name="[latana]" type="dummy" >
+		<set name="reflectionId" val="14" />
+		<shape>
+			<coords loc="103928 -41032 -2000 -1500" />
+			<coords loc="107096 -40616 -2000 -1500" />
+			<coords loc="107192 -42568 -2000 -1500" />
+			<coords loc="104552 -42824 -2000 -1500" />
+		</shape>
+	</zone>
+	<zone id="777333" name="[dragon_valley_2]" type="dummy" >
+		<shape>
+			<coords loc="73429 118505 -5000 -800"/>
+			<coords loc="77262 119169 -5000 -800"/>
+			<coords loc="80612 117907 -5000 -800"/>
+			<coords loc="81856 120793 -5000 -800"/>
+			<coords loc="85810 122777 -5000 -800"/>
+			<coords loc="90672 122265 -5000 -800"/>
+			<coords loc="94712 120392 -5000 -800"/>
+			<coords loc="98275 114754 -5000 -800"/>
+			<coords loc="99494 125942 -5000 -800"/>
+			<coords loc="102149 127035 -5000 -800"/>
+			<coords loc="111192 127422 -5000 -800"/>
+			<coords loc="114616 123736 -5000 -800"/>
+			<coords loc="120798 124280 -5000 -800"/>
+			<coords loc="122440 123688 -5000 -800"/>
+			<coords loc="124972 120248 -5000 -800"/>
+			<coords loc="129192 117304 -5000 -800"/>
+			<coords loc="132163 115850 -5000 -800"/>
+			<coords loc="132247 113217 -5000 -800"/>
+			<coords loc="127483 111539 -5000 -800"/>
+			<coords loc="126840 111192 -5000 -800"/>
+			<coords loc="124970 108150 -5000 -800"/>
+			<coords loc="121475 106988 -5000 -800"/>
+			<coords loc="120057 107197 -5000 -800"/>
+			<coords loc="117558 108590 -5000 -800"/>
+			<coords loc="115555 108538 -5000 -800"/>
+			<coords loc="112806 108160 -5000 -800"/>
+			<coords loc="109476 109213 -5000 -800"/>
+			<coords loc="107219 110921 -5000 -800"/>
+			<coords loc="107238 113084 -5000 -800"/>
+			<coords loc="108047 114319 -5000 -800"/>
+			<coords loc="107123 116812 -5000 -800"/>
+			<coords loc="105194 116478 -5000 -800"/>
+			<coords loc="103925 114270 -5000 -800"/>
+			<coords loc="104360 110408 -5000 -800"/>
+			<coords loc="102592 109236 -5000 -800"/>
+			<coords loc="100399 108518 -5000 -800"/>
+			<coords loc="96489 107700 -5000 -800"/>
+			<coords loc="95859 106893 -5000 -800"/>
+			<coords loc="92827 106106 -5000 -800"/>
+			<coords loc="88298 105443 -5000 -800"/>
+			<coords loc="86140 105322 -5000 -800"/>
+			<coords loc="82716 107377 -5000 -800"/>
+			<coords loc="78200 111335 -5000 -800"/>
+			<coords loc="76776 113882 -5000 -800"/>
+			<coords loc="73269 116177 -5000 -800"/>
+		</shape>
+	</zone>
+	<zone id="797551" name="[tully1_2]" type="dummy" >
+		<shape>
+			<coords loc="-13224 274472 -15350 -15250" />
+			<coords loc="-13240 273400 -15350 -15250" />
+			<coords loc="-14040 273384 -15350 -15250" />
+			<coords loc="-14040 274504 -15350 -15250" />
+		</shape>
+	</zone>
+	<zone id="797552" name="[tully2_2]" type="dummy" >
+		<shape>
+			<coords loc="-12200 273928 -11624 -11524" />
+			<coords loc="-12504 274264 -11624 -11524" />
+			<coords loc="-12840 273944 -11624 -11524" />
+			<coords loc="-12504 273592 -11624 -11524" />
+		</shape>
+	</zone>
+	<zone id="797553" name="[tully3]" type="dummy" >
+		<shape>
+			<coords loc="-11864 274424 -13700 -13600" />
+			<coords loc="-11544 274408 -13700 -13600" />
+			<coords loc="-11544 274408 -13700 -13600" />
+			<coords loc="-11720 274296 -13700 -13600" />
+		</shape>
+	</zone>
+	<zone id="797554" name="[tully4]" type="dummy" >
+		<shape>
+			<coords loc="-11848 274408 -10580 -10490" />
+			<coords loc="-11544 274408 -10580 -10490" />
+			<coords loc="-11544 274408 -10580 -10490" />
+			<coords loc="-11720 274296 -10580 -10490" />
+		</shape>
+	</zone>
+	<zone id="797555" name="[tully5]" type="dummy" >
+		<shape>
+			<coords loc="-13000 279896 -11670 -11600" />
+			<coords loc="-12712 280184 -11670 -11600" />
+			<coords loc="-12312 280184 -11670 -11600" />
+			<coords loc="-12024 279896 -11670 -11600" />
+			<coords loc="-12024 279480 -11670 -11600" />
+			<coords loc="-12312 279208 -11670 -11600" />
+			<coords loc="-12712 279208 -11670 -11600" />
+		</shape>
+	</zone>
+	<zone id="800000" name="[ssq_holy_burial_ground]" type="dummy" >
+		<shape>
+			<coords loc="85512 -249912 -8500 -8100" />
+			<coords loc="85512 -249336 -8500 -8100" />
+			<coords loc="86120 -249336 -8500 -8100" />
+			<coords loc="86120 -249912 -8500 -8100" />
+		</shape>
+	</zone>
+	<zone id="800001" name="[ssq_holy_seal]" type="dummy" >
+		<shape>
+			<coords loc="45704 -249320 -6800 -6600" />
+			<coords loc="45080 -249336 -6800 -6600" />
+			<coords loc="45080 -249944 -6800 -6600" />
+			<coords loc="45704 -249944 -6800 -6600" />
+		</shape>
+	</zone>
+
+	<zone id="800002" name="[gludio_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" val="drop_merchant_guard" />
+		<shape>
+			<coords loc="-17242 109135 -1840 -1540" />
+			<coords loc="-16215 109135 -1840 -1540" />
+			<coords loc="-16217 109588 -1840 -1540" />
+			<coords loc="-17246 109587 -1840 -1540" />
+	</shape>
+	</zone>
+	<zone id="800003" name="[dion_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" val="drop_merchant_guard" />
+		<shape>
+			<coords loc="20177 160155 -2034 -1734" />
+			<coords loc="21205 160155 -2034 -1734" />
+			<coords loc="21203 160608 -2034 -1734" />
+			<coords loc="20175 160607 -2034 -1734" />
+		</shape>
+	</zone>
+	<zone id="800004" name="[giran_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" val="drop_merchant_guard" />
+		<shape>
+
+			<coords loc="116345 145985 -1940 -1640" />
+			<coords loc="116777 145982 -1940 -1640" />
+			<coords loc="116771 146975 -1940 -1640" />
+			<coords loc="116353 146975 -1940 -1640" />
+		</shape>
+	</zone>
+	<zone id="800005" name="[oren_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" val="drop_merchant_guard" />
+		<shape>
+			<coords loc="82421 38078 -1630 -1330" />
+			<coords loc="82853 38076 -1630 -1330" />
+			<coords loc="82847 39069 -1630 -1330" />
+			<coords loc="82429 39069 -1630 -1330" />
+		</shape>
+	</zone>
+	<zone id="800006" name="[aden_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" val="drop_merchant_guard" />
+		<shape>
+			<coords loc="146867 4019 -2844 -2444" />
+			<coords loc="148033 4018 -2844 -2444" />
+			<coords loc="148033 5174 -2844 -2444" />
+			<coords loc="146869 5174 -2844 -2444" />
+		</shape>
+	</zone>
+	<zone id="800007" name="[innadrile_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" val="drop_merchant_guard" />
+		<shape>
+			<coords loc="114153 248974 -150 150" />
+			<coords loc="115131 248973 -150 150" />
+			<coords loc="115130 249360 -150 150" />
+			<coords loc="114152 249362 -150 150" />
+		</shape>
+	</zone>
+	<zone id="800008" name="[goddard_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" val="drop_merchant_guard" />
+		<shape>
+			<coords loc="147223 -47258 -1050 -850" />
+			<coords loc="147710 -47258 -1050 -850" />
+			<coords loc="147711 -46224 -1050 -850" />
+			<coords loc="147224 -46224 -1050 -850" />
+		</shape>
+	</zone>
+	<zone id="800009" name="[rune_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" val="drop_merchant_guard" />
+		<shape>
+			<coords loc="9073 -49855 3750 4250" />
+			<coords loc="11506 -49386 3750 4250" />
+			<coords loc="11516 -48965 3750 4250" />
+			<coords loc="9074 -48437 3750 4250" />
+		</shape>
+	</zone>
+	<zone id="800010" name="[schuttgart_no_drop_merchant_guard]" type="dummy" >
+		<set name="blocked_actions" val="drop_merchant_guard" />
+		<shape>
+			<coords loc="77313 -151322 668 968" />
+			<coords loc="77800 -151322 668 968" />
+			<coords loc="77801 -150287 668 968" />
+			<coords loc="77314 -150287 668 968" />
+		</shape>
+	</zone>
+</list>

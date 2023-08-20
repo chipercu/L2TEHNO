@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="126" type="SOLO">
+		<name lang="en" val="The Name of Evil - 2"/>
+		<name lang="ru" val="Имя Зла - 2"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="32115"/>	<!-- Asamah -->
+			<event type="QUEST_TALK" val="32115"/>	<!-- Asamah -->
+			<event type="QUEST_TALK" val="32114"/>	<!-- Mushika -->
+			<event type="QUEST_TALK" val="32119"/>	<!-- Ulu Kaimu -->
+			<event type="QUEST_TALK" val="32120"/>	<!-- Balu Kaimu -->
+			<event type="QUEST_TALK" val="32121"/>	<!-- Chuta Kaimu -->
+			<event type="QUEST_TALK" val="32122"/>	<!-- Warriors Grave -->
+			<event type="QUEST_TALK" val="32109"/>	<!-- Shilens Stone Statue -->
+			<item id="8783"/>	<!-- Bone Powder -->
+			<item id="8781"/>	<!-- Epitaph of Wisdom -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="5217" name="Wolf Level 75 Weapon" type="PET">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="WOLF" />
+		<set name="icon" val="icon.etc_pet_arms_i02" />
+		<set name="weight" val="100" />
+		<set name="p_dam" val="194" />
+		<set name="m_dam" val="136" />
+		<set name="atk_speed" val="304" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="price" val="30542" />
+	</weapon>
+	<weapon id="5233" name="Keshanberk*Keshanberk" type="DUAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="weight" val="2080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="crystal_count" val="1128" />
+		<set name="p_dam" val="259" />
+		<set name="m_dam" val="107" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="price" val="14098000" />
+		<enchant4_skill id="3045" lvl="17" />
+	</weapon>
+	<weapon id="5284" name="Zweihander" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_zweihander_i00" />
+		<set name="weight" val="1530" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="p_dam" val="38" />
+		<set name="m_dam" val="21" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="price" val="188000" />
+	</weapon>
+	<weapon id="5285" name="Heavy Sword" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_heavy_sword_i00" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="crystal_count" val="582" />
+		<set name="p_dam" val="49" />
+		<set name="m_dam" val="26" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="price" val="315000" />
+		<set name="kamaelAnalog" val="9210" />
+	</weapon>
+	<weapon id="5286" name="Berserker Blade" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_berserker_blade_i00" />
+		<set name="weight" val="1380" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="crystal_type" val="C" />
+		<set name="crystal_count" val="1885" />
+		<set name="p_dam" val="190" />
+		<set name="m_dam" val="83" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="price" val="4713500" />
+		<set name="kamaelAnalog" val="9296" />
+	</weapon>
+	<weapon id="5292" name="Sealed Dark Crystal Shield" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_dark_crystal_shield_i02" />
+		<set name="weight" val="1190" />
+		<set name="crystal_type" val="A" />
+		<set name="crystal_count" val="75" />
+		<set name="shield_def" val="243" />
+		<set name="shield_def_rate" val="20" />
+		<set name="price" val="935000" />
+		<set name="avoid_modify" val="-8" />
+	</weapon>
+</list>

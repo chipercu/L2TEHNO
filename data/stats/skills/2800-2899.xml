@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="2800" levels="1" name="Stone of Ease">
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="isSaveable" val="false"/>
+		<cond msgId="113" addName="1">
+            <not>
+                <player flyingTransform="false"/>
+            </not>
+        </cond>
+		<for>
+			<effect name="Buff" time="1200" stackOrder="3" stackType="max_hp_up">
+				<mul order="0x30" stat="p_max_hp" val="1.2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2801" levels="1" name="Stone of Abundance">
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="isSaveable" val="false"/>
+		<cond msgId="113" addName="1">
+            <not>
+                <player flyingTransform="false"/>
+            </not>
+        </cond>
+		<for>
+			<effect name="Buff" time="1200" stackOrder="3" stackType="max_mp_up">
+				<mul order="0x30" stat="p_max_mp" val="1.2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2802" levels="1" name="Recovery Stone" >
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isSaveable" val="false"/>
+		<cond msgId="113" addName="1">
+            <not>
+                <player flyingTransform="false"/>
+            </not>
+        </cond>
+		<for>
+			<effect name="HealPercent" instantly="true" val="100"/>
+			<effect name="ManaHealPercent" instantly="true" val="100"/>
+		</for>
+	</skill>
+	<skill id="2803" levels="1" name="Seed of Revenge" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2804" levels="1" name="Hell Scream" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2805" levels="1" name="Spirit of the Phoenix" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2806" levels="1" name="Eva's Will" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2807" levels="1" name="Pain of Shilen" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2808" levels="1" name="Exciting Adventure" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2809" levels="1" name="Wind Riding" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2810" levels="1" name="Ghost Walking" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2811" levels="1" name="Flame Hawk" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2812" levels="1" name="Rain of Arrows" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2813" levels="1" name="Ghost Piercing" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2814" levels="1" name="Dread Pool" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2815" levels="1" name="Post of Destruction" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2816" levels="1" name="Demolition Impact" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2817" levels="1" name="Golem Armor" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2818" levels="1" name="Wild Shot" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2819" levels="1" name="Lightning Shock" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2820" levels="1" name="Flame Armor" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2821" levels="1" name="Frost Armor" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2822" levels="1" name="Hurricane Armor" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2823" levels="1" name="Vampiric Mist" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2824" levels="1" name="Meteor" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2825" levels="1" name="Starfall" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2826" levels="1" name="Sublime Self-Sacrifice" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2827" levels="1" name="Blessing of Eva" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2828" levels="1" name="Lord of Vampires" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2829" levels="1" name="Throne Route" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2830" levels="1" name="Seal of Limit" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2831" levels="1" name="Weapon Blockade" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2832" levels="1" name="S80 Weapon Chest" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2833" levels="1" name="S80 Armor Chest" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2834" levels="1" name="S Weapon Chest" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2835" levels="1" name="S Armor Chest" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2836" levels="1" name="S Accessory Chest" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2837" levels="1" name="Gracia Key" >
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="HARDCODED"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2838" levels="1" name="Treasure Sack of the Ancient Giants" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2839" levels="1" name="Sacred Light Fragment" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Resistance to divinity attribute is decreased.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2840" levels="1" name="Star Stone Gathering" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2841" levels="1" name="PC Cafe Points" >
+		<set name="icon" val="icon.skill0000" />
+		<set name="itemConsumeId" val="14559" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="isHandler" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="ADD_PC_BANG" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="7000" />
+	</skill>
+	<skill id="2842" levels="1" name="Duel Supplies" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2843" levels="1" name="Duel Supplies" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2844" levels="1" name="Duel Supplies" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2845" levels="1" name="Duel Supplies" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2846" levels="1" name="Duel Supplies" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2847" levels="1" name="Duel Supplies" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2848" levels="1" name="Duel Supplies" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2849" levels="1" name="Duel Supplies" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2850" levels="1" name="Duel Supplies" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2851" levels="1" name="Duel Supplies" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2852" levels="1" name="Duel Reward Box" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2853" levels="1" name="Duel Reward Box" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2854" levels="1" name="Duel Reward Box" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2855" levels="1" name="Duel Reward Box" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2856" levels="1" name="Santa's Buff Gift Set" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "For 1 hour, receives help from a great spirit to increase Max MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20%, the rate of Prominent Damage occurring through damage magic by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buffs by 10%. Decreases moving speed by 20% and MP consumption needed for skill use by 5%."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2857" levels="1" name="Christmas Event - Magic Use Enhancement Scroll" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "For 1 hour, receives help from a great spirit to increase the rate of Prominent Damage occurring through damage magic by 2, MP recovery bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buffs by 10%. Decreases moving speed by 20% and MP consumption for skill use by 5%."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2858" levels="1" name="Christmas Red Sock" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2859" levels="1" name="Christmas Gift" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2860" levels="6" name="Highest Power No-grade Secret Medicine of Life" >
+		<table name="#itemConsumeId">14682 14683 14684 14685 14686 14687</table>
+		<table name="#levelMin">1 20 40 52 61 76</table>
+		<table name="#levelMax">19 39 51 60 75 90</table>
+		<table name="#power">500 1300 2200 3000 3800 4600</table>
+		<set name="icon" val="icon.skill0000" />
+		<set name="power" val="#power" />
+		<set name="itemConsumeId" val="#itemConsumeId" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="isHandler" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="HEAL" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<cond msgId="1902">
+			<and>
+				<player minLevel="#levelMin" />
+				<player maxLevel="#levelMax" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2861" levels="6" name="Highest Power No-grade Secret Medicine of Mind" >
+		<table name="#itemConsumeId">14688 14689 14690 14691 14692 14693</table>
+		<table name="#levelMin">1 20 40 52 61 76</table>
+		<table name="#levelMax">19 39 51 60 75 90</table>
+		<table name="#power">120 280 440 580 720 840</table>
+		<set name="icon" val="icon.skill0000" />
+		<set name="power" val="#power" />
+		<set name="itemConsumeId" val="#itemConsumeId" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="isHandler" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="MANAHEAL" />
+		<set name="staticManaHeal" val="true"/>
+		<set name="operateType" val="OP_ACTIVE" />
+		<cond msgId="1902">
+			<and>
+				<player minLevel="#levelMin" />
+				<player maxLevel="#levelMax" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2862" levels="6" name="Highest Power No-grade Secret Medicine of Will" >
+		<table name="#itemConsumeId">14694 14695 14696 14697 14698 14699</table>
+		<table name="#levelMin">1 20 40 52 61 76</table>
+		<table name="#levelMax">19 39 51 60 75 90</table>
+		<table name="#power">300 700 1200 1600 2000 2400</table>
+		<set name="icon" val="icon.skill0000" />
+		<set name="power" val="#power" />
+		<set name="itemConsumeId" val="#itemConsumeId" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="isHandler" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<cond msgId="1902">
+			<and>
+				<player minLevel="#levelMin" />
+				<player maxLevel="#levelMax" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2863" levels="1" name="Highest Power Healing Potion">
+		<set name="itemConsumeId" val="21039"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="power" val="3"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="HOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="t_hp" param="100;3;diff"/>
+		</for>
+	</skill>
+	<skill id="2864" levels="1" name="Highest Power Quick Healing Potion" >
+		<set name="itemConsumeId" val="14701"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="power" val="435"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="HEAL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2865" levels="1" name="Agathion's New Year's Gift 1" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2866" levels="1" name="Agathion's New Year's Gift 2" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2867" levels="1" name="Cupid's Cure" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Sends mutated animals a Heart with love.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2868" levels="1" name="Cupid's Enhanced Cure" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Sends mutated animals a powerful Heart filled with love.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2869" levels="1" name="Event - Milk Cow Summon Scroll" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2870" levels="1" name="Event - Head Milk Cow Summon Scroll" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2871" levels="1" name="Summon Gloomy Milk Cow" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2872" levels="1" name="Summon Head Gloomy Milk Cow" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2873" levels="1" name="Might">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="p_physical_attack" time="3600">
+				<mul order="0x30" stat="p_physical_attack" val="1.15"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2874" levels="1" name="Wind Walk">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="SpeedUp" time="3600">
+				<add order="0x40" stat="p_speed" val="60"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2875" levels="1" name="Haste">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="pAtkSpeedUp" time="3600">
+				<mul order="0x30" stat="p_attack_speed" val="1.33"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2876" levels="1" name="Vampiric Rage">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="vampRage" time="3600">
+				<add order="0x40" stat="absorbDam" val="9"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2877" levels="1" name="Berserker Spirit">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="berserk" time="3600">
+				<mul order="0x30" stat="p_magical_attack" val="1.16"/>
+				<mul order="0x30" stat="p_physical_attack" val="1.08"/>
+				<mul order="0x30" stat="p_physical_defence" val="0.92"/>
+				<mul order="0x30" stat="p_magical_defence" val="0.84"/>
+				<mul order="0x30" stat="p_magic_speed" val="1.16"/>
+				<mul order="0x30" stat="p_attack_speed" val="1.08"/>
+				<add order="0x40" stat="p_speed" val="8"/>
+				<sub order="0x40" stat="p_avoid" val="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2878" levels="1" name="Empower">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="p_magical_attack" time="3600">
+				<mul order="0x30" stat="p_magical_attack" val="1.75"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2879" levels="1" name="Acumen">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="mAtkSpeedUp" time="3600">
+				<mul order="0x30" stat="p_magic_speed" val="1.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2880" levels="1" name="Event - Gloomy Milk Cow Summon Scroll" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2881" levels="1" name="Event - Gloomy Head Milk Cow Summon Scroll" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2882" levels="1" name="Crystal Cube" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2883" levels="1" name="Energy Replenishing Herb Tea" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+
+			Description: Recovers energy upon acquiring Exp. points for 10 minutes.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Vitality" time="600"/>
+		</for>
+	</skill>
+	<skill id="2884" levels="1" name="Energy Replenishing Herb Tea" >
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Vitality" time="1200"/>
+		</for>
+	</skill>
+	<skill id="2885" levels="1" name="Shield">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="p_physical_defence" time="3600">
+				<mul order="0x30" stat="p_physical_defence" val="1.15"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2886" levels="1" name="Focus">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="p_critical_rate_per" time="3600">
+				<add order="0x40" stat="p_critical_rate_per" val="30"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2887" levels="1" name="Death Whisper" >
+		<!--
+			Done by:	Diamond
+			Last modify:	07.06.09
+
+			Description: Increases Critical attack power by 35% for 60 minutes.
+		-->
+
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="p_critical_damage_per" time="3600">
+				<mul order="0x30" stat="p_critical_damage_per" val="1.35"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2888" levels="1" name="Guidance">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="accuracyUp" time="3600">
+				<add order="0x40" stat="p_hit" val="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2889" levels="1" name="Clarity">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="clarity" time="3600">
+				<mul order="0x30" stat="mpConsum" val="0.8"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.9"/>
+				<mul order="0x30" stat="mpDanceConsume" val="0.8"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2890" levels="1" name="Wild Magic" >
+		<!--
+			Done by:	Diamond
+			Last modify:	08.06.09
+
+			Description: "For 60 minutes, increases by 2 the occurrence rate of damage that is caused by damage magic."
+		-->
+
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="2" stackType="magicCritUp" time="3600">
+				<add order="0x40" stat="mCritRate" val="2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="2891" levels="6" name="Concentration"> 
+		<set name="target" val="TARGET_SELF"/> 
+		<set name="skillType" val="BUFF"/> 
+		<set name="operateType" val="OP_ACTIVE"/> 
+		<for> 
+			<effect name="Buff" stackOrder="1" stackType="concentration" time="3600"> 
+					<add order="0x40" stat="concentration" val="53"/> 
+			</effect> 
+		</for> 
+	</skill> 
+	<skill id="2892" levels="1" name="Event - Extra Entrance Pass - Rim Kamaloka" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 30-6-2009  11:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2893" levels="1" name="Solo Escape Petition" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Energy is maintained for 10 minutes. Solo escape petition containing the wish for a solo player's escape
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 30-6-2009  11:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2894" levels="1" name="White Day Candy" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 30-6-2009  11:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2895" levels="1" name="Special White Day Candy Basket" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 30-6-2009  11:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2896" levels="1" name="White Day Candy Basket" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 30-6-2009  11:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2897" levels="1" name="Baguette's Herb" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "For 10 minutes, increases HP regeneration by 20% and Maximum HP by 10%. Weapon and hair appearances change through the effect of the ""Fake Tears"" that were scattered by ""Pierre Baguette."" But, weapons don't change their abilities."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 30-6-2009  11:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2898" levels="1" name="Fresh Cream Herb" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "For 10 minutes, increases Maximum HP/Maximum HP/Casting Spd./P. Def./M. Def. and resistance to debuff by 10%. Increases Atk. Spd. by 15% and Moving Spd. by 10. Weapon and hair appearances change through the effect of the ""Fake Tears"" that were scattered by ""Pierre Baguette."" But, weapons don't change their abilities."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 30-6-2009  11:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="2899" levels="1" name="Cheesecake Herb" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "For 10 minutes, increases MP regeneration by 20% and Maximum MP by 10%. Weapon and hair appearances change through the effect of the ""Fake Tears"" that were scattered by ""Pierre Baguette."" But, weapons don't change their abilities."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 30-6-2009  11:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+</list>

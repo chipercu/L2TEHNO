@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>	
+	<!-- [RU] Максимальная дистанция следующей цели, выше которой игрок не сможет задать значение в настройках -->
+	<!-- [EN] The maximum distance of the next target, above which the player will not be able to set a value in the settings -->
+	<interface_setting name="MaxDistanceNextTarget" type="TYPE_INT" value="1000"/>
+	
+	<!-- [RU] Значение максимальной дистанции следующей цели по умолчанию -->
+	<!-- [EN] The default value for the maximum distance of the next target -->
+	<interface_setting name="MaxDistanceNextTargetDefault" type="TYPE_INT" value="400"/>
+	
+	<!-- [RU] Путь до иконок макросов с названием иконки (без айди), если ID макроса больше 128 - ID макроса начнет отсчет от -127 -->
+	<!-- [EN] The path to the macro icons with the icon name (without the ID), if the macro ID is greater than 128 - the macro ID will start counting from -127 -->
+	<!-- [RU] Пример названия иконки для ID 130: Macro_-126 -->
+	<!-- [EN] Example of the icon name for ID 130: Macro_-126 -->
+	<interface_setting name="MacroIconPath" type="TYPE_TEXT" value="L2UI_CT2.MacroWnd.Macro_"/>
+	
+	<!-- [RU] Количество иконок (не более 255!) -->
+	<!-- [EN] Icons count (not more 255!) -->
+	<interface_setting name="MacroIconCount" type="TYPE_INT" value="255"/>
+	
+	<!-- [RU] Количество макросов (не более 255!) -->
+	<!-- [EN] Macro count (not more 255!) -->
+	<interface_setting name="MacroCount" type="TYPE_INT" value="48" />
+	
+	<!-- [RU] Настройки по умолчанию для CommunityBoard -->
+	<!-- [EN] Default settings for the CommunityBoard -->
+	<interface_setting name="EnableCommunityBoardTabs" type="TYPE_CHAR" value="1"/>
+	<interface_setting name="CommunityBoardDefaultWidth" type="TYPE_INT" value="784"/>
+	<interface_setting name="CommunityBoardDefaultHeight" type="TYPE_INT" value="578"/>
+	
+	<!-- [RU] Настройки по умолчанию для NpcDialog -->
+	<!-- [EN] Default settings for the NpcDialog -->
+	<interface_setting name="NpcDialogDefaultWidth" type="TYPE_INT" value="314"/>
+	<interface_setting name="NpcDialogDefaultHeight" type="TYPE_INT" value="408"/>
+	
+	<!-- [RU] Включить/выключить чат для игроков в режиме просмотра олимпиады -->
+	<!-- [EN] Enable/disable chat for players in the Olympiad view mode -->
+	<interface_setting name="EnableChatForOlyObservers" type="TYPE_CHAR" value="0"/>
+	
+	<!-- [RU] Максимальное количество предметов для отправки почтой (0-36) -->
+	<!-- [EN] Maximum number of items to send by mail (0-36) -->
+	<interface_setting name="MaxAttachedMailItemCount" type="TYPE_INT" value="36"/>
+	
+	<!-- [RU] Настройки маркеров над головой (действия) -->
+	<!-- [EN] Overhead marker settings (actions) -->
+	<interface_setting name="EnableOverheadMarkers" type="TYPE_CHAR" value="1"/>	
+	
+	<!-- [RU] Настройки цели олимпиады (брать в цель противника если нажать левой кнопкой мыши на окно) -->
+	<!-- [EN] Settings of the Olympiad goal (to take the opponent's goal if you click on the window with the left mouse button) -->
+	<interface_setting name="EnableTargetActionFromClickOnOlyTargetWnd" type="TYPE_CHAR" value="1"/>	
+</list>

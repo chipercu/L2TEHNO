@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="326" type="SOLO">
+		<name lang="en" val="Vanquish Remnants"/>
+		<name lang="ru" val="Добить уцелевших"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="30425"/>	<!-- Neti -->
+			<event type="MOBKILLED" val="20058"/>	<!-- Ol Mahum Guard -->
+			<event type="MOBKILLED" val="20437"/>	<!-- Ol Mahum Recruit -->
+			<event type="MOBKILLED" val="20061"/>	<!-- Ol Mahum Straggler -->
+			<event type="MOBKILLED" val="20063"/>	<!-- Ol Mahum Shooter -->
+			<event type="MOBKILLED" val="20436"/>	<!-- Ol Mahum Supplier -->
+			<event type="MOBKILLED" val="20066"/>	<!-- Ol Mahum Captain -->
+			<event type="MOBKILLED" val="20438"/>	<!-- Ol Mahum General -->
+			<event type="MOBKILLED" val="20076"/>	<!-- Ol Mahum Commander -->
+			<event type="QUEST_START" val="30435"/>	<!-- Leopold -->
+			<event type="QUEST_TALK" val="30435"/>	<!-- Leopold -->
+			<event type="QUEST_TALK" val="30435"/>	<!-- Leopold -->
+			<item id="1359"/>	<!-- Red Cross Badge -->
+			<item id="1360"/>	<!-- Blue Cross Badge -->
+			<item id="1361"/>	<!-- Black Cross Badge -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,17 @@
+<html>
+<body>
+Стандартная плата за этот кланхолл <font color="aaccff">%AGIT_LAST_PRICE%</font> аден и последняя цена на него <font color="aaccff">%AGIT_LAST_PRICE%</font> аден.<br> Сумма, которую Вы получите по окончании аукциона будет суммой залога, за вычетом операционного налога, рзмер которого составляет <font color="LEVEL">(10%) </font> от ставки. Какую сумму Вы хотите поставить на кланхолл (минимальная ставка на него)?
+<table width=270 border=0><tr><td width=220 align=right><edit var=minbid width=230 align=right type=number></td><td width=40 align=right>adena</td></tr></table>
+Сколько дней Вы желаете продолжать аукцион?
+<table width=270 border=0><tr><td width=270 align=right><combobox width=50 var=day list="7;3;1"></td></tr></table>
+Напишите комментарий к обьявлению о продаже. <multiedit var="comment" width=270><img src="L2UI.SquareBlank" width=270 height=10> <img src="L2UI.SquareWhite" width=270 height=1> <img src="L2UI.SquareBlank" width=270 height=5>
+<table width=270 border=0>
+<tr>
+<td width=130></td>
+<td width=70 align=center><button action="bypass -h npc_%objectId%_back" value="Назад" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=70 align=center><button action="bypass -h npc_%objectId%_auction $day $minbid" value="Продать" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td> 
+</tr>
+</table>
+<br>
+</body>
+</html>

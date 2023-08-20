@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="118" type="SOLO">
+		<name lang="en" val="To Lead and Be Led"/>
+		<name lang="ru" val="Вести и быть ведомым"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20919"/>	<!-- Maille Lizardman -->
+			<event type="MOBKILLED" val="20927"/>	<!-- King of the Araneid -->
+			<event type="QUEST_START" val="30298"/>	<!-- Pinter -->
+			<event type="QUEST_TALK" val="30298"/>	<!-- Pinter -->
+			<item id="8062"/>	<!-- Blood of Maille Lizardman -->
+			<item id="8063"/>	<!-- Leg of King Araneid -->
+		</setting>
+	</quest>
+</quests>

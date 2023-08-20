@@ -1,0 +1,49 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_p4_buff : default_npc
+{
+parameter:
+	int	Skill01_ID = 412024833;
+	int	TIMER_heal = 2314016;
+	int	debug_mode = 0;
+
+handler:
+	EventHandler CREATED()
+	{
+		if( debug_mode )
+		{
+			myself->Say("„ NPC ¤ðh");
+		}
+		myself->AddTimerEx(TIMER_heal,( 5 * 1000 ));
+	}
+
+	EventHandler TIMER_FIRED_EX(timer_id)
+	{
+		if( timer_id == TIMER_heal )
+		{
+			if( myself->Skill_GetConsumeMP(Skill01_ID) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Skill01_ID) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Skill01_ID) == 0 )
+			{
+				myself->AddUseSkillDesire(( myself + 1480 ),Skill01_ID,1,1,1000000);
+			}
+			myself->AddTimerEx(TIMER_heal,( 10 * 1000 ));
+		}
+	}
+
+	EventHandler SCRIPT_EVENT(script_event_arg1,script_event_arg2)
+	{
+		if( script_event_arg1 == 23140020 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("„NPC ¤ðh");
+			}
+		}
+	}
+
+}

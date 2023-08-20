@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="384" type="SOLO">
+		<name lang="en" val="Warehouse Keeper's Pastime"/>
+		<name lang="ru" val="Прошлое Смотрителя Склада"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20948"/>	<!-- Bartal -->
+			<event type="MOBKILLED" val="20945"/>	<!-- Cadeine -->
+			<event type="MOBKILLED" val="20946"/>	<!-- Sanhidro -->
+			<event type="MOBKILLED" val="20947"/>	<!-- Connabi -->
+			<event type="MOBKILLED" val="20635"/>	<!-- Carinkain -->
+			<event type="MOBKILLED" val="20773"/>	<!-- Conjurer Bat Lord -->
+			<event type="MOBKILLED" val="20774"/>	<!-- Conjurer Bat  -->
+			<event type="MOBKILLED" val="20760"/>	<!-- Dragon Bearer Archer -->
+			<event type="MOBKILLED" val="20758"/>	<!-- Dragon Bearer Chief -->
+			<event type="MOBKILLED" val="20759"/>	<!-- Dragon Bearer Warrior -->
+			<event type="MOBKILLED" val="20242"/>	<!-- Dustwind Gargoyle -->
+			<event type="MOBKILLED" val="20281"/>	<!-- Dustwind Gargoyle -->
+			<event type="MOBKILLED" val="20556"/>	<!-- Giant Monstereye -->
+			<event type="MOBKILLED" val="20668"/>	<!-- Grave Guard -->
+			<event type="MOBKILLED" val="20241"/>	<!-- Hunter Gargoyle -->
+			<event type="MOBKILLED" val="20286"/>	<!-- Hunter Gargoyle -->
+			<event type="MOBKILLED" val="20950"/>	<!-- Innersen -->
+			<event type="MOBKILLED" val="20949"/>	<!-- Luminun -->
+			<event type="MOBKILLED" val="20942"/>	<!-- Nightmare Guide -->
+			<event type="MOBKILLED" val="20943"/>	<!-- Nightmare Keeper -->
+			<event type="MOBKILLED" val="20944"/>	<!-- Nightmare Lord -->
+			<event type="MOBKILLED" val="20559"/>	<!-- Rotting Golem -->
+			<event type="MOBKILLED" val="20243"/>	<!-- Thunder Wyrm -->
+			<event type="MOBKILLED" val="20282"/>	<!-- Thunder Wyrm -->
+			<event type="MOBKILLED" val="20677"/>	<!-- Tulben -->
+			<event type="MOBKILLED" val="20605"/>	<!-- Weird Drake -->
+			<event type="QUEST_START" val="30182"/>	<!-- Cliff -->
+			<event type="QUEST_TALK" val="30182"/>	<!-- Cliff -->
+			<event type="QUEST_TALK" val="30685"/>	<!-- Baxt -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="131" type="SOLO">
+		<name lang="en" val="Bird in a Cage"/>
+		<name lang="ru" val="Птица в клетке"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="32264"/>	<!-- Kanis -->
+			<event type="QUEST_TALK" val="32264"/>	<!-- Kanis -->
+			<event type="QUEST_TALK" val="32271"/>	<!-- Parme -->
+			<item id="9783"/>	<!-- Echo Crystal of Free Thought -->
+			<item id="9784"/>	<!-- Parme's Letter -->
+		</setting>
+	</quest>
+</quests>

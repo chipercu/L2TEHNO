@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="418" type="SOLO">
+		<name lang="en" val="Path of the Artisan"/>
+		<name lang="ru" val="Путь Ремесленника"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20389"/>	<!-- Boogle Ratman -->
+			<event type="MOBKILLED" val="20390"/>	<!-- Boogle Ratman Leader -->
+			<event type="MOBKILLED" val="20017"/>	<!-- Vuku Orc Fighter -->
+			<event type="QUEST_START" val="30527"/>	<!-- Silvera -->
+			<event type="QUEST_TALK" val="30527"/>	<!-- Silvera -->
+			<event type="QUEST_TALK" val="30317"/>	<!-- Kluto -->
+			<event type="QUEST_TALK" val="30298"/>	<!-- Pinter -->
+			<item id="1636"/>	<!-- Boogle Ratman Tooth -->
+			<item id="1637"/>	<!-- Boogle Ratman Leader's Tooth -->
+			<item id="1640"/>	<!-- Stolen Secret Box -->
+			<item id="1632"/>	<!-- Silvera's Ring -->
+			<item id="1633"/>	<!-- 1st Pass Certificate -->
+			<item id="1641"/>	<!-- Secret Box -->
+			<item id="1638"/>	<!-- Kluto's Letter -->
+			<item id="1639"/>	<!-- Footprint of Thief -->
+			<item id="1634"/>	<!-- 2nd Pass Certificate -->
+		</setting>
+	</quest>
+</quests>

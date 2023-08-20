@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="614" type="PARTY_ONE">
+		<name lang="en" val="Slay the enemy commander!"/>
+		<name lang="ru" val="Убийство командира Кетра"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="25302"/>	<!-- Ketras Commander Tayr -->
+			<event type="QUEST_START" val="31377"/>	<!-- Ashas Varka Durai -->
+			<event type="QUEST_TALK" val="31377"/>	<!-- Ashas Varka Durai -->
+			<item id="7241"/>	<!-- Head of Tayr -->
+		</setting>
+	</quest>
+</quests>

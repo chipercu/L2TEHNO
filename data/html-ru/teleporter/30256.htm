@@ -1,0 +1,12 @@
+!Хранитель Портала Белла:
+
+Добро пожаловать. Хорошая погода, не правда ли? В такие дни нужно отправляться в путешествия. Куда бы Вы хотели отправиться?
+
+[npc_%objectId%_Chat 1|Спросить о летающем корабле]%%
+[npc_%objectId%_Teleport 1|Телепортироваться]%%
+[npc_%objectId%_multisell 002|Обменять Алмаз Иных Миров]%%
+[scripts_Util:NoblessTeleport|(Только для дворян)Телепортироваться]%%
+[scripts_services.TeleToMDT:toMDT @811;Ипподром Монстров|Отправиться на Ипподром Монстров (бесплатно)]%%
+[scripts_services.TeleToFantasyIsle:toFantasyIsle @811;Остров Фантазий|Отправиться на Остров Фантазий (бесплатно)]%%
+[scripts_services.Birthday:summonAlegria|Призвать Аллегрию]%%
+[npc_%objectId%_Quest|Квест]

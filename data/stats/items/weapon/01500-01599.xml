@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="1510" name="Butcher's Sword" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_orcish_sword_i00" />
+		<set name="weight" val="1450" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="p_dam" val="13" />
+		<set name="m_dam" val="10" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="price" val="19500" />
+	</weapon>
+	<weapon id="1511" name="Silversmith Hammer" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_iron_hammer_i00" />
+		<set name="weight" val="1860" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="p_dam" val="13" />
+		<set name="m_dam" val="10" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="price" val="19500" />
+	</weapon>
+</list>

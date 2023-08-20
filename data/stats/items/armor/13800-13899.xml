@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<armor id="13802" name="Native's Hood" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HEAD" />
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="weight" val="70" />
+		<set name="p_def" val="33" />
+	</armor>
+	<armor id="13803" name="Native's Tunic" type="LIGHT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t34_u_i00" />
+		<set name="weight" val="4720" />
+		<set name="p_def" val="53" />
+	</armor>
+	<armor id="13804" name="Native's Trousers" type="LIGHT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="LEGS" />
+		<set name="icon" val="icon.armor_t34_l_i00" />
+		<set name="weight" val="1700" />
+		<set name="p_def" val="29" />
+	</armor>
+	<armor id="13805" name="Guards of the Dawn Helmet" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HEAD" />
+		<set name="icon" val="icon.armor_leather_helmet_i02" />
+		<set name="weight" val="70" />
+		<set name="p_def" val="33" />
+	</armor>
+	<armor id="13806" name="Guards of the Dawn Tunic" type="LIGHT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t08_u_i00" />
+		<set name="weight" val="4720" />
+		<set name="p_def" val="53" />
+	</armor>
+	<armor id="13807" name="Guards of the Dawn Trousers" type="LIGHT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="LEGS" />
+		<set name="icon" val="icon.armor_t08_l_i00" />
+		<set name="weight" val="1700" />
+		<set name="p_def" val="29" />
+	</armor>
+	<armor id="13885" name="Sealed Arcana Sigil" type="SIGIL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="arcana_sigil_i01" />
+		<set name="weight" val="940" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="161" />
+		<set name="avoid_modify" val="-8" />
+		<set name="p_def" val="13" />
+		<set name="price" val="3355000" />
+	</armor>
+	<armor id="13886" name="Sealed Dynasty Sigil" type="SIGIL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.armor_dynasty_sigil_i01" />
+		<set name="weight" val="930" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="307" />
+		<set name="avoid_modify" val="-8" />
+		<set name="p_def" val="15" />
+		<set name="price" val="6404000" />
+	</armor>
+	<armor id="13887" name="Sealed Vesper Sigil" type="SIGIL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.armor_verper_sigil_i01" />
+		<set name="weight" val="920" />
+		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="588" />
+		<set name="avoid_modify" val="-8" />
+		<set name="p_def" val="17" />
+		<set name="price" val="12250000" />
+	</armor>
+	<armor id="13888" name="Sealed Lord's Cloak" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="BACK" />
+		<set name="icon" val="feud_load_cloak_i01" />
+		<set name="weight" val="220" />
+		<set name="crystal_type" val="S84" />
+		<set name="p_def" val="2" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="28671000" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="13889" name="Holy Spirit's Cloak - Kamael exclusive" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="BACK" />
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="weight" val="220" />
+		<set name="crystal_type" val="S84" />
+		<set name="p_def" val="20" />
+		<set name="att_def_type" val="0;0;0;0;0;30" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="28671000" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="13890" name="Holy Spirit's Cloak" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="BACK" />
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="weight" val="220" />
+		<set name="crystal_type" val="S84" />
+		<set name="p_def" val="20" />
+		<set name="att_def_type" val="0;0;0;0;0;30" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="28671000" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="13891" name="Holy Spirit's Cloak - Light Armor exclusive" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="BACK" />
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="weight" val="220" />
+		<set name="crystal_type" val="S84" />
+		<set name="p_def" val="20" />
+		<set name="att_def_type" val="0;0;0;0;0;30" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="28671000" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="13892" name="Holy Spirit's Cloak - Robe exclusive" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="BACK" />
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="weight" val="220" />
+		<set name="crystal_type" val="S84" />
+		<set name="p_def" val="20" />
+		<set name="att_def_type" val="0;0;0;0;0;30" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="28671000" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="13894" name="Cloth Belt" type="LIGHT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="BELT" />
+		<set name="icon" val="icon.armor_belt_i00" />
+		<set name="weight" val="500" />
+		<set name="crystal_type" val="C" />
+		<set name="crystal_count" val="18" />
+		<set name="p_def" val="10" />
+		<set name="price" val="45100" />
+	</armor>
+	<armor id="13895" name="Leather Belt" type="LIGHT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="BELT" />
+		<set name="icon" val="icon.armor_belt_i01" />
+		<set name="weight" val="480" />
+		<set name="crystal_type" val="B" />
+		<set name="crystal_count" val="22" />
+		<set name="p_def" val="11" />
+		<set name="price" val="165000" />
+	</armor>
+	<armor id="13896" name="Iron Belt" type="LIGHT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="BELT" />
+		<set name="icon" val="icon.armor_belt_i02" />
+		<set name="weight" val="460" />
+		<set name="crystal_type" val="A" />
+		<set name="crystal_count" val="30" />
+		<set name="p_def" val="12" />
+		<set name="price" val="371300" />
+	</armor>
+	<armor id="13897" name="Mithril Belt" type="LIGHT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="BELT" />
+		<set name="icon" val="icon.armor_belt_i03" />
+		<set name="weight" val="440" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="92" />
+		<set name="p_def" val="14" />
+		<set name="price" val="1917000" />
+	</armor>
+</list>

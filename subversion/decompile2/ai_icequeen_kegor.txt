@@ -1,0 +1,113 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_kegor : ai_icequeen_help_pc
+{
+parameter:
+	int	TIMER_SCENE_20 = 2314506;
+	int	TIMER_SCENE_20_END = 2314516;
+	int	scene_num_20 = 20;
+	int	scene_sec_20 = 58000;
+	int	TIMER_despawn = 2314040;
+	int	position = -1;
+	string	MAKER_controller = "schuttgart29_2314_01m1";
+	string	fnHi = "kegor001.htm";
+	string	fnYouAreNotLeader = "kegor002.htm";
+	int	debug_mode = 0;
+
+handler:
+	EventHandler CREATED(i0,maker0)
+	{
+		super;
+		if( position == 2 )
+		{
+			myself->CreateOnePrivateEx(1029179,"ai_icequeen_freya_defeated",0,0,114767,-114795,-11200,0,0,0,0);
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_controller);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,23140058,0,0);
+			}
+		}
+	}
+
+	EventHandler TALKED(talker)
+	{
+		if( position == 2 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("debug_ai\ 1D …%Xt 4pt Ô) Ü‘");
+			}
+			myself->ShowPage(talker,fnHi);
+		}
+	}
+
+	EventHandler DEBUG_AI(creature,reply)
+	{
+		if( reply == 1 )
+		{
+			myself->Say("1 : start ending");
+			myself->AddTimerEx(TIMER_SCENE_20,1000);
+		}
+	}
+
+	EventHandler MENU_SELECTED(talker,ask,reply,i0,i1,i2,i3,i4,i5,i6,maker0,party0,c0,c1)
+	{
+		if( ask == -2318 )
+		{
+			if( reply == 1 )
+			{
+				i0 = myself->MPCC_GetMPCCId(talker);
+				c0 = myself->MPCC_GetMaster(i0);
+				if( talker == c0 )
+				{
+					if( debug_mode )
+					{
+						myself->Say("start ending");
+					}
+					myself->AddTimerEx(TIMER_SCENE_20,1000);
+				}
+				else
+				{
+					myself->ShowPage(talker,fnYouAreNotLeader);
+				}
+			}
+		}
+	}
+
+	EventHandler TIMER_FIRED_EX(timer_id,i0,maker0)
+	{
+		super;
+		if( timer_id == TIMER_SCENE_20 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("TIMER_SCENE_20");
+			}
+			myself->StartScenePlayerAround(( myself + 1480 ),scene_num_20,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+			myself->AddTimerEx(TIMER_SCENE_20_END,scene_sec_20);
+		}
+		else if( timer_id == TIMER_SCENE_20_END )
+		{
+			myself->InstantZone_Finish(10);
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_controller);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,23140059,0,0);
+			}
+			myself->AddTimerEx(TIMER_despawn,( 2 * 1000 ));
+		}
+		else if( timer_id == TIMER_despawn )
+		{
+			myself->BroadcastScriptEvent(23140020,0,4000);
+		}
+	}
+
+}

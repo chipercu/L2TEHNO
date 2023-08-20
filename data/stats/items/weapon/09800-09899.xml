@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="9813" name="Orc Officer" type="DUAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_monster_i00"/>
+		<set name="weight" val="2150"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="p_dam" val="213"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+	</weapon>
+	<weapon id="9819" name="Combat flag" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_fort_flag_i00"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="atk_speed" val="325"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="false"/>
+		<skills>
+			<skill id="3318" lvl="1"/>
+			<skill id="3358" lvl="1"/>
+		</skills>
+	</weapon>
+	<weapon id="9840" name="Shadow Item: Chevalier Rapier" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_soldat_estoc_i00"/>
+		<set name="weight" val="473"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<set name="crystal_type" val="C"/>
+		<set name="p_dam" val="111"/>
+		<set name="m_dam" val="68"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="durability" val="300"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="kamaelAnalog" val="8830"/>
+	</weapon>
+	<weapon id="9841" name="Shadow Item: Riter Schlager" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_invincible_blade_i00"/>
+		<set name="weight" val="667"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<set name="crystal_type" val="C"/>
+		<set name="p_dam" val="132"/>
+		<set name="m_dam" val="68"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="durability" val="300"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</weapon>
+	<weapon id="9842" name="Shadow Item: Ballista" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_arbalest_i00"/>
+		<set name="weight" val="590"/>
+		<set name="soulshots" val="5"/>
+		<set name="spiritshots" val="2"/>
+		<set name="crystal_type" val="C"/>
+		<set name="p_dam" val="155"/>
+		<set name="m_dam" val="68"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="durability" val="300"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="kamaelAnalog" val="8835"/>
+	</weapon>
+	<weapon id="9843" name="Shadow Item: Blinzlasher" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_blink_slasher_i00"/>
+		<set name="weight" val="467"/>
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<set name="crystal_type" val="C"/>
+		<set name="p_dam" val="126"/>
+		<set name="m_dam" val="76"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="durability" val="300"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="kamaelAnalog" val="8839"/>
+	</weapon>
+	<weapon id="9844" name="Shadow Item: Immortal Edge" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_invincible_blade_i00"/>
+		<set name="weight" val="660"/>
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<set name="crystal_type" val="C"/>
+		<set name="p_dam" val="151"/>
+		<set name="m_dam" val="76"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="durability" val="300"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="kamaelAnalog" val="8846"/>
+	</weapon>
+	<weapon id="9845" name="Shadow Item: Tathlum" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_taslam_i00"/>
+		<set name="weight" val="587"/>
+		<set name="soulshots" val="5"/>
+		<set name="spiritshots" val="3"/>
+		<set name="crystal_type" val="C"/>
+		<set name="p_dam" val="176"/>
+		<set name="m_dam" val="76"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="durability" val="300"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="kamaelAnalog" val="8845"/>
+	</weapon>
+	<weapon id="9846" name="Shadow Item: Military Fleuret" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_assult_fleuret_i00"/>
+		<set name="weight" val="457"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="p_dam" val="159"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="durability" val="300"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="kamaelAnalog" val="8852"/>
+	</weapon>
+	<weapon id="9847" name="Shadow Item: Innominate Victory" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_nameless_victory_i00"/>
+		<set name="weight" val="643"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="p_dam" val="190"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="durability" val="300"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="kamaelAnalog" val="8849"/>
+	</weapon>
+	<weapon id="9848" name="Shadow Item: Peacemaker" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_peace_maker_i00"/>
+		<set name="weight" val="573"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="p_dam" val="221"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="durability" val="300"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="kamaelAnalog" val="8856"/>
+	</weapon>
+	<weapon id="9854" name="Dynasty Sword" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_blade_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="333"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3567" lvl="2"/>
+		</skills>
+		<set name="kamaelAnalog" val="9377"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9855" name="Dynasty Sword" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_blade_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="333"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3013" lvl="5"/>
+		</skills>
+		<set name="kamaelAnalog" val="9378"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9856" name="Dynasty Sword" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_blade_i01"/>
+		<set name="additional_name" val="Light"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="333"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3498" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="9379"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9857" name="Dynasty Blade" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="405"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3567" lvl="2"/>
+		</skills>
+		<set name="kamaelAnalog" val="9381"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9858" name="Dynasty Blade" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="405"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3013" lvl="5"/>
+		</skills>
+		<set name="kamaelAnalog" val="9382"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9859" name="Dynasty Blade" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01"/>
+		<set name="additional_name" val="Light"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="405"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3498" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="9383"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9860" name="Dynasty Phantom" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01"/>
+		<set name="additional_name" val="Acumen"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="267"/>
+		<set name="m_dam" val="202"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3047" lvl="2"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9861" name="Dynasty Phantom" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01"/>
+		<set name="additional_name" val="Mana Up"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="267"/>
+		<set name="m_dam" val="202"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3014" lvl="2"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9862" name="Dynasty Phantom" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01"/>
+		<set name="additional_name" val="Conversion"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="267"/>
+		<set name="m_dam" val="202"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3048" lvl="3"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9863" name="Dynasty Bow" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_bow_i01"/>
+		<set name="additional_name" val="Cheap Shot"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="654"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="293"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="12"/>
+		<set name="mp_consume" val="6"/>
+		<set name="price" val="74946000"/>
+		<set name="kamaelAnalog" val="9385"/>
+		<set name="isSa" val="true"/>
+		<skills>
+			<skill id="3552" lvl="1"/>
+			<skill id="8312" lvl="1"/>
+		</skills>
+	</weapon>
+	<weapon id="9864" name="Dynasty Bow" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_bow_i01"/>
+		<set name="additional_name" val="Guidance"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="654"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="293"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="12"/>
+		<set name="mp_consume" val="6"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3008" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="9386"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9865" name="Dynasty Bow" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_bow_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="654"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="293"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="12"/>
+		<set name="mp_consume" val="6"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3567" lvl="2"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="9387"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9866" name="Dynasty Knife" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_dagger_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="291"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="433"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="12"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3567" lvl="2"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9867" name="Dynasty Knife" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_dagger_i01"/>
+		<set name="additional_name" val="Evasion"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="291"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="433"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="12"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3009" lvl="8"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9868" name="Dynasty Knife" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_dagger_i01"/>
+		<set name="additional_name" val="Critical Damage"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="291"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="433"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="12"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3066" lvl="4"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9869" name="Dynasty Halberd" type="POLE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_spear_i01"/>
+		<set name="additional_name" val="Anger"/>
+		<set name="weight" val="2010"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="333"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3600" lvl="10"/>
+			<skill id="3552" lvl="2"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9870" name="Dynasty Halberd" type="POLE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_spear_i01"/>
+		<set name="additional_name" val="Critical Stun"/>
+		<set name="weight" val="2010"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="333"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="74946000"/>
+		<triggers>
+			<trigger id="3070" level="4" type="CRIT" chance="100" />
+		</triggers>
+		<skills>
+			<skill id="3552" lvl="2"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9871" name="Dynasty Halberd" type="POLE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_spear_i01"/>
+		<set name="additional_name" val="Light"/>
+		<set name="weight" val="2010"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="333"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3498" lvl="1"/>
+			<skill id="3552" lvl="2"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9872" name="Dynasty Cudgel" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_hammer_i01"/>
+		<set name="additional_name" val="Anger"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="333"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3057" lvl="3"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9873" name="Dynasty Cudgel" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_hammer_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="333"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3013" lvl="5"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9874" name="Dynasty Cudgel" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_hammer_i01"/>
+		<set name="additional_name" val="Rsk. Focus"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="333"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3071" lvl="2"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9875" name="Dynasty Mace" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_staff_i01"/>
+		<set name="additional_name" val="Mana Up"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="267"/>
+		<set name="m_dam" val="202"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3014" lvl="2"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9876" name="Dynasty Mace" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_staff_i01"/>
+		<set name="additional_name" val="Conversion"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="267"/>
+		<set name="m_dam" val="202"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3048" lvl="3"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9877" name="Dynasty Mace" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_staff_i01"/>
+		<set name="additional_name" val="Acumen"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="267"/>
+		<set name="m_dam" val="202"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3047" lvl="3"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9878" name="Dynasty Bagh-Nakh" type="DUALFIST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01"/>
+		<set name="additional_name" val="Rsk. Evasion"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="405"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3069" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9879" name="Dynasty Bagh-Nakh" type="DUALFIST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="405"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3565" lvl="2"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9880" name="Dynasty Bagh-Nakh" type="DUALFIST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01"/>
+		<set name="additional_name" val="Haste"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="405"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3564" lvl="2"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+</list>

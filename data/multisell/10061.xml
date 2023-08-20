@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Blacksmith of Mammon: "Craft S-grade Dualsword." -->
+
+<list>
+  <!-- Внимание: keepenchanted НЕ должно быть установлено в мультиселлах, где в одном блоке возможны два одинаковых нестекуемых предмета (напрмиер dual) -->
+  <!-- ignoreprice не работает с keepencahnted -->
+  <config showall="true" notax="true" keepenchanted="false" />
+
+  <!-- Dynasty Dual Sword -->
+  <item>
+    <ingredient id="9442" count="1"/>
+    <ingredient id="2500" count="1"/>
+    <ingredient id="5126" count="1"/>
+    <ingredient id="5575" count="3240000"/>
+    <production id="10004" count="1"/>
+  </item>
+
+  <!-- Icarus Dual Sword -->
+  <item>
+    <ingredient id="10215" count="1"/>
+    <ingredient id="2500" count="1"/>
+    <ingredient id="5126" count="1"/>
+    <ingredient id="5575" count="3240000"/>
+    <production id="10415" count="1"/>
+  </item>
+
+  <!-- Tallum Blade*Dark Legion's Edge -->
+  <item>
+    <ingredient id="80" count="1"/>
+    <ingredient id="2500" count="1"/>
+    <ingredient id="5126" count="1"/>
+    <ingredient id="5575" count="3240000"/>
+    <production id="6580" count="1"/>
+  </item>
+
+  <!-- Dynasty Dual Sword - Earth -->
+  <item>
+    <ingredient id="11272" count="1"/>
+    <ingredient id="2500" count="1"/>
+    <ingredient id="5126" count="1"/>
+    <ingredient id="5575" count="3240000"/>
+    <production id="11251" count="1"/>
+  </item>
+
+  <!-- Icarus Dual Sword - Destruction -->
+  <item>
+    <ingredient id="11305" count="1"/>
+    <ingredient id="2500" count="1"/>
+    <ingredient id="5126" count="1"/>
+    <ingredient id="5575" count="3240000"/>
+    <production id="11300" count="1"/>
+  </item>
+
+  <!-- Tallum Blade*Dark Legion's Edge - Thunder -->
+  <item>
+    <ingredient id="11058" count="1"/>
+    <ingredient id="2500" count="1"/>
+    <ingredient id="5126" count="1"/>
+    <ingredient id="5575" count="3240000"/>
+    <production id="11234" count="1"/>
+  </item>
+
+  <!-- Tallum Blade*Dark Legion's Edge - Thunder -->
+  <item>
+    <ingredient id="80" count="1"/>
+    <ingredient id="11080" count="1"/>
+    <ingredient id="5126" count="1"/>
+    <ingredient id="5575" count="3240000"/>
+    <production id="11234" count="1"/>
+  </item>
+
+</list>

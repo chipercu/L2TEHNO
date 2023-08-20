@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="113" type="SOLO">
+		<name lang="en" val="Status of the Beacon Tower"/>
+		<name lang="ru" val="Состояние маяка"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="31979"/>	<!-- Moira -->
+			<event type="QUEST_TALK" val="31979"/>	<!-- Moira -->
+			<event type="QUEST_TALK" val="32016"/>	<!-- Torrant -->
+			<item id="8086"/>	<!-- Box Containing the Fire of Holy Spirit -->
+		</setting>
+	</quest>
+</quests>

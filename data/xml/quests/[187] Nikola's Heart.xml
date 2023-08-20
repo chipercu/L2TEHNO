@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="187" type="SOLO">
+		<name lang="en" val="Nikola's Heart"/>
+		<name lang="ru" val="Сердце Николя"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="NPC_FIRST_TALK" val="30673"/>	<!-- Lorain -->
+			<event type="QUEST_TALK" val="30512"/>	<!-- Kusto -->
+			<event type="QUEST_TALK" val="30621"/>	<!-- Nikola -->
+			<event type="QUEST_TALK" val="30673"/>	<!-- Lorain -->
+			<item id="10362"/>	<!-- Loraine's Certificate -->
+			<item id="10368"/>	<!-- Metallograph -->
+		</setting>
+	</quest>
+</quests>

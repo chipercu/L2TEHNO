@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="329" type="SOLO">
+		<name lang="en" val="Curiosity of a Dwarf"/>
+		<name lang="ru" val="Гномье любопытство"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20083"/>	<!-- Granite Golem -->
+			<event type="MOBKILLED" val="20085"/>	<!-- Puncher -->
+			<event type="QUEST_START" val="30437"/>	<!-- Rolento -->
+			<event type="QUEST_TALK" val="30437"/>	<!-- Rolento -->
+			<item id="1365"/>	<!-- Broken Stoneheart -->
+			<item id="1346"/>	<!-- Golem's Stoneheart -->
+		</setting>
+	</quest>
+</quests>

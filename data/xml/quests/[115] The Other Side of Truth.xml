@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="115" type="SOLO">
+		<name lang="en" val="The Other Side of Truth"/>
+		<name lang="ru" val="Обратная сторона правды"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="32020"/>	<!-- Rafforty -->
+			<event type="QUEST_TALK" val="32020"/>	<!-- Rafforty -->
+			<event type="QUEST_TALK" val="32018"/>	<!-- Misa -->
+			<event type="QUEST_TALK" val="32022"/>	<!-- Kier -->
+			<event type="QUEST_TALK" val="32021"/>	<!-- Ice Sculpture -->
+			<event type="QUEST_TALK" val="32077"/>	<!-- Ice Sculpture -->
+			<event type="QUEST_TALK" val="32078"/>	<!-- Ice Sculpture -->
+			<event type="QUEST_TALK" val="32079"/>	<!-- Ice Sculpture -->
+			<item id="8079"/>	<!-- Misa's Letter -->
+			<item id="8080"/>	<!-- Rafforty's Letter -->
+			<item id="8081"/>	<!-- Piece of Tablet -->
+			<item id="8082"/>	<!-- Report Piece -->
+		</setting>
+	</quest>
+</quests>

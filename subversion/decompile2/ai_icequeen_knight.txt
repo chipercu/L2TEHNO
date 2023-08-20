@@ -1,0 +1,648 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_knight : warrior_use_skill
+{
+parameter:
+	int	Skill01_ID = 458752001;
+	int	Skill01_Prob = 2000;
+	int	SelfRangeDD = 458752001;
+	int	SelfRangeDD_Prob = 1500;
+	int	Dash = 458752001;
+	int	Dash_Prob = 2000;
+	
+	int	Skill_Freya_Buff = 6284;
+	
+	int	first_spawner = -1;
+	int	second_spawner = -1;
+	int	third_spawner = -1;
+	int	my_position = -1;
+	string	SuperPointName = "-1";
+	int	SuperPointMethod = 0;
+	int	PosX = -1;
+	int	PosY = -1;
+	int	PosZ = -1;
+	int	IsAggressive = 1;
+	int	TIMER_knight_state = 2314011;
+	int	TIMER_knight_state2 = 2314012;
+	int	TIMER_dash = 2314014;
+	int	TIMER_superpoint_delay = 2314028;
+	string	MAKER_controller = "schuttgart29_2314_01m1";
+	string	MAKER_ice_knight = "schuttgart29_2314_03m1";
+	int	Dispel_Debuff_Prob = 7000;
+	int	debug_mode = 0;
+
+handler:
+	EventHandler CREATED(c0,i0,maker0)
+	{
+		myself->SetMaxHateListSize(50);
+		myself->ChangeNPCState(( myself + 1480 ),1);
+		( myself + 1128 ) = 0;
+		( myself + 1136 ) = 0;
+		( myself + 1144 ) = 0;
+		( myself + 1152 ) = 0;
+		if( my_position > 0 )
+		{
+			if( debug_mode )
+			{
+				myself->Shout("my_position : " + my_position);
+			}
+		}
+		i0 = myself->InstantZone_GetId();
+		maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_controller);
+		if( gg->IsNull(maker0) == 0 )
+		{
+			gg->SendMakerScriptEvent(maker0,23140064,gg->GetIndexFromCreature(( myself + 1480 )),0);
+		}
+		myself->AddTimerEx(TIMER_dash,( 5 * 1000 ));
+	}
+
+	EventHandler ABNORMAL_STATUS_CHANGED(speller,skill_id,skill_level,skill_name_id,s0,i0)
+	{
+		if( ( ( myself + 1480 ) + 7552 ) == 139 )
+		{
+			if( skill_level > 0 )
+			{
+				if( myself->Skill_GetAbnormalType(6029313) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(6029313)) > 0 )
+				{
+					if( gg->Rand(10000) < Dispel_Debuff_Prob )
+					{
+						myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(6029313));
+					}
+				}
+				else if( myself->Skill_GetAbnormalType(91357185) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(91357185)) > 0 )
+				{
+					if( gg->Rand(10000) < Dispel_Debuff_Prob )
+					{
+						myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(91357185));
+					}
+				}
+				else if( myself->Skill_GetAbnormalType(18284545) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(18284545)) > 0 )
+				{
+					if( gg->Rand(10000) < Dispel_Debuff_Prob )
+					{
+						myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(18284545));
+					}
+				}
+				else if( myself->Skill_GetAbnormalType(24051713) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(24051713)) > 0 )
+				{
+					if( gg->Rand(10000) < Dispel_Debuff_Prob )
+					{
+						myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(24051713));
+					}
+				}
+				else if( myself->Skill_GetAbnormalType(76611585) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(76611585)) > 0 )
+				{
+					if( gg->Rand(10000) < Dispel_Debuff_Prob )
+					{
+						myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(76611585));
+					}
+				}
+				else if( myself->Skill_GetAbnormalType(78708737) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(78708737)) > 0 )
+				{
+					if( gg->Rand(10000) < Dispel_Debuff_Prob )
+					{
+						myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(78708737));
+					}
+				}
+				else if( myself->Skill_GetAbnormalType(26411009) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(26411009)) > 0 )
+				{
+					if( gg->Rand(10000) < Dispel_Debuff_Prob )
+					{
+						myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(26411009));
+					}
+				}
+			}
+		}
+		else if( ( ( myself + 1480 ) + 7552 ) == 144 )
+		{
+			if( skill_level > 0 )
+			{
+				if( myself->Skill_GetAbnormalType(6029313) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(6029313)) > 0 )
+				{
+					myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(6029313));
+				}
+				else if( myself->Skill_GetAbnormalType(91357185) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(91357185)) > 0 )
+				{
+					myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(91357185));
+				}
+				else if( myself->Skill_GetAbnormalType(18284545) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(18284545)) > 0 )
+				{
+					myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(18284545));
+				}
+				else if( myself->Skill_GetAbnormalType(24051713) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(24051713)) > 0 )
+				{
+					myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(24051713));
+				}
+				else if( myself->Skill_GetAbnormalType(76611585) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(76611585)) > 0 )
+				{
+					myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(76611585));
+				}
+				else if( myself->Skill_GetAbnormalType(78708737) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(78708737)) > 0 )
+				{
+					myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(78708737));
+				}
+				else if( myself->Skill_GetAbnormalType(26411009) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(26411009)) > 0 )
+				{
+					myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(26411009));
+				}
+			}
+		}
+	}
+
+	EventHandler NO_DESIRE()
+	{
+		if( ( myself + 1128 ) == 1 )
+		{
+			myself->AddMoveAroundDesire(5,5);
+		}
+	}
+
+	EventHandler SEE_CREATURE(creature,maker0,h0)
+	{
+		if( ( myself + 1144 ) == 1 )
+		{
+			if( ( creature + 68 ) == 1 )
+			{
+				h0 = myself->GetHateInfoByCreature(creature);
+				if( myself->IsNullHateInfo(h0) == 1 )
+				{
+					myself->AddHateInfo(creature,1,0,1,1);
+					myself->ChangeNPCState(( myself + 1480 ),3);
+				}
+			}
+		}
+		if( ( myself + 1128 ) == 0 )
+		{
+			if( third_spawner == 1 )
+			{
+				myself->AddTimerEx(TIMER_knight_state,1);
+				( myself + 1128 ) = 1;
+				maker0 = myself->GetMyMaker();
+				if( gg->IsNull(maker0) == 0 )
+				{
+					gg->SendMakerScriptEvent(maker0,23140042,gg->GetIndexFromCreature(creature),0);
+				}
+			}
+			else
+			{
+				return;
+			}
+		}
+		super;
+	}
+
+	EventHandler CLAN_ATTACKED()
+	{
+		if( ( myself + 1128 ) == 0 )
+		{
+			return;
+		}
+		super;
+	}
+
+	EventHandler SCRIPT_EVENT(script_event_arg1,script_event_arg2,i0,c0,maker0)
+	{
+		if( script_event_arg1 == 23140010 )
+		{
+			if( ( myself + 1128 ) != 0 )
+			{
+				c0 = gg->GetCreatureFromIndex(script_event_arg2);
+				if( myself->IsNullCreature(c0) == 0 )
+				{
+					myself->AddAttackDesire(c0,1,1000);
+				}
+			}
+			if( first_spawner == 1 )
+			{
+				myself->AddTimerEx(TIMER_knight_state,1);
+				if( script_event_arg2 == 1 )
+				{
+					( myself + 1128 ) = 1;
+				}
+				else
+				{
+					c0 = gg->GetCreatureFromIndex(script_event_arg2);
+					if( myself->IsNullCreature(c0) == 0 )
+					{
+						myself->AddAttackDesire(c0,1,1000);
+					}
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140042 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("SCE_KNIGHT_FIRST_ATTACK");
+			}
+			myself->AddTimerEx(TIMER_knight_state,1);
+			( myself + 1128 ) = 1;
+			c0 = gg->GetCreatureFromIndex(script_event_arg2);
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				myself->AddAttackDesire(c0,1,1000);
+			}
+		}
+		else if( script_event_arg1 == 23140045 )
+		{
+			if( ( myself + 1128 ) == 0 )
+			{
+				myself->AddTimerEx(TIMER_knight_state,1);
+				( myself + 1128 ) = 1;
+				if( debug_mode )
+				{
+					myself->Shout("ice_knight moving start. my_pos : " + my_position);
+				}
+				maker0 = myself->GetMyMaker();
+				if( gg->IsNull(maker0) == 0 )
+				{
+					gg->SendMakerScriptEvent(maker0,23140056,my_position,5);
+				}
+			}
+			else if( ( myself + 1128 ) == 1 )
+			{
+				if( debug_mode )
+				{
+					myself->Say("\Ù Y0¬ÐŒ moving_knight, " + my_position);
+				}
+			}
+			c0 = gg->GetCreatureFromIndex(script_event_arg2);
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				( myself + 1136 ) = script_event_arg2;
+			}
+			if( my_position <= 18 )
+			{
+				myself->AddMoveToDesire(114730,-114805,-11200,50);
+				if( ( myself + 1136 ) != 0 )
+				{
+					c0 = gg->GetCreatureFromIndex(( myself + 1136 ));
+					if( myself->IsNullCreature(c0) == 0 )
+					{
+						gg->SendScriptEvent(c0,23140046,gg->GetIndexFromCreature(( myself + 1480 )));
+					}
+				}
+			}
+			else if( my_position >= 21 )
+			{
+				myself->AddMoveToDesire(PosX,PosY,PosZ,10000);
+				myself->AddTimerEx(TIMER_superpoint_delay,2000);
+			}
+		}
+		else if( script_event_arg1 == 23140047 )
+		{
+			c0 = gg->GetCreatureFromIndex(script_event_arg2);
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				myself->AddAttackDesire(c0,1,3000);
+			}
+		}
+		else if( script_event_arg1 == 23140043 )
+		{
+			if( ( myself + 1128 ) == 1 )
+			{
+				c0 = gg->GetCreatureFromIndex(script_event_arg2);
+				if( myself->IsNullCreature(c0) == 0 )
+				{
+					myself->AddAttackDesire(c0,1,100);
+				}
+			}
+			else if( second_spawner == 1 && ( myself + 1128 ) == 0 )
+			{
+				c0 = gg->GetCreatureFromIndex(script_event_arg2);
+				if( myself->IsNullCreature(c0) == 0 )
+				{
+					myself->MakeAttackEvent(c0,1000,0);
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140020 )
+		{
+			myself->AddTimerEx(TIMER_knight_state,1);
+		}
+		else if( script_event_arg1 == 23140048 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("SCE_HOLD_DESIRE_ON");
+			}
+			( ( myself + 1480 ) + 8249 ) = 1;
+			( ( myself + 1480 ) + 8250 ) = 1;
+		}
+		else if( script_event_arg1 == 23140049 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("SCE_HOLD_DESIRE_OFF");
+			}
+			myself->LookNeighbor(2000);
+			( ( myself + 1480 ) + 8249 ) = 0;
+			( ( myself + 1480 ) + 8250 ) = 0;
+		}
+		else if( script_event_arg1 == 23140051 )
+		{
+			if( ( myself + 1128 ) != 0 )
+			{
+				c0 = gg->GetCreatureFromIndex(script_event_arg2);
+				if( myself->IsNullCreature(c0) == 0 )
+				{
+					if( ( ( myself + 1480 ) + 24 ) <= ( c0 + 24 ) )
+					{
+						gg->SendScriptEvent(c0,23140052,gg->GetIndexFromCreature(( myself + 1480 )));
+					}
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140062 )
+		{
+			if( ( myself + 1152 ) != 3 )
+			{
+				myself->AddUseSkillDesire(( myself + 1480 ),Skill_Freya_Buff,1,0,10000000);
+				( myself + 1152 ) = 3;
+			}
+		}
+		else if( script_event_arg1 == 23140062 )
+		{
+			if( ( myself + 1152 ) != 3 )
+			{
+				c0 = gg->GetCreatureFromIndex(( myself + 1136 ));
+				if( myself->IsNullCreature(c0) == 0 )
+				{
+					if( myself->DistFromMe(c0) < 200 )
+					{
+						myself->AddUseSkillDesire(( myself + 1480 ),Skill_Freya_Buff,1,0,10000000);
+						( myself + 1152 ) = 3;
+					}
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140065 )
+		{
+			if( debug_mode )
+			{
+				myself->Shout("is not able spawn");
+			}
+		}
+	}
+
+	EventHandler TIMER_FIRED_EX(timer_id,i0,maker0,c0)
+	{
+		if( timer_id == TIMER_knight_state )
+		{
+			if( ( myself + 1144 ) == 0 )
+			{
+				( myself + 1144 ) = 1;
+				myself->ChangeNPCState(( myself + 1480 ),2);
+				myself->AddTimerEx(TIMER_knight_state2,1500);
+			}
+		}
+		else if( timer_id == TIMER_knight_state2 )
+		{
+			myself->ChangeNPCState(( myself + 1480 ),3);
+		}
+		else if( timer_id == TIMER_dash )
+		{
+			if( myself->IsNullCreature(( myself + 1504 )) == 0 )
+			{
+				if( ( ( myself + 1504 ) + 72 ) == 1 )
+				{
+					if( gg->Rand(10000) < ( Dash_Prob * 2 ) )
+					{
+						myself->AddUseSkillDesire(( myself + 1504 ),Dash,0,1,100000000);
+					}
+				}
+			}
+			if( ( myself + 1152 ) == 1 )
+			{
+				if( ( myself + 1136 ) != 0 )
+				{
+					c0 = gg->GetCreatureFromIndex(( myself + 1136 ));
+					if( myself->IsNullCreature(c0) == 0 )
+					{
+						if( myself->DistFromMe(c0) < 150 )
+						{
+							( myself + 1152 ) = 2;
+							if( debug_mode )
+							{
+								myself->Say("broadcast |X •õ");
+							}
+							myself->BroadcastScriptEvent(23140062,0,1000);
+						}
+					}
+				}
+			}
+			myself->AddTimerEx(TIMER_dash,( 5 * 1000 ));
+		}
+		else if( timer_id == TIMER_superpoint_delay )
+		{
+			if( gg->IsSameString(SuperPointName,"-1") == 0 )
+			{
+				if( debug_mode )
+				{
+					myself->Shout("Move Superpoint. " + my_position);
+				}
+				myself->AddMoveSuperPointDesire(SuperPointName,SuperPointMethod,5000000);
+				( myself + 1152 ) = 1;
+			}
+		}
+	}
+
+	EventHandler ATTACKED(attacker,damage,i0,maker0)
+	{
+		if( ( myself + 1128 ) == 0 )
+		{
+			( myself + 1128 ) = 1;
+			if( debug_mode )
+			{
+				myself->Shout("first attack");
+			}
+			if( ( myself + 1144 ) == 0 )
+			{
+				myself->AddTimerEx(TIMER_knight_state,1);
+			}
+			if( first_spawner == 1 )
+			{
+				maker0 = myself->GetMyMaker();
+				if( gg->IsNull(maker0) == 0 )
+				{
+					gg->SendMakerScriptEvent(maker0,23140042,gg->GetIndexFromCreature(attacker),0);
+				}
+				i0 = myself->InstantZone_GetId();
+				maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_controller);
+				if( gg->IsNull(maker0) == 0 )
+				{
+					gg->SendMakerScriptEvent(maker0,23140014,0,0);
+				}
+			}
+			else if( second_spawner == 1 )
+			{
+				maker0 = myself->GetMyMaker();
+				if( gg->IsNull(maker0) == 0 )
+				{
+					gg->SendMakerScriptEvent(maker0,23140042,gg->GetIndexFromCreature(attacker),0);
+				}
+			}
+			else if( debug_mode )
+			{
+				myself->Say("¼´™@ Y0¬X first_attack.");
+			}
+			maker0 = myself->GetMyMaker();
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,23140056,my_position,10);
+			}
+		}
+		if( attacker + 68 ) == || myself->IsInCategory(12,( attacker + 7380 )) == 1 || myself->IsInCategory(123,( attacker + 7380 )) == 1 )
+		{
+			myself->AddAttackDesire(attacker,1,damage);
+			myself->BroadcastScriptEvent(23140043,gg->GetIndexFromCreature(attacker),2000);
+			if( Skill01_ID != 458752001 )
+			{
+				if( gg->Rand(10000) < Skill01_Prob )
+				{
+					if( myself->IsNullCreature(( myself + 1504 )) == 0 )
+					{
+						if( gg->Rand(10000) < 8000 )
+						{
+							if( myself->Skill_GetConsumeMP(Skill01_ID) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Skill01_ID) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Skill01_ID) == 0 )
+							{
+								myself->AddUseSkillDesire(( myself + 1504 ),Skill01_ID,0,1,1000000);
+							}
+						}
+						else if( myself->Skill_GetConsumeMP(Skill01_ID) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Skill01_ID) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Skill01_ID) == 0 )
+						{
+							myself->AddUseSkillDesire(attacker,Skill01_ID,0,1,1000000);
+						}
+					}
+					else if( myself->Skill_GetConsumeMP(Skill01_ID) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Skill01_ID) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Skill01_ID) == 0 )
+					{
+						myself->AddUseSkillDesire(attacker,Skill01_ID,0,1,1000000);
+					}
+				}
+			}
+			if( SelfRangeDD != 458752001 )
+			{
+				if( gg->Rand(10000) < SelfRangeDD_Prob )
+				{
+					if( myself->Skill_GetConsumeMP(SelfRangeDD) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(SelfRangeDD) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(SelfRangeDD) == 0 )
+					{
+						myself->AddUseSkillDesire(( myself + 1480 ),SelfRangeDD,0,1,1000000);
+					}
+				}
+			}
+			if( Dash != 458752001 )
+			{
+				if( gg->Rand(10000) < Dash_Prob )
+				{
+					if( myself->IsNullCreature(( myself + 1504 )) == 0 )
+					{
+						if( gg->Rand(10000) < 8000 )
+						{
+							if( myself->Skill_GetConsumeMP(Dash) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Dash) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Dash) == 0 )
+							{
+								myself->AddUseSkillDesire(( myself + 1504 ),Dash,0,1,1000000);
+							}
+						}
+						else if( myself->Skill_GetConsumeMP(Dash) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Dash) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Dash) == 0 )
+						{
+							myself->AddUseSkillDesire(attacker,Dash,0,1,1000000);
+						}
+					}
+					else if( myself->Skill_GetConsumeMP(Dash) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Dash) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Dash) == 0 )
+					{
+						myself->AddUseSkillDesire(attacker,Dash,0,1,1000000);
+					}
+				}
+			}
+		}
+	}
+
+	EventHandler NODE_ARRIVED(script_event_arg1,script_event_arg2,script_event_arg3,state,success,s0,c0)
+	{
+		if( debug_mode )
+		{
+			myself->Say("node_arr : " + script_event_arg1);
+		}
+		if( script_event_arg1 == 8 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("8ˆ xÜ Ä).  t´ t");
+			}
+			( myself + 1152 ) = 1;
+			myself->AddMoveToDesire(114707,-114797,-11199,2000);
+			c0 = gg->GetCreatureFromIndex(( myself + 1136 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				if( debug_mode )
+				{
+					myself->Say("|| ¥t tÙ");
+				}
+				myself->AddFollowDesire(c0,1000);
+			}
+		}
+		else if( script_event_arg1 == 9 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("ÈÀÉ xÜ Ä)");
+			}
+		}
+		else
+		{
+			c0 = gg->GetCreatureFromIndex(( myself + 1136 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				if( myself->DistFromMe(c0) < 300 && ( gg->FloatToInt(( ( myself + 1480 ) + 24 )) - gg->FloatToInt(( c0 + 24 )) ) < 50 )
+				{
+					if( debug_mode )
+					{
+						myself->Say("|   LÌ ˆ|ìx¸ t");
+					}
+					( myself + 1152 ) = 1;
+				}
+			}
+		}
+	}
+
+	EventHandler DEBUG_AI(creature,reply)
+	{
+		if( reply == 1 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("1");
+			}
+			gg->SendScriptEvent(( myself + 1480 ),23140045,0);
+		}
+	}
+
+	EventHandler MY_DYING(i0,maker0)
+	{
+		if( first_spawner == 1 )
+		{
+			i0 = myself->InstantZone_GetId();
+			maker0 = myself->GetMyMaker();
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,23140044,0,0);
+			}
+		}
+		if( second_spawner == 1 )
+		{
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_knight);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,23140069,0,0);
+			}
+		}
+	}
+
+}

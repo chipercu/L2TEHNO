@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="613" type="PARTY_ONE">
+		<name lang="en" val="Prove your courage!"/>
+		<name lang="ru" val="Доказательство доблести"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="25299"/>	<!-- Ketras Hero Hekaton -->
+			<event type="QUEST_START" val="31377"/>	<!-- Ashas Varka Durai -->
+			<event type="QUEST_TALK" val="31377"/>	<!-- Ashas Varka Durai -->
+			<item id="7240"/>	<!-- Head of Hekaton -->
+		</setting>
+	</quest>
+</quests>

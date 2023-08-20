@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="222" type="SOLO">
+		<name lang="en" val="Test of the Duelist"/>
+		<name lang="ru" val="Испытание силы"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20085"/>	<!-- Puncher -->
+			<event type="MOBKILLED" val="20090"/>	<!-- Noble Ant Leader -->
+			<event type="MOBKILLED" val="20234"/>	<!-- Marsh Stakato Drone -->
+			<event type="MOBKILLED" val="20202"/>	<!-- Dead Seeker -->
+			<event type="MOBKILLED" val="20270"/>	<!-- Breka Orc Overlord -->
+			<event type="MOBKILLED" val="20552"/>	<!-- Fettered Soul -->
+			<event type="MOBKILLED" val="20582"/>	<!-- Leto Lizardman Overlord -->
+			<event type="MOBKILLED" val="20564"/>	<!-- Enchanted Monstereye -->
+			<event type="MOBKILLED" val="20601"/>	<!-- Tamlin Orc -->
+			<event type="MOBKILLED" val="20602"/>	<!-- Tamlin Orc Archer -->
+			<event type="MOBKILLED" val="20214"/>	<!-- Excuro -->
+			<event type="MOBKILLED" val="20217"/>	<!-- Krator -->
+			<event type="MOBKILLED" val="20554"/>	<!-- Grandis -->
+			<event type="MOBKILLED" val="20588"/>	<!-- Timak Orc Overlord -->
+			<event type="MOBKILLED" val="20604"/>	<!-- Rakin -->
+			<event type="QUEST_START" val="30623"/>	<!-- Kaien -->
+			<event type="QUEST_TALK" val="30623"/>	<!-- Kaien -->
+			<item id="2768"/>	<!-- Puncher's Shard -->
+			<item id="2769"/>	<!-- Noble Ant's Feeler -->
+			<item id="2770"/>	<!-- Drone's Chitin -->
+			<item id="2771"/>	<!-- Dead Seeker Fang -->
+			<item id="2772"/>	<!-- Overlord Necklace -->
+			<item id="2773"/>	<!-- Fettered Soul's Chain -->
+			<item id="2774"/>	<!-- Chief's Amulet -->
+			<item id="2775"/>	<!-- Enchanted Eye Meat -->
+			<item id="2776"/>	<!-- Tamrin Orc's Ring -->
+			<item id="2777"/>	<!-- Tamrin Orc's Arrow -->
+			<item id="2779"/>	<!-- Excuro's Skin -->
+			<item id="2780"/>	<!-- Krator's Shard -->
+			<item id="2781"/>	<!-- Grandi's Skin -->
+			<item id="2782"/>	<!-- Timak Orc's Belt -->
+			<item id="2783"/>	<!-- Lakin's Mace -->
+			<item id="2763"/>	<!-- Order Gludio -->
+			<item id="2764"/>	<!-- Order Dion -->
+			<item id="2765"/>	<!-- Order Giran -->
+			<item id="2766"/>	<!-- Order Oren -->
+			<item id="2767"/>	<!-- Order Aden -->
+			<item id="2779"/>	<!-- Excuro's Skin -->
+			<item id="2780"/>	<!-- Krator's Shard -->
+			<item id="2781"/>	<!-- Grandi's Skin -->
+			<item id="2782"/>	<!-- Timak Orc's Belt -->
+			<item id="2783"/>	<!-- Lakin's Mace -->
+			<item id="2778"/>	<!-- Final Order -->
+		</setting>
+	</quest>
+</quests>

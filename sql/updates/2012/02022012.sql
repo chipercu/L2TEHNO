@@ -1,0 +1,1 @@
+ALTER TABLE `character_variables` MODIFY COLUMN `expire_time` BIGINT(15) NOT NULL DEFAULT '0';

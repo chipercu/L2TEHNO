@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="6900" name="Recipe: Arcana Mace (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="976000" />
+	</etcitem>
+	<etcitem id="6901" name="Recipe: Shining Arrow (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="200000" />
+	</etcitem>
+	<etcitem id="6903" name="Music Box M" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_m_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<skills>
+			<skill id="2187" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="6904" name="Party Mask Fabric" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
+		<set name="class" val="PIECES" />
+		<set name="weight" val="60" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5000" />
+	</etcitem>
+	<etcitem id="6905" name="Hair Pin Piece" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
+		<set name="class" val="PIECES" />
+		<set name="weight" val="60" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5000" />
+	</etcitem>
+	<etcitem id="6906" name="Pirate's Eye Patch Material" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_braided_hemp_i00" />
+		<set name="class" val="PIECES" />
+		<set name="weight" val="60" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5000" />
+	</etcitem>
+	<etcitem id="6907" name="Monocle Piece" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bark_blue_i00" />
+		<set name="class" val="PIECES" />
+		<set name="weight" val="60" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5000" />
+	</etcitem>
+	<etcitem id="6908" name="Fish Oil" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fish_oil_i00" />
+		<set name="class" val="MATHERIALS" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="50" />
+	</etcitem>
+	<etcitem id="6909" name="Greater Fish Oil" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fish_oil_i01" />
+		<set name="class" val="MATHERIALS" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="250" />
+	</etcitem>
+	<etcitem id="6910" name="Premium Fish Oil" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fish_oil_i02" />
+		<set name="class" val="MATHERIALS" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1250" />
+	</etcitem>
+	<etcitem id="6911" name="Fish Scale" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fish_scale_i00" />
+		<set name="class" val="MATHERIALS" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="200" />
+	</etcitem>
+	<etcitem id="6912" name="Shiny Fish Scale" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fish_scale_i01" />
+		<set name="class" val="MATHERIALS" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="300" />
+	</etcitem>
+	<etcitem id="6913" name="Fish Gem" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fish_gem_i00" />
+		<set name="class" val="MATHERIALS" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="500" />
+	</etcitem>
+	<etcitem id="6914" name="Shiny Fish Gem" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fish_gem_i01" />
+		<set name="class" val="MATHERIALS" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1000" />
+	</etcitem>
+	<etcitem id="6915" name="Thin Fish Bone" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fang_gray_i00" />
+		<set name="class" val="MATHERIALS" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="300" />
+	</etcitem>
+	<etcitem id="6916" name="Thick Fish Bone" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fang_ivory_i00" />
+		<set name="class" val="MATHERIALS" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="450" />
+	</etcitem>
+	<etcitem id="6920" name="Recipe: Greater Fish Oil (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="50" />
+	</etcitem>
+	<etcitem id="6921" name="Recipe: Premium Fish Oil(100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="250" />
+	</etcitem>
+	<etcitem id="6922" name="Recipe: Party Mask (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="100000" />
+	</etcitem>
+	<etcitem id="6923" name="Recipe: Lady's Hair Pin (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="100000" />
+	</etcitem>
+	<etcitem id="6924" name="Recipe: Pirate's Eye Patch (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="100000" />
+	</etcitem>
+	<etcitem id="6925" name="Recipe: Monocle (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="100000" />
+	</etcitem>
+	<etcitem id="6926" name="Recipe: Lesser Healing Potion (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="18" />
+	</etcitem>
+	<etcitem id="6927" name="Recipe: Healing Potion (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="66" />
+	</etcitem>
+	<etcitem id="6928" name="Recipe: Greater Healing Potion (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="180" />
+	</etcitem>
+	<etcitem id="6929" name="Recipe: Antidote (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="15" />
+	</etcitem>
+	<etcitem id="6930" name="Recipe: Greater Antidote (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="36" />
+	</etcitem>
+	<etcitem id="6931" name="Recipe: Bandage (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="15" />
+	</etcitem>
+	<etcitem id="6932" name="Recipe: Emergency Dressing (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="36" />
+	</etcitem>
+	<etcitem id="6933" name="Recipe: Haste Potion (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="240" />
+	</etcitem>
+	<etcitem id="6934" name="Recipe: Potion of Alacrity (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="480" />
+	</etcitem>
+	<etcitem id="6935" name="Recipe: Greater Haste Potion (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="600" />
+	</etcitem>
+	<etcitem id="6936" name="Recipe: Greater Swift Attack Potion (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1200" />
+	</etcitem>
+	<etcitem id="6937" name="Recipe: Magic Haste Potion (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="480" />
+	</etcitem>
+	<etcitem id="6938" name="Recipe: Greater Magic Haste Potion (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1200" />
+	</etcitem>
+	<etcitem id="6939" name="Recipe: Mystery Potion (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2000" />
+	</etcitem>
+	<etcitem id="6940" name="Recipe: Facelifting Potion - A (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="6941" name="Recipe: Facelifting Potion - B (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="6942" name="Recipe: Facelifting Potion - C (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="6943" name="Recipe: Dye Potion - A (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="6944" name="Recipe: Dye Potion - B (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="6945" name="Recipe: Dye Potion - C (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="6946" name="Recipe: Dye Potion - D (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="6947" name="Recipe: Hair Style Change Potion - A (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="6948" name="Recipe: Hair Style Change Potion - B (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="6949" name="Recipe: Hair Style Change Potion - C (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="6950" name="Recipe: Hair Style Change Potion - D (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="6951" name="Recipe: Hair Style Change Potion - E (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="6952" name="Recipe: Hair Style Change Potion - F (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="6953" name="Recipe: Hair Style Change Potion - G (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="6954" name="Recipe: Dye of STR &lt;Str+1 Con-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7000" />
+	</etcitem>
+	<etcitem id="6955" name="Recipe: Dye of STR &lt;Str+1 Dex-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7000" />
+	</etcitem>
+	<etcitem id="6956" name="Recipe: Dye of CON &lt;Con+1 Str-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7000" />
+	</etcitem>
+	<etcitem id="6957" name="Recipe: Dye of CON &lt;Con+1 Dex-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7000" />
+	</etcitem>
+	<etcitem id="6958" name="Recipe: Dye of DEX &lt;Dex+1 Str-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7000" />
+	</etcitem>
+	<etcitem id="6959" name="Recipe: Dye of DEX &lt;Dex+1 Con-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7000" />
+	</etcitem>
+	<etcitem id="6960" name="Recipe: Dye of INT &lt;Int+1 Men-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7000" />
+	</etcitem>
+	<etcitem id="6961" name="Recipe: Dye of INT &lt;Int+1 Wit-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7000" />
+	</etcitem>
+	<etcitem id="6962" name="Recipe: Dye of MEN &lt;Men+1 Int-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7000" />
+	</etcitem>
+	<etcitem id="6963" name="Recipe: Dye of MEN &lt;Men+1 Wit-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7000" />
+	</etcitem>
+	<etcitem id="6964" name="Recipe: Dye of WIT&lt;Wit+1 Int-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7000" />
+	</etcitem>
+	<etcitem id="6965" name="Recipe: Dye of WIT&lt;Wit+1 Men-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7000" />
+	</etcitem>
+	<etcitem id="6966" name="Recipe: Greater Dye of STR &lt;Str+1 Con-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="6967" name="Recipe: Greater Dye of STR &lt;Str+1 Dex-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="6968" name="Recipe: Greater Dye of CON &lt;Con+1 Str-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="6969" name="Recipe: Greater Dye of CON &lt;Con+1 Dex-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="6970" name="Recipe: Greater Dye of DEX &lt;Dex+1 Str-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="6971" name="Recipe: Greater Dye of DEX &lt;Dex+1 Con-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="6972" name="Recipe: Greater Dye of INT &lt;Int+1 Men-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="6973" name="Recipe: Greater Dye of INT &lt;Int+1 Wit-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="6974" name="Recipe: Greater Dye of MEN &lt;Men+1 Int-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="6975" name="Recipe: Greater Dye of MEN &lt;Men+1 Wit-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="6976" name="Recipe: Greater Dye of WIT&lt;Wit+1 Int-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="6977" name="Recipe: Greater Dye of WIT&lt;Wit+1 Men-1&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="6978" name="Recipe: Greater Dye of STR &lt;Str+2 Con-2&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="6979" name="Recipe: Greater Dye of STR &lt;Str+2 Dex-2&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="6980" name="Recipe: Greater Dye of CON &lt;Con+2 Str-2&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="6981" name="Recipe: Greater Dye of CON &lt;Con+2 Dex-2&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="6982" name="Recipe: Greater Dye of DEX &lt;Dex+2 Str-2&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="6983" name="Recipe: Greater Dye of DEX &lt;Dex+2 Con-2&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="6984" name="Recipe: Greater Dye of INT &lt;Int+2 Men-2&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="6985" name="Recipe: Greater Dye of INT &lt;Int+2 Wit-2&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="6986" name="Recipe: Greater Dye of MEN &lt;Men+2 Int-2&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="6987" name="Recipe: Greater Dye of MEN &lt;Men+2 Wit-2&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="6988" name="Recipe: Greater Dye of WIT&lt;Wit+2 Int-2&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="6989" name="Recipe: Greater Dye of WIT&lt;Wit+2 Men-2&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="6990" name="Recipe: Greater Dye of STR &lt;Str+3 Con-3&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="18000" />
+	</etcitem>
+	<etcitem id="6991" name="Recipe: Greater Dye of STR &lt;Str+3 Dex-3&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="18000" />
+	</etcitem>
+	<etcitem id="6992" name="Recipe: Greater Dye of CON &lt;Con+3 Str-3&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="18000" />
+	</etcitem>
+	<etcitem id="6993" name="Recipe: Greater Dye of CON &lt;Con+3 Dex-3&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="18000" />
+	</etcitem>
+	<etcitem id="6994" name="Recipe: Greater Dye of DEX &lt;Dex+3 Str-3&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="18000" />
+	</etcitem>
+	<etcitem id="6995" name="Recipe: Greater Dye of DEX &lt;Dex+3 Con-3&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="18000" />
+	</etcitem>
+	<etcitem id="6996" name="Recipe: Greater Dye of INT &lt;Int+3 Men-3&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="18000" />
+	</etcitem>
+	<etcitem id="6997" name="Recipe: Greater Dye of INT &lt;Int+3 Wit-3&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="18000" />
+	</etcitem>
+	<etcitem id="6998" name="Recipe: Greater Dye of MEN &lt;Men+3 Int-3&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="18000" />
+	</etcitem>
+	<etcitem id="6999" name="Recipe: Greater Dye of MEN &lt;Men+3 Wit-3&gt; (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="18000" />
+	</etcitem>
+</list>

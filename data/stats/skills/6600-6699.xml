@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="6600" levels="28" name="NPC earth attack">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6601" levels="28" name="NPC earth attack">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6602" levels="28" name="NPC earth attack">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6603" levels="28" name="NPC earth shot">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6604" levels="28" name="NPC earth shot">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6605" levels="28" name="NPC earth shot">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6606" levels="28" name="NPC earth shot">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6607" levels="28" name="NPC earth shot">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6608" levels="28" name="NPC earth shot">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6609" levels="29" name="NPC earth magic">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6610" levels="29" name="NPC earth magic">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6611" levels="29" name="NPC earth magic">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6612" levels="29" name="NPC earth magic">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6613" levels="29" name="NPC earth magic">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6614" levels="29" name="NPC earth magic">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6615" levels="29" name="NPC earth magic">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6616" levels="29" name="NPC earth magic">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6617" levels="29" name="NPC earth magic">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6618" levels="7" name="Maguen Strike">
+		<!-- Moving Spd. Is decreased by 50% for 10 seconds. -->
+		<table name="#power"> 1832 2272 2751 3252 3752 4224 4640 </table>
+		<set name="power" val="#power"/>
+		<set name="levelModifier" val="3"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isDebuff" val="true"/>
+		<for>
+			<effect name="Debuff" time="10" effectPower="30" stackOrder="3" stackType="speed_down">
+				<mul order="0x30" stat="p_speed" val="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6619" levels="7" name="Maguen Power Strike">
+		<!-- Moving Spd. Is decreased by 90% for 10 seconds. -->
+		<table name="#power"> 1832 2272 2751 3252 3752 4224 4640 </table>
+		<set name="power" val="#power"/>
+		<set name="levelModifier" val="3"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isDebuff" val="true"/>
+		<for>
+			<effect name="Debuff" time="10" effectPower="30" stackOrder="4" stackType="speed_down">
+				<mul order="0x30" stat="p_speed" val="0.1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6620" levels="7" name="Maguen Plasma">
+		<table name="#p_physical_attack"> 100 150 200 250 300 350 400 </table>
+		<table name="#p_magical_attack"> 5 10 15 20 25 30 35 </table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="1200" stackOrder="1" stackType="pa_up">
+				<add order="0x40" stat="p_physical_attack" val="#p_physical_attack"/>
+			</effect>
+			<effect name="Buff" time="1200" stackOrder="1" stackType="ma_up" noicon="1">
+				<add order="0x40" stat="p_magical_attack" val="#p_magical_attack"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6621" levels="1" name="Maguen Plasma">
+		<table name="#p_physical_attack"> 200 250 300 350 400 450 500 </table>
+		<table name="#p_magical_attack"> 15 20 25 30 35 40 45 </table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="1200" stackOrder="1" stackType="pa_up">
+				<add order="0x40" stat="p_physical_attack" val="#p_physical_attack"/>
+			</effect>
+			<effect name="Buff" time="1200" stackOrder="1" stackType="ma_up" noicon="1">
+				<add order="0x40" stat="p_magical_attack" val="#p_magical_attack"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6622" levels="1" name="Shock">
+		<!-- Momentarily causes shock, which stuns the enemy for 20 seconds. In addition, your chance of being critically attacked is increased by 50%. -->
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<for>
+			<effect name="Stun" stackOrder="1" stackType="Stun" time="20">
+				<mul order="0x30" stat="critChanceRcpt" val="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6623" levels="1" name="Fungus Hub">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6624" levels="1" name="Shock">
+		<!-- Momentarily causes shock, which stuns the enemy for 9 seconds. In addition, your chance of being critically attacked is increased by 50%. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6625" levels="1" name="Energy of Life">
+		<set name="power" val="15"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="HEAL_PERCENT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="6626" levels="2" name="Energy of Life's Power">
+		<set name="power" val="25"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="HEAL_PERCENT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="6627" levels="3" name="Energy of Life's Highest Power">
+		<set name="power" val="100"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="HEAL_PERCENT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="6628" levels="1" name="Energy of Mana">
+		<set name="power" val="11"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MANAHEAL_PERCENT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="6629" levels="2" name="Energy of Mana's Power">
+		<set name="power" val="18"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MANAHEAL_PERCENT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="6630" levels="3" name="Energy of Mana's Highest Power">
+		<set name="power" val="100"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MANAHEAL_PERCENT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="6631" levels="1" name="Energy of Power">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="3" stackType="p_physical_attack" time="300">
+                <mul order="0x30" stat="p_physical_attack" val="1.15"/>
+            </effect>
+        </for>
+	</skill>
+	<skill id="6632" levels="1" name="Energy of Enchant">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="3" stackType="p_magical_attack" time="300">
+                <mul order="0x30" stat="p_magical_attack" val="1.15"/>
+            </effect>
+        </for>
+	</skill>
+	<skill id="6633" levels="1" name="Energy of Attack Speed\">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="2" stackType="pAtkSpeedUp" time="300">
+                <mul order="0x30" stat="p_attack_speed" val="1.33"/>
+            </effect>
+        </for>
+	</skill>
+	<skill id="6634" levels="1" name="Energy of Casting Speed">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="2" stackType="mAtkSpeedUp" time="300">
+                <mul order="0x30" stat="p_magic_speed" val="1.3"/>
+            </effect>
+        </for>
+	</skill>
+	<skill id="6635" levels="1" name="Energy of Crt Rate\">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="3" stackType="p_critical_rate_per" time="300">
+                <add order="0x40" stat="p_critical_rate_per" val="30"/>
+            </effect>
+        </for>
+	</skill>
+	<skill id="6636" levels="1" name="Energy of Moving Speed">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="2" stackType="SpeedUp" time="300">
+                <add order="0x40" stat="p_speed" val="33"/>
+            </effect>
+        </for>
+	</skill>
+	<skill id="6637" levels="1" name="Vampiric Aura">
+        <set name="power" val="0"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="4" stackType="vampRage" time="300">
+                <add order="0x40" stat="absorbDam" val="9"/>
+            </effect>
+        </for>
+	</skill>
+	<skill id="6638" levels="1" name="Aura of Mystery">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="hpregen" time="300">
+				<mul order="0x30" stat="regHp" val="2"/>
+				<mul order="0x30" stat="regMp" val="2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6639" levels="1" name="Bane of Auras - Damage">
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="3" stackType="p_critical_damage_per" time="300">
+                <mul order="0x30" stat="p_critical_damage_per" val="1.35"/>
+            </effect>
+        </for>
+	</skill>
+	<skill id="6640" levels="1" name="Energizing Aura">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Vitality" time="300"/>
+		</for>
+	</skill>
+	<skill id="6641" levels="1" name="Holy Ball">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6642" levels="1" name="Dash">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6643" levels="1" name="Holy Strike">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6644" levels="1" name="Ice Queen Freya">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6645" levels="1" name="Cooker Invincibility On">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_getdamage" param="block_hp"/>
+			<effect name="p_block_getdamage" param="block_mp"/>
+			<effect name="p_block_debuff">			
+				<add order="0x40" stat="cancelRcpt" val="100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6646" levels="1" name="Cooker Invincibility Off">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="DispelEffects">
+				<def name="dispelType" val="bane" />
+				<def name="cancelRate" val="100" />
+				<def name="negateCount" val="5" />
+				<def name="negateStackTypes" val="pd_up_special" />
+			</effect>
+		</for>		
+	</skill>
+	<skill id="6647" levels="1" name="Presentation - Ice Knight">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6648" levels="1" name="Komodo Heal">
+		<set name="power" val="30"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="HEAL_PERCENT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="6649" levels="1" name="Treykan Transformation">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="addSkills" val="968;1;969;1;5437;1" />
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="npcId" val="13283"/>
+		<for>
+			<effect name="Transformation" time="1800" val="126" stackOrder="1" stackType="transform">
+				<set order="0x08" stat="STR" val="40"/>
+				<set order="0x08" stat="DEX" val="30"/>
+				<set order="0x08" stat="CON" val="43"/>
+				<set order="0x08" stat="INT" val="21"/>
+				<set order="0x08" stat="WIT" val="13"/>
+				<set order="0x08" stat="MEN" val="23"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6650" levels="1" name="Tacrakahn's Alienation">
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="cancelable" val="false" />
+		<for>
+			<effect name="Petrification" stackType="paralyze" time="300" />
+		</for>
+	</skill>
+	<skill id="6651" levels="1" name="Dopagen's Alienation">
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="cancelable" val="false" />
+		<for>
+			<effect name="Petrification" stackType="paralyze" time="300" />
+		</for>
+	</skill>
+	<skill id="6652" levels="1" name="Level 85 Raid Boss">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6653" levels="1" name="Level 85 Raid Boss">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6654" levels="1" name="Level 85 Raid Boss">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6655" levels="1" name="Tarsque Carapace">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6656" levels="1" name="Lavasaurus Firstborn Attack">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6657" levels="1" name="Lavasaurus Firstborn Heal">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6658" levels="1" name="Level 84 Raid Boss">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6659" levels="1" name="Level 84 Raid Boss">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6660" levels="1" name="Level 84 Raid Boss">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6661" levels="1" name="Level 85 Raid Boss">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6662" levels="2" name="Pillar of Frozen">
+		<table name="#ignoreResists">false true</table>
+		<set name="aggroPoints" val="100"/>
+		<set name="ignoreResists" val="#ignoreResists"/>
+		<set name="isDebuff" val="true"/>
+		<set name="magicLvl" val="85"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="delayedEffect" val="6302"/>
+		<for>
+			<effect name="Paralyze"/>
+			<effect name="t_hp" param="115;5;diff"/>
+		</for>
+	</skill>
+	<skill id="6663" levels="1" name="Level 76 Raid Boss">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6664" levels="1" name="Level 84 Raid Boss">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6665" levels="1" name="NPC Hate">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="A1"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_target_me" param="100"/>
+		</for>
+	</skill>
+	<skill id="6666" levels="1" name="Feral Shield">
+		<!-- Increases P. Def. by 18% by 5 minutes. -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="315" stackOrder="3" stackType="p_physical_defence">
+					<mul order="0x30" stat="p_physical_defence" val="1.18"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6667" levels="1" name="Feral Wind Walk">
+		<!-- Increases Moving Spd. by 33 for 5 minutes. -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="315" stackOrder="2" stackType="SpeedUp">
+					<add order="0x40" stat="p_speed" val="33"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6668" levels="1" name="Feral Death Whisper">
+		<!-- Increases critical attack power by 35% for 5 minutes. -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="315" stackOrder="3" stackType="p_critical_damage_per">
+					<mul order="0x30" stat="p_critical_damage_per" val="1.35"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6669" levels="1" name="Feral Body Bless">
+		<!-- Increases Max HP by 35% for 5 minutes. -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="315" stackOrder="6" stackType="hp_up">
+					<mul order="0x30" stat="p_max_hp" val="1.35"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6670" levels="1" name="Feral Vampiric Rage">
+		<!-- For 5 minutes, 9% of the standard short-range physical damage inflicted on the enemy is converted to HP for you. -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="315" stackOrder="9" stackType="vampRage">
+					<add order="0x40" stat="absorbDam" val="9"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6671" levels="1" name="Feral Berserker Spirit">
+		<!-- Decreases P. Def. by 8%, M. Def. by 16%, Evasion by 4 and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Moving Spd. by 8 for 5 minutes. -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="315" stackOrder="2" stackType="berserk">
+				<mul order="0x30" stat="p_magical_attack" val="1.16"/>
+				<mul order="0x30" stat="p_physical_attack" val="1.08"/>
+				<mul order="0x30" stat="p_physical_defence" val="0.92"/>
+				<mul order="0x30" stat="p_magical_defence" val="0.84"/>
+				<mul order="0x30" stat="p_magic_speed" val="1.08"/>
+				<mul order="0x30" stat="p_attack_speed" val="1.08"/>
+				<add order="0x40" stat="p_speed" val="8"/>
+				<sub order="0x40" stat="p_avoid" val="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6672" levels="1" name="Feral Bless Shield">
+		<!-- Increases Shield defense rate by 30% for 30 minutes. -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="315" stackOrder="6" stackType="shieldProbUp">
+					<mul order="0x30" stat="rShld" val="1.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6673" levels="1" name="Presentation - Attain Noblesse">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6674" levels="1" name="Energy of Range Increment">
+		<!-- Bow/Crossbow range is temporarily increased by 50. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6675" levels="1" name="Lavasaurus Firstborn Attack">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6676" levels="1" name="Magician's Perversity">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6677" levels="1" name="Hold">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6678" levels="1" name="Hold Cancel">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6679" levels="1" name="Summoner's Strike">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6680" levels="1" name="Faint Plus">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6681" levels="1" name="Maguen Speed Walk">
+		<!-- Moving Spd. increases by 40 for 20 minutes. -->
+		<set name="target" val="TARGET_OWNER_PET"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="1200" stackLvl="1" stackType="speed_up">
+				<add order="0x40" stat="p_speed" val="40"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6682" levels="1" name="Elite Maguen Speed Walk">
+		<!-- Moving Spd. increases by 45 for 20 minutes. -->
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="1200" stackLvl="1" stackType="speed_up">
+				<add order="0x40" stat="p_speed" val="45"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6683" levels="1" name="Maguen Recall">
+		<set name="teleCoords" val="-178244;153389;2472"/>
+		<set name="target" val="TARGET_OWNER_PET"/>
+		<set name="skillType" val="TELEPORT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="6684" levels="1" name="Maguen Recall">
+		<set name="teleCoords" val="-178244;153389;2472"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="TELEPORT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="effectRange" val="900"/>
+	</skill>
+	<skill id="6685" levels="1" name="Santa Claus's Gift">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6686" levels="1" name="Sacred Protector Cancel">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6687" levels="1" name="Patience">
+		<!-- Note: Description says p_physical_attack but is a typo, this increase skill p_physical_attack -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isTrigger" val="true"/>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="p_skill_power_per" val="1.2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6688" levels="1" name="Soup of Failure">
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillRadius" val="350"/>
+		<for>
+			<effect name="t_hp" param="-0.02;5;per">
+				<mul order="0x30" stat="p_attack_speed" val="1.2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6689" levels="1" name="Absorb HP MP">
+		<set name="power" val="131" />
+		<set name="absorbPart" val="40" />
+		<set name="absorbAbs" val="0"/>
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DRAIN" />
+		<set name="element" val="unholy" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="i_mp" param="-491;diff"/>
+		</for>
+	</skill>
+	<skill id="6690" levels="1" name="Hold">
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="ROOT" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="p_block_move"/>
+		</for>
+	</skill>
+	<skill id="6691" levels="1" name="Dualsword Deadly Move">
+		<set name="power" val="12231" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for />
+	</skill>
+	<skill id="6692" levels="1" name="Dualsword Range Deadly Move">
+		<set name="power" val="6602" />
+		<set name="target" val="TARGET_AURA" />
+		<set name="skillRadius" val="100" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for />
+	</skill>
+	<skill id="6693" levels="12" name="NPC Strike">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6694" levels="12" name="BOSS Strike">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6695" levels="12" name="BOSS Spinning Slasher">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6696" levels="1" name="Presentation - Quest Done">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6697" levels="1" name="Eternal Blizzard">
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
+		<set name="element" val="1"/> <!-- Water -->
+		<set name="elementPower" val="180"/>
+		<set name="magicLvl" val="85"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="45257"/>
+		<set name="skillRadius" val="3000"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="addSkills" val="6698;1"/>
+		<for>
+			<effect name="CallSkills" instantly="true"/>
+		</for>
+	</skill>
+	<skill id="6698" levels="1" name="Pillar of Frozen - Eternal Ice">
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills (Triggered from 6698) -->
+		<set name="aggroPoints" val="100"/>
+		<set name="ignoreResists" val="true"/>
+		<set name="isDebuff" val="true"/>
+		<set name="magicLvl" val="85"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="100"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="delayedEffect" val="6302"/>
+		<for>
+			<effect name="Paralyze" time="15" abnormal="freez"/>
+			<effect name="t_hp" param="-115;5;diff"/>
+			<effect name="t_mp" param="-5;5;diff"/>
+		</for>
+	</skill>
+</list>

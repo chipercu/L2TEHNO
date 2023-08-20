@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="10276" type="PARTY_ALL">
+		<name lang="en" val="Mutated Kaneus - Gludio"/>
+		<name lang="ru" val="Мутант Канеус - Глудио"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="18554"/>	<!-- Tomlan Kamos -->
+			<event type="MOBKILLED" val="18555"/>	<!-- Ol Ariosh -->
+			<event type="QUEST_START" val="30332"/>	<!-- Bathis -->
+			<event type="QUEST_TALK" val="30332"/>	<!-- Bathis -->
+			<event type="QUEST_TALK" val="30344"/>	<!-- Rohmer -->
+			<item id="13830"/>	<!-- Tomlan Kamos' Cellular Tissue -->
+			<item id="13831"/>	<!-- Ol Ariosh's Cellular Tissue -->
+		</setting>
+	</quest>
+</quests>

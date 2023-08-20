@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="335" type="SOLO">
+		<name lang="en" val="Song of the Hunter"/>
+		<name lang="ru" val="Песня Охотника"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="27140"/>	<!-- Breka Overlord Haka -->
+			<event type="MOBKILLED" val="27141"/>	<!-- Breka Overlord Jaka -->
+			<event type="MOBKILLED" val="27142"/>	<!-- Breka Overlord Marka -->
+			<event type="MOBKILLED" val="27144"/>	<!-- Tarlk Raider Athu -->
+			<event type="MOBKILLED" val="27145"/>	<!-- Tarlk Raider Lanka -->
+			<event type="MOBKILLED" val="27146"/>	<!-- Tarlk Raider Triska -->
+			<event type="MOBKILLED" val="27147"/>	<!-- Tarlk Raider Motura -->
+			<event type="MOBKILLED" val="27148"/>	<!-- Tarlk Raider Kalath -->
+			<event type="MOBKILLED" val="20578"/>	<!-- Leto Lizardman Archer -->
+			<event type="MOBKILLED" val="20579"/>	<!-- Leto Lizardman Soldier -->
+			<event type="MOBKILLED" val="20580"/>	<!-- Leto Lizardman Warrior -->
+			<event type="MOBKILLED" val="20581"/>	<!-- Leto Lizardman Shaman -->
+			<event type="MOBKILLED" val="20582"/>	<!-- Leto Lizardman Overlord -->
+			<event type="MOBKILLED" val="20641"/>	<!-- Harit Lizardman Grunt -->
+			<event type="MOBKILLED" val="20642"/>	<!-- Harit Lizardman Archer -->
+			<event type="MOBKILLED" val="20643"/>	<!-- Harit Lizardman Warrior -->
+			<event type="MOBKILLED" val="20644"/>	<!-- Harit Lizardman Shaman -->
+			<event type="MOBKILLED" val="20645"/>	<!-- Harit Lizardman Matriarch -->
+			<event type="MOBKILLED" val="20550"/>	<!-- Guardian Basilisk -->
+			<event type="MOBKILLED" val="20581"/>	<!-- Leto Lizardman Shaman -->
+			<event type="MOBKILLED" val="27143"/>	<!-- Windsus Aleph -->
+			<event type="MOBKILLED" val="20563"/>	<!-- Manashen Gargoyle -->
+			<event type="MOBKILLED" val="20565"/>	<!-- Enchanted Stone Golem -->
+			<event type="MOBKILLED" val="20555"/>	<!-- Giant Fungus -->
+			<event type="MOBKILLED" val="20586"/>	<!-- Timak Orc Warrior -->
+			<event type="MOBKILLED" val="20560"/>	<!-- Trisalim Spider -->
+			<event type="MOBKILLED" val="20561"/>	<!-- Trisalim Tarantula -->
+			<event type="MOBKILLED" val="20591"/>	<!-- Valley Treant -->
+			<event type="MOBKILLED" val="20597"/>	<!-- Valley Treant Elder -->
+			<event type="MOBKILLED" val="20675"/>	<!-- Tairim -->
+			<event type="MOBKILLED" val="20660"/>	<!-- Archer of Greed -->
+			<event type="MOBKILLED" val="20578"/>	<!-- Leto Lizardman Archer -->
+			<event type="MOBKILLED" val="20579"/>	<!-- Leto Lizardman Soldier -->
+			<event type="MOBKILLED" val="20586"/>	<!-- Timak Orc Warrior -->
+			<event type="MOBKILLED" val="20588"/>	<!-- Timak Orc Overlord -->
+			<event type="MOBKILLED" val="20565"/>	<!-- Enchanted Stone Golem -->
+			<event type="MOBKILLED" val="20556"/>	<!-- Giant Monstereye -->
+			<event type="MOBKILLED" val="20557"/>	<!-- Dire Wyrm -->
+			<event type="MOBKILLED" val="20550"/>	<!-- Guardian Basilisk -->
+			<event type="MOBKILLED" val="20552"/>	<!-- Fettered Soul -->
+			<event type="MOBKILLED" val="20553"/>	<!-- Windsus -->
+			<event type="MOBKILLED" val="20554"/>	<!-- Grandis -->
+			<event type="MOBKILLED" val="20631"/>	<!-- Taik Orc Archer -->
+			<event type="MOBKILLED" val="20632"/>	<!-- Taik Orc Warrior -->
+			<event type="MOBKILLED" val="20600"/>	<!-- Karul Bugbear -->
+			<event type="MOBKILLED" val="20601"/>	<!-- Tamlin Orc -->
+			<event type="MOBKILLED" val="20602"/>	<!-- Tamlin Orc Archer -->
+			<event type="MOBKILLED" val="27157"/>	<!-- Leto Chief Narak -->
+			<event type="MOBKILLED" val="20582"/>	<!-- Leto Lizardman Overlord -->
+			<event type="MOBKILLED" val="20567"/>	<!-- Enchanted Gargoyle -->
+			<event type="MOBKILLED" val="20269"/>	<!-- Breka Orc Shaman -->
+			<event type="MOBKILLED" val="20271"/>	<!-- Breka Orc Warrior -->
+			<event type="MOBKILLED" val="27156"/>	<!-- Leto Shaman Ketz -->
+			<event type="MOBKILLED" val="20581"/>	<!-- Leto Lizardman Shaman -->
+			<event type="MOBKILLED" val="27158"/>	<!-- Timak Raider Kaikee -->
+			<event type="MOBKILLED" val="20586"/>	<!-- Timak Orc Warrior -->
+			<event type="MOBKILLED" val="20603"/>	<!-- Kronbe Spider -->
+			<event type="MOBKILLED" val="20562"/>	<!-- Spore Zombie -->
+			<event type="MOBKILLED" val="27160"/>	<!-- Gok Magok -->
+			<event type="MOBKILLED" val="20554"/>	<!-- Grandis -->
+			<event type="MOBKILLED" val="27164"/>	<!-- Karul Chief Orooto -->
+			<event type="MOBKILLED" val="20600"/>	<!-- Karul Bugbear -->
+			<event type="MOBKILLED" val="20558"/>	<!-- Rotting tree -->
+			<event type="MOBKILLED" val="20560"/>	<!-- Trisalim Spider -->
+			<event type="MOBKILLED" val="20561"/>	<!-- Trisalim Tarantula -->
+			<event type="MOBKILLED" val="20633"/>	<!-- Taik Orc Shaman -->
+			<event type="MOBKILLED" val="20634"/>	<!-- Taik Orc Captain -->
+			<event type="MOBKILLED" val="20641"/>	<!-- Harit Lizardman Grunt -->
+			<event type="MOBKILLED" val="20642"/>	<!-- Harit Lizardman Archer -->
+			<event type="MOBKILLED" val="20643"/>	<!-- Harit Lizardman Warrior -->
+			<event type="MOBKILLED" val="20661"/>	<!-- Hatar Ratman Thief -->
+			<event type="MOBKILLED" val="20662"/>	<!-- Hatar Ratman Boss -->
+			<event type="MOBKILLED" val="27149"/>	<!-- Gremlin Filcher -->
+			<event type="MOBKILLED" val="20661"/>	<!-- Hatar Ratman Thief -->
+			<event type="MOBKILLED" val="20662"/>	<!-- Hatar Ratman Boss -->
+			<event type="MOBKILLED" val="20667"/>	<!-- Farcran -->
+			<event type="MOBKILLED" val="20589"/>	<!-- Fline -->
+			<event type="MOBKILLED" val="27149"/>	<!-- Gremlin Filcher -->
+			<event type="MOBKILLED" val="20589"/>	<!-- Fline -->
+			<event type="MOBKILLED" val="20590"/>	<!-- Liele -->
+			<event type="MOBKILLED" val="27149"/>	<!-- Gremlin Filcher -->
+			<event type="MOBKILLED" val="20590"/>	<!-- Liele -->
+			<event type="MOBKILLED" val="20592"/>	<!-- Satyr -->
+			<event type="MOBKILLED" val="20598"/>	<!-- Satyr Elder -->
+			<event type="MOBKILLED" val="20594"/>	<!-- Forest Runner -->
+			<event type="MOBKILLED" val="27149"/>	<!-- Gremlin Filcher -->
+			<event type="MOBKILLED" val="20594"/>	<!-- Forest Runner -->
+			<event type="MOBKILLED" val="20682"/>	<!-- Vanor Silenos Grunt -->
+			<event type="MOBKILLED" val="20683"/>	<!-- Vanor Silenos Scout -->
+			<event type="MOBKILLED" val="20684"/>	<!-- Vanor Silenos Warrior -->
+			<event type="MOBKILLED" val="20571"/>	<!-- Tarlk Bugbear Warrior -->
+			<event type="MOBKILLED" val="27159"/>	<!-- Timak Overlord Okun -->
+			<event type="MOBKILLED" val="20588"/>	<!-- Timak Orc Overlord -->
+			<event type="MOBKILLED" val="27161"/>	<!-- Taik Overlord Kakran -->
+			<event type="MOBKILLED" val="20634"/>	<!-- Taik Orc Captain -->
+			<event type="MOBKILLED" val="20639"/>	<!-- Mirror -->
+			<event type="MOBKILLED" val="27149"/>	<!-- Gremlin Filcher -->
+			<event type="MOBKILLED" val="20639"/>	<!-- Mirror -->
+			<event type="MOBKILLED" val="20664"/>	<!-- Deprive -->
+			<event type="MOBKILLED" val="20593"/>	<!-- Unicorn -->
+			<event type="MOBKILLED" val="20599"/>	<!-- Unicorn Elder -->
+			<event type="MOBKILLED" val="27163"/>	<!-- Vanor Elder Kerunos -->
+			<event type="MOBKILLED" val="20686"/>	<!-- Vanor Silenos Chieftain -->
+			<event type="MOBKILLED" val="20659"/>	<!-- Grave Wanderer -->
+			<event type="MOBKILLED" val="27162"/>	<!-- Hatar Chieftain Kubel -->
+			<event type="MOBKILLED" val="20662"/>	<!-- Hatar Ratman Boss -->
+			<event type="MOBKILLED" val="20676"/>	<!-- Judge of Marsh -->
+			<event type="QUEST_START" val="30744"/>	<!-- Grey -->
+			<event type="QUEST_TALK" val="30744"/>	<!-- Grey -->
+			<event type="QUEST_TALK" val="30746"/>	<!-- Cybellin -->
+			<event type="QUEST_TALK" val="30745"/>	<!-- Tor -->
+			<item id="3709"/>	<!-- Guardian Basilisk Scale -->
+			<item id="3710"/>	<!-- Karut Weed -->
+			<item id="3711"/>	<!-- Haka's Head -->
+			<item id="3712"/>	<!-- Jakas' Head -->
+			<item id="3713"/>	<!-- Marka's Head -->
+			<item id="3714"/>	<!-- Windsus Aleph Skin -->
+			<item id="3715"/>	<!-- Indigo Spirit Ore -->
+			<item id="3716"/>	<!-- Sporesea Seed -->
+			<item id="3717"/>	<!-- Timak Orc Totem -->
+			<item id="3718"/>	<!-- Trisalim Silk -->
+			<item id="3719"/>	<!-- Ambrosius Fruit -->
+			<item id="3720"/>	<!-- Balefire Crystal -->
+			<item id="3721"/>	<!-- Imperial Arrowhead -->
+			<item id="3722"/>	<!-- Athu's Head -->
+			<item id="3723"/>	<!-- Lanka's Head -->
+			<item id="3724"/>	<!-- Triska's Head -->
+			<item id="3725"/>	<!-- Motura's Head -->
+			<item id="3726"/>	<!-- Kalath's Head -->
+			<item id="3727"/>	<!-- 1st Circle Request: 1C -->
+			<item id="3769"/>	<!-- Charm of Kadesh -->
+			<item id="3728"/>	<!-- 1st Circle Request: 2C -->
+			<item id="3770"/>	<!-- Timak Jade Necklace -->
+			<item id="3729"/>	<!-- 1st Circle Request: 3C -->
+			<item id="3771"/>	<!-- Enchanted Golem Shard -->
+			<item id="3730"/>	<!-- 1st Circle Request: 4C -->
+			<item id="3772"/>	<!-- Giant Monster Eye Meat -->
+			<item id="3731"/>	<!-- 1st Circle Request: 5C -->
+			<item id="3773"/>	<!-- Dire Wyrm Egg -->
+			<item id="3732"/>	<!-- 1st Circle Request: 6C -->
+			<item id="3774"/>	<!-- Grd Basilisk Talon -->
+			<item id="3733"/>	<!-- 1st Circle Request: 7C -->
+			<item id="3775"/>	<!-- Revenant's Chains -->
+			<item id="3734"/>	<!-- 1st Circle Request: 8C -->
+			<item id="3776"/>	<!-- Windsus Tusk -->
+			<item id="3735"/>	<!-- 1st Circle Request: 9C -->
+			<item id="3777"/>	<!-- Grandis Skull -->
+			<item id="3736"/>	<!-- 1st Circle Request: 10C -->
+			<item id="3778"/>	<!-- Taik Obsidian Amulet -->
+			<item id="3737"/>	<!-- 1st Circle Request: 11C -->
+			<item id="3779"/>	<!-- Karul Bugbear Head -->
+			<item id="3738"/>	<!-- 1st Circle Request: 12C -->
+			<item id="3780"/>	<!-- Tamlin Ivory Charm -->
+			<item id="3739"/>	<!-- 1st Circle Request: 1B -->
+			<item id="3781"/>	<!-- Fang of Narak -->
+			<item id="3740"/>	<!-- 1st Circle Request: 2B -->
+			<item id="3782"/>	<!-- Enchanted Gargoyle Horn -->
+			<item id="3741"/>	<!-- 1st Circle Request: 3B -->
+			<item id="3783"/>	<!-- Coiled Serpent Totem -->
+			<item id="3742"/>	<!-- 1st Circle Request: 4B -->
+			<item id="3784"/>	<!-- Totem of Kadesh -->
+			<item id="3743"/>	<!-- 1st Circle Request: 5B -->
+			<item id="3785"/>	<!-- Kaiki's Head -->
+			<item id="3744"/>	<!-- 1st Circle Request: 6B -->
+			<item id="3786"/>	<!-- Kronbe Venom Sac -->
+			<item id="3745"/>	<!-- 1st Circle Request: 1A -->
+			<item id="3787"/>	<!-- Eva's Charm -->
+			<item id="3746"/>	<!-- 1st Circle Request: 2A -->
+			<item id="3788"/>	<!-- Titan's Tablet -->
+			<item id="3747"/>	<!-- 1st Circle Request: 3A -->
+			<item id="3789"/>	<!-- Book of Shunaiman -->
+			<item id="3748"/>	<!-- 2nd Circle Request: 1C -->
+			<item id="3790"/>	<!-- Rotting Tree Spores -->
+			<item id="3749"/>	<!-- 2nd Circle Request 2C -->
+			<item id="3791"/>	<!-- Trisalim Venom Sac -->
+			<item id="3750"/>	<!-- 2nd Circle Request 3C -->
+			<item id="3792"/>	<!-- Taik Orc Totem -->
+			<item id="3751"/>	<!-- 2nd Circle Request: 4C -->
+			<item id="3793"/>	<!-- Harit Barbed Necklace -->
+			<item id="3752"/>	<!-- 2nd Circle Request: 5C -->
+			<item id="3794"/>	<!-- Coin of Old Empire -->
+			<item id="3753"/>	<!-- 2nd Circle Request: 6C -->
+			<item id="3795"/>	<!-- Skin of Farcran -->
+			<item id="3754"/>	<!-- 2nd Circle Request: 7C -->
+			<item id="3796"/>	<!-- Tempest Shard -->
+			<item id="3755"/>	<!-- 2nd Circle Request: 8C -->
+			<item id="3797"/>	<!-- Tsunami Shard -->
+			<item id="3756"/>	<!-- 2nd Circle Request: 9C -->
+			<item id="3798"/>	<!-- Satyr Mane -->
+			<item id="3757"/>	<!-- 2nd Circle Request: 10C -->
+			<item id="3799"/>	<!-- Hamadryad Shard -->
+			<item id="3758"/>	<!-- 2nd Circle Request: 11C -->
+			<item id="3800"/>	<!-- Vanor Silenos Mane -->
+			<item id="3759"/>	<!-- 2nd Circle Request: 12C -->
+			<item id="3801"/>	<!-- Talk Bugbear Totem -->
+			<item id="3760"/>	<!-- 2nd Circle Request: 1B -->
+			<item id="3802"/>	<!-- Okun's Head -->
+			<item id="3761"/>	<!-- 2nd Circle Request: 2B -->
+			<item id="3803"/>	<!-- Kakran's Head -->
+			<item id="3762"/>	<!-- 2nd Circle Request: 3B -->
+			<item id="3804"/>	<!-- Narcissus's Soulstone -->
+			<item id="3763"/>	<!-- 2nd Circle Request: 4B -->
+			<item id="3805"/>	<!-- Deprive Eye -->
+			<item id="3764"/>	<!-- 2nd Circle Request: 5B -->
+			<item id="3806"/>	<!-- Unicorn's Horn -->
+			<item id="3765"/>	<!-- 2nd Circle Request: 6B -->
+			<item id="3807"/>	<!-- Kerunos's Gold Mane -->
+			<item id="3766"/>	<!-- 2nd Circle Request: 1A -->
+			<item id="3808"/>	<!-- Skull of Executed -->
+			<item id="3767"/>	<!-- 2nd Circle Request: 2A -->
+			<item id="3809"/>	<!-- Bust of Travis -->
+			<item id="3768"/>	<!-- 2nd Circle Request: 3A -->
+			<item id="3810"/>	<!-- Sword of Cadmus -->
+			<item id="3692"/>	<!-- 1st Circle Hunter License -->
+			<item id="3693"/>	<!-- 2nd Circle Hunter License -->
+			<item id="3694"/>	<!-- Laurel Leaf Pin -->
+			<item id="3695"/>	<!-- 1st Test Instructions -->
+			<item id="3696"/>	<!-- 2nd Test Instructions -->
+			<item id="3697"/>	<!-- Cybellin's Request -->
+			<item id="3471"/>	<!-- Cybellin's Dagger -->
+			<item id="3708"/>	<!-- Blood Crystal: Broken -->
+			<item id="3698"/>	<!-- Blood Crystal: Purity 1 -->
+			<item id="3699"/>	<!-- Blood Crystal: Purity 2 -->
+			<item id="3700"/>	<!-- Blood Crystal: Purity 3 -->
+			<item id="3701"/>	<!-- Blood Crystal: Purity 4 -->
+			<item id="3702"/>	<!-- Blood Crystal: Purity 5 -->
+			<item id="3703"/>	<!-- Blood Crystal: Purity 6 -->
+			<item id="3704"/>	<!-- Blood Crystal: Purity 7 -->
+			<item id="3705"/>	<!-- Blood Crystal: Purity 8 -->
+			<item id="3706"/>	<!-- Blood Crystal: Purity 9 -->
+			<item id="3707"/>	<!-- Blood Crystal: Purity 10 -->
+		</setting>
+	</quest>
+</quests>

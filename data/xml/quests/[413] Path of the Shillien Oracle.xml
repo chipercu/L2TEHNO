@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="413" type="SOLO">
+		<name lang="en" val="Path of the Shillien Oracle"/>
+		<name lang="ru" val="Путь Оракула Шилен"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20776"/>	<!-- Dark Succubus -->
+			<event type="MOBKILLED" val="20457"/>	<!-- Zombie Soldier -->
+			<event type="MOBKILLED" val="20458"/>	<!-- Zombie Warrior -->
+			<event type="MOBKILLED" val="20514"/>	<!-- Shield Skeleton -->
+			<event type="MOBKILLED" val="20515"/>	<!-- Skeleton Infantryman -->
+			<event type="QUEST_START" val="30330"/>	<!-- Sidra -->
+			<event type="QUEST_TALK" val="30330"/>	<!-- Sidra -->
+			<event type="QUEST_TALK" val="30375"/>	<!-- Adonius -->
+			<event type="QUEST_TALK" val="30377"/>	<!-- Talbot -->
+			<item id="1268"/>	<!-- Ashen Bones -->
+			<item id="1262"/>	<!-- Sidra's Letter -->
+			<item id="1269"/>	<!-- Andariel Book -->
+			<item id="1267"/>	<!-- Penitent's Mark -->
+			<item id="1265"/>	<!-- Garmiel Book -->
+			<item id="1266"/>	<!-- Prayer of Adonius -->
+			<item id="1263"/>	<!-- Blank Sheet -->
+			<item id="1264"/>	<!-- Bloody Rune -->
+		</setting>
+	</quest>
+</quests>

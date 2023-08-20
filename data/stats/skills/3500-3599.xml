@@ -1,0 +1,1221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="3500" levels="1" name="Wooden Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_physical_defence" val="1.02"/>
+			<add order="0x40" stat="p_max_hp" val="41"/>
+		</for>
+	</skill>
+	<skill id="3501" levels="1" name="Devotion Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
+		</for>
+	</skill>
+	<skill id="3502" levels="1" name="Mithril Heavy Armor Set">
+		<!--
+		    Done by Magister
+		    Description: Increases resistance to poison attack.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_poison;20"/>
+		</for>
+	</skill>
+	<skill id="3503" levels="1" name="Reinforced Leather Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_max_mp" val="80"/>
+		</for>
+	</skill>
+	<skill id="3504" levels="1" name="Knowledge Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="regMp" val="0.95"/>
+			<mul order="0x30" stat="p_magical_attack" val="1.10"/>
+		</for>
+	</skill>
+	<skill id="3505" levels="1" name="Manticore Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_max_mp" val="92"/>
+		</for>
+	</skill>
+	<skill id="3506" levels="1" name="Brigandine Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_physical_defence" val="1.05"/>
+			<add order="0x40" stat="p_max_hp" val="153"/>
+		</for>
+	</skill>
+	<skill id="3507" levels="1" name="Mithril Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_speed" val="7"/>
+			<add order="0x40" stat="WIT" val="1"/>
+			<sub order="0x40" stat="INT" val="1"/>
+		</for>
+	</skill>
+	<skill id="3508" levels="1" name="Mithril Light Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_avoid" val="4"/>
+		</for>
+	</skill>
+	<skill id="3509" levels="1" name="Chain Mail Set">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_dagger;6"/> 
+			<effect name="p_defence_trait" param="trait_dualdagger;6"/> 
+		</for>
+	</skill>
+	<skill id="3510" levels="1" name="Karmian Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
+			<mul order="0x30" stat="p_physical_defence" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="3511" levels="1" name="Plated Leather Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="STR" val="4"/>
+			<sub order="0x40" stat="CON" val="1"/>
+		</for>
+	</skill>
+	<skill id="3512" levels="1" name="Composite Heavy Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxLoad" val="5759"/>
+		</for>
+	</skill>
+	<skill id="3513" levels="1" name="Demon's Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="p_max_hp" val="270"/>
+			<add order="0x40" stat="INT" val="4"/>
+			<sub order="0x40" stat="WIT" val="1"/>
+		</for>
+	</skill>
+	<skill id="3514" levels="1" name="Theca Leather Light Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_physical_defence" val="1.0524"/>
+		</for>
+	</skill>
+	<skill id="3515" levels="1" name="Drake Leather Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_magical_defence" val="1.0524"/>
+		</for>
+	</skill>
+	<skill id="3516" levels="1" name="Full Plate Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_max_hp" val="270"/>
+		</for>
+	</skill>
+	<skill id="3517" levels="1" name="Divine Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_max_mp" val="171"/>
+			<add order="0x40" stat="WIT" val="1"/>
+			<sub order="0x40" stat="INT" val="1"/>
+			<mul order="0x30" stat="p_physical_defence" val="1.0524"/>
+		</for>
+	</skill>
+	<skill id="3518" levels="1" name="Zubei's Heavy Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_physical_defence" val="1.0525"/>
+			<add order="0x40" stat="p_max_hp" val="294"/>
+		</for>
+	</skill>
+	<skill id="3519" levels="1" name="Avadon Breastplate Heavy Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_max_hp" val="294"/>
+		</for>
+	</skill>
+	<skill id="3520" levels="1" name="Zubei's Leather Shirt Light Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_avoid" val="4"/>
+		</for>
+	</skill>
+	<skill id="3521" levels="1" name="Avadon Light Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_magical_defence" val="1.0525"/>
+			<add order="0x40" stat="maxLoad" val="5795"/>
+		</for>
+	</skill>
+	<skill id="3522" levels="1" name="Tunic of Zubei Robe Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_magical_attack" val="1.10"/>
+			<mul order="0x30" stat="regMp" val="0.95"/>
+		</for>
+	</skill>
+	<skill id="3523" levels="1" name="Avadon Robe Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_physical_defence" val="1.05247"/>
+			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
+		</for>
+	</skill>
+	<skill id="3524" levels="1" name="Blue Wolf Heavy Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_speed" val="7"/>
+			<mul order="0x30" stat="regHp" val="1.0524"/>
+			<add order="0x40" stat="STR" val="3"/>
+			<sub order="0x40" stat="CON" val="1"/>
+			<sub order="0x40" stat="DEX" val="2"/>
+		</for>
+	</skill>
+	<skill id="3525" levels="1" name="Doom Heavy Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_max_hp" val="320"/>
+			<sub order="0x40" stat="STR" val="3"/>
+			<add order="0x40" stat="CON" val="3"/>
+			<add order="0x40" stat="breath" val="200"/>
+		</for>
+	</skill>
+	<skill id="3526" levels="1" name="Blue Wolf Light Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_physical_defence" val="1.0524"/>
+			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
+			<sub order="0x40" stat="INT" val="2"/>
+			<add order="0x40" stat="MEN" val="3"/>
+			<sub order="0x40" stat="WIT" val="1"/>
+		</for>
+	</skill>
+	<skill id="3527" levels="1" name="Doom Light Armor Set">
+		<!--
+		    Done by Magister
+		    Description: Increases lung capacity, P. Atk., MP recovery rate and resistance to poison attacks. STR-1, CON-2, DEX+3
+		 -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_poison;20"/>
+			<mul order="0x30" stat="regMp" val="1.025"/>
+			<mul order="0x30" stat="p_physical_attack" val="1.027"/>
+			<sub order="0x40" stat="STR" val="1"/>
+			<sub order="0x40" stat="CON" val="2"/>
+			<add order="0x40" stat="DEX" val="3"/>
+			<add order="0x40" stat="breath" val="200"/>
+		</for>
+	</skill>
+	<skill id="3528" levels="1" name="Blue Wolf Robe Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_max_mp" val="206"/>
+			<mul order="0x30" stat="regMp" val="1.0524"/>
+			<sub order="0x40" stat="INT" val="2"/>
+			<sub order="0x40" stat="MEN" val="1"/>
+			<add order="0x40" stat="WIT" val="3"/>
+		</for>
+	</skill>
+	<skill id="3529" levels="1" name="Doom Robe Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_speed" val="7"/>
+			<mul order="0x30" stat="regMp" val="1.0524"/>
+			<add order="0x40" stat="INT" val="2"/>
+			<add order="0x40" stat="MEN" val="1"/>
+			<sub order="0x40" stat="WIT" val="3"/>
+			<add order="0x40" stat="breath" val="200"/>
+		</for>
+	</skill>
+	<skill id="3530" levels="1" name="Dark Crystal Breastplate Heavy Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_paralyze;50"/>
+			<mul order="0x30" stat="hpEff" val="1.04"/>
+			<sub order="0x40" stat="STR" val="2"/>
+			<add order="0x40" stat="CON" val="2"/>
+		</for>
+	</skill>
+	<skill id="3531" levels="1" name="Tallum Heavy Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bleed;80"/>
+			<effect name="p_defence_trait" param="trait_poison;80"/>
+			<mul order="0x30" stat="p_attack_speed" val="1.08"/>
+			<add order="0x40" stat="STR" val="2"/>
+			<sub order="0x40" stat="CON" val="2"/>
+			<add order="0x40" stat="maxLoad" val="5759"/>
+		</for>
+	</skill>
+	<skill id="3532" levels="1" name="Dark Crystal Light Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_paralyze;50"/>
+			<mul order="0x30" stat="p_physical_attack" val="1.04"/>
+			<mul order="0x30" stat="p_attack_speed" val="1.04"/>
+			<add order="0x40" stat="STR" val="1"/>
+			<add order="0x40" stat="CON" val="-1"/>
+		</for>
+	</skill>
+	<skill id="3533" levels="1" name="Tallum Light Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bleed;80"/>
+			<effect name="p_defence_trait" param="trait_poison;80"/>
+			<add order="0x40" stat="p_max_mp" val="222"/>
+			<mul order="0x30" stat="regMp" val="1.08"/>
+			<add order="0x40" stat="MEN" val="2"/>
+			<sub order="0x40" stat="WIT" val="2"/>
+		</for>
+	</skill>
+	<skill id="3534" levels="1" name="Tallum Robe Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bleed;80"/>
+			<effect name="p_defence_trait" param="trait_poison;80"/>
+			<mul order="0x30" stat="p_magical_defence" val="1.08"/>
+			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
+			<add order="0x40" stat="WIT" val="2"/>
+			<sub order="0x40" stat="INT" val="2"/>
+		</for>
+	</skill>
+	<skill id="3535" levels="1" name="Dark Crystal Robe Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_paralyze;50"/>
+			<add order="0x40" stat="p_speed" val="7"/>
+			<add order="0x40" stat="WIT" val="2"/>
+			<sub order="0x40" stat="MEN" val="2"/>
+			<mul order="0x30" stat="concentration" val="0.7"/>
+			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
+			<mul order="0x30" stat="p_physical_defence" val="1.08"/>
+		</for>
+	</skill>
+	<skill id="3536" levels="1" name="Nightmare Heavy Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_physical_attack" val="1.04"/>
+			<effect name="p_defence_trait" param="trait_hold;70"/>
+			<effect name="p_defence_trait" param="trait_sleep;70"/>
+			<add order="0x40" stat="CON" val="2"/>
+			<sub order="0x40" stat="DEX" val="2"/>
+		</for>
+	</skill>
+	<skill id="3537" levels="1" name="Majestic Heavy Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_physical_attack" val="1.04"/>
+			<add order="0x40" stat="p_hit" val="3"/>
+			<add order="0x40" stat="STR" val="2"/>
+			<sub order="0x40" stat="CON" val="2"/>
+			<effect name="p_defence_trait" param="trait_shock;50"/>
+		</for>
+	</skill>
+	<skill id="3538" levels="1" name="Nightmarish Leather Light Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_magical_defence" val="1.04"/>
+			<add order="0x40" stat="absorbDam" val="3"/>
+			<add order="0x40" stat="DEX" val="1"/>
+			<sub order="0x40" stat="CON" val="1"/>
+			<effect name="p_defence_trait" param="trait_sleep;70"/>
+			<effect name="p_defence_trait" param="trait_hold;70"/>
+		</for>
+	</skill>
+	<skill id="3539" levels="1" name="Majestic Light Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_physical_attack" val="1.08">
+				<using kind="Bow, Crossbow"/>
+			</mul>
+			<add order="0x40" stat="p_max_mp" val="240"/>
+			<add order="0x40" stat="DEX" val="1"/>
+			<sub order="0x40" stat="CON" val="1"/>
+			<effect name="p_defence_trait" param="trait_shock;50"/>
+			<add order="0x40" stat="maxLoad" val="5759"/>
+		</for>
+	</skill>
+	<skill id="3540" levels="1" name="Nightmare Robe Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_magical_attack" val="1.08"/>
+			<mul order="0x30" stat="regMp" val="1.04"/>
+			<add order="0x40" stat="INT" val="2"/>
+			<sub order="0x40" stat="WIT" val="2"/>
+			<effect name="p_defence_trait" param="trait_sleep;70"/>
+			<effect name="p_defence_trait" param="trait_hold;70"/>
+		</for>
+	</skill>
+	<skill id="3541" levels="1" name="Majestic Robe Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_max_mp" val="240"/>
+			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
+			<mul order="0x30" stat="regMp" val="1.08"/>
+			<add order="0x40" stat="MEN" val="1"/>
+			<sub order="0x40" stat="INT" val="1"/>
+			<effect name="p_defence_trait" param="trait_shock;50"/>
+		</for>
+	</skill>
+	<skill id="3542" levels="6" name="Special Ability: Critical Damage">
+		<!-- Done by Magister -->
+		<table name="#val">203 226 248 269 289 306</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_critical_damage_diff" val="#val"/>
+		</for>
+	</skill>
+	<skill id="3543" levels="1" name="Equipped with Shield">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_max_hp" val="126"/>
+		</for>
+	</skill>
+	<skill id="3544" levels="1" name="Equipped with Shield">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_max_hp" val="20"/>
+		</for>
+	</skill>
+	<skill id="3545" levels="1" name="Equipped with Shield">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_max_hp" val="198"/>
+		</for>
+	</skill>
+	<skill id="3546" levels="1" name="Equipped with Shield">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_magical_defence" val="1.0526"/>
+		</for>
+	</skill>
+	<skill id="3547" levels="1" name="Equipped with Shield">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="rShld" val="1.0524"/>
+		</for>
+	</skill>
+	<skill id="3548" levels="1" name="Equipped with Shield">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="rShld" val="1.24"/>
+		</for>
+	</skill>
+	<skill id="3549" levels="1" name="Equipped with Shield">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="rShld" val="1.24"/>
+		</for>
+	</skill>
+	<skill id="3550" levels="1" name="Equipped with Shield">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="rShld" val="1.18"/>
+		</for>
+	</skill>
+	<skill id="3551" levels="1" name="Equipped with Shield">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="reflectDam" val="5"/>
+		</for>
+	</skill>
+	<skill id="3552" levels="4" name="Special Ability: PvP Damage">
+		<!--
+		    Done by Drizzy
+			Description:
+		    1. Increases damage inflicted during PvP.
+		    2. Unleashes an attack that strikes multiple opponents, and inflicts additional damage during PvP.
+		    3. Increases damage inflicted during PvP.
+		    4. Can attack multiple enemies. Increases damage inflicted during PvP.
+		-->
+		<table name="#attack">1.05 1.05 1.1 1.1</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="#attack"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="#attack"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="#attack"/>
+		</for>
+	</skill>
+	<skill id="3553" levels="1" name="Imperial Crusader Heavy Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="DEX" val="2"/>
+			<add order="0x40" stat="p_max_hp" val="445"/>
+			<mul order="0x30" stat="p_physical_defence" val="1.08"/>
+			<add order="0x40" stat="STR" val="2"/>
+			<effect name="p_defence_trait" param="trait_sleep;70"/>
+			<effect name="p_defence_trait" param="trait_hold;70"/>
+		</for>
+	</skill>
+	<skill id="3554" levels="1" name="Equipped with Shield">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bleed;80"/>
+			<effect name="p_defence_trait" param="trait_poison;80"/>
+		</for>
+	</skill>
+	<skill id="3555" levels="1" name="Draconic Light Armor Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="STR" val="1"/>
+			<add order="0x40" stat="DEX" val="1"/>
+			<sub order="0x40" stat="CON" val="2"/>
+			<add order="0x40" stat="p_max_mp" val="289"/>
+			<mul order="0x30" stat="p_attack_speed" val="1.04"/>
+			<mul order="0x30" stat="p_physical_attack" val="1.04"/>
+			<add order="0x40" stat="maxLoad" val="5759"/>
+		</for>
+	</skill>
+	<skill id="3556" levels="1" name="Major Arcana Robe Set">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="WIT" val="1"/>
+			<add order="0x40" stat="INT" val="1"/>
+			<sub order="0x40" stat="MEN" val="2"/>
+			<mul order="0x30" stat="p_magical_attack" val="1.17"/>
+			<add order="0x40" stat="p_speed" val="7"/>
+			<add order="0x40" stat="maxLoad" val="5759"/>
+			<mul order="0x30" stat="concentration" val="0.5"/>
+			<effect name="p_defence_trait" param="trait_shock;50"/>
+		</for>
+	</skill>
+	<skill id="3557" levels="1" name="Necklace of Valakas">
+		<!--
+		    Done by Diamond
+		    Description: increase resistance to sleep by 40%, HP +445, increase sleep attack chance by 40%, decrease in re-use delay, increase in P. Atk. and M. Atk. wild magic effect, damage shield effect and increase in resistance to flaming attack.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_sleep;40"/>
+			<add order="0x40" stat="p_max_hp" val="445"/>
+			<mul order="0x30" stat="p_physical_attack" val="1.04"/>
+			<mul order="0x30" stat="p_magical_attack" val="1.08"/>
+			<add order="0x40" stat="mCritRate" val="2"/>
+			<sub order="0x40" stat="fireRcpt" val="15"/>
+			<effect name="p_defence_trait" param="trait_sleep;40"/>
+			<mul order="0x30" stat="mReuse" val="0.90"/>
+			<mul order="0x30" stat="pReuse" val="0.90"/>
+			<add order="0x40" stat="reflectDam" val="5"/>
+		</for>
+	</skill>
+	<skill id="3558" levels="1" name="Earring of Antharas">
+		<!--
+		    Done by Magister
+		    Description: increase resist bleed by 40%, increase bleed attack chance by 40%, increase healing effects, vampiric rage, 30% increase in stun/abnormal mental state resistance, increase stun/abnormal mental state attack chance by 30%, decrease MP consumption, and increase resistance to earth attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bleed;40"/>
+			<effect name="p_defence_trait" param="trait_shock;30"/>
+			<effect name="p_defence_trait" param="trait_derangement;30"/>
+			<effect name="p_attack_trait" param="trait_bleed;40"/>
+			<effect name="p_attack_trait" param="trait_shock;30"/>
+			<effect name="p_attack_trait" param="trait_derangement;30"/>
+			<mul order="0x30" stat="hpEff" val="1.10"/>
+			<add order="0x40" stat="absorbDam" val="4"/>
+			<sub order="0x40" stat="earthRcpt" val="15"/>
+			<mul order="0x30" stat="mpConsum" val="0.95"/>
+		</for>
+	</skill>
+	<skill id="3559" levels="2" name="Earring of Zaken">
+		<table name="#debuffPowerVuln"> 20 30 </table>
+		<table name="#hpGain"> 1.1 1.15 </table>
+		<table name="#darkRcpt"> 0 15 </table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bleed;30"/>
+			<effect name="p_defence_trait" param="trait_shock;#debuffPowerVuln"/>
+			<effect name="p_defence_trait" param="trait_derangement;#debuffPowerVuln"/>
+			<effect name="p_attack_trait" param="trait_bleed;30"/>
+			<effect name="p_attack_trait" param="trait_shock;#debuffPowerVuln"/>
+			<effect name="p_attack_trait" param="trait_derangement;#debuffPowerVuln"/>
+			<mul order="0x30" stat="hpEff" val="#hpGain"/>
+			<add order="0x40" stat="absorbDam" val="4"/>
+			<sub order="0x40" stat="unholyRcpt" val="#darkRcpt"/>
+		</for>
+	</skill>
+	<skill id="3560" levels="1" name="Earring of Orfen">
+		<!--
+		    Done by Diamond
+		    Description: increase resistance to bleed by 20%, increase bleed attack chance by 20%, and increase healing effects.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bleed;20"/>
+			<effect name="p_attack_trait" param="trait_bleed;20"/>
+			<mul order="0x30" stat="hpEff" val="1.06"/>
+		</for>
+	</skill>
+	<skill id="3561" levels="1" name="Ring of Baium">
+		<!--
+		    Done by Magister
+		    Description: increase resistance to poison by 40%, increase poison attack chance by 40%, increase accuracy, increase critical damage, increase resistance to hold by 30%, increase hold attack chance by 30%, increase Atk., and casting spd.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_poison;40"/>
+			<effect name="p_defence_trait" param="trait_hold;30"/>
+			<effect name="p_attack_trait" param="trait_poison;40"/>
+			<effect name="p_attack_trait" param="trait_hold;30"/>
+			<add order="0x40" stat="p_hit" val="2"/>
+			<mul order="0x30" stat="p_critical_damage_per" val="1.15"/>
+			<mul order="0x30" stat="p_attack_speed" val="1.04"/>
+			<mul order="0x30" stat="p_magic_speed" val="1.04"/>
+		</for>
+	</skill>
+	<skill id="3562" levels="1" name="Ring of Ant Queen">
+		<!--
+		    Done by Diamond
+		    Description: increase resistance to poison by 30%, increase poison attack chance by 30%, increase accuracy, increase critical damage, increase resistance to hold by 20%, and increase hold attack chance by 20%.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_poison;30"/>
+			<effect name="p_defence_trait" param="trait_hold;20"/>
+			<effect name="p_attack_trait" param="trait_poison;30"/>
+			<effect name="p_attack_trait" param="trait_hold;20"/>
+			<add order="0x40" stat="p_hit" val="2"/>
+			<mul order="0x30" stat="p_critical_damage_per" val="1.15"/>
+		</for>
+	</skill>
+	<skill id="3563" levels="1" name="Ring of Core">
+		<!--
+		    Done by Diamond
+		    Description: increase resistance to poison by 20%, increase poison attack chance by 20%, and increase accuracy.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_poison;20"/>
+			<effect name="p_attack_trait" param="trait_poison;20"/>
+			<add order="0x40" stat="p_hit" val="1"/>
+		</for>
+	</skill>
+	<skill id="3564" levels="3" name="Special Ability: Haste">
+		<!-- Done by Drizzy -->
+		<table name="#val">1.07 1.1 1.11</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_attack_speed" val="#val"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="3565" levels="5" name="Special Ability: Focus">
+		<!-- Done by Drizzy -->
+		<table name="#p_critical_rate_diff">80.6 107 123 129 129</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_critical_rate_diff" val="#p_critical_rate_diff"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="3566" levels="5" name="Special Ability: Focus">
+		<!-- Done by Drizzy -->
+		<table name="#p_critical_rate_diff">84.3 111.5 131.3 134.4 134.4</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_critical_rate_diff" val="#p_critical_rate_diff"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="3567" levels="5" name="Special Ability: Focus">
+		<!-- Done by Drizzy -->
+		<table name="#p_critical_rate_diff">88.1 116 133.9 139.9 139.9</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_critical_rate_diff" val="#p_critical_rate_diff"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="3568" levels="2" name="Special Ability: HP Drain">
+		<table name="#dmg">3 4</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="absorbDam" val="#dmg"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="3569" levels="2" name="Special Ability: HP Regeneration">
+		<table name="#regHp">2.04 2.04 2.04 2.04</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="regHp" val="#regHp"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="3570" levels="1" name="Special Ability: Robust Health">
+		<!-- Done by Drizzy -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul val="1.15" order="0x30" stat="p_max_hp" />
+			<mul val="1.20" order="0x30" stat="p_max_mp" />
+			<mul val="1.30" order="0x30" stat="p_max_cp" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="3571" levels="2" name="Special Ability: Crt. Stun">
+		<set name="levelModifier" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="STUN"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9"/>
+		</for>
+	</skill>
+	<skill id="3572" levels="4" name="Special Ability: Crt. Damage">
+		<!-- Done Drizzy  -->
+		<table name="#val">265 906 999 1059</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_critical_damage_diff" val="#val"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="3573" levels="3" name="Special Ability: Guidance">
+		<!-- Done by Drizzy -->
+		<table name="#acc">5.27 5.32 7.5</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x10" stat="p_hit" val="#acc"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="3574" levels="3" name="Special Ability: Crt. Slow">
+		<set name="levelModifier" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Debuff" stackOrder="2" stackType="RunSpeedDown" time="30">
+				<mul order="0x30" stat="p_speed" val="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3575" levels="4" name="Special Ability: Empower">
+		<!-- Done by Drizzy -->
+		<table name="#power">60.09 151.09 166.54 176.53</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_magical_attack" val="#power"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="3576" levels="4" name="Special Ability: MP Regeneration">
+		<table name="#regMp">1.54 1.95 2.04 2.05</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="regMp" val="#regMp"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="3577" levels="2" name="Special Ability: Magic Hold">
+		<table name="#pvpDmg">1.00 1.05</table>
+		<set name="levelModifier" val="2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="ROOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_move">
+				<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="#pvpDmg"/>
+				<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="#pvpDmg"/>
+				<mul order="0x30" stat="pvpPhysDmgBonus" val="#pvpDmg"/>
+			</effect >
+		</for>
+	</skill>
+	<skill id="3578" levels="1" name="Special Ability: Infinity Blade">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+			<mul val="1.25" order="0x30" stat="p_max_hp" />
+			<mul val="1.30" order="0x30" stat="p_max_mp" />
+			<mul val="1.50" order="0x30" stat="p_max_cp" />
+			<mul val="1.33" order="0x30" stat="rShld" />
+			<add order="0x40" stat="reflectDam" val="9"/>
+		</for>
+	</skill>
+	<skill id="3579" levels="1" name="Decrease P. Def.">
+		<set name="levelModifier" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="120">
+				<mul order="0x30" stat="p_physical_defence" val="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3580" levels="1" name="Special Ability: Infinity Axe">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+			<mul val="1.25" order="0x30" stat="p_max_hp" />
+			<mul val="1.30" order="0x30" stat="p_max_mp" />
+			<mul val="1.50" order="0x30" stat="p_max_cp" />
+			<mul val="1.39" order="0x30" stat="rShld" />
+			<add order="0x40" stat="reflectDam" val="9"/>
+		</for>
+	</skill>
+	<skill id="3581" levels="1" name="Discord">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DISCORD"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="5" name="Discord" time="6"/>
+		</for>
+	</skill>
+	<skill id="3582" levels="1" name="Special Ability: Infinity Cleaver">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_critical_damage_diff" val="504"/>
+			<mul order="0x30" stat="p_max_hp" val="1.25"/>
+			<mul order="0x30" stat="p_max_cp" val="1.5"/>
+			<add order="0x40" stat="p_critical_rate_diff" val="78.7"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.20"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.20"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.20"/>
+			<add order="0x40" stat="reflectPhysicDebuff" val="10"/>
+			<add order="0x40" stat="reflectMagicDebuff" val="10"/>
+		</for>
+	</skill>
+	<skill id="3583" levels="1" name="Special Ability: Infinity Crusher">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_max_hp" val="1.25"/>
+			<mul order="0x30" stat="p_max_cp" val="1.5"/>
+			<mul order="0x30" stat="p_attack_speed" val="1.07"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.20"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.20"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.20"/>
+			<add order="0x40" stat="reflectPhysicDebuff" val="10"/>
+			<add order="0x40" stat="reflectMagicDebuff" val="10"/>
+		</for>
+	</skill>
+	<skill id="3584" levels="1" name="Shock">
+		<set name="levelModifier" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="STUN"/>
+		<set name="operateType" val="OP_ACTIVE"/>		<set name="useSS" val="false"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9"/>
+		</for>
+	</skill>
+	<skill id="3585" levels="1" name="Infinity Wing">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+			<mul val="1.25" order="0x30" stat="p_max_hp" />
+			<mul val="1.30" order="0x30" stat="p_max_mp" />
+			<mul val="1.50" order="0x30" stat="p_max_cp" />
+			<add val="78.7" order="0x40" stat="p_critical_rate_diff" />
+			<add val="10" order="0x40" stat="reflectPhysicDebuff"/>
+			<add val="10" order="0x40" stat="reflectMagicDebuff"/>
+		</for>
+	</skill>
+	<skill id="3586" levels="1" name="Physical Skill Restraint">
+		<set name="levelModifier" val="2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>		<set name="useSS" val="false"/>
+		<for>
+			<effect name="MutePhisycal" stackType="silence" time="30"/>
+		</for>
+	</skill>
+	<skill id="3587" levels="1" name="Special Ability: Infinity Fang">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+			<mul val="1.25" order="0x30" stat="p_max_hp" />
+			<mul val="1.30" order="0x30" stat="p_max_mp" />
+			<mul val="1.50" order="0x30" stat="p_max_cp" />
+			<add val="3.15" order="0x40" stat="p_avoid" />
+		</for>
+	</skill>
+	<skill id="3588" levels="1" name="Shock">
+		<set name="levelModifier" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="STUN"/>
+		<set name="operateType" val="OP_ACTIVE"/>		<set name="useSS" val="false"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9"/>
+		</for>
+	</skill>
+	<skill id="3589" levels="1" name="Special Ability: Infinity Stinger">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+			<mul val="1.30" order="0x30" stat="p_max_mp"/>
+			<mul val="1.50" order="0x30" stat="p_max_cp"/>
+			<mul val="1.03" order="0x30" stat="p_attack_speed"/>
+			<add val="0.51" order="0x40" stat="regMp"/>
+			<mul order="0x30" stat="p_critical_rate_position_bonus" val="1.22">
+				<target direction="behind"/>
+			</mul>
+			<add order="0x40" stat="absorbDam" val="2"/>
+		</for>
+	</skill>
+	<skill id="3590" levels="1" name="Silence">
+		<set name="levelModifier" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>		<set name="useSS" val="false"/>
+		<for>
+			<effect name="Mute" stackType="silence" time="30"/>
+		</for>
+	</skill>
+	<skill id="3591" levels="1" name="Special Ability: Infinity Spear">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+			<mul val="1.25" order="0x30" stat="p_max_hp" />
+			<mul val="1.50" order="0x30" stat="p_max_cp" />
+			<mul val="1.07" order="0x30" stat="p_attack_speed" />
+			<add val="4.89" order="0x40" stat="p_hit" />
+			<add val="10" order="0x40" stat="reflectPhysicDebuff"/>
+			<add val="10" order="0x40" stat="reflectMagicDebuff"/>
+		</for>
+	</skill>
+	<skill id="3592" levels="1" name="Dispell">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCancel" val="true"/>
+		<set name="useSS" val="false"/>
+		<for>
+			<effect name="DispelEffects">
+				<def name="dispelType" val="cancellation" />
+				<def name="cancelRate" val="5" />
+				<def name="negateCount" val="2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3593" levels="1" name="Special Ability: Infinity Bow">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_max_mp" val="1.30"/>
+			<mul order="0x30" stat="p_max_cp" val="1.50"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.20"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.20"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.20"/>
+
+			<mul order="0x30" stat="atkReuse" val="0.80"/>
+			<set order="0x08" stat="cheapShot" val="1"/>
+			<set order="0x08" stat="cheapShotChance" val="26"/>
+		</for>
+	</skill>
+	<skill id="3594" levels="1" name="Slow">
+		<set name="levelModifier" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>		<set name="useSS" val="false"/>
+		<for>
+			<effect name="Buff" time="120">
+				<mul order="0x30" stat="p_speed" val="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3595" levels="1" name="Special Ability: Infinity Scepter">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+			<mul val="1.30" order="0x30" stat="p_max_mp" />
+			<mul val="1.50" order="0x30" stat="p_max_cp" />
+			<add val="29.67" order="0x40" stat="p_magical_attack" />
+			<add val="1" order="0x40" stat="mCritRate" />
+		</for>
+	</skill>
+	<skill id="3596" levels="1" name="Full Recover">
+		<set name="power" val="100"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="HEAL_PERCENT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+	</skill>
+	<skill id="3597" levels="1" name="Special Ability: Infinity Rod">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05"/>
+			<mul val="1.30" order="0x30" stat="p_max_mp" />
+			<mul val="1.50" order="0x30" stat="p_max_cp" />
+			<mul val="1.15" order="0x30" stat="p_magic_speed" />
+			<add val="0.51" order="0x40" stat="regMp" />
+		</for>
+	</skill>
+	<skill id="3598" levels="1" name="Full Recover">
+		<set name="power" val="100"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="HEAL_PERCENT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="3599" levels="1" name="Polearm Multi-attack">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+		</for>
+	</skill>
+</list>

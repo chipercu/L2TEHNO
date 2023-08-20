@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="3" type="SOLO">
+		<name lang="en" val="Will the Seal be Broken?"/>
+		<name lang="ru" val="Как снять проклятие?"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20031"/>	<!-- Omen Beast -->
+			<event type="MOBKILLED" val="20041"/>	<!-- Tainted Zombie -->
+			<event type="MOBKILLED" val="20046"/>	<!-- Stink Zombie -->
+			<event type="MOBKILLED" val="20048"/>	<!-- Lesser Succubus -->
+			<event type="MOBKILLED" val="20052"/>	<!-- Lesser Succubus Turen -->
+			<event type="MOBKILLED" val="20057"/>	<!-- Lesser Succubus Tilfo -->
+			<event type="QUEST_START" val="30141"/>	<!-- Talloth -->
+			<event type="QUEST_TALK" val="30141"/>	<!-- Talloth -->
+			<item id="1081"/>	<!-- Omen Beast's Eye -->
+			<item id="1082"/>	<!-- Taint Stone -->
+			<item id="1083"/>	<!-- Succubus Blood -->
+		</setting>
+	</quest>
+</quests>

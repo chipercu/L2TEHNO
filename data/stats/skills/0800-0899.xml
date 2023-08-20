@@ -1,0 +1,1476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="800" levels="3" name="Master Ability - Magic Defense">
+		<!--
+			Done by:	Diamond
+			Last modify:	SYS, 03.02.2009
+			Description:	M. Def. is increased.
+		-->
+		<table name="#p_magical_defence">50 100 150</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" val="#p_magical_defence" stat="p_magical_defence"/>
+		</for>
+	</skill>
+	<skill id="801" levels="1" name="Warrior Ability - Boost CP">
+		<!--
+			Done by:	Abaddon
+			Last modify:	SYS, 03.02.2009
+			Description: Max. CP is increased.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" val="738" stat="p_max_cp"/>
+		</for>
+	</skill>
+	<skill id="802" levels="1" name="Wizard Ability - Anti-magic">
+		<!--
+			Done by:	Diamond
+			Last modify:	Diamond, 03.02.2009
+			Description:
+			The probability of resisting damage magic is increased.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" val="100" stat="p_magical_defence"/>
+		</for>
+	</skill>
+	<skill id="803" levels="1" name="Healer Ability - Divine Protection">
+		<!--
+			Done by:	Diamond
+			Last modify:	Diamond, 03.02.2009
+			Description:
+			Resistance to darkness/divinity attribute attacks is increased.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="unholyRcpt" val="5"/>
+			<sub order="0x40" stat="sacredRcpt" val="5"/>
+		</for>
+	</skill>
+	<skill id="804" levels="1" name="Knight Ability - Resist Critical">
+		<!--
+			Done by:	Diamond
+			Last modify:	Diamond, 03.02.2009
+			Description:
+			Received Critical damage is decreased.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="critDamRcpt" val="0.95"/>
+		</for>
+	</skill>
+	<skill id="805" levels="1" name="not used">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="806" levels="1" name="Magic Obstacle">
+		<!--
+			Done by:	Diamond
+			Last modify:	17.09.2008, Diamond
+			Description: Blows away Enhanced Abnormal Conditions of the enemies around the golem.
+		-->
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCancel" val="true"/>
+		<for>
+			<effect name="DispelEffects">
+				<def name="dispelType" val="cancellation" />
+				<def name="cancelRate" val="25" />
+				<def name="negateCount" val="5" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="807" levels="1" name="Over-hit">
+		<!--
+			Done by:	Diamond
+			Last modify:	17.09.2008, Diamond
+			Description: Increases the golem's power more by filling him up with special fuel.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="300">
+				<mul order="0x30" stat="p_physical_attack" val="1.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="808" levels="1" name="Golem Punch">
+		<!--
+			Done by:	Diamond
+			Last modify:	20.05.2009, Magister
+			Description: Throws a powerful punch with 11205 Power that both stuns and inflicts damage to an enemy. Over-hit is possible.
+		-->
+		<set name="power" val="11205"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9"/>
+		</for>
+	</skill>
+	<skill id="809" levels="1" name="Golem Tornado Swing">
+		<!--
+			Done by:	Diamond
+			Last modify:	20.05.2009, Magister
+			Description: Spinning attack strikes enemy with 6199 Power. Over-hit is possible.
+		-->
+		<set name="power" val="6199"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="overHit" val="true"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="810" levels="1" name="Vanguard">
+		<!--
+			Done by:	Magister
+			Last modify:	08.09.2008
+			Description:
+			Display your valor by charging headlong into battle. Your two-handed sword attacks strike with increased ferocity. P. Def and Shield Defense are decreased in this form. For class Paladin.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="293;-2;814;-2;816;-2;956;-2;957;-2;28;0;18;0;406;0;400;0;196;0;197;0"/>
+		<set name="npcId" val="0"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<set name="useSS" val="false"/>
+		<for>
+			<effect name="Transformation" time="18000" val="315">
+				<mul order="0x30" stat="p_physical_attack" val="1.12">
+					<using kind="Big Sword, Big Blunt"/>
+				</mul>
+				<add order="0x40" stat="p_hit" val="4">
+					<using kind="Big Sword, Big Blunt"/>
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="811" levels="1" name="Vanguard">
+		<!--
+			Done by:	Magister
+			Last modify:	08.09.2008
+			Description:
+			Display your valor by charging headlong into battle. Your dual-sword attacks strike with increased ferocity. P. Def and Shield Defense are decreased in this form. For class Dark Avenger.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="144;-2;815;-2;817;-2;956;-2;958;-2;28;0;18;0;283;0;65;0;401;0;86;0"/>
+		<set name="npcId" val="0"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<set name="useSS" val="false"/>
+		<for>
+			<effect name="Transformation" time="18000" val="316">
+				<mul order="0x30" stat="p_attack_speed" val="1.15">
+					<using kind="Dual Sword"/>
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="812" levels="1" name="Vanguard">
+		<!--
+			Done by:	Magister
+			Last modify:	08.09.2008
+			Description:
+			Display your valor by charging headlong into battle. Your two-handed sword attacks strike with increased ferocity. P. Def and Shield Defense are decreased in this form. For class Temple Knight.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="293;-2;814;-2;816;-2;956;-2;957;-2;28;0;18;0;10;0;67;0;449;0;400;0;197;0"/>
+		<set name="npcId" val="0"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<set name="useSS" val="false"/>
+		<for>
+			<effect name="Transformation" time="18000" val="317">
+				<mul order="0x30" stat="p_physical_attack" val="1.12">
+					<using kind="Big Sword, Big Blunt"/>
+				</mul>
+				<add order="0x40" stat="p_hit" val="4">
+					<using kind="Big Sword, Big Blunt"/>
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="813" levels="1" name="Vanguard">
+		<!--
+			Done by:	Magister
+			Last modify:	08.09.2008
+			Description:
+			Display your valor by charging headlong into battle. Your dual-sword attacks strike with increased ferocity. P. Def and Shield Defense are decreased in this form. For class Shillien Knight.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="144;-2;815;-2;817;-2;956;-2;958;-2;28;0;18;0;22;0;33;0;278;0;289;0;279;0;401;0"/>
+		<set name="npcId" val="0"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<set name="useSS" val="false"/>
+		<for>
+			<effect name="Transformation" time="18000" val="318">
+				<mul order="0x30" stat="p_attack_speed" val="1.15">
+					<using kind="Dual Sword"/>
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="814" levels="43" name="Full Swing">
+		<!--
+		      Description: Attacks nearby enemies by widely swinging a two-handed weapon. Requires a two-handed weapon. Ignores Shield Defense. Over-hit is possible. Power 744-3480.
+		-->
+		<table name="#power">893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176</table>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="100"/>
+		<set name="power" val="#power"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+		<set name="criticalRate" val="10"/>
+		<set name="overHit" val="true"/>
+		<set name="weaponsAllowed" val="18496"/>
+		<cond msgId="113" addName="1">
+			<using kind="Big Sword, Big Blunt, Pole"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="815" levels="43" name="Blade Hurricane">
+		<!--
+		      Description: Attacks nearby enemies with a dualsword. Requires a dual-sword weapon. Ignores Shield Defense. Over-hit is possible. Power 744-3480.
+		-->
+		<table name="#power">893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176</table>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="100"/>
+		<set name="power" val="#power"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+		<set name="criticalRate" val="10"/>
+		<set name="overHit" val="true"/>
+		<set name="weaponsAllowed" val="512"/>
+		<cond msgId="113" addName="1">
+			<using kind="Dual Sword"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="816" levels="43" name="Cleave">
+		<!--
+		      Description: Delivers a powerful blow that seems to cleave the enemy in half. Requires a two-handed sword or two-handed blunt weapon. Ignores Shield Defense. Over-hit is possible. Power 744.
+		-->
+		<table name="#power">992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="power" val="#power"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+		<set name="overHit" val="true"/>
+		<set name="weaponsAllowed" val="18432"/>
+		<cond msgId="113" addName="1">
+			<using kind="Big Sword, Big Blunt"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="817" levels="43" name="Double Strike">
+		<!--
+		      Description: Delivers a powerful blow to the enemy by alternating between two swords. Requires a dual-sword weapon. Ignores Shield Defense. Over-hit is possible. Power 744.
+		-->
+		<table name="#power">992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="power" val="#power"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+		<set name="criticalRate" val="10"/>
+		<set name="overHit" val="true"/>
+		<set name="weaponsAllowed" val="512"/>
+		<cond msgId="113" addName="1">
+			<using kind="Dual Sword"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="818" levels="1" name="Evasion Counter">
+		<!--
+			Done by: Drizzy
+			Description: During Evasion, counters by stunning the enemy and renders him senseless.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5673" level="1" type="UNDER_MISSED_ATTACK" chance="5"/>
+		</triggers>
+	</skill>
+	<skill id="819" levels="1" name="Evasion Chance">
+		<!--
+			Done by: Drizzy
+			Description: During Evasion, increases the rate of successfully striking an enemy's vital organs.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5674" level="1" type="UNDER_MISSED_ATTACK" chance="5"/>
+		</triggers>
+	</skill>
+	<skill id="820" levels="1" name="Evasion Haste">
+		<!--
+			Done by: Drizzy
+			Description: During Evasion, increases your Atk. Spd.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5675" level="1" type="UNDER_MISSED_ATTACK" chance="5"/>
+		</triggers>
+	</skill>
+	<skill id="821" levels="1" name="Shadow Step">
+		<!-- Description: Cancels the enemy's target and instantly decreases the distance between caster and target. -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="cancelTarget" val="100"/>
+		<set name="flyType" val="DUMMY"/>
+		<set name="flyRadius" val="600"/>
+		<set name="flyToBack" val="true"/>
+		<for />
+	</skill>
+	<skill id="822" levels="3" name="Repair Golem">
+		<!--
+		      Done by Magister (Fixed by Drin)
+		      Last modify: 23.08.2008
+		      Description: Repairs a summoned golem.
+		-->
+		<table name="#power">8 12 15</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_PET"/>
+		<set name="skillType" val="HEAL_PERCENT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<target race="MagicCreatures"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="823" levels="3" name="Strengthen Golem">
+		<!--
+		      Done by Magister (Fixed by Drin)
+		      Last modify: 23.08.2008
+		      Description: Temporarily increases a summoned golem's attack power and Atk. Spd. Effect 1,2,3.
+		-->
+		<table name="#Tab-p_physical_attack">1.08 1.12 1.15</table>
+		<table name="#Tab-p_attack_speed">1.03 1.06 1.09</table>
+		<table name="#abnormal_time">1200</table>
+		<set name="target" val="TARGET_PET"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<target race="MagicCreatures"/>
+		</cond>
+		<for>
+			<effect name="Buff" time="#abnormal_time">
+				<mul order="0x30" stat="p_attack_speed" val="#Tab-p_attack_speed"/>
+				<mul order="0x30" stat="p_physical_attack" val="#Tab-p_physical_attack"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="824" levels="3" name="Golem Reinforcement">
+		<!--
+		      Done by Magister (Fixed by Drin)
+		      Last modify: 23.08.2008
+		      Description: Temporarily equips a summoned golem with an additional armor plate to increase P. Def. and maximum HP. Effect 1,2,3.
+		-->
+		<table name="#Tab-p_physical_defence">1.08 1.12 1.15</table>
+		<table name="#Tab-p_max_hp">1.05 1.08 1.1</table>
+		<table name="#abnormal_time">1200</table>
+		<set name="target" val="TARGET_PET"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<target race="MagicCreatures"/>
+		</cond>
+		<for>
+			<effect name="Buff" time="#abnormal_time">
+				<mul order="0x30" stat="p_max_hp" val="#Tab-p_max_hp"/>
+				<mul order="0x30" stat="p_physical_defence" val="#Tab-p_physical_defence"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="825" levels="1" name="Sharp Edge">
+		<!--
+		      Done by Magister
+		      Last modify: 03.05.2009
+		      Description: Sharpens a bladed weapon to increase P. Atk. by 5% and critical rate by 20% for 10 minutes.
+		-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="dwarf_attack_buff" time="1200">
+				<mul order="0x30" stat="p_physical_attack" val="1.05">
+					<not>
+						<using kind="Blunt, Big Blunt, Bow, Crossbow, Fist"/>
+					</not>
+				</mul>
+				<add order="0x40" stat="p_critical_rate_per" val="20">
+					<not>
+						<using kind="Blunt, Big Blunt, Bow, Crossbow, Fist"/>
+					</not>
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="826" levels="1" name="Spike">
+		<!--
+		      Done by Magister
+		      Last modify: 03.05.2009
+		      Description: Adds a spike to a blunt weapon to increase P. Atk. by 5 and its weight for shock attack by 8 for 10 minutes.
+		-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_shock;8" stackOrder="1" stackType="dwarf_attack_buff" time="1200"/>
+			<effect name="Buff" stackOrder="1" stackType="dwarf_attack_buff" time="1200">
+				<mul order="0x30" stat="p_physical_attack" val="1.05">
+					<using kind="Blunt, Big Blunt"/>
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="827" levels="1" name="Restring">
+		<!--
+		      Done by Magister
+		      Last modify: 03.05.2008
+		      Description: Enhances the string of a bow or crossbow to increase P. Atk. by 5% and range by 100 for 10 minutes.
+		-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="dwarf_attack_buff" time="1200">
+				<mul order="0x30" stat="p_physical_attack" val="1.05">
+					<using kind="Bow, Crossbow"/>
+				</mul>
+				<add order="0x40" stat="pAtkRange" val="100">
+					<using kind="Bow, Crossbow"/>
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="828" levels="1" name="Case Harden">
+		<!--
+		      Done by Magister
+		      Last modify: 01.09.2008
+		      Description: Enhances the armor surface to increase P. Def. by 10% for 10 minutes.
+		-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="dwarf_defence_buff" time="1200">
+				<mul order="0x30" stat="p_physical_defence" val="1.1">
+					<using armor="Heavy"/>
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="829" levels="1" name="Hard Tanning">
+		<!--
+		      Done by Magister
+		      Last modify: 01.09.2008
+		      Description: Tans armor to increase P. Def. by 5% and evasion by 2 for 10 minutes.
+		-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="dwarf_defence_buff" time="1200">
+				<mul order="0x30" stat="p_physical_defence" val="1.05">
+					<using armor="Light"/>
+				</mul>
+				<add order="0x40" stat="p_avoid" val="2">
+					<using armor="Light"/>
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="830" levels="1" name="Embroider">
+		<!--
+		      Done by Magister
+		      Last modify: 03.05.2009
+		      Description: Embroiders a robe to increase P. Def. by 5% and MP recovery speed by 2 for 10 minutes.
+		-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="dwarf_defence_buff" time="1200">
+				<mul order="0x30" stat="p_physical_defence" val="1.05">
+					<using armor="Magic"/>
+				</mul>
+				<add order="0x40" stat="regMp" val="2">
+					<using armor="Magic"/>
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="831" levels="1" name="Summon Merchant Golem">
+		<!--
+			Done by:	Diamond
+			Last modify:	01.09.2008, Diamond
+			Description:
+			Summons a trader association golem who can do basic transactions. Consumes 5 D-grade Crystals when summoning.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="npcId" val="13128"/>
+		<set name="lifeTime" val="180"/>
+		<set name="summonType" val="MERCHANT"/>
+		<set name="itemConsumeId" val="1458"/>
+		<set name="itemConsumeCount" val="5"/>
+		<for />
+	</skill>
+	<skill id="832" levels="1" name="Fast Recovery">
+		<!--
+			Done by Magister
+			Last modify: 15.08.2008
+			Description: Increases HP/MP/CP regeneration.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x10" stat="regHp" val="1.6"/>
+			<mul order="0x30" stat="regMp" val="1.3"/>
+			<mul order="0x30" stat="regCp" val="1.4"/>
+		</for>
+	</skill>
+	<skill id="833" levels="1" name="Body Reconstruction">
+		<!--
+			Done by Magister
+			Last modify: 18.09.2008
+			Description: Recovers all HP by reconstructing your body.
+		-->
+		<set name="power" val="100"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="HEAL_PERCENT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="834" levels="1" name="Blood Pact">
+		<!--
+			Done by Magister
+			Last modify: 03.05.2009
+			Description: Through a blood contract, increases party members' maximum HP by 10% and HP recovery bonus by 10 for 2 minutes.
+		-->
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="120">
+				<mul order="0x30" stat="p_max_hp" val="1.1"/>
+				<add order="0x40" stat="regHp" val="10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="835" levels="4" name="Imbue Seed of Destruction">
+		<table name="#dmg">-16 -17 -17 -17</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="itemConsumeId" val="10112"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="delayedEffect" val="5697"/>
+		<for>
+			<effect name="t_mp" param="#dmg;5;diff"/>
+		</for>
+	</skill>
+	<skill id="836" levels="3" name="Oblivion Trap">
+		<table name="#npcId">13125 13126 13127</table>
+		<table name="#level">1 2 3</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="addSkills" val="5679;-1"/>
+		<set name="npcId" val="#npcId"/>
+		<set name="summonType" val="trap"/>
+		<for />
+	</skill>
+	<skill id="837" levels="1" name="Painkiller">
+		<!--
+		      Description: For 8 seconds, becomes invincible, suppressing pain and not incurring damage.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_getdamage" param="block_hp" cancelOnAction="true"/>
+			<effect name="p_block_getdamage" param="block_mp" cancelOnAction="true"/>
+			<effect name="p_block_debuff" cancelOnAction="true"/>
+		</for>
+	</skill>
+	<skill id="838" levels="1" name="Switch Stance">
+		<!--
+		      Description: Switches from an attack stance to a basic stance.
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="839" levels="1" name="Dismount" >
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="transform;100"/>
+		</for>
+	</skill>
+	<skill id="840" levels="1" name="Final Flying Form" >
+		<!--
+			Done by:	Magister
+			Last modify:	27.12.2009, Diamond
+			Description: Transforms target into the final flying battle mode. Consumes 20 souls.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="soulsConsume" val="20"/>
+		<set name="addSkills" val="950;-2;951;-2;1544;-2;1545;1;953;1;932;0"/>
+		<set name="npcId" val="13142"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<effect name="Transformation" time="3600" val="260">
+				<set order="0x08" stat="STR" val="41"/>
+				<set order="0x08" stat="DEX" val="33"/>
+				<set order="0x08" stat="CON" val="31"/>
+				<set order="0x08" stat="INT" val="29"/>
+				<set order="0x08" stat="WIT" val="11"/>
+				<set order="0x08" stat="MEN" val="25"/>
+				<mul order="0x30" stat="p_max_hp" val="1.1"/>
+				<mul order="0x30" stat="p_max_cp" val="1.1"/>
+				<mul order="0x30" stat="p_max_mp" val="1.1"/>
+				<mul order="0x30" stat="p_physical_attack" val="2.0"/>
+				<mul order="0x30" stat="p_physical_defence" val="2.0"/>
+				<mul order="0x30" stat="p_magical_attack" val="2.0"/>
+				<mul order="0x30" stat="p_magical_defence" val="2.0"/>
+				<add order="0x40" stat="p_speed" val="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="841" levels="1" name="Aura Bird - Falcon" >
+		<!--
+			Done by:	Diamond
+			Last modify:	03.08.2009
+			Description:	Mounts the Aura Bird - Falcon.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="884;-2;886;-2;888;-2;891;-2;911;-2;885;1;932;0"/>
+		<set name="npcId" val="13144"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<effect name="Transformation" time="18000" val="8">
+				<set order="0x08" stat="STR" val="41"/>
+				<set order="0x08" stat="DEX" val="33"/>
+				<set order="0x08" stat="CON" val="31"/>
+				<set order="0x08" stat="INT" val="29"/>
+				<set order="0x08" stat="WIT" val="11"/>
+				<set order="0x08" stat="MEN" val="25"/>
+				<add order="0x40" stat="p_speed" val="57"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="842" levels="1" name="Aura Bird - Owl" >
+		<!--
+			Done by:	Diamond
+			Last modify:	03.08.2009
+			Description:	Mounts the Aura Bird - Owl.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="884;-2;887;-2;889;-2;892;-2;911;-2;885;1;932;0"/>
+		<set name="npcId" val="13145"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<effect name="Transformation" time="18000" val="9">
+				<set order="0x08" stat="STR" val="41"/>
+				<set order="0x08" stat="DEX" val="33"/>
+				<set order="0x08" stat="CON" val="31"/>
+				<set order="0x08" stat="INT" val="29"/>
+				<set order="0x08" stat="WIT" val="11"/>
+				<set order="0x08" stat="MEN" val="25"/>
+				<add order="0x40" stat="p_speed" val="25"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="843" levels="1" name="Shooting Star" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Fires a star fragment. Power 3422.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="844" levels="1" name="Outpost Construction" >
+		<!--
+			Done by:	Diamond
+			Last modify:	06.11.2009
+			Description:	Constructs an outpost that assists clan member recovery and reinforcement during territory battles. Territory ward capture is possible. Consumes 120 B-Grade Gemstones.
+		-->
+		<set name="itemConsumeId" val="2132"/>
+		<set name="itemConsumeCount" val="120"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="OUTPOST"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="build" val="true"/>
+		<set name="isCommon" val="true"/>
+		<for />
+	</skill>
+	<skill id="845" levels="1" name="Outpost Demolition" >
+		<!--
+			Done by:	Diamond
+			Last modify:	06.11.2009
+			Description:	Demolishes an outpost. After demolition, a new outpost can be constructed.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="OUTPOST"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="build" val="false"/>
+		<set name="isCommon" val="true"/>
+		<for />
+	</skill>
+	<skill id="846" levels="1" name="Possess Ward" >
+		<!--
+			Done by:	Diamond
+			Last modify:	13.11.2009
+			Description: Possesses the territory ward, decreasing various battle abilities.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<mul order="0x40" stat="p_speed" val="0.2"/>
+            <mul order="0x30" stat="p_attack_speed" val="0.2"/>
+            <mul order="0x30" stat="p_magic_speed" val="0.2"/>
+            <mul order="0x30" stat="p_physical_attack" val="0.2"/>
+            <mul order="0x30" stat="p_magical_attack" val="0.2"/>
+		</for>
+	</skill>
+	<skill id="847" levels="1" name="Ward Transport" >
+		<!--
+			Done by:	Diamond
+			Last modify:	13.11.2009
+			Description:	With an opposing ward in hand, go back to your outpost and use this skill to move the ward back to your castle.
+		-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="TAKEFLAG"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<for />
+	</skill>
+	<skill id="848" levels="1" name="Gludio Territory Benefaction" >
+		<!--
+		      Done by: Magister
+		      Last modify: 25.06.2009
+		      Description: STR+1 / INT+1
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<add order="0x40" stat="STR" val="1"/>
+			<add order="0x40" stat="INT" val="1"/>
+		</for>
+	</skill>
+	<skill id="849" levels="1" name="Dion Territory Benefaction" >
+		<!--
+		      Done by: Magister
+		      Last modify: 25.06.2009
+		      Description: DEX+1 / WIT+1
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<add order="0x40" stat="DEX" val="1"/>
+			<add order="0x40" stat="WIT" val="1"/>
+		</for>
+	</skill>
+	<skill id="850" levels="1" name="Giran Territory Benefaction" >
+		<!--
+		      Done by: Magister
+		      Last modify: 25.06.2009
+		      Description: STR+1 / MEN+1
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<add order="0x40" stat="STR" val="1"/>
+			<add order="0x40" stat="MEN" val="1"/>
+		</for>
+	</skill>
+	<skill id="851" levels="1" name="Oren Territory Benefaction" >
+		<!--
+		      Done by: Magister
+		      Last modify: 25.06.2009
+		      Description: CON+1 / MEN+1
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<add order="0x40" stat="CON" val="1"/>
+			<add order="0x40" stat="MEN" val="1"/>
+		</for>
+	</skill>
+	<skill id="852" levels="1" name="Aden Territory Benefaction" >
+		<!--
+		      Done by: Magister
+		      Last modify: 25.06.2009
+		      Description: DEX+1 / MEN+1
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<add order="0x40" stat="DEX" val="1"/>
+			<add order="0x40" stat="MEN" val="1"/>
+		</for>
+	</skill>
+	<skill id="853" levels="1" name="Innadril Territory Benefaction" >
+		<!--
+		      Done by: Magister
+		      Last modify: 25.06.2009
+		      Description: CON+1 / INT+1
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<add order="0x40" stat="CON" val="1"/>
+			<add order="0x40" stat="INT" val="1"/>
+		</for>
+	</skill>
+	<skill id="854" levels="1" name="Goddard Territory Benefaction" >
+		<!--
+		      Done by: Magister
+		      Last modify: 25.06.2009
+		      Description: DEX+1 / INT+1
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<add order="0x40" stat="DEX" val="1"/>
+			<add order="0x40" stat="INT" val="1"/>
+		</for>
+	</skill>
+	<skill id="855" levels="1" name="Rune Territory Benefaction" >
+		<!--
+		      Done by: Magister
+		      Last modify: 25.06.2009
+		      Description: STR+1 / WIT+1
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<add order="0x40" stat="STR" val="1"/>
+			<add order="0x40" stat="WIT" val="1"/>
+		</for>
+	</skill>
+	<skill id="856" levels="1" name="Schuttgart Territory Benefaction" >
+		<!--
+		      Done by: Magister
+		      Last modify: 25.06.2009
+		      Description: CON+1 / WIT+1
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<add order="0x40" stat="CON" val="1"/>
+			<add order="0x40" stat="WIT" val="1"/>
+		</for>
+	</skill>
+	<skill id="857" levels="1" name="Human Mercenary" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Transforms player into a human mercenary.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="858" levels="1" name="Elf Mercenary" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Transforms player into an Elf mercenary.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="859" levels="1" name="Dark Elf Mercenary" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Transforms player into a Dark Elf mercenary.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="860" levels="1" name="Orc Mercenary" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Transforms player into an Orc mercenary.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="861" levels="1" name="Dwarf Mercenary" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Transforms player into a Dwarf mercenary.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="862" levels="1" name="Kamael Mercenary" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Transforms player into a Kamael mercenary.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="863" levels="1" name="Royal Guard Captain" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Transforms player into a Royal Guard Captain.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="864" levels="1" name="Archer Captain" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Transforms player into an Archer Captain.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="865" levels="1" name="Magic Leader" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Transforms player into a Magic Leader.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="866" levels="1" name="Kamael Guard Captain" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Transforms player into a Kamael guard captain.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="867" levels="1" name="Knight of Dawn" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Transforms player into a Knight of Dawn.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="868" levels="1" name="Fortress Captain" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Transforms player into a Fortress Captain.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="869" levels="1" name="Mercenary Power Strike" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="870" levels="1" name="Royal Guard Captain Power Strike" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="871" levels="1" name="Royal Guard Captain Might" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Increases attack power temporarily. Effect 3.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="872" levels="1" name="Archer Captain Power Shot" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Uses a bow to attack enemies in the distance. Over-hit is possible. Power 1.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="873" levels="1" name="Archer Captain Rapid Shot" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Temporarily increases your own bow Atk. Spd. Effect 2.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="874" levels="1" name="Magic Leader Flame Strike" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Launches a fireball with a wide range that causes a burning trail. Power 1.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="875" levels="1" name="Magic Leader Empower" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Increases M. Atk. power temporarily. Effect 3.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="876" levels="1" name="Kamael Guard Captain Enuma Elish" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Cuts everything with the Sword of Creation that divides heaven and earth. Consumes 5 souls. Over-hit is possible. Power.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="877" levels="1" name="Kamael Guard Captain Disarm" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Disarms the opponent. Unable to use weapons while the effect lasts.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="878" levels="1" name="Knight of Dawn Power Strike" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="879" levels="1" name="Knight of Dawn Curse Fear" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Frightens the enemy, causing him to flee.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="880" levels="1" name="Knight of Dawn Ultimate Defense" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Instantly and drastically increases tolerance to P. Def./M. Def. weakening and buff cancelling attacks. The player cannot move while the effect lasts. Effect 2.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="881" levels="1" name="Fortress Captain Twister" >
+		<!--
+		      Done by Magister
+		      Description: Blades of wind are fired in rings. Power 1.
+		-->
+		<set name="power" val="175"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="wind"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="882" levels="1" name="Fortress Captain Blaze" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: Flames erupt from your body. Power 1.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="883" levels="1" name="Fortress Captain Seal of Binding" >
+		<set name="target" val="TARGET_AURA"/>
+        <set name="skillRadius" val="250"/>
+        <set name="skillType" val="ROOT"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="levelModifier" val="2"/>
+        <for>
+            <effect name="p_block_move"/>
+			<effect name="p_defence_trait" param="trait_hold;100"/>
+        </for>
+	</skill>
+	<skill id="884" levels="11" name="Air Assault" >
+		<!--
+			Done by:	Diamond
+			Last modify:	03.08.2009
+			Description:	Moves forward quickly and inflicts damage on nearby enemies.
+		-->
+		<set name="power" val="3752"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillRadius" val="2500"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="flyType" val="CHARGE"/>
+		<set name="flyRadius" val="2500"/>
+		<set name="radius" val="200"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="885" levels="1" name="Air Blink" >
+		<!--
+			Done by: Drizzy
+			Description:
+			Inflicts damage on nearby enemies, then teleports you behind your targetted enemy.
+		-->
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="flyRadius" val="-1000"/>
+		<set name="skillRadius" val="400"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="3"/>
+			<effect name="Warp" applyOnCaster="true"/>
+		</for>
+	</skill>
+	<skill id="886" levels="11" name="Air Shock Bomb" >
+		<!--
+			Done by:	Diamond
+			Last modify:	03.08.2009
+			Description:
+			Damages and stuns the target with 2251 Power, temporarily preventing movement.
+		-->
+		<set name="power" val="2251"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9"/>
+		</for>
+	</skill>
+	<skill id="887" levels="11" name="Sky Clutch" >
+		<!--
+			Done by:	Diamond
+			Last modify:	03.08.2009
+			Description:
+			Inflicts damage and simultaneously holds the targeted enemy with 110 Power. Only one root effect can be used at a time.
+		-->
+		<set name="power" val="110"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="p_block_move"/>
+		</for>
+	</skill>
+	<skill id="888" levels="11" name="Energy Storm" >
+		<!--
+			Done by:	Diamond
+			Last modify:	03.08.2009
+			Description:
+			Delivers a powerful strike with 3752 Power.
+		-->
+		<set name="power" val="3752"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="889" levels="11" name="Energy Storm" >
+		<!--
+			Done by:	Diamond
+			Last modify:	03.08.2009
+			Description:
+			Delivers a powerful strike with 3752 Power.
+		-->
+		<set name="power" val="3752"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="890" levels="11" name="Prodigious Flare" >
+		<!--
+			Done by:	Diamond
+			Last modify:	03.08.2009
+			Description:
+			Delivers a powerful strike with 5627 Power.
+		-->
+		<set name="power" val="5627"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="891" levels="11" name="Energy Shot" >
+		<!--
+			Done by:	Diamond
+			Last modify:	03.08.2009
+			Description:
+			Inflicts a powerful long-range attack with 88 Power.
+		-->
+		<set name="power" val="88"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="892" levels="11" name="Energy Shot" >
+		<!--
+			Done by:	Diamond
+			Last modify:	03.08.2009
+			Description:
+			Inflicts a powerful long-range attack with 131 Power.
+		-->
+		<set name="power" val="131"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="893" levels="11" name="Concentrated Energy Shot" >
+		<!--
+			Done by:	Diamond
+			Last modify:	03.08.2009
+			Description:
+			Gathers strength to inflict a powerful long-range attack with 197 Power.
+		-->
+		<set name="power" val="197"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="894" levels="1" name="Exhilarate" >
+		<!--
+			Done by:	Diamond
+			Last modify:	03.08.2009
+			Description:
+			Increases your overall attack abilities.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="120">
+				<mul order="0x30" stat="p_max_hp" val="1.2"/>
+				<mul order="0x30" stat="regHp" val="1.2"/>
+				<mul order="0x30" stat="p_physical_defence" val="1.2"/>
+				<!-- {p_hit;{all};4;diff}; ? -->
+				<mul order="0x30" stat="p_physical_attack" val="1.1"/>
+				<mul order="0x30" stat="p_speed" val="1.1"/>
+				<mul order="0x30" stat="p_attack_speed" val="1.2"/>
+				<add order="0x40" stat="debuffRcpt" val="10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="895" levels="1" name="Exhilarate" >
+		<!--
+			Done by:	Diamond
+			Last modify:	03.08.2009
+			Description:
+			Increases your overall attack abilities.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="120">
+				<mul order="0x30" stat="regMp" val="1.2"/>
+				<mul order="0x30" stat="p_speed" val="1.2"/>
+				<mul order="0x30" stat="p_magical_defence" val="1.2"/>
+				<mul order="0x30" stat="p_magical_attack" val="1.2"/>
+				<mul order="0x30" stat="p_magic_speed" val="1.2"/>
+				<add order="0x40" stat="mCritRate" val="2"/>
+				<add order="0x40" stat="debuffRcpt" val="10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="896" levels="6" name="Rolling Step" >
+		<!--
+			Done by Abaddon 01.08.09
+			Description: Inflicts a powerful blow with 9503-10440 Power.
+		-->
+		<table name="#power">9503 9702 9896 10084 10266 10440</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="897" levels="6" name="Double Blast" >
+		<!--
+			Done by Abaddon 01.08.09
+			Description: Inflicts a powerful long-range attack with 9503-10440 Power.
+		-->
+		<table name="#power">9503 9702 9896 10084 10266 10440</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="898" levels="6" name="Tornado Slash" >
+		<!--
+			Done by Abaddon 01.08.09
+			Description: Inflicts a powerful blow on nearby enemies with 5068-5568 Power.
+		-->
+		<table name="#power">5068 5175 5278 5379 5475 5568</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="899" levels="6" name="Cat Roar" >
+		<!--
+			Done by Abaddon 01.08.09
+			Description: Uses the cry of danger to decrease P. Def./M. Def./Moving Spd./Atk. Spd. of nearby enemies and decreases Magic Spd. Power 3168.
+		-->
+		<table name="#power">3168 3234 3299 3362 3422 3480</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="30">
+				<mul order="0x30" stat="p_physical_defence" val="0.7"/>
+				<mul order="0x30" stat="p_magical_defence" val="0.7"/>
+				<mul order="0x30" stat="p_speed" val="0.7"/>
+				<mul order="0x30" stat="p_attack_speed" val="0.7"/>
+				<mul order="0x30" stat="p_magic_speed" val="0.7"/>
+			</effect>
+		</for>
+	</skill>
+</list>

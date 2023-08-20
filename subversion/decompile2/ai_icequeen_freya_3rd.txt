@@ -1,0 +1,597 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_freya_3rd : default_npc
+{
+parameter:
+	float	Attack_DecayRatio = 6.600000;
+	float	UseSkill_DecayRatio = 66000.000000;
+	float	Attack_BoostValue = 300.000000;
+	float	UseSkill_BoostValue = 100000.000000;
+	int	Eternal_Blizzard = 411172865;
+	int	Eternal_Blizzard_Hard = 411238401;
+	int	Eternal_Blizzard_Force = 438894593;
+	int	Ice_Ball = 411435009;
+	int	Ice_Ball_Prob = 3333;
+	int	Summon_Elemental = 411369473;
+	int	Summon_Elemental_Prob = 1333;
+	int	Self_Nova = 411500545;
+	int	Self_Nova_Prob = 1500;
+	int	Death_Clack = 411566081;
+	int	Death_Clack_Prob = 777;
+	int	Death_Clack_Count = 4;
+	int	Death_Clack_Count_Hard = 5;
+	int	Reflect_Magic = 411697153;
+	int	Reflect_Magic_Prob = 1333;
+	int	Ice_Storm = 411762689;
+	int	Ice_Storm_Prob = 1333;
+	int	Freya_Anger = 411893761;
+	int	ChangeWeapon = 15471;
+	int	TIMER_randomize_desire = 2314101;
+	int	TIMER_battle_check = 2314102;
+	int	TIMER_eternal_blizzard = 2314103;
+	int	TIMER_phase3_failed = 2314104;
+	int	TIMER_start_moving = 2314105;
+	int	TIMER_use_freya_buff = 2314106;
+	int	TIMER_enable_death_clack = 2314107;
+	int	TIMER_freya_voice_normal = 2314109;
+	int	is_hard_mode = 0;
+	int	debug_mode = 0;
+	int	Dispel_Debuff = 1;
+	string	MAKER_summoner = "schuttgart29_2314_05m1";
+	string	MAKER_controller = "schuttgart29_2314_01m1";
+	string	MAKER_ice_knight = "schuttgart29_2314_03m1";
+	string	MAKER_third_spawner = "schuttgart29_2314_hd_105m1";
+
+handler:
+	EventHandler CREATED(i0,maker0)
+	{
+		super;
+		if( is_hard_mode == 0 )
+		{
+			myself->ChangeMoveType(0);
+		}
+		else if( is_hard_mode == 1 )
+		{
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_third_spawner);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,1001,0,0);
+			}
+			if( myself->Skill_GetConsumeMP(Freya_Anger) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Freya_Anger) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Freya_Anger) == 0 )
+			{
+				myself->AddUseSkillDesire(( myself + 1480 ),Freya_Anger,1,1,1000000);
+			}
+			myself->AddTimerEx(TIMER_use_freya_buff,( 15 * 1000 ));
+		}
+		myself->SetMaxHateListSize(50);
+		( myself + 1128 ) = 0;
+		( myself + 1136 ) = 0;
+		( myself + 1144 ) = 0;
+		( myself + 1152 ) = 0;
+		( myself + 1160 ) = 0;
+		( myself + 1168 ) = 0;
+		( myself + 1184 ) = 0;
+		( myself + 1192 ) = 0;
+		myself->AddTimerEx(TIMER_start_moving,( 10 * 1000 ));
+		myself->AddTimerEx(TIMER_eternal_blizzard,( 50 * 1000 ));
+		i0 = myself->InstantZone_GetId();
+		maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_knight);
+		if( gg->IsNull(maker0) == 0 )
+		{
+			gg->SendMakerScriptEvent(maker0,23140013,gg->GetIndexFromCreature(( myself + 1480 )),0);
+		}
+	}
+
+	EventHandler NO_DESIRE()
+	{
+		if( ( myself + 1136 ) == 1 )
+		{
+			if( debug_mode )
+			{
+				myself->Say(", Ü‘ Ä no_desire");
+			}
+			( myself + 1168 ) = ( ( myself + 1168 ) + 1 );
+			if( ( myself->GetCurrentTick() - ( myself + 1144 ) ) > 300 )
+			{
+				if( debug_mode )
+				{
+					myself->Shout(", Ü‘ Ä 4 Ü õ©À JD phase1 ä(˜¬");
+				}
+				( myself + 1136 ) = 2;
+				myself->AddTimerEx(TIMER_phase3_failed,1);
+			}
+		}
+		else if( ( myself + 1136 ) == 3 )
+		{
+		}
+	}
+
+	EventHandler ATTACKED(attacker,damage,c0,i0,i1,h0,maker0)
+	{
+		if( ( myself + 1136 ) == 0 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("first attack");
+			}
+			( myself + 1136 ) = 1;
+			myself->AddTimerEx(TIMER_randomize_desire,( 30 * 1000 ));
+		}
+		if( ( ( myself + 1480 ) + 328 ) < ( ( ( myself + 1480 ) + 6696 ) / 5.000000 ) )
+		{
+			if( ( myself + 1128 ) == 0 )
+			{
+				if( debug_mode )
+				{
+					myself->Shout("low hp. phase3 1õ.");
+				}
+				i0 = myself->InstantZone_GetId();
+				maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_controller);
+				if( gg->IsNull(maker0) == 0 )
+				{
+					gg->SendMakerScriptEvent(maker0,23140018,1,0);
+				}
+				( myself + 1128 ) = 1;
+			}
+		}
+		if( attacker + 68 ) == || myself->IsInCategory(12,( attacker + 7380 )) == 1 || myself->IsInCategory(123,( attacker + 7380 )) == 1 )
+		{
+			myself->AddHateInfo(attacker,gg->FloatToInt(damage),0,1,1);
+			( myself + 1144 ) = myself->GetCurrentTick();
+			if( gg->Rand(100) < 60 )
+			{
+				myself->BroadcastScriptEvent(23140010,gg->GetIndexFromCreature(attacker),4000);
+			}
+			if( ( attacker + 7508 ) == 1 && gg->GetAbnormalLevel(attacker,myself->Skill_GetAbnormalType(279052289)) <= 0 )
+			{
+				if( myself->Skill_GetConsumeMP(279052289) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(279052289) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(279052289) == 0 )
+				{
+					myself->AddUseSkillDesire(attacker,279052289,0,1,1000000);
+				}
+			}
+			if( ( myself + 1152 ) == 0 )
+			{
+				myself->AddAttackDesire(attacker,1,damage);
+				if( Ice_Ball != 458752001 )
+				{
+					if( gg->Rand(10000) < Ice_Ball_Prob )
+					{
+						if( myself->IsNullCreature(( myself + 1504 )) == 0 )
+						{
+							if( gg->Rand(10000) < 5000 )
+							{
+								if( myself->Skill_GetConsumeMP(Ice_Ball) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Ice_Ball) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Ice_Ball) == 0 )
+								{
+									myself->AddUseSkillDesire(attacker,Ice_Ball,0,1,1000000);
+								}
+							}
+							else if( myself->Skill_GetConsumeMP(Ice_Ball) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Ice_Ball) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Ice_Ball) == 0 )
+							{
+								myself->AddUseSkillDesire(( myself + 1504 ),Ice_Ball,0,1,1000000);
+							}
+						}
+						else if( myself->Skill_GetConsumeMP(Ice_Ball) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Ice_Ball) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Ice_Ball) == 0 )
+						{
+							myself->AddUseSkillDesire(attacker,Ice_Ball,0,1,1000000);
+						}
+					}
+				}
+				if( Summon_Elemental != 458752001 )
+				{
+					if( gg->Rand(10000) < Summon_Elemental_Prob )
+					{
+						if( myself->IsNullCreature(( myself + 1504 )) == 0 )
+						{
+							if( gg->Rand(10000) < 5000 )
+							{
+								if( myself->Skill_GetConsumeMP(Summon_Elemental) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Summon_Elemental) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Summon_Elemental) == 0 )
+								{
+									myself->AddUseSkillDesire(attacker,Summon_Elemental,0,1,1000000);
+								}
+								( myself + 1160 ) = gg->GetIndexFromCreature(attacker);
+							}
+							else if( myself->Skill_GetConsumeMP(Summon_Elemental) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Summon_Elemental) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Summon_Elemental) == 0 )
+							{
+								myself->AddUseSkillDesire(( myself + 1504 ),Summon_Elemental,0,1,1000000);
+							}
+							( myself + 1160 ) = gg->GetIndexFromCreature(( myself + 1504 ));
+						}
+						else if( myself->Skill_GetConsumeMP(Summon_Elemental) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Summon_Elemental) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Summon_Elemental) == 0 )
+						{
+							myself->AddUseSkillDesire(attacker,Summon_Elemental,0,1,1000000);
+						}
+						( myself + 1160 ) = gg->GetIndexFromCreature(attacker);
+					}
+				}
+				if( Self_Nova != 458752001 )
+				{
+					if( gg->Rand(10000) < Self_Nova_Prob )
+					{
+						if( myself->Skill_GetConsumeMP(Self_Nova) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Self_Nova) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Self_Nova) == 0 )
+						{
+							myself->AddUseSkillDesire(( myself + 1480 ),Self_Nova,0,1,1000000);
+						}
+					}
+				}
+				if( Reflect_Magic != 458752001 )
+				{
+					if( gg->Rand(10000) < Reflect_Magic_Prob )
+					{
+						if( myself->Skill_GetConsumeMP(Reflect_Magic) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Reflect_Magic) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Reflect_Magic) == 0 )
+						{
+							myself->AddUseSkillDesire(( myself + 1480 ),Reflect_Magic,1,1,1000000);
+						}
+					}
+				}
+				if( Death_Clack != 458752001 )
+				{
+					if( gg->Rand(10000) < Death_Clack_Prob )
+					{
+						if( ( myself + 1184 ) == 0 )
+						{
+							( myself + 1184 ) = 1;
+							myself->AddTimerEx(TIMER_enable_death_clack,( 15 * 1000 ));
+							h0 = myself->GetMaxHateInfo(0);
+							if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+							{
+								if( debug_mode )
+								{
+									myself->Say("ýLX  à. " + ( ( h0 + 8 ) + 344 ));
+								}
+								myself->AddUseSkillDesire(( h0 + 8 ),Death_Clack,0,1,10000000);
+							}
+							if( is_hard_mode != 1 )
+							{
+								i0 = Death_Clack_Count;
+							}
+							else
+							{
+								i0 = Death_Clack_Count_Hard;
+							}
+							select(i0)
+							{
+								case 4:
+									if( myself->GetHateInfoCount() >= 4 )
+									{
+										h0 = myself->GetNthHateInfo(0,( gg->Rand(4) + 1 ),0);
+										if( myself->IsNullHateInfo(h0) == 0 )
+										{
+											if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+											{
+												if( debug_mode )
+												{
+													myself->Say("ýLX  à. " + ( ( h0 + 8 ) + 344 ));
+												}
+												myself->AddUseSkillDesire(( h0 + 8 ),Death_Clack,0,1,10000000);
+											}
+										}
+										h0 = myself->GetNthHateInfo(0,( gg->Rand(9) + 1 ),0);
+										if( myself->IsNullHateInfo(h0) == 0 )
+										{
+											if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+											{
+												if( debug_mode )
+												{
+													myself->Say("ýLX  à. " + ( ( h0 + 8 ) + 344 ));
+												}
+												myself->AddUseSkillDesire(( h0 + 8 ),Death_Clack,0,1,10000000);
+											}
+										}
+										h0 = myself->GetNthHateInfo(0,( gg->Rand(( myself->GetHateInfoCount() - 1 )) + 1 ),0);
+										if( myself->IsNullHateInfo(h0) == 0 )
+										{
+											if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+											{
+												if( debug_mode )
+												{
+													myself->Say("ýLX  à. " + ( ( h0 + 8 ) + 344 ));
+												}
+												myself->AddUseSkillDesire(( h0 + 8 ),Death_Clack,0,1,10000000);
+											}
+										}
+									}
+									break;
+								case 5:
+									if( myself->GetHateInfoCount() >= 5 )
+									{
+										h0 = myself->GetNthHateInfo(0,( gg->Rand(9) + 1 ),0);
+										if( myself->IsNullHateInfo(h0) == 0 )
+										{
+											if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+											{
+												if( debug_mode )
+												{
+													myself->Say("ýLX  à. " + ( ( h0 + 8 ) + 344 ));
+												}
+												myself->AddUseSkillDesire(( h0 + 8 ),Death_Clack,0,1,10000000);
+											}
+										}
+										for(i1 = 0; i1 < 3; i1 = ( i1 + 1 ))
+										{
+											h0 = myself->GetNthHateInfo(0,( gg->Rand(( myself->GetHateInfoCount() - 1 )) + 1 ),0);
+											if( myself->IsNullHateInfo(h0) == 0 )
+											{
+												if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+												{
+													if( debug_mode )
+													{
+														myself->Say("ýLX  à. " + ( ( h0 + 8 ) + 344 ));
+													}
+													myself->AddUseSkillDesire(( h0 + 8 ),Death_Clack,0,1,10000000);
+												}
+											}
+										}
+									}
+									break;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	EventHandler USE_SKILL_FINISHED(target,skill_name_id,i0,maker0)
+	{
+		if( skill_name_id == Summon_Elemental && ( myself + 1152 ) == 0 )
+		{
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_summoner);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				if( myself->IsNullCreature(target) == 0 )
+				{
+					gg->SendMakerScriptEvent(maker0,23140012,gg->GetIndexFromCreature(target),gg->GetIndexFromCreature(target));
+				}
+			}
+		}
+		else if( skill_name_id == Eternal_Blizzard || skill_name_id == Eternal_Blizzard_Hard || skill_name_id == Eternal_Blizzard_Force )
+		{
+			if( debug_mode )
+			{
+				myself->Shout("t0 ¬Ü Ü DÌ.");
+			}
+			if( gg->Rand(2) == 1 )
+			{
+				if( debug_mode )
+				{
+					myself->Say("|  ¬ timer on");
+				}
+				myself->AddTimerEx(TIMER_freya_voice_normal,( ( gg->Rand(15) + 10 ) * 1000 ));
+			}
+		}
+	}
+
+	EventHandler CLAN_ATTACKED(attacker,victim,damage)
+	{
+		if( attacker + 68 ) == || myself->IsInCategory(12,( attacker + 7380 )) == 1 || myself->IsInCategory(123,( attacker + 7380 )) == 1 )
+		{
+			myself->AddHateInfo(attacker,gg->FloatToInt(damage),0,1,1);
+			if( ( myself + 1152 ) == 0 )
+			{
+				if( myself->IsNullCreature(victim) == 0 )
+				{
+					if( victim != ( myself + 1480 ) )
+					{
+						myself->AddAttackDesire(attacker,1,100);
+					}
+				}
+			}
+		}
+	}
+
+	EventHandler SEE_CREATURE(creature)
+	{
+		if( ( myself + 1152 ) == 0 )
+		{
+			if( creature + 68 ) == || myself->IsInCategory(12,( creature + 7380 )) == 1 || myself->IsInCategory(123,( creature + 7380 )) == 1 )
+			{
+				myself->AddHateInfo(creature,100,0,1,1);
+				myself->MakeAttackEvent(creature,200,0);
+			}
+		}
+	}
+
+	EventHandler SEE_SPELL(speller)
+	{
+		if( speller + 68 ) == || myself->IsInCategory(12,( speller + 7380 )) == 1 || myself->IsInCategory(123,( speller + 7380 )) )
+		{
+			myself->AddHateInfo(speller,50,0,1,1);
+		}
+	}
+
+	EventHandler SCRIPT_EVENT(script_event_arg1,script_event_arg2,i0,c0,h0)
+	{
+		if( script_event_arg1 == 23140046 )
+		{
+			c0 = gg->GetCreatureFromIndex(script_event_arg2);
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				h0 = myself->GetMaxHateInfo(0);
+				if( myself->IsNullHateInfo(h0) == 0 )
+				{
+					if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+					{
+						gg->SendScriptEvent(c0,23140047,gg->GetIndexFromCreature(( h0 + 8 )));
+					}
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140048 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("SCE_HOLD_DESIRE_ON");
+			}
+			( myself + 1152 ) = 1;
+			( ( myself + 1480 ) + 8249 ) = 1;
+			( ( myself + 1480 ) + 8250 ) = 1;
+		}
+		else if( script_event_arg1 == 23140049 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("SCE_HOLD_DESIRE_OFF");
+			}
+			gg->SetNpcParam(( myself + 1480 ),9,( ( ( myself + 1480 ) + 6696 ) * 0.300000 ));
+			( myself + 1152 ) = 0;
+			myself->LookNeighbor(2000);
+			( ( myself + 1480 ) + 8249 ) = 0;
+			( ( myself + 1480 ) + 8250 ) = 0;
+		}
+		else if( script_event_arg1 == 23140051 )
+		{
+			c0 = gg->GetCreatureFromIndex(script_event_arg2);
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				gg->SendScriptEventEx(c0,23140052,gg->GetIndexFromCreature(( myself + 1480 )),2314);
+			}
+		}
+		else if( script_event_arg1 == 23140043 )
+		{
+			if( ( myself + 1168 ) > 0 )
+			{
+				c0 = gg->GetCreatureFromIndex(script_event_arg2);
+				if( myself->IsNullCreature(c0) == 0 )
+				{
+					( myself + 1168 ) = 0;
+					myself->AddAttackDesire(c0,1,1000);
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140020 )
+		{
+		}
+	}
+
+	EventHandler TIMER_FIRED_EX(timer_id,i0,i1,i2,maker0)
+	{
+		super;
+		if( timer_id == TIMER_randomize_desire )
+		{
+			if( gg->Rand(2) == 1 )
+			{
+			}
+			myself->AddTimerEx(TIMER_randomize_desire,( 30 * 1000 ));
+		}
+		if( timer_id == TIMER_eternal_blizzard )
+		{
+			if( is_hard_mode == 1 && ( ( ( ( ( myself + 1192 ) == 0 && ( ( myself + 1480 ) + 328 ) < ( ( ( myself + 1480 ) + 6696 ) * 0.800000 ) ) || ( ( myself + 1192 ) == 1 && ( ( myself + 1480 ) + 328 ) < ( ( ( myself + 1480 ) + 6696 ) * 0.600000 ) ) ) || ( ( myself + 1192 ) == 2 && ( ( myself + 1480 ) + 328 ) < ( ( ( myself + 1480 ) + 6696 ) * 0.400000 ) ) ) || ( ( myself + 1192 ) == 3 && ( ( myself + 1480 ) + 328 ) < ( ( ( myself + 1480 ) + 6696 ) * 0.200000 ) ) ) )
+			{
+				( myself + 1192 ) = ( ( myself + 1192 ) + 1 );
+				i0 = myself->InstantZone_GetId();
+				maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_controller);
+				if( gg->IsNull(maker0) == 0 )
+				{
+					if( ( myself + 1152 ) == 0 )
+					{
+						gg->SendMakerScriptEvent(maker0,23140070,1,0);
+						gg->SendMakerScriptEvent(maker0,23140067,0,0);
+					}
+				}
+				myself->AddUseSkillDesire(( myself + 1480 ),Eternal_Blizzard_Force,0,1,-1);
+				myself->AddTimerEx(TIMER_eternal_blizzard,( ( gg->Rand(5) + 35 ) * 1000 ));
+			}
+			else
+			{
+				i0 = myself->InstantZone_GetId();
+				maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_controller);
+				if( gg->IsNull(maker0) == 0 )
+				{
+					if( ( myself + 1152 ) == 0 )
+					{
+						gg->SendMakerScriptEvent(maker0,23140070,0,0);
+						gg->SendMakerScriptEvent(maker0,23140067,0,0);
+					}
+				}
+				if( is_hard_mode == 1 )
+				{
+					if( ( myself + 1152 ) == 0 )
+					{
+						myself->AddUseSkillDesire(( myself + 1480 ),Eternal_Blizzard_Hard,0,1,-1);
+					}
+					myself->AddTimerEx(TIMER_eternal_blizzard,( ( gg->Rand(5) + 35 ) * 1000 ));
+				}
+				else if( ( myself + 1128 ) == 1 )
+				{
+					if( debug_mode )
+					{
+						myself->Shout("P4 - |¨Ü tÀ\ t0 ¬Ü ¬© Hh.");
+					}
+				}
+				else if( ( myself + 1152 ) == 0 )
+				{
+					myself->AddUseSkillDesire(( myself + 1480 ),Eternal_Blizzard,0,1,-1);
+				}
+				myself->AddTimerEx(TIMER_eternal_blizzard,( ( gg->Rand(5) + 55 ) * 1000 ));
+			}
+		}
+		if( timer_id == TIMER_phase3_failed )
+		{
+			if( debug_mode )
+			{
+				myself->Shout("phase3 ä(.");
+			}
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_controller);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,23140018,2,0);
+			}
+			( ( myself + 1480 ) + 8249 ) = 1;
+			( ( myself + 1480 ) + 8250 ) = 1;
+		}
+		if( timer_id == TIMER_start_moving )
+		{
+			if( ( myself + 1136 ) != 1 )
+			{
+				myself->AddMoveToDesire(114730,-114805,-11200,50);
+				( myself + 1136 ) == 1
+			}
+		}
+		if( timer_id == TIMER_use_freya_buff )
+		{
+			myself->BroadcastScriptEvent(23140062,0,1000);
+			myself->AddTimerEx(TIMER_use_freya_buff,( 15 * 1000 ));
+		}
+		if( timer_id == TIMER_enable_death_clack )
+		{
+			( myself + 1184 ) = 0;
+		}
+		if( timer_id == TIMER_freya_voice_normal )
+		{
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_controller);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,23140068,0,0);
+			}
+		}
+	}
+
+	EventHandler MY_DYING(i0,maker0)
+	{
+		if( debug_mode )
+		{
+			myself->Shout("my_dying. PHASE4 end");
+		}
+		if( debug_mode )
+		{
+			myself->Shout("inzone mark_restrict");
+		}
+		i0 = myself->InstantZone_GetId();
+		maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_controller);
+		if( gg->IsNull(maker0) == 0 )
+		{
+			gg->SendMakerScriptEvent(maker0,23140019,1,0);
+		}
+	}
+
+}

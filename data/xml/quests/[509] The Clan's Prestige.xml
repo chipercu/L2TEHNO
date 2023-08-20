@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="509" type="PARTY_ALL">
+		<name lang="en" val="The Clan's Prestige"/>
+		<name lang="ru" val="Престиж Клана"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="25290"/>	<!-- Daimon the White-Eyed -->
+			<event type="MOBKILLED" val="25293"/>	<!-- Hesti Guardian Deity of the Hot Springs -->
+			<event type="MOBKILLED" val="25523"/>	<!-- Plague Golem -->
+			<event type="MOBKILLED" val="25322"/>	<!-- Demons Agent Falston -->
+			<event type="QUEST_START" val="31331"/>	<!-- Valdis -->
+			<event type="QUEST_TALK" val="31331"/>	<!-- Valdis -->
+			<item id="8489"/>	<!-- Daimon's Eyes -->
+			<item id="8490"/>	<!-- Hestia's Fairy Stone -->
+			<item id="8491"/>	<!-- Nucleus of Lesser Golem -->
+			<item id="8492"/>	<!-- Falston's Fang -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="1201" type="PARTY_ONE">
+		<name lang="en" val="Dark Cloud Mansion"/>
+		<name lang="ru" val="Темный Особняк"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBGOTATTACKED" val="22402"/>	<!-- Shadow Column -->
+			<event type="MOBGOTATTACKED" val="18371"/>	<!-- Beleth Sample -->
+			<event type="MOBGOTATTACKED" val="18372"/>	<!-- Beleth Sample -->
+			<event type="MOBGOTATTACKED" val="18373"/>	<!-- Beleth Sample -->
+			<event type="MOBGOTATTACKED" val="18374"/>	<!-- Beleth Sample -->
+			<event type="MOBGOTATTACKED" val="18375"/>	<!-- Beleth Sample -->
+			<event type="MOBGOTATTACKED" val="18376"/>	<!-- Beleth Sample -->
+			<event type="MOBGOTATTACKED" val="18377"/>	<!-- Beleth Sample -->
+			<event type="MOBKILLED" val="18371"/>	<!-- Beleth Sample -->
+			<event type="MOBKILLED" val="18372"/>	<!-- Beleth Sample -->
+			<event type="MOBKILLED" val="18373"/>	<!-- Beleth Sample -->
+			<event type="MOBKILLED" val="18374"/>	<!-- Beleth Sample -->
+			<event type="MOBKILLED" val="18375"/>	<!-- Beleth Sample -->
+			<event type="MOBKILLED" val="18376"/>	<!-- Beleth Sample -->
+			<event type="MOBKILLED" val="18377"/>	<!-- Beleth Sample -->
+			<event type="MOBKILLED" val="22272"/>	<!-- Beleths Minion -->
+			<event type="MOBKILLED" val="22273"/>	<!-- Beleths Minion -->
+			<event type="MOBKILLED" val="22274"/>	<!-- Beleths Minion -->
+			<event type="MOBKILLED" val="18369"/>	<!-- Chromatic Crystalline Golem -->
+			<event type="MOBKILLED" val="18370"/>	<!-- Chromatic Crystalline Golem -->
+			<event type="MOBKILLED" val="22402"/>	<!-- Shadow Column -->
+			<event type="MOBKILLED" val="22264"/>	<!-- Castalia -->
+			<event type="MOBKILLED" val="22265"/>	<!-- Chrysocolla -->
+			<event type="NPC_FIRST_TALK" val="32324"/>	<!-- Black Stone Monolith -->
+			<event type="QUEST_START" val="32282"/>	<!-- Yiyen -->
+			<event type="QUEST_TALK" val="32282"/>	<!-- Yiyen -->
+			<event type="QUEST_TALK" val="32291"/>	<!-- Symbol of Truth -->
+		</setting>
+	</quest>
+</quests>

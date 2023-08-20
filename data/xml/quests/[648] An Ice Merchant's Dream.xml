@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="648" type="PARTY_ONE">
+		<name lang="en" val="An Ice Merchant's Dream"/>
+		<name lang="ru" val="Мечта торговца льдом"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="22080"/>	<!-- Massive Maze Bandersnatch -->
+			<event type="MOBKILLED" val="22081"/>	<!-- Lost Watcher -->
+			<event type="MOBKILLED" val="22082"/>	<!-- Elder Lost Watcher -->
+			<event type="MOBKILLED" val="22083"/>	<!-- Baby Panthera -->
+			<event type="MOBKILLED" val="22084"/>	<!-- Panthera -->
+			<event type="MOBKILLED" val="22085"/>	<!-- Lost Gargoyle -->
+			<event type="MOBKILLED" val="22086"/>	<!-- Lost Gargoyle Youngling -->
+			<event type="MOBKILLED" val="22087"/>	<!-- Pronghorn Spirit -->
+			<event type="MOBKILLED" val="22088"/>	<!-- Pronghorn -->
+			<event type="MOBKILLED" val="22089"/>	<!-- Ice Tarantula -->
+			<event type="MOBKILLED" val="22090"/>	<!-- Frost Tarantula -->
+			<event type="MOBKILLED" val="22091"/>	<!-- Lost Iron Golem -->
+			<event type="MOBKILLED" val="22092"/>	<!-- Frost Iron Golem -->
+			<event type="MOBKILLED" val="22093"/>	<!-- Lost Buffalo -->
+			<event type="MOBKILLED" val="22094"/>	<!-- Frost Buffalo -->
+			<event type="MOBKILLED" val="22096"/>	<!-- Ursus -->
+			<event type="MOBKILLED" val="22097"/>	<!-- Lost Yeti -->
+			<event type="MOBKILLED" val="22098"/>	<!-- Frost Yeti -->
+			<event type="QUEST_START" val="32020"/>	<!-- Rafforty -->
+			<event type="QUEST_START" val="32023"/>	<!-- Ice Shelf -->
+			<event type="QUEST_TALK" val="32020"/>	<!-- Rafforty -->
+			<event type="QUEST_TALK" val="32023"/>	<!-- Ice Shelf -->
+		</setting>
+	</quest>
+</quests>

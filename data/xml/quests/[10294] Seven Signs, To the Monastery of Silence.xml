@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="10294" type="SOLO">
+		<name lang="en" val="Seven Signs, To the Monastery of Silence"/>
+		<name lang="ru" val="Семь Печатей, В Монастырь Безмолвия"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="32784"/>	<!-- Elcadia -->
+			<event type="QUEST_TALK" val="32784"/>	<!-- Elcadia -->
+			<event type="QUEST_TALK" val="32792"/>	<!-- Eriss Evil Thoughts -->
+			<event type="QUEST_TALK" val="32787"/>	<!-- Elcadia -->
+			<event type="QUEST_TALK" val="32803"/>	<!-- Relic Guardian -->
+			<event type="QUEST_TALK" val="32797"/>	<!-- Judith van Etina -->
+			<event type="QUEST_TALK" val="32793"/>	<!-- Solinas Evil Thoughts -->
+			<event type="QUEST_TALK" val="32821"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32822"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32823"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32824"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32825"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32826"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32827"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32828"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32829"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32830"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32831"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32832"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32833"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32834"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32835"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32836"/>	<!-- Reading Desk -->
+			<event type="QUEST_TALK" val="32804"/>	<!-- Relic Watcher -->
+			<event type="QUEST_TALK" val="32805"/>	<!-- Relic Watcher -->
+			<event type="QUEST_TALK" val="32806"/>	<!-- Relic Watcher -->
+			<event type="QUEST_TALK" val="32807"/>	<!-- Relic Watcher -->
+		</setting>
+	</quest>
+</quests>

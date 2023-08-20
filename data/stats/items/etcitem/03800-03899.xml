@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="3800" name="Vanor Silenos Mane" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_mane_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3801" name="Talk Bugbear Totem" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_totem_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3802" name="Okun's Head" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_skull_black_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3803" name="Kakran's Head" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_skull_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3804" name="Narcissus's Soulstone" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_crystal_ball_blue_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3805" name="Deprive Eye" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_eyeball_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3806" name="Unicorn's Horn" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_unicorn_horn_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3807" name="Kerunos's Gold Mane" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_mane_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3808" name="Skull of Executed" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_skull_white_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3809" name="Bust of Travis" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_holy_statue_silver_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3810" name="Sword of Cadmus" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.weapon_sword_of_watershadow_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3811" name="Coin Diagram" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_spell_books_blue_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3812" name="Kaldis Gold Dragon" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_magic_coin_gold_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3813" name="Coin Collector Membership 1" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3814" name="Coin Collector Membership 2" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3815" name="Coin Collector Membership 3" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_letter_white_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3816" name="Fairy Stone" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_gem_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3817" name="Deluxe Fairy Stone" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_gem_clear_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3818" name="Fairy Stone List" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3819" name="Deluxe Fairy Stone List" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3820" name="Toad Lord Back Skin" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3821" name="Juice of Monkshood" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_potion_green_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3822" name="Scale of Drake Exarion" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_scale_of_medusa_blue_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3823" name="Egg of Drake Exarion" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragon_egg_i02" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3824" name="Scale of Drake Zwov" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_scale_of_medusa_green_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3825" name="Egg of Drake Zwov" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragon_egg_i04" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3826" name="Scale of Drake Kalibran" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_scale_of_medusa_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3827" name="Egg of Drake Kalibran" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragon_egg_i01" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3828" name="Scale of Wyvern Suzet" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_seed_yellow_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3829" name="Egg of Wyvern Suzet" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragon_egg_i03" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3830" name="Scale of Wyvern Shamhai" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_seed_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3831" name="Egg of Wyvern Shamhai" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragon_egg_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3832" name="Herb of Harit" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_herb_red_i00" />
+	</etcitem>
+	<etcitem id="3833" name="Herb of Vanor" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_herb_green_i00" />
+	</etcitem>
+	<etcitem id="3834" name="Herb of Oel Mahum" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_herb_blue_i00" />
+	</etcitem>
+	<etcitem id="3835" name="Blood of Eva" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragon_blood_i00" />
+	</etcitem>
+	<etcitem id="3836" name="Athrea's Coin" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_coins_gold_i00" />
+	</etcitem>
+	<etcitem id="3837" name="Symbol of Loyalty" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_jewel_red_i00" />
+	</etcitem>
+	<etcitem id="3838" name="Recipe: Titan's Powerstone" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3839" name="Mist Drake Egg" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragon_egg_i02" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3840" name="Blitz Wyrm Egg" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragon_egg_i01" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3841" name="Drake Egg" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragon_egg_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3842" name="Thunder Wyrm Egg" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragon_egg_i03" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3843" name="Brooch of the Magpie" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_feather_black_i00" />
+		<set name="price" val="1000" />
+	</etcitem>
+	<etcitem id="3844" name="Nebulite Crystals" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_crystal_red_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3845" name="Broken Titan's Powerstone" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_instrument_i00" />
+		<set name="class" val="MATHERIALS" />
+		<set name="stackable" val="true" />
+		<set name="price" val="500" />
+	</etcitem>
+	<etcitem id="3846" name="Titan's Powerstone" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_mechanic_box_i00" />
+		<set name="class" val="MATHERIALS" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3847" name="Imperial Key" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_key_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3848" name="Undead Ash" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_powder_gray_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3849" name="Bloody Axe Insignia" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_badge_black_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3850" name="Delu Lizardman Fang" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fang_ivory_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3851" name="Stakato Talon" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3852" name="Feather of Gabrielle" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_feather_gold_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3853" name="Marsh Stalker Horn" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_horn_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3854" name="Marsh Drake Talons" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3855" name="Kranrot Skin" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_leather_brown_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3856" name="Hamrut Leg" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_insect_leg_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3857" name="Remains of Sacrified" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_skull_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3858" name="Totem of Land Dragon" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_parasite_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3859" name="1st Fragment of Abyss Jewel" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_broken_crystal_blue_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3860" name="2nd Fragment of Abyss Jewel" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3861" name="3rd Fragment of Abyss Jewel" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3862" name="Mara Fang" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fang_ivory_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3863" name="Musfel Fang" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fang_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3864" name="Mark of Watchman" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_eyeball_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3865" name="Portal Stone" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_plate_blue_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3866" name="Gustav's 1st Letter" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3867" name="Gustav's 2nd Letter" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3868" name="Gustav's 3rd Letter" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3869" name="Scepter of Judgment" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_royal_seal_of_lord_i04" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3870" name="Seal of Aspiration" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_paper_blue_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3871" name="Black Anvil Coin" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_coins_blue_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3872" name="Antidote Recipe List" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3873" name="Voucher of Faith" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3874" name="Alliance Manifesto" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="3875" name="L2Day - A" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_alphabet_a_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3876" name="L2Day - C" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_alphabet_c_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3877" name="L2Day - E" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_alphabet_e_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3878" name="L2Day - F" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_alphabet_f_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3879" name="L2Day - G" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_alphabet_g_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3880" name="L2Day - H" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_alphabet_h_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3881" name="L2Day - I" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_alphabet_i_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3882" name="L2Day - L" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_alphabet_l_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3883" name="L2Day - N" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_alphabet_n_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3884" name="L2Day - O" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_alphabet_o_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3885" name="L2Day - R" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_alphabet_r_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3886" name="L2Day - S" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_alphabet_s_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3887" name="L2Day - T" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_alphabet_t_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3888" name="L2Day - II" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_alphabet_ii_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="3889" name="Potion of Recovery" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_herb_green_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="180" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+		<skills>
+			<skill id="2060" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="3890" name="Herald of Slayer" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_badge_silver_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+</list>

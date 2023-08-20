@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="135" type="SOLO">
+		<name lang="en" val="Temple Executor"/>
+		<name lang="ru" val="Палач Храма"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20781"/>	<!-- Delu Lizardman Shaman -->
+			<event type="MOBKILLED" val="21104"/>	<!-- Delu Lizardman Supplier -->
+			<event type="MOBKILLED" val="21105"/>	<!-- Delu Lizardman Special Agent -->
+			<event type="MOBKILLED" val="21106"/>	<!-- Cursed Seer -->
+			<event type="MOBKILLED" val="21107"/>	<!-- Delu Lizardman Commander -->
+			<event type="QUEST_START" val="30068"/>	<!-- Shegfield -->
+			<event type="QUEST_TALK" val="30068"/>	<!-- Shegfield -->
+			<event type="QUEST_TALK" val="30291"/>	<!-- Alex -->
+			<event type="QUEST_TALK" val="31773"/>	<!-- Sonin -->
+			<event type="QUEST_TALK" val="30078"/>	<!-- Pano -->
+			<item id="10328"/>	<!-- Stolen Cargo -->
+			<item id="10329"/>	<!-- Hate Crystal -->
+			<item id="10330"/>	<!-- Old Treasure Map -->
+			<item id="10331"/>	<!-- Sonin's Credentials -->
+			<item id="10332"/>	<!-- Pano's Credentials -->
+			<item id="10333"/>	<!-- Alex's Credentials -->
+		</setting>
+	</quest>
+</quests>

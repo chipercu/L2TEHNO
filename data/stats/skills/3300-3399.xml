@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="3300" levels="1" name="Yellow Talisman of Speed">
+		<!--
+			Done by Magister
+			Description: Increases speed when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9941"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<add order="0x40" stat="p_speed" val="5"/>
+		</for>
+	</skill>
+	<skill id="3301" levels="1" name="Yellow Talisman of Violent Haste">
+		<!--
+			Done by Magister
+			Description: Increases attack speed when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9934"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<add order="0x40" stat="p_attack_speed" val="10"/>
+		</for>
+	</skill>
+	<skill id="3302" levels="1" name="Yellow Talisman of Arcane Haste">
+		<!--
+			Done by Magister
+			Description: Increases casting speed when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9937"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<add order="0x40" stat="p_magic_speed" val="10"/>
+		</for>
+	</skill>
+	<skill id="3303" levels="1" name="White Talisman of Bandages">
+		<!--
+			Done by Magister
+			Description: Increases resistance to bleeding when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9964"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bleed;10"/>
+		</for>
+	</skill>
+	<skill id="3304" levels="1" name="White Talisman of Attention">
+		<!--
+			Done by Magister
+			Description: Increases resistance to sleep when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9963"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sleep;5"/>
+		</for>
+	</skill>
+	<skill id="3305" levels="1" name="White Talisman of Grounding">
+		<!--
+			Done by Magister
+			Description: Increases resistance to shock when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9962"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_shock;5"/>
+		</for>
+	</skill>
+	<skill id="3306" levels="1" name="White Talisman of Bravery">
+		<!--
+			Done by Magister
+			Description: Increases resistance to mental attack when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9960"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_derangement;5"/>
+		</for>
+	</skill>
+	<skill id="3307" levels="1" name="White Talisman of Motion">
+		<!--
+			Done by Magister
+			Description: Increases resistance to paralysis when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9961"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_paralyze;5"/>
+		</for>
+	</skill>
+	<skill id="3308" levels="1" name="White Talisman of Freedom">
+		<!--
+			Done by Magister
+			Description: Increases resistance to hold when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9966"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_hold;5"/>
+		</for>
+	</skill>
+	<skill id="3309" levels="1" name="White Talisman of Protection">
+		<!--
+			Done by Magister
+			Description: Increases resistance to buff-lifting attack when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9965"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<add order="0x40" stat="cancelRcpt" val="100"/>
+		</for>
+	</skill>
+	<skill id="3310" levels="1" name="Yellow Talisman of Physical Regeneration">
+		<!--
+			Done by Magister
+			Description: Increases HP regeneration when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9948"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<add val="1" order="0x40" stat="regHp" />
+		</for>
+	</skill>
+	<skill id="3311" levels="1" name="Yellow Talisman of CP Regeneration">
+		<!--
+			Done by Magister
+			Description: Increases CP regeneration when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9947"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<add val="1" order="0x40" stat="regCp"/>
+		</for>
+	</skill>
+	<skill id="3312" levels="1" name="Yellow Talisman of Healing">
+		<!--
+			Done by Magister
+			Description: Increases power of HP regeneration magic when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9946"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<add val="40" order="0x40" stat="healPower"/>
+		</for>
+	</skill>
+	<skill id="3313" levels="1" name="Yellow Talisman of Alacrity">
+		<!--
+			Done by Magister
+			Description: Increases attack/magic, movement speed when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9940"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<mul order="0x30" stat="p_physical_attack" val="1.01"/>
+			<mul order="0x30" stat="p_magical_attack" val="1.01"/>
+			<add order="0x40" stat="p_speed" val="3"/>
+		</for>
+	</skill>
+	<skill id="3314" levels="1" name="Grey Talisman of Weight Training">
+		<!--
+			Done by Magister
+			Description: Increases weight limit when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9950"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<mul order="0x30" stat="maxLoad" val="2"/>
+		</for>
+	</skill>
+	<skill id="3315" levels="1" name="Grey Talisman of Fishing">
+		<!--
+			Done by:	Diamond
+			Last modify:	23.08.2009
+			Description: Changes fishing expertise when equipped with the Talisman.
+		-->
+		<set name="power" val="26"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="referenceId" val="9951"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<effect name="p_change_fishing_mastery" param="2;0.9375"/>
+		</for>
+	</skill>
+	<skill id="3316" levels="1" name="Yellow Talisman of Critical Dodging">
+		<!--
+			Done by Magister
+			Description: Decreases chance of a critical regular attack when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="referenceId" val="9944"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<effect name="Buff" time="120" stackType="YellowTalisman">
+				<mul order="0x30" stat="critChanceRcpt" val="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3317" levels="1" name="Yellow Talisman of Critical Reduction">
+		<!--
+			Done by Magister
+			Description: Decreases damage of a critical regular attack when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="referenceId" val="9942"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<effect name="Buff" time="120" stackType="YellowTalisman">
+				<add order="0x40" stat="critDamRcpt" val="-100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3318" levels="1" name="Flag Display">
+		<!--
+			Done by:	Diamond
+			Description:
+			In order to get recognition, display the combat flag on the fortress's flagpole.
+		-->
+		<set name="target" val="TARGET_FLAGPOLE"/>
+		<set name="skillType" val="TAKEFORTRESS"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="3319" levels="1" name="Divine Protection of Ring">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_gust;100"/>
+		</for>
+	</skill>
+	<skill id="3320" levels="1" name="Yellow Talisman of Mental Regeneration">
+		<!--
+			Done by Magister
+			Description: Increases MP regeneration when equipped with Talisman.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="referenceId" val="9949"/>
+		<set name="referenceConsume" val="1"/>
+		<for>
+			<mul order="0x30" stat="regMp" val="1.2"/>
+		</for>
+	</skill>
+	<skill id="3321" levels="1" name="Blue Talisman of Evasion">
+		<!--
+			Done by: Magister
+			Description: Use the power of the Talisman to increase the evasion rate and decrease the chance of receiving a critical attack.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="referenceId" val="9930"/>
+		<set name="referenceConsume" val="6"/>
+		<for>
+			<effect name="Buff" stackType="talisman" time="120">
+				<add order="0x40" stat="p_avoid" val="2"/>
+				<mul order="0x30" stat="critChanceRcpt" val="0.95"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3322" levels="1" name="Brass Bracelet">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="talismansLimit" val="1"/>
+		</for>
+	</skill>
+	<skill id="3323" levels="1" name="Bronze Bracelet">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="talismansLimit" val="2"/>
+		</for>
+	</skill>
+	<skill id="3324" levels="1" name="Steel Bracelet">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="talismansLimit" val="3"/>
+		</for>
+	</skill>
+	<skill id="3325" levels="1" name="Mithril Bracelet">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="talismansLimit" val="4"/>
+		</for>
+	</skill>
+	<skill id="3326" levels="1" name="Jewerly Bracelet">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="talismansLimit" val="5"/>
+		</for>
+	</skill>
+	<skill id="3327" levels="1" name="Oriharukon Bracelet">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="talismansLimit" val="6"/>
+		</for>
+	</skill>
+	<skill id="3328" levels="1" name="Double Stab">
+		<!--
+			Description: Stab with 2 cursed swords.
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="3329" levels="1" name="Power Slash">
+		<!--
+			Description: Attack twice with cursed sword.
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="3330" levels="1" name="Air Blade">
+		<!--
+			Description: Creates blade of air to attack enemies in front.
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="3331" levels="1" name="Enslave">
+		<!--
+			Description: Emits force to nearby people, giving them the curse of sword.
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="3332" levels="1" name="Orange Talisman - Hot Springs Recovery">
+		<!--
+			Done by Magister
+			Description: Create 1 Hot Springs Recovery with the power of the Talisman. Consumes 16 Soul Ores.
+		-->
+		<set name="itemConsumeId" val="1785"/>
+		<set name="itemConsumeCount" val="16"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="SummonItemId" val="10166"/>
+		<set name="SummonMinCount" val="1"/>
+		<set name="SummonMaxCount" val="1"/>
+		<set name="referenceId" val="9952"/>
+		<set name="referenceConsume" val="5"/>
+		<for />
+	</skill>
+	<skill id="3333" levels="1" name="Orange Talisman - A Grade Elixir of Life">
+		<!--
+			Done by Magister
+			Description: Create 1 Elixir of Life A with power of the Talisman. Consumes 50 Soul Ores.
+		-->
+		<set name="itemConsumeId" val="1785"/>
+		<set name="itemConsumeCount" val="50"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="SummonItemId" val="8626"/>
+		<set name="SummonMinCount" val="1"/>
+		<set name="SummonMaxCount" val="1"/>
+		<set name="referenceId" val="9953"/>
+		<set name="referenceConsume" val="5"/>
+		<for />
+	</skill>
+	<skill id="3334" levels="1" name="Orange Talisman - A Grade Elixir of Mental Strength">
+		<!--
+			Done by Magister
+			Description: Create 1 Elixir of Mental Strength A with the power of the Talisman. Consumes 57 Soul Ores.
+		-->
+		<set name="itemConsumeId" val="1785"/>
+		<set name="itemConsumeCount" val="57"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="SummonItemId" val="8632"/>
+		<set name="SummonMinCount" val="1"/>
+		<set name="SummonMaxCount" val="1"/>
+		<set name="referenceId" val="9954"/>
+		<set name="referenceConsume" val="6"/>
+		<for />
+	</skill>
+	<skill id="3335" levels="1" name="Transform Yeti">
+		<!--
+			Done by:	SYS
+			Last modify:	13.12.2007
+			Description: Transforms into Yeti.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="5437;1" />
+		<set name="npcId" val="13091"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="102"/>
+		</for>
+	</skill>
+	<skill id="3336" levels="1" name="Transform Buffalo">
+		<!--
+			Done by:	SYS
+			Last modify:	13.12.2007
+			Description: Transform into a Yeti. There is no effect from the Mystery Potion while in Yeti form.
+			Comment: Ошибка в описании? (Yeti - Buffalo)
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="5437;1" />
+		<set name="npcId" val="13092"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="103"/>
+		</for>
+	</skill>
+	<skill id="3337" levels="1" name="Transform Cutie Pig">
+		<!--
+			Done by:	SYS
+			Last modify:	13.12.2007
+			Description: Transforms into cute pig.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="5437;1" />
+		<set name="npcId" val="13093"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="104"/>
+		</for>
+	</skill>
+	<skill id="3338" levels="1" name="Shield Master">
+		<!-- Done by Magister -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="STR" val="2"/>
+			<add order="0x40" stat="CON" val="2"/>
+			<mul order="0x30" stat="p_physical_defence" val="1.0540"/>
+			<add order="0x40" stat="p_max_hp" val="492"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<mul order="0x30" stat="p_magical_defence" val="1.08"/>
+			<effect name="p_defence_trait" param="trait_sleep;80"/>
+		</for>
+	</skill>
+	<skill id="3339" levels="1" name="Bard">
+		<!-- Done by Magister	-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="CON" val="2"/>
+			<add order="0x40" stat="STR" val="2"/>
+			<mul order="0x30" stat="p_physical_defence" val="1.0540"/>
+			<add order="0x40" stat="p_max_hp" val="492"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<mul order="0x30" stat="mpConsum" val="0.80"/>
+			<mul order="0x30" stat="p_physical_attack" val="1.08"/>
+		</for>
+	</skill>
+	<skill id="3340" levels="1" name="Weapon Master">
+		<!-- Done by Magister -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="CON" val="2"/>
+			<add order="0x40" stat="STR" val="2"/>
+			<mul order="0x30" stat="p_physical_attack" val="1.0540"/>
+			<add order="0x40" stat="p_max_hp" val="492"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<mul order="0x30" stat="p_critical_damage_per" val="1.08"/>
+		</for>
+	</skill>
+	<skill id="3341" levels="1" name="Force Master">
+		<!-- Done by Magister -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="CON" val="2"/>
+			<add order="0x40" stat="STR" val="2"/>
+			<mul order="0x30" stat="p_physical_attack" val="1.0540"/>
+			<add order="0x40" stat="p_max_hp" val="492"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<mul order="0x30" stat="mpConsum" val="0.80"/>
+		</for>
+	</skill>
+	<skill id="3342" levels="1" name="Bow Master">
+		<!-- Done by Magister -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="CON" val="2"/>
+			<add order="0x40" stat="DEX" val="2"/>
+			<add order="0x40" stat="p_avoid" val="4"/>
+			<add order="0x40" stat="p_max_hp" val="321"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<mul order="0x30" stat="p_attack_speed" val="1.08"/>
+			<mul order="0x30" stat="mpConsum" val="0.80"/>
+		</for>
+	</skill>
+	<skill id="3343" levels="1" name="Dagger Master">
+		<!-- Done by Magister -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="CON" val="2"/>
+			<add order="0x40" stat="DEX" val="2"/>
+			<add order="0x40" stat="p_hit" val="4"/>
+			<add order="0x40" stat="p_max_hp" val="492"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<effect name="p_defence_trait" param="trait_hold;80"/>
+			<mul order="0x30" stat="p_attack_speed" val="1.08"/>
+		</for>
+	</skill>
+	<skill id="3344" levels="1" name="Wizard">
+		<!-- Done by Magister -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="INT" val="2"/>
+			<add order="0x40" stat="WIT" val="1"/>
+			<sub order="0x40" stat="MEN" val="2"/>
+			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
+			<add order="0x40" stat="p_max_mp" val="321"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<effect name="p_defence_trait" param="trait_shock;80"/>
+			<mul order="0x30" stat="p_magical_attack" val="1.15"/>
+		</for>
+	</skill>
+	<skill id="3345" levels="1" name="Summoner">
+		<!-- Done by Magister -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="INT" val="2"/>
+			<add order="0x40" stat="MEN" val="2"/>
+			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
+			<add order="0x40" stat="p_max_mp" val="321"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<mul order="0x30" stat="p_physical_attack" val="1.0540"/>
+			<mul order="0x30" stat="p_physical_defence" val="1.0540"/>
+		</for>
+	</skill>
+	<skill id="3346" levels="1" name="Healer">
+		<!-- Done by Magister -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="INT" val="2"/>
+			<add order="0x40" stat="MEN" val="2"/>
+			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
+			<add order="0x40" stat="p_max_mp" val="321"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<mul order="0x30" stat="hpEff" val="1.08"/>
+			<add order="0x40" stat="cancelRcpt" val="80"/>
+		</for>
+	</skill>
+	<skill id="3347" levels="1" name="Enchanter">
+		<!-- Done by Magister -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="INT" val="2"/>
+			<add order="0x40" stat="MEN" val="2"/>
+			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
+			<add order="0x40" stat="p_max_mp" val="321"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<mul order="0x30" stat="mpConsum" val="0.80"/>
+			<mul order="0x30" stat="concentration" val="0.8"/>
+		</for>
+	</skill>
+	<skill id="3348" levels="1" name="Dynasty Breast Plate">
+		<!--
+			Done by Magister
+			Type Armor: Dynasty Breast Plate - Shield Master
+			Str-2, Con+2, P. Def. +5.4%, Max HP +492 effect. Darkness resistance is increased +8, received Increased Heal +3%. Shock resistance is increased.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="STR" val="2"/>
+			<add order="0x40" stat="CON" val="2"/>
+			<mul order="0x30" stat="p_physical_defence" val="1.054"/>
+			<add order="0x40" stat="p_max_hp" val="492"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<mul order="0x30" stat="hpEff" val="1.03"/>
+			<effect name="p_defence_trait" param="trait_shock;10"/>
+		</for>
+	</skill>
+	<skill id="3349" levels="1" name="Dynasty Breast Plate">
+		<!--
+			Done by Magister
+			Last modify:	04.06.2010, SYS
+			Type Armor: Dynasty Breast Plate - Weapon Master
+			Con-2, Str+2, P. Atk +5.4%, p_max_hp +492. Dark Resistance +8, Critical Damage Chance.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="CON" val="2"/>
+			<add order="0x40" stat="STR" val="2"/>
+			<mul order="0x30" stat="p_physical_attack" val="1.054"/>
+			<add order="0x40" stat="p_max_hp" val="492"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<add order="0x40" stat="p_critical_rate_diff" val="24.6"/>
+			<add order="0x40" stat="p_critical_damage_diff" val="234"/>
+		</for>
+	</skill>
+	<skill id="3350" levels="1" name="Dynasty Breast Plate">
+		<!--
+			Done by Magister
+			Last modify:	04.06.2010, SYS
+			Type Armor: Dynasty Breast Plate - Force Master
+			Con -2, Str +2, P. Atk. +5.4%, Max. HP +492, resistance to Darkness attacks +8, decreases MP consumption for active skills.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="CON" val="2"/>
+			<add order="0x40" stat="STR" val="2"/>
+			<mul order="0x30" stat="p_physical_attack" val="1.054"/>
+			<add order="0x40" stat="p_max_hp" val="492"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<mul order="0x30" stat="mpConsumePhysical" val="0.95"/>
+		</for>
+	</skill>
+	<skill id="3351" levels="1" name="Dynasty Breast Plate">
+		<!--
+			Done by Magister
+			Type Armor: Dynasty Breast Plate - Bard
+			Con-2, Str+2, P. Def. +5.4%, Max HP +492 effect. Dark resistance +8. Decreased MP consumption when song and dance skills are used.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="CON" val="2"/>
+			<add order="0x40" stat="STR" val="2"/>
+			<mul order="0x30" stat="p_physical_attack" val="1.054"/>
+			<add order="0x40" stat="p_max_hp" val="492"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<mul order="0x30" stat="mpDanceConsume" val="0.95"/>
+		</for>
+	</skill>
+	<skill id="3352" levels="1" name="Dynasty Leather Armor">
+		<!--
+			Done by Magister
+			Type Armor: Dynasty Leather Armor - Dagger Master
+			Con-2, Dex+2, Evasion +4.3, Max HP +492 Effect. Dark resistance +8. Hold resistance and Atk. Spd. are increased.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="CON" val="2"/>
+			<add order="0x40" stat="DEX" val="2"/>
+			<add order="0x40" stat="p_avoid" val="4.3"/>
+			<add order="0x40" stat="p_max_hp" val="492"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<effect name="p_defence_trait" param="trait_hold;50"/>
+			<mul order="0x30" stat="p_attack_speed" val="1.0266"/>
+		</for>
+	</skill>
+	<skill id="3353" levels="1" name="Dynasty Leather Armor">
+		<!--
+			Done by Magister
+			Type Armor: Dynasty Leather Armor - Bow Master
+			Con-2, Dex+2, Accuracy +4.3, Max MP +321 Effect. Dark resistance +8. Atk. Spd. and MP recovery are increased.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="CON" val="2"/>
+			<add order="0x40" stat="DEX" val="2"/>
+			<add order="0x40" stat="p_hit" val="4.3"/>
+			<add order="0x40" stat="p_max_mp" val="321"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<mul order="0x30" stat="p_attack_speed" val="1.0266"/>
+			<add order="0x40" stat="regMp" val="1.72"/>
+		</for>
+	</skill>
+	<skill id="3354" levels="1" name="Dynasty Tunic">
+		<!--
+			Type Armor: Dynasty Tunic - Healer
+			Int-2, Men+2, Casting Spd. +15%, Max MP +321. Dark Resistance +8, increase amount of heal, increase magic cancel rate.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="INT" val="2"/>
+			<add order="0x40" stat="MEN" val="2"/>
+			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
+			<add order="0x40" stat="p_max_mp" val="321"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<add order="0x40" stat="healPower" val="20"/>
+			<mul order="0x30" stat="concentration" val="0.85"/>
+		</for>
+	</skill>
+	<skill id="3355" levels="1" name="Dynasty Tunic, Dynasty Leather Armor">
+		<!--
+			Этот скилл используется как для туники, так и для лайта
+			Type Armor: Dynasty Leather Armor - Enchanter
+			Int-2, Men+2, Casting Spd. +15%, Max MP +321. Dark Resistance +8, decrease MP consumption, decrease magic cancel rate.
+			Type Armor: Dynasty Tunic - Enchanter
+			Int-2, Men+2, Casting Spd. +15%, Max MP +321. Dark Resistance +8, decrease MP consumption, decrease magic cancel rate.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="INT" val="2"/>
+			<add order="0x40" stat="MEN" val="2"/>
+			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
+			<add order="0x40" stat="p_max_mp" val="321"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<mul order="0x30" stat="mpConsum" val="0.95"/>
+			<mul order="0x30" stat="concentration" val="0.85"/>
+		</for>
+	</skill>
+	<skill id="3356" levels="1" name="Dynasty Tunic">
+		<!--
+			Done by Magister
+			Type Armor: Dynasty Tunic - Summoner
+			Int-2, Men+2, Casting Spd. +15%, Max MP +321. Dark Resistance +8, increase P. Atk., P. Def.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="INT" val="2"/>
+			<add order="0x40" stat="MEN" val="2"/>
+			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
+			<add order="0x40" stat="p_max_mp" val="321"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<mul order="0x30" stat="p_physical_attack" val="1.054"/>
+			<mul order="0x30" stat="p_physical_defence" val="1.054"/>
+		</for>
+	</skill>
+	<skill id="3357" levels="1" name="Dynasty Tunic">
+		<!--
+			Done by Magister
+			Last modify:	03.06.2010, SYS
+			Type Armor: Dynasty Tunic - Wizard
+			Int+1, Wit+1, Men-2, Casting Spd. +15%, Max MP +321. Dark Resistance +8, increase stun resistance, increase M. Atk.
+			Comment: В описании ошибка, Int+1 должно быть.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="INT" val="1"/>
+			<add order="0x40" stat="WIT" val="1"/>
+			<sub order="0x40" stat="MEN" val="2"/>
+			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
+			<add order="0x40" stat="p_max_mp" val="321"/>
+			<sub order="0x40" stat="unholyRcpt" val="8"/>
+			<mul order="0x30" stat="p_magical_attack" val="1.054"/>
+		</for>
+	</skill>
+	<skill id="3358" levels="1" name="Flag Equip">
+		<!--
+			Done by:	Diamond
+			Description: Equip flag to decrease various battle abilities.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_speed" val="0.5"/>
+		</for>
+	</skill>
+	<skill id="3359" levels="1" name="Transform Native">
+		<!--
+			Done by:	SYS
+			Last modify:	29.01.2009
+			Description: Transforms into Native.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="5437;1" />
+		<set name="npcId" val="13090"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="300" val="101">
+				<mul order="0x30" stat="p_physical_attack" val="0.05"/>
+				<mul order="0x30" stat="p_magical_attack" val="0.05"/>
+				<mul order="0x30" stat="p_physical_defence" val="0.4"/>
+				<mul order="0x30" stat="p_magical_defence" val="0.4"/>
+				<sub order="0x40" stat="p_avoid" val="50"/>
+				<sub order="0x40" stat="p_hit" val="50"/>
+				<sub order="0x40" stat="p_speed" val="11"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3360" levels="1" name="Cheap Shot">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mpConsumePhysical" val="0.88"/>
+			<mul order="0x30" stat="mpConsum" val="0.88"/>
+		</for>
+	</skill>
+	<skill id="3361" levels="1" name="Summon Agathion - Fortress">
+		<!--
+			Done by SYS
+			Last modify:	12.12.2007
+			Description: Removes seal of Agathion.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="npcId" val="16029"/>
+		<set name="summonType" val="agathion"/>
+		<for />
+	</skill>
+	<skill id="3362" levels="1" name="Traits Strengthen Necklace">
+		<!--  Done by Diamond
+			Description: Increases the power of shock attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_shock;18"/>
+		</for>
+	</skill>
+	<skill id="3363" levels="1" name="Traits Strengthen Ring">
+		<!--  Done by Diamond
+			Description: Increases the power of shock attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_shock;8"/>
+		</for>
+	</skill>
+	<skill id="3364" levels="1" name="Traits Strengthen Earring">
+		<!--  Done by Diamond
+			Description: Increases the power of shock attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_shock;12"/>
+		</for>
+	</skill>
+	<skill id="3365" levels="1" name="Dynasty Resistance Necklace">
+		<!--  Done by Magister
+			Description: Increases resistance to shock attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_shock;18"/>
+		</for>
+	</skill>
+	<skill id="3366" levels="1" name="Dynasty Resistance Ring">
+		<!--  Done by Magister
+			Description: Increases resistance to shock attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_shock;8"/>
+		</for>
+	</skill>
+	<skill id="3367" levels="1" name="Dynasty Resistance Earring">
+		<!--  Done by Magister
+			Description: Increases resistance to shock attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_shock;12"/>
+		</for>
+	</skill>
+	<skill id="3368" levels="1" name="Traits Strengthen Necklace">
+		<!--  Done by Diamond
+			Description: Increases the power of bleed attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_bleed;11"/>
+		</for>
+	</skill>
+	<skill id="3369" levels="1" name="Traits Strengthen Ring">
+		<!--  Done by Diamond
+			Description: Increases the power of bleed attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_bleed;5"/>
+		</for>
+	</skill>
+	<skill id="3370" levels="1" name="Traits Strengthen Earring">
+		<!--  Done by Diamond
+			Description: Increases the power of bleed attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_bleed;8"/>
+		</for>
+	</skill>
+	<skill id="3371" levels="1" name="Dynasty Resistance Necklace">
+		<!--  Done by Magister
+			Description: Increases resistance to bleed attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bleed;11"/>
+		</for>
+	</skill>
+	<skill id="3372" levels="1" name="Dynasty Resistance Ring">
+		<!--  Done by Magister
+			Description: Increases resistance to bleed attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bleed;5"/>
+		</for>
+	</skill>
+	<skill id="3373" levels="1" name="Dynasty Resistance Earring">
+		<!--  Done by Magister
+			Description: Increases resistance to bleed attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bleed;8"/>
+		</for>
+	</skill>
+	<skill id="3374" levels="1" name="Traits Strengthen Necklace">
+		<!--  Done by Diamond
+			Description: Increases the power of poison attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_poison;16"/>
+		</for>
+	</skill>
+	<skill id="3375" levels="1" name="Traits Strengthen Ring">
+		<!--  Done by Diamond
+			Description: Increases the power of poison attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_poison;7"/>
+		</for>
+	</skill>
+	<skill id="3376" levels="1" name="Traits Strengthen Earring">
+		<!--  Done by Diamond
+			Description: Increases the power of poison attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_poison;11"/>
+		</for>
+	</skill>
+	<skill id="3377" levels="1" name="Dynasty Resistance Necklace">
+		<!--  Done by Magister
+			Description: Increases resistance to poison attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_poison;16"/>
+		</for>
+	</skill>
+	<skill id="3378" levels="1" name="Dynasty Resistance Ring">
+		<!--  Done by Magister
+			Description: Increases resistance to poison attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_poison;7"/>
+		</for>
+	</skill>
+	<skill id="3379" levels="1" name="Dynasty Resistance Earring">
+		<!--  Done by Magister
+			Description: Increases resistance to poison attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_poison;11"/>
+		</for>
+	</skill>
+	<skill id="3380" levels="1" name="Traits Strengthen Necklace">
+		<!--  Done by Diamond
+			Description: Increases the power of paralysis attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_paralyze;9"/>
+		</for>
+	</skill>
+	<skill id="3381" levels="1" name="Traits Strengthen Ring">
+		<!--  Done by Diamond
+			Description: Increases the power of paralysis attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_paralyze;4"/>
+		</for>
+	</skill>
+	<skill id="3382" levels="1" name="Traits Strengthen Earring">
+		<!--  Done by Diamond
+			Description: Increases the power of paralysis attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_paralyze;6"/>
+		</for>
+	</skill>
+	<skill id="3383" levels="1" name="Dynasty Resistance Necklace">
+		<!--  Done by Magister
+			Description: Increases resistance to paralysis attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_paralyze;9"/>
+		</for>
+	</skill>
+	<skill id="3384" levels="1" name="Dynasty Resistance Ring">
+		<!--  Done by Magister
+			Description: Increases resistance to paralysis attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_paralyze;4"/>
+		</for>
+	</skill>
+	<skill id="3385" levels="1" name="Dynasty Resistance Earring">
+		<!--  Done by Magister
+			Description: Increases resistance to paralysis attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_paralyze;6"/>
+		</for>
+	</skill>
+	<skill id="3386" levels="1" name="Traits Strengthen Necklace">
+		<!--  Done by Diamond
+			Description: Increases the power of hold attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_hold;18"/>
+		</for>
+	</skill>
+	<skill id="3387" levels="1" name="Traits Strengthen Ring">
+		<!--  Done by Diamond
+			Description: Increases the power of hold attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_hold;8"/>
+		</for>
+	</skill>
+	<skill id="3388" levels="1" name="Traits Strengthen Earring">
+		<!--  Done by Diamond
+			Description: Increases the power of hold attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_hold;12"/>
+		</for>
+	</skill>
+	<skill id="3389" levels="1" name="Dynasty Resistance Necklace">
+		<!--  Done by Magister
+			Description: Increases resistance to hold attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_hold;18"/>
+		</for>
+	</skill>
+	<skill id="3390" levels="1" name="Dynasty Resistance Ring">
+		<!--  Done by Magister
+			Description: Increases resistance to hold attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_hold;8"/>
+		</for>
+	</skill>
+	<skill id="3391" levels="1" name="Dynasty Resistance Earring">
+		<!--  Done by Magister
+			Description: Increases resistance to hold attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_hold;12"/>
+		</for>
+	</skill>
+	<skill id="3392" levels="1" name="Traits Strengthen Necklace">
+		<!--  Done by Diamond
+			Description: Increases the power of sleep attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_sleep;18"/>
+		</for>
+	</skill>
+	<skill id="3393" levels="1" name="Traits Strengthen Ring">
+		<!--  Done by Diamond
+			Description: Increases the power of sleep attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_sleep;8"/>
+		</for>
+	</skill>
+	<skill id="3394" levels="1" name="Traits Strengthen Earring">
+		<!--  Done by Diamond
+			Description: Increases the power of sleep attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_sleep;12"/>
+		</for>
+	</skill>
+	<skill id="3395" levels="1" name="Dynasty Resistance Necklace">
+		<!--  Done by Magister
+			Description: Increases resistance to sleep attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sleep;18"/>
+		</for>
+	</skill>
+	<skill id="3396" levels="1" name="Dynasty Resistance Ring">
+		<!--  Done by Magister
+			Description: Increases resistance to sleep attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sleep;8"/>
+		</for>
+	</skill>
+	<skill id="3397" levels="1" name="Dynasty Resistance Earring">
+		<!--  Done by Magister
+			Description: Increases resistance to sleep attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sleep;12"/>
+		</for>
+	</skill>
+	<skill id="3398" levels="1" name="Traits Strengthen Necklace">
+		<!--  Done by Diamond
+			Description: Increases the power of abnormal mental state attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_derangement;9"/>
+		</for>
+	</skill>
+	<skill id="3399" levels="1" name="Traits Strengthen Ring">
+		<!--  Done by Diamond
+			Description: Increases the power of abnormal mental state attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_attack_trait" param="trait_derangement;4"/>
+		</for>
+	</skill>
+</list>

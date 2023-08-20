@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="348" type="PARTY_ONE">
+		<name lang="en" val="An Arrogant Search"/>
+		<name lang="ru" val="Самонадеянный поиск"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="27184"/>	<!-- Angel Killer -->
+			<event type="MOBKILLED" val="20648"/>	<!-- Paliote -->
+			<event type="MOBKILLED" val="20647"/>	<!-- Yintzu -->
+			<event type="MOBKILLED" val="20859"/>	<!-- Guardian Angel -->
+			<event type="MOBKILLED" val="20860"/>	<!-- Seal Angel -->
+			<event type="MOBKILLED" val="20828"/>	<!-- Platinum Tribe Shaman -->
+			<event type="MOBKILLED" val="27182"/>	<!-- Ark Guardian Elberoth -->
+			<event type="MOBKILLED" val="20829"/>	<!-- Platinum Tribe Overlord -->
+			<event type="MOBKILLED" val="27183"/>	<!-- Ark Guardian Shadowfang -->
+			<event type="QUEST_START" val="30864"/>	<!-- Hanellin -->
+			<event type="QUEST_TALK" val="30864"/>	<!-- Hanellin -->
+			<event type="QUEST_TALK" val="30980"/>	<!-- Ark Guardians Corpse -->
+			<event type="QUEST_TALK" val="30144"/>	<!-- Harne -->
+			<event type="QUEST_TALK" val="30645"/>	<!-- Martien -->
+			<event type="QUEST_TALK" val="31001"/>	<!-- Claudia Athebaldt -->
+			<event type="QUEST_TALK" val="30977"/>	<!-- Holy Ark of Secrecy 1 -->
+			<event type="QUEST_TALK" val="30979"/>	<!-- Holy Ark of Secrecy 3 -->
+			<event type="QUEST_TALK" val="30978"/>	<!-- Holy Ark of Secrecy 2 -->
+			<item id="4288"/>	<!-- Hanellin's 1st Letter -->
+			<item id="4289"/>	<!-- Hanellin's 2nd Letter -->
+			<item id="4290"/>	<!-- Hanellin's 3rd Letter -->
+			<item id="4394"/>	<!-- Hanellin's White Flower -->
+			<item id="4395"/>	<!-- Hanellin's Red Flower -->
+			<item id="4396"/>	<!-- Hanellin's Yellow Flower -->
+			<item id="4397"/>	<!-- Book of Saint -->
+			<item id="4294"/>	<!-- White Fabric -->
+			<item id="4398"/>	<!-- Blood of Saint -->
+			<item id="4399"/>	<!-- Bough of Saint -->
+			<item id="4400"/>	<!-- White Fabric -->
+			<item id="5232"/>	<!-- White Fabric -->
+			<item id="4291"/>	<!-- 1st Key of Ark -->
+			<item id="4292"/>	<!-- 2nd Key of Ark -->
+			<item id="4293"/>	<!-- 3rd Key of Ark -->
+		</setting>
+	</quest>
+</quests>

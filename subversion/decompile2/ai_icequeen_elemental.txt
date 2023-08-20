@@ -1,0 +1,302 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_elemental : default_npc
+{
+parameter:
+	int	Skill_Blizzard = 458752001;
+	int	Skill_Suicide = 458752001;
+	int	TIMER_blizzard = 2314005;
+	int	TIMER_elemental_suicide = 2314006;
+	int	TIMER_elemental_killed = 2314007;
+	int	TIMER_suicide = 2314050;
+	
+	int	Dispel_Debuff_Prob = 7000;
+
+	int	debug_mode = 0;
+
+handler:
+	EventHandler CREATED(c0)
+	{
+		myself->ChangeMoveType(0);
+		if( ( ( myself + 1480 ) + 7552 ) == 144 )
+		{
+			myself->AddTimerEx(TIMER_blizzard,( 10 * 1000 ));
+		}
+		else
+		{
+			myself->AddTimerEx(TIMER_blizzard,( 20 * 1000 ));
+		}
+		( myself + 1128 ) = 0;
+		( myself + 1136 ) = 0;
+		if( ( ( myself + 1480 ) + 8232 ) != 0 )
+		{
+			c0 = gg->GetCreatureFromIndex(( ( myself + 1480 ) + 8232 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				myself->AddAttackDesire(c0,1,1000);
+			}
+		}
+	}
+
+	EventHandler ABNORMAL_STATUS_CHANGED(speller,skill_id,skill_level,skill_name_id,s0,i0)
+	{
+		if( ( ( myself + 1480 ) + 7552 ) == 139 )
+		{
+			if( skill_level > 0 )
+			{
+				if( myself->Skill_GetAbnormalType(6029313) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(6029313)) > 0 )
+				{
+					if( gg->Rand(10000) < Dispel_Debuff_Prob )
+					{
+						myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(6029313));
+					}
+				}
+				else if( myself->Skill_GetAbnormalType(91357185) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(91357185)) > 0 )
+				{
+					if( gg->Rand(10000) < Dispel_Debuff_Prob )
+					{
+						myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(91357185));
+					}
+				}
+				else if( myself->Skill_GetAbnormalType(18284545) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(18284545)) > 0 )
+				{
+					if( gg->Rand(10000) < Dispel_Debuff_Prob )
+					{
+						myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(18284545));
+					}
+				}
+				else if( myself->Skill_GetAbnormalType(24051713) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(24051713)) > 0 )
+				{
+					if( gg->Rand(10000) < Dispel_Debuff_Prob )
+					{
+						myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(24051713));
+					}
+				}
+				else if( myself->Skill_GetAbnormalType(76611585) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(76611585)) > 0 )
+				{
+					if( gg->Rand(10000) < Dispel_Debuff_Prob )
+					{
+						myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(76611585));
+					}
+				}
+				else if( myself->Skill_GetAbnormalType(78708737) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(78708737)) > 0 )
+				{
+					if( gg->Rand(10000) < Dispel_Debuff_Prob )
+					{
+						myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(78708737));
+					}
+				}
+				else if( myself->Skill_GetAbnormalType(26411009) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(26411009)) > 0 )
+				{
+					if( gg->Rand(10000) < Dispel_Debuff_Prob )
+					{
+						myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(26411009));
+					}
+				}
+			}
+		}
+		else if( ( ( myself + 1480 ) + 7552 ) == 144 )
+		{
+			if( skill_level > 0 )
+			{
+				if( myself->Skill_GetAbnormalType(6029313) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(6029313)) > 0 )
+				{
+					myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(6029313));
+				}
+				else if( myself->Skill_GetAbnormalType(91357185) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(91357185)) > 0 )
+				{
+					myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(91357185));
+				}
+				else if( myself->Skill_GetAbnormalType(18284545) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(18284545)) > 0 )
+				{
+					myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(18284545));
+				}
+				else if( myself->Skill_GetAbnormalType(24051713) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(24051713)) > 0 )
+				{
+					myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(24051713));
+				}
+				else if( myself->Skill_GetAbnormalType(76611585) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(76611585)) > 0 )
+				{
+					myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(76611585));
+				}
+				else if( myself->Skill_GetAbnormalType(78708737) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(78708737)) > 0 )
+				{
+					myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(78708737));
+				}
+				else if( myself->Skill_GetAbnormalType(26411009) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(26411009)) > 0 )
+				{
+					myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(26411009));
+				}
+			}
+		}
+	}
+
+	EventHandler ATTACKED(attacker,damage,skill_name_id)
+	{
+		if( attacker + 68 ) == || myself->IsInCategory(12,( attacker + 7380 )) == 1 || myself->IsInCategory(123,( attacker + 7380 )) == 1 )
+		{
+			if( ( ( myself + 1480 ) + 328 ) < ( ( ( myself + 1480 ) + 6696 ) / 20.000000 ) )
+			{
+				if( ( myself + 1128 ) == 0 )
+				{
+					( myself + 1128 ) = 1;
+					myself->AddTimerEx(TIMER_elemental_killed,1000);
+				}
+			}
+			else
+			{
+				myself->AddAttackDesire(attacker,1,( damage * 2 ));
+				if( skill_name_id != 0 )
+				{
+					if( myself->Skill_GetAbnormalType(1835009) == myself->Skill_GetAbnormalType(skill_name_id) )
+					{
+						if( debug_mode )
+						{
+							myself->Say("HATE");
+						}
+						myself->AddAttackDesire(attacker,1,( damage * 5 ));
+					}
+				}
+			}
+		}
+	}
+
+	EventHandler SEE_CREATURE(creature)
+	{
+		if( creature + 68 ) == || myself->IsInCategory(12,( creature + 7380 )) == 1 )
+		{
+			myself->AddAttackDesire(creature,1,100);
+		}
+	}
+
+	EventHandler TIMER_FIRED_EX(timer_id)
+	{
+		if( timer_id == TIMER_blizzard )
+		{
+			( myself + 1136 ) = ( ( myself + 1136 ) + 1 );
+			if( debug_mode )
+			{
+				myself->Say("timer_blizzard " + ( myself + 1136 ));
+			}
+			if( ( myself + 1128 ) == 0 )
+			{
+				if( ( ( myself + 1480 ) + 7552 ) == 144 )
+				{
+					if( ( myself + 1136 ) == 5 )
+					{
+						myself->AddTimerEx(TIMER_elemental_suicide,( 10 * 1000 ));
+					}
+					else if( myself->Skill_GetConsumeMP(Skill_Blizzard) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Skill_Blizzard) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Skill_Blizzard) == 0 )
+					{
+						myself->AddUseSkillDesire(( myself + 1480 ),Skill_Blizzard,0,1,1000000);
+					}
+					myself->AddTimerEx(TIMER_blizzard,( 10 * 1000 ));
+				}
+				else if( ( myself + 1136 ) == 2 )
+				{
+					myself->AddTimerEx(TIMER_elemental_suicide,( 20 * 1000 ));
+				}
+				else if( myself->Skill_GetConsumeMP(Skill_Blizzard) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Skill_Blizzard) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Skill_Blizzard) == 0 )
+				{
+					myself->AddUseSkillDesire(( myself + 1480 ),Skill_Blizzard,0,1,1000000);
+				}
+				myself->AddTimerEx(TIMER_blizzard,( 20 * 1000 ));
+			}
+		}
+		else if( timer_id == TIMER_elemental_suicide )
+		{
+			if( debug_mode )
+			{
+				myself->Say("timer_suicide");
+			}
+			myself->AddUseSkillDesire(( myself + 1480 ),Skill_Suicide,0,0,10000000000);
+		}
+		else if( timer_id == TIMER_elemental_killed )
+		{
+			if( ( myself + 1128 ) == 1 )
+			{
+				if( debug_mode )
+				{
+					myself->Say("i killed. use suicide");
+				}
+				myself->AddUseSkillDesire(( myself + 1480 ),Skill_Suicide,0,0,10000000000);
+			}
+		}
+		else if( timer_id == TIMER_suicide )
+		{
+		}
+	}
+
+	EventHandler USE_SKILL_FINISHED(target,skill_name_id,success)
+	{
+		if( skill_name_id == Skill_Suicide )
+		{
+			if( debug_mode )
+			{
+				myself->Say("skill_suicide finished");
+			}
+		}
+	}
+
+	EventHandler SCRIPT_EVENT(script_event_arg1)
+	{
+		if( script_event_arg1 == 23140020 )
+		{
+		}
+		else if( script_event_arg1 == 23140048 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("SCE_HOLD_DESIRE_ON");
+			}
+			( ( myself + 1480 ) + 8249 ) = 1;
+			( ( myself + 1480 ) + 8250 ) = 1;
+		}
+		else if( script_event_arg1 == 23140049 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("SCE_HOLD_DESIRE_OFF");
+			}
+			( ( myself + 1480 ) + 8249 ) = 0;
+			( ( myself + 1480 ) + 8250 ) = 0;
+		}
+	}
+
+	EventHandler DEBUG_AI(creature,reply)
+	{
+		if( reply == 1 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("¬Ü ¬©");
+				myself->AddUseSkillDesire(( myself + 1480 ),Skill_Blizzard,0,1,1000000);
+			}
+		}
+		else if( reply == 11 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("  t´ ­");
+			}
+		}
+		else if( reply == 2 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("Distfromme : " + myself->DistFromMe(creature));
+			}
+		}
+		else if( reply == 3 )
+		{
+			myself->AddUseSkillDesire(( myself + 1480 ),Skill_Suicide,0,0,10000000000);
+		}
+	}
+
+}

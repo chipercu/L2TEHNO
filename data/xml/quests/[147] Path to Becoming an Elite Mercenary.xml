@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="147" type="PARTY_ALL">
+		<name lang="en" val="Path to Becoming an Elite Mercenary"/>
+		<name lang="ru" val="Путь Опытного Наемника"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="36499"/>	<!-- Territory Catapult -->
+			<event type="MOBKILLED" val="36500"/>	<!-- Territory Catapult -->
+			<event type="MOBKILLED" val="36501"/>	<!-- Territory Catapult -->
+			<event type="MOBKILLED" val="36502"/>	<!-- Territory Catapult -->
+			<event type="MOBKILLED" val="36503"/>	<!-- Territory Catapult -->
+			<event type="MOBKILLED" val="36504"/>	<!-- Territory Catapult -->
+			<event type="MOBKILLED" val="36505"/>	<!-- Territory Catapult -->
+			<event type="MOBKILLED" val="36506"/>	<!-- Territory Catapult -->
+			<event type="MOBKILLED" val="36507"/>	<!-- Territory Catapult -->
+			<event type="QUEST_START" val="36481"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_START" val="36482"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_START" val="36483"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_START" val="36484"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_START" val="36485"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_START" val="36486"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_START" val="36487"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_START" val="36488"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_START" val="36489"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_TALK" val="36481"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_TALK" val="36482"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_TALK" val="36483"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_TALK" val="36484"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_TALK" val="36485"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_TALK" val="36486"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_TALK" val="36487"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_TALK" val="36488"/>	<!-- Mercenary Captain -->
+			<event type="QUEST_TALK" val="36489"/>	<!-- Mercenary Captain -->
+		</setting>
+	</quest>
+</quests>

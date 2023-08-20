@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="381" type="SOLO">
+		<name lang="en" val="Let's Become a Royal Member!"/>
+		<name lang="ru" val="Станьте Почетным Членом!"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="21018"/>	<!-- Ancient Gargoyle -->
+			<event type="MOBKILLED" val="27316"/>	<!-- Fallen Chieftain Vegus -->
+			<event type="QUEST_START" val="30232"/>	<!-- Sorint -->
+			<event type="QUEST_TALK" val="30232"/>	<!-- Sorint -->
+			<event type="QUEST_TALK" val="30090"/>	<!-- Sandra -->
+			<item id="5899"/>	<!-- Kail's Coin -->
+			<item id="5900"/>	<!-- Coin Collecting Album -->
+			<item id="7569"/>	<!-- Four-leaf Golden Clover Coin -->
+		</setting>
+	</quest>
+</quests>

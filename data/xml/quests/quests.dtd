@@ -1,0 +1,23 @@
+<!ELEMENT quests (quest)*>
+<!ELEMENT quest (name|setting)*>
+<!ATTLIST quest
+	id CDATA #REQUIRED
+	type CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+	lang CDATA #REQUIRED
+	val CDATA #REQUIRED>
+<!ELEMENT setting (rate|event|item)*>
+<!ELEMENT rate (#PCDATA)>
+<!ATTLIST rate
+	drop CDATA #IMPLIED
+	reward CDATA #IMPLIED
+	exp CDATA #IMPLIED
+	sp CDATA #IMPLIED>
+<!ELEMENT event (#PCDATA)>
+<!ATTLIST event
+	type CDATA #REQUIRED
+	val CDATA #REQUIRED>
+<!ELEMENT item (#PCDATA)>
+<!ATTLIST item
+	id CDATA #REQUIRED>

@@ -1,0 +1,1185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="4300" levels="1" name="Race">
+		<!-- 1: Giant -->
+		<!-- Skill not used -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4301" levels="1" name="Race">
+		<!-- 1: Bug -->
+		<!-- Skill not used -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4302" levels="1" name="Race">
+		<!-- 1: Fairy -->
+		<!-- Skill not used -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4303" levels="1" name="Strong Type">
+		<!-- Skill not used -->
+		<table name="#p_max_hp">2</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_max_hp" val="#p_max_hp"/>
+			<mul order="0x30" stat="ExpMultiplier" val="#p_max_hp"/>
+			<mul order="0x30" stat="SpMultiplier" val="#p_max_hp"/>
+		</for>
+	</skill>
+	<skill id="4304" levels="1" name="Strong Type">
+		<!-- Skill not used -->
+		<table name="#p_max_hp">3</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_max_hp" val="#p_max_hp"/>
+			<mul order="0x30" stat="ExpMultiplier" val="#p_max_hp"/>
+			<mul order="0x30" stat="SpMultiplier" val="#p_max_hp"/>
+		</for>
+	</skill>
+	<skill id="4305" levels="1" name="Strong Type">
+		<!-- Skill not used -->
+		<table name="#p_max_hp">4</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_max_hp" val="#p_max_hp"/>
+			<mul order="0x30" stat="ExpMultiplier" val="#p_max_hp"/>
+			<mul order="0x30" stat="SpMultiplier" val="#p_max_hp"/>
+		</for>
+	</skill>
+	<skill id="4306" levels="1" name="Strong Type">
+		<!-- Skill not used -->
+		<table name="#p_max_hp">5</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_max_hp" val="#p_max_hp"/>
+			<mul order="0x30" stat="ExpMultiplier" val="#p_max_hp"/>
+			<mul order="0x30" stat="SpMultiplier" val="#p_max_hp"/>
+		</for>
+	</skill>
+	<skill id="4307" levels="1" name="Strong Type">
+		<!-- Skill not used -->
+		<table name="#p_max_hp">6</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_max_hp" val="#p_max_hp"/>
+			<mul order="0x30" stat="ExpMultiplier" val="#p_max_hp"/>
+			<mul order="0x30" stat="SpMultiplier" val="#p_max_hp"/>
+		</for>
+	</skill>
+	<skill id="4308" levels="1" name="Strong Type">
+		<!-- Skill not used -->
+		<table name="#p_max_hp">7</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_max_hp" val="#p_max_hp"/>
+			<mul order="0x30" stat="ExpMultiplier" val="#p_max_hp"/>
+			<mul order="0x30" stat="SpMultiplier" val="#p_max_hp"/>
+		</for>
+	</skill>
+	<skill id="4309" levels="1" name="Strong Type">
+		<!-- Skill not used -->
+		<table name="#p_max_hp">8</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_max_hp" val="#p_max_hp"/>
+			<mul order="0x30" stat="ExpMultiplier" val="#p_max_hp"/>
+			<mul order="0x30" stat="SpMultiplier" val="#p_max_hp"/>
+		</for>
+	</skill>
+	<skill id="4310" levels="1" name="Strong Type">
+		<!-- Skill not used -->
+		<table name="#p_max_hp">9</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_max_hp" val="#p_max_hp"/>
+			<mul order="0x30" stat="ExpMultiplier" val="#p_max_hp"/>
+			<mul order="0x30" stat="SpMultiplier" val="#p_max_hp"/>
+		</for>
+	</skill>
+	<skill id="4311" levels="1" name="Feeble Type">
+		<!-- Skill not used -->
+		<table name="#p_max_hp">0.5</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_max_hp" val="#p_max_hp"/>
+			<mul order="0x30" stat="ExpMultiplier" val="#p_max_hp"/>
+			<mul order="0x30" stat="SpMultiplier" val="#p_max_hp"/>
+		</for>
+	</skill>
+	<skill id="4312" levels="1" name="Heavy Armor">
+		<table name="#p_physical_defence">20</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_physical_defence" val="#p_physical_defence">
+				<using armor="Heavy"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="4313" levels="1" name="Light Armor">
+		<table name="#p_physical_defence">20</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_physical_defence" val="#p_physical_defence">
+				<using armor="Light"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="4314" levels="12" name="BOSS Holy Light Burst">
+		<!-- Done by Diamond -->
+		<table name="#power">21.0 31.0 43.0 58.0 75.0 92.0 108.0 115.0 121.0 125.0 129.0 132.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="element" val="wind"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4315" levels="12" name="Hold">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="300"/>
+		<set name="skillType" val="ROOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="displayId" val="1201"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="p_block_move"/>
+		</for>
+	</skill>
+	<skill id="4316" levels="12" name="Boss Lilim Drain">
+		<table name="#power">26.0 31.0 36.0 41.0 46.0 51.0 56.0 61.0 66.0 71.0 76.0 81.0</table>
+		<set name="power" val="#power"/>
+		<set name="element" val="unholy"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="DRAIN"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="absorbPart" val="0.2"/>
+		<for />
+	</skill>
+	<skill id="4317" levels="5" name="Increase Rage Might">
+		<!-- Done by Magister -->
+		<table name="#Tab-p_avoid">3 4 5 6 7</table>
+		<table name="#rate">1.45 1.55 1.65 1.75 1.85</table>
+		<table name="#Tab-p_physical_defence">1.2 1.24 1.28 1.32 1.36</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="60">
+				<sub order="0x40" stat="p_avoid" val="#Tab-p_avoid"/>
+				<mul order="0x30" stat="p_physical_attack" val="#rate"/>
+				<div order="0x30" stat="p_physical_defence" val="#Tab-p_physical_defence"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4318" levels="1" name="Ultimate Buff">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="15">
+				<mul order="0x30" stat="p_physical_attack" val="1.83"/>
+				<add order="0x40" stat="p_hit" val="4"/>
+				<add order="0x40" stat="p_avoid" val="4"/>
+				<mul order="0x30" stat="p_physical_defence" val="1.83"/>
+				<mul order="0x30" stat="p_attack_speed" val="1.33"/>
+				<add order="0x40" stat="p_critical_rate_per" val="30"/>
+				<mul order="0x30" stat="p_magical_defence" val="5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4319" levels="1" name="Paralysis">
+		<!-- Done by Magister -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PARALYZE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="displayId" val="1170"/>
+		<for>
+			<effect name="Paralyze" stackType="paralyze" time="30"/>
+		</for>
+	</skill>
+	<skill id="4320" levels="12" name="Poison">
+		<table name="#t_hp">-16 -24 -32 -41 -50 -58 -63 -63 -66 -66 -68 -68</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="POISON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="t_hp" param="#t_hp;5;diff"/>
+		</for>
+	</skill>
+	<skill id="4321" levels="1" name="Decrease P. Def.">
+		<!-- Done by Magister -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="Buff" time="120">
+				<div order="0x30" stat="p_physical_defence" val="1.35"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4322" levels="1" name="Adventurer's Wind Walk">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isNewbie" val="true" />
+		<for>
+			<effect name="Buff" stackOrder="2" stackType="SpeedUp" time="3600">
+				<add order="0x40" stat="p_speed" val="33"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4323" levels="1" name="Adventurer's Shield">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isNewbie" val="true" />
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="p_physical_defence" time="3600">
+				<mul order="0x30" stat="p_physical_defence" val="1.15"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4324" levels="1" name="Adventurer's Bless the Body">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isNewbie" val="true" />
+		<for>
+			<effect name="Buff" stackOrder="6" stackType="hp_up" time="3600">
+				<mul order="0x30" stat="p_max_hp" val="1.35"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4325" levels="1" name="Adventurer's Vampiric Rage">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isNewbie" val="true" />
+		<for>
+			<effect name="Buff" stackOrder="9" stackType="vampRage" time="3600">
+				<add order="0x40" stat="absorbDam" val="9"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4326" levels="1" name="Adventurer's Regeneration">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isNewbie" val="true" />
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="hpregen" time="3600">
+				<mul order="0x30" stat="regHp" val="1.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4327" levels="1" name="Adventurer's Haste">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isNewbie" val="true" />
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="pAtkSpeedUp" time="3600">
+				<mul order="0x30" stat="p_attack_speed" val="1.15"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4328" levels="1" name="Adventurer's Bless the Soul">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isNewbie" val="true" />
+		<for>
+			<effect name="Buff" stackOrder="6" stackType="mp_up" time="3600">
+				<mul order="0x30" stat="p_max_mp" val="1.35"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4329" levels="1" name="Adventurer's Acumen">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isNewbie" val="true" />
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="mAtkSpeedUp" time="3600">
+				<mul order="0x30" stat="p_magic_speed" val="1.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4330" levels="1" name="Adventurer's Concentration">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isNewbie" val="true" />
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="concentration" time="3600">
+				<mul order="0x30" stat="concentration" val="0.82"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4331" levels="1" name="Adventurer's Empower">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isNewbie" val="true" />
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="p_magical_attack" time="3600">
+				<mul order="0x30" stat="p_magical_attack" val="1.55"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4332" levels="1" name="Mental Aegis">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sleep;100"/>
+			<effect name="p_defence_trait" param="trait_hold;100"/>
+			<effect name="p_defence_trait" param="trait_derangement;100"/>
+		</for>
+	</skill>
+	<skill id="4333" levels="6" name="Resist Dark Attack">
+		<!-- Done by Diamond -->
+		<table name="#Res">20 30 40 50 60 70</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="unholyRcpt" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4334" levels="1" name="SSQ Cancel">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCancel" val="true"/>
+		<for>
+			<effect name="DispelEffects">
+				<def name="dispelType" val="cancellation" />
+				<def name="cancelRate" val="30" />
+				<def name="negateCount" val="5" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="4335" levels="1" name="Sacred Attack">
+		<!-- Done by Magister -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="attackSacred" val="30"/>
+		</for>
+	</skill>
+	<skill id="4336" levels="5" name="Dark Attack Weak Point">
+		<table name="#Res">25 35 50 75 90</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="unholyRcpt" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4337" levels="6" name="Resist Sacred Attack">
+		<!-- Done by SYS -->
+		<table name="#Res">20 30 40 50 60 70</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="sacredRcpt" val="#Res"/>
+		</for>
+	</skill>
+    <skill id="4338" levels="1" name="Adventurer's Life Cubic">
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <!-- Summon-specific -->
+        <set name="npcId" val="3"/>
+        <set name="npcLevel" val="20"/>
+        <set name="expPenalty" val="0.0"/>
+        <set name="summonType" val="cubic"/>
+        <for/>
+    </skill>
+	<skill id="4339" levels="1" name="Mimir's Elixir">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4340" levels="1" name="Ultimate Buff, 2nd">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Grow" time="15">
+				<mul order="0x30" stat="p_physical_attack" val="5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4341" levels="1" name="Ultimate Buff, 3rd">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="15">
+				<mul order="0x30" stat="p_physical_defence" val="5"/>
+				<mul order="0x30" stat="p_magical_defence" val="5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4342" levels="2" name="Wind Walk">
+		<!-- Done by Magister: s_agit_wind_walk -->
+		<table name="#Tab-p_speed">20 33</table>
+		<table name="#level">1 2</table>
+		<table name="#time">1200 1200</table>
+		<set name="displayLevel" val="#level"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#level" stackType="SpeedUp" time="#time">
+				<add order="0x40" stat="p_speed" val="#Tab-p_speed"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4343" levels="3" name="Decrease Weight">
+		<!-- Done by Magister, edited by SYS -->
+		<table name="#Weight">3000 6000 9000</table>
+		<table name="#power">1 2 3</table>
+		<table name="#time">1200 1200 1200</table>
+		<set name="displayLevel" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="weight" time="#time">
+				<add order="0x40" stat="maxLoad" val="#Weight"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4344" levels="3" name="Shield">
+		<!-- Done by Magister: s_agit_shield -->
+		<table name="#Tab-p_physical_defence">1.08 1.12 1.15</table>
+		<table name="#power">1 2 3</table>
+		<table name="#time">1200 1200 1200</table>
+		<set name="displayLevel" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="p_physical_defence" time="#time">
+				<mul order="0x30" stat="p_physical_defence" val="#Tab-p_physical_defence"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4345" levels="3" name="Might">
+		<!-- Done by Magister: s_agit_might -->
+		<table name="#rate">1.08 1.12 1.15</table>
+		<table name="#power">1 2 3</table>
+		<table name="#time">1200 1200 1200</table>
+		<set name="displayLevel" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="p_physical_attack" time="#time">
+				<mul order="0x30" stat="p_physical_attack" val="#rate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4346" levels="4" name="Mental Shield">
+		<!-- Done by Magister: s_agit_mental_shield -->
+		<table name="#trait_derangement">50 60 70 80</table>
+		<table name="#power">1 2 3 4</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_derangement;#trait_derangement" stackOrder="#power" stackType="mental" time="1200"/>
+			<effect name="p_defence_trait" param="trait_sleep;#trait_derangement" stackOrder="#power" stackType="mental" time="1200"/>
+			<effect name="p_defence_trait" param="trait_hold;#trait_derangement" stackOrder="#power" stackType="mental" time="1200"/>
+		</for>
+	</skill>
+	<skill id="4347" levels="6" name="Blessed Body">
+		<!-- Done by Magister: s_agit_bless_the_body -->
+		<table name="#Tab-p_max_hp">1.1 1.15 1.2 1.25 1.3 1.35</table>
+		<table name="#power">1 2 3 4 5 6 1 2 3 4 5 6</table>
+		<table name="#time">1200 1200 1200 1200 1200 1200</table>
+		<set name="displayLevel" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="hp_up" time="#time">
+				<mul order="0x30" stat="p_max_hp" val="#Tab-p_max_hp"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4348" levels="6" name="Blessed Soul">
+		<!-- Done by Magister: s_agit_bless_the_soul -->
+		<table name="#Tab-p_max_mp">1.1 1.15 1.2 1.25 1.3 1.35</table>
+		<table name="#power">1 2 3 4 5 6</table>
+		<table name="#time">1200 1200 1200 1200 1200 1200</table>
+		<set name="displayLevel" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="mp_up" time="#time">
+				<mul order="0x30" stat="p_max_mp" val="#Tab-p_max_mp"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4349" levels="2" name="Magic Barrier">
+		<!-- Done by Magister: s_agit_magic_barrier -->
+		<table name="#Tab-p_magical_defence">1.23 1.3</table>
+		<table name="#power">2 3</table>
+		<table name="#display">1 2</table>
+		<table name="#time">1200 1200</table>
+		<set name="displayLevel" val="#display"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="MagicDefUp" time="#time">
+				<mul order="0x30" stat="p_magical_defence" val="#Tab-p_magical_defence"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4350" levels="4" name="Resist Stun">
+		<table name="#trait_shock">15 20 30 40</table>
+		<table name="#abnormal_lv">1 2 3 4</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_shock;#trait_shock" stackOrder="#abnormal_lv" stackType="resist_shock" time="1200"/>
+		</for>
+	</skill>
+	<skill id="4351" levels="6" name="Concentration">
+		<!-- Done by Magister: s_agit_concentration -->
+		<table name="#concentration">0.82 0.75 0.64 0.58 0.52 0.47</table>
+		<table name="#power">1 2 3 4 5 6</table>
+		<table name="#time">1200 1200 1200 1200 1200 1200</table>
+		<set name="displayLevel" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="concentration" time="#time">
+				<mul order="0x30" stat="concentration" val="#concentration"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4352" levels="2" name="Berserker Spirit">
+		<!-- Done by Magister: s_agit_berserker_spirit -->
+		<table name="#Tab-p_magical_attack">1.1 1.16</table>
+		<table name="#Tab-rate">1.05 1.08</table>
+		<table name="#p_physical_defence">0.95 0.92</table>
+		<table name="#p_magical_defence">0.88 0.85</table>
+		<table name="#p_speed">5 8</table>
+		<table name="#stack">1 2</table>
+		<table name="#p_avoid">2 4</table>
+		<table name="#time">1200 1200</table>
+		<set name="displayLevel" val="#stack"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#stack" stackType="berserk" time="#time">
+				<mul order="0x30" stat="p_magical_attack" val="#Tab-p_magical_attack"/>
+				<mul order="0x30" stat="p_physical_attack" val="#Tab-rate"/>
+				<mul order="0x30" stat="p_physical_defence" val="#p_physical_defence"/>
+				<mul order="0x30" stat="p_magical_defence" val="#p_magical_defence"/>
+				<mul order="0x30" stat="p_magic_speed" val="#Tab-rate"/>
+				<mul order="0x30" stat="p_attack_speed" val="#Tab-rate"/>
+				<add order="0x40" stat="p_speed" val="#p_speed"/>
+				<sub order="0x40" stat="p_avoid" val="#p_avoid"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4353" levels="6" name="Bless Shield">
+		<!-- Done by Magister: s_agit_bless_shield -->
+		<table name="#Tab-rShld">1.05 1.1 1.15 1.2 1.25 1.3</table>
+		<table name="#power">1 2 3 4 5 6</table>
+		<table name="#time">1200 1200 1200 1200 1200 1200</table>
+		<set name="displayLevel" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="shieldProbUp" time="#time">
+				<mul order="0x30" stat="rShld" val="#Tab-rShld"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4354" levels="4" name="Vampiric Rage">
+		<!-- Done by Magister: s_agit_vampiric_rage -->
+		<table name="#Tab-absorbDam">6 7 8 9</table>
+		<table name="#power">1 2 3 4</table>
+		<table name="#time">1200 1200 1200 1200</table>
+		<set name="displayLevel" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#Tab-absorbDam" stackType="vampRage" time="#time">
+				<add order="0x40" stat="absorbDam" val="#Tab-absorbDam"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4355" levels="3" name="Acumen">
+		<!-- Done by Magister: s_agit_arcane_acumen -->
+		<table name="#Tab-p_magic_speed">1.15 1.23 1.3</table>
+		<table name="#power">1 2 3</table>
+		<table name="#time">1200 1200 1200</table>
+		<set name="displayLevel" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="mAtkSpeedUp" time="#time">
+				<mul order="0x30" stat="p_magic_speed" val="#Tab-p_magic_speed"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4356" levels="3" name="Empower">
+		<!-- Done by Magister: s_agit_empower -->
+		<table name="#Tab-p_magical_attack">1.55 1.65 1.75</table>
+		<table name="#power">1 2 3</table>
+		<table name="#time">1200 1200 1200</table>
+		<set name="displayLevel" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="p_magical_attack" time="#time">
+				<mul order="0x30" stat="p_magical_attack" val="#Tab-p_magical_attack"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4357" levels="2" name="Haste">
+		<!-- Done by Magister: s_agit_haste -->
+		<table name="#Tab-p_attack_speed">1.15 1.33</table>
+		<table name="#power">1 2</table>
+		<table name="#time">1200 1200</table>
+		<set name="displayLevel" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="pAtkSpeedUp" time="#time">
+				<mul order="0x30" stat="p_attack_speed" val="#Tab-p_attack_speed"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4358" levels="3" name="Guidance">
+		<!-- Done by Magister: s_agit_guidance -->
+		<table name="#Tab-p_hit">2 3 4 </table>
+		<table name="#stackOrder">1 2 3</table>
+		<table name="#time">1200 1200 1200</table>
+		<set name="displayLevel" val="#stackOrder"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#stackOrder" stackType="accuracyUp" time="#time">
+				<add order="0x40" stat="p_hit" val="#Tab-p_hit"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4359" levels="3" name="Focus">
+		<!-- Done by Magister: s_agit_focus -->
+		<table name="#p_critical_rate_per">20 25 30</table>
+		<table name="#power">1 2 3</table>
+		<table name="#time">1200 1200 1200</table>
+		<set name="displayLevel" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="p_critical_rate_per" time="#time">
+				<add order="0x40" stat="p_critical_rate_per" val="#p_critical_rate_per"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4360" levels="3" name="Death Whisper">
+		<!-- Done by Magister: s_agit_death_whisper -->
+		<table name="#Tab-p_critical_damage_per">1.25 1.3 1.35</table>
+		<table name="#power">1 2 3</table>
+		<table name="#time">1200 1200 1200</table>
+		<set name="displayLevel" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="p_critical_damage_per" time="#time">
+				<mul order="0x30" stat="p_critical_damage_per" val="#Tab-p_critical_damage_per"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4361" levels="2" name="Curse of Destruction">
+		<table name="#value">0 -50</table>
+		<table name="#abnormal_lv">1 2</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sleep;#value" stackOrder="#abnormal_lv" stackType="ssq_town_curse" time="1200"/>
+			<effect name="p_defence_trait" param="trait_hold;#value" stackOrder="#abnormal_lv" stackType="ssq_town_curse" time="1200"/>
+			<effect name="p_defence_trait" param="trait_shock;#value" stackOrder="#abnormal_lv" stackType="ssq_town_curse" time="1200"/>
+			<effect name="Buff" stackOrder="#abnormal_lv" stackType="ssq_town_curse" time="1200">
+				<sub order="0x40" stat="p_hit" val="10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4362" levels="2" name="Curse of Destruction">
+		<table name="#value">0 -50</table>
+		<table name="#abnormal_lv">1 2</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="cancelable" val="false" /> 
+		<for>
+			<effect name="p_defence_trait" param="trait_sleep;#value" stackOrder="#abnormal_lv" stackType="ssq_town_curse" time="1200"/>
+			<effect name="p_defence_trait" param="trait_hold;#value" stackOrder="#abnormal_lv" stackType="ssq_town_curse" time="1200"/>
+			<effect name="p_defence_trait" param="trait_shock;#value" stackOrder="#abnormal_lv" stackType="ssq_town_curse" time="1200"/>
+			<effect name="Buff" stackOrder="#abnormal_lv" stackType="ssq_town_curse" time="1200">
+				<mul order="0x30" stat="p_magic_speed" val="0.70"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4363" levels="1" name="Curse of Destruction">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="cancelable" val="false" /> 
+		<for>
+			<effect name="Buff" time="1200">
+				<sub order="0x40" stat="p_hit" val="10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4364" levels="2" name="Blessing of Revelations">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="cancelable" val="false"/>
+		<for>
+			<effect name="p_defence_trait" time="1200" param="trait_bleed;25"/>
+			<effect name="p_defence_trait" time="1200" param="trait_poison;25"/>
+			<effect name="p_defence_trait" time="1200" param="trait_hold;25"/>
+			<effect name="p_defence_trait" time="1200" param="trait_shock;25"/>
+			<effect name="p_defence_trait" time="1200" param="trait_paralyze;25"/>
+			<effect name="Buff" time="1200">
+				<mul order="0x30" stat="maxLoad" val="1.25"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4365" levels="2" name="Blessing of Revelations">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="cancelable" val="false"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_hold;25" time="1200"/>
+			<effect name="p_defence_trait" param="trait_derangement;25" time="1200"/>
+			<effect name="Buff" time="1200">
+				<mul order="0x30" stat="concentration" val="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4366" levels="1" name="Blessing of Prophecy">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_defence_trait" time="1200" param="trait_bleed;25"/>
+			<effect name="p_defence_trait" time="1200" param="trait_poison;25"/>
+			<effect name="Buff" time="1200">
+				<mul order="0x30" stat="maxLoad" val="1.25"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4367" levels="1" name="Clan Hall Manager Buff">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4368" levels="1" name="Clan Hall Manager Buff">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4369" levels="1" name="Clan Hall Manager Buff">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4370" levels="1" name="Clan Hall Manager Buff">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4371" levels="1" name="Clan Hall Manager Buff">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4372" levels="1" name="Clan Hall Manager Buff">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4373" levels="1" name="Clan Hall Manager Buff">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4374" levels="1" name="Clan Hall Manager Buff">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4375" levels="1" name="Clan Hall Manager Buff">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4376" levels="1" name="Strong Resistance to P. Atk.">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_physical_defence" val="3"/>
+		</for>
+	</skill>
+	<skill id="4377" levels="12" name="Wield Temper">
+		<!-- Done by Magister -->
+		<table name="#power">46.0 105.0 219.0 417.0 722.0 1136.0 1626.0 1876.0 2112.0 2320.0 2487.0 2617.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4378" levels="12" name="NPC Self-Damage Shield">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="1200">
+				<add order="0x40" stat="reflectDam" val="20"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4379" levels="5" name="Resist Spear Weapons">
+		<table name="#Tab-poleRcpt">10 20 30 40 50</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_pole;#Tab-poleRcpt"/>
+		</for>
+	</skill>
+	<skill id="4380" levels="1" name="Arena: CP Recovery">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4381" levels="1" name="Magic Skill Block">
+		<!--
+			Description: Temporarily blocks the use of magic skills.
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4382" levels="12" name="Curse of Lake Ghost">
+		<!-- Done by SYS
+			Description: The Lake Ghost hexes you, temporarily increasing the size of your head.
+		-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect abnormal="bighead" name="Buff" stackType="BigHead" time="120"/>
+			<effect name="Buff" stackOrder="3" stackType="pDefDown" time="120">
+				<mul order="0x30" stat="p_physical_defence" val="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4383" levels="1" name="NPC Hate Stone">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="A1"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<!-- {{p_block_act};{p_block_getdamage;block_hp};{p_block_getdamage;block_mp};{p_block_buff};{p_block_debuff};{i_target_me;40};{p_hp_regen;{all};-100;per}} -->
+		<for>
+			<effect name="i_target_me" param="40"/>
+		</for>
+	</skill>
+	<skill id="4384" levels="1" name="Scapegoat's Grace">
+		<!--
+			Description: Temporarily provides protection against any de-buff that lowers P. Def.
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4385" levels="1" name="Scapegoat's Grace">
+		<!--
+			Description: Temporarily provides protection against any de-buff that lowers P. Def.
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4386" levels="1" name="Scapegoat's Grace">
+		<!--
+			Description: Temporarily provides protection against any de-buff that lowers P. Def.
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4387" levels="1" name="Scapegoat's Grace">
+		<!--
+			Description: Temporarily provides protection against any de-buff that lowers P. Def.
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4388" levels="5" name="Resist Paralysis Attacks">
+		<!-- Done by SYS -->
+		<table name="#power">15 30 50 70 90</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_paralyze;#power"/>
+		</for>
+	</skill>
+	<skill id="4389" levels="5" name="Resist Mental Attacks">
+		<!-- Done by SYS -->
+		<table name="#power">15 30 50 70 90</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_derangement;#power"/>
+		</for>
+	</skill>
+	<skill id="4390" levels="1" name="NPC Abnormal Immunity">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4391" levels="2" name="Wind Walk">
+		<table name="#Tab-p_speed">20 33</table>
+		<table name="#abnormal_lv">1 2</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#abnormal_lv" stackType="SpeedUp" time="3600">
+				<add order="0x40" stat="p_speed" val="#Tab-p_speed"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4392" levels="3" name="Shield">
+		<table name="#rate">1.08 1.12 1.15</table>
+		<table name="#abnormal_lv">1 2 3</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#abnormal_lv" stackType="p_physical_defence" time="3600">
+				<mul order="0x30" stat="p_physical_defence" val="#rate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4393" levels="3" name="Might">
+		<!-- Done by Diamond -->
+		<table name="#p_physical_attack">1.08 1.12 1.15</table>
+		<table name="#abnormal_lv">1 2 3</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#abnormal_lv" stackType="p_physical_attack" time="3600">
+				<mul order="0x30" stat="p_physical_attack" val="#p_physical_attack"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4394" levels="6" name="Blessed Body">
+		<!--
+			Done by Diamond
+			Description: Temporarily increases maximum HP.
+		-->
+		<table name="#Tab-p_max_hp">1.1 1.15 1.2 1.25 1.3 1.35</table>
+		<table name="#abnormal_lv">1 2 3 4 5 6</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#abnormal_lv" stackType="hp_up" time="3600">
+				<mul order="0x30" stat="p_max_hp" val="#Tab-p_max_hp"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4395" levels="6" name="Blessed Soul">
+		<!--
+			Done by Diamond
+			Description: Temporarily increases maximum MP.
+		-->
+		<table name="#Tab-p_max_mp">1.1 1.15 1.2 1.25 1.3 1.35</table>
+		<table name="#abnormal_lv">1 2 3 4 5 6</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#abnormal_lv" stackType="mp_up" time="3600">
+				<mul order="0x30" stat="p_max_mp" val="#Tab-p_max_mp"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4396" levels="2" name="Magic Barrier">
+		<!--
+			Done by Diamond
+			Description: Temporarily increases M. Def.
+		-->
+		<table name="#Tab-p_magical_defence">1.23 1.3</table>
+		<table name="#abnormal_lv">2 3</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#abnormal_lv" stackType="MagicDefUp" time="3600">
+				<mul order="0x30" stat="p_magical_defence" val="#Tab-p_magical_defence"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4397" levels="2" name="Berserker Spirit">
+		<!-- Done by Diamond -->
+		<table name="#p_physical_attack">1.05 1.08</table>
+		<table name="#p_attack_speed">1.05 1.08</table>
+		<table name="#p_magical_attack">1.1 1.16</table>
+		<table name="#p_magic_speed">1.05 1.08</table>
+		<table name="#p_speed">5 8</table>
+		<table name="#p_physical_defence">0.95 0.92</table>
+		<table name="#p_magical_defence">0.90 0.84</table>
+		<table name="#p_avoid">2 4</table>
+		<table name="#stackOrder">1 2</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#stackOrder" stackType="berserk" time="3600">
+				<mul order="0x30" stat="p_physical_attack" val="#p_physical_attack"/>
+				<mul order="0x30" stat="p_attack_speed" val="#p_attack_speed"/>
+				<mul order="0x30" stat="p_magical_attack" val="#p_magical_attack"/>
+				<mul order="0x30" stat="p_magic_speed" val="#p_magic_speed"/>
+				<sub order="0x40" stat="p_speed" val="#p_speed"/>
+				<mul order="0x30" stat="p_magical_defence" val="#p_magical_defence"/>
+				<mul order="0x30" stat="p_physical_defence" val="#p_physical_defence"/>
+				<sub order="0x40" stat="p_avoid" val="#p_avoid"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4398" levels="6" name="Bless Shield">
+		<!--
+			Done by Diamond
+			Description: Temporarily increases the probability of shield defense.
+		-->
+		<table name="#Tab-rShld">1.05 1.1 1.15 1.2 1.25 1.3</table>
+		<table name="#stackOrder">1 2 3 4 5 6</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#stackOrder" stackType="shieldProbUp" time="3600">
+				<mul order="0x30" stat="rShld" val="#Tab-rShld"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4399" levels="4" name="Vampiric Rage">
+		<!-- Done by Diamond -->
+		<table name="#Tab-absorbDam">6 7 8 9</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#Tab-absorbDam" stackType="vampRage" time="3600">
+				<add order="0x40" stat="absorbDam" val="#Tab-absorbDam"/>
+			</effect>
+		</for>
+	</skill>
+</list>

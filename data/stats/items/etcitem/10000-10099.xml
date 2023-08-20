@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="10000" name="Wind Potion" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_wind_potion_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+		<skills>
+			<skill id="2337" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="10001" name="Dark Potion" type="POTION">
+		<set name="icon" val="icon.etc_unholy_potion_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="2340" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="10002" name="Divine Potion" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_holy_potion_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+		<skills>
+			<skill id="2339" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="10012" name="Scorpion Poison Stinger" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="weight" val="20" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+		<set name="price" val="1000" />
+	</etcitem>
+	<etcitem id="10013" name="Race Stamp" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_hs_agit_war_joining_certificate_i00" />
+		<set name="weight" val="20" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="10014" name="Control Room Card" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_hs_agit_war_joining_certificate_i00" />
+		<set name="weight" val="20" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+		<set name="price" val="250" />
+	</etcitem>
+	<etcitem id="10015" name="Prison Gate Key" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_key_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="10016" name="Underground Warehouse Key" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_key_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="10017" name="Coral Treasure Chest Key" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_key_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="10025" name="Battle Manual - Fallen Arrow" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="75" />
+	</etcitem>
+	<etcitem id="10026" name="Battle Manual - Fallen Attack" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="75" />
+	</etcitem>
+	<etcitem id="10027" name="Battle Manual - Detect Trap" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="550" />
+	</etcitem>
+	<etcitem id="10028" name="Battle Manual - Defuse Trap" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="550" />
+	</etcitem>
+	<etcitem id="10029" name="Battle Manual - Dark Strike" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="700" />
+	</etcitem>
+	<etcitem id="10030" name="Battle Manual - Dark Smash" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2900" />
+	</etcitem>
+	<etcitem id="10031" name="Battle Manual - Double Thrust" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="700" />
+	</etcitem>
+	<etcitem id="10032" name="Battle Manual - Abyssal Blaze" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="700" />
+	</etcitem>
+	<etcitem id="10033" name="Battle Manual - Dark Explosion" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1150" />
+	</etcitem>
+	<etcitem id="10034" name="Battle Manual - Shift Target" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="3200" />
+	</etcitem>
+	<etcitem id="10035" name="Battle Manual - Change Life Stone" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2600" />
+	</etcitem>
+	<etcitem id="10036" name="Battle Manual - Spread Wing" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5000" />
+	</etcitem>
+	<etcitem id="10037" name="Battle Manual - Slashing Blade" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="3850" />
+	</etcitem>
+	<etcitem id="10038" name="Battle Manual - Crushing Pain" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7000" />
+	</etcitem>
+	<etcitem id="10039" name="Battle Manual - Contagion" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7950" />
+	</etcitem>
+	<etcitem id="10040" name="Battle Manual - Life to Soul" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="3200" />
+	</etcitem>
+	<etcitem id="10041" name="Battle Manual - Scorn" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="3700" />
+	</etcitem>
+	<etcitem id="10042" name="Battle Manual - Triple Thrust" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2900" />
+	</etcitem>
+	<etcitem id="10043" name="Battle Manual - Shining Edge" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4400" />
+	</etcitem>
+	<etcitem id="10044" name="Battle Manual - Checkmate" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5400" />
+	</etcitem>
+	<etcitem id="10045" name="Battle Manual - Soul of Pain" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="3000" />
+	</etcitem>
+	<etcitem id="10046" name="Battle Manual - Dark Flame" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="10047" name="Battle Manual - Annihilation Circle" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="6750" />
+	</etcitem>
+	<etcitem id="10048" name="Battle Manual - Curse of Divinity" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="8700" />
+	</etcitem>
+	<etcitem id="10049" name="Battle Manual - Steal Divinity" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="6000" />
+	</etcitem>
+	<etcitem id="10050" name="Battle Manual - Blink" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7200" />
+	</etcitem>
+	<etcitem id="10051" name="Battle Manual - Transfer Soul" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1150" />
+	</etcitem>
+	<etcitem id="10052" name="Battle Manual - Twin Shot" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2900" />
+	</etcitem>
+	<etcitem id="10053" name="Battle Manual - Rising Shot" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="3850" />
+	</etcitem>
+	<etcitem id="10054" name="Battle Manual - Deadly Roulette" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="8700" />
+	</etcitem>
+	<etcitem id="10055" name="Battle Manual - Temptation" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5400" />
+	</etcitem>
+	<etcitem id="10056" name="Battle Manual - Create Bio Potion" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="800" />
+	</etcitem>
+	<etcitem id="10057" name="Battle Manual - Create Dark Seed" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7700" />
+	</etcitem>
+	<etcitem id="10058" name="Battle Manual - Fire Trap" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1550" />
+	</etcitem>
+	<etcitem id="10059" name="Battle Manual - Poison Trap" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4800" />
+	</etcitem>
+	<etcitem id="10060" name="Battle Manual - Slow Trap" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5400" />
+	</etcitem>
+	<etcitem id="10061" name="Battle Manual - Flash Trap" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="6000" />
+	</etcitem>
+	<etcitem id="10062" name="Battle Manual - Binding Trap" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="3200" />
+	</etcitem>
+	<etcitem id="10063" name="Battle Manual - Quiver of Bolts - Grade A" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="8700" />
+	</etcitem>
+	<etcitem id="10064" name="Battle Manual - Quiver of Bolts - Grade S" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="10065" name="Battle Manual - Cure Dark Seed" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="8200" />
+	</etcitem>
+	<etcitem id="10066" name="Battle Manual - Decoy" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="3700" />
+	</etcitem>
+	<etcitem id="10067" name="Battle Manual - Chain Lightning" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10800" />
+	</etcitem>
+	<etcitem id="10068" name="Battle Manual - Enuma Elish" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="30000" />
+	</etcitem>
+	<etcitem id="10069" name="Battle Manual - Leopold" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="30000" />
+	</etcitem>
+	<etcitem id="10070" name="Battle Manual - Change Weapon" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="800" />
+	</etcitem>
+	<etcitem id="10071" name="Battle Manual - Quiver of Bolts - Grade B" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5400" />
+	</etcitem>
+	<etcitem id="10072" name="Battle Manual - Increase Power" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="250" />
+	</etcitem>
+	<etcitem id="10073" name="Battle Manual - Rapid Attack" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="250" />
+	</etcitem>
+	<etcitem id="10074" name="Battle Manual - Furious Soul" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1150" />
+	</etcitem>
+	<etcitem id="10075" name="Battle Manual - Sword Shield" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2600" />
+	</etcitem>
+	<etcitem id="10076" name="Battle Manual - Disarm" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2600" />
+	</etcitem>
+	<etcitem id="10077" name="Battle Manual - Fast Shot" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2050" />
+	</etcitem>
+	<etcitem id="10078" name="Battle Manual - Death Mark" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1150" />
+	</etcitem>
+	<etcitem id="10079" name="Battle Manual - Courage" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2600" />
+	</etcitem>
+	<etcitem id="10080" name="Battle Manual - Violent Temper" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4800" />
+	</etcitem>
+	<etcitem id="10081" name="Battle Manual - Soul to Empower" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="3700" />
+	</etcitem>
+	<etcitem id="10082" name="Battle Manual - Darkness Protection" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="6750" />
+	</etcitem>
+	<etcitem id="10083" name="Battle Manual - Dark Weapon" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4250" />
+	</etcitem>
+	<etcitem id="10084" name="Battle Manual - Pride of Kamael" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4800" />
+	</etcitem>
+	<etcitem id="10085" name="Battle Manual - Surrender To Unholy" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1250" />
+	</etcitem>
+	<etcitem id="10086" name="Battle Manual - Bleeding Shot" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="3350" />
+	</etcitem>
+	<etcitem id="10087" name="Battle Manual - Sharpshooting" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7200" />
+	</etcitem>
+	<etcitem id="10088" name="Battle Manual - Real Target" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="3200" />
+	</etcitem>
+	<etcitem id="10089" name="Battle Manual - Imbue Dark Seed" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="7700" />
+	</etcitem>
+	<etcitem id="10090" name="Battle Manual - Prahnah" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="30000" />
+	</etcitem>
+	<etcitem id="10091" name="Battle Manual - Final Form" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="40000" />
+	</etcitem>
+	<etcitem id="10092" name="Battle Manual - Shadow Bind" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5400" />
+	</etcitem>
+	<etcitem id="10093" name="Battle Manual - Voice Bind" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="6750" />
+	</etcitem>
+	<etcitem id="10094" name="Battle Manual - Rush" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2050" />
+	</etcitem>
+	<etcitem id="10095" name="Battle Manual - Storm Assault" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4400" />
+	</etcitem>
+	<etcitem id="10096" name="Battle Manual - Wing Assault" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="40000" />
+	</etcitem>
+	<etcitem id="10097" name="Battle Manual - Shoulder Charge" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2900" />
+	</etcitem>
+	<etcitem id="10098" name="Battle Manual - Blade Rush" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="6000" />
+	</etcitem>
+	<etcitem id="10099" name="Spellbook - Count of Fire" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="30000" />
+	</etcitem>
+</list>

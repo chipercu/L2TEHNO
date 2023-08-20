@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="1202" type="PARTY_ONE">
+		<name lang="en" val="Crystal Caverns"/>
+		<name lang="ru" val="Crystal Caverns"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOB_TARGETED_BY_SKILL" val="32274"/>	<!-- Oracle Guide -->
+			<event type="MOB_TARGETED_BY_SKILL" val="32275"/>	<!-- Oracle Guide -->
+			<event type="MOB_TARGETED_BY_SKILL" val="32276"/>	<!-- Oracle Guide -->
+			<event type="MOB_TARGETED_BY_SKILL" val="32277"/>	<!-- Oracle Guide -->
+			<event type="MOBKILLED" val="22275"/>	<!-- Gatekeeper Lohan -->
+			<event type="MOBKILLED" val="22277"/>	<!-- Gatekeeper Provo -->
+			<event type="MOBKILLED" val="22301"/>	<!-- Terod -->
+			<event type="MOBKILLED" val="22298"/>	<!-- Weylin -->
+			<event type="MOBKILLED" val="22299"/>	<!-- Dolph -->
+			<event type="MOBKILLED" val="25713"/>	<!-- Darnels -->
+			<event type="MOBKILLED" val="25714"/>	<!-- Kietch -->
+			<event type="MOBKILLED" val="22303"/>	<!-- Guardian of the Square -->
+			<event type="MOBKILLED" val="22304"/>	<!-- Guardian of the Emerald -->
+			<event type="MOBKILLED" val="22292"/>	<!-- Tourmaline -->
+			<event type="MOBKILLED" val="22307"/>	<!-- Kechis Captain -->
+			<event type="MOBKILLED" val="25716"/>	<!-- Tears -->
+			<event type="MOBKILLED" val="22313"/>	<!-- Garden Stakato -->
+			<event type="MOBKILLED" val="22314"/>	<!-- Garden Poison Moth -->
+			<event type="MOBKILLED" val="22315"/>	<!-- Garden Guard  -->
+			<event type="MOBKILLED" val="22316"/>	<!-- Garden Guardian Tree -->
+			<event type="MOBKILLED" val="22317"/>	<!-- Garden Castalia -->
+			<event type="MOBKILLED" val="22306"/>	<!-- Kechis Captain -->
+			<event type="MOBKILLED" val="22307"/>	<!-- Kechis Captain -->
+			<event type="MOBKILLED" val="22416"/>	<!-- Kechis Captain -->
+			<event type="MOBKILLED" val="22418"/>	<!-- Burning Iris -->
+			<event type="MOBKILLED" val="22419"/>	<!-- Flame Iris -->
+			<event type="MOBKILLED" val="22420"/>	<!-- Brimstone Iris -->
+			<event type="MOBKILLED" val="22293"/>	<!-- Spinel -->
+			<event type="MOBKILLED" val="22297"/>	<!-- Reef Golem -->
+			<event type="MOBKILLED" val="22281"/>	<!-- Plaza Caiman -->
+			<event type="MOBKILLED" val="22282"/>	<!-- Chromatic Detainee -->
+			<event type="MOBKILLED" val="22287"/>	<!-- Crystalline Unicorn -->
+			<event type="MOBKILLED" val="22288"/>	<!-- Emerald Boar -->
+			<event type="MOBKILLED" val="22289"/>	<!-- Plaza Helm -->
+			<event type="NPC_FIRST_TALK" val="32278"/>	<!-- Oracle Guide -->
+			<event type="NPC_FIRST_TALK" val="32274"/>	<!-- Oracle Guide -->
+			<event type="NPC_FIRST_TALK" val="32275"/>	<!-- Oracle Guide -->
+			<event type="NPC_FIRST_TALK" val="32276"/>	<!-- Oracle Guide -->
+			<event type="NPC_FIRST_TALK" val="32277"/>	<!-- Oracle Guide -->
+			<event type="QUEST_START" val="32281"/>	<!-- Oracle Guide -->
+			<event type="QUEST_START" val="32280"/>	<!-- Oracle Guide -->
+			<event type="QUEST_TALK" val="32281"/>	<!-- Oracle Guide -->
+			<event type="QUEST_TALK" val="32280"/>	<!-- Oracle Guide -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="4202" name="Chrono Cithara" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_chrono_cithara_i00" />
+		<set name="p_dam" val="1" />
+		<set name="m_dam" val="1" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+	</weapon>
+	<weapon id="4219" name="Dream Sword" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_knights_sword_i00" />
+		<set name="weight" val="1530" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="p_dam" val="31" />
+		<set name="m_dam" val="21" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="price" val="244000" />
+	</weapon>
+	<weapon id="4220" name="Dream Knife" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_assassin_knife_i00" />
+		<set name="weight" val="1110" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="p_dam" val="27" />
+		<set name="m_dam" val="21" />
+		<set name="atk_speed" val="433" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="price" val="244000" />
+	</weapon>
+	<weapon id="4221" name="Ubiquitous Axe" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_tomahawk_i00" />
+		<set name="weight" val="1850" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="p_dam" val="31" />
+		<set name="m_dam" val="21" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="price" val="244000" />
+	</weapon>
+	<weapon id="4222" name="Dream Shield" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_hoplon_i00" />
+		<set name="weight" val="1380" />
+		<set name="shield_def" val="90" />
+		<set name="shield_def_rate" val="20" />
+		<set name="price" val="9900" />
+		<set name="avoid_modify" val="-8" />
+	</weapon>
+	<weapon id="4223" name="Ubiquitous Shield" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_dwarven_chain_shield_i00" />
+		<set name="weight" val="1380" />
+		<set name="shield_def" val="90" />
+		<set name="shield_def_rate" val="20" />
+		<set name="price" val="9900" />
+		<set name="avoid_modify" val="-8" />
+	</weapon>
+	<weapon id="4233" name="Knuckle Duster" type="DUALFIST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_knuckle_dust_i00" />
+		<set name="weight" val="1490" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="C" />
+		<set name="crystal_count" val="884" />
+		<set name="p_dam" val="148" />
+		<set name="m_dam" val="68" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="price" val="2209700" />
+	</weapon>
+	<weapon id="4237" name="Hatchling's Level 65 Weapon" type="PET">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="HATCHLING" />
+		<set name="icon" val="icon.etc_pet_arms_i04" />
+		<set name="weight" val="100" />
+		<set name="p_dam" val="24" />
+		<set name="m_dam" val="32" />
+		<set name="atk_speed" val="304" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="price" val="2814000" />
+	</weapon>
+	<weapon id="4238" name="Hatchling's Level 75 Weapon" type="PET">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="HATCHLING" />
+		<set name="icon" val="icon.etc_pet_arms_i04" />
+		<set name="weight" val="100" />
+		<set name="p_dam" val="31" />
+		<set name="m_dam" val="43" />
+		<set name="atk_speed" val="304" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="price" val="9536500" />
+	</weapon>
+</list>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="458" type="SOLO">
+		<name lang="en" val="Perfect Form"/>
+		<name lang="ru" val="Сразить одним ударом"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="18879"/>	<!-- Full Grown Kookaburra -->
+			<event type="MOBKILLED" val="18878"/>	<!-- Full Grown Kookaburra -->
+			<event type="MOBKILLED" val="18886"/>	<!-- Full Grown Cougar -->
+			<event type="MOBKILLED" val="18885"/>	<!-- Full Grown Cougar -->
+			<event type="MOBKILLED" val="18893"/>	<!-- Full Grown Buffalo -->
+			<event type="MOBKILLED" val="18892"/>	<!-- Full Grown Buffalo -->
+			<event type="MOBKILLED" val="18900"/>	<!-- Full Grown Grendel -->
+			<event type="MOBKILLED" val="18899"/>	<!-- Full Grown Grendel -->
+			<event type="QUEST_START" val="32768"/>	<!-- Kelleyia -->
+			<event type="QUEST_TALK" val="32768"/>	<!-- Kelleyia -->
+		</setting>
+	</quest>
+</quests>

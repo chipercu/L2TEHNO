@@ -1,0 +1,1 @@
+ALTER TABLE `bonus` MODIFY COLUMN `bonus_value` float NOT NULL default 0;

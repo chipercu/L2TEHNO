@@ -1,0 +1,279 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_debug : default_npc
+{
+parameter:
+	string	MAKER_freya_1st = "schuttgart29_2314_100m1";
+	string	MAKER_freya_2nd = "schuttgart29_2314_102m1";
+	string	MAKER_freya_3rd = "schuttgart29_2314_104m1";
+	string	MAKER_freya_4th = "schuttgart29_2314_106m1";
+	string	MAKER_freya_ending = "schuttgart29_2314_108m1";
+	string	MAKER_ice_knight = "schuttgart29_2314_03m1";
+	string	MAKER_ice_castle = "schuttgart29_2314_06m1";
+	string	AREA_effect_1s_01 = "23_14_icequeen_1s_01";
+	string	AREA_effect_1s_02 = "23_14_icequeen_1s_02";
+	string	AREA_effect_1s_03 = "23_14_icequeen_1s_03";
+	string	AREA_effect_1s_04 = "23_14_icequeen_1s_04";
+	string	AREA_effect_1s_05 = "23_14_icequeen_1s_05";
+	string	AREA_effect_1s_06 = "23_14_icequeen_1s_06";
+	string	AREA_effect_1s_07 = "23_14_icequeen_1s_07";
+	string	AREA_effect_1s_08 = "23_14_icequeen_1s_08";
+	string	AREA_effect_1s_09 = "23_14_icequeen_1s_09";
+	string	AREA_effect_1s_10 = "23_14_icequeen_1s_10";
+	string	AREA_effect_1s_11 = "23_14_icequeen_1s_11";
+	string	AREA_effect_1s_12 = "23_14_icequeen_1s_12";
+	string	AREA_effect_1s_13 = "23_14_icequeen_1s_13";
+	string	AREA_effect_1s_14 = "23_14_icequeen_1s_14";
+	string	AREA_effect_1s_15 = "23_14_icequeen_1s_15";
+	string	AREA_effect_1s_16 = "23_14_icequeen_1s_16";
+	string	AREA_effect_1s_17 = "23_14_icequeen_1s_17";
+	string	AREA_effect_1s_18 = "23_14_icequeen_1s_18";
+	string	AREA_effect_1s_19 = "23_14_icequeen_1s_19";
+	string	AREA_effect_1s_20 = "23_14_icequeen_1s_20";
+	string	AREA_effect_1s_21 = "23_14_icequeen_1s_21";
+	string	AREA_effect_2s_01 = "23_14_icequeen_2s_01";
+	string	AREA_effect_2s_02 = "23_14_icequeen_2s_02";
+	string	AREA_effect_2s_03 = "23_14_icequeen_2s_03";
+	string	AREA_effect_2s_04 = "23_14_icequeen_2s_04";
+	string	AREA_effect_2s_05 = "23_14_icequeen_2s_05";
+	string	AREA_effect_2s_06 = "23_14_icequeen_2s_06";
+	string	AREA_effect_2s_07 = "23_14_icequeen_2s_07";
+	string	AREA_effect_2s_08 = "23_14_icequeen_2s_08";
+	int	debug_mode = 0;
+
+handler:
+	EventHandler CREATED()
+	{
+		myself->ChangeNickName(( myself + 1480 ),"debugnpc");
+		myself->ChangeMasterName(( myself + 1480 ),"0D…%Xt$…");
+	}
+
+	EventHandler TALKED(talker)
+	{
+		if( debug_mode )
+		{
+			myself->Say("Debug© NPC …Èä.");
+			myself->Say("11 : KNIGHT \È¬ ¤ð");
+			myself->Say("12 : KNIGHT PÈ¬ ¤ð");
+			myself->Say("21 : ZoneInfo : ÀÀ½");
+			myself->Say("22 : ZoneInfo : Ð˜À");
+			myself->Say("30 : UI TIMER TEST - ON");
+			myself->Say("31 : UI TIMER TEST - OFF");
+			myself->Say("40 : no damage mode - ON");
+			myself->Say("41 : no damage mode - OFF");
+			myself->Say("1015 : SCENE ID 15 - $Ý");
+			myself->Say("1016 : SCENE ID 16 - P1 -> P2");
+			myself->Say("1017 : SCENE ID 17 - P2 -> P3");
+			myself->Say("1018 : SCENE ID 18 - P3 -> P4");
+			myself->Say("1019 : SCENE ID 19 - Ô) #1");
+			myself->Say("1020 : SCENE ID 20 - Ô) #2");
+			myself->Say("1021 : SCENE ID 21 -  (0");
+			myself->Say("1022 : SCENE ID 22 - | (0");
+			myself->Say("1023 : SCENE ID 23 - ô¤ ¤ð");
+			myself->Say("51 : ¬K èô L¤¸");
+		}
+	}
+
+	EventHandler ATTACKED(attacker)
+	{
+		if( ( attacker + 68 ) == 1 )
+		{
+			myself->AddAttackDesire(attacker,1,1000000);
+		}
+	}
+
+	EventHandler DEBUG_AI(creature,reply,i0,maker0)
+	{
+		if( reply == 0 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("Debug© NPC …Èä.");
+				myself->Say("11 : KNIGHT \È¬ ¤ð");
+				myself->Say("12 : KNIGHT PÈ¬ ¤ð");
+				myself->Say("21 : ZoneInfo : ÀÀ½");
+				myself->Say("22 : ZoneInfo : Ð˜À");
+				myself->Say("30 : UI TIMER TEST - ON");
+				myself->Say("31 : UI TIMER TEST - OFF");
+				myself->Say("40 : no damage mode - ON");
+				myself->Say("41 : no damage mode - OFF");
+				myself->Say("1015 : SCENE ID 15 - $Ý");
+				myself->Say("1016 : SCENE ID 16 - P1 -> P2");
+				myself->Say("1017 : SCENE ID 17 - P2 -> P3");
+				myself->Say("1018 : SCENE ID 18 - P3 -> P4");
+				myself->Say("1019 : SCENE ID 19 - Ô) #1");
+				myself->Say("1020 : SCENE ID 20 - Ô) #2");
+				myself->Say("1021 : SCENE ID 21 -  (0");
+				myself->Say("1022 : SCENE ID 22 - | (0");
+				myself->Say("1023 : SCENE ID 23 - ô¤ ¤ð");
+			}
+		}
+		if( reply == 11 )
+		{
+			myself->Say("11");
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_knight);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,23140015,1,0);
+			}
+		}
+		else if( reply == 12 )
+		{
+			myself->Say("12");
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_knight);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,23140015,2,0);
+			}
+		}
+		else if( reply == 21 )
+		{
+			myself->Say("21 : ZoneInfo : ÀÀ½");
+			myself->ChangeZoneInfo(creature,0,2);
+			i0 = myself->InstantZone_GetId();
+			gg->Area_SetOnOffEx(AREA_effect_1s_01,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_02,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_03,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_04,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_05,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_06,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_07,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_08,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_09,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_10,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_11,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_12,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_13,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_14,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_15,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_16,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_17,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_18,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_19,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_20,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_21,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_01,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_02,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_03,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_04,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_06,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_07,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_08,1,i0);
+		}
+		else if( reply == 22 )
+		{
+			myself->Say("22 : ZoneInfo : Ð˜À");
+			myself->ChangeZoneInfo(creature,0,1);
+			i0 = myself->InstantZone_GetId();
+			gg->Area_SetOnOffEx(AREA_effect_1s_01,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_02,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_03,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_04,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_05,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_06,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_07,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_08,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_09,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_10,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_11,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_12,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_13,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_14,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_15,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_16,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_17,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_18,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_19,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_20,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_21,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_01,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_02,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_03,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_04,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_06,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_07,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_08,0,i0);
+		}
+		else if( reply == 30 )
+		{
+			myself->Say("30 : ON UI TIMER");
+			gg->SendUIEvent(creature,0,0,0,"0","1","0",gg->MakeFString(1801090,"","","","",""),"0","0");
+		}
+		else if( reply == 31 )
+		{
+			myself->Say("31 : OFF UI TIMER");
+			gg->SendUIEvent(creature,1,0,0,"0","1","0",gg->MakeFString(1801090,"","","","",""),"0","0");
+		}
+		else if( reply == 40 )
+		{
+			myself->Say("40 : no damage mode - on");
+			( ( myself + 1480 ) + 8249 ) = 1;
+			( ( myself + 1480 ) + 8250 ) = 1;
+		}
+		else if( reply == 41 )
+		{
+			myself->Say("41 : no damage mode - off");
+			( ( myself + 1480 ) + 8249 ) = 0;
+			( ( myself + 1480 ) + 8250 ) = 0;
+		}
+		else if( reply == 1015 )
+		{
+			myself->Say("1015");
+			myself->StartScenePlayerAround(( myself + 1480 ),15,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+		}
+		else if( reply == 1016 )
+		{
+			myself->Say("1016");
+			myself->StartScenePlayerAround(( myself + 1480 ),16,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+		}
+		else if( reply == 1017 )
+		{
+			myself->Say("1017");
+			myself->StartScenePlayerAround(( myself + 1480 ),17,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+		}
+		else if( reply == 1018 )
+		{
+			myself->Say("1018");
+			myself->StartScenePlayerAround(( myself + 1480 ),18,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+		}
+		else if( reply == 1019 )
+		{
+			myself->Say("1019");
+			myself->StartScenePlayerAround(( myself + 1480 ),19,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+		}
+		else if( reply == 1020 )
+		{
+			myself->Say("1020");
+			myself->StartScenePlayerAround(( myself + 1480 ),20,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+		}
+		else if( reply == 1021 )
+		{
+			myself->Say("1021");
+			myself->StartScenePlayerAround(( myself + 1480 ),21,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+		}
+		else if( reply == 1022 )
+		{
+			myself->Say("1022");
+			myself->StartScenePlayerAround(( myself + 1480 ),22,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+		}
+		else if( reply == 1023 )
+		{
+			myself->Say("1023");
+			myself->StartScenePlayerAround(( myself + 1480 ),23,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+		}
+		else if( reply == 51 )
+		{
+			myself->Say("51");
+			myself->BroadcastScriptEvent(23141234,0,1000);
+		}
+	}
+
+}

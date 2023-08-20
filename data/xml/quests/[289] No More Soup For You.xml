@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="289" type="SOLO">
+		<name lang="en" val="No More Soup For You"/>
+		<name lang="ru" val="Все вкусное - мое"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="18908"/>	<!-- Sel Mahum Chef -->
+			<event type="MOBKILLED" val="22779"/>	<!-- Sel Mahum Escort Guard -->
+			<event type="MOBKILLED" val="22786"/>	<!-- Sel Mahum Squad Leader -->
+			<event type="MOBKILLED" val="22787"/>	<!-- Sel Mahum Squad Leader -->
+			<event type="MOBKILLED" val="22788"/>	<!-- Sel Mahum Squad Leader -->
+			<event type="QUEST_START" val="30200"/>	<!-- Stan -->
+			<event type="QUEST_TALK" val="30200"/>	<!-- Stan -->
+			<item id="15712"/>	<!-- Full Barrel of Soup -->
+			<item id="15713"/>	<!-- Empty Soup Barrel -->
+			<item id="15507"/>	<!-- Foul Fruit -->
+		</setting>
+	</quest>
+</quests>

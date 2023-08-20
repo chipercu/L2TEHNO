@@ -1,0 +1,42 @@
+<title>Меню Телепортации</title>
+<center>
+<table width=265>
+  <tr>
+    <td width=50>
+      <button value="Назад" action="bypass -h admin_admin" width=50 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+    </td>
+    <td width=165>
+    </td>
+    <td width=50>
+      <button value="Меню" action="bypass -h admin_admin" width=50 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+    </td>
+  </tr>
+</table>
+<img src="L2UI.SquareWhite" width=260 height=1><br>
+<button value="Сохраненные телепорты" action="bypass -h admin_tp_list" width=265 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+<button value="Города" action="bypass -h admin_show_html tele/towns.htm" width=265 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
+<button value="Замки" action="bypass -h admin_show_html tele/castles.htm" width=265 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
+<button value="Клан Холлы" action="bypass -h admin_show_html tele/clanhols.htm" width=265 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
+<button value="Крепости" action="bypass -h admin_show_html tele/fortress.htm" width=265 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
+<button value="Территории городов" action="bypass -h admin_show_html tele/areas.htm" width=265 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
+<button value="Другие Локации" action="bypass -h admin_show_html tele/other.htm" width=265 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
+<button value="Арены" action="bypass -h admin_show_html tele/arenas.htm" width=265 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
+<button value="Рэйд Босы" action="bypass -h admin_show_html tele/raid.htm" width=265 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
+<button value="Инстансы" action="bypass -h admin_show_html tele/instances.htm" width=265 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
+<button value="7 Печатей" action="bypass -h admin_show_html tele/7signs.htm" width=265 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br1>
+<img src="L2UI.SquareWhite" width=260 height=1><br>
+*Переместиться в координаты*<br>
+<table>
+  <tr>
+    <td><center>X:</center></td>
+    <td><center>Y:</center></td>
+    <td><center>Z:</center></td>
+  </tr>
+  <tr>
+    <td><edit var="cord_x" width=60></td>
+    <td><edit var="cord_y" width=60></td>
+    <td><edit var="cord_z" width=60></td>
+  </tr>
+</table><br>
+<button value="Переместиться" action="bypass -h admin_move_to $cord_x $cord_y $cord_z" width=200 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+</center>

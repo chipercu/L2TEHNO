@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="9001" levels="99" name="INT">
+		<table name="#lvl">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="LUCK"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<!-- cannot be learned, given -->
+		<set name="canLearn" val="" />
+		<for>
+			<add order="0x10" stat="INT" val="#lvl"/>
+		</for>
+	</skill>
+	<skill id="9002" levels="99" name="WIT">
+		<table name="#lvl">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="LUCK"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<!-- cannot be learned, given -->
+		<set name="canLearn" val="" />
+		<for>
+			<add order="0x10" stat="WIT" val="#lvl"/>
+		</for>
+	</skill>
+	<skill id="9003" levels="99" name="MEN">
+		<table name="#lvl">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="LUCK"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<!-- cannot be learned, given -->
+		<set name="canLearn" val="" />
+		<for>
+			<add order="0x10" stat="MEN" val="#lvl"/>
+		</for>
+	</skill>
+	<skill id="9004" levels="99" name="CON">
+		<table name="#lvl">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="LUCK"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<!-- cannot be learned, given -->
+		<set name="canLearn" val="" />
+		<for>
+			<add order="0x10" stat="CON" val="#lvl"/>
+		</for>
+	</skill>
+	<skill id="9005" levels="99" name="DEX">
+		<table name="#lvl">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="LUCK"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<!-- cannot be learned, given -->
+		<set name="canLearn" val="" />
+		<for>
+			<add order="0x10" stat="DEX" val="#lvl"/>
+		</for>
+	</skill>
+	<skill id="9006" levels="99" name="STR">
+		<table name="#lvl">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="LUCK"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<!-- cannot be learned, given -->
+		<set name="canLearn" val="" />
+		<for>
+			<add order="0x10" stat="STR" val="#lvl"/>
+		</for>
+	</skill>
+	<skill id="9007" levels="1" name="Mana potion">
+		<set name="itemConsumeId" val="728"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="power" val="100"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="MANAHEAL"/>
+		<set name="staticManaHeal" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9008" levels="4" name="Mental Shield">
+		<table name="#lvl">1 2 3 4</table>
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<triggers>
+			<trigger id="4346" level="#lvl" type="SUPPORT_MAGICAL_SKILL_USE" chance="50"/>
+		</triggers>
+	</skill>
+	<skill id="9009" levels="3" name="Regeneration">
+		<!-- Done by Diamond -->
+		<table name="#lvl">1 2 3</table>
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<triggers>
+			<trigger id="1044" level="#lvl" type="SUPPORT_MAGICAL_SKILL_USE" chance="30"/>
+		</triggers>
+	</skill>
+	<skill id="9010" levels="6" name="Blessed Body">
+		<table name="#lvl">1 2 3 4 5 6</table>
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<triggers>
+			<trigger id="1045" level="#lvl" type="SUPPORT_MAGICAL_SKILL_USE" chance="20"/>
+		</triggers>
+	</skill>
+	<skill id="9011" levels="3" name="Focus">
+		<table name="#lvl">1 2 3</table>
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<triggers>
+			<trigger id="1077" level="#lvl" type="SUPPORT_MAGICAL_SKILL_USE" chance="20"/>
+		</triggers>
+	</skill>
+	<skill id="9012" levels="6" name="Curse: Weakness">
+		<table name="#p_physical_attack">1 2 3 4 5 6</table>
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<triggers>
+			<trigger id="1164" level="#p_physical_attack" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="10"/>
+		</triggers>
+	</skill>
+	<skill id="9013" levels="7" name="Curse: Poison">
+		<table name="#lvl">1 2 3 4 5 6 7</table>
+		<table name="#Chance">6 7 8 8</table>
+		<table name="#pvpDmg">1.00 1.00 1.00 1.05</table>
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="POISON" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<triggers>
+			<trigger id="1168" level="#lvl" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="#Chance"/>
+		</triggers>
+		<for>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="#pvpDmg"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="#pvpDmg"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="#pvpDmg"/>
+		</for>
+	</skill>
+	<skill id="9014" levels="15" name="Curse Chaos">
+		<table name="#lvl">1 2</table>
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<triggers>
+			<trigger id="1222" level="#lvl" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="10"/>
+		</triggers>
+	</skill>
+	<skill id="9015" levels="1" name="Death Whisper" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Increases critical attack influence by 35% for 60 minutes.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9016" levels="1" name="Guidance" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Increases accuracy by 4 for 60 minutes.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9017" levels="1" name="Blessed Shield" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Increases shield defense likelihood by 30% for 60 minutes.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9018" levels="1" name="Blessed Body" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Increases maximum HP by 35% for 60 minutes.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9019" levels="1" name="Haste" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Increases Atk. Spd. by 33% for 60 minutes.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9020" levels="1" name="Vampiric Rage" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Restores 9% of general physical damage inflicted by enemies as HP for 60 minutes.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9021" levels="1" name="Berserker Spirit" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: "For 60 minutes, reduces party members' P. Def. by 8%, magic resistance by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and moving speed by 8."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9022" levels="1" name="Magic Barrier" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Increases magic resistance by 30% for 60 minutes.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9023" levels="1" name="Blessed Soul" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Increases maximum MP by 35% for 60 minutes.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9024" levels="1" name="Empower" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Increases M. Atk. by 75% for 60 minutes.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9025" levels="1" name="Acumen" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Increases Casting Spd. by 30% for 60 minutes.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9026" levels="1" name="Clarity" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: "For 60 minutes, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. Consumes 3 Runestones."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9027" levels="1" name="PC cafe personal instant lottery" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9028" levels="1" name="Cool air cannon of fortune" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Fires the cool air cannon of fortune. It can only be used during humid weather.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9029" levels="1" name="Watermelon Seed" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9030" levels="1" name="Honey Watermelon Seed" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9031" levels="1" name="Copied Watermelon Seed" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9032" levels="1" name="Copied Honey Watermelon Seed" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9033" levels="1" name="Herdsman's Love Scroll" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9034" levels="1" name="Vitality Belt Enchant Scroll" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9035" levels="1" name="Steamed Rice Cake" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Energy is maintained for 10 minutes. Delicious steamed rice cake effect.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9036" levels="1" name="Special July 7th Parcel" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9037" levels="1" name="Special July 7th Parcel (Event)" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9038" levels="1" name="Steamed Rice Cake" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9039" levels="1" name="Steamed Rice Cake" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9040" levels="1" name="PC Cafe Points" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9041" levels="1" name="Sixth Anniversary Cake" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Sixth Anniversary celebratory cake. Energy is recovered for 1 hour when acquiring Exp.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9042" levels="1" name="6th Anniversary Cube" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9043" levels="1" name="6th Anniversary Cube" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9044" levels="1" name="6th Anniversary Cube" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9045" levels="1" name="6th Anniversary Cube" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9046" levels="1" name="6th Anniversary Cube" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9047" levels="1" name="6th Anniversary Cube" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9048" levels="1" name="6th Anniversary Cube" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9049" levels="1" name="Golden Spice " >
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BEAST_FEED"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="itemConsumeId" val="15474"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<for />
+	</skill>
+	<skill id="9050" levels="1" name="Crystal Spice" >
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BEAST_FEED"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="itemConsumeId" val="15475"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<for />
+	</skill>
+	<skill id="9051" levels="1" name="Blessed Golden Spice">
+		<set name="itemConsumeId" val="15476"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="staticHitTime" val="true"/>
+		<set name="skillType" val="BEAST_FEED"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="effectRange" val="900"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9052" levels="1" name="Blessed Crystal Spice">
+		<set name="itemConsumeId" val="15477"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="staticHitTime" val="true"/>
+		<set name="skillType" val="BEAST_FEED"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="effectRange" val="900"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9053" levels="1" name="S Grade Golden Spice">
+		<set name="itemConsumeId" val="15478"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="staticHitTime" val="true"/>
+		<set name="skillType" val="BEAST_FEED"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="effectRange" val="900"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9054" levels="1" name="S Grade Crystal Spice">
+		<set name="itemConsumeId" val="15479"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="staticHitTime" val="true"/>
+		<set name="skillType" val="BEAST_FEED"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="effectRange" val="900"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9057" levels="1" name="Freezing Core">
+		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
+		<set name="target" val="TARGET_COMMAND_CHANEL"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillRadius" val="2000"/>
+		<set name="staticReuse" val="true"/>
+		<cond msgId="113" addName="1">
+			<InstancedZone name="icequeen"/>
+		</cond>
+		<for>
+			<effect name="FreyaSkillIgnore" stackOrder="1" stackType="skill_ignore" time="10"/>
+		</for>
+	</skill>
+	<skill id="9058" levels="1" name="Black Freezing Core">
+		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
+		<set name="target" val="TARGET_COMMAND_CHANEL"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillRadius" val="2000"/>
+		<set name="itemConsumeId" val="15470"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="staticReuse" val="true"/>
+		<cond msgId="113" addName="1">
+			<InstancedZone name="icequeen"/>
+		</cond>
+		<for>
+			<effect name="FreyaSkillIgnore" stackOrder="1" stackType="skill_ignore" time="10"/>
+		</for>
+	</skill>
+	<skill id="9059" levels="1" name="Torchlight">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEFAULT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="itemConsumeId" val="15485"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="staticReuse" val="true"/>
+		<cond msgId="113" addName="1">
+			<target mobId="18913"/>
+		</cond>
+	</skill>
+	<skill id="9060" levels="1" name="Maguen Machine">
+		<!-- Skill that allows you to collect Plasma -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="144">
+			<target mobId="18839"/>
+		</cond>
+	</skill>
+	<skill id="9061" levels="1" name="Uldie Summon Scroll" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9062" levels="1" name="Belldandy Summon Scroll" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9063" levels="1" name="Skooldie Summon Scroll" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9064" levels="1" name="Halloween Toy Chest" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9065" levels="1" name="Shiny Halloween Toy Chest" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9066" levels="1" name="Scroll of Transformation Box" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9067" levels="1" name="Potion of Energy Maintenance">
+        <set name="itemConsumeId" val="15438"/>
+	    <set name="itemConsumeCount" val="1"/>
+	    <set name="target" val="TARGET_SELF"/>
+	    <set name="skillType" val="BUFF"/>
+	    <set name="operateType" val="OP_ACTIVE"/>
+	    <set name="isHandler" val="true"/>
+		<for>
+	        <effect name="Vitality" time="600"/>
+        </for>
+	</skill>
+	<skill id="9068" levels="2" name="Potion of Energy Maintenance">
+		<table name="#itemConsumeId">15440 15440</table>
+		<table name="#time">600 1800</table>
+        <set name="itemConsumeId" val="#itemConsumeId"/>
+	    <set name="itemConsumeCount" val="1"/>
+	    <set name="target" val="TARGET_SELF"/>
+	    <set name="skillType" val="BUFF"/>
+	    <set name="operateType" val="OP_ACTIVE"/>
+	    <set name="isHandler" val="true"/>
+		<for>
+	        <effect name="Vitality" time="#time"/>
+        </for>
+	</skill>
+	<skill id="9069" levels="1" name="100,000 SP scroll" >
+		<set name="itemConsumeId" val="15439"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="power" val="100000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SPHEAL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+		<for />
+	</skill>
+	<skill id="9070" levels="1" name="Halloween Pumpkin" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9071" levels="1" name="Halloween Pumpkin - event" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9072" levels="1" name="Small Halloween Pumpkin" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>	
+    <skill id="9074" levels="1" name="Salmon Soup">
+		<set name="itemConsumeId" val="15492"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="power" val="2300"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="HEAL"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+        <for />
+	</skill>
+	 <skill id="9075" levels="1" name="Awful Soup">
+		<set name="itemConsumeId" val="15507"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+        <for />
+	</skill>
+    <skill id="9076" levels="1" name="Secret Door Key">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+        <for />
+	</skill>
+	<skill id="9078" levels="1" name="Rainbow Springs Potion" >
+		<set name="itemConsumeId" val="17018"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="30">
+				<mul order="0x40" stat="regHp" val="1.3"/>
+				<mul order="0x40" stat="regMp" val="1.3"/>
+				<mul order="0x40" stat="regCp" val="1.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="9079" levels="1" name="Santa's Buff Scroll" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: "For 1 hour, receives help from a great spirit to increase Max MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20%, the rate of Prominent Damage occurring through damage magic by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buffs by 10%. Decreases moving speed by 20% and MP consumption for skill use by 5%."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="4" stackType="multi_buff" time="3600">
+				<add order="0x40" stat="debuffRcpt" val="10"/>
+				<mul order="0x30" stat="regHp" val="1.2" />
+				<mul order="0x30" stat="p_max_mp" val="1.2" />
+				<mul order="0x30" stat="regMp" val="1.2" />
+				<mul order="0x30" stat="mpConsumePhysical" val="0.95" />
+				<mul order="0x30" stat="mpConsum" val="0.95" />
+				<mul order="0x30" stat="mpDanceConsume" val="0.95" />
+				<add order="0x40" stat="mCritRate" val="2" />
+				<mul order="0x30" stat="p_critical_damage_per" val="1.2" />
+				<mul order="0x30" stat="p_physical_defence" val="1.2" />
+				<mul order="0x30" stat="p_physical_attack" val="1.1" />
+				<mul order="0x30" stat="p_attack_speed" val="1.2" />
+				<mul order="0x30" stat="p_magical_defence" val="1.2" />
+				<mul order="0x30" stat="p_magical_attack" val="1.2" />
+				<mul order="0x30" stat="p_magic_speed" val="1.2" />
+				<mul order="0x30" stat="p_speed" val="0.8" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="9080" levels="1" name="Santa's Sock" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9081" levels="1" name="Christmas Cake" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9082" levels="1" name="White Christmas Petition" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Energy is maintained for 10 minutes. Petition asking for it to snow on Christmas.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9083" levels="1" name="Christmas Cake - event" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9084" levels="1" name="White Christmas Petition - event" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Energy is maintained for 10 minutes. Petition asking for it to snow on Christmas.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+</list>

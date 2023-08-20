@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="370" type="SOLO">
+		<name lang="en" val="An Elder Sows Seeds"/>
+		<name lang="ru" val="Старинная книга заклинаний"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20082"/>	<!-- Ant Recruit -->
+			<event type="MOBKILLED" val="20084"/>	<!-- Ant Patrol -->
+			<event type="MOBKILLED" val="20086"/>	<!-- Ant Guard -->
+			<event type="MOBKILLED" val="20089"/>	<!-- Noble Ant -->
+			<event type="MOBKILLED" val="20090"/>	<!-- Noble Ant Leader -->
+			<event type="QUEST_START" val="30612"/>	<!-- Casian -->
+			<event type="QUEST_TALK" val="30612"/>	<!-- Casian -->
+			<item id="5916"/>	<!-- Spellbook Page -->
+		</setting>
+	</quest>
+</quests>

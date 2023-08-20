@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="714" type="SOLO">
+		<name lang="en" val="Path to Becoming a Lord - Schuttgart"/>
+		<name lang="ru" val="Путь Лорда - Шутгарт"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="22809"/>	<!-- Guard Golem -->
+			<event type="MOBKILLED" val="22810"/>	<!-- Micro Scout Golem -->
+			<event type="MOBKILLED" val="22811"/>	<!-- Great Chaos Golem -->
+			<event type="MOBKILLED" val="22812"/>	<!-- Boom Golem -->
+			<event type="QUEST_START" val="35555"/>	<!-- August -->
+			<event type="QUEST_TALK" val="35555"/>	<!-- August -->
+			<event type="QUEST_TALK" val="31961"/>	<!-- Newyear -->
+			<event type="QUEST_TALK" val="31958"/>	<!-- Yasheni -->
+		</setting>
+	</quest>
+</quests>

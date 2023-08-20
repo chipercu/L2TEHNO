@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="635" type="SOLO">
+		<name lang="en" val="In the Dimensional Rift"/>
+		<name lang="ru" val="Разлом Между Мирами"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="31494"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31495"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31496"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31497"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31498"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31499"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31500"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31501"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31502"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31503"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31504"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31505"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31506"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31507"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31095"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31096"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31097"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31098"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31099"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31100"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31101"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31102"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31103"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31104"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31105"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31106"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31107"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31108"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31109"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31110"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31114"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31115"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31116"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31117"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31118"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31119"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31120"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31121"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31122"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31123"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31124"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31125"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_START" val="31126"/>	<!-- Blacksmith of Mammon -->
+			<event type="QUEST_TALK" val="31494"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31495"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31496"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31497"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31498"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31499"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31500"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31501"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31502"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31503"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31504"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31505"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31506"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31507"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31095"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31096"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31097"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31098"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31099"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31100"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31101"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31102"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31103"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31104"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31105"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31106"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31107"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31108"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31109"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31110"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31114"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31115"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31116"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31117"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31118"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31119"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31120"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31121"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31122"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31123"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31124"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31125"/>	<!-- Gatekeeper Ziggurat -->
+			<event type="QUEST_TALK" val="31126"/>	<!-- Blacksmith of Mammon -->
+			<event type="QUEST_TALK" val="31488"/>	<!-- Rift Post Recruit -->
+			<event type="QUEST_TALK" val="31489"/>	<!-- Rift Post Private -->
+			<event type="QUEST_TALK" val="31490"/>	<!-- Rift Post Officer -->
+			<event type="QUEST_TALK" val="31491"/>	<!-- Rift Post Captain -->
+			<event type="QUEST_TALK" val="31492"/>	<!-- Rift Post Commander -->
+			<event type="QUEST_TALK" val="31493"/>	<!-- Rift Post Hero -->
+		</setting>
+	</quest>
+</quests>

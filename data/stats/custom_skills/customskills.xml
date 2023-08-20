@@ -1,0 +1,1498 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<skill id="320" levels="10" name="Wrath">
+		<table name="#CP">0.07 0.1 0.12 0.15 0.17 0.2 0.22 0.25 0.27 0.3</table>
+		<set name="weaponsAllowed" val="64"/>
+		<set name="power" val="#CP"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="400"/>
+		<set name="skillType" val="CPDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#CP">.31 .32 .33 .34 .35 .36 .37 .38 .39 .40 .41 .42 .43 .44 .45 .46 .47 .48 .49 .50 .51 .52 .53 .54 .55 .56 .57 .58 .59</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<for />
+	</skill>
+	<skill id="493" levels="28" name="Storm Assault">
+        <table name="#power">742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651
+            1710 1770 1830 1891 1951 2012 2072 2132 2192
+        </table>
+        <table name="#powerPvP">0</table>
+        <table name="#elementPower">0</table>
+        <table name="#element">none</table>
+        <set name="elementPower" val="#elementPower"/>
+        <set name="element" val="#element"/>
+        <set name="power" val="#power"/>
+        <set name="powerPvP" val="#powerPvP"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="overHit" val="true"/>
+        <set name="skillRadius" val="400"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="flyType" val="CHARGE"/>
+        <set name="flyRadius" val="400"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="radius" val="100"/>
+		<set name="isEnemy" val="true"/>
+        <cond msgId="113" addName="1">
+            <using kind="Ancient Sword"/>
+        </cond>
+        <enchant1 levels="30" name="Power">
+            <table name="#power">2212 2231 2251 2271 2291 2310 2330 2350 2370 2389 2409 2429 2449 2468 2488 2508 2528
+                2547 2567 2587 2607 2626 2646 2666 2686 2705 2725 2745 2765 2784
+            </table>
+        </enchant1>
+        <enchant2 levels="30" name="Cost">
+            <table name="#power">2195 2199 2203 2208 2212 2216 2221 2225 2229 2233 2238 2242 2246 2251 2255 2259 2264
+                2268 2272 2276 2281 2285 2289 2294 2298 2302 2307 2311 2315 2319
+            </table>
+        </enchant2>
+        <enchant3 name="Fire Attack">
+            <table name="#element">fire</table>
+            <table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46
+                48 50
+            </table>
+        </enchant3>
+        <enchant4 name="Water Attack">
+            <table name="#element">water</table>
+            <table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46
+                48 50
+            </table>
+        </enchant4>
+        <enchant5 name="Wind Attack">
+            <table name="#element">wind</table>
+            <table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46
+                48 50
+            </table>
+        </enchant5>
+        <enchant6 name="Earth Attack">
+            <table name="#element">earth</table>
+            <table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46
+                48 50
+            </table>
+        </enchant6>
+        <enchant7 name="Duel">
+            <table name="#powerPvP">2230 2268 2306 2345 2383 2421 2460 2498 2536 2575 2613 2651 2689 2728 2766 2804 2843
+                2881 2919 2958 2996 3034 3072 3111 3149 3187 3226 3264 3302 3341
+            </table>
+        </enchant7>
+        <for/>
+    </skill>
+	<skill id="540" levels="1" name="Wing Assault">
+		<set name="power" val="2067"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="skillRadius" val="600"/>
+		<set name="flyType" val="CHARGE"/>
+		<set name="flyRadius" val="600"/>
+		<set name="radius" val="100"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isEnemy" val="true"/>
+		<for />
+	</skill>
+	<skill id="577" levels="4" name="Fire Breath">
+		<table name="#power">875 984 1098 1213</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_TUNNEL"/>
+		<set name="overHit" val="true"/>
+		<set name="skillRadius" val="100"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="element" val="fire"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="751" levels="3" name="Oel Mahum Arm Flourish">
+        <table name="#power">1073 1173 1271</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="overHit" val="true"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+	<skill id="773" levels="1" name="Ghost Piercing">
+        <set name="power" val="8452"/>
+        <set name="target" val="TARGET_TUNNEL"/>
+        <set name="skillRadius" val="200"/>
+        <set name="element" val="6"/>
+        <set name="overHit" val="true"/>
+        <set name="criticalRate" val="10"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="addSkills" val="23300;1"/>
+        <cond msgId="113" addName="1">
+            <using kind="Bow"/>
+        </cond>
+		<for>
+			<effect name="CallSkills" instantly="true"/>
+		</for>
+    </skill>
+	<skill id="795" levels="1" name="Divine Knight Brandish">
+        <set name="power" val="2322"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="overHit" val="true"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+	<skill id="797" levels="1" name="Divine Rogue Piercing Attack">
+        <set name="power" val="2111"/>
+        <set name="target" val="TARGET_TUNNEL"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="overHit" val="true"/>
+    </skill>
+	<skill id="884" levels="11" name="Air Assault" >
+		<set name="power" val="3752"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillRadius" val="2500"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="flyType" val="CHARGE"/>
+		<set name="flyRadius" val="2500"/>
+		<set name="radius" val="200"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="900" levels="6" name="Energy Blast">
+		<table name="#power">15838 15170 16494 16870 17110 17400</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_TUNNEL_SELF"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="906" levels="6" name="Lance Step">
+		<table name="#power">9503 9702 9896 10084 10266 10440</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_TUNNEL_SELF"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="910" levels="6" name="Water Jet">
+		<table name="#power">12670 12936 13195 13446 13688 13920</table>
+		<set name="power" val="#power"/>
+		<set name="element" val="water"/>
+		<set name="target" val="TARGET_TUNNEL_SELF"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="951" levels="7" name="Wing Assault">
+		<table name="#power">2067 2112 2156 2200 2241 2282 2320</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="radius" val="100"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="skillRadius" val="600"/>
+		<set name="flyType" val="CHARGE"/>
+		<set name="flyRadius" val="600"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isEnemy" val="true"/>
+		<for />
+	</skill>
+	<skill id="1404" levels="1" name="Word of Invitation">
+		<set name="target" val="TARGET_PARTY_ONE"/>
+		<set name="skillType" val="CALL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="itemConsumeId" val="3031"/>
+		<set name="itemConsumeCount" val="3"/>
+		<set name="skillRadius" val="-2"/>
+		<for />
+	</skill>
+	<skill id="22250" levels="1" name="Birthday Cake Effect">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="cancelable" val="false"/>
+		<for>
+			<effect name="Vitality" stackType="vitalityRegen" stackOrder="1" time="1200" />
+		</for>
+	</skill>
+	<skill id="2662" levels="1" name="Chant of Movement" >
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillRadius" val="900"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="3426" levels="1" name="Maximum Ability">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5547" level="1" type="CRIT" chance="5"/>
+		</triggers>
+	</skill>
+	<skill id="4030" levels="3" name="NPC Clan Might">
+        <table name="#Tab-p_physical_attack">1.08 1.12 1.15</table>
+        <table name="#abnormal_lv">1 2 3</table>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="#abnormal_lv" stackType="p_physical_attack" time="1200">
+                <mul order="0x30" stat="p_physical_attack" val="#Tab-p_physical_attack"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="4031" levels="3" name="NPC Clan Aegis">
+        <table name="#Tab-p_physical_defence">1.08 1.12 1.15</table>
+        <table name="#abnormal_lv">1 2 3</table>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="#abnormal_lv" stackType="p_physical_defence" time="1200">
+                <mul order="0x30" stat="p_physical_defence" val="#Tab-p_physical_defence"/>
+            </effect>
+        </for>
+    </skill>
+	<skill id="4097" levels="12" name="NPC Chant of Life">
+        <table name="#power">7 12 18 27 37 46 55 23 32 42 51 58</table>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+			<effect name="t_hp" param="#power;1;diff"/>
+        </for>
+    </skill>
+	<skill id="4107" levels="1" name="Antharas Stun">
+        <set name="power" val="20000"/>
+        <set name="target" val="TARGET_TUNNEL_SELF"/>
+        <set name="skillRadius" val="400"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Stun" stackType="Stun" time="9"/>
+        </for>
+    </skill>
+	<skill id="4109" levels="1" name="Curse of Antharas">
+        <set name="target" val="TARGET_TUNNEL_SELF"/>
+        <set name="skillRadius" val="850"/>
+        <set name="skillType" val="DEBUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" time="120">
+                <div order="0x30" stat="p_physical_attack" val="1.15"/>
+                <div order="0x30" stat="p_magical_attack" val="1.15"/>
+                <div order="0x30" stat="p_physical_defence" val="1.4"/>
+                <div order="0x30" stat="p_magical_defence" val="1.4"/>
+                <div order="0x30" stat="p_attack_speed" val="1.25"/>
+                <div order="0x30" stat="p_magic_speed" val="1.25"/>
+                <div order="0x30" stat="p_speed" val="1.5"/>
+                <sub order="0x40" stat="p_hit" val="19"/>
+                <sub order="0x40" stat="p_avoid" val="19"/>
+                <sub order="0x40" stat="p_critical_rate_per" val="90"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="4110" levels="2" name="Breath Attack">
+        <table name="#power">250 500</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_TUNNEL"/>
+        <set name="element" val="fire"/>
+        <set name="skillType" val="MDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="skillRadius" val="300"/>
+        <for/>
+    </skill>
+	<skill id="4128" levels="1" name="Wind Of Force">
+        <set name="power" val="20000"/>
+        <set name="target" val="TARGET_TUNNEL_SELF"/>
+        <set name="skillRadius" val="900"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+    </skill>
+	<skill id="4136" levels="1" name="Baium's Gift">
+        <set name="power" val="10000000"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+	<skill id="4210" levels="12" name="BOSS Chant of Life">
+		<table name="#power">180 225 337 544 819 1060 1225 1292 1358 1427 951 940</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="HOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_hp_per_max" param="3"/>
+			<effect name="t_hp" param="#power;1;diff"/>
+		</for>
+	</skill>
+	<skill id="4473" levels="12" name="Stun">
+		<table name="#power">16 35 73 139 241 379 542 626 704 774 829 873</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9"/>
+		</for>
+	</skill>
+	<skill id="4616" levels="1" name="Fake Petrificiation">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PARALYZE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Petrification" stackType="paralyze" time="30">
+				<mul order="0x80" stat="regHp"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4628" levels="1" name="Mysterious Aura">
+		<set name="power" val="2617"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="400"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4681" levels="1" name="Valakas Trample">
+		<set name="power" val="23397"/>
+		<set name="target" val="TARGET_TUNNEL"/>
+		<set name="skillRadius" val="500"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="criticalRate" val="10"/>
+		<for />
+	</skill>
+	<skill id="4682" levels="1" name="Valakas Trample">
+		<set name="power" val="23397"/>
+		<set name="target" val="TARGET_TUNNEL"/>
+		<set name="skillRadius" val="500"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="criticalRate" val="10"/>
+		<for />
+	</skill>
+		<skill id="4684" levels="1" name="Valakas Dragon Breath">
+		<set name="levelModifier" val="2"/>
+		<set name="target" val="TARGET_TUNNEL"/>
+		<set name="element" val="fire"/>
+		<set name="power" val="499"/>
+		<set name="skillRadius" val="1700"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="30" name="DamOverTime" stackOrder="1" stackType="ValakasDragonBreath" time="1" val="100"/>
+		</for>
+	</skill>
+	<skill id="4685" levels="1" name="Valakas Tail Stomp">
+		<set name="power" val="37224"/>
+		<set name="target" val="TARGET_TUNNEL_SELF"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="criticalRate" val="10"/>
+		<for />
+	</skill>
+	<skill id="4686" levels="1" name="Valakas Tail Stomp">
+		<set name="power" val="121"/>
+		<set name="target" val="TARGET_TUNNEL_SELF"/>
+		<set name="skillRadius" val="500"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4687" levels="1" name="Valakas Tail Stomp">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="500"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4688" levels="1" name="Valakas Stun">
+		<set name="power" val="21423"/>
+		<set name="target" val="TARGET_TUNNEL_SELF"/>
+		<set name="skillRadius" val="500"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="criticalRate" val="10"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9"/>
+		</for>
+	</skill>
+	<skill id="4784" levels="12" name="BOSS Chant of Life">
+		<table name="#power">167 210 315 507 784 1026 1195 1283 1358 1427 951 940</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="HOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_hp_per_max" param="3"/>
+			<effect name="t_hp" param="#power;1;diff"/>
+		</for>
+	</skill>
+	<skill id="4785" levels="12" name="BOSS Chant of Life">
+		<table name="#power">141 177 266 428 662 866 1009 1083 1152 1229 832 827</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="HOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_hp_per_max" param="3"/>
+			<effect name="t_hp" param="#power;1;diff"/>
+		</for>
+	</skill>
+	<skill id="4786" levels="12" name="BOSS Chant of Life">
+		<table name="#power">75 94 142 229 353 463 538 576 613 654 443 440</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="HOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_hp_per_max" param="3"/>
+			<effect name="t_hp" param="#power;1;diff"/>
+		</for>
+	</skill>
+	<skill id="4787" levels="12" name="BOSS Chant of Life">
+		<table name="#power">71 89 133 215 331 434 505 542 576 615 416 414</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="HOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_hp_per_max" param="3"/>
+			<effect name="t_hp" param="#power;1;diff"/>
+		</for>
+	</skill>
+	<skill id="4788" levels="12" name="BOSS Chant of Life">
+		<table name="#power">66 83 125 200 309 405 472 507 539 576 389 388</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="HOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_hp_per_max" param="3"/>
+			<effect name="t_hp" param="#power;1;diff"/>
+		</for>
+	</skill>
+	<skill id="5050" levels="12" name="Castle DD Fire">
+		<table name="#power">65 71 78 102 112 132 158 172 187 239 258 279</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="200"/>
+		<set name="element" val="fire"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="5053" levels="12" name="Castle DD Water">
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="200"/>
+		<set name="element" val="water"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="5056" levels="12" name="Castle DD Wind">
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="200"/>
+		<set name="element" val="wind"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="5267" levels="21" name="Trap Explosion">
+		<table name="#power">100 110 120 130 140 150 160 170 180 182 184 186 188 190 192 194 196 198 200 202 204</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="250"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="element" val="fire"/>
+		<for />
+	</skill>
+	<skill id="5271" levels="19" name="Hold">
+		<table name="#rate">80 80 80 80 80 80 80 80 81 82 83 84 85 86 87 88 89 90 91</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="250"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_move"/>
+			<effect name="p_defence_trait" param="trait_hold;100"/>
+		</for>
+	</skill>
+	<skill id="5310" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
+		<table name="#power">124 128 131 133 135 137 138 138 138</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="5371" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
+		<table name="#power">152 168 185 202 210 216 222 226 229</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="5582" levels="1" name="Divine Beast Fire Breath">
+		<set name="power" val="875"/>
+		<set name="target" val="TARGET_TUNNEL"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="element" val="fire"/>
+		<set name="elementPower" val="1"/>
+	</skill>
+	<skill id="5830" levels="1" name="Polearm Thrust" >
+		<table name="#power">2400</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="6051" levels="14" name="Energy Burst" >
+		<table name="#power">22 32 46 62 82 102 122 132 140 146 152 156 166 180</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_TUNNEL_SELF"/>
+		<set name="skillRadius" val="400"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="6750" levels="1" name="Power Strike">
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="840"/>
+		<set name="skillRadius" val="300"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="target" val="TARGET_ONE"/>
+	</skill>
+	<skill id="6772" levels="1" name="Power Strike">
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="840"/>
+		<set name="skillRadius" val="300"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="target" val="TARGET_ONE"/>
+	</skill>
+	<skill id="5461" levels="12" name="Castle Gunner Shot">
+		<table name="#power">87 89 90 92 94 96 97 99 100 102 104 105</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="element" val="fire"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="6052" levels="14" name="Shockwave" >
+		<table name="#power">11 16 23 31 41 51 61 66 70 73 76 78 83 90</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="200"/>
+		<set name="element" val="water"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4612" levels="12" name="NPC Wide Wild Sweep">
+		<table name="#power">46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617</table>
+		<set name="weaponsAllowed" val="64"/>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="9" levels="34" name="Sonic Buster">
+        <table name="#power">111 118 124 132 139 147 155 163 172 181 190 199 209 219 229 240 251 262 273 284 296 308 320 332 344 357 369 382 394 407 420 432 445 457</table>
+        <table name="#powerPvP">0</table>
+        <table name="#elementPower">0</table>
+        <table name="#element">none</table>
+        <set name="elementPower" val="#elementPower"/>
+        <set name="element" val="#element"/>
+        <set name="weaponsAllowed" val="18956"/>
+        <set name="power" val="#power"/>
+        <set name="powerPvP" val="#powerPvP"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="overHit" val="true"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="itemConsumeId" val="5589"/>
+        <set name="itemConsumeCount" val="3"/>
+        <set name="chargeBoost" val="true"/>
+        <set name="num_charges" val="0"/>
+        <set name="cond_charges" val="2"/>
+        <set name="charge_skill_id" val="8"/>
+        <set name="criticalRate" val="10"/>
+        <enchant1 levels="30" name="Power">
+            <table name="#power">461 465 469 474 478 482 486 490 494 498 502 506 511 515 519 523 527 531 535 539 543 548 552 556 560 564 568 572 576 581</table>
+        </enchant1>
+        <enchant2 levels="30" name="Cost"/>
+        <enchant3 name="Fire Attack">
+            <table name="#element">fire</table>
+            <table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+        </enchant3>
+        <enchant4 name="Water Attack">
+            <table name="#element">water</table>
+            <table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+        </enchant4>
+        <enchant5 name="Wind Attack">
+            <table name="#element">wind</table>
+            <table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+        </enchant5>
+        <enchant6 name="Earth Attack">
+            <table name="#element">earth</table>
+            <table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+        </enchant6>
+        <enchant7 name="Duel">
+            <table name="#powerPvP">465 473 481 489 497 505 513 521 529 537 545 553 561 569 577 585 593 601 609 617 625 633 641 649 657 665 673 681 689 696</table>
+        </enchant7>
+        <for/>
+    </skill>
+	<skill id="793" levels="1" name="Rush Impact">
+        <table name="#power">4040</table>
+        <table name="#powerPvP">0</table>
+        <table name="#elementPower">0</table>
+        <table name="#element">none</table>
+        <set name="elementPower" val="#elementPower"/>
+        <set name="element" val="#element"/>
+        <set name="power" val="#power"/>
+        <set name="powerPvP" val="#powerPvP"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="skillRadius" val="600"/>
+		<set name="radius" val="60"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="flyType" val="CHARGE"/>
+        <set name="flyRadius" val="600"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="soulBoost" val="true"/>
+		<cond msgId="113" addName="1">
+            <using kind="Ancient Sword"/>
+        </cond>
+        <enchant1 levels="15" name="Power">
+            <table name="#power">4071 4102 4133 4164 4195 4226 4257 4289 4320 4351 4382 4413 4444 4475 4507</table>
+        </enchant1>
+        <enchant2 levels="15" name="Cost"/>
+        <enchant3 levels="15" name="Chance">
+        </enchant3>
+        <enchant4 name="Fire Attack">
+            <table name="#element">fire</table>
+            <table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+        </enchant4>
+        <enchant5 name="Water Attack">
+            <table name="#element">water</table>
+            <table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+        </enchant5>
+        <enchant6 name="Wind Attack">
+            <table name="#element">wind</table>
+            <table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+        </enchant6>
+        <enchant7 name="Earth Attack">
+            <table name="#element">earth</table>
+            <table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+        </enchant7>
+        <enchant8 name="Duel">
+            <table name="#powerPvP">4104 4168 4232 4297 4361 4425 4490 4554 4618 4683 4747 4811 4875 4940 5004</table>
+        </enchant8>
+        <for>
+            <effect name="Stun" stackType="Stun" time="9"/>
+        </for>
+    </skill>
+	<skill id="995" levels="1" name="Rush Impact">
+		<set name="elementPower" val="0"/>
+		<set name="element" val="none"/>
+		<set name="power" val="4224"/>
+		<set name="powerPvP" val="0"/>
+		<set name="hitTime" val="800"/>
+		<set name="coolTime" val="200"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="radius" val="60"/>
+		<set name="skillRadius" val="400"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="flyType" val="CHARGE"/>
+		<set name="flyRadius" val="600"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="True">
+			<and>
+				<not>
+					<using kind="Bow,Crossbow"/>
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9"/>
+		</for>
+	</skill>
+	<skill id="790" levels="1" name="Wild Shot">
+        <set name="power" val="7475"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="overHit" val="true"/>
+        <set name="criticalRate" val="10"/>
+        <set name="soulBoost" val="true"/>
+       <cond msgId="113" addName="1">
+            <using kind="Crossbow"/>
+        </cond>
+        <for/>
+    </skill>
+	<skill id="503" levels="3" name="Scorn">
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="400"/>
+		<set name="skillType" val="A1"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="526" levels="1" name="Enuma Elish">
+		<table name="#power">6060</table>
+		<table name="#powerPvP">0</table>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
+		<set name="power" val="#power"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="element" val="#element"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="overHit" val="true"/>
+		<set name="skillRadius" val="400"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="soulBoost" val="true"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#power">6502 6535 6568 6601 6634 6667 6700 6733 6766 6799 6833 6866 6899 6932 6965</table>
+		</enchant1>
+		<enchant2 levels="15" name="Cost">
+			<table name="#power">6090 6120 6150 6180 6210 6240 6270 6300 6330 6360 6390 6420 6450 6480 6510</table>
+		</enchant2>
+		<enchant3 levels="15" name="Divine Attack">
+			<table name="#element">sacred</table>
+			<table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+		</enchant3>
+		<enchant4 name="Duel">
+			<table name="#powerPvP">6157 6253 6350 6446 6543 6639 6736 6832 6929 7025 7122 7218 7315 7411 7508</table>
+		</enchant4>
+		<for />
+	</skill>
+	<skill id="560" levels="4" name="Power Slash">
+		<table name="#power">1250 1406 1568 1733</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="582" levels="4" name="Scope Bleed">
+		<table name="#power">875 984 1098 1213</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="40"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="t_hp" param="-123;5;diff"/>
+		</for>
+	</skill>
+	<skill id="987" levels="1" name="Multiple Shot">
+		<set name="magicLevel" val="82"/>
+		<set name="power" val="16667"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="550"/>
+		<set name="overHit" val="true"/>
+		<set name="coolTime" val="1000"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="criticalRate" val="10"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond>
+			<using kind="Bow, Crossbow"/>
+		</cond>
+	</skill>
+	<skill id="1174" levels="22" name="Frost Wall">
+		<table name="#power">48 50 53 55 56 57 59 60 61 62 63 65 66 67 68 69 70 72 73 74 75 76</table>
+		<table name="#elementPower">0</table>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="element" val="water"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#power">78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost">
+			<table name="#power">77 78 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 86 86 87 87 88 88 89 89 90 90 91 91 92</table>
+		</enchant2>
+		<enchant3 levels="30" name="Water Attack">
+			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
+		</enchant3>
+		<for>
+		</for>
+	</skill>
+	<skill id="1471" levels="1" name="Death Beam">
+		<set name="power" val="138"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="skillRadius" val="300"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="1544" levels="7" name="Death Beam" >
+		<table name="#power">138 139 141 142 144 145 146</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="skillRadius" val="300"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4477" levels="12" name="NPC Frost Wall">
+		<table name="#power">48 50 53 55 56 57 59 60 61 62 63 65</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="skillRadius" val="200"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4683" levels="1" name="Valakas Dragon Breath">
+		<set name="levelModifier" val="2"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="element" val="fire"/>
+		<set name="power" val="499"/>
+		<set name="skillRadius" val="1200"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="30" name="DamOverTime" stackOrder="1" stackType="ValakasDragonBreath" time="1" val="100"/>
+		</for>
+	</skill>
+	<skill id="5716" levels="1" name="Stun">
+		<set name="power" val="3553"/>
+		<set name="skillRadius" val="1500"/>
+        <set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="3"/>
+		</for>
+	</skill>
+	<skill id="5812" levels="1" name="Fire Breath" >
+		<table name="#power">63</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="element" val="fire"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="5826" levels="3" name="Fire Breath" >
+		<table name="#power">41 52 63</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="element" val="fire"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="5839" levels="1" name="Breath" >
+		<set name="power" val="300"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="300"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="element" val="fire"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="5840" levels="1" name="Fire Breath" >
+		<set name="power" val="300"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="300"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="element" val="fire"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="5932" levels="1" name="Dark Blade" >
+		<set name="power" val="8000"/>
+		<set name="element" val="unholy"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="900"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="5933" levels="1" name="Dark Blade" >
+		<set name="power" val="8000"/>
+		<set name="element" val="earth"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="900"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="6048" levels="14" name="Lance Smash" >
+		<table name="#power">22 32 46 62 82 102 122 132 140 146 152 156 166 180</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="6199" levels="7" name="Tail Strike" >
+		<table name="#power">22 32 46 62 82 102 122</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="6385" levels="1" name="Bistakon Critical Claw">
+		<set name="power" val="9125"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillRadius" val="300"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="target" val="TARGET_AREA"/>
+		<for>
+			<effect name="t_hp" param="-95;5;diff"/>
+		</for>
+	</skill>
+	<skill id="6705" levels="1" name="Stun" >
+		<set name="icon" val="icon.skill0100"/>
+		<set name="power" val="4623"/>
+		<set name="magicLevel" val="83"/>
+		<set name="hitTime" val="3000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume2" val="34"/>
+		<set name="skillRaduis" val="300"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="trait" val="SHOCK"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9"/>
+		</for>
+	</skill>
+	<skill id="6709" levels="1" name="Multi Shot" >
+		<set name="icon" val="icon.skill0000" />
+		<set name="power" val="6000" />
+		<set name="skillRaduis" val="300" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="target" val="TARGET_AREA" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+	</skill>
+	<skill id="6775" levels="1" name="Soul Breath">
+		<set name="icon" val="icon.skill6876"/>
+		<set name="coolTime" val="300"/>
+		<set name="reuseDelay" val="12000"/>
+		<set name="power" val="10440"/>
+		<set name="magicLevel" val="83"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume2" val="34"/>
+		<set name="skillRaduis" val="300"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="6844" levels="1" name="Power Strike">
+		<set name="power" val="10452"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="250"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="8357" levels="1" name="Einhasad's Strike" >
+		<set name="power" val="10000"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="RDAM"/>
+		<set name="skillRadius" val="300"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<InstancedZone name="Disciple's Necropolis (past)" />
+		</cond>
+		<for />
+	</skill>
+	<skill id="985" levels="1" name="Challenge for Fate">
+		<set name="target" val="TARGET_AREA" />
+		<set name="skillType" val="A1"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="addSkills" val="6913;1"/>
+		<for>
+			<effect name="p_target_me"/>
+			<effect name="i_get_agro"/>
+			<effect name="CallSkills" instantly="true" applyOnCaster="true"/>
+		</for>
+	</skill>
+	<skill id="6293" levels="1" name="Power Strike">
+		<set name="effectRange" val="400"/>
+		<set name="element" val="water"/> 
+		<set name="elementPower" val="20"/>
+		<set name="magicLvl" val="85"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="4563"/>
+		<set name="skillRadius" val="250"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="target" val="TARGET_AREA"/>
+	</skill>
+	<skill id="1437" levels="26" name="Dark Flame">
+		<table name="#power">42 43 45 47 49 50 53 54 56 57 59 60 61 62 63 65 66 67 68 69 70 72 73 74 75 76</table>
+		<table name="#elementPower">0</table>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="power" val="#power"/>
+		<set name="element" val="unholy"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="soulBoost" val="true"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#power">78 78 79 79 79 79 80 80 80 80 81 81 81 81 82 82 82 82 83 83 83 83 84 84 84 84 85 85 85 85</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost">
+			<table name="#power">77 77 77 77 77 77 77 77 77 78 78 78 78 78 78 78 78 78 78 79 79 79 79 79 79 79 79 79 79 80</table>
+		</enchant2>
+		<enchant3 levels="30" name="Chance">
+		</enchant3>
+		<enchant4 levels="30" name="Dark Attack">
+			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
+		</enchant4>
+		<enchant5 levels="30" name="Weaken Dark">
+		</enchant5>
+		<for>
+			<effect name="Debuff" stackOrder="3" stackType="RunSpeedDown" time="5">
+				<mul order="0x30" stat="p_speed" val="0.7" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="4605" levels="12" name="Surrender To Fire">
+		<table name="#Tab-fireRcpt">20 25 30 35</table>
+		<table name="#Tab-waterRcpt">10 12 15 17</table>
+		<table name="#abnormal_lv">2 3 3 4</table>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="displayId" val="1083"/>
+		<for>
+			<effect name="Buff" stackOrder="#abnormal_lv" stackType="FireAtr" time="120">
+				<add order="0x40" stat="fireRcpt" val="#Tab-fireRcpt"/>
+				<sub order="0x40" stat="waterRcpt" val="#Tab-waterRcpt"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="524" levels="1" name="Cure Dark Seed">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="negateSkill" val="523"/>
+		<for />
+	</skill>
+	<skill id="5014" levels="3" name="Frintezza's Daemon Attack">
+		<table name="#power">15835 19096 16176</table>
+		<table name="#criticalRate">6 8 10</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		 <set name="criticalRate" val="#criticalRate"/>
+		<for />
+	</skill>
+	<skill id="5238" levels="1" name="Freezing">
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="PARALYZE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Paralyze" stackType="paralyze" time="5"/>
+		</for>
+	</skill>
+	<skill id="5265" levels="12" name="NPC - Soul Emission">
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="element" val="unholy"/>
+		<for />
+	</skill>
+	<skill id="5708" levels="1" name="Water Cannon">
+		<set name="power" val="84"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="5794" levels="1" name="Decrease Spd." >
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="RunSpeedDown" time="30">
+				<mul order="0x30" stat="p_speed" val="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="5796" levels="1" name="Decrease Spd." >
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="RunSpeedDown" time="30">
+				<mul order="0x30" stat="p_speed" val="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="5797" levels="1" name="Bursting Flame" >
+		<set name="power" val="50"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="element" val="fire"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="15" name="DamOverTime" time="1" val="200"/>
+		</for>
+	</skill>
+	<skill id="5810" levels="1" name="Decrease Spd." >
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="RunSpeedDown" time="30">
+				<mul order="0x30" stat="p_speed" val="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="5884" levels="2" name="Weakened Sweep" >
+		<table name="#time">3 5</table>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Disarm" time="#time"/>
+		</for>
+	</skill>
+	<skill id="5885" levels="1" name="Weakened Sweep" >
+		<table name="#power">1000 1500</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9"/>
+		</for>
+	</skill>
+	<skill id="5888" levels="2" name="Earth Shaker" >
+		<table name="#power">1000 1500</table>
+		<set name="cancelTarget" val="80"/>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9"/>
+		</for>
+	</skill>
+	<skill id="5889" levels="3" name="Tainted Shackle" >
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_target_me"/>
+			<effect name="p_block_act"/>
+		</for>
+	</skill>
+	<skill id="5899" levels="2" name="Burst of Pain" >
+		<table name="#power">150 171</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="DRAIN"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="5903" levels="1" name="Burst of Misplace">
+		<set name="magicLvl" val="80"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="isMagic" val="true"/>
+		<for>
+			<effect name="Disarm" time="5" stackOrder="1" stackType="disarm"/>
+		</for>
+	</skill>
+	<skill id="6379" levels="1" name="Blood Spurt">
+		<set name="power" val="9125"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="t_hp" param="-93;5;diff"/>
+		</for>
+	</skill>
+	<skill id="6410" levels="1" name="Reptilikon Rush">
+		<set name="levelModifier" val="1" />
+		<set name="power" val="9125" />
+		<set name="target" val="TARGET_AREA" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Stun" stackType="Stun" time="9" />
+		</for>
+	</skill>
+	<skill id="6416" levels="1" name="Reptilikon Poison Breath">
+		<set name="levelModifier" val="2" />
+		<set name="target" val="TARGET_AREA" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="t_mp" param="-4;5;diff"/>
+		</for>
+	</skill>
+	<skill id="6268" levels="1" name="Power Attack">
+		<set name="power" val="2282" />
+		<set name="target" val="TARGET_AREA" />
+		<set name="element" val="earth" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+	</skill>
+	<skill id="5659" levels="2" name="Gatekeeper Berserker Spirit">
+		<table name="#Tab-p_magical_attack">1.1 1.16</table>
+		<table name="#Tab-rate">1.05 1.08</table>
+		<table name="#p_physical_defence">0.95 0.92</table>
+		<table name="#p_magical_defence">0.90 0.84</table>
+		<table name="#p_speed">5 8</table>
+		<table name="#p_avoid">2 4</table>
+		<table name="#abnormal_lv">1 2</table>
+		<table name="#abnormal_time">1200</table>
+		<set name="target" val="TARGET_SELF"/><!-- TARGET_PARTY_ONE -->
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#abnormal_lv" stackType="berserk" time="#abnormal_time">
+				<mul order="0x30" stat="p_magical_attack" val="#Tab-p_magical_attack"/>
+				<mul order="0x30" stat="p_physical_attack" val="#Tab-rate"/>
+				<mul order="0x30" stat="p_physical_defence" val="#p_physical_defence"/>
+				<mul order="0x30" stat="p_magical_defence" val="#p_magical_defence"/>
+				<mul order="0x30" stat="p_magic_speed" val="#Tab-rate"/>
+				<mul order="0x30" stat="p_attack_speed" val="#Tab-rate"/>
+				<add order="0x40" stat="p_speed" val="#p_speed"/>
+				<sub order="0x40" stat="p_avoid" val="#p_avoid"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="5842" levels="1" name="Spinning Slasher" >
+		<set name="power" val="500"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="600"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="element" val="fire"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="677" levels="1" name="Divine Warrior Transfixion of Earth">
+		<set name="power" val="2323"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+		<set name="skillRadius" val="200"/>
+		<set name="overHit" val="true"/>
+		<for />
+	</skill>
+	<skill id="2233" levels="2" name="Amulet: Flames of Valakas">
+		<table name="#itemConsumeId">6653 6654</table>
+		<set name="itemConsumeId" val="#itemConsumeId"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="dragon_breath;1"/>
+		</for>
+	</skill>
+	<skill id="883" levels="1" name="Fortress Captain Seal of Binding" >
+		<set name="target" val="TARGET_AURA"/>
+        <set name="skillRadius" val="250"/>
+        <set name="skillType" val="ROOT"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="levelModifier" val="2"/>
+        <for>
+            <effect name="p_block_move"/>
+			<effect name="p_defence_trait" param="trait_hold;100"/>
+        </for>
+	</skill>
+	<skill id="708" levels="1" name="Divine Enchanter Mass Binding">
+        <set name="target" val="TARGET_AURA"/>
+        <set name="skillRadius" val="250"/>
+        <set name="skillType" val="ROOT"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="levelModifier" val="2"/>
+        <for>
+            <effect name="p_block_move"/>
+			<effect name="p_defence_trait" param="trait_hold;100"/>
+        </for>
+    </skill>
+	<skill id="747" levels="3" name="Saber Tooth Tiger Fear">
+        <table name="#power">895 978 1059</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_AURA"/>
+        <set name="overHit" val="true"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect count="3" name="Fear" stackType="Fear" time="5"/>
+        </for>
+    </skill>
+	<skill id="774" levels="1" name="Dread Pool">
+        <set name="target" val="TARGET_AURA"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="DEBUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect count="3" name="Fear" stackType="Fear" time="5">
+                <mul order="0x30" stat="p_speed" val="0.67"/>
+            </effect>
+        </for>
+    </skill>
+	<skill id="796" levels="1" name="Divine Knight Explosion Attack">
+        <set name="power" val="1900"/>
+        <set name="target" val="TARGET_AURA"/>
+        <set name="skillRadius" val="250"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+	<skill id="4106" levels="1" name="Antharas Stun">
+        <set name="power" val="20000"/>
+        <set name="target" val="TARGET_AURA"/>
+        <set name="skillRadius" val="1100"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Stun" stackType="Stun" time="9"/>
+        </for>
+    </skill>
+	<skill id="4689" levels="2" name="Valakas Fear">
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="10" name="Fear" stackType="Fear" time="5"/>
+		</for>
+	</skill>
+	<skill id="4690" levels="1" name="Valakas Meteor Storm">
+		<set name="power" val="834"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="300"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="5136" levels="1" name="Spin Slash">
+		<set name="power" val="3925"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="5140" levels="1" name="Dark Curse">
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="POISON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="t_hp" param="-109;5;diff">
+				<mul order="0x30" stat="p_attack_speed" val="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6326" levels="1" name="Martyrs Happiness">
+		<set name="target" val="TARGET_AURA"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="magicLvl" val="85"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="power" val="20531"/>
+		<set name="element" val="Sacred"/>
+		<set name="elementPower" val="20"/>
+		<set name="skillRadius" val="200"/>
+	</skill>
+	<skill id="5268" levels="17" name="Poison">
+		<table name="#t_hp">-18 -22 -26 -26 -26 -28 -55 -55 -55 -55 -57 -57 -57 -57 -57 -57 -57</table>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="t_hp" param="#t_hp;5;diff"/>
+		</for>
+	</skill>
+	<skill id="5269" levels="17" name="Slow Trap">
+		<table name="#power">0.7 0.7 0.7 0.7 0.7 0.7 0.69 0.68 0.67 0.66 0.65 0.64 0.63 0.62 0.61 0.6 0.59</table>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="250"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="30">
+				<mul order="0x30" stat="p_attack_speed" val="#power"/>
+				<mul order="0x30" stat="p_magic_speed" val="#power"/>
+				<mul order="0x30" stat="p_speed" val="#power"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="5270" levels="16" name="Flash Trap">
+		<table name="#rate">80 80 80 80 80 81 82 83 84 85 86 87 88 89 90 91</table>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="250"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="cancelTarget" val="50"/>
+		<for>
+			<effect name="i_target_cancel" param="100"/>
+			<effect name="Stun" stackType="Stun" time="5"/>
+		</for>
+	</skill>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</list>

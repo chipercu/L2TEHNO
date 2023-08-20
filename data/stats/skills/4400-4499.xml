@@ -1,0 +1,1324 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="4400" levels="3" name="Acumen">
+		<!-- Done by Diamond -->
+		<table name="#Tab-p_magic_speed">1.15 1.23 1.3</table>
+		<table name="#stackOrder">1 2 3</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#stackOrder" stackType="mAtkSpeedUp" time="3600">
+				<mul order="0x30" stat="p_magic_speed" val="#Tab-p_magic_speed"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4401" levels="3" name="Empower">
+		<!-- Done by Diamond -->
+		<table name="#Tab-p_magical_attack">1.55 1.65 1.75</table>
+		<table name="#stackOrder">1 2 3</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#stackOrder" stackType="p_magical_attack" time="3600">
+				<mul order="0x30" stat="p_magical_attack" val="#Tab-p_magical_attack"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4402" levels="2" name="Haste">
+		<!-- Done by Diamond -->
+		<table name="#Tab-p_attack_speed">1.15 1.33</table>
+		<table name="#stackOrder">1 2</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#stackOrder" stackType="pAtkSpeedUp" time="3600">
+				<mul order="0x30" stat="p_attack_speed" val="#Tab-p_attack_speed"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4403" levels="3" name="Guidance">
+		<!-- Done by SYS -->
+		<table name="#Tab-p_hit">2 3 4</table>
+		<table name="#stackOrder">1 2 3</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#stackOrder" stackType="accuracyUp" time="3600">
+				<add order="0x40" stat="p_hit" val="#Tab-p_hit"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4404" levels="3" name="Focus">
+		<!-- Done by Diamond -->
+		<table name="#Tab-p_critical_rate_per">20 25 30</table>
+		<table name="#stackOrder">1 2 3</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#stackOrder" stackType="p_critical_rate_per" time="3600">
+				<add order="0x40" stat="p_critical_rate_per" val="#Tab-p_critical_rate_per"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4405" levels="3" name="Death Whisper">
+		<!-- Done by Diamond -->
+		<table name="#Tab-p_critical_damage_per">1.25 1.3 1.35</table>
+		<table name="#stackOrder">1 2 3</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#stackOrder" stackType="p_critical_damage_per" time="3600">
+				<mul order="0x30" stat="p_critical_damage_per" val="#Tab-p_critical_damage_per"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4406" levels="3" name="Agility">
+		<!-- Done by SYS -->
+		<table name="#Tab-p_avoid">2 3 4</table>
+		<table name="#stackOrder">1 2 3</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#stackOrder" stackType="p_avoid" time="3600">
+				<add order="0x40" stat="p_avoid" val="#Tab-p_avoid"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4407" levels="2" name="Ordinary Monster">
+		<!-- это спецскилл для монстров-чемпионов -->
+		<table name="#hp">10 50</table>
+		<table name="#Tab-p_magical_attack">1.3 2</table>
+		<table name="#Tab-p_physical_attack">1.15 1.5</table>
+		<table name="#eff">12.5 75</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_max_hp" val="#hp"/>
+			<mul order="0x30" stat="p_max_mp" val="#hp"/>
+			<mul order="0x30" stat="p_magical_attack" val="#Tab-p_magical_attack"/>
+			<mul order="0x30" stat="p_physical_attack" val="#Tab-p_physical_attack"/>
+			<mul order="0x30" stat="ExpMultiplier" val="#eff"/>
+			<mul order="0x30" stat="SpMultiplier" val="#eff"/>
+			<mul order="0x30" stat="DropMultiplier" val="#eff"/>
+			<mul order="0x30" stat="SpoilMultiplier" val="#eff"/>
+			<mul order="0x30" stat="AdenaMultiplier" val="#eff"/>
+		</for>
+	</skill>
+	<skill id="4408" levels="20" name="HP Increase (1x)">
+		<!-- Done by Diamond
+			4408	1	HP Increase (1x)		none	none
+			4408	2	HP Medium-High		none	none
+			4408	3	HP Medium-High		none	none
+			4408	4	HP High		none	none
+			4408	5	HP High		none	none
+			4408	6	HP Very High		none	none
+			4408	7	HP Very High		none	none
+			4408	8	HP Increase (1/4x)		none	none
+			4408	9	HP Increase (1/2x)		none	none
+			4408	10	HP Increase (2x)		none	none
+			4408	11	HP Increase (3x)		none	none
+			4408	12	HP Increase (4x)		none	none
+			4408	13	HP Increase (5x)		none	none
+			4408	14	HP Increase (6x)		none	none
+			4408	15	HP Increase (7x)		none	none
+			4408	16	HP Increase (8x)		none	none
+			4408	17	HP Increase (9x)		none	none
+			4408	18	HP Increase (10x)		none	none
+			4408	19	HP Increase (11x)		none	none
+			4408	20	HP Increase (12x)		none	none
+		-->
+		<table name="#p_max_hp">1 1.1 1.21 1.33 1.46 1.61 1.71 0.25 0.5 2 3 4 5 6 7 8 9 10 11 12</table>
+		<table name="#reghp">1 1.1 1.21 1.33 1.46 1.61 1.71 0.25 0.5 2 3 4 5 6 7 8 9 10 11 12</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_max_hp" val="#p_max_hp"/>
+			<mul order="0x30" stat="regHp" val="#reghp"/>
+		</for>
+	</skill>
+	<skill id="4409" levels="20" name="MP Increase (1x)">
+		<!-- Done by Diamond
+			4409	1	MP Increase (1x)		none	none
+			4409	2	MP Medium-High		none	none
+			4409	3	MP Medium-High		none	none
+			4409	4	MP High		none	none
+			4409	5	MP High		none	none
+			4409	6	MP Very High		none	none
+			4409	7	MP Very High		none	none
+			4409	8	MP Increase (1/4x)		none	none
+			4409	9	MP Increase (1/2x)		none	none
+			4409	10	MP Increase (2x)		none	none
+			4409	11	MP Increase (3x)		none	none
+			4409	12	MP Increase (4x)		none	none
+			4409	13	MP Increase (5x)		none	none
+			4409	14	MP Increase (6x)		none	none
+			4409	15	MP Increase (7x)		none	none
+			4409	16	MP Increase (8x)		none	none
+			4409	17	MP Increase (9x)		none	none
+			4409	18	MP Increase (10x)		none	none
+			4409	19	MP Increase (11x)		none	none
+			4409	20	MP Increase (12x)		none	none
+		-->
+		<table name="#p_max_mp">1 1.1 1.21 1.33 1.46 1.61 1.71 0.25 0.50 2 3 4 5 6 7 8 9 10 11 12</table>
+		<table name="#regmp">1 1.1 1.21 1.33 1.46 1.61 1.71 0.25 0.50 2 3 4 5 6 7 8 9 10 11 12</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_max_mp" val="#p_max_mp"/>
+			<mul order="0x30" stat="regMp" val="#regmp"/>
+		</for>
+	</skill>
+	<skill id="4410" levels="22" name="Extremely Weak P. Atk.">
+		<!-- Done by Diamond
+			4410	1	Extremely Weak P. Atk.		none	none
+			4410	2	Extremely Weak P. Atk.		none	none
+			4410	3	Extremely Weak P. Atk.		none	none
+			4410	4	Extremely Weak P. Atk.		none	none
+			4410	5	Very Weak P. Atk.		none	none
+			4410	6	Very Weak P. Atk.		none	none
+			4410	7	Weak P. Atk.		none	none
+			4410	8	Weak P. Atk.		none	none
+			4410	9	Slightly Weak P. Atk.		none	none
+			4410	10	Slightly Weak P. Atk.		none	none
+			4410	11	Average P. Atk.		none	none
+			4410	12	Slightly Strong P. Atk.		none	none
+			4410	13	Slightly Strong P. Atk.		none	none
+			4410	14	Strong P. Atk.		none	none
+			4410	15	Strong P. Atk.		none	none
+			4410	16	Very Strong P. Atk.		none	none
+			4410	17	Very Strong P. Atk.		none	none
+			4410	18	Extremely Strong P. Atk.		none	none
+			4410	19	Extremely Strong P. Atk.		none	none
+			4410	20	Extremely Strong P. Atk.		none	none
+			4410	21	Extremely Strong P. Atk.		none	none
+			4410	22	Ultra Strong P. Atk.		none	none
+		-->
+		<table name="#p_physical_attack">0.39 0.43 0.47 0.52 0.57 0.63 0.69 0.76 0.83 0.91 1 1.1 1.21 1.33 1.46 1.61 1.77 1.94 2.14 2.35 2.59 10</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_physical_attack" val="#p_physical_attack"/>
+		</for>
+	</skill>
+	<skill id="4411" levels="22" name="Extremely Weak M. Atk.">
+		<!-- Done by Diamond
+			4411	1	Extremely Weak M. Atk.		none	none
+			4411	2	Extremely Weak M. Atk.		none	none
+			4411	3	Extremely Weak M. Atk.		none	none
+			4411	4	Extremely Weak M. Atk.		none	none
+			4411	5	Very Weak M. Atk.		none	none
+			4411	6	Very Weak M. Atk.		none	none
+			4411	7	Weak M. Atk.		none	none
+			4411	8	Weak M. Atk.		none	none
+			4411	9	Slightly Weak M. Atk.		none	none
+			4411	10	Slightly Weak M. Atk.		none	none
+			4411	11	Average M. Atk.		none	none
+			4411	12	Slightly Strong M. Atk.		none	none
+			4411	13	Slightly Strong M. Atk.		none	none
+			4411	14	Strong M. Atk.		none	none
+			4411	15	Strong M. Atk.		none	none
+			4411	16	Very Strong M. Atk.		none	none
+			4411	17	Very Strong M. Atk.		none	none
+			4411	18	Extremely Strong M. Atk.		none	none
+			4411	19	Extremely Strong M. Atk.		none	none
+			4411	20	Extremely Strong M. Atk.		none	none
+			4411	21	Extremely Strong M. Atk.		none	none
+			4411	22	Ultra Strong M. Atk.		none	none
+		-->
+		<table name="#p_magical_attack">0.15 0.18 0.24 0.27 0.32 0.39 0.47 0.57 0.69 0.83 1 1.21 1.46 1.77 2.14 2.59 3.13 3.79 4.59 5.55 6.72 10.9</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_magical_attack" val="#p_magical_attack"/>
+		</for>
+	</skill>
+	<skill id="4412" levels="22" name="Extremely Weak P. Def.">
+		<!-- Done by Diamond
+			4412	1	Extremely Weak P. Def.		none	none
+			4412	2	Extremely Weak P. Def.		none	none
+			4412	3	Extremely Weak P. Def.		none	none
+			4412	4	Extremely Weak P. Def.		none	none
+			4412	5	Very Weak P. Def.		none	none
+			4412	6	Very Weak P. Def.		none	none
+			4412	7	Weak P. Def.		none	none
+			4412	8	Weak P. Def.		none	none
+			4412	9	Slightly Weak P. Def.		none	none
+			4412	10	Slightly Weak P. Def.		none	none
+			4412	11	Average P. Def.		none	none
+			4412	12	Slightly Strong P. Def.		none	none
+			4412	13	Slightly Strong P. Def.		none	none
+			4412	14	Strong P. Def.		none	none
+			4412	15	Strong P. Def.		none	none
+			4412	16	Very Strong P. Def.		none	none
+			4412	17	Very Strong P. Def.		none	none
+			4412	18	Extremely Strong P. Def.		none	none
+			4412	19	Extremely Strong P. Def.		none	none
+			4412	20	Extremely Strong P. Def.		none	none
+			4412	21	Extremely Strong P. Def.		none	none
+			4412	22	Ultra Strong P. Def.		none	none
+		-->
+		<table name="#p_physical_defence">0.39 0.43 0.47 0.52 0.57 0.63 0.69 0.76 0.83 0.91 1 1.1 1.21 1.33 1.46 1.61 1.77 1.94 2.14 2.35 2.59 10</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_physical_defence" val="#p_physical_defence"/>
+		</for>
+	</skill>
+	<skill id="4413" levels="22" name="Extremely Weak M. Def.">
+		<!--
+			Done by Diamond
+			Descriptions:
+			1	Extremely Weak M. Def.
+			2	Extremely Weak M. Def.
+			3	Extremely Weak M. Def.
+			4	Extremely Weak M. Def.
+			5	Very Weak M. Def.
+			6	Very Weak M. Def.
+			7	Weak M. Def.
+			8	Weak M. Def.
+			9	Slightly Weak M. Def.
+			10	Slightly Weak M. Def.
+			11	Average M. Def.
+			12	Slightly Strong M. Def.
+			13	Slightly Strong M. Def.
+			14	Strong M. Def.
+			15	Strong M. Def.
+			16	Very Strong M. Def.
+			17	Very Strong M. Def.
+			18	Extremely Strong M. Def.
+			19	Extremely Strong M. Def.
+			20	Extremely Strong M. Def.
+			21	Extremely Strong M. Def.
+			22	Ultra Strong M. Def.
+		-->
+		<table name="#p_magical_defence">0.39 0.43 0.47 0.52 0.57 0.63 0.69 0.76 0.83 0.91 1 1.1 1.21 1.33 1.46 1.61 1.77 1.94 2.14 2.35 2.59 10</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_magical_defence" val="#p_magical_defence"/>
+		</for>
+	</skill>
+	<skill id="4414" levels="3" name="Heavy Armor Type">
+		<!--
+			Descriptions:
+			1 Heavy Armor Type: Strong P. Def. and weak Evasion.
+			2 Standard Type
+			3 Light Armor Type: Weak P. Def. and strong Evasion.
+		-->
+		<table name="#p_physical_defence">1.15 1.0 0.85</table>
+		<table name="#Tab-p_avoid">-10 0 10</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_physical_defence" val="#p_physical_defence"/>
+			<add order="0x40" stat="p_avoid" val="#Tab-p_avoid"/>
+		</for>
+	</skill>
+	<skill id="4415" levels="26" name="Bare Hands">
+		<!--
+			Done by Drizzy
+			4415	1	Bare Hands		none	none
+			4415	2	Bare Hands		none	none
+			4415	3	One-handed Sword		none	none
+			4415	4	One-handed Sword		none	none
+			4415	5	Blunt Weapons		none	none
+			4415	6	Blunt Weapons		none	none
+			4415	7	Daggers		none	none
+			4415	8	Daggers		none	none
+			4415	9	Bows		none	none
+			4415	10	Bows		none	none
+			4415	11	Spears		none	none
+			4415	12	Spears		none	none
+			4415	13	Two-handed Sword		none	none
+			4415	14	Two-handed Sword		none	none
+			4415	15	Two-handed Blunt Weapons		none	none
+			4415	16	Two-handed Blunt Weapons		none	none
+			4415	17	Hand-to-hand weapons		none	none
+			4415	18	Hand-to-hand weapons		none	none
+			4415	19	Dual-Sword Weapons		none	none
+			4415	20	Dual-Sword Weapons		none	none
+			4415	21	Ancient Sword		none	none
+			4415	22	Ancient Sword		none	none
+			4415	23	Rapier		none	none
+			4415	24	Rapier		none	none
+			4415	25	Crossbow		none	none
+			4415	26	Crossbow		none	none
+		-->
+		<table name="#p_physical_attack">1 1.38 1 1.38 1 1.38 1 1.21 1.22 1.5 1 1.38 1.16 1.62 1.16 1.62 1.16 1.62 1.16 1.62 1.08 1.62 0.93 1.62 1.38 1.62</table>
+		<table name="#p_attack_speed">1 0.71 1 0.71 1 0.71 1.14 0.82 0.89 0.64 1 0.71 0.85 0.61 0.85 0.61 0.85 0.61 0.85 0.61 0.92 0.61 1.07 0.61 0.62 0.61</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_physical_attack" val="#p_physical_attack"/>
+			<mul order="0x30" stat="p_attack_speed" val="#p_attack_speed"/>
+		</for>
+	</skill>
+	<skill id="4416" levels="25" name="Undead">
+		<!--
+			Descriptions: Скилл определяет расу:
+			1: Undead
+			2: Magic Creatures
+			3: Beasts
+			4: Animals
+			5: Plants
+			6: Humanoids
+			7: Spirits
+			8: Angels
+			9: Demons
+			10: Dragons
+			11: Giants
+			12: Bugs
+			13: Fairies
+			14: Humans
+			15: Elves
+			16: Dark Elves
+			17: Orcs
+			18: Dwarves
+			19: Others
+			20: Non-living Beings
+			21: Siege Weapons
+			22: Defending Army
+			23: Mercenaries
+			24: Unknown Creature
+			25: Kamael
+			!Старые скилы 4290 - 4302 для определения расы не используются.
+		-->
+		<table name="#pDefMagicCreatures"> 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
+		<table name="#pDefBeasts"> 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
+		<table name="#pDefDragons"> 0 0 0 0 0 0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>		
+		<table name="#pDefAnimals"> 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>		
+		<table name="#pDefPlants"> 0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
+		<table name="#pDefGiants"> 0 0 0 0 0 0 0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
+		<table name="#pDefBugs"> 0 0 0 0 0 0 0 0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>				
+		<table name="#pDefBows"> 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
+		<table name="#pDefBlunts"> 0 0 0 0 0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
+		<table name="#pDefSwords"> 0 0 0 0 0 0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
+		<table name="#pDefDuals"> 0 0 0 0 0 0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>		
+		<table name="#pDefShocks"> 0 0 0 0 0 0 0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sword;#pDefSwords"/> 
+			<effect name="p_defence_trait" param="trait_blunt;#pDefBlunts"/> 
+			<effect name="p_defence_trait" param="trait_dual;#pDefDuals"/> 
+			<effect name="p_defence_trait" param="trait_bow;#pDefBows"/> 
+			<add order="0x40" stat="p_physical_defence" val="#pDefBeasts">
+				<target race="Beasts"/>
+			</add>
+			<add order="0x40" stat="p_physical_defence" val="#pDefMagicCreatures">
+				<target race="MagicCreatures"/>
+			</add>
+			<add order="0x40" stat="p_physical_defence" val="#pDefDragons">
+				<target race="Dragons"/>
+			</add>			
+			<add order="0x40" stat="p_physical_defence" val="#pDefAnimals">
+				<target race="Animals"/>
+			</add>
+			<add order="0x40" stat="p_physical_defence" val="#pDefPlants">
+				<target race="Plants"/>
+			</add>
+			<add order="0x40" stat="p_physical_defence" val="#pDefGiants">
+				<target race="Giants"/>
+			</add>
+			<add order="0x40" stat="p_physical_defence" val="#pDefBugs">
+				<target race="Bugs"/>
+			</add>
+			<effect name="p_defence_trait" param="trait_shock;#pDefShocks"/>
+		</for>
+	</skill>
+	<skill id="4417" levels="38" name="Race Types">
+		<table name="#pDefBows"> 0 0 -15 -15 -15 0 0 -15 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0 </table>
+		<table name="#pDefBlunts"> 0 0 0 0 0 0 0 0 0 -15 0 0 0 0 0 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15 0 0 </table>
+		<table name="#pDefDagger"> 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0 </table>
+		<table name="#pDefDualDagger"> 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0 </table>
+		<table name="#trait_poison"> 0 0 0 0 0 0 15 15 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0 0 </table>
+		<table name="#trait_bleed"> 0 0 0 0 0 0 0 0 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0 0 </table>
+		<table name="#trait_sleep"> 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 </table>
+		<table name="#trait_hold"> 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 </table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_poison;#trait_poison"/>
+			<effect name="p_defence_trait" param="trait_bleed;#trait_bleed"/>
+			<effect name="p_defence_trait" param="trait_sleep;#trait_sleep"/>
+			<effect name="p_defence_trait" param="trait_hold;#trait_hold"/>
+			<effect name="p_defence_trait" param="trait_bow;#pDefBows"/> 
+			<effect name="p_defence_trait" param="trait_blunt;#pDefBlunts"/> 
+			<effect name="p_defence_trait" param="trait_dagger;#pDefDagger"/> 
+			<effect name="p_defence_trait" param="trait_dualdagger;#pDefDualDagger"/> 
+		</for>
+	</skill>
+	<skill id="4418" levels="5" name="Fire Attacks">
+		<!--
+			Done by:	SYS
+			Modified by:	Diamond, 08.12.07
+			Description:
+			Unleashes an attack fortified with fire energy. Resistant to fire attacks.
+		-->
+		<table name="#Res">25 50 75 100 125</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="fireRcpt" val="#Res"/>
+			<set order="0x10" stat="attackFire" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4419" levels="5" name="Water Attacks">
+		<!--
+			Done by:	SYS
+			Modified by:	Diamond, 08.12.07
+			Description:
+			Unleashes an attack fortified with water energy. Resistant to water attacks.
+		-->
+		<table name="#Res">25 50 75 100 125</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="waterRcpt" val="#Res"/>
+			<set order="0x10" stat="attackWater" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4420" levels="5" name="Wind Attacks">
+		<!--
+			Done by:	SYS
+			Modified by:	Diamond, 08.12.07
+			Description:
+			Unleashes an attack fortified with wind energy. Resistant to wind attacks.
+		-->
+		<table name="#Res">25 50 75 100 125</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="windRcpt" val="#Res"/>
+			<set order="0x10" stat="attackWind" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4421" levels="5" name="Earth Attacks">
+		<!--
+			Done by:	SYS
+			Modified by:	Diamond, 08.12.07
+			Description:
+			Unleashes an attack fortified with earth energy. Resistant to earth attacks.
+		-->
+		<table name="#Res">25 50 75 100 125</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="earthRcpt" val="#Res"/>
+			<set order="0x10" stat="attackEarth" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4422" levels="5" name="Dark Attacks">
+		<!--
+			Done by:	SYS
+			Modified by:	Diamond, 08.12.07
+			Description:
+			Unleashes an attack fortified with dark energy. Resistant to dark attacks.
+		-->
+		<table name="#Res">25 50 75 100 125</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="unholyRcpt" val="#Res"/>
+			<set order="0x10" stat="attackUnholy" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4423" levels="5" name="Sacred Attacks">
+		<!--
+			Done by:	SYS
+			Modified by:	Diamond, 08.12.07
+			Description:
+			Unleashes an attack fortified with sacred energy. Resistant to sacred attacks.
+		-->
+		<table name="#Res">25 50 75 100 125</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="sacredRcpt" val="#Res"/>
+			<set order="0x10" stat="attackSacred" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4424" levels="5" name="Resist Hand-to-hand Weapons">
+		<table name="#value">10 20 30 40 50</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_dualfist;#value"/>
+		</for>
+	</skill>
+	<skill id="4425" levels="5" name="Resist Blunt Weapons">
+		<table name="#Tab-bluntRcpt">10 20 30 40 50</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_blunt;#Tab-bluntRcpt"/> 
+		</for>
+	</skill>
+	<skill id="4426" levels="5" name="Resist Dual-Sword Weapons">
+		<table name="#Tab-dualRcpt">10 20 30 40 50</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_dual;#Tab-dualRcpt"/>
+		</for>
+	</skill>
+	<skill id="4427" levels="5" name="Resist Swords">
+		<table name="#Tab-swordRcpt">10 20 30 40 50</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sword;#Tab-swordRcpt"/> 
+		</for>
+	</skill>
+	<skill id="4428" levels="5" name="Resist Two-handed Weapons">
+		<!--
+			Descriptions: Resistant to Two-Handed Weapons.
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4429" levels="5" name="Greater Resist Fire Attacks">
+		<!-- Done by SYS -->
+		<table name="#Res">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="fireRcpt" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4430" levels="5" name="Greater Resist Water Attacks">
+		<!-- Done by SYS -->
+		<table name="#Res">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="waterRcpt" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4431" levels="5" name="Greater Resist Wind Attacks">
+		<!-- Done by SYS -->
+		<table name="#Res">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="windRcpt" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4432" levels="5" name="Greater Resist Earth Attacks">
+		<!-- Done by SYS -->
+		<table name="#Res">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="earthRcpt" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4433" levels="5" name="Greater Resist Sacred Attacks">
+		<!-- Done by SYS -->
+		<table name="#Res">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="sacredRcpt" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4434" levels="5" name="Greater Resist Dark Attacks">
+		<!-- Done by SYS -->
+		<table name="#Res">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="unholyRcpt" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4435" levels="5" name="Greater Resist Stun">
+		<!-- Done by SYS -->
+		<table name="#Tab-trait_shock">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_shock;#Tab-trait_shock"/>
+		</for>
+	</skill>
+	<skill id="4436" levels="5" name="Greater Resist Poison">
+		<table name="#trait_poison">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_poison;#trait_poison"/>
+		</for>
+	</skill>
+	<skill id="4437" levels="5" name="Greater Resist Bleeding">
+		<table name="#trait_bleed">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bleed;#trait_bleed"/>
+		</for>
+	</skill>
+	<skill id="4438" levels="5" name="Greater Resist Sleep">
+		<!-- Done by SYS -->
+		<table name="#Tab-trait_sleep">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sleep;#Tab-trait_sleep"/>
+		</for>
+	</skill>
+	<skill id="4439" levels="5" name="Greater Resist Hold">
+		<!-- Done by SYS -->
+		<table name="#Tab-trait_hold">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_hold;#Tab-trait_hold"/>
+		</for>
+	</skill>
+	<skill id="4440" levels="5" name="Greater Resist Paralysis">
+		<!-- Done by SYS -->
+		<table name="#Tab-trait_paralyze">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_paralyze;#Tab-trait_paralyze"/>
+		</for>
+	</skill>
+	<skill id="4441" levels="5" name="Greater Resist Mental Derangement">
+		<!-- Done by SYS -->
+		<table name="#trait_derangement">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_derangement;#trait_derangement"/>
+		</for>
+	</skill>
+	<skill id="4442" levels="5" name="Greater Resist Hand-to-hand Weapons">
+		<table name="#trait_dualfist">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_dualfist;#trait_dualfist"/>
+		</for>
+	</skill>
+	<skill id="4443" levels="5" name="Greater Resist Blunt Weapons">
+		<table name="#Tab-bluntRcpt">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_blunt;#Tab-bluntRcpt"/> 
+		</for>
+	</skill>
+	<skill id="4444" levels="5" name="Higher Resist Bow/Crossbow Weapons">
+		<table name="#bowRcpt">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bow;#bowRcpt"/>
+			<effect name="p_defence_trait" param="trait_crossbow;#bowRcpt"/> 
+		</for>
+	</skill>
+	<skill id="4445" levels="5" name="Greater Resist Spear Weapons">
+		<table name="#Tab-poleRcpt">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_pole;#Tab-poleRcpt"/>
+		</for>
+	</skill>
+	<skill id="4446" levels="5" name="Greater Resist Dual-Sword Weapons">
+		<table name="#Tab-dualRcpt">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_dual;#Tab-dualRcpt"/>
+		</for>
+	</skill>
+	<skill id="4447" levels="5" name="Greater Resist Swords">
+		<table name="#Tab-swordRcpt">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sword;#Tab-swordRcpt"/> 
+		</for>
+	</skill>
+	<skill id="4448" levels="5" name="Higher resist Daggers/Rapier Weapon">
+		<table name="#Tab-daggerRcpt">60 70 80 90 100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_dagger;#Tab-daggerRcpt"/> 
+			<effect name="p_defence_trait" param="trait_rapier;#Tab-daggerRcpt"/> 
+			<effect name="p_defence_trait" param="trait_dualdagger;#Tab-daggerRcpt"/> 
+		</for>
+	</skill>
+	<skill id="4449" levels="5" name="Greater Resist Two-handed Weapons">
+		<!--
+			Descriptions: Very resistant to Two-Handed Weapon attacks.
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4450" levels="5" name="Stun Attack Weak Point">
+		<table name="#value">-11 -25 -43 -67 -100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_shock;#value"/>
+		</for>
+	</skill>
+	<skill id="4451" levels="5" name="Poison Attack Weak Point">
+		<table name="#value">-11 -25 -43 -67 -100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_poison;#value"/>
+		</for>
+	</skill>
+	<skill id="4452" levels="5" name="Bleed Attack Weak Point">
+		<table name="#value">-11 -25 -43 -67 -100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bleed;#value"/>
+		</for>
+	</skill>
+	<skill id="4453" levels="5" name="Sleep Attack Weak Point">
+		<table name="#value">-11 -25 -43 -67 -100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sleep;#value"/>
+		</for>
+	</skill>
+	<skill id="4454" levels="5" name="Hold Attack Weak Point">
+		<table name="#value">-11 -25 -43 -67 -100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_hold;#value"/>
+		</for>
+	</skill>
+	<skill id="4455" levels="5" name="Paralysis Attack Weak Point">
+		<table name="#value">-11 -25 -43 -67 -100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_paralyze;#value"/>
+		</for>
+	</skill>
+	<skill id="4456" levels="5" name="Mental Attack Weak Point">
+		<table name="#value">-11 -25 -43 -67 -100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_derangement;#value"/>
+		</for>
+	</skill>
+	<skill id="4457" levels="5" name="Hand-to-hand Weapon Weak Point">
+		<table name="#value">-11 -25 -43 -67 -100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_dualfist;#value"/>
+		</for>
+	</skill>
+	<skill id="4458" levels="5" name="Spear Weapon Weak Point">
+		<table name="#value">-11 -25 -43 -67 -100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_pole;#value"/>
+		</for>
+	</skill>
+	<skill id="4459" levels="5" name="Dual-Sword Weapon Weak Point">
+		<table name="#value">-11 -25 -43 -67 -100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_dual;#value"/>
+		</for>
+	</skill>
+	<skill id="4460" levels="5" name="Sword Weak Point">
+		<table name="#value">-11 -25 -43 -67 -100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sword;#value"/> 
+		</for>
+	</skill>
+	<skill id="4461" levels="5" name="Weak Point against Daggers/Rapier Weapon">
+		<table name="#value">-11 -25 -43 -67 -100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_dagger;#value"/> 
+			<effect name="p_defence_trait" param="trait_rapier;#value"/> 
+			<effect name="p_defence_trait" param="trait_dualdagger;#value"/> 
+		</for>
+	</skill>
+	<skill id="4462" levels="5" name="Two-handed Weapon Weak Point">
+		<!--
+			Descriptions: Vulnerable to Two-Handed Weapons.
+			не используется
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4463" levels="3" name="Surrender To Water">
+		<!--
+			Description:
+			Instantly decreases resistance to water attacks and increases resistance to fire attacks.
+		-->
+		<table name="#Tab-waterRcpt">20 25 30</table>
+		<table name="#Tab-fireRcpt">10 12 15</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="Buff" stackOrder="4" stackType="WaterAtr" time="30">
+				<add order="0x40" stat="waterRcpt" val="#Tab-waterRcpt"/>
+				<sub order="0x40" stat="fireRcpt" val="#Tab-fireRcpt"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4464" levels="3" name="Surrender To Wind">
+		<!--
+			Description:
+			Instantly decreases resistance to wind attacks and increases resistance to earth attacks.
+		-->
+		<table name="#Tab-windRcpt">20 25 30</table>
+		<table name="#Tab-earthRcpt">10 12 15</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="Buff" stackOrder="4" stackType="WindAtr" time="30">
+				<add order="0x40" stat="windRcpt" val="#Tab-windRcpt"/>
+				<sub order="0x40" stat="earthRcpt" val="#Tab-earthRcpt"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4465" levels="3" name="Surrender To Earth">
+		<!--
+			Description:
+			Instantly decreases resistance to earth attacks and increases resistance to wind attacks.
+		-->
+		<table name="#Tab-earthRcpt">20 25 30</table>
+		<table name="#Tab-windRcpt">10 12 15</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="Buff" stackOrder="4" stackType="EarthAtr" time="30">
+				<add order="0x40" stat="earthRcpt" val="#Tab-earthRcpt"/>
+				<sub order="0x40" stat="windRcpt" val="#Tab-windRcpt"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4466" levels="3" name="Surrender To Darkness">
+		<!--
+			Description:
+			Instantly decreases resistance to dark attacks and increases resistance to sacred attacks.
+		-->
+		<table name="#Tab-unholyRcpt">20 25 30</table>
+		<table name="#Tab-sacredRcpt">10 12 15</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="Buff" stackOrder="4" stackType="UnholyAtr" time="30">
+				<add order="0x40" stat="unholyRcpt" val="#Tab-unholyRcpt"/>
+				<sub order="0x40" stat="sacredRcpt" val="#Tab-sacredRcpt"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4467" levels="3" name="Surrender To Light">
+		<!--
+			Description:
+			Instantly decreases resistance to sacred attacks and increases resistance to dark attacks.
+		-->
+		<table name="#Tab-sacredRcpt">20 25 30</table>
+		<table name="#Tab-unholyRcpt">10 12 15</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="Buff" stackOrder="4" stackType="HolyAtr" time="30">
+				<add order="0x40" stat="sacredRcpt" val="#Tab-sacredRcpt"/>
+				<sub order="0x40" stat="unholyRcpt" val="#Tab-unholyRcpt"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4468" levels="2" name="Area Buff - Wind Walk">
+		<table name="#value">20 33</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_speed" val="#value"/>
+		</for>
+	</skill>
+	<skill id="4469" levels="1" name="Potion Drinking">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4470" levels="1" name="NPC Spoils">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4471" levels="12" name="NPC Anger">
+		<!--
+			Done by Magister
+			Descriptions: Increases NPC's P. Atk. and P. Def.
+		-->
+		<table name="#rate"> 1.05 1.1 1.15 1.2 1.25 1.3 1.35 1.4 1.45 1.5 1.55 1.6 </table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="120">
+				<mul order="0x30" stat="p_physical_attack" val="#rate"/>
+				<mul order="0x30" stat="p_physical_defence" val="#rate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4472" levels="12" name="NPC Strike Golem">
+		<!--
+			Done by Magister
+			Descriptions: For powerful Golems that are 1.5x stronger
+		-->
+		<table name="#power">69 157 328 625 1083 1704 2439 2814 3168 3480 3730 3925</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4473" levels="12" name="Stun">
+		<!--
+			Done by Magister
+			Descriptions: Shocks and instantly immobilizes.
+		-->
+		<table name="#power">16 35 73 139 241 379 542 626 704 774 829 873</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9"/>
+		</for>
+	</skill>
+	<skill id="4474" levels="5" name="Area Heal - Per">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4475" levels="1" name="Perfect Resist Bleeding">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bleed;100"/>
+		</for>
+	</skill>
+	<skill id="4476" levels="5" name="Silent Move">
+		<!--
+			Descriptions: Blocks monsters' first strike.
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4477" levels="12" name="NPC Frost Wall">
+		<!-- Done by SYS -->
+		<table name="#power">48 50 53 55 56 57 59 60 61 62 63 65</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="skillRadius" val="200"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4478" levels="1" name="Ice Fairy Aqua Splash">
+		<!-- Done by SYS -->
+		<set name="power" val="1000"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="element" val="water"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4479" levels="1" name="Ice Fairy Resist Cold">
+		<!--
+			Descriptions: Increases resistance to cold attacks. Effect 4.
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4480" levels="1" name="Ice Fairy Curse Gloom">
+		<!-- Done by SYS -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="surrender" time="15">
+				<mul order="0x30" stat="p_magical_defence" val="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4481" levels="1" name="Ice Fairy Hex">
+		<!-- Done by SYS -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="pDefDown" time="15">
+				<mul order="0x30" stat="p_physical_defence" val="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4482" levels="1" name="Ice Fairy Silence">
+		<!-- Done by SYS -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Mute" stackType="Mute" time="30"/>
+		</for>
+	</skill>
+	<skill id="4483" levels="12" name="Hold">
+		<!-- Done by SYS -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="ROOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="p_block_move"/>
+		</for>
+	</skill>
+	<skill id="4484" levels="1" name="Eating Follower Heal">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4485" levels="1" name="Eating Follower">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4486" levels="12" name="Decrease P. Def.">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="surrender" time="15">
+				<mul order="0x30" stat="p_physical_defence" val="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4487" levels="12" name="Decrease M. Def.">
+		<!--
+			Done by Magister
+			Descriptions: Instantly reduces M. Def.
+		-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="surrender" time="15">
+				<mul order="0x30" stat="p_magical_defence" val="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4488" levels="12" name="Hold">
+		<!-- Done by SYS -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="ROOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="p_block_move"/>
+		</for>
+	</skill>
+	<skill id="4489" levels="12" name="NPC Death MP Bomb">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4490" levels="12" name="NPC Holy Wall">
+		<!-- Not used -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4491" levels="12" name="Holy Weapon">
+		<!--
+			Done by Magister
+			Descriptions: Makes sacred attacks.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="120" stackType="WeaponAttributeUp">
+				<add order="0x40" stat="attackSacred" val="70"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4492" levels="12" name="Enlarging Head Curse">
+		<!--
+			Done by Magister
+			Descriptions: Temporarily enlarges the head.
+		-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect abnormal="bighead" name="Buff" stackType="BigHead" time="120"/>
+			<effect name="Buff" stackOrder="3" stackType="pDefDown" time="120">
+				<mul order="0x30" stat="p_physical_defence" val="0.77"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4493" levels="12" name="NPC Debuff Shield Slow">
+		<!-- Not used -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4494" levels="2" name="Raid Boss">
+		<!--
+			Descriptions: If the person who made the greatest contribution is 3 or more levels higher than the raid monster, then the item/adena rewards will decrease. If the difference is 9 or more levels, the monster will drop nothing at all.
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="HARDCODED"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4495" levels="12" name="Boss Power Shot">
+		<!-- Done by Diamond -->
+		<table name="#power">352.0 949.0 2607.0 6828.0 17184.0 33213.0 51007.0 59177.0 67888.0 77001.0 86359.0 95790.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4496" levels="12" name="Stun">
+		<!-- Done by Diamond -->
+		<table name="#power">176.0 475.0 1304.0 3414.0 8592.0 16607.0 25504.0 29589.0 33944.0 38501.0 43180.0 47895.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9"/>
+		</for>
+	</skill>
+	<skill id="4497" levels="1" name="Treasure Chest - Level 21">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4498" levels="1" name="Treasure Chest - Level 22">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4499" levels="1" name="Treasure Chest - Level 25">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+</list>

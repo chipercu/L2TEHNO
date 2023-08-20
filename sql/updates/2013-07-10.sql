@@ -1,0 +1,1 @@
+ALTER TABLE `characters` ADD COLUMN `bot` tinyint(1) default '0' AFTER `hunt_timeleft`;

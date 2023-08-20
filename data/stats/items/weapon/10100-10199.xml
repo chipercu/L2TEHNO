@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="10125" name="Shadow Item - War Axe" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_war_axe_i00" />
+		<set name="weight" val="533" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="crystal_type" val="C" />
+		<set name="p_dam" val="139" />
+		<set name="m_dam" val="76" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="durability" val="300" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="10128" name="For Monster only (Crossbow)" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="weight" val="1530" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="p_dam" val="31" />
+		<set name="m_dam" val="21" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+	</weapon>
+	<weapon id="10167" name="Pig Lollipop" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.etc_pig_candy_i00" />
+		<set name="p_dam" val="1" />
+		<set name="m_dam" val="1" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3418" lvl="1" />
+		</skills>
+	</weapon>
+</list>

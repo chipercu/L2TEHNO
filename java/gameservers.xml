@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<game id="1" name="Name">
+		<proxy id="1" ip="127.0.0.1"/> <!-- ID первого в списке прокси, всегда совпадает с ID гейм сервера "game id == proxy id" -->
+		<proxy id="2" ip="license.open-team.ru"/>
+		<proxy id="3" ip="license.open-team.ru" region="5"/>
+		<proxy id="4" ip="license.open-team.ru" proxy_add="10"/>
+	</game>
+	<game id="6" name="Name">
+		<proxy id="6" ip="127.0.0.1"/> <!-- ID первого в списке прокси, всегда совпадает с ID гейм сервера "game id == proxy id" -->
+		<proxy id="7" ip="127.0.0.1"/>
+		<proxy id="8" ip="127.0.0.1"/>
+		<proxy id="9" ip="127.0.0.1"/>
+		<proxy id="10" ip="127.0.0.1"/>
+	</game>
+</list>

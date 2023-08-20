@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+	<ClassObject class_id="114" class_name="Grand Khavatari">
+		<ai_type type="auto_attacker" spawn_type="warrior" party_type="nuker" buff_scheme="[warrior]" />
+		<henna id1="169" id2="30"/>
+		<items>
+			<underwear name="[pvp_defence_cp]" />
+			<jewels name="[aq_valakas]" />
+			<sets>
+				<set name="[elegia_light]" shield="-1"/>
+			</sets>
+			<PhantomWeapons>
+				<weapon id="15888" enchant="10" is_random="false" augment_chance="50" attribute_min="300" attribute_max="300" attribute="fire" is_att_random="false"/>
+			</PhantomWeapons>
+			<PhantomInventoryItems>
+				<item id="5589" count="30"/> <!-- Energy Stone -->
+				<item id="5591" count="30"/> <!-- CP 50 -->
+				<item id="5592" count="30"/> <!-- CP 200 -->
+				<item id="8875" count="30"/> <!-- Battle Symbol -->
+				<item id="3031" count="30"/> <!-- Spirit Ore -->
+				<item id="1785" count="30"/> <!-- Soul Ore -->
+			</PhantomInventoryItems>
+		</items>
+		<nuke_skills>
+		    <skill id="995" level="1" /> <!-- Rush Impact -->
+			<skill id="54" level="49" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="7"/> <!-- Force Blaster -->
+			<skill id="35" level="28" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="7"/> <!-- Force Storm -->
+			<skill id="284" level="40" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="7"/> <!-- Hurricane Assault -->
+			<!-- <skill id="346" level="1" />  Raging Force -->
+		</nuke_skills>
+		<rare_nuke_skills>
+			<skill id="81" level="3" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="1"/> <!-- Punch of Doom -->
+		</rare_nuke_skills>
+		<self_buff_skills>
+		    <skill id="109" level="1" /> <!-- Ogre Spirit Totem -->
+			<skill id="423" level="3" /> <!-- Dark Form -->
+			<skill id="918" level="1" /> <!-- Maximum Focus Force -->
+		</self_buff_skills>
+		<situation_skills>
+			<skill id="420" level="1" target="self" cond="hp;30;0"/> <!-- Zealot -->
+		</situation_skills>
+		<ultimate_self_buff_skills>
+			<skill id="917" level="1" /> <!-- Final Secret -->
+		</ultimate_self_buff_skills>
+		<debuff_skills>
+		    <skill id="281" level="37" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="1"/> <!-- Soul Breaker -->
+			<skill id="95" level="20" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="1"/> <!-- Cripple -->
+		</debuff_skills>
+		<rare_debuff_skills>
+			<skill id="776" level="1" /> <!-- Force of Destruction -->
+		</rare_debuff_skills>
+		<passive_skills>
+			<skill id="631" level="6" />	<!-- Emergent Ability - Attack -->
+			<skill id="652" level="1" />	<!-- Knight Ability - Defense -->
+			<skill id="655" level="1" />	<!-- Enchanter Ability - Barrier -->
+			<skill id="651" level="1" />	<!-- Warrior Ability - Haste -->
+			<skill id="26075" level="1" />	<!-- Bot Fury Fists -->
+		</passive_skills>
+		<consumble_skills>
+			<skill id="8" level="8" target="self" cond="skill;50;8"/> <!-- Sonic Focus -->
+			<skill id="6439" level="1" target="self" cond="MP;50;0"/> <!-- MP Potion, бот использует когда MP меньше 50% один раз -->
+		</consumble_skills>
+	</ClassObject>
+ </list>

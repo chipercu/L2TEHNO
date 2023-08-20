@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="626" type="PARTY_ONE">
+		<name lang="en" val="A Dark Twilight"/>
+		<name lang="ru" val="Темный сумрак"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="21520"/>	<!-- Eye of Splendor -->
+			<event type="MOBKILLED" val="21521"/>	<!-- Claws of Splendor -->
+			<event type="MOBKILLED" val="21522"/>	<!-- Claws of Splendor -->
+			<event type="MOBKILLED" val="21523"/>	<!-- Flash of Splendor -->
+			<event type="MOBKILLED" val="21524"/>	<!-- Blade of Splendor -->
+			<event type="MOBKILLED" val="21525"/>	<!-- Blade of Splendor -->
+			<event type="MOBKILLED" val="21526"/>	<!-- Wisdom of Splendor -->
+			<event type="MOBKILLED" val="21527"/>	<!-- Anger of Splendor -->
+			<event type="MOBKILLED" val="21528"/>	<!-- Anger of Splendor -->
+			<event type="MOBKILLED" val="21529"/>	<!-- Soul of Splendor -->
+			<event type="MOBKILLED" val="21530"/>	<!-- Victory of Splendor -->
+			<event type="MOBKILLED" val="21531"/>	<!-- Punishment of Splendor -->
+			<event type="MOBKILLED" val="21532"/>	<!-- Shout of Splendor -->
+			<event type="MOBKILLED" val="21533"/>	<!-- Alliance of Splendor -->
+			<event type="MOBKILLED" val="21534"/>	<!-- Alliance of Splendor -->
+			<event type="MOBKILLED" val="21535"/>	<!-- Signet of Splendor -->
+			<event type="MOBKILLED" val="21536"/>	<!-- Crown of Splendor -->
+			<event type="MOBKILLED" val="21537"/>	<!-- Fang of Splendor -->
+			<event type="MOBKILLED" val="21538"/>	<!-- Fang of Splendor -->
+			<event type="MOBKILLED" val="21539"/>	<!-- Wailing of Splendor -->
+			<event type="MOBKILLED" val="21540"/>	<!-- Wailing of Splendor -->
+			<event type="MOBKILLED" val="21541"/>	<!-- Pilgrim of Splendor -->
+			<event type="MOBKILLED" val="21542"/>	<!-- Disciple of Pilgrim -->
+			<event type="QUEST_START" val="31517"/>	<!-- Hierarch -->
+			<event type="QUEST_TALK" val="31517"/>	<!-- Hierarch -->
+			<item id="7169"/>	<!-- Blood of Saint -->
+		</setting>
+	</quest>
+</quests>

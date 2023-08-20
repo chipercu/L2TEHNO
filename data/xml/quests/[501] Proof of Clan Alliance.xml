@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="501" type="SOLO">
+		<name lang="en" val="Proof of Clan Alliance"/>
+		<name lang="ru" val="Сплоченность Клана"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20685"/>	<!-- Vanor Silenos Shaman -->
+			<event type="MOBKILLED" val="20644"/>	<!-- Harit Lizardman Shaman -->
+			<event type="MOBKILLED" val="20576"/>	<!-- Oel Mahum Witch Doctor -->
+			<event type="MOBKILLED" val="27173"/>	<!-- Box Of Athrea 1 -->
+			<event type="MOBKILLED" val="27174"/>	<!-- Box Of Athrea 2 -->
+			<event type="MOBKILLED" val="27175"/>	<!-- Box Of Athrea 3 -->
+			<event type="MOBKILLED" val="27176"/>	<!-- Box Of Athrea 4 -->
+			<event type="MOBKILLED" val="27177"/>	<!-- Box Of Athrea 5 -->
+			<event type="QUEST_START" val="30756"/>	<!-- Sir Kristof Rodemai -->
+			<event type="QUEST_START" val="30757"/>	<!-- Statue Of Offering -->
+			<event type="QUEST_START" val="30758"/>	<!-- Athrea -->
+			<event type="QUEST_TALK" val="30756"/>	<!-- Sir Kristof Rodemai -->
+			<event type="QUEST_TALK" val="30757"/>	<!-- Statue Of Offering -->
+			<event type="QUEST_TALK" val="30758"/>	<!-- Athrea -->
+			<event type="QUEST_TALK" val="30759"/>	<!-- Kalis -->
+			<item id="3837"/>	<!-- Symbol of Loyalty -->
+			<item id="3872"/>	<!-- Antidote Recipe List -->
+			<item id="3833"/>	<!-- Herb of Vanor -->
+			<item id="3832"/>	<!-- Herb of Harit -->
+			<item id="3834"/>	<!-- Herb of Oel Mahum -->
+		</setting>
+	</quest>
+</quests>

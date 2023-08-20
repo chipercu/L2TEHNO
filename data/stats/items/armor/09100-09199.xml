@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<armor id="9100" name="Shadow Item: Magestic Boots" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="FEET" />
+		<set name="icon" val="icon.armor_t84_b_i00" />
+		<set name="weight" val="370" />
+		<set name="crystal_type" val="A" />
+		<set name="durability" val="600" />
+		<set name="p_def" val="49" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="9101" name="Shadow Item: Magestic Robe" type="MAGIC">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="FULLARMOR" />
+		<set name="icon" val="icon.armor_t85_ul_i00" />
+		<set name="weight" val="777" />
+		<set name="crystal_type" val="A" />
+		<set name="durability" val="600" />
+		<set name="p_def" val="147" />
+		<set name="mp_bonus" val="718" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="9102" name="Shadow Item: Magestic Gauntlet" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="GLOVES" />
+		<set name="icon" val="icon.armor_t85_g_i00" />
+		<set name="weight" val="180" />
+		<set name="crystal_type" val="A" />
+		<set name="durability" val="600" />
+		<set name="p_def" val="49" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="9103" name="Shadow Item: Magestic Boots" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="FEET" />
+		<set name="icon" val="icon.armor_t85_b_i00" />
+		<set name="weight" val="370" />
+		<set name="crystal_type" val="A" />
+		<set name="durability" val="600" />
+		<set name="p_def" val="49" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="9128" name="Shadow Item: Mithril Gauntlet" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="GLOVES" />
+		<set name="icon" val="icon.armor_t61_g_i00" />
+		<set name="weight" val="200" />
+		<set name="crystal_type" val="C" />
+		<set name="durability" val="600" />
+		<set name="p_def" val="36" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="9138" name="Santa's Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_santas_cap_i00" />
+		<set name="weight" val="10" />
+	</armor>
+	<armor id="9145" name="Little Angel Wings (Event)" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIR" />
+		<set name="icon" val="accessory_hair_ring_i00" />
+		<set name="weight" val="10" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="9158" name="Golden Circlet of Redemption" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="Accessary_gold_circlet_i00" />
+		<set name="weight" val="10" />
+	</armor>
+	<armor id="9159" name="Silver Circlet of Salvation" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="Accessary_gold_circlet_i01" />
+		<set name="weight" val="10" />
+	</armor>
+	<armor id="9160" name="Pig Wrangler's Cap" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="Accessary_middle_ages_i00" />
+		<set name="weight" val="10" />
+	</armor>
+	<armor id="9161" name="Santa's Antlers" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_santas_antler_i00" />
+		<set name="weight" val="10" />
+	</armor>
+	<armor id="9177" name="Shadow Item - Teddy Bear Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_bear_cap_i00" />
+		<set name="additional_name" val="Resurrection" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3263" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9178" name="Shadow Item - Piggy Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_pig_cap_i00" />
+		<set name="additional_name" val="Resurrection" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3263" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9179" name="Shadow Item - Jester Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_jester_cap_i00" />
+		<set name="additional_name" val="Resurrection" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3263" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9180" name="Shadow Item - Wizard Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_magic_cap_i00" />
+		<set name="additional_name" val="Resurrection" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3263" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9181" name="Shadow Item - Dapper Cap" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_dandy_cap_i00" />
+		<set name="additional_name" val="Resurrection" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3263" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9182" name="Shadow Item - Romantic Chapeau" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_romantic_chaperon_i00" />
+		<set name="additional_name" val="Resurrection" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3263" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9183" name="Shadow Item - Iron Circlet" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="FACE" />
+		<set name="icon" val="accessory_iron_circlet_i00" />
+		<set name="additional_name" val="Resurrection" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3263" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9184" name="Shadow Item - Teddy Bear Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_bear_cap_i00" />
+		<set name="additional_name" val="Escape" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3264" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9185" name="Shadow Item - Piggy Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_pig_cap_i00" />
+		<set name="additional_name" val="Escape" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3264" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9186" name="Shadow Item - Jester Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_jester_cap_i00" />
+		<set name="additional_name" val="Escape" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3264" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9187" name="Shadow Item - Wizard Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_magic_cap_i00" />
+		<set name="additional_name" val="Escape" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3264" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9188" name="Shadow Item - Dapper Cap" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_dandy_cap_i00" />
+		<set name="additional_name" val="Escape" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3264" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9189" name="Shadow Item - Romantic Chapeau" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_romantic_chaperon_i00" />
+		<set name="additional_name" val="Escape" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3264" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9190" name="Shadow Item - Iron Circlet" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="FACE" />
+		<set name="icon" val="accessory_iron_circlet_i00" />
+		<set name="additional_name" val="Escape" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3264" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9191" name="Shadow Item - Teddy Bear Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_bear_cap_i00" />
+		<set name="additional_name" val="Big Head" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3265" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9192" name="Shadow Item - Piggy Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_pig_cap_i00" />
+		<set name="additional_name" val="Big Head" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3265" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9193" name="Shadow Item - Jester Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_jester_cap_i00" />
+		<set name="additional_name" val="Big Head" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3265" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9194" name="Shadow Item - Wizard Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_magic_cap_i00" />
+		<set name="additional_name" val="Big Head" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3265" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9195" name="Shadow Item - Dapper Cap" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_dandy_cap_i00" />
+		<set name="additional_name" val="Big Head" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3265" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9196" name="Shadow Item - Romantic Chapeau" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_romantic_chaperon_i00" />
+		<set name="additional_name" val="Big Head" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3265" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9197" name="Shadow Item - Iron Circlet" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="FACE" />
+		<set name="icon" val="accessory_iron_circlet_i00" />
+		<set name="additional_name" val="Big Head" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3265" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9198" name="Shadow Item - Teddy Bear Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_bear_cap_i00" />
+		<set name="additional_name" val="Firework" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3266" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="9199" name="Shadow Item - Piggy Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_pig_cap_i00" />
+		<set name="additional_name" val="Firework" />
+		<set name="weight" val="10" />
+		<set name="durability" val="360" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3266" lvl="1" />
+		</skills>
+	</armor>
+</list>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="628" type="PARTY_ONE">
+		<name lang="en" val="Hunt of the Golden Ram Mercenary Force"/>
+		<name lang="ru" val="Наемники Золотого Овна"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="21508"/>	<!-- Splinter Stakato -->
+			<event type="MOBKILLED" val="21509"/>	<!-- Splinter Stakato Worker -->
+			<event type="MOBKILLED" val="21510"/>	<!-- Splinter Stakato Soldier -->
+			<event type="MOBKILLED" val="21511"/>	<!-- Splinter Stakato Drone -->
+			<event type="MOBKILLED" val="21512"/>	<!-- Splinter Stakato Drone -->
+			<event type="MOBKILLED" val="21513"/>	<!-- Needle Stakato -->
+			<event type="MOBKILLED" val="21514"/>	<!-- Needle Stakato Worker -->
+			<event type="MOBKILLED" val="21515"/>	<!-- Needle Stakato Soldier -->
+			<event type="MOBKILLED" val="21516"/>	<!-- Needle Stakato Drone -->
+			<event type="MOBKILLED" val="21517"/>	<!-- Needle Stakato Drone -->
+			<event type="MOBKILLED" val="21518"/>	<!-- Frenzy Stakato Soldier -->
+			<event type="QUEST_START" val="31554"/>	<!-- Kahman -->
+			<event type="QUEST_TALK" val="31554"/>	<!-- Kahman -->
+			<item id="7248"/>	<!-- Splinter Stakato Chitin -->
+			<item id="7249"/>	<!-- Needle Stakato Chitin -->
+		</setting>
+	</quest>
+</quests>

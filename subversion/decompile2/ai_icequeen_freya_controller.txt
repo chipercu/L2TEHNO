@@ -1,0 +1,851 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_freya_controller : default_npc
+{
+parameter:
+	string	MAKER_freya_1st = "schuttgart29_2314_100m1";
+	string	MAKER_freya_2nd = "schuttgart29_2314_102m1";
+	string	MAKER_freya_3rd = "schuttgart29_2314_104m1";
+	string	MAKER_freya_4th = "schuttgart29_2314_106m1";
+	string	MAKER_freya_ending = "schuttgart29_2314_108m1";
+	string	MAKER_ice_knight = "schuttgart29_2314_03m1";
+	string	MAKER_ice_castle = "schuttgart29_2314_06m1";
+	string	MAKER_freya_2nd_spelling = "schuttgart29_2314_102m3";
+	int	TIMER_1st_phase_success = 2314201;
+	int	TIMER_2nd_phase_success = 2314202;
+	int	TIMER_3rd_phase_success = 2314203;
+	int	TIMER_4th_phase_success = 2314204;
+	int	TIMER_SCENE_15 = 2314501;
+	int	TIMER_SCENE_15_END = 2314511;
+	int	scene_num_15 = 15;
+	int	scene_sec_15 = 53500;
+	int	TIMER_SCENE_16 = 2314502;
+	int	TIMER_SCENE_16_END = 2314512;
+	int	scene_num_16 = 16;
+	int	scene_sec_16 = 24100;
+	int	TIMER_SCENE_17 = 2314503;
+	int	TIMER_SCENE_17_END = 2314513;
+	int	scene_num_17 = 17;
+	int	scene_sec_17 = 21500;
+	int	TIMER_SCENE_18 = 2314504;
+	int	TIMER_SCENE_18_END = 2314514;
+	int	scene_num_18 = 18;
+	int	scene_sec_18 = 27000;
+	int	TIMER_SCENE_19 = 2314505;
+	int	TIMER_SCENE_19_END = 2314515;
+	int	scene_num_19 = 19;
+	int	scene_sec_19 = 16000;
+	int	TIMER_SCENE_20 = 2314506;
+	int	TIMER_SCENE_20_END = 2314516;
+	int	scene_num_20 = 20;
+	int	scene_sec_20 = 3000;
+	int	TIMER_SCENE_22 = 2314508;
+	int	TIMER_SCENE_22_END = 2314518;
+	int	scene_num_22 = 22;
+	int	scene_sec_22 = 22500;
+	int	TIMER_SCENE_23 = 2314509;
+	int	TIMER_SCENE_23_END = 2314519;
+	int	scene_num_23 = 23;
+	int	scene_sec_23 = 7000;
+	int	TIMER_knight = 2314205;
+	int	TIMER_castle = 2314206;
+	int	TIMER_start = 2314207;
+	int	TIMER_hold_desire = 2314301;
+	int	TIMER_ZONEINFO_CHG = 2314302;
+	int	TIMER_reset_routine = 2314305;
+	int	TIMER_force_defeat = 2314023;
+	int	TIMER_2nd_hard_timer = 2314026;
+	int	FLAG_SPAWN = 231400;
+	int	FLAG_NO_SPAWN = 231401;
+	int	phase_to_phase = 60000;
+	string	IceQueen_DoorName = "icequeen_door_001";
+	int	is_hard_mode = 0;
+	int	debug_mode = 0;
+
+handler:
+	EventHandler CREATED(maker0,i0)
+	{
+		if( debug_mode )
+		{
+			myself->Shout("controller spawned");
+		}
+		( myself + 1128 ) = 23140001;
+		( myself + 1136 ) = FLAG_NO_SPAWN;
+		( myself + 1144 ) = 0;
+		( myself + 1152 ) = 0;
+		( myself + 1160 ) = 0;
+		( myself + 1168 ) = 0;
+		( myself + 1176 ) = 6;
+		( myself + 1184 ) = 0;
+		myself->CreateOnePrivateEx(1018919,"ai_icequeen_freya_entrance",0,0,114394,-112383,-11200,0,is_hard_mode,0,0);
+		gg->Castle_GateOpenCloseEx(IceQueen_DoorName,0,myself->InstantZone_GetId());
+	}
+
+	EventHandler SEE_CREATURE(creature,i0,maker0)
+	{
+		if( ( myself + 1160 ) == 0 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("SEE_CREATURE");
+				myself->Say("PCX Dp˜ : " + gg->OwnItemCount(creature,57));
+				myself->Say("3423 : opening ðœ ÝµXà , Ü‘");
+				myself->Say("3424 : 2˜tˆ€0 Ü‘.");
+				myself->Say("3425 : 3˜tˆ€0 Ü‘.");
+				myself->Say("else : Á Ä‰");
+			}
+			if( creature + 68 ) == || myself->IsInCategory(12,( creature + 7380 )) == 1 || myself->IsInCategory(123,( creature + 7380 )) == 1 )
+			{
+				( myself + 1160 ) = 1;
+				if( debug_mode == 1 && gg->OwnItemCount(creature,57) == 3423 )
+				{
+					myself->AddTimerEx(TIMER_SCENE_15_END,( 4 * 1000 ));
+				}
+				else if( debug_mode == 1 && gg->OwnItemCount(creature,57) == 3424 )
+				{
+					myself->AddTimerEx(TIMER_1st_phase_success,( 4 * 1000 ));
+				}
+				else if( debug_mode == 1 && gg->OwnItemCount(creature,57) == 3425 )
+				{
+					myself->AddTimerEx(TIMER_2nd_phase_success,( 7 * 1000 ));
+				}
+				else
+				{
+					myself->AddTimerEx(TIMER_SCENE_15,( 10 * 1000 ));
+				}
+			}
+		}
+	}
+
+	EventHandler SCRIPT_EVENT(script_event_arg1,script_event_arg2,c0,i0,maker0)
+	{
+		if( script_event_arg1 == 23140014 )
+		{
+			if( ( myself + 1144 ) == 0 )
+			{
+				( myself + 1144 ) = 1;
+				gg->BroadcastOnScreenMsgStr(( myself + 1480 ),4000,2,0,0,0,0,1,7000,0,gg->MakeFString(1801086,"","","","",""));
+				gg->Castle_GateOpenCloseEx(IceQueen_DoorName,1,myself->InstantZone_GetId());
+				c0 = gg->GetCreatureFromIndex(( myself + 1152 ));
+				if( myself->IsNullCreature(c0) == 0 )
+				{
+					gg->SendScriptEvent(c0,23140014,0);
+				}
+				( myself + 1136 ) = FLAG_SPAWN;
+				myself->AddTimerEx(TIMER_knight,1000);
+				myself->AddTimerEx(TIMER_castle,1000);
+			}
+			else if( ( myself + 1144 ) == 1 )
+			{
+				if( debug_mode )
+				{
+					myself->Shout("Phase1 battle already started. event duplicated");
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140016 )
+		{
+			if( debug_mode )
+			{
+				myself->Shout("Phase1 battle end");
+			}
+			( myself + 1136 ) = FLAG_NO_SPAWN;
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_knight);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,FLAG_NO_SPAWN,0,0);
+			}
+			c0 = gg->GetCreatureFromIndex(( myself + 1152 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				gg->SendScriptEvent(c0,23140055,0);
+			}
+			if( script_event_arg2 == 1 )
+			{
+				if( debug_mode )
+				{
+					myself->Shout("Phase1 battle success. wait 1min");
+				}
+				myself->AddTimerEx(TIMER_SCENE_16,1000);
+				myself->BroadcastScriptEventEx(23140020,1,0,4000);
+			}
+			else if( script_event_arg2 == 2 )
+			{
+				if( debug_mode )
+				{
+					myself->Shout("Phase1 battle failed.");
+				}
+				myself->AddTimerEx(TIMER_SCENE_22,1000);
+			}
+		}
+		else if( script_event_arg1 == 23140017 )
+		{
+			if( debug_mode )
+			{
+				myself->Shout("Phase2 battle end");
+			}
+			( myself + 1136 ) = FLAG_NO_SPAWN;
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_knight);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,FLAG_NO_SPAWN,0,0);
+			}
+			if( script_event_arg2 == 1 )
+			{
+				if( debug_mode )
+				{
+					myself->Shout("Phase2 battle success. wait 1min");
+				}
+				c0 = gg->GetCreatureFromIndex(( myself + 1152 ));
+				if( myself->IsNullCreature(c0) == 0 )
+				{
+					gg->SendScriptEvent(c0,23140050,1000);
+				}
+				myself->AddTimerEx(TIMER_SCENE_17,phase_to_phase);
+				myself->BroadcastScriptEventEx(23140020,2,0,4000);
+			}
+			else if( script_event_arg2 == 2 )
+			{
+				if( debug_mode )
+				{
+					myself->Shout("Phase2 battle failed.");
+				}
+				myself->AddTimerEx(TIMER_SCENE_22,1000);
+			}
+		}
+		else if( script_event_arg1 == 23140018 )
+		{
+			if( debug_mode )
+			{
+				myself->Shout("Phase3 battle end");
+			}
+			( myself + 1136 ) = FLAG_NO_SPAWN;
+			if( script_event_arg2 == 1 )
+			{
+				if( debug_mode )
+				{
+					myself->Shout("Phase3 battle success. no wait and goint 4th phase");
+				}
+				myself->AddTimerEx(TIMER_hold_desire,1000);
+			}
+			else if( script_event_arg2 == 2 )
+			{
+				if( debug_mode )
+				{
+					myself->Shout("Phase3 battle failed.");
+				}
+				myself->AddTimerEx(TIMER_SCENE_22,1000);
+			}
+		}
+		else if( script_event_arg1 == 23140019 )
+		{
+			if( debug_mode )
+			{
+				myself->Shout("Phase4 battle end");
+			}
+			( myself + 1136 ) = FLAG_NO_SPAWN;
+			c0 = gg->GetCreatureFromIndex(( myself + 1152 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				gg->SendScriptEvent(c0,23140055,0);
+				gg->SendScriptEvent(c0,23140019,0);
+			}
+			if( script_event_arg2 == 1 )
+			{
+				if( debug_mode )
+				{
+					myself->Shout("Phase4 battle success.");
+				}
+				myself->AddTimerEx(TIMER_SCENE_19,1000);
+				i0 = myself->InstantZone_GetId();
+				maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_knight);
+				if( gg->IsNull(maker0) == 0 )
+				{
+					gg->SendMakerScriptEvent(maker0,23140006,0,0);
+				}
+				myself->BroadcastScriptEventEx(23140020,4,0,4000);
+			}
+			else if( script_event_arg2 == 2 )
+			{
+				if( debug_mode )
+				{
+					myself->Shout("Phase4 battle failed.");
+				}
+				myself->AddTimerEx(TIMER_SCENE_22,1000);
+			}
+		}
+		else if( script_event_arg1 == 23140022 )
+		{
+			c0 = gg->GetCreatureFromIndex(script_event_arg2);
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				( myself + 1152 ) = script_event_arg2;
+			}
+		}
+		else if( script_event_arg1 == 23140048 )
+		{
+			c0 = gg->GetCreatureFromIndex(( myself + 1152 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				gg->SendScriptEvent(c0,23140055,0);
+			}
+			( myself + 1168 ) = 1;
+		}
+		else if( script_event_arg1 == 23140049 )
+		{
+			( myself + 1168 ) = 0;
+		}
+		else if( script_event_arg1 == 23140053 )
+		{
+			myself->AddTimerEx(TIMER_SCENE_23,1000);
+		}
+		else if( script_event_arg1 == 23140057 )
+		{
+			c0 = gg->GetCreatureFromIndex(( myself + 1152 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				gg->SendScriptEvent(c0,23140057,0);
+			}
+		}
+		else if( script_event_arg1 == 23140058 )
+		{
+			c0 = gg->GetCreatureFromIndex(( myself + 1152 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				gg->SendScriptEvent(c0,23140058,0);
+			}
+		}
+		else if( script_event_arg1 == 23141234 )
+		{
+			myself->AddTimerEx(TIMER_SCENE_22_END,1);
+		}
+		else if( script_event_arg1 == 23140064 )
+		{
+			if( ( myself + 1136 ) == FLAG_NO_SPAWN )
+			{
+				c0 = gg->GetCreatureFromIndex(script_event_arg2);
+				if( myself->IsNullCreature(c0) == 0 )
+				{
+					gg->SendScriptEvent(c0,23140065,0);
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140066 || script_event_arg1 == 23140067 || script_event_arg1 == 23140068 )
+		{
+			c0 = gg->GetCreatureFromIndex(( myself + 1152 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				gg->SendScriptEvent(c0,script_event_arg1,0);
+			}
+		}
+		else if( script_event_arg1 == 23140070 )
+		{
+			if( script_event_arg2 == 1 )
+			{
+				gg->BroadcastOnScreenMsgStr(( myself + 1480 ),4000,5,1,0,0,0,1,5000,0,gg->MakeFString(1801189,"","","","",""));
+			}
+			else
+			{
+				gg->BroadcastOnScreenMsgStr(( myself + 1480 ),4000,5,1,0,0,0,1,5000,0,gg->MakeFString(1801111,"","","","",""));
+			}
+		}
+		else if( script_event_arg1 == 23140059 )
+		{
+			c0 = gg->GetCreatureFromIndex(( myself + 1152 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				gg->SendScriptEvent(c0,script_event_arg1,0);
+			}
+		}
+	}
+
+	EventHandler TIMER_FIRED_EX(timer_id,i0,i1,i2,maker0,c0)
+	{
+		if( timer_id == TIMER_1st_phase_success )
+		{
+			gg->BroadcastOnScreenMsgStr(( myself + 1480 ),4000,2,0,0,0,0,1,7000,0,gg->MakeFString(1801087,"","","","",""));
+			( myself + 1128 ) = 23140002;
+			( myself + 1136 ) = FLAG_SPAWN;
+			myself->AddTimerEx(TIMER_knight,1000);
+			myself->AddTimerEx(TIMER_castle,1000);
+			if( is_hard_mode == 1 )
+			{
+				if( debug_mode )
+				{
+					myself->Say("XÜ¨Ü. 6„ Àt8 Ü‘.");
+				}
+				myself->AddTimerEx(TIMER_2nd_hard_timer,1000);
+			}
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_freya_2nd);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,1001,0,0);
+			}
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_freya_2nd_spelling);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,1001,0,0);
+			}
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_knight);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,FLAG_SPAWN,0,0);
+				gg->SendMakerScriptEvent(maker0,1001,0,0);
+				gg->SendMakerScriptEvent(maker0,23140002,0,0);
+			}
+		}
+		else if( timer_id == TIMER_2nd_phase_success )
+		{
+			gg->BroadcastOnScreenMsgStr(( myself + 1480 ),4000,2,0,0,0,0,1,7000,0,gg->MakeFString(1801088,"","","","",""));
+			( myself + 1128 ) = 23140003;
+			( myself + 1136 ) = FLAG_SPAWN;
+			myself->AddTimerEx(TIMER_knight,1000);
+			myself->AddTimerEx(TIMER_castle,1000);
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_freya_3rd);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,1001,0,0);
+			}
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_knight);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,FLAG_SPAWN,0,0);
+				gg->SendMakerScriptEvent(maker0,1001,0,0);
+				gg->SendMakerScriptEvent(maker0,23140003,0,0);
+			}
+		}
+		else if( timer_id == TIMER_3rd_phase_success )
+		{
+			gg->BroadcastOnScreenMsgStr(( myself + 1480 ),4000,2,0,0,0,0,1,7000,0,gg->MakeFString(1801089,"","","","",""));
+			( myself + 1128 ) = 23140005;
+			( myself + 1136 ) = FLAG_SPAWN;
+			myself->AddTimerEx(TIMER_knight,1000);
+			myself->AddTimerEx(TIMER_castle,1000);
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_freya_4th);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				if( is_hard_mode == 1 )
+				{
+				}
+				else
+				{
+					gg->SendMakerScriptEvent(maker0,1001,0,0);
+				}
+			}
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_knight);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,23140005,0,0);
+			}
+		}
+		else if( timer_id == TIMER_4th_phase_success )
+		{
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_freya_ending);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,1001,0,0);
+			}
+		}
+		else if( timer_id == TIMER_knight )
+		{
+			if( ( myself + 1136 ) == FLAG_SPAWN )
+			{
+				if( is_hard_mode == 1 )
+				{
+					select((myself+1128))
+					{
+						case 23140001:
+							i1 = 25;
+							i2 = 4;
+							break;
+						case 23140002:
+							i1 = 25;
+							i2 = 4;
+							break;
+						case 23140003:
+							i1 = 20;
+							i2 = 4;
+							break;
+						case 23140005:
+							i1 = 20;
+							i2 = 4;
+							break;
+					}
+				}
+				else
+				{
+					select((myself+1128))
+					{
+						case 23140001:
+							i1 = 30;
+							i2 = 1;
+							break;
+						case 23140002:
+							i1 = 30;
+							i2 = 2;
+							break;
+						case 23140003:
+							i1 = 45;
+							i2 = 2;
+							break;
+						case 23140005:
+							i1 = 30;
+							i2 = 2;
+							break;
+					}
+				}
+				i0 = myself->InstantZone_GetId();
+				maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_knight);
+				if( gg->IsNull(maker0) == 0 )
+				{
+					if( ( myself + 1168 ) == 0 )
+					{
+						gg->SendMakerScriptEvent(maker0,23140015,i2,0);
+					}
+				}
+				if( debug_mode )
+				{
+					myself->Say("0¬ ¤ðorÀÁ„ ÀÜ timer : " + i1 + " È¬ : " + i2);
+				}
+				if( debug_mode )
+				{
+					myself->Say("¬Ü : " + gg->GetDateTime(0,4) + "„ " + gg->GetDateTime(0,5) + "");
+				}
+				myself->AddTimerEx(TIMER_knight,( i1 * 1000 ));
+			}
+			else if( ( myself + 1136 ) == FLAG_NO_SPAWN )
+			{
+			}
+		}
+		else if( timer_id == TIMER_castle )
+		{
+			if( ( myself + 1136 ) == FLAG_SPAWN )
+			{
+				if( is_hard_mode == 1 )
+				{
+					select((myself+1128))
+					{
+						case 23140001:
+							i1 = 25;
+							break;
+						case 23140002:
+							i1 = 20;
+							break;
+						case 23140003:
+							i1 = 20;
+							break;
+						case 23140005:
+							i1 = 20;
+							break;
+					}
+				}
+				else
+				{
+					select((myself+1128))
+					{
+						case 23140001:
+							i1 = 45;
+							break;
+						case 23140002:
+							i1 = 30;
+							break;
+						case 23140003:
+							i1 = 30;
+							break;
+						case 23140005:
+							i1 = 0;
+							break;
+					}
+				}
+				if( i1 > 0 )
+				{
+					i0 = myself->InstantZone_GetId();
+					maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_castle);
+					if( gg->IsNull(maker0) == 0 )
+					{
+						gg->SendMakerScriptEvent(maker0,23140015,0,0);
+						if( is_hard_mode == 1 )
+						{
+							if( gg->Rand(2) == 1 )
+							{
+								gg->SendMakerScriptEvent(maker0,23140015,0,0);
+							}
+						}
+					}
+					myself->AddTimerEx(TIMER_castle,( i1 * 1000 ));
+				}
+			}
+			else if( ( myself + 1136 ) == FLAG_NO_SPAWN )
+			{
+			}
+		}
+		else if( timer_id == TIMER_SCENE_15 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("TIMER_SCENE_15");
+			}
+			myself->StartScenePlayerAround(( myself + 1480 ),scene_num_15,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+			myself->AddTimerEx(TIMER_SCENE_15_END,scene_sec_15);
+		}
+		else if( timer_id == TIMER_SCENE_15_END )
+		{
+			if( debug_mode )
+			{
+				myself->Say("$Ý …Ì. ¬¤0 ¤ð.");
+			}
+			( myself + 1136 ) = FLAG_SPAWN;
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_freya_1st);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,1001,0,0);
+			}
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_knight);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,1001,0,0);
+				gg->SendMakerScriptEvent(maker0,23140001,0,0);
+			}
+			myself->AddTimerEx(TIMER_start,( ( 5 * 60 ) * 1000 ));
+		}
+		else if( timer_id == TIMER_SCENE_16 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("TIMER_SCENE_16");
+			}
+			myself->StartScenePlayerAround(( myself + 1480 ),scene_num_16,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+			myself->AddTimerEx(TIMER_SCENE_16_END,scene_sec_16);
+		}
+		else if( timer_id == TIMER_SCENE_16_END )
+		{
+			if( debug_mode )
+			{
+				myself->Say("SCENE P1->P2 …Ì.  0Ü 1„");
+			}
+			c0 = gg->GetCreatureFromIndex(( myself + 1152 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				gg->SendScriptEvent(c0,23140050,0);
+			}
+			myself->AddTimerEx(TIMER_1st_phase_success,phase_to_phase);
+		}
+		else if( timer_id == TIMER_SCENE_17 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("TIMER_SCENE_17");
+			}
+			myself->StartScenePlayerAround(( myself + 1480 ),scene_num_17,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_freya_2nd_spelling);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,1000,0,0);
+			}
+			myself->AddTimerEx(TIMER_ZONEINFO_CHG,( 15 * 1000 ));
+			myself->AddTimerEx(TIMER_SCENE_17_END,scene_sec_17);
+		}
+		else if( timer_id == TIMER_SCENE_17_END )
+		{
+			if( debug_mode )
+			{
+				myself->Say("SCENE P2->P3 …Ì. P3 Ü‘.");
+			}
+			myself->AddTimerEx(TIMER_2nd_phase_success,1000);
+		}
+		else if( timer_id == TIMER_SCENE_18 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("TIMER_SCENE_18");
+			}
+			gg->Castle_GateOpenCloseEx(IceQueen_DoorName,0,myself->InstantZone_GetId());
+			myself->StartScenePlayerAround(( myself + 1480 ),scene_num_18,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+			myself->AddTimerEx(TIMER_SCENE_18_END,scene_sec_18);
+		}
+		else if( timer_id == TIMER_SCENE_18_END )
+		{
+			if( debug_mode )
+			{
+				myself->Say("SCENE P3->P4 …Ì. P4 Ü‘.");
+			}
+			gg->Castle_GateOpenCloseEx(IceQueen_DoorName,1,myself->InstantZone_GetId());
+			myself->BroadcastScriptEvent(23140049,0,4000);
+			myself->AddTimerEx(TIMER_3rd_phase_success,1000);
+		}
+		else if( timer_id == TIMER_SCENE_19 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("TIMER_SCENE_19");
+			}
+			myself->StartScenePlayerAround(( myself + 1480 ),scene_num_19,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+			myself->AddTimerEx(TIMER_ZONEINFO_CHG,500);
+			gg->Castle_GateOpenCloseEx(IceQueen_DoorName,0,myself->InstantZone_GetId());
+			myself->AddTimerEx(TIMER_SCENE_19_END,scene_sec_19);
+		}
+		else if( timer_id == TIMER_SCENE_19_END )
+		{
+			if( debug_mode )
+			{
+				myself->Shout("| Ô) 1 …Ì.");
+			}
+			myself->AddTimerEx(TIMER_4th_phase_success,1000);
+		}
+		else if( timer_id == TIMER_SCENE_22 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("TIMER_SCENE_22");
+			}
+			myself->StartScenePlayerAround(( myself + 1480 ),scene_num_22,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+			myself->BroadcastScriptEvent(23140048,0,4000);
+			myself->BroadcastScriptEvent(23140020,0,4000);
+			myself->AddTimerEx(TIMER_SCENE_22_END,scene_sec_22);
+		}
+		else if( timer_id == TIMER_SCENE_22_END )
+		{
+			if( debug_mode )
+			{
+				myself->Shout("PC (0 ðœ …Ì.");
+			}
+			myself->BroadcastScriptEvent(23140049,0,4000);
+			c0 = gg->GetCreatureFromIndex(( myself + 1152 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				gg->SendScriptEvent(c0,23140059,0);
+			}
+			myself->AddTimerEx(TIMER_reset_routine,2000);
+		}
+		else if( timer_id == TIMER_SCENE_23 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("TIMER_SCENE_23");
+			}
+			myself->StartScenePlayerAround(( myself + 1480 ),scene_num_23,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+			myself->BroadcastScriptEvent(23140048,0,4000);
+			myself->AddTimerEx(TIMER_SCENE_23_END,scene_sec_23);
+		}
+		else if( timer_id == TIMER_SCENE_23_END )
+		{
+			if( debug_mode )
+			{
+				myself->Say("Y0¬è¥ ðœ …Ì.");
+			}
+			myself->BroadcastScriptEvent(23140049,0,4000);
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_knight);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,23140054,0,0);
+			}
+		}
+		else if( timer_id == TIMER_ZONEINFO_CHG )
+		{
+			c0 = gg->GetCreatureFromIndex(( myself + 1152 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				gg->SendScriptEvent(c0,23140021,0);
+			}
+		}
+		else if( timer_id == TIMER_hold_desire )
+		{
+			myself->BroadcastScriptEvent(23140048,0,4000);
+			myself->AddTimerEx(TIMER_SCENE_18,1000);
+		}
+		else if( timer_id == TIMER_start )
+		{
+			gg->SendScriptEvent(( myself + 1480 ),23140014,0);
+			myself->BroadcastScriptEvent(23140010,1,4000);
+		}
+		else if( timer_id == TIMER_2nd_hard_timer )
+		{
+			if( ( myself + 1128 ) == 23140002 && ( myself + 1136 ) == FLAG_NO_SPAWN )
+			{
+				if( debug_mode )
+				{
+					myself->Shout("Y0¬è¥t Ü´\ ý´ Àt8 …Ì");
+				}
+			}
+			else if( ( myself + 1176 ) >= 1 && ( myself + 1184 ) == 0 )
+			{
+				( myself + 1176 ) = ( ( myself + 1176 ) - 1 );
+				( myself + 1184 ) = 59;
+			}
+			else
+			{
+				( myself + 1184 ) = ( ( myself + 1184 ) - 1 );
+			}
+			if( ( myself + 1176 ) == 0 && ( myself + 1184 ) == 1 )
+			{
+				myself->AddTimerEx(TIMER_force_defeat,1000);
+			}
+			else if( ( myself + 1176 ) == 0 && ( myself + 1184 ) < 10 )
+			{
+				myself->AddTimerEx(TIMER_2nd_hard_timer,1000);
+			}
+			else
+			{
+				c0 = gg->GetCreatureFromIndex(( myself + 1152 ));
+				if( myself->IsNullCreature(c0) == 0 )
+				{
+					if( ( myself + 1168 ) == 1 )
+					{
+						gg->SendScriptEventEx(c0,23140061,0,0);
+						myself->AddTimerEx(TIMER_2nd_hard_timer,1000);
+					}
+					else
+					{
+						gg->SendScriptEventEx(c0,23140061,( myself + 1176 ),( myself + 1184 ));
+						myself->AddTimerEx(TIMER_2nd_hard_timer,1000);
+					}
+				}
+			}
+		}
+		else if( timer_id == TIMER_force_defeat )
+		{
+			if( debug_mode )
+			{
+				myself->Say("6„ Àt8 (0");
+			}
+			i0 = myself->InstantZone_GetId();
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_knight);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,FLAG_NO_SPAWN,0,0);
+			}
+			myself->AddTimerEx(TIMER_SCENE_22,1000);
+		}
+		else if( timer_id == TIMER_reset_routine )
+		{
+			myself->BroadcastScriptEvent(23140020,0,4000);
+			maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_ice_knight);
+			if( gg->IsNull(maker0) == 0 )
+			{
+				gg->SendMakerScriptEvent(maker0,23140063,0,0);
+			}
+			c0 = gg->GetCreatureFromIndex(( myself + 1152 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				gg->SendScriptEvent(c0,23140063,0);
+			}
+			myself->InstantZone_Finish(5);
+		}
+	}
+
+}

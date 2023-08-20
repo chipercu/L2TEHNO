@@ -1,0 +1,77 @@
+<html><title>L2Open Admin Menu</title><body>
+<center>
+<table width=270 border=0 bgcolor="FFFF84">
+<tr>
+<td><button value="Char Menu" action="bypass -h admin_char_manage" width=65 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Events" action="bypass -h admin_show_html events/events.htm" width=65 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Server" action="bypass -h admin_show_html admserver.htm" width=65 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Other" action="bypass -h admin_show_html other.htm" width=65 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+<br>
+<font color="LEVEL">Other Options:</font><br1>
+<table width="300">
+<tr>
+<td><button value="Item" action="bypass -h admin_create_item" width=130 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Start Oly" action="bypass -h admin_oly_start" width=130 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+<br>
+Clan related:<br1>
+<table width=240>
+<tr>
+<td>Quick Box:</td>
+<td><edit var="qbox" width=100 height=10></td>
+</tr>
+</table>
+<br>
+<table width=240>
+<tr>
+<td><button value="Create" action="bypass -h admin_pledge create $qbox" width=120 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Delete" action="bypass -h admin_pledge dismiss $qbox" width=120 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+<tr>
+<td><button value="SetLevel" action="bypass -h admin_pledge setlevel $qbox" width=120 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Reputation" action="bypass -h admin_pledge addrep $qbox" width=120 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+<tr>
+<td><button value="Castle/CH" action="bypass -h admin_siege" width=120 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Fortress" action="bypass -h admin_fortsiege" width=120 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+<tr>
+<td><button value="ResetCreate" action="bypass -h admin_pledge resetcreate" width=120 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="ResetWait" action="bypass -h admin_pledge resetwait" width=120 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+<br>
+Olympiad:<br1>
+<table width=240>
+<tr>
+<td>Char Name:</td>
+<td><edit var="name" width=100 height=10></td>
+</tr>
+<tr><td>Olympiad Points:</td>
+<td><edit var="point" width=100 height=10></td>
+</tr>
+</table>
+<br>
+<table width=240>
+<tr>
+<td><button value="Save Oly" action="bypass -h admin_oly_save" width=70 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Manual Hero" action="bypass -h admin_manualhero" width=75 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Add Oly Point" action="bypass -h admin_add_oly_points $name $point" width=80 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+<br>
+Seven Signs:<br1>
+<table width=300>
+<tr>
+<td><button value="Show Mammon" action="bypass -h admin_show_mammonn" width=130 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Hide Mammon" action="bypass -h admin_hide_mammon" width=130 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+<tr>
+<td><button value="Mammon Spawn" action="bypass -h admin_list_spawns" width=130 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Find Mammon" action="bypass -h admin_find_mammon" width=130 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+</body></html>

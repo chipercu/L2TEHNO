@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="10667" name="Sirra's Blade {PvP}" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_sirr_blade_i01"/>
+		<set name="additional_name" val="Haste"/>
+		<set name="weight" val="1300"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3068" lvl="3"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10668" name="Sirra's Blade {PvP}" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_sirr_blade_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1300"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3013" lvl="3"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10669" name="Sirra's Blade {PvP}" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_sirr_blade_i01"/>
+		<set name="additional_name" val="Critical Poison"/>
+		<set name="weight" val="1300"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<triggers>
+			<trigger id="3024" level="1" type="CRIT" chance="100" />
+		</triggers>
+		<skills>
+			<skill id="3552" lvl="3"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10670" name="Sword of Ipos {PvP}" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_sword_of_ipos_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="305"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3050" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10671" name="Sword of Ipos {PvP}" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_sword_of_ipos_i01"/>
+		<set name="additional_name" val="Haste"/>
+		<set name="weight" val="1820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="305"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3068" lvl="3"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10672" name="Sword of Ipos {PvP}" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_sword_of_ipos_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="305"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3013" lvl="3"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10673" name="Barakiel's Axe {PvP}" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_barakiel_axe_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3013" lvl="3"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10674" name="Barakiel's Axe {PvP}" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_barakiel_axe_i01"/>
+		<set name="additional_name" val="Haste"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3068" lvl="3"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10675" name="Barakiel's Axe {PvP}" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_barakiel_axe_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3050" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10676" name="Behemoth's Tuning Fork {PvP}" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1890"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="305"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3050" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10677" name="Behemoth's Tuning Fork {PvP}" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1890"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="305"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3013" lvl="3"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10678" name="Behemoth's Tuning Fork {PvP}" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01"/>
+		<set name="additional_name" val="Anger"/>
+		<set name="weight" val="1890"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="305"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3057" lvl="2"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10679" name="Naga Storm {PvP}" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_naga_storm_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="930"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="220"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="433"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="12"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3051" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10680" name="Naga Storm {PvP}" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_naga_storm_i01"/>
+		<set name="additional_name" val="Critical Damage"/>
+		<set name="weight" val="930"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="220"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="433"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="12"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3066" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10681" name="Naga Storm {PvP}" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_naga_storm_i01"/>
+		<set name="additional_name" val="Back Blow"/>
+		<set name="weight" val="930"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="220"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="433"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="12"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3063" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10682" name="Tiphon's Spear {PvP}" type="POLE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_tiphon_spear_i01"/>
+		<set name="additional_name" val="Critical Stun"/>
+		<set name="weight" val="1820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<triggers>
+			<trigger id="3070" level="3" type="CRIT" chance="100" />
+		</triggers>
+		<skills>
+			<skill id="3552" lvl="4"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10683" name="Tiphon's Spear {PvP}" type="POLE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_tiphon_spear_i01"/>
+		<set name="additional_name" val="Long Blow"/>
+		<set name="weight" val="1820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="pAtkRange" val="30"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3552" lvl="4"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10684" name="Tiphon's Spear {PvP}" type="POLE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_tiphon_spear_i01"/>
+		<set name="additional_name" val="Wild Blow"/>
+		<set name="weight" val="1820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="poleAngle" val="30"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3552" lvl="4"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10685" name="Shyeed's Bow {PvP}" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_shyid_bow_i01"/>
+		<set name="additional_name" val="Cheap Shot"/>
+		<set name="weight" val="1640"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="571"/>
+		<set name="m_dam" val="133"/>
+		<set name="atk_speed" val="227"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="12"/>
+		<set name="mp_consume" val="10"/>
+		<set name="cheapShot" val="1"/>
+		<set name="cheapShotChance" val="30"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3552" lvl="3"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10686" name="Shyeed's Bow {PvP}" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_shyid_bow_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1640"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="571"/>
+		<set name="m_dam" val="133"/>
+		<set name="atk_speed" val="227"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="12"/>
+		<set name="mp_consume" val="10"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3050" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10687" name="Shyeed's Bow {PvP}" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_shyid_bow_i01"/>
+		<set name="additional_name" val="Quick Recovery"/>
+		<set name="weight" val="1640"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="571"/>
+		<set name="m_dam" val="133"/>
+		<set name="atk_speed" val="227"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="12"/>
+		<set name="mp_consume" val="10"/>
+		<set name="atk_reuse" val="1250"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3552" lvl="3"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10688" name="Sobekk's Hurricane {PvP}" type="DUALFIST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i01"/>
+		<set name="additional_name" val="Rsk. Haste"/>
+		<set name="weight" val="1330"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="305"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3056" lvl="2"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10689" name="Sobekk's Hurricane {PvP}" type="DUALFIST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i01"/>
+		<set name="additional_name" val="Haste"/>
+		<set name="weight" val="1330"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="305"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3068" lvl="3"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10690" name="Sobekk's Hurricane {PvP}" type="DUALFIST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i01"/>
+		<set name="additional_name" val="Critical Drain"/>
+		<set name="weight" val="1330"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="305"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<triggers>
+			<trigger id="3039" level="6" type="CRIT" chance="100" />
+		</triggers>
+		<skills>
+			<skill id="3552" lvl="3"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10691" name="Themis' Tongue {PvP}" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_tongue_of_themis_i01"/>
+		<set name="additional_name" val="Mana Up"/>
+		<set name="weight" val="820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="201"/>
+		<set name="m_dam" val="162"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3014" lvl="3"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10692" name="Themis' Tongue {PvP}" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_tongue_of_themis_i01"/>
+		<set name="additional_name" val="Magic Mental Shield"/>
+		<set name="weight" val="820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="201"/>
+		<set name="m_dam" val="162"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<triggers>
+			<trigger id="1035" level="4" type="SUPPORT_MAGICAL_SKILL_USE" chance="50" />
+		</triggers>
+		<skills>
+			<skill id="3552" lvl="3"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10693" name="Themis' Tongue {PvP}" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_tongue_of_themis_i01"/>
+		<set name="additional_name" val="Magic Focus"/>
+		<set name="weight" val="820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="201"/>
+		<set name="m_dam" val="162"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<triggers>
+			<trigger id="1077" level="3" type="SUPPORT_MAGICAL_SKILL_USE" chance="20" />
+		</triggers>
+		<skills>
+			<skill id="3552" lvl="3"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10694" name="Cabrio's Hand {PvP}" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_hand_of_cabrio_i01"/>
+		<set name="additional_name" val="Updown"/>
+		<set name="weight" val="1510"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="201"/>
+		<set name="m_dam" val="162"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3048" lvl="2"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10695" name="Cabrio's Hand {PvP}" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_hand_of_cabrio_i01"/>
+		<set name="additional_name" val="Mana Up"/>
+		<set name="weight" val="1510"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="201"/>
+		<set name="m_dam" val="162"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3014" lvl="2"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10696" name="Cabrio's Hand {PvP}" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_hand_of_cabrio_i01"/>
+		<set name="additional_name" val="Magic Silence"/>
+		<set name="weight" val="1510"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="201"/>
+		<set name="m_dam" val="162"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<triggers>
+			<trigger id="3074" level="2" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="10" />
+		</triggers>
+		<skills>
+			<skill id="3552" lvl="3"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10697" name="Daimon Crystal {PvP}" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i01"/>
+		<set name="additional_name" val="Mana Up"/>
+		<set name="weight" val="880"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="245"/>
+		<set name="m_dam" val="177"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3014" lvl="2"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10698" name="Daimon Crystal {PvP}" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i01"/>
+		<set name="additional_name" val="Acumen"/>
+		<set name="weight" val="880"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="245"/>
+		<set name="m_dam" val="177"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="3047" lvl="2"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="10699" name="Daimon Crystal {PvP}" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i01"/>
+		<set name="additional_name" val="Magic Mental Shield"/>
+		<set name="weight" val="880"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="245"/>
+		<set name="m_dam" val="177"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="tradeable" val="false"/>
+		<set name="price" val="26968400"/>
+		<set name="dropable" val="false"/>
+		<triggers>
+			<trigger id="1035" level="4" type="SUPPORT_MAGICAL_SKILL_USE" chance="50" />
+		</triggers>
+		<skills>
+			<skill id="3552" lvl="3"/>
+		</skills>
+		<set name="isPvP" val="true"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+</list>

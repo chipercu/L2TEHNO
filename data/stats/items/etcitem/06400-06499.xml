@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="6400" name="Badge of Hyena" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="6401" name="Badge of Fox" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="6402" name="Badge of Wolf" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="6403" name="Star Shard" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fairy_fire_i00" />
+		<set name="stackable" val="true" />
+		<skills>
+			<skill id="2023" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="6404" name="Gunpowder" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_powder_black_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="6405" name="Magnesium" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="6406" name="Firework" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_small_ultra_bomb_i00" />
+		<set name="stackable" val="true" />
+		<skills>
+			<skill id="2024" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="6407" name="Large Firework" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_ultra_bomb_i00" />
+		<set name="stackable" val="true" />
+		<skills>
+			<skill id="2025" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="6409" name="2006 Battle Tournament - CP Potion" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_cp_potion_i01" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="500" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="6410" name="2006 Battle Tournament - Quick Healing Potion" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="180" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="6411" name="Small Nimble Green Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i07" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="138" />
+	</etcitem>
+	<etcitem id="6412" name="Small Ugly Green Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i07" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="141" />
+	</etcitem>
+	<etcitem id="6413" name="Small Pudgy Green Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i07" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="153" />
+	</etcitem>
+	<etcitem id="6414" name="Nimble Green Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i07" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="167" />
+	</etcitem>
+	<etcitem id="6415" name="Ugly Green Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i07" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="187" />
+	</etcitem>
+	<etcitem id="6416" name="Pudgy Green Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i07" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="208" />
+	</etcitem>
+	<etcitem id="6417" name="Large Nimble Green Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i07" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="225" />
+	</etcitem>
+	<etcitem id="6418" name="Large Ugly Green Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i07" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="248" />
+	</etcitem>
+	<etcitem id="6419" name="Large Pudgy Green Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i07" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="265" />
+	</etcitem>
+	<etcitem id="6420" name="Small Jade Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i06" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="285" />
+	</etcitem>
+	<etcitem id="6421" name="Small Jade Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i06" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="295" />
+	</etcitem>
+	<etcitem id="6422" name="Small Jade Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i06" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="310" />
+	</etcitem>
+	<etcitem id="6423" name="Jade Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i06" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="325" />
+	</etcitem>
+	<etcitem id="6424" name="Jade Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i06" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="340" />
+	</etcitem>
+	<etcitem id="6425" name="Jade Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i06" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="355" />
+	</etcitem>
+	<etcitem id="6426" name="Big Jade Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i06" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="365" />
+	</etcitem>
+	<etcitem id="6427" name="Big Jade Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i06" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="375" />
+	</etcitem>
+	<etcitem id="6428" name="Big Jade Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i06" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="385" />
+	</etcitem>
+	<etcitem id="6429" name="Small Blue Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i01" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="395" />
+	</etcitem>
+	<etcitem id="6430" name="Small Blue Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i01" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="400" />
+	</etcitem>
+	<etcitem id="6431" name="Small Blue Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i01" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="410" />
+	</etcitem>
+	<etcitem id="6432" name="Blue Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i01" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="415" />
+	</etcitem>
+	<etcitem id="6433" name="Blue Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i01" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="418" />
+	</etcitem>
+	<etcitem id="6434" name="Blue Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i01" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="420" />
+	</etcitem>
+	<etcitem id="6435" name="Big Blue Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i01" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="425" />
+	</etcitem>
+	<etcitem id="6436" name="Big Blue Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i01" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="431" />
+	</etcitem>
+	<etcitem id="6437" name="Big Blue Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i01" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="435" />
+	</etcitem>
+	<etcitem id="6438" name="Small Yellow Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i02" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="442" />
+	</etcitem>
+	<etcitem id="6439" name="Small Yellow Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i02" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="447" />
+	</etcitem>
+	<etcitem id="6440" name="Small Yellow Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i02" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="452" />
+	</etcitem>
+	<etcitem id="6441" name="Yellow Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i02" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="540" />
+	</etcitem>
+	<etcitem id="6442" name="Yellow Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i02" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="553" />
+	</etcitem>
+	<etcitem id="6443" name="Yellow Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i02" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="568" />
+	</etcitem>
+	<etcitem id="6444" name="Big Yellow Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i02" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="580" />
+	</etcitem>
+	<etcitem id="6445" name="Big Yellow Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i02" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="594" />
+	</etcitem>
+	<etcitem id="6446" name="Big Yellow Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i02" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="608" />
+	</etcitem>
+	<etcitem id="6447" name="Small Orange Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i08" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="622" />
+	</etcitem>
+	<etcitem id="6448" name="Small Orange Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i08" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="635" />
+	</etcitem>
+	<etcitem id="6449" name="Small Orange Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i08" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="649" />
+	</etcitem>
+	<etcitem id="6450" name="Orange Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i08" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="663" />
+	</etcitem>
+	<etcitem id="6451" name="Orange Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i08" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="776" />
+	</etcitem>
+	<etcitem id="6452" name="Orange Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i08" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="792" />
+	</etcitem>
+	<etcitem id="6453" name="Big Orange Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i08" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="816" />
+	</etcitem>
+	<etcitem id="6454" name="Big Orange Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i08" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="840" />
+	</etcitem>
+	<etcitem id="6455" name="Big Orange Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i08" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="858" />
+	</etcitem>
+	<etcitem id="6456" name="Small Purple Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i04" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="875" />
+	</etcitem>
+	<etcitem id="6457" name="Small Purple Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i04" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="893" />
+	</etcitem>
+	<etcitem id="6458" name="Small Purple Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i04" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="910" />
+	</etcitem>
+	<etcitem id="6459" name="Purple Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i04" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="930" />
+	</etcitem>
+	<etcitem id="6460" name="Purple Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i04" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="948" />
+	</etcitem>
+	<etcitem id="6461" name="Purple Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i04" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1090" />
+	</etcitem>
+	<etcitem id="6462" name="Big Purple Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i04" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1111" />
+	</etcitem>
+	<etcitem id="6463" name="Big Purple Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i04" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1133" />
+	</etcitem>
+	<etcitem id="6464" name="Big Purple Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i04" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1157" />
+	</etcitem>
+	<etcitem id="6465" name="Small Red Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i03" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1277" />
+	</etcitem>
+	<etcitem id="6466" name="Small Red Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i03" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1301" />
+	</etcitem>
+	<etcitem id="6467" name="Small Red Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i03" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1326" />
+	</etcitem>
+	<etcitem id="6468" name="Red Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i03" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1351" />
+	</etcitem>
+	<etcitem id="6469" name="Red Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i03" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1376" />
+	</etcitem>
+	<etcitem id="6470" name="Red Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i03" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1402" />
+	</etcitem>
+	<etcitem id="6471" name="Big Red Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i03" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1577" />
+	</etcitem>
+	<etcitem id="6472" name="Big Red Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i03" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1608" />
+	</etcitem>
+	<etcitem id="6473" name="Big Red Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i03" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1715" />
+	</etcitem>
+	<etcitem id="6474" name="Small White Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1747" />
+	</etcitem>
+	<etcitem id="6475" name="Small White Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1781" />
+	</etcitem>
+	<etcitem id="6476" name="Small White Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1814" />
+	</etcitem>
+	<etcitem id="6477" name="White Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1849" />
+	</etcitem>
+	<etcitem id="6478" name="White Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1887" />
+	</etcitem>
+	<etcitem id="6479" name="White Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1923" />
+	</etcitem>
+	<etcitem id="6480" name="Big White Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1961" />
+	</etcitem>
+	<etcitem id="6481" name="Big White Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2000" />
+	</etcitem>
+	<etcitem id="6482" name="Big White Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2039" />
+	</etcitem>
+	<etcitem id="6483" name="Small Black Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i05" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2081" />
+	</etcitem>
+	<etcitem id="6484" name="Small Black Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i05" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2123" />
+	</etcitem>
+	<etcitem id="6485" name="Small Black Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i05" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2166" />
+	</etcitem>
+	<etcitem id="6486" name="Black Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i05" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2309" />
+	</etcitem>
+	<etcitem id="6487" name="Black Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i05" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2357" />
+	</etcitem>
+	<etcitem id="6488" name="Black Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i05" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2403" />
+	</etcitem>
+	<etcitem id="6489" name="Big Black Nimble Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_tuna_i05" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2452" />
+	</etcitem>
+	<etcitem id="6490" name="Big Black Ugly Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_angler_i05" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2502" />
+	</etcitem>
+	<etcitem id="6491" name="Big Black Fat Fish" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bream_i05" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2552" />
+	</etcitem>
+	<etcitem id="6492" name="Small Green Treasure Chest" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_treasure_box_i07" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="153" />
+	</etcitem>
+	<etcitem id="6493" name="Green Treasure Chest" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_treasure_box_i07" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="208" />
+	</etcitem>
+	<etcitem id="6494" name="Big Green Treasure Chest" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_treasure_box_i07" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="265" />
+	</etcitem>
+	<etcitem id="6495" name="Small Jade Treasure Chest" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_treasure_box_i06" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="285" />
+	</etcitem>
+	<etcitem id="6496" name="Jade Treasure Chest" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_treasure_box_i06" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="315" />
+	</etcitem>
+	<etcitem id="6497" name="Big Jade Treasure Chest" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_treasure_box_i06" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="345" />
+	</etcitem>
+	<etcitem id="6498" name="Small Blue Treasure Chest" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="395" />
+	</etcitem>
+	<etcitem id="6499" name="Blue Treasure Chest" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="419" />
+	</etcitem>
+</list>

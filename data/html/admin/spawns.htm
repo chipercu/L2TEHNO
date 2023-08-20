@@ -1,0 +1,30 @@
+<title>Spawn Menu</title>
+<center>
+<table width=270 border=0 bgcolor="FFFF84">
+<tr>
+<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>Spawn Menu</center></td>
+<td width=40><button value="Back" action="bypass -h admin_admin" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+<font color="LEVEL">Quick Box:</font>
+<center><multiedit var="qbox" width=250 height=50></center>
+<table width="300">
+<tr>
+<td><button value="Spawn By Id" action="bypass -h admin_spawn_monster $qbox" width=140 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+<font color="LEVEL">Spawn Options:</font><br1>
+<table width="300">
+<tr>
+<td><button value="Set Heading" action="bypass -h admin_setheading" width=140 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Set Ai" action="bypass -h admin_setai" width=140 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+<table width="300">
+<tr>
+<td><button value="Unspawn All" action="bypass -h admin_unspawnall" width=280 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+</center>

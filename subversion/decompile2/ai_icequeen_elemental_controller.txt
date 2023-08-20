@@ -1,0 +1,61 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_elemental_controller : default_npc
+{
+parameter:
+	int	debug_mode = 0;
+	int	TIMER_release_lock = 2314025;
+
+handler:
+	EventHandler CREATED()
+	{
+		( myself + 1128 ) = 0;
+	}
+
+	EventHandler SCRIPT_EVENT(script_event_arg1,script_event_arg2,script_event_arg3,i0,c0,c1,pos0)
+	{
+		if( script_event_arg1 == 23140012 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("elemental controller : ¤ð à8 L.");
+			}
+			if( ( myself + 1128 ) == 0 )
+			{
+				c0 = gg->GetCreatureFromIndex(script_event_arg2);
+				pos0 = gg->GetRandomPosInCreature(c0,20,50);
+				if( myself->IsNullCreature(c0) == 0 )
+				{
+					myself->CreateOnePrivateEx(1018854,"ai_icequeen_elemental",0,0,gg->FloatToInt(( pos0 + 8 )),gg->FloatToInt(( pos0 + 12 )),gg->FloatToInt(( pos0 + 16 )),0,script_event_arg3,0,0);
+				}
+			}
+			else if( ( myself + 1128 ) == 1 )
+			{
+				if( debug_mode )
+				{
+					myself->Say("¤ð À lock ÁÜtÀ\ (° ¤ð Hh.");
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140020 )
+		{
+			( myself + 1128 ) = 1;
+			myself->AddTimerEx(TIMER_release_lock,( 30 * 1000 ));
+		}
+	}
+
+	EventHandler TIMER_FIRED_EX(timer_id)
+	{
+		if( timer_id == TIMER_release_lock )
+		{
+			( myself + 1128 ) = 0;
+		}
+	}
+
+}

@@ -1,0 +1,688 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_freya_entrance : default_npc
+{
+parameter:
+	string	AREA_effect_1s_01 = "23_14_icequeen_1s_01";
+	string	AREA_effect_1s_02 = "23_14_icequeen_1s_02";
+	string	AREA_effect_1s_03 = "23_14_icequeen_1s_03";
+	string	AREA_effect_1s_04 = "23_14_icequeen_1s_04";
+	string	AREA_effect_1s_05 = "23_14_icequeen_1s_05";
+	string	AREA_effect_1s_06 = "23_14_icequeen_1s_06";
+	string	AREA_effect_1s_07 = "23_14_icequeen_1s_07";
+	string	AREA_effect_1s_08 = "23_14_icequeen_1s_08";
+	string	AREA_effect_1s_09 = "23_14_icequeen_1s_09";
+	string	AREA_effect_1s_10 = "23_14_icequeen_1s_10";
+	string	AREA_effect_1s_11 = "23_14_icequeen_1s_11";
+	string	AREA_effect_1s_12 = "23_14_icequeen_1s_12";
+	string	AREA_effect_1s_13 = "23_14_icequeen_1s_13";
+	string	AREA_effect_1s_14 = "23_14_icequeen_1s_14";
+	string	AREA_effect_1s_15 = "23_14_icequeen_1s_15";
+	string	AREA_effect_1s_16 = "23_14_icequeen_1s_16";
+	string	AREA_effect_1s_17 = "23_14_icequeen_1s_17";
+	string	AREA_effect_1s_18 = "23_14_icequeen_1s_18";
+	string	AREA_effect_1s_19 = "23_14_icequeen_1s_19";
+	string	AREA_effect_1s_20 = "23_14_icequeen_1s_20";
+	string	AREA_effect_1s_21 = "23_14_icequeen_1s_21";
+	string	AREA_effect_2s_01 = "23_14_icequeen_2s_01";
+	string	AREA_effect_2s_02 = "23_14_icequeen_2s_02";
+	string	AREA_effect_2s_03 = "23_14_icequeen_2s_03";
+	string	AREA_effect_2s_04 = "23_14_icequeen_2s_04";
+	string	AREA_effect_2s_05 = "23_14_icequeen_2s_05";
+	string	AREA_effect_2s_06 = "23_14_icequeen_2s_06";
+	string	AREA_effect_2s_07 = "23_14_icequeen_2s_07";
+	string	AREA_effect_2s_08 = "23_14_icequeen_2s_08";
+	string	AREA_effect_1s_01_hd = "23_14_icequeen_1s_01_hd";
+	string	AREA_effect_1s_02_hd = "23_14_icequeen_1s_02_hd";
+	string	AREA_effect_1s_03_hd = "23_14_icequeen_1s_03_hd";
+	string	AREA_effect_1s_04_hd = "23_14_icequeen_1s_04_hd";
+	string	AREA_effect_1s_05_hd = "23_14_icequeen_1s_05_hd";
+	string	AREA_effect_1s_06_hd = "23_14_icequeen_1s_06_hd";
+	string	AREA_effect_1s_07_hd = "23_14_icequeen_1s_07_hd";
+	string	AREA_effect_1s_08_hd = "23_14_icequeen_1s_08_hd";
+	string	AREA_effect_1s_09_hd = "23_14_icequeen_1s_09_hd";
+	string	AREA_effect_1s_10_hd = "23_14_icequeen_1s_10_hd";
+	string	AREA_effect_1s_11_hd = "23_14_icequeen_1s_11_hd";
+	string	AREA_effect_1s_12_hd = "23_14_icequeen_1s_12_hd";
+	string	AREA_effect_1s_13_hd = "23_14_icequeen_1s_13_hd";
+	string	AREA_effect_1s_14_hd = "23_14_icequeen_1s_14_hd";
+	string	AREA_effect_1s_15_hd = "23_14_icequeen_1s_15_hd";
+	string	AREA_effect_1s_16_hd = "23_14_icequeen_1s_16_hd";
+	string	AREA_effect_1s_17_hd = "23_14_icequeen_1s_17_hd";
+	string	AREA_effect_1s_18_hd = "23_14_icequeen_1s_18_hd";
+	string	AREA_effect_1s_19_hd = "23_14_icequeen_1s_19_hd";
+	string	AREA_effect_1s_20_hd = "23_14_icequeen_1s_20_hd";
+	string	AREA_effect_1s_21_hd = "23_14_icequeen_1s_21_hd";
+	string	AREA_effect_2s_01_hd = "23_14_icequeen_2s_01_hd";
+	string	AREA_effect_2s_02_hd = "23_14_icequeen_2s_02_hd";
+	string	AREA_effect_2s_03_hd = "23_14_icequeen_2s_03_hd";
+	string	AREA_effect_2s_04_hd = "23_14_icequeen_2s_04_hd";
+	string	AREA_effect_2s_05_hd = "23_14_icequeen_2s_05_hd";
+	string	AREA_effect_2s_06_hd = "23_14_icequeen_2s_06_hd";
+	string	AREA_effect_2s_07_hd = "23_14_icequeen_2s_07_hd";
+	string	AREA_effect_2s_08_hd = "23_14_icequeen_2s_08_hd";
+	int	SKILL_death_clock = 411566081;
+	int	SKILL_area_lv1 = 421855233;
+	int	TIMER_start = 2314030;
+	int	debug_mode = 0;
+
+handler:
+	EventHandler CREATED(i0)
+	{
+		myself->SetMaxHateListSize(50);
+		( myself + 1128 ) = 1;
+		( myself + 1136 ) = 0;
+		( myself + 1144 ) = 0;
+		if( ( ( myself + 1480 ) + 8232 ) == 0 )
+		{
+			( myself + 1152 ) = 0;
+		}
+		else if( ( ( myself + 1480 ) + 8232 ) == 1 )
+		{
+			( myself + 1152 ) = 1;
+		}
+		i0 = myself->InstantZone_GetId();
+		if( ( myself + 1152 ) == 0 )
+		{
+			gg->Area_SetOnOffEx(AREA_effect_1s_01,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_02,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_03,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_04,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_05,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_06,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_07,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_08,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_09,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_10,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_11,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_12,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_13,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_14,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_15,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_16,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_17,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_18,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_19,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_20,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_21,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_01,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_02,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_03,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_04,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_06,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_07,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_08,0,i0);
+		}
+		else if( ( myself + 1152 ) == 1 )
+		{
+			gg->Area_SetOnOffEx(AREA_effect_1s_01_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_02_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_03_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_04_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_05_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_06_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_07_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_08_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_09_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_10_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_11_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_12_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_13_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_14_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_15_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_16_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_17_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_18_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_19_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_20_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_1s_21_hd,1,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_01_hd,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_02_hd,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_03_hd,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_04_hd,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_06_hd,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_07_hd,0,i0);
+			gg->Area_SetOnOffEx(AREA_effect_2s_08_hd,0,i0);
+		}
+		gg->SendScriptEvent(( myself + 1496 ),23140022,gg->GetIndexFromCreature(( myself + 1480 )));
+		myself->CreateOnePrivateEx(1032762,"ai_icequeen_sirr_doorman",0,0,114766,-113141,-11200,15956,0,0,0);
+	}
+
+	EventHandler SEE_CREATURE(creature,i0,i1)
+	{
+		if( ( creature + 68 ) == 1 )
+		{
+			myself->AddHateInfo(creature,1,0,1,1);
+			i0 = myself->GetHateInfoCount();
+			if( debug_mode )
+			{
+				myself->Say("…¥  PC : " + i0);
+			}
+			if( ( myself + 1128 ) == 3 )
+			{
+				myself->ChangeZoneInfo(creature,0,2);
+				myself->InstantTeleport(creature,114727,-113387,-11200);
+			}
+			else
+			{
+				myself->ChangeZoneInfo(creature,0,1);
+			}
+		}
+	}
+
+	EventHandler SCRIPT_EVENT(script_event_arg1,script_event_arg2,script_event_arg3,i0,c0,h0,s0)
+	{
+		if( script_event_arg1 == 23140050 )
+		{
+			if( debug_mode )
+			{
+				myself->Shout("SCE_1MIN_TIMER");
+			}
+			if( myself->GetHateInfoCount() > 0 )
+			{
+				for(i0 = 0; i0 < myself->GetHateInfoCount(); i0 = ( i0 + 1 ))
+				{
+					h0 = myself->GetHateInfoByIndex(i0);
+					if( myself->IsNullHateInfo(h0) == 0 )
+					{
+						if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+						{
+							if( ( ( h0 + 8 ) + 7548 ) == myself->InstantZone_GetId() )
+							{
+								gg->SendUIEvent(( h0 + 8 ),0,0,0,"0","1","0",gg->MakeFString(1801090,"","","","",""),"0","0");
+							}
+						}
+					}
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140021 )
+		{
+			if( debug_mode )
+			{
+				myself->Shout("SCE_ZONEINFO_CHG");
+			}
+			if( ( myself + 1136 ) == 0 )
+			{
+				if( debug_mode )
+				{
+					myself->Shout("NOW P3");
+				}
+				( myself + 1128 ) = 3;
+				( myself + 1136 ) = 1;
+				if( myself->GetHateInfoCount() > 0 )
+				{
+					for(i0 = 0; i0 < myself->GetHateInfoCount(); i0 = ( i0 + 1 ))
+					{
+						h0 = myself->GetHateInfoByIndex(i0);
+						if( myself->IsNullHateInfo(h0) == 0 )
+						{
+							if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+							{
+								if( ( ( h0 + 8 ) + 7548 ) == myself->InstantZone_GetId() )
+								{
+									myself->ChangeZoneInfo(( h0 + 8 ),0,2);
+								}
+							}
+						}
+					}
+				}
+				i0 = myself->InstantZone_GetId();
+				if( ( myself + 1152 ) == 0 )
+				{
+					gg->Area_SetOnOffEx(AREA_effect_1s_01,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_02,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_03,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_04,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_05,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_06,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_07,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_08,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_09,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_10,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_11,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_12,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_13,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_14,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_15,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_16,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_17,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_18,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_19,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_20,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_21,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_01,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_02,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_03,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_04,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_06,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_07,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_08,1,i0);
+				}
+				else if( ( myself + 1152 ) == 1 )
+				{
+					gg->Area_SetOnOffEx(AREA_effect_1s_01_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_02_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_03_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_04_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_05_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_06_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_07_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_08_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_09_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_10_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_11_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_12_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_13_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_14_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_15_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_16_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_17_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_18_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_19_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_20_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_21_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_01_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_02_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_03_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_04_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_06_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_07_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_08_hd,1,i0);
+				}
+			}
+			else if( ( myself + 1136 ) == 1 )
+			{
+				if( debug_mode )
+				{
+					myself->Shout("NOW P4");
+				}
+				( myself + 1128 ) = 4;
+				( myself + 1136 ) = 0;
+				if( myself->GetHateInfoCount() > 0 )
+				{
+					for(i0 = 0; i0 < myself->GetHateInfoCount(); i0 = ( i0 + 1 ))
+					{
+						h0 = myself->GetHateInfoByIndex(i0);
+						if( myself->IsNullHateInfo(h0) == 0 )
+						{
+							if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+							{
+								if( ( ( h0 + 8 ) + 7548 ) == myself->InstantZone_GetId() )
+								{
+									myself->ChangeZoneInfo(( h0 + 8 ),0,1);
+								}
+							}
+						}
+					}
+				}
+				i0 = myself->InstantZone_GetId();
+				if( ( myself + 1152 ) == 0 )
+				{
+					gg->Area_SetOnOffEx(AREA_effect_1s_01,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_02,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_03,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_04,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_05,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_06,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_07,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_08,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_09,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_10,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_11,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_12,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_13,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_14,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_15,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_16,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_17,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_18,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_19,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_20,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_21,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_01,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_02,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_03,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_04,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_06,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_07,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_08,0,i0);
+				}
+				else if( ( myself + 1152 ) == 1 )
+				{
+					gg->Area_SetOnOffEx(AREA_effect_1s_01_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_02_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_03_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_04_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_05_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_06_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_07_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_08_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_09_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_10_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_11_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_12_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_13_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_14_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_15_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_16_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_17_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_18_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_19_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_20_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_1s_21_hd,1,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_01_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_02_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_03_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_04_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_06_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_07_hd,0,i0);
+					gg->Area_SetOnOffEx(AREA_effect_2s_08_hd,0,i0);
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140055 )
+		{
+			if( myself->GetHateInfoCount() > 0 )
+			{
+				for(i0 = 0; i0 < myself->GetHateInfoCount(); i0 = ( i0 + 1 ))
+				{
+					h0 = myself->GetHateInfoByIndex(i0);
+					if( myself->IsNullHateInfo(h0) == 0 )
+					{
+						if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+						{
+							if( ( ( h0 + 8 ) + 7548 ) == myself->InstantZone_GetId() )
+							{
+								if( gg->GetAbnormalLevel(( h0 + 8 ),myself->Skill_GetAbnormalType(SKILL_death_clock)) > 0 )
+								{
+									if( debug_mode )
+									{
+										myself->Shout("ýLX  à dispel : " + ( ( h0 + 8 ) + 344 ));
+									}
+									myself->Dispel(( h0 + 8 ),myself->Skill_GetAbnormalType(SKILL_death_clock));
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140057 )
+		{
+			if( myself->GetHateInfoCount() > 0 )
+			{
+				for(i0 = 0; i0 < myself->GetHateInfoCount(); i0 = ( i0 + 1 ))
+				{
+					h0 = myself->GetHateInfoByIndex(i0);
+					if( myself->IsNullHateInfo(h0) == 0 )
+					{
+						if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+						{
+							if( ( ( h0 + 8 ) + 7548 ) == myself->InstantZone_GetId() )
+							{
+								if( gg->GetAbnormalLevel(( h0 + 8 ),myself->Skill_GetAbnormalType(SKILL_area_lv1)) > 0 )
+								{
+									if( debug_mode )
+									{
+										myself->Shout("area lv1 dispel : " + ( ( h0 + 8 ) + 344 ));
+									}
+									myself->Dispel(( h0 + 8 ),myself->Skill_GetAbnormalType(SKILL_area_lv1));
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140058 )
+		{
+			if( myself->GetHateInfoCount() > 0 )
+			{
+				for(i0 = 0; i0 < myself->GetHateInfoCount(); i0 = ( i0 + 1 ))
+				{
+					h0 = myself->GetHateInfoByIndex(i0);
+					if( myself->IsNullHateInfo(h0) == 0 )
+					{
+						if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+						{
+							if( ( ( h0 + 8 ) + 7548 ) == myself->InstantZone_GetId() )
+							{
+								if( gg->HaveMemo(( h0 + 8 ),10286) == 1 )
+								{
+									myself->SetMemoState(( h0 + 8 ),10286,10);
+									myself->SetFlagJournal(( h0 + 8 ),10286,7);
+									myself->ShowQuestMark(( h0 + 8 ),10286);
+									myself->SoundEffect(( h0 + 8 ),"ItemSound.quest_middle");
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140059 )
+		{
+			if( myself->GetHateInfoCount() > 0 )
+			{
+				for(i0 = 0; i0 < myself->GetHateInfoCount(); i0 = ( i0 + 1 ))
+				{
+					h0 = myself->GetHateInfoByIndex(i0);
+					if( myself->IsNullHateInfo(h0) == 0 )
+					{
+						if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+						{
+							if( ( ( h0 + 8 ) + 7548 ) == myself->InstantZone_GetId() )
+							{
+								if( ( ( h0 + 8 ) + 68 ) == 1 )
+								{
+									if( gg->GetAbnormalLevel(( h0 + 8 ),myself->Skill_GetAbnormalType(SKILL_area_lv1)) > 0 )
+									{
+										if( debug_mode )
+										{
+											myself->Shout("area lv1 dispel : " + ( ( h0 + 8 ) + 344 ));
+										}
+										myself->Dispel(( h0 + 8 ),myself->Skill_GetAbnormalType(SKILL_area_lv1));
+									}
+									if( debug_mode )
+									{
+										myself->Shout("leave " + ( ( h0 + 8 ) + 344 ));
+									}
+									myself->InstantZone_Leave(( h0 + 8 ));
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140061 )
+		{
+			if( myself->GetHateInfoCount() > 0 )
+			{
+				for(i0 = 0; i0 < myself->GetHateInfoCount(); i0 = ( i0 + 1 ))
+				{
+					h0 = myself->GetHateInfoByIndex(i0);
+					if( myself->IsNullHateInfo(h0) == 0 )
+					{
+						if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+						{
+							if( ( ( h0 + 8 ) + 7548 ) == myself->InstantZone_GetId() )
+							{
+								if( script_event_arg2 == 0 && script_event_arg3 == 0 )
+								{
+									gg->SendUIEvent(( h0 + 8 ),1,0,0,"0",gg->IntToStr(script_event_arg2),gg->IntToStr(script_event_arg3),gg->MakeFString(1801110,"","","","",""),"0","0");
+								}
+								else
+								{
+									gg->SendUIEvent(( h0 + 8 ),0,0,0,"0",gg->IntToStr(script_event_arg2),gg->IntToStr(script_event_arg3),gg->MakeFString(1801110,"","","","",""),"0","0");
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140022 )
+		{
+			c0 = gg->GetCreatureFromIndex(script_event_arg2);
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				( myself + 1144 ) = script_event_arg2;
+			}
+		}
+		else if( script_event_arg1 == 23140014 )
+		{
+			c0 = gg->GetCreatureFromIndex(( myself + 1144 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				gg->SendScriptEvent(c0,23140014,0);
+			}
+		}
+		else if( script_event_arg1 == 23140019 )
+		{
+			c0 = gg->GetCreatureFromIndex(( myself + 1144 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				gg->SendScriptEvent(c0,23140019,0);
+			}
+			( myself + 1128 ) = 5;
+		}
+		else if( script_event_arg1 == 23140063 )
+		{
+			( myself + 1128 ) = 1;
+		}
+		else if( script_event_arg1 == 23140066 )
+		{
+			if( myself->GetHateInfoCount() > 0 )
+			{
+				for(i0 = 0; i0 < myself->GetHateInfoCount(); i0 = ( i0 + 1 ))
+				{
+					h0 = myself->GetHateInfoByIndex(i0);
+					if( myself->IsNullHateInfo(h0) == 0 )
+					{
+						if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+						{
+							if( ( ( h0 + 8 ) + 7548 ) == myself->InstantZone_GetId() )
+							{
+								if( ( ( h0 + 8 ) + 68 ) == 1 )
+								{
+									myself->VoiceNPCEffect(( h0 + 8 ),"Freya.freya_voice_03",0);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140067 )
+		{
+			i0 = gg->Rand(3);
+			select(i0)
+			{
+				case 0:
+					s0 = "Freya.freya_voice_09";
+					break;
+				case 1:
+					s0 = "Freya.freya_voice_10";
+					break;
+				case 2:
+					s0 = "Freya.freya_voice_11";
+					break;
+			}
+			if( myself->GetHateInfoCount() > 0 )
+			{
+				for(i0 = 0; i0 < myself->GetHateInfoCount(); i0 = ( i0 + 1 ))
+				{
+					h0 = myself->GetHateInfoByIndex(i0);
+					if( myself->IsNullHateInfo(h0) == 0 )
+					{
+						if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+						{
+							if( ( ( h0 + 8 ) + 7548 ) == myself->InstantZone_GetId() )
+							{
+								if( ( ( h0 + 8 ) + 68 ) == 1 )
+								{
+									myself->VoiceNPCEffect(( h0 + 8 ),s0,0);
+									if( debug_mode )
+									{
+										myself->Shout("voice blizzard : " + ( ( h0 + 8 ) + 344 ));
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else if( script_event_arg1 == 23140068 )
+		{
+			if( ( myself + 1152 ) == 0 )
+			{
+				i0 = gg->Rand(5);
+			}
+			else if( ( myself + 1152 ) == 1 )
+			{
+				i0 = gg->Rand(8);
+			}
+			select(i0)
+			{
+				case 0:
+					s0 = "Freya.freya_voice_04";
+					break;
+				case 1:
+					s0 = "Freya.freya_voice_05";
+					break;
+				case 2:
+					s0 = "Freya.freya_voice_06";
+					break;
+				case 3:
+					s0 = "Freya.freya_voice_07";
+					break;
+				case 4:
+					s0 = "Freya.freya_voice_08";
+					break;
+				case 5:
+					s0 = "Freya.freya_voice_12";
+					break;
+				case 6:
+					s0 = "Freya.freya_voice_13";
+					break;
+				case 7:
+					s0 = "Freya.freya_voice_14";
+					break;
+			}
+			if( myself->GetHateInfoCount() > 0 )
+			{
+				for(i0 = 0; i0 < myself->GetHateInfoCount(); i0 = ( i0 + 1 ))
+				{
+					h0 = myself->GetHateInfoByIndex(i0);
+					if( myself->IsNullHateInfo(h0) == 0 )
+					{
+						if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+						{
+							if( ( ( h0 + 8 ) + 7548 ) == myself->InstantZone_GetId() )
+							{
+								if( ( ( h0 + 8 ) + 68 ) == 1 )
+								{
+									myself->VoiceNPCEffect(( h0 + 8 ),s0,0);
+									if( debug_mode )
+									{
+										myself->Shout("voice normal : " + ( ( h0 + 8 ) + 344 ));
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

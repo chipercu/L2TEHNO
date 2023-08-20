@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- [RU] Включить/выключить веб браузер (включить - 1, выключить - 0) -->
+	<!-- [EN] Enable/Disable web browser (enable - 1, disable - 0) -->
+	<interface_setting name="EnableBrowser" type="TYPE_CHAR" value="1" />
+	<!-- [RU] Количество вкладок браузера (не более 5!) -->
+	<!-- [EN] Number of browser tabs (not more 5!) -->
+	<interface_setting name="TabCount" type="TYPE_CHAR" value="5" />
+	<!-- [RU] Tab[x]Url - адрес веб страницы ([x] - tab number in array, 0-4) -->
+	<!-- [EN] Tab[x]Url - tab url link ([x] - tab number in array, 0-4) -->
+	<interface_setting name="Tab0Url" type="TYPE_TEXT" value="https://google.com" />
+	<interface_setting name="Tab1Url" type="TYPE_TEXT" value="https://google.com" />
+	<interface_setting name="Tab2Url" type="TYPE_TEXT" value="https://google.com" />
+	<interface_setting name="Tab3Url" type="TYPE_TEXT" value="https://google.com" />
+	<interface_setting name="Tab4Url" type="TYPE_TEXT" value="https://google.com" />
+</list>

@@ -1,0 +1,42 @@
+<html>
+<body>
+<center>
+<table>
+<tr>
+<td><button value="Новости" action="bypass -h _bbstop" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Магазин" action="bypass -h _bbstop;30" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Баффер" action="bypass -h _bbsbuff;" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Телепорт" action="bypass -h _bbsteleport;" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Карьера" action="bypass -h _bbsclass;" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Сервис" action="bypass -h _bbstop;40" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Крафт" action="bypass -h _bbstop;70" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Аукцион" action="bypass -h _marketpage;index" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<title>Добавить товар на рынок</title>
+<body>
+1. Выберите цену: <br>
+<table width="300">
+	<tr>
+		<td>
+			<edit var="count" width=120 height=15>
+		</td>
+		<td>
+			<combobox var="value" width="100" List="%values%">
+		</td>
+	</tr>
+</table><br>
+2. Кто платит налог аукциона* (Seller - вы, buyer - покупатель): <br>
+<combobox var="tax" width="100" List="Seller;Buyer"> <br>
+3. Выберите предмет: <br>
+%charitems%
+<br>
+* Налог аукциона: %taxprocent%% от стоймости предмета.
+<br>
+<br><br><br>
+<center> %backlink% </center>
+<br>
+<br>
+</body>
+</title>
+</html>

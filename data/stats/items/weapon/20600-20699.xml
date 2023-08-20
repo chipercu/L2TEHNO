@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="20600" name="Twilight Staff" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="BranchSys.icon.br_invokespirit_stick_a_i00" />
+		<set name="additional_name" val="Dance of Shadow - 7 day limited period" />
+		<set name="p_dam" val="1" />
+		<set name="m_dam" val="1" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="10080" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="20639" name="Standard Item - Elven Long Sword" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
+		<set name="weight" val="100" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="crystal_type" val="D" />
+		<set name="p_dam" val="92" />
+		<set name="m_dam" val="54" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="20640" name="Standard Item - Light Crossbow" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
+		<set name="weight" val="100" />
+		<set name="soulshots" val="10" />
+		<set name="spiritshots" val="3" />
+		<set name="crystal_type" val="D" />
+		<set name="p_dam" val="191" />
+		<set name="m_dam" val="54" />
+		<set name="atk_speed" val="293" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="mp_consume" val="2" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="20641" name="Standard Item - Knight's Sword*Elven Sword" type="DUAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="weight" val="100" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="crystal_type" val="D" />
+		<set name="p_dam" val="107" />
+		<set name="m_dam" val="51" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="20644" name="Standard Item - Plate Shield" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_plate_shield_i00" />
+		<set name="weight" val="100" />
+		<set name="crystal_type" val="D" />
+		<set name="shield_def" val="154" />
+		<set name="shield_def_rate" val="20" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="avoid_modify" val="-8" />
+	</weapon>
+	<weapon id="20649" name="Standard Item - Ghost Staff" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_ghost_staff_i00" />
+		<set name="weight" val="100" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="crystal_type" val="D" />
+		<set name="p_dam" val="90" />
+		<set name="m_dam" val="79" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+</list>

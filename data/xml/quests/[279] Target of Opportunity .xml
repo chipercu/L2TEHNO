@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="279" type="PARTY_ALL">
+		<name lang="en" val="Target of Opportunity "/>
+		<name lang="ru" val="Найди слабое место"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="22373"/>	<!-- Cosmic Scout -->
+			<event type="MOBKILLED" val="22374"/>	<!-- Cosmic Watcher -->
+			<event type="MOBKILLED" val="22375"/>	<!-- Cosmic Priest -->
+			<event type="MOBKILLED" val="22376"/>	<!-- Cosmic Lord -->
+			<event type="QUEST_START" val="32302"/>	<!-- Jerian -->
+			<event type="QUEST_TALK" val="32302"/>	<!-- Jerian -->
+		</setting>
+	</quest>
+</quests>

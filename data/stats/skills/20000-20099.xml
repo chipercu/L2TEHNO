@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+	<skill id="20006" levels="1" name="Soul Roar">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="600">
+				<mul order="0x30" stat="p_max_hp" val="1.15"/>
+				<mul order="0x30" stat="p_max_cp" val="1.15"/>
+			</effect>
+			<effect name="HealPercent" instantly="true" val="15"/>
+			<effect name="HealCPPercent" instantly="true" val="15"/>
+		</for>
+	</skill>
+</list>

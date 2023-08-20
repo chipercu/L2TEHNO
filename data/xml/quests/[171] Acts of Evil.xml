@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="171" type="SOLO">
+		<name lang="en" val="Acts of Evil"/>
+		<name lang="ru" val="Злодеяния"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20062"/>	<!-- Tumran Bugbear -->
+			<event type="MOBKILLED" val="20438"/>	<!-- Ol Mahum General -->
+			<event type="MOBKILLED" val="27190"/>	<!-- Ol Mahum Support Troop -->
+			<event type="MOBKILLED" val="20496"/>	<!-- Turek Orc Archer -->
+			<event type="MOBKILLED" val="20497"/>	<!-- Turek Orc Skirmisher -->
+			<event type="MOBKILLED" val="20498"/>	<!-- Turek Orc Supplier -->
+			<event type="MOBKILLED" val="20499"/>	<!-- Turek Orc Footman -->
+			<event type="MOBKILLED" val="20438"/>	<!-- Ol Mahum General -->
+			<event type="MOBKILLED" val="20066"/>	<!-- Ol Mahum Captain -->
+			<event type="QUEST_START" val="30381"/>	<!-- Alvah -->
+			<event type="QUEST_TALK" val="30381"/>	<!-- Alvah -->
+			<event type="QUEST_TALK" val="30207"/>	<!-- Arodin -->
+			<event type="QUEST_TALK" val="30420"/>	<!-- Tyra -->
+			<event type="QUEST_TALK" val="30437"/>	<!-- Rolento -->
+			<event type="QUEST_TALK" val="30425"/>	<!-- Neti -->
+			<event type="QUEST_TALK" val="30617"/>	<!-- Burai -->
+			<item id="4248"/>	<!-- Rolento's Cargobox -->
+			<item id="4240"/>	<!-- Tyra's Bill -->
+			<item id="4247"/>	<!-- Certificate of the Silver Scale Guild -->
+			<item id="4241"/>	<!-- Ranger's Report - Part 1 -->
+			<item id="4242"/>	<!-- Ranger's Report - Part 2 -->
+			<item id="4243"/>	<!-- Ranger's Report - Part 3 -->
+			<item id="4244"/>	<!-- Ranger's Report - Part 4 -->
+			<item id="4245"/>	<!-- Weapons Trade Contract -->
+			<item id="4246"/>	<!-- Attack Directives -->
+			<item id="4239"/>	<!-- Blade Mold -->
+			<item id="4249"/>	<!-- Ol Mahum Captain's Head -->
+		</setting>
+	</quest>
+</quests>

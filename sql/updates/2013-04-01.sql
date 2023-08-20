@@ -1,0 +1,24 @@
+ALTER TABLE `forts` ADD COLUMN `mercenaryId` int NOT NULL default 0 AFTER `castleId`;
+ALTER TABLE `forts` ADD COLUMN `mercenaryLoc` varchar(45) NOT NULL AFTER `mercenaryId`;
+
+update forts set mercenaryId='35659', mercenaryLoc='-58672;154703;-2688;64664' where id='101';
+update forts set mercenaryId='35690', mercenaryLoc='-28169;216864;-3544;64664' where id='102';
+update forts set mercenaryId='35728', mercenaryLoc='19408;189422;-3136;64664' where id='103';
+update forts set mercenaryId='35759', mercenaryLoc='123383;121093;-2864;64664' where id='104';
+update forts set mercenaryId='35797', mercenaryLoc='74725;1671;-3128;64664' where id='105';
+update forts set mercenaryId='35828', mercenaryLoc='159377;52403;-3312;64664' where id='106';
+update forts set mercenaryId='35859', mercenaryLoc='190423;43540;-3656;64664' where id='107';
+update forts set mercenaryId='35897', mercenaryLoc='114436;202528;-3408;64664' where id='108';
+update forts set mercenaryId='35928', mercenaryLoc='161876;-73407;-2984;64664' where id='109';
+update forts set mercenaryId='35966', mercenaryLoc='71436;-58182;-2904;64664' where id='110';
+update forts set mercenaryId='36004', mercenaryLoc='105447;-139845;-3120;64664' where id='111';
+update forts set mercenaryId='36035', mercenaryLoc='14186;149947;-3352;64664' where id='112';
+update forts set mercenaryId='36073', mercenaryLoc='-56032;86017;-3259;64664' where id='113';
+update forts set mercenaryId='36111', mercenaryLoc='58314;136319;-2000;64664' where id='114';
+update forts set mercenaryId='36142', mercenaryLoc='9318;92253;-3536;64664' where id='115';
+update forts set mercenaryId='36173', mercenaryLoc='80904;94098;-3152;64664' where id='116';
+update forts set mercenaryId='36211', mercenaryLoc='114221;-18762;-1768;64664' where id='117';
+update forts set mercenaryId='36249', mercenaryLoc='121072;93215;-2736;64664' where id='118';
+update forts set mercenaryId='36287', mercenaryLoc='71692;188004;-2616;64664' where id='119';
+update forts set mercenaryId='36318', mercenaryLoc='104150;-57163;-848;64664' where id='120';
+update forts set mercenaryId='36356', mercenaryLoc='69553;-91746;-1488;64664' where id='121';

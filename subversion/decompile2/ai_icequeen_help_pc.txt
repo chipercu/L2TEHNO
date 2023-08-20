@@ -1,0 +1,126 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_help_pc : default_npc
+{
+parameter:
+	int	Skill01_ID = 458752001;
+	int	Skill01_Prob = 2500;
+	int	Buff = 458752001;
+	int	Dash = 458752001;
+	int	TIMER_buff = 2314017;
+	int	TIMER_dash = 2314019;
+	int	TIMER_call_npc = 2314020;
+	int	TIMER_heal = 2314022;
+	int	PosX = -1;
+	int	PosY = -1;
+	int	PosZ = -1;
+	int	position = -1;
+	int	debug_mode = 0;
+
+handler:
+	EventHandler CREATED()
+	{
+		if( position != 2 )
+		{
+			if( Dash != 458752001 )
+			{
+				myself->AddTimerEx(TIMER_dash,1000);
+			}
+			myself->AddTimerEx(TIMER_buff,1000);
+			myself->AddTimerEx(TIMER_heal,2000);
+			myself->AddTimerEx(TIMER_call_npc,2000);
+		}
+	}
+
+	EventHandler SCRIPT_EVENT(script_event_arg1,script_event_arg2,script_event_arg3,c0)
+	{
+		if( script_event_arg1 == 23140020 )
+		{
+		}
+		else if( script_event_arg1 == 23140052 )
+		{
+			c0 = gg->GetCreatureFromIndex(script_event_arg2);
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				myself->AddAttackDesire(c0,1,1000);
+				if( script_event_arg3 == 2314 )
+				{
+					myself->AddAttackDesire(c0,1,500);
+				}
+			}
+		}
+	}
+
+	EventHandler TIMER_FIRED_EX(timer_id,i0)
+	{
+		if( timer_id == TIMER_buff )
+		{
+			myself->AddUseSkillDesire(( myself + 1480 ),Buff,1,0,10000000);
+			myself->AddTimerEx(TIMER_buff,( 25 * 1000 ));
+		}
+		else if( timer_id == TIMER_dash )
+		{
+			if( myself->IsNullCreature(( myself + 1504 )) == 0 )
+			{
+				if( myself->DistFromMe(( myself + 1504 )) > 200 )
+				{
+					myself->AddUseSkillDesire(( myself + 1504 ),Dash,0,1,1000000000);
+				}
+			}
+			myself->AddTimerEx(TIMER_dash,( 10 * 1000 ));
+		}
+		else if( timer_id == TIMER_call_npc )
+		{
+			myself->BroadcastScriptEvent(23140051,gg->GetIndexFromCreature(( myself + 1480 )),1500);
+			myself->AddTimerEx(TIMER_call_npc,( 10 * 1000 ));
+		}
+		else if( timer_id == TIMER_heal )
+		{
+			i0 = ( gg->FloatToInt(( ( ( myself + 1480 ) + 6696 ) * 0.250000 )) + gg->FloatToInt(( ( myself + 1480 ) + 328 )) );
+			if( i0 > gg->FloatToInt(( ( myself + 1480 ) + 6696 )) )
+			{
+				gg->SetNpcParam(( myself + 1480 ),9,( ( myself + 1480 ) + 6696 ));
+			}
+			else
+			{
+				gg->SetNpcParam(( myself + 1480 ),9,i0);
+			}
+			myself->AddTimerEx(TIMER_heal,( 5 * 1000 ));
+		}
+	}
+
+	EventHandler ATTACKED(attacker,damage)
+	{
+		if( ( attacker + 68 ) == 0 && myself->IsInCategory(12,( attacker + 7380 )) == 0 && myself->IsInCategory(123,( attacker + 7380 )) == 0 )
+		{
+			myself->AddAttackDesire(attacker,1,damage);
+			if( Skill01_ID != 458752001 )
+			{
+				if( gg->Rand(10000) < Skill01_Prob )
+				{
+					if( gg->Rand(2) == 1 )
+					{
+						if( myself->Skill_GetConsumeMP(Skill01_ID) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Skill01_ID) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Skill01_ID) == 0 )
+						{
+							myself->AddUseSkillDesire(attacker,Skill01_ID,0,1,1000000);
+						}
+					}
+					else if( myself->IsNullCreature(( myself + 1504 )) == 0 )
+					{
+						if( myself->Skill_GetConsumeMP(Skill01_ID) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Skill01_ID) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Skill01_ID) == 0 )
+						{
+							myself->AddUseSkillDesire(( myself + 1504 ),Skill01_ID,0,1,1000000);
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

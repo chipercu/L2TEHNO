@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="902" type="PARTY_ALL">
+		<name lang="en" val="Reclaim Our Era"/>
+		<name lang="ru" val="Начало нового вызова"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="25309"/>	<!-- Varkas Hero Shadith -->
+			<event type="MOBKILLED" val="25312"/>	<!-- Varkas Commander Mos -->
+			<event type="MOBKILLED" val="25315"/>	<!-- Varkas Chief Horus -->
+			<event type="MOBKILLED" val="25299"/>	<!-- Ketras Hero Hekaton -->
+			<event type="MOBKILLED" val="25302"/>	<!-- Ketras Commander Tayr -->
+			<event type="MOBKILLED" val="25305"/>	<!-- Ketras Chief Brakki -->
+			<event type="MOBKILLED" val="25667"/>	<!-- Cannibalistic Stakato Chief -->
+			<event type="MOBKILLED" val="25668"/>	<!-- Cannibalistic Stakato Chief -->
+			<event type="MOBKILLED" val="25669"/>	<!-- Cannibalistic Stakato Chief -->
+			<event type="MOBKILLED" val="25670"/>	<!-- Cannibalistic Stakato Chief -->
+			<event type="MOBKILLED" val="25701"/>	<!-- Anays -->
+			<event type="QUEST_START" val="31340"/>	<!-- Mathias -->
+			<event type="QUEST_TALK" val="31340"/>	<!-- Mathias -->
+			<item id="21997"/>	<!-- Shattered Bones -->
+			<item id="21998"/>	<!-- Cannibalistic Stakato Leader Claw -->
+			<item id="21999"/>	<!-- Anais Scroll -->
+		</setting>
+	</quest>
+</quests>

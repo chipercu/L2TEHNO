@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="72" type="SOLO">
+		<name lang="en" val="Saga of the Sword Muse"/>
+		<name lang="ru" val="Сага Виртуоза"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBGOTATTACKED" val="27280"/>	<!-- Fallen Angel Narcissus -->
+			<event type="MOBKILLED" val="27288"/>	<!-- Sword Player Biel -->
+			<event type="MOBKILLED" val="27221"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="27280"/>	<!-- Fallen Angel Narcissus -->
+			<event type="MOBKILLED" val="21646"/>	<!-- Grave Scarab -->
+			<event type="MOBKILLED" val="21647"/>	<!-- Scavenger Scarab -->
+			<event type="MOBKILLED" val="21648"/>	<!-- Grave Ant -->
+			<event type="MOBKILLED" val="21649"/>	<!-- Scavenger Ant -->
+			<event type="MOBKILLED" val="21650"/>	<!-- Shrine Knight -->
+			<event type="MOBKILLED" val="21651"/>	<!-- Shrine Guard -->
+			<event type="MOBKILLED" val="27214"/>	<!-- Guardian of Forbidden Knowledge -->
+			<event type="MOBKILLED" val="27215"/>	<!-- Guardian of Forbidden Knowledge -->
+			<event type="MOBKILLED" val="27216"/>	<!-- Guardian of Forbidden Knowledge -->
+			<event type="MOBKILLED" val="18212"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18213"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18214"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18215"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18216"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18217"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18218"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18219"/>	<!-- Archon of Halisha -->
+			<event type="NPC_FIRST_TALK" val="31618"/>	<!-- Moon Voice Irene -->
+			<event type="QUEST_START" val="30853"/>	<!-- Raien -->
+			<event type="QUEST_TALK" val="30853"/>	<!-- Raien -->
+			<event type="QUEST_TALK" val="30853"/>	<!-- Raien -->
+			<event type="QUEST_TALK" val="31624"/>	<!-- Donath -->
+			<event type="QUEST_TALK" val="31583"/>	<!-- Feynn -->
+			<event type="QUEST_TALK" val="31537"/>	<!-- Tunatun -->
+			<event type="QUEST_TALK" val="31618"/>	<!-- Moon Voice Irene -->
+			<event type="QUEST_TALK" val="31646"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31649"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31652"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31654"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31655"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31659"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31281"/>	<!-- Cerenas -->
+			<item id="7536"/>	<!-- Bitter Cold Beer -->
+			<item id="7487"/>	<!-- Halisha's Mark -->
+			<item id="7270"/>	<!-- Resonance Amulet - 1 -->
+			<item id="7301"/>	<!-- Resonance Amulet - 2 -->
+			<item id="7332"/>	<!-- Resonance Amulet - 3 -->
+			<item id="7363"/>	<!-- Resonance Amulet - 4 -->
+			<item id="7394"/>	<!-- Resonance Amulet - 5 -->
+			<item id="7425"/>	<!-- Resonance Amulet - 6 -->
+			<item id="7095"/>	<!-- Criticism of Biel's Song -->
+		</setting>
+	</quest>
+</quests>

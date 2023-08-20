@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+	<!--
+		handicap_attack - в % указывается бонус атаки для этой группы ботов.
+		handicap_defence - в % указывается бонус защиты для этой группы ботов.
+		По умолчанию 100%.
+		Может принимать значения от 5% до 300%.
+		Можно не вписывать (тогда используется стандартное значение в 100%).
+	-->
+	<SpawnObject ai_type="tank" is_spawn_enabled="true" description="Zakoulok vozle WH">
+		<coord x="20376" y="144248" z="-3072" count="1" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+		<coord x="20088" y="144920" z="-3104" count="1" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+	</SpawnObject>
+	<SpawnObject ai_type="dagger" is_spawn_enabled="true" description="Zakoulok vozle WH">
+		<coord x="20184" y="144568" z="-3104" count="3" peace_cooldown="60" comeback_distance="900" handicap_attack="100" handicap_defence="100"/>
+	</SpawnObject>
+	<SpawnObject ai_type="tank" is_spawn_enabled="true" description="Ulica">
+		<coord x="18808" y="145432" z="-3136" count="1" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+		<coord x="17800" y="145688" z="-3104" count="1" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+	</SpawnObject>
+	<SpawnObject ai_type="dagger" is_spawn_enabled="true" description="Ulica">
+		<coord x="18648" y="145646" z="-3136" count="3" peace_cooldown="60" comeback_distance="900" handicap_attack="100" handicap_defence="100"/>
+		<coord x="17944" y="146200" z="-3104" count="3" peace_cooldown="60" comeback_distance="900" handicap_attack="100" handicap_defence="100"/>
+		<coord x="19032" y="144328" z="-3088" count="3" peace_cooldown="60" comeback_distance="900" handicap_attack="100" handicap_defence="100"/>
+		<coord x="16920" y="144840" z="-3008" count="2" peace_cooldown="60" comeback_distance="900" handicap_attack="100" handicap_defence="100"/>
+	</SpawnObject>
+	<SpawnObject ai_type="tank" is_spawn_enabled="true" description="Zakoulok vozle managera">
+		<coord x="18120" y="143528" z="-3040" count="1" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+	</SpawnObject>
+	<SpawnObject ai_type="dagger" is_spawn_enabled="true" description="Zakoulok vozle managera">
+		<coord x="17800" y="143832" z="-3048" count="3" peace_cooldown="60" comeback_distance="900" handicap_attack="100" handicap_defence="100"/>
+	</SpawnObject>
+	<SpawnObject ai_type="archer" is_spawn_enabled="true" description="Cerkov">
+		<coord x="16216" y="143192" z="-2752" count="2" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+		<coord x="15080" y="142920" z="-2672" count="2" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+	</SpawnObject>
+	<SpawnObject ai_type="mage" is_spawn_enabled="true" description="Cerkov">
+		<coord x="16216" y="143192" z="-2752" count="3" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+		<coord x="15080" y="142920" z="-2672" count="3" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+	</SpawnObject>
+	<SpawnObject ai_type="mage" is_spawn_enabled="true" description="Ulica">
+		<coord x="18056" y="146168" z="-3104" count="2" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+		<coord x="18824" y="145227" z="-3136" count="1" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+		<coord x="19208" y="143400" z="-3056" count="2" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+		<coord x="20184" y="145720" z="-3136" count="1" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+		<coord x="16824" y="144488" z="-3008" count="2" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+	</SpawnObject>
+	<SpawnObject ai_type="archer" is_spawn_enabled="true" description="Ulica">
+		<coord x="18056" y="146168" z="-3104" count="1" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+		<coord x="18824" y="145227" z="-3136" count="2" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+		<coord x="19208" y="143400" z="-3056" count="1" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+		<coord x="20184" y="145720" z="-3136" count="2" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+		<coord x="16824" y="144488" z="-3008" count="1" peace_cooldown="60" comeback_distance="800" handicap_attack="100" handicap_defence="100"/>
+	</SpawnObject>
+	<SpawnObject ai_type="warrior" is_spawn_enabled="true" description="Ulica">
+		<coord x="18056" y="146168" z="-3104" count="1" peace_cooldown="60" comeback_distance="1000" handicap_attack="100" handicap_defence="100"/>
+		<coord x="18824" y="145227" z="-3136" count="1" peace_cooldown="60" comeback_distance="1000" handicap_attack="100" handicap_defence="100"/>
+		<coord x="19208" y="143400" z="-3056" count="1" peace_cooldown="60" comeback_distance="1000" handicap_attack="100" handicap_defence="100"/>
+		<coord x="20184" y="145720" z="-3136" count="1" peace_cooldown="60" comeback_distance="1000" handicap_attack="100" handicap_defence="100"/>
+		<coord x="16824" y="144488" z="-3008" count="1" peace_cooldown="60" comeback_distance="1000" handicap_attack="100" handicap_defence="100"/>
+	</SpawnObject>
+	<SpawnObject ai_type="warrior" is_spawn_enabled="true" description="Zakutok vozle steny">
+		<coord x="16456" y="146024" z="-3101" count="4" peace_cooldown="60" comeback_distance="1000" handicap_attack="100" handicap_defence="100"/>
+	</SpawnObject>
+	<SpawnObject ai_type="archer" is_spawn_enabled="true" description="Zakutok vozle steny">
+		<coord x="16456" y="146024" z="-3101" count="3" peace_cooldown="60" comeback_distance="1000" handicap_attack="100" handicap_defence="100"/>
+	</SpawnObject>
+	<SpawnObject ai_type="dagger" is_spawn_enabled="true" description="Zakutok vozle steny">
+		<coord x="16456" y="146024" z="-3101" count="4" peace_cooldown="60" comeback_distance="1000" handicap_attack="100" handicap_defence="100"/>
+	</SpawnObject>
+ </list>

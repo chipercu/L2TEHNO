@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="7014" name="Monster Only (Shield of Dark Dragon)" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="weight" val="4800" />
+		<set name="shield_def" val="230" />
+		<set name="shield_def_rate" val="20" />
+		<set name="price" val="845000" />
+		<set name="avoid_modify" val="-8" />
+	</weapon>
+	<weapon id="7015" name="Shield of Castle Pledge" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_pledge_shield_i00" />
+		<set name="weight" val="1380" />
+		<set name="shield_def" val="90" />
+		<set name="shield_def_rate" val="20" />
+		<set name="price" val="9900" />
+		<set name="avoid_modify" val="-8" />
+	</weapon>
+	<weapon id="7058" name="Chrono Darbuka" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_chrono_darbuka_i00" />
+		<set name="p_dam" val="1" />
+		<set name="m_dam" val="1" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+	</weapon>
+</list>

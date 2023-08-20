@@ -1,0 +1,71 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_entrance_defeated : default_npc
+{
+parameter:
+	int	TIMER_next_voice = 23147001;
+	int	TIMER_pc_leave = 23147002;
+	int	scene_sec_21 = 24000;
+
+handler:
+	EventHandler CREATED()
+	{
+		( myself + 1128 ) = 0;
+		( myself + 1136 ) = 0;
+		gg->SendScriptEvent(( myself + 1496 ),23140022,gg->GetIndexFromCreature(( myself + 1480 )));
+	}
+
+	EventHandler SEE_CREATURE(creature)
+	{
+		if( ( myself + 1128 ) == 0 && ( creature + 68 ) == 1 )
+		{
+			( myself + 1128 ) = 1;
+			myself->VoiceNPCEffect(creature,"Freya.freya_voice_01",0);
+			( myself + 1136 ) = gg->GetIndexFromCreature(creature);
+			myself->AddTimerEx(TIMER_next_voice,( 20 * 1000 ));
+		}
+	}
+
+	EventHandler TIMER_FIRED_EX(timer_id,c0)
+	{
+		if( timer_id == TIMER_next_voice )
+		{
+			c0 = gg->GetCreatureFromIndex(( myself + 1136 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				if( ( c0 + 7548 ) == myself->InstantZone_GetId() )
+				{
+					myself->VoiceNPCEffect(c0,"Freya.freya_voice_02",0);
+				}
+			}
+		}
+		else if( timer_id == TIMER_pc_leave )
+		{
+			c0 = gg->GetCreatureFromIndex(( myself + 1136 ));
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				myself->SetMemoState(c0,10285,3);
+				myself->SetFlagJournal(c0,10285,10);
+				myself->ShowQuestMark(c0,10285);
+				myself->SoundEffect(c0,"ItemSound.quest_middle");
+				myself->InstantZone_Leave(c0);
+			}
+			myself->InstantZone_Finish(1);
+		}
+	}
+
+	EventHandler SCRIPT_EVENT(script_event_arg1,script_event_arg2,script_event_arg3,c0,i0)
+	{
+		if( script_event_arg1 == 231400001 )
+		{
+			myself->AddTimerEx(TIMER_pc_leave,scene_sec_21);
+		}
+	}
+
+}

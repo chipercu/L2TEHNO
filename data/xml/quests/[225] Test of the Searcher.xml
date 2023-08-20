@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="225" type="SOLO">
+		<name lang="en" val="Test of the Searcher"/>
+		<name lang="ru" val="Испытание ищущего"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="27093"/>	<!-- Delu Chief Kalkis -->
+			<event type="MOBKILLED" val="20551"/>	<!-- Road Scavenger -->
+			<event type="MOBKILLED" val="20144"/>	<!-- Hangman Tree -->
+			<event type="MOBKILLED" val="20781"/>	<!-- Delu Lizardman Shaman -->
+			<event type="MOBKILLED" val="27094"/>	<!-- Delu Lizardman Assassin -->
+			<event type="MOBKILLED" val="20555"/>	<!-- Giant Fungus -->
+			<event type="QUEST_START" val="30690"/>	<!-- Luther -->
+			<event type="QUEST_TALK" val="30690"/>	<!-- Luther -->
+			<event type="QUEST_TALK" val="30291"/>	<!-- Alex -->
+			<event type="QUEST_TALK" val="30728"/>	<!-- Leirynn -->
+			<event type="QUEST_TALK" val="30729"/>	<!-- Borys -->
+			<event type="QUEST_TALK" val="30420"/>	<!-- Tyra -->
+			<event type="QUEST_TALK" val="30730"/>	<!-- Jax -->
+			<event type="QUEST_TALK" val="30627"/>	<!-- Tree -->
+			<event type="QUEST_TALK" val="30628"/>	<!-- Strong Wooden Chest -->
+			<item id="2787"/>	<!-- Delu Totem -->
+			<item id="2797"/>	<!-- Red Spore Dust -->
+			<item id="2784"/>	<!-- Luther's Letter -->
+			<item id="2785"/>	<!-- Alex's Warrant -->
+			<item id="2786"/>	<!-- Leirynn's 1st Order -->
+			<item id="2788"/>	<!-- Leirynn's 2nd Order -->
+			<item id="2790"/>	<!-- Leirynn's Report -->
+			<item id="2789"/>	<!-- Chief Kalki's Fang -->
+			<item id="2791"/>	<!-- Strange Map -->
+			<item id="2792"/>	<!-- Lambert's Map -->
+			<item id="2793"/>	<!-- Alex's Letter -->
+			<item id="2794"/>	<!-- Alex's Order -->
+			<item id="2795"/>	<!-- Wine Catalog -->
+			<item id="2796"/>	<!-- Tyra's Contract -->
+			<item id="2799"/>	<!-- Old Order -->
+			<item id="2798"/>	<!-- Malrukian Wine -->
+			<item id="2800"/>	<!-- Jax's Diary -->
+			<item id="2801"/>	<!-- 1st Torn Map Piece -->
+			<item id="2802"/>	<!-- 2nd Torn Map Piece -->
+			<item id="2803"/>	<!-- Solt's Map -->
+			<item id="2804"/>	<!-- Makel's Map -->
+			<item id="2806"/>	<!-- Rusted Key -->
+			<item id="2805"/>	<!-- Combined Map -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<etcitem id="21100" type="OTHER" name="Shiny Cube Fragment Armor - S">
+		<!-- Description: Speak with a warehouse keeper to exchange this for a S Grade Blessed Armor Enchant Scroll.-->
+		<set name="icon" val="shine_cubic_a_piece_i04" />
+		<set name="material" val="paper" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21101" type="OTHER" name="Shiny Cube Fragment Weapon - D">
+		<!-- Description: Speak with a warehouse keeper to exchange this for a D Grade Blessed Weapon Enchant Scroll.-->
+		<set name="icon" val="shine_cubic_w_piece_i00" />
+		<set name="material" val="paper" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21102" type="OTHER" name="Shiny Cube Fragment Weapon - C">
+		<!-- Description: Speak with a warehouse keeper to exchange this for a C Grade Blessed Weapon Enchant Scroll.-->
+		<set name="icon" val="shine_cubic_w_piece_i01" />
+		<set name="material" val="paper" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21103" type="OTHER" name="Shiny Cube Fragment Weapon - B">
+		<!-- Description: Speak with a warehouse keeper to exchange this for a B Grade Blessed Weapon Enchant Scroll.-->
+		<set name="icon" val="shine_cubic_w_piece_i02" />
+		<set name="material" val="paper" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21104" type="OTHER" name="Shiny Cube Fragment Weapon - A">
+		<!-- Description: Speak with a warehouse keeper to exchange this for a A Grade Blessed Weapon Enchant Scroll.-->
+		<set name="icon" val="shine_cubic_w_piece_i03" />
+		<set name="material" val="paper" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21105" type="OTHER" name="Shiny Cube Fragment Weapon - S">
+		<!-- Description: Speak with a warehouse keeper to exchange this for a S Grade Blessed Weapon Enchant Scroll.-->
+		<set name="icon" val="shine_cubic_w_piece_i04" />
+		<set name="material" val="paper" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21106" type="OTHER" name="Wondrous Cubic - 1 time use">
+		<!-- Description: Double click to create a cube fragment that can be exchanged for a weapon/armor enchant scroll. Cannot be exchanged or dropped. (Disappears after 1 time use.)-->
+		<set name="icon" val="cube_event_i02" />
+		<set name="material" val="steel" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21107" type="OTHER" name="Refined Cube - 1 time use">
+		<!-- Description: Double click to create augmenting stones according to type. Cannot be exchanged or dropped. (Disappears after 1 time use.)-->
+		<set name="icon" val="cube_event_i03" />
+		<set name="material" val="steel" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21128" type="OTHER" name="Warm Bear Hat Pack">
+		<!-- Description: Wrapped pack containing a warm bear hat. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21129" type="OTHER" name="Warm Bear Hat 7-Day Pack">
+		<!-- Description: Wrapped pack containing a warm beat hat (7 day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21130" type="OTHER" name="Warm Bear Paws Pack">
+		<!-- Description: Wrapped pack containing warm bear paws. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21131" type="OTHER" name="Warm Bear Paws 7-Day Pack">
+		<!-- Description: Wrapped pack containing warm beat paws (7 day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21132" type="OTHER" name="Stag Beetle Hat Pack">
+		<!-- Description: Wrapped pack containing a stag beetle hat. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21133" type="OTHER" name="Stag Beetle Hat 7-Day Pack">
+		<!-- Description: Wrapped pack containing a stag beetle hat (7 day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21134" type="OTHER" name="Beetle Hat Pack">
+		<!-- Description: Wrapped pack containing a beetle hat. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21135" type="OTHER" name="Beetle Hat 7-Day Pack">
+		<!-- Description: Wrapped pack containing a beetle hat (7 day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21136" type="OTHER" name="Ladybug Hat Pack">
+		<!-- Description: Wrapped pack containing a ladybug hat. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21137" type="OTHER" name="Ladybug Hat 7-Day Pack">
+		<!-- Description: Wrapped pack containing a ladybug hat (7 day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21138" type="OTHER" name="Preying Mantis Hat Pack">
+		<!-- Description: Wrapped pack containing a preying mantis hat. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21139" type="OTHER" name="Preying Mantis Hat 7-Day Pack">
+		<!-- Description: Wrapped pack containing a preying mantis hat (7 day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21140" type="OTHER" name="Grasshopper Hat Pack">
+		<!-- Description: Wrapped pack containing a grasshopper hat. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21141" type="OTHER" name="Grasshopper Hat 7-Day Pack">
+		<!-- Description: Wrapped pack containing a grasshopper hat (7 day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21142" type="OTHER" name="Gold-rimmed Glasses Pack">
+		<!-- Description: Wrapped pack containing gold-rimmed glasses. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21143" type="OTHER" name="Gold-rimmed Glasses 7-Day Pack">
+		<!-- Description: Wrapped pack containing gold-rimmed glasses (7 day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21144" type="OTHER" name="White Uniform Hat Pack">
+		<!-- Description: Wrapped pack containing a white uniform hat. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21145" type="OTHER" name="White Uniform Hat 7-Day Pack">
+		<!-- Description: Wrapped pack containing a white uniform hat (7 day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21146" type="OTHER" name="Warrior's Helmet Pack">
+		<!-- Description: Wrapped pack containing a warrior's helmet. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21147" type="OTHER" name="Warrior's Helmet 7-Day Pack">
+		<!-- Description: Wrapped pack containing a warrior's helmet (7 day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21148" type="SCROLL" name="Transformation Scroll: Dragon Master Lee">
+		<!-- Description: Scroll for transforming into Dragon Master Lee. The effect lasts for 1 hour(s). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+		<skills>
+			<skill id="22183" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21149" type="SCROLL" name="Transformation Scroll: Dragon Master Karin">
+		<!-- Description: Scroll for transforming into Dragon Master Karin. The effect lasts for 1 hour(s). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+		<skills>
+			<skill id="22184" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21151" type="OTHER" name="Shiny Lighting">
+		<!-- Description: Scroll that summons brilliant, shiny lighting. Can strike a cool pose with lighting from below. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_aga_singer_dancer_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21154" type="OTHER" name="Singer &amp; Dancer Agathion Pack">
+		<!-- Description: Wrapped pack containing a Singer &amp; Dancer Agathion. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21155" type="OTHER" name="Singer &amp; Dancer Agathion Pack">
+		<!-- Description: Wrapped pack containing a Singer &amp; Dancer Agathion (7 day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21156" type="OTHER" name="Big Wedding Cake">
+		<!-- Description: Scroll that summons a large 3-layer wedding cake, a must-have at any wedding. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_big_wedding_cake_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="material" val="paper" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21157" type="OTHER" name="Flower Shower">
+		<!-- Description: A flower shower sprinkled on the bride and groom.-->
+		<set name="icon" val="br_flower_shower_i00" />
+		<set name="material" val="wood" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21158" type="OTHER" name="Echo Crystal">
+		<!-- Description: Crystal that emits a fantasy-like sound when used.-->
+		<set name="icon" val="br_eco_crystal_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21161" type="OTHER" name="Wedding Pack">
+		<!-- Description: Wrapped wedding pack containing a honeymoon ticket and a big wedding cake.-->
+		<set name="icon" val="br_wedding_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21164" type="OTHER" name="Honeymoon Ticket">
+		<!-- Description: Honeymoon ticket given to the bride and groom as a gift. When used, energy is maintained for 1 hour(s). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_weddin_ticket_i00" />
+		<set name="additional_name" val="7-day limited period" />
+		<set name="material" val="paper" />
+		<set name="weight" val="20" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="temporal" val="true" />
+		<set name="durability" val="10080" />
+	</etcitem>
+	<etcitem id="21167" name="Soul Zaken Swords Pack" type="OTHER">
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+        <skill>
+        <skill id="26077" val="57" />
+        </skill>
+	</etcitem>
+	<etcitem id="21168" type="OTHER" name="Zaken Spirit Sword Pack">
+		<!-- Description: Wrapped pack containing Zaken's spirit sword (7 day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21169" type="OTHER" name="Birthday Present Pack">
+		<!-- Description: Birthday present given to you by Alegria on your birthday. When used, you will obtain (1) Cake Topper hat, (1) Birthday Vitality Potion and (1) Birthday Cake. Cannot be exchanged or dropped. Can be stored in private warehouse.-->
+		<set name="icon" val="event_hero_treasure_box_i00" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21170" type="POTION" name="Birthday Vitality Potion">
+		<!-- Description: Upon use, for 12 hours, when Exp. is acquired through hunting, vitality is recovered. Cannot be exchanged or dropped. Can be stored in a private warehouse.-->
+		<set name="icon" val="icon.etc_potion_blue_i00" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="80" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21171" type="SCROLL" name="Transformation Scroll: Treasure Hunter">
+		<!-- Description: Transformation scroll that transforms you into a Treasure Hunter for 10 minutes. If used on Fantasy Isle, you can find Event Treasure Chests. No effect if used while already transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22190" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21172" type="SCROLL" name="Transformation Scroll: Onyx Beast">
+		<!-- Description: Transformation scroll that transforms you into an Onyx Beast for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22191" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21173" type="SCROLL" name="Transformation Scroll: Death Blader">
+		<!-- Description: Transformation scroll that transforms you into a Death Blader for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22192" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21174" type="SCROLL" name="Transformation Scroll: Grail Apostl">
+		<!-- Description: Transformation scroll that transforms you into a Grail Apostle for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22193" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21175" type="SCROLL" name="Transformation Scroll: Unicorn - Event">
+		<!-- Description: Transformation scroll that transforms you into a Unicorn for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22194" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21176" type="SCROLL" name="Transformation Scroll: Lilim Knight">
+		<!-- Description: Transformation scroll that transforms you into a Lilim Knight for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22195" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21177" type="SCROLL" name="Transformation Scroll: Golem Guardian">
+		<!-- Description: Transformation scroll that transforms you into a Golem Guardian for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22196" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21178" type="SCROLL" name="Transformation Scroll: Inferno Drake">
+		<!-- Description: Transformation scroll that transforms you into an Inferno Drake for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22197" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21179" type="SCROLL" name="Transformation Scroll: Dragon Bomber">
+		<!-- Description: Transformation scroll that transforms you into a Dragon Bomber for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22198" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21180" type="SCROLL" name="Transformation Scroll: Heretic">
+		<!-- Description: Transformation scroll that transforms you into a Heretic for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22199" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21181" type="SCROLL" name="Transformation Scroll: Veil Master">
+		<!-- Description: Transformation scroll that transforms you into a Veil Master for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22200" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21182" type="SCROLL" name="Transformation Scroll: Saber Tooth Tiger">
+		<!-- Description: Transformation scroll that transforms you into a Saber Tooth Tiger for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22201" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21183" type="SCROLL" name="Transformation Scroll: Ol Mahum">
+		<!-- Description: Transformation scroll that transforms you into an Ol Mahum for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22202" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21184" type="SCROLL" name="Transformation Scroll: Doll Blader">
+		<!-- Description: Transformation scroll that transforms you into a Doll Blader for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22203" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21185" type="SCROLL" name="Transformation Scroll: Zaken">
+		<!-- Description: Transformation scroll that transforms you into Zaken for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22204" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21186" type="SCROLL" name="Transformation Scroll: Anakim">
+		<!-- Description: Transformation scroll that transforms you into Anakim for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22205" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21187" type="SCROLL" name="Transformation Scroll: Venom">
+		<!-- Description: Transformation scroll that transforms you into Venom for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22206" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21188" type="SCROLL" name="Transformation Scroll: Gordon">
+		<!-- Description: Transformation scroll that transforms you into Gordon for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22207" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21189" type="SCROLL" name="Transformation Scroll: Ranku">
+		<!-- Description: Transformation scroll that transforms you into Ranku for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22208" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21190" type="SCROLL" name="Transformation Scroll: Kechi">
+		<!-- Description: Transformation scroll that transforms you into Kechi for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22209" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21191" type="SCROLL" name="Transformation Scroll: Demon Prince">
+		<!-- Description: Transformation scroll that transforms you into Demon Prince for 30 minute(s). No effect if used while transformed.-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="additional_name" val="Event" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="class" val="CONSUMABLE" />
+		<skills>
+			<skill id="22210" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21192" type="OTHER" name="Dimension Diamond Pack">
+		<!-- Description: Dimensional item pack. Gift box containing 50 dimension diamonds. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="steel" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21193" type="OTHER" name="Dimension Diamond">
+		<!-- Description: Dimensional item. Magic crystal needed when casting instant moving magic. If you collect them and bring them to the Gatekeeper, you can exchange them for various types of escape scrolls. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse.-->
+		<set name="icon" val="icon.etc_gem_clear_i00" />
+		<set name="material" val="paper" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="stackable" val="true" />
+
+	</etcitem>
+	<etcitem id="21194" type="OTHER" name="Blessed Scroll of Escape Pack">
+		<!-- Description: Dimensional item pack. Gift box containing 1 blessed scroll of escape. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="steel" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21195" type="SCROLL" name="Blessed Scroll of Escape">
+		<!-- Description: Dimensional item. Magic scroll that moves you to the nearest village. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse.-->
+		<set name="icon" val="icon.etc_scroll_of_return_i01" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21196" type="OTHER" name="Highest Power Temporary Healing Potion Pack">
+		<!-- Description: Dimensional item pack. Gift box containing 5 highest power temporary healing potion(s). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="steel" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21197" type="POTION" name="Highest Power Temporary Healing Potion">
+		<!-- Description: Dimensional item. Magic potion that temporarily and greatly recovers stamina. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse.-->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="180" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21198" name="Mysterious Scroll Pack - 2 Prophecies of Wind" type="OTHER">
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+        <skill>
+        <skill id="26077" val="57" />
+        </skill>
+	</etcitem>
+	<etcitem id="21199" type="OTHER" name="Mysterious Scroll Pack - 8 Prophecies of Wind">
+		<!-- Description: Dimensional item pack. Gift box containing 8 mysterious scrolls - prophecy of wind. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse.-->
+		<set name="icon" val="br_four_leaf_clover_box_i00" />
+		<set name="material" val="steel" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="stackable" val="true" />
+	</etcitem>
+</list>

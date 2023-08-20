@@ -1,0 +1,13 @@
+!Gatekeeper Bilia:
+
+Greetings! I'm Bilia, the gatekeeper of Schuttgart. To use the gate, you must open the Door of Time and Space. Don't worry, I'm here to help you! I'll do my very best to make sure you arrive safe and sound at your destination!
+
+Where would you like go?
+
+[npc_%objectId%_Teleport 1|Teleport]%%
+[npc_%objectId%_multisell 002|Exchange with the Dimension Diamond]%%
+[scripts_Util:NoblessTeleport|Noblesse Only teleport]%%
+[scripts_services.TeleToMDT:toMDT @811;Monster Derby Track|"I want free admision to the Monster Derby Track."]%%
+[scripts_Util:Gatekeeper -58752 -56898 -2032 0 @811;Fantasy Island|Move to Fantasy Island (Free of Charge).]%%
+[scripts_services.Birthday:summonAlegria|Summon Alegria]%%
+[npc_%objectId%_Quest|Quest]

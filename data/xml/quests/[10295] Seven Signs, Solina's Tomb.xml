@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="10295" type="SOLO">
+		<name lang="en" val="Seven Signs, Solina's Tomb"/>
+		<name lang="ru" val="Семь Печатей, Гробница Святой"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="18952"/>	<!-- Solinas Guardian -->
+			<event type="MOBKILLED" val="18953"/>	<!-- Solinas Guardian -->
+			<event type="MOBKILLED" val="18954"/>	<!-- Solinas Guardian -->
+			<event type="MOBKILLED" val="18955"/>	<!-- Solinas Guardian -->
+			<event type="MOBKILLED" val="18956"/>	<!-- Guardian of the Tomb -->
+			<event type="MOBKILLED" val="18957"/>	<!-- Guardian of the Tomb -->
+			<event type="MOBKILLED" val="18958"/>	<!-- Guardian of the Tomb -->
+			<event type="MOBKILLED" val="18959"/>	<!-- Guardian of the Tomb -->
+			<event type="QUEST_START" val="32792"/>	<!-- Eriss Evil Thoughts -->
+			<event type="QUEST_TALK" val="32792"/>	<!-- Eriss Evil Thoughts -->
+			<event type="QUEST_TALK" val="32787"/>	<!-- Elcadia -->
+			<event type="QUEST_TALK" val="32820"/>	<!-- Teleport Control Device -->
+			<event type="QUEST_TALK" val="32838"/>	<!-- Powerful Device -->
+			<event type="QUEST_TALK" val="32839"/>	<!-- Powerful Device -->
+			<event type="QUEST_TALK" val="32840"/>	<!-- Powerful Device -->
+			<event type="QUEST_TALK" val="32841"/>	<!-- Powerful Device -->
+			<event type="QUEST_TALK" val="32857"/>	<!-- Altar of Hallows -->
+			<event type="QUEST_TALK" val="32858"/>	<!-- Altar of Hallows -->
+			<event type="QUEST_TALK" val="32859"/>	<!-- Altar of Hallows -->
+			<event type="QUEST_TALK" val="32860"/>	<!-- Altar of Hallows -->
+			<event type="QUEST_TALK" val="32837"/>	<!-- Teleport Control Device -->
+			<event type="QUEST_TALK" val="32843"/>	<!-- Tomb of the Saintess -->
+			<event type="QUEST_TALK" val="32842"/>	<!-- Teleport Control Device -->
+			<event type="QUEST_TALK" val="32793"/>	<!-- Solinas Evil Thoughts -->
+			<item id="17228"/>	<!-- Scroll of Abstinence -->
+			<item id="17229"/>	<!-- Shield of Sacrifice -->
+			<item id="17230"/>	<!-- Sword of Holy Spirit -->
+			<item id="17231"/>	<!-- Staff of Blessing -->
+		</setting>
+	</quest>
+</quests>

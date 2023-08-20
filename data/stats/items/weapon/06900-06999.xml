@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="6902" name="Pledge Shield" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_pledge_shield_i00" />
+		<set name="weight" val="1380" />
+		<set name="shield_def" val="90" />
+		<set name="shield_def_rate" val="20" />
+		<set name="price" val="9900" />
+        <set name="avoid_modify" val="-8" />
+	</weapon>
+	<weapon id="6917" name="Monster Only (Poison Sting)" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="weight" val="6" />
+		<set name="price" val="2" />
+	</weapon>
+	<weapon id="6918" name="Monster Only (Shield of Silenos)" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="weight" val="1380" />
+		<set name="shield_def" val="90" />
+		<set name="shield_def_rate" val="20" />
+		<set name="price" val="12900" />
+        <set name="avoid_modify" val="-8" />
+	</weapon>
+	<weapon id="6919" name="Monster Only (Shield of Ketra Orc)" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="weight" val="1320" />
+		<set name="crystal_count" val="142" />
+		<set name="shield_def" val="142" />
+		<set name="shield_def_rate" val="20" />
+		<set name="price" val="78400" />
+        <set name="avoid_modify" val="-8" />
+	</weapon>
+</list>

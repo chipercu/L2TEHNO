@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="1142" name="Rusted Bronze Sword" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_broad_sword_i00" />
+		<set name="weight" val="1400" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="p_dam" val="18" />
+		<set name="m_dam" val="21" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="1181" name="Neti's Bow" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_bow_i00" />
+		<set name="weight" val="1850" />
+		<set name="soulshots" val="7" />
+		<set name="spiritshots" val="2" />
+		<set name="p_dam" val="45" />
+		<set name="m_dam" val="16" />
+		<set name="atk_speed" val="293" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="mp_consume" val="1" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="1182" name="Neti's Dagger" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_knife_i00" />
+		<set name="weight" val="1000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="p_dam" val="19" />
+		<set name="m_dam" val="16" />
+		<set name="atk_speed" val="433" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+</list>

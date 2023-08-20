@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- [RU] Настройки мастерской -->
+	<!-- [EN] Workshop settings -->
+	<!-- [RU] 0 - выключено для всех (отключает все нижеперечисленные опции, интерфейс будет работать по дефолту) -->
+	<!-- [EN] 0 - disabled for all (disables all of the following options, the interface will work by default) -->
+	<!-- [RU] 1 - включено только для игроков с ПА -->
+	<!-- [EN] 1 - enabled only for PA players -->
+	<!-- [RU] 2 - включено для всех -->
+	<!-- [EN] 2 - enabled for all -->
+	<interface_setting name="WorkshopMode" type="TYPE_CHAR" value="2"/>
+	
+	<!-- [RU] Список свитков по грейдам для оружия (1 - D, 2 - C, 3 - B, 4 - A, 5 - S) -->
+	<!-- [EN] Scrolls list by grade for weapon (1 - D, 2 - C, 3 - B, 4 - A, 5 - S) -->
+	<interface_setting name="WorkshopEnchScrollsWeapon1" type="TYPE_ARR_INT" value="955;957;22006;22229;17261;15350"/>
+	<interface_setting name="WorkshopEnchScrollsWeapon2" type="TYPE_ARR_INT" value="951;953;22007;22227;17259;22341;15349"/>
+	<interface_setting name="WorkshopEnchScrollsWeapon3" type="TYPE_ARR_INT" value="947;949;22008;22014;22018;22225;17257;22317;15348"/>
+	<interface_setting name="WorkshopEnchScrollsWeapon4" type="TYPE_ARR_INT" value="729;731;22009;22015;22019;22223;17255;22316;15347"/>
+	<interface_setting name="WorkshopEnchScrollsWeapon5" type="TYPE_ARR_INT" value="959;961;20517;20519;22221;17263;22314;15346;32415;22428"/>
+	
+	<!-- [RU] Список благославенных свитков по грейдам для оружия (1 - D, 2 - C, 3 - B, 4 - A, 5 - S) -->
+	<!-- [EN] Blessed Scrolls list by grade for weapon (1 - D, 2 - C, 3 - B, 4 - A, 5 - S) -->
+	<interface_setting name="WorkshopEnchBlessScrollsWeapon1" type="TYPE_ARR_INT" value="6575"/>
+	<interface_setting name="WorkshopEnchBlessScrollsWeapon2" type="TYPE_ARR_INT" value="6573"/>
+	<interface_setting name="WorkshopEnchBlessScrollsWeapon3" type="TYPE_ARR_INT" value="6571"/>
+	<interface_setting name="WorkshopEnchBlessScrollsWeapon4" type="TYPE_ARR_INT" value="6569"/>
+	<interface_setting name="WorkshopEnchBlessScrollsWeapon5" type="TYPE_ARR_INT" value="6577;20521"/>
+	
+	<!-- [RU] Список свитков по грейдам для брони (1 - D, 2 - C, 3 - B, 4 - A, 5 - S) -->
+	<!-- [EN] Scrolls list by grade for armor (1 - D, 2 - C, 3 - B, 4 - A, 5 - S) -->
+	<interface_setting name="WorkshopEnchScrollsArmor1" type="TYPE_ARR_INT" value="956;958;22010;22230;17262"/>
+	<interface_setting name="WorkshopEnchScrollsArmor2" type="TYPE_ARR_INT" value="952;954;22011;22228;17260"/>
+	<interface_setting name="WorkshopEnchScrollsArmor3" type="TYPE_ARR_INT" value="948;950;22012;22016;22020;22226;17258;22319"/>
+	<interface_setting name="WorkshopEnchScrollsArmor4" type="TYPE_ARR_INT" value="730;732;22013;22017;22021;22224;17256;22318"/>
+	<interface_setting name="WorkshopEnchScrollsArmor5" type="TYPE_ARR_INT" value="960;962;20518;20520;22222;17264;22315;32416;22429"/>
+	
+	<!-- [RU] Список благославенных свитков по грейдам для брони (1 - D, 2 - C, 3 - B, 4 - A, 5 - S) -->
+	<!-- [EN] Blessed Scrolls list by grade for armor (1 - D, 2 - C, 3 - B, 4 - A, 5 - S) -->
+	<interface_setting name="WorkshopEnchBlessScrollsArmor1" type="TYPE_ARR_INT" value="6576"/>
+	<interface_setting name="WorkshopEnchBlessScrollsArmor2" type="TYPE_ARR_INT" value="6574"/>
+	<interface_setting name="WorkshopEnchBlessScrollsArmor3" type="TYPE_ARR_INT" value="6572"/>
+	<interface_setting name="WorkshopEnchBlessScrollsArmor4" type="TYPE_ARR_INT" value="6570"/>
+	<interface_setting name="WorkshopEnchBlessScrollsArmor5" type="TYPE_ARR_INT" value="6578;20522"/>
+	
+	<!-- [RU] Прочие параметры энчанта -->
+	<!-- [EN] Another enchant settings -->
+	<interface_setting name="WorkshopEnchWeaponMax" type="TYPE_INT" value="16"/>
+	<interface_setting name="WorkshopEnchArmorMax" type="TYPE_INT" value="12"/>
+	
+	<!-- [RU] Включить/выключить энчант по очереди (+1 на каждый выбранный предмет) -->
+	<!-- [EN] Enable/disable enchant in turn (+1 for each selected item) -->
+	<interface_setting name="WorkshopEnchInTurnEnable" type="TYPE_CHAR" value="1"/>
+	
+	<!-- [RU] Количество предметов, которое можно выбрать для энчанта (не меньше 1 и не более 240) -->
+	<!-- [EN] The number of items that can be selected for the enchant (no less than 1 and no more than 240) -->
+	<interface_setting name="WorkshopEnchMaxItemNum" type="TYPE_INT" value="240"/>
+	
+	<!-- [RU] Значение на которые сбрасывается энчант при использовании bless свитков, обязательно должно соответствовать настройкам сервера! -->
+	<!-- [EN] Value to which the enchant is reset when using the bless scrolls, it must necessarily match the server settings! -->
+	<interface_setting name="WorkshopEnchBlessFail" type="TYPE_INT" value="0"/>
+	
+	<!-- [RU] Минимальная задержка и значение на которое будет увеличиваться на каждое положение бегунка (в мс, 1 секунда = 1000 мс) -->
+	<!-- [EN] The minimum delay and the value that will increase for each position of the slider (in ms, 1 second = 1000 ms) -->
+	<interface_setting name="WorkshopEnchMinDelay" type="TYPE_INT" value="2500"/>
+	<interface_setting name="WorkshopEnchDelayRange" type="TYPE_INT" value="100"/>
+	<interface_setting name="WorkshopLsMinDelay" type="TYPE_INT" value="2500"/>
+	<interface_setting name="WorkshopLsDelayRange" type="TYPE_INT" value="100"/>
+	<interface_setting name="WorkshopAttMinDelay" type="TYPE_INT" value="1000"/>
+	<interface_setting name="WorkshopAttDelayRange" type="TYPE_INT" value="100"/>
+	
+	<!-- [RU] Enable: Включить/выключить кнопку помощи (включить - 1, выключить - 0) -->
+	<!-- [EN] Enable: Enable/Disable help button (enable - 1, disable - 0) -->
+	<!-- [RU] Type: 0 - открыть html клиента, 1 - открыть ссылку в браузере -->
+	<!-- [EN] Type: 0 - show client html, 1 - open URL -->
+	<!-- [RU] ActionRu: для Type 0 - название html клиента на русском, для Type 1 - ссылка -->
+	<!-- [EN] ActionRu: for Type 0 - name client html on russian, for Type 1 - URL -->
+	<!-- [RU] ActionEn: для Type 0 - название html клиента на английском, для Type 1 - ссылка -->
+	<!-- [EN] ActionEn: for Type 0 - name client html on english, for Type 1 - URL -->
+	<interface_setting name="WorkshopEnchHelpBtnEnable" type="TYPE_CHAR" value="1"/>
+	<interface_setting name="WorkshopEnchHelpBtnType" type="TYPE_INT" value="0"/>
+	<interface_setting name="WorkshopEnchHelpBtnActionRu" type="TYPE_TEXT" value="EnchHelp-ru.htm"/>
+	<interface_setting name="WorkshopEnchHelpBtnActionEn" type="TYPE_TEXT" value="EnchHelp-en.htm"/>
+	
+	<interface_setting name="WorkshopLsHelpBtnEnable" type="TYPE_CHAR" value="1"/>
+	<interface_setting name="WorkshopLsHelpBtnType" type="TYPE_INT" value="0"/>
+	<interface_setting name="WorkshopLsHelpBtnActionRu" type="TYPE_TEXT" value="LifeStoneHelp-ru.htm"/>
+	<interface_setting name="WorkshopLsHelpBtnActionEn" type="TYPE_TEXT" value="LifeStoneHelp-en.htm"/>
+	
+	<interface_setting name="WorkshopAttHelpBtnEnable" type="TYPE_CHAR" value="1"/>
+	<interface_setting name="WorkshopAttHelpBtnType" type="TYPE_INT" value="0"/>
+	<interface_setting name="WorkshopAttHelpBtnActionRu" type="TYPE_TEXT" value="AttHelp-ru.htm"/>
+	<interface_setting name="WorkshopAttHelpBtnActionEn" type="TYPE_TEXT" value="AttHelp-en.htm"/>
+	
+	<!-- [RU] Пример: [EN] Example: -->
+	<!--
+	<interface_setting name="WorkshopEnchHelpBtnEnable" type="TYPE_CHAR" value="1"/>
+	<interface_setting name="WorkshopEnchHelpBtnType" type="TYPE_INT" value="1"/>
+	<interface_setting name="WorkshopEnchHelpBtnActionRu" type="TYPE_TEXT" value="https://emu-dev.ru"/>
+	<interface_setting name="WorkshopEnchHelpBtnActionEn" type="TYPE_TEXT" value="https://emu-dev.ru"/>
+	
+	<interface_setting name="WorkshopLsHelpBtnEnable" type="TYPE_CHAR" value="1"/>
+	<interface_setting name="WorkshopLsHelpBtnType" type="TYPE_INT" value="1"/>
+	<interface_setting name="WorkshopLsHelpBtnActionRu" type="TYPE_TEXT" value="https://emu-dev.ru/LifeStoneHelp/ru"/>
+	<interface_setting name="WorkshopLsHelpBtnActionEn" type="TYPE_TEXT" value="https://emu-dev.ru/LifeStoneHelp/en"/>
+	
+	<interface_setting name="WorkshopAttHelpBtnEnable" type="TYPE_CHAR" value="1"/>
+	<interface_setting name="WorkshopAttHelpBtnType" type="TYPE_INT" value="1"/>
+	<interface_setting name="WorkshopAttHelpBtnActionRu" type="TYPE_TEXT" value="https://emu-dev.ru/AttHelp/ru"/>
+	<interface_setting name="WorkshopAttHelpBtnActionEn" type="TYPE_TEXT" value="https://emu-dev.ru/AttHelp/en"/>
+	-->
+	<!-- [RU] Разрешить/запретить вставку атрибута в бижутерию (разрешить - 1, запретить - 0) -->
+	<!-- [EN] Allow/prohibit the insertion of an attribute in jewelry (allow - 1, prohibit - 0) -->
+	<interface_setting name="WorkshopAttEnableJewelry" type="TYPE_CHAR" value="0"/>
+	<!-- [RU] Разрешить/запретить вставку атрибута в пояса (разрешить - 1, запретить - 0) -->
+	<!-- [EN] Allow/prohibit the insertion of an attribute in belts (allow - 1, prohibit - 0) -->
+	<interface_setting name="WorkshopAttEnableBelts" type="TYPE_CHAR" value="0"/>
+	<!-- [RU] Разрешить/запретить вставку атрибута в рубахи (разрешить - 1, запретить - 0) -->
+	<!-- [EN] Allow/prohibit the insertion of an attribute in shirts (allow - 1, prohibit - 0) -->
+	<interface_setting name="WorkshopAttEnableShirts" type="TYPE_CHAR" value="0"/>
+</list>

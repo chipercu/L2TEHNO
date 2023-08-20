@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="420" type="SOLO">
+		<name lang="en" val="Little Wing"/>
+		<name lang="ru" val="Дракончик"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20231"/>	<!-- Toad Lord -->
+			<event type="MOBKILLED" val="20589"/>	<!-- Fline -->
+			<event type="MOBKILLED" val="20590"/>	<!-- Liele -->
+			<event type="MOBKILLED" val="20591"/>	<!-- Valley Treant -->
+			<event type="MOBKILLED" val="20592"/>	<!-- Satyr -->
+			<event type="MOBKILLED" val="20593"/>	<!-- Unicorn -->
+			<event type="MOBKILLED" val="20594"/>	<!-- Forest Runner -->
+			<event type="MOBKILLED" val="20595"/>	<!-- Fline Elder -->
+			<event type="MOBKILLED" val="20596"/>	<!-- Liele Elder -->
+			<event type="MOBKILLED" val="20597"/>	<!-- Valley Treant Elder -->
+			<event type="MOBKILLED" val="20598"/>	<!-- Satyr Elder -->
+			<event type="MOBKILLED" val="20599"/>	<!-- Unicorn Elder -->
+			<event type="MOBKILLED" val="20580"/>	<!-- Leto Lizardman Warrior -->
+			<event type="MOBKILLED" val="20233"/>	<!-- Marsh Spider -->
+			<event type="MOBKILLED" val="20551"/>	<!-- Road Scavenger -->
+			<event type="MOBKILLED" val="20270"/>	<!-- Breka Orc Overlord -->
+			<event type="MOBKILLED" val="20202"/>	<!-- Dead Seeker -->
+			<event type="QUEST_START" val="30829"/>	<!-- Cooper -->
+			<event type="QUEST_TALK" val="30829"/>	<!-- Cooper -->
+			<event type="QUEST_TALK" val="30610"/>	<!-- Cronos -->
+			<event type="QUEST_TALK" val="30747"/>	<!-- Mimyu -->
+			<event type="QUEST_TALK" val="30711"/>	<!-- Byron -->
+			<event type="QUEST_TALK" val="30608"/>	<!-- Maria -->
+			<event type="QUEST_TALK" val="30748"/>	<!-- Exarion -->
+			<event type="QUEST_TALK" val="30749"/>	<!-- Zwov -->
+			<event type="QUEST_TALK" val="30750"/>	<!-- Kalibran -->
+			<event type="QUEST_TALK" val="30751"/>	<!-- Suzet -->
+			<event type="QUEST_TALK" val="30752"/>	<!-- Shamhai -->
+			<item id="3499"/>	<!-- Fairy Dust -->
+			<item id="3816"/>	<!-- Fairy Stone -->
+			<item id="3817"/>	<!-- Deluxe Fairy Stone -->
+			<item id="3818"/>	<!-- Fairy Stone List -->
+			<item id="3819"/>	<!-- Deluxe Fairy Stone List -->
+			<item id="3820"/>	<!-- Toad Lord Back Skin -->
+			<item id="3821"/>	<!-- Juice of Monkshood -->
+			<item id="3822"/>	<!-- Scale of Drake Exarion -->
+			<item id="3824"/>	<!-- Scale of Drake Zwov -->
+			<item id="3826"/>	<!-- Scale of Drake Kalibran -->
+			<item id="3828"/>	<!-- Scale of Wyvern Suzet -->
+			<item id="3830"/>	<!-- Scale of Wyvern Shamhai -->
+			<item id="3823"/>	<!-- Egg of Drake Exarion -->
+			<item id="3825"/>	<!-- Egg of Drake Zwov -->
+			<item id="3827"/>	<!-- Egg of Drake Kalibran -->
+			<item id="3829"/>	<!-- Egg of Wyvern Suzet -->
+			<item id="3831"/>	<!-- Egg of Wyvern Shamhai -->
+		</setting>
+	</quest>
+</quests>

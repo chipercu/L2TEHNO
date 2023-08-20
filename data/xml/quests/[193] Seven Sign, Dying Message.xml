@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="193" type="SOLO">
+		<name lang="en" val="Seven Sign, Dying Message"/>
+		<name lang="ru" val="Семь Печатей, Весть о Смерти"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="27375"/>	<!-- Shilens Evil Thoughts -->
+			<event type="QUEST_START" val="30191"/>	<!-- Hollint -->
+			<event type="QUEST_TALK" val="30191"/>	<!-- Hollint -->
+			<event type="QUEST_TALK" val="32569"/>	<!-- Cain -->
+			<event type="QUEST_TALK" val="32570"/>	<!-- Eric -->
+			<event type="QUEST_TALK" val="30760"/>	<!-- Sir Gustav Athebaldt -->
+			<item id="13814"/>	<!-- Jacob's Necklace -->
+			<item id="13816"/>	<!-- Deadman's Herb -->
+			<item id="14352"/>	<!-- Sculpture of Doubt -->
+		</setting>
+	</quest>
+</quests>

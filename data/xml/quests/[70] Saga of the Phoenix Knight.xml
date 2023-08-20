@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="70" type="SOLO">
+		<name lang="en" val="Saga of the Phoenix Knight"/>
+		<name lang="ru" val="Сага Рыцаря Феникса"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBGOTATTACKED" val="27278"/>	<!-- Shadow of Beleth -->
+			<event type="MOBKILLED" val="27286"/>	<!-- Fallen Knight Adhil -->
+			<event type="MOBKILLED" val="27219"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="27278"/>	<!-- Shadow of Beleth -->
+			<event type="MOBKILLED" val="21646"/>	<!-- Grave Scarab -->
+			<event type="MOBKILLED" val="21647"/>	<!-- Scavenger Scarab -->
+			<event type="MOBKILLED" val="21648"/>	<!-- Grave Ant -->
+			<event type="MOBKILLED" val="21649"/>	<!-- Scavenger Ant -->
+			<event type="MOBKILLED" val="21650"/>	<!-- Shrine Knight -->
+			<event type="MOBKILLED" val="21651"/>	<!-- Shrine Guard -->
+			<event type="MOBKILLED" val="27214"/>	<!-- Guardian of Forbidden Knowledge -->
+			<event type="MOBKILLED" val="27215"/>	<!-- Guardian of Forbidden Knowledge -->
+			<event type="MOBKILLED" val="27216"/>	<!-- Guardian of Forbidden Knowledge -->
+			<event type="MOBKILLED" val="18212"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18213"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18214"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18215"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18216"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18217"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18218"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18219"/>	<!-- Archon of Halisha -->
+			<event type="NPC_FIRST_TALK" val="31631"/>	<!-- Eric Ramsheart -->
+			<event type="QUEST_START" val="30849"/>	<!-- Sedrick -->
+			<event type="QUEST_TALK" val="30849"/>	<!-- Sedrick -->
+			<event type="QUEST_TALK" val="30849"/>	<!-- Sedrick -->
+			<event type="QUEST_TALK" val="31624"/>	<!-- Donath -->
+			<event type="QUEST_TALK" val="31277"/>	<!-- Felix -->
+			<event type="QUEST_TALK" val="30849"/>	<!-- Sedrick -->
+			<event type="QUEST_TALK" val="31631"/>	<!-- Eric Ramsheart -->
+			<event type="QUEST_TALK" val="31646"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31647"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31650"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31654"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31655"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31657"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31277"/>	<!-- Felix -->
+			<item id="7534"/>	<!-- Ice Cold Flower -->
+			<item id="7485"/>	<!-- Halisha's Mark -->
+			<item id="7268"/>	<!-- Resonance Amulet - 1 -->
+			<item id="7299"/>	<!-- Resonance Amulet - 2 -->
+			<item id="7330"/>	<!-- Resonance Amulet - 3 -->
+			<item id="7361"/>	<!-- Resonance Amulet - 4 -->
+			<item id="7392"/>	<!-- Resonance Amulet - 5 -->
+			<item id="7423"/>	<!-- Resonance Amulet - 6 -->
+			<item id="7093"/>	<!-- Sculpture of the Fallen Knight -->
+		</setting>
+	</quest>
+</quests>

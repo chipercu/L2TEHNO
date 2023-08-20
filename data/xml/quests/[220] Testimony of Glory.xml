@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="220" type="SOLO">
+		<name lang="en" val="Testimony of Glory"/>
+		<name lang="ru" val="Испытание славы"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20563"/>	<!-- Manashen Gargoyle -->
+			<event type="MOBKILLED" val="20192"/>	<!-- Tyrant -->
+			<event type="MOBKILLED" val="20193"/>	<!-- Tyrant Kingpin -->
+			<event type="MOBKILLED" val="20550"/>	<!-- Guardian Basilisk -->
+			<event type="MOBKILLED" val="20234"/>	<!-- Marsh Stakato Drone -->
+			<event type="MOBKILLED" val="27082"/>	<!-- Enku Orc Overlord -->
+			<event type="MOBKILLED" val="27083"/>	<!-- Makum Bugbear Thug -->
+			<event type="MOBKILLED" val="20583"/>	<!-- Timak Orc -->
+			<event type="MOBKILLED" val="20584"/>	<!-- Timak Orc Archer -->
+			<event type="MOBKILLED" val="20585"/>	<!-- Timak Orc Soldier -->
+			<event type="MOBKILLED" val="20586"/>	<!-- Timak Orc Warrior -->
+			<event type="MOBKILLED" val="20587"/>	<!-- Timak Orc Shaman -->
+			<event type="MOBKILLED" val="20588"/>	<!-- Timak Orc Overlord -->
+			<event type="MOBKILLED" val="20601"/>	<!-- Tamlin Orc -->
+			<event type="MOBKILLED" val="20602"/>	<!-- Tamlin Orc Archer -->
+			<event type="MOBKILLED" val="27080"/>	<!-- Pashika Son Of Voltar -->
+			<event type="MOBKILLED" val="27081"/>	<!-- Vultus Son Of Voltar -->
+			<event type="MOBKILLED" val="20778"/>	<!-- Ragna Orc Overlord -->
+			<event type="MOBKILLED" val="20779"/>	<!-- Ragna Orc Seer -->
+			<event type="MOBKILLED" val="27086"/>	<!-- Revenant of Tantos Chief -->
+			<event type="QUEST_START" val="30514"/>	<!-- Vokian -->
+			<event type="QUEST_TALK" val="30514"/>	<!-- Vokian -->
+			<event type="QUEST_TALK" val="30642"/>	<!-- Chianta -->
+			<event type="QUEST_TALK" val="30515"/>	<!-- Manakia -->
+			<event type="QUEST_TALK" val="30501"/>	<!-- Kasman -->
+			<event type="QUEST_TALK" val="30615"/>	<!-- Voltar -->
+			<event type="QUEST_TALK" val="30616"/>	<!-- Kepra -->
+			<event type="QUEST_TALK" val="30617"/>	<!-- Burai -->
+			<event type="QUEST_TALK" val="30618"/>	<!-- Harak -->
+			<event type="QUEST_TALK" val="30619"/>	<!-- Driko -->
+			<event type="QUEST_TALK" val="30571"/>	<!-- Tanapi -->
+			<event type="QUEST_TALK" val="30565"/>	<!-- Kakai -->
+			<item id="3204"/>	<!-- Vokian's Order -->
+			<item id="3208"/>	<!-- Vokian's Order -->
+			<item id="3209"/>	<!-- Necklace of Authority -->
+			<item id="3210"/>	<!-- Chianta's 1st Order -->
+			<item id="3228"/>	<!-- Manakia's 1st Letter -->
+			<item id="3229"/>	<!-- Manakia's 2nd Letter -->
+			<item id="3230"/>	<!-- Kasman's 1st Letter -->
+			<item id="3231"/>	<!-- Kasman's 2nd Letter -->
+			<item id="3232"/>	<!-- Kasman's 3rd Letter -->
+			<item id="3211"/>	<!-- Scepter of Breka -->
+			<item id="3221"/>	<!-- Pashika's Head -->
+			<item id="3222"/>	<!-- Vultus' Head -->
+			<item id="3223"/>	<!-- Glove of Voltar -->
+			<item id="3225"/>	<!-- Glove of Kepra -->
+			<item id="3212"/>	<!-- Scepter of Enku -->
+			<item id="3214"/>	<!-- Scepter of Turek -->
+			<item id="3227"/>	<!-- Glove of Burai -->
+			<item id="3215"/>	<!-- Scepter of Tunath -->
+			<item id="3233"/>	<!-- Driko's Contract -->
+			<item id="3216"/>	<!-- Chianta's 2nd Order -->
+			<item id="3217"/>	<!-- Chianta's 3rd Order -->
+			<item id="3220"/>	<!-- Scepter Box -->
+			<item id="3235"/>	<!-- Tanapi's Order -->
+			<item id="3236"/>	<!-- Scepter of Tantos -->
+			<item id="3237"/>	<!-- Ritual Box -->
+			<item id="3205"/>	<!-- Manashen Shard -->
+			<item id="3206"/>	<!-- Tyrant Talon -->
+			<item id="3207"/>	<!-- Guardian Basilisk Fang -->
+			<item id="3234"/>	<!-- Stakato Drone Husk -->
+			<item id="3224"/>	<!-- Enku Overlord Head -->
+			<item id="3226"/>	<!-- Makum Bugbear Head -->
+			<item id="3219"/>	<!-- Timak Orc Head -->
+			<item id="3218"/>	<!-- Tamlin Orc Skull -->
+		</setting>
+	</quest>
+</quests>

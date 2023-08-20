@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="552" type="SOLO">
+		<name lang="en" val="Olympiad Veteran"/>
+		<name lang="ru" val="Олимпиада: Расширяем границы!"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="31688"/>	<!-- Grand Olympiad Manager -->
+			<event type="QUEST_TALK" val="31688"/>	<!-- Grand Olympiad Manager -->
+			<item id="17243"/>	<!-- Olympiad Class Battle Certificate -->
+			<item id="17242"/>	<!-- Olympiad Class-Free Battle Certificate -->
+			<item id="17241"/>	<!-- Olympiad Team Event Certificate -->
+		</setting>
+	</quest>
+</quests>

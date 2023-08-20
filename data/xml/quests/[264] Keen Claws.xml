@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="264" type="SOLO">
+		<name lang="en" val="Keen Claws"/>
+		<name lang="ru" val="Острые когти"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20003"/>	<!-- Goblin -->
+			<event type="MOBKILLED" val="20456"/>	<!-- Ashen Wolf -->
+			<event type="QUEST_START" val="30136"/>	<!-- Payne -->
+			<event type="QUEST_TALK" val="30136"/>	<!-- Payne -->
+			<item id="1367"/>	<!-- Wolf Claw -->
+		</setting>
+	</quest>
+</quests>

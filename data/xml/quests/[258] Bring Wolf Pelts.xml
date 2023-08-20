@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="258" type="SOLO">
+		<name lang="en" val="Bring Wolf Pelts"/>
+		<name lang="ru" val="Охота на волков"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20120"/>	<!-- Wolf -->
+			<event type="MOBKILLED" val="20442"/>	<!-- Elder Wolf -->
+			<event type="QUEST_START" val="30001"/>	<!-- Lector -->
+			<event type="QUEST_TALK" val="30001"/>	<!-- Lector -->
+			<item id="702"/>	<!-- Wolf Pelt -->
+		</setting>
+	</quest>
+</quests>

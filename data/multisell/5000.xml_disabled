@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- 5000_crystal Luxery Shop -->
+
+<list>
+  <!-- Внимание: keepenchanted НЕ должно быть установлено в мультиселлах, где в одном блоке возможны два одинаковых нестекуемых предмета (напрмиер dual) -->
+  <!-- ignoreprice не работает с keepencahnted -->
+  <config showall="true" notax="true" keepenchanted="false" />
+
+  <!-- D-Cry -> C-Cry -->
+  <item>
+    <ingredient id="1458" count="7" enchant="0"/>
+    <production id="1459" count="1" enchant="0"/>
+  </item>
+
+  <!-- C-Cry -> B-Cry -->
+  <item>
+    <ingredient id="1459" count="7" enchant="0"/>
+    <production id="1460" count="1" enchant="0"/>
+  </item>
+
+  <!-- B-Cry -> A-Cry -->
+  <item>
+    <ingredient id="1460" count="7" enchant="0"/>
+    <production id="1461" count="1" enchant="0"/>
+  </item>
+
+  <!-- A-Cry -> S-Cry -->
+  <item>
+    <ingredient id="1461" count="7" enchant="0"/>
+    <production id="1462" count="1" enchant="0"/>
+  </item>
+
+  <!-- C-Cry -> D-Cry -->
+  <item>
+    <ingredient id="1459" count="1" enchant="0"/>
+    <production id="1458" count="5" enchant="0"/>
+  </item>
+
+  <!-- B-Cry -> C-Cry -->
+  <item>
+    <ingredient id="1460" count="1" enchant="0"/>
+    <production id="1459" count="5" enchant="0"/>
+  </item>
+
+  <!-- A-Cry -> B-Cry -->
+  <item>
+    <ingredient id="1461" count="1" enchant="0"/>
+    <production id="1460" count="5" enchant="0"/>
+  </item>
+
+  <!-- S-Cry -> A-Cry -->
+  <item>
+    <ingredient id="1462" count="1" enchant="0"/>
+    <production id="1461" count="5" enchant="0"/>
+  </item>
+</list>

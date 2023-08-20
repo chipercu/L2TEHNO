@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="228" type="SOLO">
+		<name lang="en" val="Test of Magus"/>
+		<name lang="ru" val="Испытание магии"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="27095"/>	<!-- Singing Flower Phantasm -->
+			<event type="MOBKILLED" val="27096"/>	<!-- Singing Flower Nightmare -->
+			<event type="MOBKILLED" val="27097"/>	<!-- Singing Flower Darkling -->
+			<event type="MOBKILLED" val="20145"/>	<!-- Harpy -->
+			<event type="MOBKILLED" val="20176"/>	<!-- Wyrm -->
+			<event type="MOBKILLED" val="20553"/>	<!-- Windsus -->
+			<event type="MOBKILLED" val="20564"/>	<!-- Enchanted Monstereye -->
+			<event type="MOBKILLED" val="20565"/>	<!-- Enchanted Stone Golem -->
+			<event type="MOBKILLED" val="20566"/>	<!-- Enchanted Iron Golem -->
+			<event type="MOBKILLED" val="27098"/>	<!-- Ghost Fire -->
+			<event type="MOBKILLED" val="20230"/>	<!-- Marsh Stakato Worker -->
+			<event type="MOBKILLED" val="20231"/>	<!-- Toad Lord -->
+			<event type="MOBKILLED" val="20157"/>	<!-- Marsh Stakato -->
+			<event type="MOBKILLED" val="20232"/>	<!-- Marsh Stakato Soldier -->
+			<event type="MOBKILLED" val="20234"/>	<!-- Marsh Stakato Drone -->
+			<event type="QUEST_START" val="30629"/>	<!-- Rukal -->
+			<event type="QUEST_TALK" val="30629"/>	<!-- Rukal -->
+			<event type="QUEST_TALK" val="30391"/>	<!-- Parina -->
+			<event type="QUEST_TALK" val="30612"/>	<!-- Casian -->
+			<event type="QUEST_TALK" val="30412"/>	<!-- Wind Sylph -->
+			<event type="QUEST_TALK" val="30409"/>	<!-- Earth Snake -->
+			<event type="QUEST_TALK" val="30413"/>	<!-- Water Undine -->
+			<event type="QUEST_TALK" val="30411"/>	<!-- Flame Salamander -->
+			<item id="2841"/>	<!-- Rukal's Letter -->
+			<item id="2842"/>	<!-- Parina's Letter -->
+			<item id="2843"/>	<!-- Lilac Charm -->
+			<item id="2858"/>	<!-- Tone of Wind -->
+			<item id="2861"/>	<!-- Sylph Charm -->
+			<item id="2863"/>	<!-- Serpent Charm -->
+			<item id="2859"/>	<!-- Tone of Earth -->
+			<item id="2862"/>	<!-- Undine Charm -->
+			<item id="2857"/>	<!-- Tone of Fire -->
+			<item id="2860"/>	<!-- Salamander Charm -->
+			<item id="2856"/>	<!-- Tone of Water -->
+			<item id="2847"/>	<!-- Score of Elements -->
+			<item id="2844"/>	<!-- 1st Golden Seed -->
+			<item id="2845"/>	<!-- 2nd Golden Seed -->
+			<item id="2846"/>	<!-- 3rd Golden Seed -->
+			<item id="2850"/>	<!-- Harpy's Feather -->
+			<item id="2851"/>	<!-- Wyrm's Wingbone -->
+			<item id="2852"/>	<!-- Windsus Mane -->
+			<item id="2853"/>	<!-- Enchanted Monster Eye Shell -->
+			<item id="2854"/>	<!-- Enchanted Stone Golem Powder -->
+			<item id="2855"/>	<!-- Enchanted Iron Golem Scrap -->
+			<item id="2849"/>	<!-- Flame Crystal -->
+			<item id="2848"/>	<!-- Dazzling Drop -->
+		</setting>
+	</quest>
+</quests>

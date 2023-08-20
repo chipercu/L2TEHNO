@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="98" type="SOLO">
+		<name lang="en" val="Saga of the Shillien Saint"/>
+		<name lang="ru" val="Сага Жреца Шилен"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBGOTATTACKED" val="27277"/>	<!-- Fallen Angel Tanakia -->
+			<event type="MOBKILLED" val="27270"/>	<!-- Fallen Angel Naverius -->
+			<event type="MOBKILLED" val="27247"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="27277"/>	<!-- Fallen Angel Tanakia -->
+			<event type="MOBKILLED" val="21646"/>	<!-- Grave Scarab -->
+			<event type="MOBKILLED" val="21647"/>	<!-- Scavenger Scarab -->
+			<event type="MOBKILLED" val="21648"/>	<!-- Grave Ant -->
+			<event type="MOBKILLED" val="21649"/>	<!-- Scavenger Ant -->
+			<event type="MOBKILLED" val="21650"/>	<!-- Shrine Knight -->
+			<event type="MOBKILLED" val="21651"/>	<!-- Shrine Guard -->
+			<event type="MOBKILLED" val="27214"/>	<!-- Guardian of Forbidden Knowledge -->
+			<event type="MOBKILLED" val="27215"/>	<!-- Guardian of Forbidden Knowledge -->
+			<event type="MOBKILLED" val="27216"/>	<!-- Guardian of Forbidden Knowledge -->
+			<event type="MOBKILLED" val="18212"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18213"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18214"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18215"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18216"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18217"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18218"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18219"/>	<!-- Archon of Halisha -->
+			<event type="NPC_FIRST_TALK" val="31621"/>	<!-- Abyss Saint Elcardia -->
+			<event type="QUEST_START" val="31581"/>	<!-- Anastia -->
+			<event type="QUEST_TALK" val="31581"/>	<!-- Anastia -->
+			<event type="QUEST_TALK" val="31581"/>	<!-- Anastia -->
+			<event type="QUEST_TALK" val="31626"/>	<!-- Duncan -->
+			<event type="QUEST_TALK" val="31588"/>	<!-- Agnes -->
+			<event type="QUEST_TALK" val="31287"/>	<!-- Kamilen -->
+			<event type="QUEST_TALK" val="31621"/>	<!-- Abyss Saint Elcardia -->
+			<event type="QUEST_TALK" val="31646"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31647"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31651"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31654"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31655"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31658"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31287"/>	<!-- Kamilen -->
+			<item id="7525"/>	<!-- Offering -->
+			<item id="7513"/>	<!-- Halisha's Mark -->
+			<item id="7296"/>	<!-- Resonance Amulet - 1 -->
+			<item id="7327"/>	<!-- Resonance Amulet - 2 -->
+			<item id="7358"/>	<!-- Resonance Amulet - 3 -->
+			<item id="7389"/>	<!-- Resonance Amulet - 4 -->
+			<item id="7420"/>	<!-- Resonance Amulet - 5 -->
+			<item id="7451"/>	<!-- Resonance Amulet - 6 -->
+			<item id="7090"/>	<!-- Tattered Book -->
+		</setting>
+	</quest>
+</quests>

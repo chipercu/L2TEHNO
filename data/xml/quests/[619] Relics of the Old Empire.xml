@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="619" type="PARTY_ONE">
+		<name lang="en" val="Relics of the Old Empire"/>
+		<name lang="ru" val="Реликвии Древней Империи"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="21403"/>	<!-- Katraxis -->
+			<event type="MOBKILLED" val="21402"/>	<!-- Katraxis -->
+			<event type="MOBKILLED" val="18149"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="21401"/>	<!-- Hexa Beetle -->
+			<event type="MOBKILLED" val="18148"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="21400"/>	<!-- Hexa Beetle -->
+			<event type="MOBKILLED" val="18147"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="21407"/>	<!-- Knight of Empire -->
+			<event type="MOBKILLED" val="18146"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="21406"/>	<!-- Knight of Empire -->
+			<event type="MOBKILLED" val="18145"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="21405"/>	<!-- Tera Beetle -->
+			<event type="MOBKILLED" val="18144"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="21404"/>	<!-- Tera Beetle -->
+			<event type="MOBKILLED" val="21399"/>	<!-- Soldier Scarab -->
+			<event type="MOBKILLED" val="21398"/>	<!-- Soldier Scarab -->
+			<event type="MOBKILLED" val="21397"/>	<!-- Carrion Scarab -->
+			<event type="MOBKILLED" val="21396"/>	<!-- Carrion Scarab -->
+			<event type="MOBKILLED" val="18166"/>	<!-- Imperial Guard -->
+			<event type="MOBKILLED" val="18167"/>	<!-- Imperial Guard -->
+			<event type="MOBKILLED" val="18174"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18175"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18172"/>	<!-- Imperial Guard -->
+			<event type="MOBKILLED" val="18173"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18170"/>	<!-- Imperial Guard -->
+			<event type="MOBKILLED" val="18171"/>	<!-- Imperial Guard -->
+			<event type="MOBKILLED" val="18168"/>	<!-- Imperial Guard -->
+			<event type="MOBKILLED" val="18169"/>	<!-- Imperial Guard -->
+			<event type="MOBKILLED" val="21433"/>	<!-- Jamadar Beetle -->
+			<event type="MOBKILLED" val="21432"/>	<!-- Chakram Beetle -->
+			<event type="MOBKILLED" val="21435"/>	<!-- Guide of Offering -->
+			<event type="MOBKILLED" val="21434"/>	<!-- Seer of Blood  -->
+			<event type="MOBKILLED" val="21437"/>	<!-- Offering Bug -->
+			<event type="MOBKILLED" val="21436"/>	<!-- Leader of Offering -->
+			<event type="MOBKILLED" val="21425"/>	<!-- Ashkenas -->
+			<event type="MOBKILLED" val="18125"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="21424"/>	<!-- Ashkenas -->
+			<event type="MOBKILLED" val="18124"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="21427"/>	<!-- Abraxion -->
+			<event type="MOBKILLED" val="18127"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="21426"/>	<!-- Abraxion -->
+			<event type="MOBKILLED" val="18126"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="21429"/>	<!-- Hasturan -->
+			<event type="MOBKILLED" val="18121"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="21428"/>	<!-- Hasturan -->
+			<event type="MOBKILLED" val="18120"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="21431"/>	<!-- Arimanes -->
+			<event type="MOBKILLED" val="18123"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="21430"/>	<!-- Arimanes -->
+			<event type="MOBKILLED" val="18122"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="21416"/>	<!-- Imperial Commander -->
+			<event type="MOBKILLED" val="18132"/>	<!-- Imperial Healer -->
+			<event type="MOBKILLED" val="21417"/>	<!-- Imperial Commander -->
+			<event type="MOBKILLED" val="18133"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="21418"/>	<!-- Imperial Royal Guard -->
+			<event type="MOBKILLED" val="18134"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="21419"/>	<!-- Imperial Royal Guard -->
+			<event type="MOBKILLED" val="18135"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="21420"/>	<!-- Ashuras -->
+			<event type="MOBKILLED" val="18128"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="21421"/>	<!-- Ashuras -->
+			<event type="MOBKILLED" val="18129"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="21422"/>	<!-- Dancer of Empire -->
+			<event type="MOBKILLED" val="18130"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="21423"/>	<!-- Dancer of Empire -->
+			<event type="MOBKILLED" val="18131"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="18140"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="21408"/>	<!-- Royal Guard of Empire -->
+			<event type="MOBKILLED" val="18141"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="21409"/>	<!-- Royal Guard of Empire -->
+			<event type="MOBKILLED" val="18142"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="21410"/>	<!-- Guardian Scarab -->
+			<event type="MOBKILLED" val="18143"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="21411"/>	<!-- Guardian Scarab -->
+			<event type="MOBKILLED" val="18136"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="21412"/>	<!-- Ustralith -->
+			<event type="MOBKILLED" val="18137"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="21413"/>	<!-- Ustralith -->
+			<event type="MOBKILLED" val="21414"/>	<!-- Assassin of Empire -->
+			<event type="MOBKILLED" val="18138"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="21415"/>	<!-- Assassin of Empire -->
+			<event type="MOBKILLED" val="18139"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="18225"/>	<!-- Assassin of Darkness -->
+			<event type="MOBKILLED" val="18224"/>	<!-- Assassin of Darkness -->
+			<event type="MOBKILLED" val="18227"/>	<!-- Caster of Darkness -->
+			<event type="MOBKILLED" val="18226"/>	<!-- Caster of Darkness -->
+			<event type="MOBKILLED" val="18229"/>	<!-- Caster of Darkness -->
+			<event type="MOBKILLED" val="18228"/>	<!-- Caster of Darkness -->
+			<event type="MOBKILLED" val="18230"/>	<!-- Signet of Emperor -->
+			<event type="MOBKILLED" val="18216"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18217"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18218"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18219"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18220"/>	<!-- Shaman of Darkness -->
+			<event type="MOBKILLED" val="21800"/>	<!-- Vassal Ghost -->
+			<event type="MOBKILLED" val="18221"/>	<!-- Shaman of Darkness -->
+			<event type="MOBKILLED" val="18222"/>	<!-- Assassin of Darkness -->
+			<event type="MOBKILLED" val="18223"/>	<!-- Assassin of Darkness -->
+			<event type="MOBKILLED" val="21799"/>	<!-- Ghost of a Gatekeeper -->
+			<event type="MOBKILLED" val="21798"/>	<!-- Ghost of a Gatekeeper -->
+			<event type="MOBKILLED" val="18212"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18213"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18214"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18215"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18195"/>	<!-- Signet of Emperor -->
+			<event type="MOBKILLED" val="18194"/>	<!-- Witch of dust -->
+			<event type="MOBKILLED" val="18193"/>	<!-- Witch of dust -->
+			<event type="MOBKILLED" val="18192"/>	<!-- Witch of dust -->
+			<event type="MOBKILLED" val="18186"/>	<!-- Evil Astrologer -->
+			<event type="MOBKILLED" val="18187"/>	<!-- Knight of Darkness -->
+			<event type="MOBKILLED" val="18184"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18185"/>	<!-- Evil Astrologer -->
+			<event type="MOBKILLED" val="18190"/>	<!-- Knight of Darkness -->
+			<event type="MOBKILLED" val="18191"/>	<!-- Witch of dust -->
+			<event type="MOBKILLED" val="18188"/>	<!-- Knight of Darkness -->
+			<event type="MOBKILLED" val="18189"/>	<!-- Knight of Darkness -->
+			<event type="MOBKILLED" val="18178"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18179"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18176"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18177"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18182"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18183"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18180"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18181"/>	<!-- Halishas Foreman -->
+			<event type="QUEST_START" val="31538"/>	<!-- Ghost of Adventurer -->
+			<event type="QUEST_TALK" val="31538"/>	<!-- Ghost of Adventurer -->
+			<item id="7254"/>	<!-- Broken Relic Part -->
+		</setting>
+	</quest>
+</quests>

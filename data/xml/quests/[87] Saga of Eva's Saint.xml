@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="87" type="SOLO">
+		<name lang="en" val="Saga of Eva's Saint"/>
+		<name lang="ru" val="Сага Жреца Евы"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBGOTATTACKED" val="27276"/>	<!-- Fallen Angel Tanakia -->
+			<event type="MOBKILLED" val="27266"/>	<!-- Fallen Angel Haures -->
+			<event type="MOBKILLED" val="27236"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="27276"/>	<!-- Fallen Angel Tanakia -->
+			<event type="MOBKILLED" val="21646"/>	<!-- Grave Scarab -->
+			<event type="MOBKILLED" val="21647"/>	<!-- Scavenger Scarab -->
+			<event type="MOBKILLED" val="21648"/>	<!-- Grave Ant -->
+			<event type="MOBKILLED" val="21649"/>	<!-- Scavenger Ant -->
+			<event type="MOBKILLED" val="21650"/>	<!-- Shrine Knight -->
+			<event type="MOBKILLED" val="21651"/>	<!-- Shrine Guard -->
+			<event type="MOBKILLED" val="27214"/>	<!-- Guardian of Forbidden Knowledge -->
+			<event type="MOBKILLED" val="27215"/>	<!-- Guardian of Forbidden Knowledge -->
+			<event type="MOBKILLED" val="27216"/>	<!-- Guardian of Forbidden Knowledge -->
+			<event type="MOBKILLED" val="18212"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18213"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18214"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18215"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18216"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18217"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18218"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18219"/>	<!-- Archon of Halisha -->
+			<event type="NPC_FIRST_TALK" val="31620"/>	<!-- Verdure Elder Elikia -->
+			<event type="QUEST_START" val="30191"/>	<!-- Hollint -->
+			<event type="QUEST_TALK" val="30191"/>	<!-- Hollint -->
+			<event type="QUEST_TALK" val="30191"/>	<!-- Hollint -->
+			<event type="QUEST_TALK" val="31626"/>	<!-- Duncan -->
+			<event type="QUEST_TALK" val="31588"/>	<!-- Agnes -->
+			<event type="QUEST_TALK" val="31280"/>	<!-- Bastian -->
+			<event type="QUEST_TALK" val="31620"/>	<!-- Verdure Elder Elikia -->
+			<event type="QUEST_TALK" val="31646"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31649"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31653"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31654"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31655"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31657"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31280"/>	<!-- Bastian -->
+			<item id="7524"/>	<!-- Offering -->
+			<item id="7502"/>	<!-- Halisha's Mark -->
+			<item id="7285"/>	<!-- Resonance Amulet - 1 -->
+			<item id="7316"/>	<!-- Resonance Amulet - 2 -->
+			<item id="7347"/>	<!-- Resonance Amulet - 3 -->
+			<item id="7378"/>	<!-- Resonance Amulet - 4 -->
+			<item id="7409"/>	<!-- Resonance Amulet - 5 -->
+			<item id="7440"/>	<!-- Resonance Amulet - 6 -->
+			<item id="7088"/>	<!-- Tattered Book -->
+		</setting>
+	</quest>
+</quests>

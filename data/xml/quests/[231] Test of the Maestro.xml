@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="231" type="SOLO">
+		<name lang="en" val="Test of the Maestro"/>
+		<name lang="ru" val="Испытание мастера"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="27133"/>	<!-- Evil Eye Lord -->
+			<event type="MOBKILLED" val="20225"/>	<!-- Giant Mist Leech -->
+			<event type="MOBKILLED" val="20229"/>	<!-- Stinger Wasp -->
+			<event type="MOBKILLED" val="20233"/>	<!-- Marsh Spider -->
+			<event type="QUEST_START" val="30531"/>	<!-- Lockirin -->
+			<event type="QUEST_TALK" val="30531"/>	<!-- Lockirin -->
+			<event type="QUEST_TALK" val="30533"/>	<!-- Balanki -->
+			<event type="QUEST_TALK" val="30536"/>	<!-- Arin -->
+			<event type="QUEST_TALK" val="30535"/>	<!-- Filaur -->
+			<event type="QUEST_TALK" val="30532"/>	<!-- Spiron -->
+			<event type="QUEST_TALK" val="30671"/>	<!-- Croto -->
+			<event type="QUEST_TALK" val="30675"/>	<!-- Corpse Of Kamur -->
+			<event type="QUEST_TALK" val="30672"/>	<!-- Dubabah -->
+			<event type="QUEST_TALK" val="30556"/>	<!-- Toma -->
+			<event type="QUEST_TALK" val="30673"/>	<!-- Lorain -->
+			<item id="2870"/>	<!-- Necklace of Kamuru -->
+			<item id="2878"/>	<!-- Blood of Leech -->
+			<item id="2876"/>	<!-- Stinger Wasp Needle -->
+			<item id="2877"/>	<!-- Marsh Spider's Web -->
+			<item id="2869"/>	<!-- Paint of Kamuru -->
+			<item id="2868"/>	<!-- Letter of Solder Detachment -->
+			<item id="2871"/>	<!-- Paint of Teleport Device -->
+			<item id="2916"/>	<!-- Broken Teleport Device -->
+			<item id="2872"/>	<!-- Teleport Device -->
+			<item id="2873"/>	<!-- Architecture of Cruma -->
+			<item id="2875"/>	<!-- Ingredients of Antidote -->
+			<item id="2864"/>	<!-- Recommendation of Balanki -->
+			<item id="2865"/>	<!-- Recommendation of Filaur -->
+			<item id="2866"/>	<!-- Recommendation of Arin -->
+			<item id="2874"/>	<!-- Report of Cruma -->
+		</setting>
+	</quest>
+</quests>

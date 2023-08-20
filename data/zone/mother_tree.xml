@@ -1,0 +1,260 @@
+<list>
+	<zone id="1" name="[mother_tree_start_zone]" type="mother_tree" >
+		<set name="affect_race" val="elf" />
+		<set name="entering_message_no" val="114" />
+		<set name="leaving_message_no" val="115" />
+		<shape>
+			<coords loc="45889 41890 -3550 -3350" />
+			<coords loc="45277 41672 -3550 -3350" />
+			<coords loc="45028 41478 -3550 -3350" />
+			<coords loc="44809 41230 -3550 -3350" />
+			<coords loc="44522 40689 -3550 -3350" />
+			<coords loc="44501 39970 -3550 -3350" />
+			<coords loc="44725 39407 -3550 -3350" />
+			<coords loc="44930 39145 -3550 -3350" />
+			<coords loc="45447 38764 -3550 -3350" />
+			<coords loc="46073 38618 -3550 -3350" />
+			<coords loc="46710 38716 -3550 -3350" />
+			<coords loc="47255 39049 -3550 -3350" />
+			<coords loc="47743 39834 -3550 -3350" />
+			<coords loc="47772 40568 -3550 -3350" />
+			<coords loc="47545 41125 -3550 -3350" />
+			<coords loc="47108 41599 -3550 -3350" />
+			<coords loc="46531 41868 -3550 -3350" />
+		</shape>
+	</zone>
+	<zone id="2" name="[mother_tree_town]" type="mother_tree" >
+		<set name="affect_race" val="elf" />
+		<set name="entering_message_no" val="114" />
+		<set name="leaving_message_no" val="115" />
+		<shape>
+			<coords loc="45234 49892 -3121 -2921" />
+			<coords loc="45117 49826 -3121 -2921" />
+			<coords loc="45031 49722 -3121 -2921" />
+			<coords loc="44986 49597 -3121 -2921" />
+			<coords loc="44985 49462 -3121 -2921" />
+			<coords loc="45032 49336 -3121 -2921" />
+			<coords loc="45116 49233 -3121 -2921" />
+			<coords loc="45233 49165 -3121 -2921" />
+			<coords loc="45365 49143 -3121 -2921" />
+			<coords loc="45498 49166 -3121 -2921" />
+			<coords loc="45614 49235 -3121 -2921" />
+			<coords loc="45700 49336 -3121 -2921" />
+			<coords loc="45746 49462 -3121 -2921" />
+			<coords loc="45747 49596 -3121 -2921" />
+			<coords loc="45699 49723 -3121 -2921" />
+			<coords loc="45614 49825 -3121 -2921" />
+			<coords loc="45498 49893 -3121 -2921" />
+			<coords loc="45366 49914 -3121 -2921" />
+		</shape>
+	</zone>
+	<zone id="19" name="[20_19_worldtree]" type="mother_tree" >
+		<set name="affect_race" val="elf" />
+		<set name="entering_message_no" val="114" />
+		<set name="leaving_message_no" val="115" />
+		<shape>
+			<coords loc="21101 50538 -3745 -3545" />
+			<coords loc="21511 50683 -3745 -3545" />
+			<coords loc="21642 51005 -3745 -3545" />
+			<coords loc="21583 51349 -3745 -3545" />
+			<coords loc="21255 51581 -3745 -3545" />
+			<coords loc="20852 51473 -3745 -3545" />
+			<coords loc="20627 51121 -3745 -3545" />
+			<coords loc="20728 50743 -3745 -3545" />
+		</shape>
+	</zone>
+	<zone id="20" name="[20_20_worldtree]" type="mother_tree" >
+		<set name="affect_race" val="elf" />
+		<set name="entering_message_no" val="114" />
+		<set name="leaving_message_no" val="115" />
+		<shape>
+			<coords loc="25084 81616 -3260 -3060" />
+			<coords loc="25073 81892 -3260 -3060" />
+			<coords loc="24948 81895 -3260 -3060" />
+			<coords loc="24826 81866 -3260 -3060" />
+			<coords loc="24716 81788 -3260 -3060" />
+			<coords loc="24637 81623 -3260 -3060" />
+			<coords loc="24637 81428 -3260 -3060" />
+			<coords loc="25076 81428 -3260 -3060" />
+		</shape>
+	</zone>
+	<zone id="21" name="[21_20_worldtree]" type="mother_tree" >
+		<set name="affect_race" val="elf" />
+		<set name="entering_message_no" val="114" />
+		<set name="leaving_message_no" val="115" />
+		<shape>
+			<coords loc="57755 85802 -3775 -3575" />
+			<coords loc="57974 86079 -3775 -3575" />
+			<coords loc="57953 86404 -3775 -3575" />
+			<coords loc="57711 86683 -3775 -3575" />
+			<coords loc="57324 86686 -3775 -3575" />
+			<coords loc="57105 86436 -3775 -3575" />
+			<coords loc="57088 86061 -3775 -3575" />
+			<coords loc="57404 85785 -3775 -3575" />
+		</shape>
+	</zone>
+	<zone id="187" name="[devil_healing_zone]" type="mother_tree" >
+		<set name="affect_race" val="all" />
+		<set name="hp_regen_bonus" val="2" />
+		<set name="mp_regen_bonus" val="1" />
+		<set name="entering_message_no" val="1054" />
+		<set name="leaving_message_no" val="1055" />
+		<shape>
+			<coords loc="41520 205163 -3913 -3413" />
+			<coords loc="44448 205623 -3913 -3413" />
+			<coords loc="44352 208957 -3913 -3413" />
+			<coords loc="42813 208983 -3913 -3413" />
+			<coords loc="41473 207893 -3913 -3413" />
+		</shape>
+	</zone>
+	<zone id="382" name="[ssq_main_event_17_20_01]" type="mother_tree" >
+		<set name="affect_race" val="all" />
+		<set name="hp_regen_bonus" val="0" />
+		<set name="mp_regen_bonus" val="2" />
+		<set name="entering_message_no" val="1054" />
+		<set name="leaving_message_no" val="1055" />
+		<shape>
+			<coords loc="-79956 84556 -5168 -4968" />
+			<coords loc="-79832 84620 -5168 -4968" />
+			<coords loc="-79824 84772 -5168 -4968" />
+			<coords loc="-79956 84844 -5168 -4968" />
+			<coords loc="-80080 84772 -5168 -4968" />
+			<coords loc="-80076 84620 -5168 -4968" />
+		</shape>
+	</zone>
+	<zone id="383" name="[ssq_main_event_17_20_04]" type="mother_tree" >
+		<set name="affect_race" val="all" />
+		<set name="hp_regen_bonus" val="0" />
+		<set name="mp_regen_bonus" val="2" />
+		<set name="entering_message_no" val="1054" />
+		<set name="leaving_message_no" val="1055" />
+		<shape>
+			<coords loc="-76936 85164 -5164 -4964" />
+			<coords loc="-76820 85232 -5164 -4964" />
+			<coords loc="-76816 85380 -5164 -4964" />
+			<coords loc="-76948 85444 -5164 -4964" />
+			<coords loc="-77068 85376 -5164 -4964" />
+			<coords loc="-77068 85236 -5164 -4964" />
+		</shape>
+	</zone>
+	<zone id="384" name="[ssq_main_event_17_20_05]" type="mother_tree" >
+		<set name="affect_race" val="all" />
+		<set name="hp_regen_bonus" val="0" />
+		<set name="mp_regen_bonus" val="3" />
+		<set name="entering_message_no" val="1054" />
+		<set name="leaving_message_no" val="1055" />
+		<shape>
+			<coords loc="-74924 87012 -5164 -4964" />
+			<coords loc="-74784 87008 -5164 -4964" />
+			<coords loc="-74712 87132 -5164 -4964" />
+			<coords loc="-74780 87256 -5164 -4964" />
+			<coords loc="-74924 87260 -5164 -4964" />
+			<coords loc="-75000 87140 -5164 -4964" />
+		</shape>
+	</zone>
+	<zone id="385" name="[ssq_main_event_17_20_03]" type="mother_tree" >
+		<set name="affect_race" val="all" />
+		<set name="hp_regen_bonus" val="0" />
+		<set name="mp_regen_bonus" val="3" />
+		<set name="entering_message_no" val="1054" />
+		<set name="leaving_message_no" val="1055" />
+		<shape>
+			<coords loc="-77200 88820 -5176 -4976" />
+			<coords loc="-77076 88896 -5176 -4976" />
+			<coords loc="-77076 89040 -5176 -4976" />
+			<coords loc="-77204 89108 -5176 -4976" />
+			<coords loc="-77328 89044 -5176 -4976" />
+			<coords loc="-77328 88892 -5176 -4976" />
+		</shape>
+	</zone>
+	<zone id="386" name="[ssq_main_event_17_20_02]" type="mother_tree" >
+		<set name="affect_race" val="all" />
+		<set name="hp_regen_bonus" val="0" />
+		<set name="mp_regen_bonus" val="4" />
+		<set name="entering_message_no" val="1054" />
+		<set name="leaving_message_no" val="1055" />
+		<shape>
+			<coords loc="-80204 88220 -5172 -4972" />
+			<coords loc="-80080 88288 -5172 -4972" />
+			<coords loc="-80080 88428 -5172 -4972" />
+			<coords loc="-80208 88504 -5172 -4972" />
+			<coords loc="-80336 88428 -5172 -4972" />
+			<coords loc="-80328 88292 -5172 -4972" />
+		</shape>
+	</zone>
+	<zone id="387" name="[ssq_main_event_17_21_01]" type="mother_tree" >
+		<set name="affect_race" val="all" />
+		<set name="hp_regen_bonus" val="0" />
+		<set name="mp_regen_bonus" val="2" />
+		<set name="entering_message_no" val="1054" />
+		<set name="leaving_message_no" val="1055" />
+		<shape>
+			<coords loc="-78796 109452 -4916 -4716" />
+			<coords loc="-78804 109608 -4916 -4716" />
+			<coords loc="-78924 109672 -4916 -4716" />
+			<coords loc="-79056 109600 -4916 -4716" />
+			<coords loc="-79056 109456 -4916 -4716" />
+			<coords loc="-78932 109380 -4916 -4716" />
+		</shape>
+	</zone>
+	<zone id="388" name="[ssq_main_event_17_21_02]" type="mother_tree" >
+		<set name="affect_race" val="all" />
+		<set name="hp_regen_bonus" val="0" />
+		<set name="mp_regen_bonus" val="2" />
+		<set name="entering_message_no" val="1054" />
+		<set name="leaving_message_no" val="1055" />
+		<shape>
+			<coords loc="-75920 109992 -4908 -4708" />
+			<coords loc="-75792 110068 -4908 -4708" />
+			<coords loc="-75792 110220 -4908 -4708" />
+			<coords loc="-75912 110288 -4908 -4708" />
+			<coords loc="-76048 110212 -4908 -4708" />
+			<coords loc="-76044 110068 -4908 -4708" />
+		</shape>
+	</zone>
+	<zone id="389" name="[ssq_main_event_17_21_05]" type="mother_tree" >
+		<set name="affect_race" val="all" />
+		<set name="hp_regen_bonus" val="0" />
+		<set name="mp_regen_bonus" val="3" />
+		<set name="entering_message_no" val="1054" />
+		<set name="leaving_message_no" val="1055" />
+		<shape>
+			<coords loc="-73900 111844 -4916 -4716" />
+			<coords loc="-73752 111840 -4916 -4716" />
+			<coords loc="-73688 111976 -4916 -4716" />
+			<coords loc="-73760 112092 -4916 -4716" />
+			<coords loc="-73904 112092 -4916 -4716" />
+			<coords loc="-73976 111968 -4916 -4716" />
+		</shape>
+	</zone>
+	<zone id="390" name="[ssq_main_event_17_21_03]" type="mother_tree" >
+		<set name="affect_race" val="all" />
+		<set name="hp_regen_bonus" val="0" />
+		<set name="mp_regen_bonus" val="3" />
+		<set name="entering_message_no" val="1054" />
+		<set name="leaving_message_no" val="1055" />
+		<shape>
+			<coords loc="-76172 113656 -4912 -4712" />
+			<coords loc="-76052 113728 -4912 -4712" />
+			<coords loc="-76048 113872 -4912 -4712" />
+			<coords loc="-76172 113944 -4912 -4712" />
+			<coords loc="-76308 113876 -4912 -4712" />
+			<coords loc="-76304 113728 -4912 -4712" />
+		</shape>
+	</zone>
+	<zone id="391" name="[ssq_main_event_17_21_04]" type="mother_tree" >
+		<set name="affect_race" val="all" />
+		<set name="hp_regen_bonus" val="0" />
+		<set name="mp_regen_bonus" val="4" />
+		<set name="entering_message_no" val="1054" />
+		<set name="leaving_message_no" val="1055" />
+		<shape>
+			<coords loc="-79184 113040 -4908 -4708" />
+			<coords loc="-79060 113116 -4908 -4708" />
+			<coords loc="-79052 113268 -4908 -4708" />
+			<coords loc="-79184 113336 -4908 -4708" />
+			<coords loc="-79304 113260 -4908 -4708" />
+			<coords loc="-79304 113116 -4908 -4708" />
+		</shape>
+	</zone>
+</list>

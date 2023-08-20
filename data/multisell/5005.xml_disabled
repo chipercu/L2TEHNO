@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- 5005_scroll Luxery Shop -->
+
+<list>
+  <!-- Внимание: keepenchanted НЕ должно быть установлено в мультиселлах, где в одном блоке возможны два одинаковых нестекуемых предмета (напрмиер dual) -->
+  <!-- ignoreprice не работает с keepencahnted -->
+  <config showall="true" notax="true" keepenchanted="false" />
+
+  <!-- Scroll of Enchant Armor D grade for 80 D-Cry -->
+  <item>
+    <ingredient id="1458" count="80" enchant="0"/>
+    <production id="956" count="1" enchant="0"/>
+  </item>
+
+  <!-- Scroll of Enchant Weapon D grade for 120 D-Cry -->
+  <item>
+    <ingredient id="1458" count="120" enchant="0"/>
+    <production id="955" count="1" enchant="0"/>
+  </item>
+
+  <!-- Scroll of Enchant Armor C grade for 60 C-Cry -->
+  <item>
+    <ingredient id="1459" count="60" enchant="0"/>
+    <production id="952" count="1" enchant="0"/>
+  </item>
+
+  <!-- Scroll of Enchant Weapon C grade for 100 C-Cry -->
+  <item>
+    <ingredient id="1459" count="100" enchant="0"/>
+    <production id="951" count="1" enchant="0"/>
+  </item>
+</list>

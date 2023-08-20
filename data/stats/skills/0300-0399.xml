@@ -1,0 +1,1802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="301" levels="5" name="Summon Big Boom">
+		<!-- Done by Diamond -->
+		<table name="#itemConsumeCount">3 3 4 4 5</table>
+		<table name="#itemConsumeCountInTime">5</table>
+		<set name="itemConsumeId" val="1458"/>
+		<set name="itemConsumeCount" val="#itemConsumeCount"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="itemConsumeIdInTime" val="1458"/>
+		<set name="itemConsumeCountInTime" val="#itemConsumeCountInTime"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<!-- Summon-specific -->
+		<table name="#npcIds">14702 14703 14704 14705 14706</table>
+		<table name="#expPenalty">0.3</table>
+		<set name="npcId" val="#npcIds"/>
+		<set name="expPenalty" val="#expPenalty"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#npcIds">14707 14708 14709 14710 14711 14712 14713 14714 14715 14716 14717 14718 14719 14720 14721 14722 14723 14724 14725 14726 14727 14728 14729 14730 14731 14732 14733 14734 14735 14736</table>
+			<table name="#expPenalty">0.28 0.26 0.24 0.22 0.2 0.18 0.16 0.14 0.12 0.1 0.08 0.06 0.04 0.02 0</table>
+		</enchant1>
+		<for />
+	</skill>
+	<skill id="302" levels="9" name="Spoil Festival">
+		<!-- Done by Diamond -->
+		<table name="#Tab-p_attack_speed">1</table>
+		<table name="#earthRcpt">0</table>
+		<set name="levelModifier" val="2"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="SPOIL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#Tab-p_attack_speed">.99 .98 .97 .96 .95 .94 .93 .92 .91 .9 .89 .88 .87 .86 .85 .84 .83 .82 .81 .8 .79 .78 .77 .76 .75 .74 .73 .72 .71 .7</table>
+		</enchant1>
+		<enchant2 levels="30" name="Power"/>
+		<enchant3 levels="30" name="Earth Vulnerability">
+			<table name="#earthRcpt">6 8 9 11 12 14 15 17 18 20 21 23 24 26 27 29 30 32 33 35 36 38 39 41 42 44 45 47 48 50</table>
+		</enchant3>
+		<for>
+			<effect level_min="101" name="Buff" time="180">
+				<mul order="0x30" stat="p_attack_speed" val="#Tab-p_attack_speed"/>
+				<add order="0x40" stat="earthRcpt" val="#earthRcpt"/>
+			</effect>
+			<effect level_min="201" name="t_hp" param="-118;5;diff"/>
+		</for>
+	</skill>
+	<skill id="303" levels="4" name="Soul of Sagittarius">
+		<!--
+			Done by Diamond (Edited by Drin)
+			Enchant #1: -HP consumption
+			Enchant #2: +p_physical_defence
+		-->
+		<table name="#mp">1.10 1.15 1.20 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25</table>
+		<table name="#abnormal_lv">1 2 3 4</table>
+		<set name="weaponsAllowed" val="32"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Cost"/>
+		<for>
+			<effect name="Buff" stackType="mp_up" stackOrder="#abnormal_lv" time="1200">
+				<mul order="0x30" stat="p_max_mp" val="#mp"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="304" levels="1" name="Song of Vitality">
+		<!-- Done by Diamond -->
+		<table name="#abnormal_time">120</table>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMusic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Time">
+			<table name="#abnormal_time">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<for>
+			<effect name="Buff" time="#abnormal_time">
+				<mul order="0x30" stat="p_max_hp" val="1.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="305" levels="1" name="Song of Vengeance">
+		<!-- Done by Diamond -->
+		<table name="#abnormal_time">120</table>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMusic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Time">
+			<table name="#abnormal_time">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<for>
+			<effect name="Buff" stackOrder="2" stackType="SongOfVengeance" time="#abnormal_time">
+				<add order="0x40" stat="reflectDam" val="20"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="306" levels="1" name="Song of Flame Guard">
+		<!-- Done by Diamond -->
+		<table name="#abnormal_time">120</table>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMusic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Time">
+			<table name="#abnormal_time">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<for>
+			<effect name="Buff" time="#abnormal_time">
+				<sub order="0x40" stat="fireRcpt" val="30"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="307" levels="1" name="Dance of Aqua Guard">
+		<!-- Done by Diamond -->
+		<table name="#abnormal_time">120</table>
+		<set name="weaponsAllowed" val="512"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMusic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Time">
+			<table name="#abnormal_time">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<for>
+			<effect name="Buff" time="#abnormal_time">
+				<sub order="0x40" stat="waterRcpt" val="30"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="308" levels="1" name="Song of Storm Guard">
+		<!-- Done by Diamond -->
+		<table name="#abnormal_time">120</table>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMusic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Time">
+			<table name="#abnormal_time">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<for>
+			<effect name="Buff" time="#abnormal_time">
+				<sub order="0x40" stat="windRcpt" val="30"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="309" levels="1" name="Dance of Earth Guard">
+		<!--
+			Done by:	Diamond
+			Last modify:	29.02.2008
+			Description: Temporarily increase your party members' resistance to earth attacks. Continuous dancing consumes additional MP. An equipped dual-sword is required to use this skill.
+		-->
+		<table name="#abnormal_time">120</table>
+		<set name="weaponsAllowed" val="512"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMusic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Time">
+			<table name="#abnormal_time">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<for>
+			<effect name="Buff" time="#abnormal_time">
+				<sub order="0x40" stat="earthRcpt" val="30"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="310" levels="1" name="Dance of the Vampire">
+		<!-- Done by Diamond -->
+		<table name="#abnormal_time">120</table>
+		<set name="weaponsAllowed" val="512"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMusic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Time">
+			<table name="#abnormal_time">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<for>
+			<effect name="Buff" stackOrder="2" stackType="DanceOfVampire" time="#abnormal_time">
+				<add order="0x40" stat="absorbDam" val="8"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="311" levels="1" name="Dance of Protection">
+		<!-- Done by Diamond -->
+		<table name="#abnormal_time">120</table>
+		<set name="weaponsAllowed" val="512"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMusic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Time">
+			<table name="#abnormal_time">125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<for>
+			<effect name="Buff" time="#abnormal_time">
+				<mul order="0x30" stat="fall" val="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="312" levels="20" name="Vicious Stance">
+		<!-- Done by Diamond -->
+		<table name="#mp">-0.8</table>
+		<table name="#crit">35 48 64 84 109 139 166 196 229 266 306 349 379 410 443 475 509 542 576 609</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#crit">615 620 626 631 637 642 648 653 659 664 670 675 681 686 692 697 702 708 713 719 724 730 735 741 746 752 757 763 768 774</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost">
+			<table name="#mp">-0.79 -0.78 -0.78 -0.77 -0.76 -0.76 -0.75 -0.74 -0.74 -0.73 -0.72 -0.72 -0.71 -0.70 -0.70 -0.69 -0.68 -0.68 -0.67 -0.66 -0.66 -0.65 -0.64 -0.64 -0.63 -0.62 -0.62 -0.61 -0.60 -0.60</table>
+		</enchant2>
+		<for>
+			<effect name="c_mp_by_level" param="#mp;5">
+				<add order="0x40" stat="p_critical_damage_diff" val="#crit"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="313" levels="8" name="Snipe">
+		<!-- Done by Diamond -->
+		<table name="#p_physical_attack">124 134 145 155 166 177 188 199</table>
+		<table name="#p_hit">3 3 4 4 5 5 6 6</table>
+		<table name="#pAtkRange">50 50 100 100 150 150 200 200</table>
+		<table name="#p_speed">0</table>
+		<set name="weaponsAllowed" val="32"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#p_physical_attack">202 204 206 208 210 212 214 216 218 220 222 224 226 228 230 232 234 236 238 240 242 244 246 248 250 252 254 256 258 260</table>
+		</enchant1>
+		<enchant2 levels="30" name="Decrease Penalty">
+			<table name="#p_speed">.07 .08 .1 .11 .13 .14 .16 .17 .19 .2 .22 .23 .25 .26 .28 .29 .31 .32 .34 .35 .37 .38 .4 .41 .43 .44 .46 .47 .49 .5</table>
+		</enchant2>
+		<for>
+			<effect name="Buff">
+				<mul order="0x90" stat="p_speed" val="#p_speed"/>
+				<add order="0x40" stat="p_physical_attack" val="#p_physical_attack">
+					<using kind="Bow"/>
+				</add>
+				<add order="0x40" stat="p_hit" val="#p_hit">
+					<using kind="Bow"/>
+				</add>
+				<add order="0x40" stat="p_critical_rate_per" val="20">
+					<using kind="Bow"/>
+				</add>
+				<add order="0x40" stat="pAtkRange" val="#pAtkRange">
+					<using kind="Bow"/>
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="314" levels="16" name="Fatal Counter">
+		<!-- Done by Diamond -->
+		<table name="#power">2908 3030 3154 3280 3408 3537 3668 3800 3933 4067 4201 4336 4470 4604 4738 4870</table>
+		<table name="#powerPvP">0</table>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
+		<set name="weaponsAllowed" val="32"/>
+		<set name="power" val="#power"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="element" val="#element"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="deathlink" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#power">4915 4959 5003 5047 5090 5134 5178 5222 5266 5310 5354 5398 5442 5486 5529 5573 5617 5661 5705 5749 5793 5837 5881 5925 5968 6012 6056 6100 6144 6188</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<enchant3 name="Fire Attack">
+			<table name="#element">fire</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant3>
+		<enchant4 name="Water Attack">
+			<table name="#element">water</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant4>
+		<enchant5 name="Wind Attack">
+			<table name="#element">wind</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant5>
+		<enchant6 name="Earth Attack">
+			<table name="#element">earth</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant6>
+		<enchant7 name="Duel">
+			<table name="#powerPvP">4955 5040 5125 5210 5295 5380 5465 5551 5636 5721 5806 5891 5976 6061 6147 6232 6317 6402 6487 6572 6657 6742 6828 6913 6998 7083 7168 7253 7338 7424</table>
+		</enchant7>
+		<for>
+		</for>
+	</skill>
+	<skill id="315" levels="16" name="Crush of Doom">
+		<!-- Done by Diamond -->
+		<table name="#power">4558 4750 4944 5142 5342 5545 5751 5958 6166 6376 6586 6797 7008 7218 7427 7635</table>
+		<table name="#powerPvP">0</table>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
+		<set name="power" val="#power"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="element" val="#element"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="weaponsAllowed" val="18432"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+		<set name="criticalRate" val="10"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#power">7710 7779 7848 7917 7986 8055 8123 8192 8261 8330 8399 8468 8537 8605 8674 8743 8812 8881 8950 9019 9088 9156 9225 9294 9363 9432 9501 9570 9639 9707</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<enchant3 name="Fire Attack">
+			<table name="#element">fire</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant3>
+		<enchant4 name="Water Attack">
+			<table name="#element">water</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant4>
+		<enchant5 name="Wind Attack">
+			<table name="#element">wind</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant5>
+		<enchant6 name="Earth Attack">
+			<table name="#element">earth</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant6>
+		<enchant7 name="Duel">
+			<table name="#powerPvP">7768 7901 8035 8168 8302 8435 8569 8702 8836 8969 9103 9236 9370 3503 9637 9770 9903 10037 10170 10304 10437 10571 10704 10838 10971 11105 11238 11372 11505 11639</table>
+		</enchant7>
+		<for />
+	</skill>
+	<skill id="316" levels="1" name="Aegis">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<set order="0x10" stat="shldAngle" val="360"/>
+		</for>
+	</skill>
+	<skill id="317" levels="5" name="Focus Attack">
+		<!--
+			Done by:	Diamond
+			Last modify:	17.02.2010
+		-->
+		<table name="#p_critical_damage_per">1.10 1.15 1.20 1.25 1.30</table>
+		<table name="#Accuracy">2 3 4 5 6</table>
+		<set name="weaponsAllowed" val="64"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="p_critical_damage_per" val="#p_critical_damage_per">
+					<using kind="Pole"/>
+				</mul>
+				<add order="0x40" stat="p_hit" val="#Accuracy">
+					<using kind="Pole"/>
+				</add>
+				<set order="0x80" stat="poleTargetCount"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="318" levels="1" name="Aegis Stance">
+		<!--
+			Done by Diamond (Edited by Drin)
+			Enchant #1: -Cost
+		-->
+		<table name="#sDef">0.70</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<enchant1 levels="30" name="Cost">
+			<table name="#sDef">.71 .72 .73 .74 .75 .76 .77 .78 .79 .8 .81 .82 .83 .84 .85 .86 .87 .88 .89 .9 .91 .92 .93 .94 .95 .96 .97 .98 .99 1</table>
+		</enchant1>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="sDef" val="#sDef"/>
+				<set order="0x10" stat="shldAngle" val="360"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="319" levels="2" name="Agile Movement">
+		<!-- Done by Diamond -->
+		<table name="#Accuracy">2 3</table>
+		<table name="#Speed">5 10</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#Speed">11 11 11 12 12 12 13 13 13 14 14 14 14 15 15 15 16 16 16 17 17 17 17 18 18 18 19 19 19 20</table>
+		</enchant1>
+		<enchant2 levels="30" name="Power">
+			<table name="#Accuracy">4 4 4 4 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 6</table>
+		</enchant2>
+		<for>
+			<add order="0x40" stat="p_speed" val="#Speed">
+				<using armor="Light"/>
+			</add>
+			<add order="0x40" stat="p_hit" val="#Accuracy">
+				<using armor="Light"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="320" levels="10" name="Wrath">
+		<!-- Done by Diamond -->
+		<table name="#CP">0.07 0.1 0.12 0.15 0.17 0.2 0.22 0.25 0.27 0.3</table>
+		<set name="weaponsAllowed" val="64"/>
+		<set name="power" val="#CP"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="400"/>
+		<set name="skillType" val="CPDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#CP">.31 .32 .33 .34 .35 .36 .37 .38 .39 .40 .41 .42 .43 .44 .45 .46 .47 .48 .49 .50 .51 .52 .53 .54 .55 .56 .57 .58 .59</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<for />
+	</skill>
+	<skill id="321" levels="10" name="Blinding Blow">
+		<!-- Done by Diamond -->
+		<table name="#power">2751 2850 2950 3050 3151 3252 3353 3453 3553 3653</table>
+		<set name="power" val="#power"/>
+		<set name="power2" val="250"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="onCrit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="blow" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="lethal1" val="10"/>
+		<set name="turner" val="true"/>
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger"/>
+		</cond>
+		<enchant1 levels="30" name="Power">
+			<table name="#power">3875 3902 3908 3955 3981 4007 4034 4060 4086 4113 4139 4166 4192 4218 4245 4271 4298 4324 4350 4377 4403 4429 4456 4482 4509 4535 4561 4588 4614 4640</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<for>
+			<effect applyOnCaster="true" name="Buff" time="15">
+				<add order="0x40" stat="p_speed" val="40"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="322" levels="6" name="Shield Fortress">
+		<!-- Done by Diamond -->
+		<table name="#mpConsumeTick">-0.8</table>
+		<table name="#ShieldDefRate">446 469 491 514 537 560</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#ShieldDefRate">565 569 573 577 582 586 590 594 599 603 607 611 616 620 624 628 632 637 641 645 649 654 658 662 666 671 675 679 683 688</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost">
+			<table name="#mpConsumeTick">-0.79 -0.78 -0.78 -0.77 -0.76 -0.76 -0.75 -0.74 -0.74 -0.73 -0.72 -0.72 -0.71 -0.70 -0.70 -0.69 -0.68 -0.68 -0.67 -0.66 -0.66 -0.65 -0.64 -0.64 -0.63 -0.62 -0.62 -0.61 -0.60 -0.60</table>
+		</enchant2>
+		<for>
+			<effect name="c_mp_by_level" param="#mpConsumeTick;5">
+				<add order="0x40" stat="sDef" val="#ShieldDefRate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="323" levels="1" name="Quiver of Arrow: Grade A">
+		<!-- Done by Diamond, edited by Magister -->
+		<set name="itemConsumeId" val="1461"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="SummonItemId" val="1344"/>
+		<set name="SummonMinCount" val="700"/>
+		<set name="SummonMaxCount" val="2800"/>
+		<for />
+	</skill>
+	<skill id="324" levels="1" name="Quiver of Arrow: Grade S">
+		<!-- Done by Diamond, edited by Magister -->
+		<set name="itemConsumeId" val="1462"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="SummonItemId" val="1345"/>
+		<set name="SummonMinCount" val="900"/>
+		<set name="SummonMaxCount" val="3600"/>
+		<for />
+	</skill>
+	<skill id="325" levels="1" name="Strider Siege Assault">
+		<!-- Done by Diamond -->
+		<set name="itemConsumeId" val="3031"/>
+		<set name="itemConsumeCount" val="5"/>
+		<set name="power" val="15005"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond>
+			<and>
+				<player riding="strider"/>
+				<target castledoor="true"/>
+			</and>
+		</cond>
+		<for />
+	</skill>
+	<skill id="326" levels="1" name="Build Advanced Headquarters">
+		<!-- Done by Diamond -->
+		<set name="itemConsumeId" val="2131"/>
+		<set name="itemConsumeCount" val="300"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SIEGEFLAG"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="advancedFlag" val="true"/>
+		<set name="advancedMultiplier" val="2"/>
+		<for />
+	</skill>
+	<skill id="327" levels="1" name="Wyvern Aegis">
+		<!-- Done by Diamond -->
+		<set name="itemConsumeId" val="3031"/>
+		<set name="itemConsumeCount" val="20"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="true"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="pd_up_special" time="9">
+				<add order="0x40" stat="p_physical_defence" val="7000"/>
+				<add order="0x40" stat="p_magical_defence" val="6000"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="328" levels="1" name="Wisdom">
+		<!-- Done by Diamond -->
+		<table name="#trait_hold">20</table>
+		<table name="#trait_sleep">20</table>
+		<table name="#trait_derangement">20</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#trait_hold">22 24 26 28 30 32 34 36 38 40 42 44 46 48 50</table>
+		</enchant1>
+		<enchant2 levels="15" name="Power">
+			<table name="#trait_sleep">22 24 26 28 30 32 34 36 38 40 42 44 46 48 50</table>
+		</enchant2>
+		<enchant3 levels="15" name="Power">
+			<table name="#trait_derangement">22 24 26 28 30 32 34 36 38 40 42 44 46 48 50</table>
+		</enchant3>
+		<for>
+			<effect name="p_defence_trait" param="trait_hold;#trait_hold"/>
+			<effect name="p_defence_trait" param="trait_sleep;#trait_sleep"/>
+			<effect name="p_defence_trait" param="trait_derangement;#trait_derangement"/>
+		</for>
+	</skill>
+	<skill id="329" levels="1" name="Health">
+		<!-- Done by Diamond -->
+		<table name="#trait_poison">20</table>
+		<table name="#trait_bleed">20</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#trait_poison">22 24 26 28 30 32 34 36 38 40 42 44 46 48 50</table>
+		</enchant1>
+		<enchant2 levels="15" name="Power">
+			<table name="#trait_bleed">22 24 26 28 30 32 34 36 38 40 42 44 46 48 50</table>
+		</enchant2>
+		<for>
+			<effect name="p_defence_trait" param="trait_poison;#trait_poison"/>
+			<effect name="p_defence_trait" param="trait_bleed;#trait_bleed"/>
+		</for>
+	</skill>
+	<skill id="330" levels="1" name="Skill Mastery">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="HARDCODED" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for/>
+	</skill>
+	<skill id="331" levels="1" name="Skill Mastery">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="HARDCODED" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for/>
+	</skill>
+	<skill id="332" levels="1" name="Extra Inventory">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="inventoryLimit" val="10"/>
+		</for>
+	</skill>
+	<skill id="333" levels="1" name="Extra Sales Slots">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="tradeLimit" val="1"/>
+		</for>
+	</skill>
+	<skill id="334" levels="1" name="Focus Skill Mastery">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<for>
+			<effect name="c_mp_by_level" param="-2;5">
+				<mul order="0x30" stat="skillMastery" val="10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="335" levels="1" name="Fortitude">
+		<!-- Done by Diamond -->
+		<table name="#trait_shock">30</table>
+		<table name="#trait_paralyze">30</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#trait_shock">31 31 31 32 32 32 32 33 33 33 33 34 34 34 35</table>
+		</enchant1>
+		<enchant2 levels="15" name="Power">
+			<table name="#trait_paralyze">31 31 31 32 32 32 32 33 33 33 33 34 34 34 35</table>
+		</enchant2>
+		<for>
+			<effect name="p_defence_trait" param="trait_shock;#trait_shock"/>
+			<effect name="p_defence_trait" param="trait_paralyze;#trait_paralyze"/>
+			<effect name="c_mp_by_level" param="-1;5"/>
+		</for>
+	</skill>
+	<skill id="336" levels="1" name="Arcane Wisdom">
+		<!-- Done by Diamond, edit by Magister
+			Description: Maximizes magic efficiency by decreasing MP consumption by 30% and Casting Spd. by 10%. 50 HP is consumed per second.
+		-->
+		<table name="#mpConsum">.7</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#mpConsum">.7 .7 .69 .69 .69 .68 .68 .68 .67 .67 .67 .66 .66 .66 .65</table>
+		</enchant1>
+		<for>
+			<effect name="c_hp" param="-50;5">
+				<mul order="0x30" stat="mpConsum" val="#mpConsum"/>
+				<mul order="0x30" stat="p_magic_speed" val="0.9"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="337" levels="1" name="Arcane Power">
+		<!--
+			Done by Diamond
+			Enchant #1: +Power
+			Last editor: SYS, 19.06.2008
+		-->
+		<table name="#power">1.3</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#power">1.303 1.306 1.31 1.313 1.316 1.32 1.323 1.326 1.33 1.333 1.336 1.34 1.343 1.346 1.35</table>
+		</enchant1>
+		<for>
+			<effect name="c_hp" param="-50;5">
+				<mul order="0x30" stat="p_magical_attack" val="#power"/>
+				<mul order="0x30" stat="mpConsum" val="1.1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="338" levels="1" name="Arcane Agility">
+		<!-- Done by Diamond -->
+		<table name="#p_magic_speed">1.2</table>
+		<table name="#mReuse">.9</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#p_magic_speed">1.201 1.202 1.204 1.205 1.206 1.208 1.209 1.21 1.212 1.213 1.214 1.216 1.217 1.218 1.22</table>
+		</enchant1>
+		<enchant2 levels="15" name="Power">
+			<table name="#mReuse">.89 .89 .89 .89 .89 .89 .89 .89 .89 .89 .89 .89 .89 .89 .88</table>
+		</enchant2>
+		<for>
+			<effect name="c_hp" param="-50;5">
+				<mul order="0x30" stat="mReuse" val="#mReuse"/>
+				<mul order="0x30" stat="mpConsum" val="1.1"/>
+				<mul order="0x30" stat="p_magic_speed" val="#p_magic_speed"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="339" levels="1" name="Parry Stance">
+		<!-- Done by Diamond -->
+		<table name="#Def">1.25</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#Def">1.251 1.252 1.254 1.255 1.256 1.258 1.259 1.26 1.262 1.263 1.264 1.266 1.267 1.268 1.27</table>
+		</enchant1>
+		<for>
+			<effect name="c_mp_by_level" param="-1;5">
+				<mul order="0x30" stat="p_magical_defence" val="#Def"/>
+				<mul order="0x30" stat="p_physical_defence" val="#Def"/>
+				<sub order="0x40" stat="p_hit" val="4"/>
+				<mul order="0x30" stat="p_attack_speed" val="0.8"/>
+				<mul order="0x30" stat="p_speed" val="0.9"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="340" levels="1" name="Riposte Stance">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<for>
+			<effect name="c_mp_by_level" param="-1;5">
+				<add order="0x40" stat="reflectPhysicDebuff" val="30"/>
+				<add order="0x40" stat="reflectMagicDebuff" val="30"/>
+				<add order="0x40" stat="reflectDam" val="30"/>
+				<sub order="0x40" stat="p_hit" val="4"/>
+				<mul order="0x30" stat="p_attack_speed" val="0.8"/>
+				<mul order="0x30" stat="p_speed" val="0.9"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="341" levels="1" name="Touch of Life">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="HOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<target mob="false"/> 
+		</cond>
+		<enchant1 levels="15" name="Cost"/>
+		<enchant2 levels="15" name="Time"/>
+		<for>
+			<effect name="i_hp_per_max" param="50"/>
+			<effect name="t_hp" param="50;5;diff"/>
+			<effect name="Buff">
+				<add order="0x40" stat="cancelRcpt" val="100"/>
+				<add order="0x40" stat="debuffRcpt" val="30"/>
+				<mul order="0x30" stat="hpEff" val="1.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="342" levels="1" name="Touch of Death">
+		<!--
+			Done by:	Diamond
+			Last modify:	28.12.2009
+			Cancels up to 5 buffs with 25% probability and consumes 90% CP.For 2 minutes, decreases Max CP by 90% and the power of received HP recovery magic by 30%. Increases susceptibility to de-buff by 30%.
+		-->
+		<set name="levelModifier" val="1" />
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isOffensive" val="true"/>
+		<set name="isCancel" val="true"/>
+		<enchant1 levels="15" name="Cost"/>
+		<enchant2 levels="15" name="Chance">
+		</enchant2>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="touch_of_death" time="120">
+				<sub order="0x40" stat="debuffRcpt" val="30"/>
+				<mul order="0x30" stat="hpEff" val="0.7"/>
+				<mul order="0x30" stat="p_max_cp" val="0.1"/>
+			</effect>
+			<effect name="CPDamPercent" instantly="true" val="90" />
+			<effect name="DispelEffects">
+				<def name="dispelType" val="cancellation" />
+				<def name="cancelRate" val="25" />
+				<def name="negateCount" val="5" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="343" levels="1" name="Lethal Shot">
+		<!-- Done by Diamond -->
+		<table name="#power">7698</table>
+		<table name="#powerPvP">0</table>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="element" val="#element"/>
+		<set name="weaponsAllowed" val="32"/>
+		<set name="power" val="#power"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="criticalRate" val="10"/>
+		<set name="skillType" val="LETHAL_SHOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="lethal1" val="10"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#power">8475 8503 8530 8558 8586 8614 8641 8669 8697 8725 8753 8780 8808 8836 8864</table>
+		</enchant1>
+		<enchant2 levels="15" name="Cost"/>
+		<enchant3 name="Fire Attack">
+			<table name="#element">fire</table>
+			<table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+		</enchant3>
+		<enchant4 name="Water Attack">
+			<table name="#element">water</table>
+			<table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+		</enchant4>
+		<enchant5 name="Wind Attack">
+			<table name="#element">wind</table>
+			<table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+		</enchant5>
+		<enchant6 name="Earth Attack">
+			<table name="#element">earth</table>
+			<table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+		</enchant6>
+		<enchant7 name="Duel">
+			<table name="#powerPvP">5226 5320 5414 5508 5603 5697 5791 5885 5980 6074 6168 6262 6357 6451 6545</table>
+		</enchant7>
+		<for />
+	</skill>
+	<skill id="344" levels="1" name="Lethal Blow">
+		<!-- Done by Diamond -->
+		<table name="#power">5773</table>
+		<table name="#powerPvP">0</table>
+		<table name="#lethal1">10</table>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="element" val="#element"/>
+		<set name="power" val="#power"/>
+		<set name="power2" val="300"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="onCrit" val="true"/>
+		<set name="criticalRate" val="10"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="blow" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="lethal1" val="#lethal1"/>
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger"/>
+		</cond>
+		<enchant1 levels="15" name="Power">
+			<table name="#power">6502 6535 6568 6601 6634 6667 6700 6733 6766 6799 6833 6866 6899 6932 6965</table>
+		</enchant1>
+		<enchant2 levels="15" name="Power">
+			<table name="#lethal1">11 11 11 11 11 11 11 12 12 12 12 12 12 12 13</table>
+		</enchant2>
+		<enchant3 name="Fire Attack">
+			<table name="#element">fire</table>
+			<table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+		</enchant3>
+		<enchant4 name="Water Attack">
+			<table name="#element">water</table>
+			<table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+		</enchant4>
+		<enchant5 name="Wind Attack">
+			<table name="#element">wind</table>
+			<table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+		</enchant5>
+		<enchant6 name="Earth Attack">
+			<table name="#element">earth</table>
+			<table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+		</enchant6>
+		<enchant7 name="Duel">
+			<table name="#powerPvP">5880 5986 6092 6198 6304 6410 6516 6622 6728 6834 6940 7046 7152 7258 7364</table>
+		</enchant7>
+		<for />
+	</skill>
+	<skill id="345" levels="1" name="Sonic Rage">
+		<!-- Done by Diamond -->
+		<set name="power" val="7"/>
+		<set name="weaponsAllowed" val="512"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="CHARGE"/>
+		<set name="criticalRate" val="10"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="charges" val="8"/>
+		<set name="isOffensive" val="true"/>
+		<for />
+	</skill>
+	<skill id="346" levels="1" name="Raging Force">
+		<!-- Done by Diamond -->
+		<set name="power" val="7"/>
+		<set name="weaponsAllowed" val="1024"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="CHARGE"/>
+		<set name="criticalRate" val="10"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="charges" val="8"/>
+		<set name="isOffensive" val="true"/>
+		<for />
+	</skill>
+	<skill id="347" levels="1" name="Earthquake">
+		<!-- Done by Diamond -->
+		<table name="#power">4848</table>
+		<set name="weaponsAllowed" val="64"/>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="overHit" val="true"/>
+		<set name="criticalRate" val="10"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="cancelTarget" val="50"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="element" val="#element"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#power">5201 5228 5254 5281 5307 5334 5360 5387 5413 5440 5466 5493 5519 5546 5572</table>
+		</enchant1>
+		<enchant2 levels="15" name="Cost"/>
+		<enchant3 name="Earth Attack">
+			<table name="#element">earth</table>
+			<table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+		</enchant3>
+		<for />
+	</skill>
+	<skill id="348" levels="1" name="Spoil Crush">
+		<set name="levelModifier" val="2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="criticalRate" val="10"/>
+		<set name="skillType" val="SPOIL"/>
+		<set name="power" val="1"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<using kind="Sword, Big Sword, Blunt, Big Blunt" />
+		</cond>
+		<for />
+	</skill>
+	<skill id="349" levels="1" name="Song of Renewal">
+		<!-- Done by Diamond -->
+		<table name="#abnormal_time">120</table>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMusic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="15" name="Time">
+			<table name="#abnormal_time">128 136 144 152 160 168 176 184 192 200 208 216 224 232 240</table>
+		</enchant1>
+		<enchant2 levels="15" name="Cost">
+		</enchant2>
+		<for>
+			<effect name="Buff" time="#abnormal_time">
+				<mul order="0x30" stat="mReuse" val="0.8"/>
+				<mul order="0x30" stat="pReuse" val="0.8"/>
+				<mul order="0x30" stat="mpConsum" val="0.95"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.95"/>
+				<mul order="0x30" stat="mpDanceConsume" val="0.95"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="350" levels="1" name="Physical Mirror">
+		<!-- Done by Diamond -->
+		<set name="weaponsAllowed" val="2"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="skill_reflect" time="300">
+				<add order="0x40" stat="reflectPhysicDebuff" val="30"/>
+				<add order="0x40" stat="reflectMagicDebuff" val="10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="351" levels="1" name="Magical Mirror">
+		<!-- Done by Diamond -->
+		<set name="weaponsAllowed" val="2"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="skill_reflect" time="300">
+				<add order="0x40" stat="reflectPhysicDebuff" val="10"/>
+				<add order="0x40" stat="reflectMagicDebuff" val="30"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="352" levels="1" name="Shield Bash">
+		<table name="#water">0</table>
+		<table name="#fire">0</table>
+		<table name="#wind">0</table>
+		<table name="#earth">0</table>
+		<set name="weaponsAllowed" val="2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="cancelTarget" val="50"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillInterrupt" val="true"/>
+		<set name="levelModifier" val="2"/>
+		<enchant1 levels="15" name="Chance">
+		</enchant1>
+		<enchant2 levels="15" name="Weaken Fire">
+			<table name="#fire">7 10 13 15 18 21 23 26 29 31 34 37 39 42 45</table>
+		</enchant2>
+		<enchant3 levels="15" name="Weaken Water">
+			<table name="#water">7 10 13 15 18 21 23 26 29 31 34 37 39 42 45</table>
+		</enchant3>
+		<enchant4 levels="15" name="Weaken Wind">
+			<table name="#wind">7 10 13 15 18 21 23 26 29 31 34 37 39 42 45</table>
+		</enchant4>
+		<enchant5 levels="15" name="Weaken Earth">
+			<table name="#earth">7 10 13 15 18 21 23 26 29 31 34 37 39 42 45</table>
+		</enchant5>
+		<for>
+			<effect level_min="101" name="Buff">
+				<add order="0x40" stat="waterRcpt" val="#water"/>
+				<add order="0x40" stat="fireRcpt" val="#fire"/>
+				<add order="0x40" stat="windRcpt" val="#wind"/>
+				<add order="0x40" stat="earthRcpt" val="#earth"/>
+			</effect>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="353" levels="1" name="Shield Slam">
+		<!-- Done by Diamond -->
+		<table name="#Holy">0</table>
+		<table name="#Dark">0</table>
+		<set name="weaponsAllowed" val="2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="skillInterrupt" val="true"/>
+		<set name="cancelTarget" val="50"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="15" name="Chance">
+		</enchant1>
+		<enchant2 levels="15" name="Weaken Holy">
+			<table name="#Holy">7 10 13 15 18 21 23 26 29 31 34 37 39 42 45</table>
+		</enchant2>
+		<enchant3 levels="15" name="Weaken Dark">
+			<table name="#Dark">7 10 13 15 18 21 23 26 29 31 34 37 39 42 45</table>
+		</enchant3>
+		<for>
+			<effect name="MutePhisycal" time="60">
+				<add order="0x40" stat="sacredRcpt" val="#Holy"/>
+				<add order="0x40" stat="unholyRcpt" val="#Dark"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="354" levels="1" name="Hamstring Shot">
+		<!-- Done by Diamond -->
+		<table name="#power">1973</table>
+		<set name="weaponsAllowed" val="32"/>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="criticalRate" val="10"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#power">2168 2179 2190 2201 2212 2223 2234 2245 2256 2267 2278 2289 2300 2311 2322</table>
+		</enchant1>
+		<enchant2 levels="15" name="Chance">
+		</enchant2>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="RunSpeedDown" time="60">
+				<mul order="0x30" stat="p_speed" val="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="355" levels="1" name="Focus Death">
+		<!--
+			Done by:	Diamond
+			Last modify:	11.04.2009, Diamond
+			For 2 minutes, decreases user's critical attack rate by 30% and frontal critical damage by 30%.
+			 Increases the probability of deadly attack by 60% and rear critical damage by 90%. Requires a dagger.
+			Уменьшает шансы Крит. Атк. на 30%, Крит. Урон спереди на 30% и увеличивает вероятность успеха при использовании навыков Смертельных Ударов на 60%, Крит. Урон сзади на 90% в течение 2 минут. Требуется кинжал.
+		-->
+		<table name="#blowRate">1.6</table>
+		<table name="#behind">1.90</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger"/>
+		</cond>
+		<enchant1 levels="15" name="Power">
+			<table name="#blowRate">1.61 1.61 1.61 1.62 1.62 1.62 1.63 1.63 1.63 1.64 1.64 1.64 1.65 1.65 1.65</table>
+		</enchant1>
+		<enchant2 levels="15" name="Power">
+			<table name="#behind">1.91 1.91 1.91 1.92 1.92 1.92 1.92 1.93 1.93 1.93 1.93 1.94 1.94 1.94 1.95</table>
+		</enchant2>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="focus" time="120">
+				<sub order="0x40" stat="p_critical_rate_per" val="30"/>
+				<mul order="0x30" stat="blowRate" val="#blowRate"/>
+				<mul order="0x30" stat="p_critical_damage_position" val="0.7">
+					<target direction="front"/>
+				</mul>
+				<mul order="0x30" stat="p_critical_damage_position" val="#behind">
+					<target direction="behind"/>
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="356" levels="1" name="Focus Chance">
+		<!-- Done by Diamond -->
+		<table name="#side">1.30</table>
+		<table name="#back">1.60</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger"/>
+		</cond>
+		<enchant1 levels="15" name="Power">
+			<table name="#back">1.903 1.906 1.909 1.913 1.916 1.919 1.923 1.926 1.929 1.933 1.936 1.939 1.943 1.946 1.949</table>
+		</enchant1>
+		<enchant2 levels="15" name="Power">
+			<table name="#side">1.303 1.306 1.31 1.313 1.316 1.32 1.323 1.326 1.33 1.333 1.336 1.34 1.343 1.346 1.35</table>
+		</enchant2>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="focus" time="120">
+				<mul order="0x30" stat="p_critical_rate_position_bonus" val="0.7">
+					<target direction="front"/>
+				</mul>
+				<mul order="0x30" stat="p_critical_rate_position_bonus" val="#side">
+					<target direction="side"/>
+				</mul>
+				<mul order="0x30" stat="p_critical_rate_position_bonus" val="#back">
+					<target direction="behind"/>
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="357" levels="1" name="Focus Power">
+		<!--
+			Done by Diamond
+			Edited by Drin
+			For 2 minutes, increases frontal critical attack damage by 30%, side critical attack damage by 30% and rear critical attack damage by 60%. Requires a dagger.
+			Уменьшает урон Крит. Атк. спереди на 30% и увеличивает урон Крит. Атк. сбоку на 30%, урон Крит. Атк. сзади на 60% в течение 2 минут.
+		-->
+		<table name="#side">1.3</table>
+		<table name="#back">1.6</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger"/>
+		</cond>
+		<enchant1 levels="15" name="Power">
+			<table name="#back">1.61 1.62 1.62 1.63 1.64 1.64 1.65 1.66 1.66 1.67 1.67 1.68 1.69 1.69 1.70</table>
+		</enchant1>
+		<enchant2 levels="15" name="Power">
+			<table name="#side">1.31 1.32 1.32 1.33 1.34 1.34 1.35 1.36 1.36 1.37 1.37 1.38 1.39 1.39 1.40</table>
+		</enchant2>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="focus" time="120">
+				<mul order="0x30" stat="p_critical_damage_position" val="0.7">
+					<target direction="front"/>
+				</mul>
+				<mul order="0x30" stat="p_critical_damage_position" val="#side">
+					<target direction="side"/>
+				</mul>
+				<mul order="0x30" stat="p_critical_damage_position" val="#back">
+					<target direction="behind"/>
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="358" levels="1" name="Bluff">
+		<!--
+			Done by: Drizzy
+		-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="A1"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger"/>
+		</cond>
+		<enchant1 levels="15" name="Chance">
+		</enchant1>
+		<for>
+			<effect name="Stun" stackOrder="1" stackType="Stun" time="9"/> <!-- p_block_act -->
+			<effect name="i_align_direction" param="80" />
+			<effect name="i_target_cancel" param="80" />
+			<effect name="i_delete_hate_of_me" param="80" />
+		</for>
+	</skill>
+	<skill id="359" levels="1" name="Eye of Hunter">
+		<!-- Done by Diamond -->
+		<table name="#Power">1.3</table>
+		<table name="#Time">600</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#Power">1.31 1.32 1.33 1.34 1.35 1.36 1.37 1.38 1.39 1.4 1.41 1.42 1.43 1.44 1.45</table>
+		</enchant1>
+		<enchant2 levels="15" name="Time">
+			<table name="#Time">640 680 720 760 800 840 880 920 960 1000 1040 1080 1120 1160 1200</table>
+			<table name="#Power">1.31 1.31 1.31 1.32 1.32 1.32 1.33 1.33 1.33 1.33 1.34 1.34 1.34 1.35 1.35 1.35</table>
+		</enchant2>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="detect_weakness" time="#Time">
+				<mul order="0x30" stat="p_physical_attack" val="#Power">
+					<or>
+						<target race="Animals"/>
+						<target race="Plants"/>
+						<target race="Bugs"/>
+					</or>
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="360" levels="1" name="Eye of Slayer">
+		<!-- Done by Diamond -->
+		<table name="#Power">1.3</table>
+		<table name="#Time">600</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#Power">1.31 1.32 1.33 1.34 1.35 1.36 1.37 1.38 1.39 1.4 1.41 1.42 1.43 1.44 1.45</table>
+		</enchant1>
+		<enchant2 levels="15" name="Time">
+			<table name="#Time">640 680 720 760 800 840 880 920 960 1000 1040 1080 1120 1160 1200</table>
+			<table name="#Power">1.31 1.31 1.31 1.32 1.32 1.32 1.33 1.33 1.33 1.33 1.34 1.34 1.34 1.35 1.35 1.35</table>
+		</enchant2>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="detect_weakness" time="#Time">
+				<mul order="0x30" stat="p_physical_attack" val="#Power">
+					<or>
+						<target race="Beasts"/>
+						<target race="Giants"/>
+						<target race="Dragons"/>
+						<target race="MagicCreatures"/>
+						<target race="Fairies"/>
+						<target race="Spirits"/>
+					</or>
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="361" levels="1" name="Shock Blast">
+		<!-- Done by Diamond -->
+		<table name="#power">2486</table>
+		<set name="weaponsAllowed" val="64"/>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="overHit" val="true"/>
+		<set name="criticalRate" val="10"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="cancelTarget" val="50"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+		<set name="isEnemy" val="true"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#power">2731 2745 2759 2773 2787 2800 2814 2828 2842 2856 2870 2884 2898 2912 2926</table>
+		</enchant1>
+		<enchant2 levels="15" name="Cost"/>
+		<enchant3 levels="15" name="Chance">
+		</enchant3>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9">
+				<mul order="0x30" stat="p_physical_defence" val="0.7"/>
+				<mul order="0x30" stat="p_magical_defence" val="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="362" levels="1" name="Armor Crush">
+		<!-- Done by Drizzy -->
+		<table name="#power">3077</table>
+		<set name="levelModifier" val="1"/>
+		<set name="weaponsAllowed" val="18444"/>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="criticalRate" val="20"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#power">3381 3398 3415 3433 3450 3467 3484 3502 3519 3536 3553 3570 3588 3605 3622</table>
+		</enchant1>
+		<enchant2 levels="15" name="Cost"/>
+		<enchant3 levels="15" name="Chance">
+		</enchant3>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9">
+				<mul order="0x30" stat="p_physical_defence" val="0.7"/>
+				<mul order="0x30" stat="p_magical_defence" val="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="363" levels="1" name="Song of Meditation">
+		<!-- Done by Diamond -->
+		<table name="#abnormal_time">120</table>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMusic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="15" name="Time">
+			<table name="#abnormal_time">128 136 144 152 160 168 176 184 192 200 208 216 224 232 240</table>
+		</enchant1>
+		<enchant2 levels="15" name="Cost"/>
+		<for>
+			<effect name="Buff" time="#abnormal_time">
+				<mul order="0x30" stat="regMp" val="1.2"/>
+				<mul order="0x30" stat="mpConsum" val="0.9"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="364" levels="1" name="Song of Champion">
+		<!-- Done by Diamond -->
+		<table name="#abnormal_time">120</table>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMusic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="15" name="Time">
+			<table name="#abnormal_time">128 136 144 152 160 168 176 184 192 200 208 216 224 232 240</table>
+		</enchant1>
+		<enchant1 levels="15" name="Cost"/>
+		<for>
+			<effect name="Buff" time="#abnormal_time">
+				<mul order="0x30" stat="pReuse" val="0.9"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.8"/>
+				<mul order="0x30" stat="mpDanceConsume" val="0.8"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="365" levels="1" name="Siren's Dance">
+		<!-- Done by Diamond -->
+		<table name="#abnormal_time">120</table>
+		<set name="weaponsAllowed" val="512"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMusic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="15" name="Time">
+			<table name="#abnormal_time">128 136 144 152 160 168 176 184 192 200 208 216 224 232 240</table>
+		</enchant1>
+		<enchant2 levels="15" name="Cost"/>
+		<for>
+			<effect name="Buff" time="#abnormal_time">
+				<mul order="0x30" stat="mCritRate" val="2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="366" levels="1" name="Dance of Shadows">
+		<!-- Done by Diamond -->
+		<table name="#abnormal_time">120</table>
+		<set name="weaponsAllowed" val="512"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMusic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="15" name="Time"/>
+		<enchant2 levels="15" name="Cost"/>
+		<for>
+			<effect name="p_avoid_agro" param="100">
+				<mul order="0x30" stat="p_speed" val="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="367" levels="1" name="Dance of Medusa">
+		<!-- Done by Drizzy -->
+		<set name="weaponsAllowed" val="512"/>
+		<set name="levelModifier" val="1"/>
+		<set name="element" val="earth"/>
+		<set name="elementPower" val="20"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="300"/>
+		<set name="skillType" val="PARALYZE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="15" name="Chance">
+		</enchant1>
+		<enchant2 levels="15" name="Cost"/>
+		<for>
+			<effect name="Petrification">
+				<mul order="0x80" stat="regHp"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="368" levels="1" name="Vengeance">
+		<!--
+			Done by:	Diamond
+			Last modify:	Magister, 20.05.2009
+		-->
+		<table name="#p_speed">0</table>
+		<set name="weaponsAllowed" val="2"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="A1"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="15" name="Power">
+		</enchant1>
+		<enchant2 levels="15" name="Decrease Penalty">
+			<table name="#p_speed">.1 .12 .13 .15 .16 .17 .19 .2 .21 .23 .24 .26 .27 .28 .3</table>
+		</enchant2>
+		<enchant3 levels="15" name="Recovery"/>
+		<for>
+			<effect applyOnCaster="true" name="Buff" isOffensive="false" >
+				<add order="0x40" stat="p_physical_defence" val="5400"/>
+				<add order="0x40" stat="p_magical_defence" val="4050"/>
+				<add order="0x40" stat="cancelRcpt" val="50"/>
+				<mul order="0x90" stat="p_speed" val="#p_speed"/>
+			</effect>
+			<effect name="i_target_me" param="40" />
+		</for>
+	</skill>
+	<skill id="369" levels="1" name="Evade Shot">
+		<!-- Done by Diamond -->
+		<table name="#p_avoid">6</table>
+		<table name="#power">2020</table>
+		<table name="#powerPvP">0</table>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="element" val="#element"/>
+		<set name="weaponsAllowed" val="32"/>
+		<set name="power" val="#power"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#power">2168 2179 2190 2201 2212 2223 2234 2245 2256 2267 2278 2289 2300 2311 2322</table>
+		</enchant1>
+		<enchant2 levels="15" name="Power">
+			<table name="#p_avoid">7 7 7 7 8 8 8 8 8 9 9 9 9 9 10</table>
+		</enchant2>
+		<enchant3 levels="15" name="Cost"/>
+		<enchant4 name="Fire Attack">
+			<table name="#element">fire</table>
+			<table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+		</enchant4>
+		<enchant5 name="Water Attack">
+			<table name="#element">water</table>
+			<table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+		</enchant5>
+		<enchant6 name="Wind Attack">
+			<table name="#element">wind</table>
+			<table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+		</enchant6>
+		<enchant7 name="Earth Attack">
+			<table name="#element">earth</table>
+			<table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+		</enchant7>
+		<enchant8 name="Duel">
+			<table name="#powerPvP">2077 2134 2191 2248 2305 2362 2419 2476 2533 2590 2647 2704 2761 2818 2875</table>
+		</enchant8>
+		<for>
+			<effect applyOnCaster="true" name="Buff" time="30">
+				<add order="0x40" stat="p_avoid" val="#p_avoid"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="370" levels="3" name="Clan Vitality">
+		<!-- Done by Diamond -->
+		<table name="#p_max_hp">1.03 1.05 1.06</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="2"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<mul order="0x30" stat="p_max_hp" val="#p_max_hp"/>
+		</for>
+	</skill>
+	<skill id="371" levels="3" name="Clan Spirituality">
+		<!-- Done by Diamond -->
+		<table name="#p_max_cp">1.06 1.10 1.12</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="5"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<mul order="0x30" stat="p_max_cp" val="#p_max_cp"/>
+		</for>
+	</skill>
+	<skill id="372" levels="3" name="Clan Essence">
+		<!-- Done by Diamond -->
+		<table name="#p_max_mp">1.03 1.05 1.06</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="6"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<mul order="0x30" stat="p_max_mp" val="#p_max_mp"/>
+		</for>
+	</skill>
+	<skill id="373" levels="3" name="Clan Lifeblood">
+		<!-- Done by Magister -->
+		<table name="#regHp">1.03 1.05 1.06</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="2"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<mul order="0x30" stat="regHp" val="#regHp"/>
+		</for>
+	</skill>
+	<skill id="374" levels="3" name="Clan Morale">
+		<!-- Done by Magister -->
+		<table name="#regCp">1.06 1.10 1.12</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="4"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<mul order="0x30" stat="regCp" val="#regCp"/>
+		</for>
+	</skill>
+	<skill id="375" levels="3" name="Clan Clarity">
+		<!-- Done by Diamond -->
+		<table name="#regMp">1.03 1.05 1.06</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="6"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<mul order="0x30" stat="regMp" val="#regMp"/>
+		</for>
+	</skill>
+	<skill id="376" levels="3" name="Clan Might">
+		<!-- Done by Diamond -->
+		<table name="#patak">1.03 1.05 1.06</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="3"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<mul order="0x30" stat="p_physical_attack" val="#patak"/>
+		</for>
+	</skill>
+	<skill id="377" levels="3" name="Clan Aegis">
+		<!-- Done by Diamond -->
+		<table name="#p_physical_defence">1.03 1.05 1.06</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="3"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<mul order="0x30" stat="p_physical_defence" val="#p_physical_defence"/>
+		</for>
+	</skill>
+	<skill id="378" levels="3" name="Clan Empowerment">
+		<!-- Done by Magister -->
+		<table name="#matak">1.06 1.10 1.12</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="6"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<mul order="0x30" stat="p_magical_attack" val="#matak"/>
+		</for>
+	</skill>
+	<skill id="379" levels="3" name="Clan Magic Protection">
+		<!-- Done by Diamond -->
+		<table name="#p_magical_defence">1.06 1.10 1.12</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="2"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<mul order="0x30" stat="p_magical_defence" val="#p_magical_defence"/>
+		</for>
+	</skill>
+	<skill id="380" levels="3" name="Clan Guidance">
+		<!-- Done by Diamond -->
+		<table name="#p_hit">1 2 3</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="5"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<add order="0x40" stat="p_hit" val="#p_hit"/>
+		</for>
+	</skill>
+	<skill id="381" levels="3" name="Clan Agility">
+		<!-- Done by Diamond -->
+		<table name="#p_avoid">1 2 3</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="5"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<add order="0x40" stat="p_avoid" val="#p_avoid"/>
+		</for>
+	</skill>
+	<skill id="382" levels="3" name="Clan Withstand-Attack">
+		<!-- Done by Magister -->
+		<table name="#rShld">1.12 1.20 1.24</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="6"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<mul order="0x30" stat="rShld" val="#rShld"/>
+		</for>
+	</skill>
+	<skill id="383" levels="3" name="Clan Shield Boost">
+		<!-- Done by Magister -->
+		<table name="#sDef">1.24 1.40 1.48</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="5"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<mul order="0x30" stat="sDef" val="#sDef"/>
+		</for>
+	</skill>
+	<skill id="384" levels="3" name="Clan Cyclonic Resistance">
+		<!-- Done by Magister -->
+		<table name="#resist">3 5 6</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="6"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<sub order="0x40" stat="windRcpt" val="#resist"/>
+			<sub order="0x40" stat="waterRcpt" val="#resist"/>
+		</for>
+	</skill>
+	<skill id="385" levels="3" name="Clan Magmatic Resistance">
+		<!-- Done by Magister -->
+		<table name="#resist">3 5 6</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="6"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<sub order="0x40" stat="fireRcpt" val="#resist"/>
+			<sub order="0x40" stat="earthRcpt" val="#resist"/>
+		</for>
+	</skill>
+	<skill id="386" levels="3" name="Clan Fortitude">
+		<!-- Done by Magister -->
+		<table name="#resist">12 20 24</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="6"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_shock;#resist"/>
+		</for>
+	</skill>
+	<skill id="387" levels="3" name="Clan Freedom">
+		<!-- Done by Magister -->
+		<table name="#resist">12 20 24</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="6"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_hold;#resist"/>
+		</for>
+	</skill>
+	<skill id="388" levels="3" name="Clan Vigilance">
+		<!-- Done by Magister -->
+		<table name="#resist">12 20 24</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="6"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sleep;#resist"/>
+		</for>
+	</skill>
+	<skill id="389" levels="3" name="Clan March">
+		<!-- Done by Diamond -->
+		<table name="#Tab-p_speed">3 5 6</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="7"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<add order="0x40" stat="p_speed" val="#Tab-p_speed"/>
+		</for>
+	</skill>
+	<skill id="390" levels="3" name="Clan Luck">
+		<!-- Decreases Exp. loss and the chance of other death penalties when killed by a monster or player. It only effects those who are of an Heir class or higher. -->
+		<set name="target" val="TARGET_SELF"/>
+		<table name="#Tab-expLost">0.9 0.8 0.7</table>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="2"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<mul order="0x30" stat="expLost" val="#Tab-expLost"/>
+		</for>
+	</skill>
+	<skill id="391" levels="1" name="Clan Imperium">
+		<!-- Gives authority to open up a command channel. Only affects Wise Man class and above. -->
+		<!-- Нужен только как флаг для создания comand channel-а. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="HARDCODED"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="minPledgeClass" val="4"/>
+		<set name="isCommon" val="true"/>
+		<for />
+	</skill>
+	<skill id="395" levels="1" name="Heroic Miracle">
+		<!--
+			Done by:	Diamond
+			Last modify:	02.05.2009, Magister
+			Description:
+			For 30 seconds, increases user's P. Def. by 5400, M. Def. by 4050, resistance to buff-canceling attacks by 80, and movement speed by 5. Consumes 40 Soul Ores.
+		-->
+		<set name="itemConsumeId" val="1785"/>
+		<set name="itemConsumeCount" val="40"/>
+		<set name="power" val="80"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMagic" val="false"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="cancelable" val="false"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="hero" time="30">
+				<add order="0x40" stat="p_physical_defence" val="5400"/>
+				<add order="0x40" stat="p_magical_defence" val="4050"/>
+				<add order="0x40" stat="p_speed" val="5"/>
+				<add order="0x40" stat="cancelRcpt" val="80"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="396" levels="1" name="Heroic Berserker">
+		<!--
+			Done by:	Diamond
+			Last modify:	02.05.2009, Magister
+			Description:
+			For 2 minutes, increases user's accuracy by 8, P. Atk. by 500, M. Atk. by 500, Atk. Spd. by 100, Casting Spd. by 100, movement speed by 20, resistance to buff-canceling attacks by 80, and the effect of received HP recovery magic by 100%. Bestows complete resistance to de-buff attacks. Decreases P. Def. by 25%, M. Def. by 25%, and evasion by 8. Consumes 40 Soul Ores.
+		-->
+		<set name="itemConsumeId" val="1785"/>
+		<set name="itemConsumeCount" val="40"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="cancelable" val="false"/>
+		<for>
+			<effect name="ResDebuff">
+				<add order="0x40" stat="p_hit" val="8"/>
+				<sub order="0x40" stat="p_avoid" val="8"/>
+				<add order="0x40" stat="p_physical_attack" val="500"/>
+				<add order="0x40" stat="p_magical_attack" val="500"/>
+				<add order="0x40" stat="p_attack_speed" val="100"/>
+				<add order="0x40" stat="p_magic_speed" val="100"/>
+				<add order="0x40" stat="p_speed" val="20"/>
+				<mul order="0x30" stat="p_physical_defence" val="0.75"/>
+				<mul order="0x30" stat="p_magical_defence" val="0.75"/>
+				<add order="0x40" stat="cancelRcpt" val="80"/>
+				<mul order="0x30" stat="hpEff" val="2"/>
+			</effect>
+		</for>
+	</skill>
+</list>

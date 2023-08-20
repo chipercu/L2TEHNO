@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="229" type="SOLO">
+		<name lang="en" val="Test of Witchcraft"/>
+		<name lang="ru" val="Испытание колдуна"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20557"/>	<!-- Dire Wyrm -->
+			<event type="MOBKILLED" val="20565"/>	<!-- Enchanted Stone Golem -->
+			<event type="MOBKILLED" val="20577"/>	<!-- Leto Lizardman -->
+			<event type="MOBKILLED" val="20578"/>	<!-- Leto Lizardman Archer -->
+			<event type="MOBKILLED" val="20579"/>	<!-- Leto Lizardman Soldier -->
+			<event type="MOBKILLED" val="20580"/>	<!-- Leto Lizardman Warrior -->
+			<event type="MOBKILLED" val="20581"/>	<!-- Leto Lizardman Shaman -->
+			<event type="MOBKILLED" val="20582"/>	<!-- Leto Lizardman Overlord -->
+			<event type="MOBKILLED" val="27099"/>	<!-- Nameless Revenant -->
+			<event type="MOBKILLED" val="20601"/>	<!-- Tamlin Orc -->
+			<event type="MOBKILLED" val="20602"/>	<!-- Tamlin Orc Archer -->
+			<event type="MOBKILLED" val="27100"/>	<!-- Skeletal Mercenary -->
+			<event type="MOBKILLED" val="27101"/>	<!-- Drevanul Prince Zeruel -->
+			<event type="QUEST_START" val="30630"/>	<!-- Orim -->
+			<event type="QUEST_TALK" val="30630"/>	<!-- Orim -->
+			<event type="QUEST_TALK" val="30098"/>	<!-- Alexandria -->
+			<event type="QUEST_TALK" val="30110"/>	<!-- Iker -->
+			<event type="QUEST_TALK" val="30476"/>	<!-- Kaira -->
+			<event type="QUEST_TALK" val="30063"/>	<!-- Lara -->
+			<event type="QUEST_TALK" val="30631"/>	<!-- Roderik -->
+			<event type="QUEST_TALK" val="30314"/>	<!-- Nestle -->
+			<event type="QUEST_TALK" val="30435"/>	<!-- Leopold -->
+			<event type="QUEST_TALK" val="30417"/>	<!-- Sir Klaus Vasper -->
+			<event type="QUEST_TALK" val="30188"/>	<!-- Vadin -->
+			<event type="QUEST_TALK" val="30633"/>	<!-- Evert -->
+			<event type="QUEST_TALK" val="30632"/>	<!-- Endrigo -->
+			<item id="3308"/>	<!-- Orim's Diagram -->
+			<item id="3324"/>	<!-- Orim's Instructions -->
+			<item id="3325"/>	<!-- Orim's 1st Letter -->
+			<item id="3326"/>	<!-- Orim's 2nd Letter -->
+			<item id="3323"/>	<!-- 1st Brimstone -->
+			<item id="3309"/>	<!-- Alexandria's Book -->
+			<item id="3310"/>	<!-- Iker's List -->
+			<item id="3317"/>	<!-- Aklantoth 1st Gem -->
+			<item id="3332"/>	<!-- Soultrap Crystal -->
+			<item id="3331"/>	<!-- Iker's Amulet -->
+			<item id="3318"/>	<!-- Aklantoth 2nd Gem -->
+			<item id="3314"/>	<!-- Lara's Memo -->
+			<item id="3315"/>	<!-- Nestle's Memo -->
+			<item id="3316"/>	<!-- Leopold's Journal -->
+			<item id="3320"/>	<!-- Aklantoth 4th Gem -->
+			<item id="3321"/>	<!-- Aklantoth 5th Gem -->
+			<item id="3322"/>	<!-- Aklantoth 6th Gem -->
+			<item id="3327"/>	<!-- Sir Vasper's Letter -->
+			<item id="3029"/>	<!-- Sword of Binding -->
+			<item id="3328"/>	<!-- Vadin's Crucifix -->
+			<item id="3330"/>	<!-- Vadin's Sanctions -->
+			<item id="3335"/>	<!-- 2nd Brimstone -->
+			<item id="3333"/>	<!-- Purgatory Key -->
+			<item id="3334"/>	<!-- Zeruel Bind Crystal -->
+			<item id="3311"/>	<!-- Dire Wyrm Fang -->
+			<item id="3313"/>	<!-- Enchanted Golem Heartstone -->
+			<item id="3312"/>	<!-- Leto Lizardman Charm -->
+			<item id="3319"/>	<!-- Aklantoth 3rd Gem -->
+			<item id="3329"/>	<!-- Tamlin Orc Amulet -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="362" type="SOLO">
+		<name lang="en" val="Bard's Mandolin"/>
+		<name lang="ru" val="Мандолина Барда"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="30957"/>	<!-- Swan -->
+			<event type="QUEST_TALK" val="30957"/>	<!-- Swan -->
+			<event type="QUEST_TALK" val="30956"/>	<!-- Nanarin -->
+			<event type="QUEST_TALK" val="30958"/>	<!-- Galion -->
+			<event type="QUEST_TALK" val="30837"/>	<!-- Woodrow -->
+			<item id="4316"/>	<!-- Swan's Flute -->
+			<item id="4317"/>	<!-- Swan's Letter -->
+		</setting>
+	</quest>
+</quests>

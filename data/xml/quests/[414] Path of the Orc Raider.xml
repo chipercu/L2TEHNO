@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="414" type="SOLO">
+		<name lang="en" val="Path of the Orc Raider"/>
+		<name lang="ru" val="Путь Налетчика"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20320"/>	<!-- Goblin Tomb Raider Leader -->
+			<event type="MOBKILLED" val="27045"/>	<!-- Kuruka Ratman Leader -->
+			<event type="MOBKILLED" val="27054"/>	<!-- Umbar Orc -->
+			<event type="MOBKILLED" val="27320"/>	<!-- Timora Orc -->
+			<event type="QUEST_START" val="30570"/>	<!-- Karukia -->
+			<event type="QUEST_TALK" val="30570"/>	<!-- Karukia -->
+			<event type="QUEST_TALK" val="30501"/>	<!-- Kasman -->
+			<event type="QUEST_TALK" val="31978"/>	<!-- Tazeer -->
+			<item id="1580"/>	<!-- Kuruka Ratman Tooth -->
+			<item id="1579"/>	<!-- Goblin Dwelling Map -->
+			<item id="1578"/>	<!-- Green Blood -->
+			<item id="1591"/>	<!-- Head of Betrayer -->
+			<item id="1589"/>	<!-- Betrayer's Report -->
+			<item id="8544"/>	<!-- Timora Orc's Head -->
+		</setting>
+	</quest>
+</quests>

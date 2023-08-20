@@ -1,0 +1,886 @@
+<list>
+	<zone id="854222" name="[DenOfEvil]" type="other" >
+		<shape>
+			<coords loc="70548 -135511 -7660 7340" />
+			<coords loc="59313 -120307 -7660 7340" />
+			<coords loc="59470 -105331 -7660 7340" />
+			<coords loc="69153 -95476 -7660 7340" />
+			<coords loc="81395 -100367 -7660 7340" />
+			<coords loc="77020 -108159 -7660 7340" />
+			<coords loc="81492 -130277 -7660 7340" />
+		</shape>
+	</zone>
+	<zone id="999222" name="[StakatoNest 2]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6171;1" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="90" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="89592 -42120 -6136 -4128" />
+			<coords loc="89592 -57352 -6136 -4128" />
+			<coords loc="73864 -57352 -6136 -4128" />
+			<coords loc="73864 -42056 -6136 -4128" />
+		</shape>
+	</zone>
+	<zone id="999224" name="[StakatoNest 3]" type="other" >
+		<set name="enabled" val="false" />
+		<set name="target" val="npc" />
+		<set name="skill_name" val="6170;1" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="90" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="89592 -42120 -6136 -4128" />
+			<coords loc="89592 -57352 -6136 -4128" />
+			<coords loc="73864 -57352 -6136 -4128" />
+			<coords loc="73864 -42056 -6136 -4128" />
+		</shape>
+	</zone>
+	<!-- Plains of Lizzerdman Zones -->
+	<zone id="999901" name="[PoL1]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6435;1" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="80948 81704 -3744 -3044" />
+			<coords loc="80002 80533 -3744 -3044" />
+			<coords loc="80106 79870 -3744 -3044" />
+			<coords loc="81333 80359 -3744 -3044" />
+			<coords loc="81434 79192 -3744 -3044" />
+			<coords loc="79905 78427 -3744 -3044" />
+			<coords loc="80363 76612 -3744 -3044" />
+			<coords loc="80879 75452 -3744 -3044" />
+			<coords loc="83080 74980 -3744 -3044" />
+			<coords loc="85000 73955 -3744 -3044" />
+			<coords loc="85759 75136 -3744 -3044" />
+			<coords loc="84154 77015 -3744 -3044" />
+			<coords loc="84228 77737 -3744 -3044" />
+			<coords loc="85242 78306 -3744 -3044" />
+			<coords loc="85692 81525 -3744 -3044" />
+			<coords loc="84399 82252 -3744 -3044" />
+			<coords loc="83365 81953 -3744 -3044" />
+			<coords loc="81610 83388 -3744 -3044" />
+			<coords loc="80473 82612 -3744 -3044" />
+			<coords loc="82755 81625 -3740 -3240" />
+			<coords loc="82309 81855 -3740 -3240" />
+			<coords loc="81625 81248 -3740 -3240" />
+			<coords loc="81626 80626 -3740 -3240" />
+			<coords loc="82228 79566 -3740 -3240" />
+			<coords loc="81220 78236 -3740 -3240" />
+			<coords loc="81030 77077 -3740 -3240" />
+			<coords loc="82472 76149 -3740 -3240" />
+			<coords loc="83270 76354 -3740 -3240" />
+			<coords loc="83589 77629 -3740 -3240" />
+			<coords loc="84703 78917 -3740 -3240" />
+			<coords loc="84777 79993 -3740 -3240" />
+			<coords loc="84676 80864 -3740 -3240" />
+			<coords loc="84018 81088 -3740 -3240" />
+			<coords loc="83337 81240 -3740 -3240" />
+		</shape>
+	</zone>	
+	<zone id="999902" name="[PoL2]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6435;2" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="82755 81625 -3740 -3240" />
+			<coords loc="82309 81855 -3740 -3240" />
+			<coords loc="81625 81248 -3740 -3240" />
+			<coords loc="81626 80626 -3740 -3240" />
+			<coords loc="82228 79566 -3740 -3240" />
+			<coords loc="81220 78236 -3740 -3240" />
+			<coords loc="81030 77077 -3740 -3240" />
+			<coords loc="82472 76149 -3740 -3240" />
+			<coords loc="83270 76354 -3740 -3240" />
+			<coords loc="83589 77629 -3740 -3240" />
+			<coords loc="84703 78917 -3740 -3240" />
+			<coords loc="84777 79993 -3740 -3240" />
+			<coords loc="84676 80864 -3740 -3240" />
+			<coords loc="84018 81088 -3740 -3240" />
+			<coords loc="83337 81240 -3740 -3240" />
+			<coords loc="83885 80497 -3764 -3464" />
+			<coords loc="83325 80678 -3764 -3464" />
+			<coords loc="82690 80480 -3764 -3464" />
+			<coords loc="82628 79804 -3764 -3464" />
+			<coords loc="82713 79397 -3764 -3464" />
+			<coords loc="82025 78227 -3764 -3464" />
+			<coords loc="81718 77815 -3764 -3464" />
+			<coords loc="81959 77379 -3764 -3464" />
+			<coords loc="82656 77511 -3764 -3464" />
+			<coords loc="83152 77939 -3764 -3464" />
+			<coords loc="83913 78957 -3764 -3464" />
+			<coords loc="84190 79474 -3764 -3464" />
+			<coords loc="84276 80099 -3764 -3464" />
+
+		</shape>
+	</zone>	
+	<zone id="999903" name="[PoL3]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6435;3" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="83885 80497 -3764 -3464" />
+			<coords loc="83325 80678 -3764 -3464" />
+			<coords loc="82690 80480 -3764 -3464" />
+			<coords loc="82628 79804 -3764 -3464" />
+			<coords loc="82713 79397 -3764 -3464" />
+			<coords loc="82025 78227 -3764 -3464" />
+			<coords loc="81718 77815 -3764 -3464" />
+			<coords loc="81959 77379 -3764 -3464" />
+			<coords loc="82656 77511 -3764 -3464" />
+			<coords loc="83152 77939 -3764 -3464" />
+			<coords loc="83913 78957 -3764 -3464" />
+			<coords loc="84190 79474 -3764 -3464" />
+			<coords loc="84276 80099 -3764 -3464" />
+		</shape>
+	</zone>
+	<zone id="999904" name="[PoL4]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6435;1" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="88436 81303 -3600 -3200" />
+			<coords loc="87307 79562 -3600 -3200" />
+			<coords loc="88166 78344 -3600 -3200" />
+			<coords loc="86441 78316 -3600 -3200" />
+			<coords loc="86179 77546 -3600 -3200" />
+			<coords loc="87330 75984 -3600 -3200" />
+			<coords loc="86509 74262 -3600 -3200" />
+			<coords loc="88049 72874 -3600 -3200" />
+			<coords loc="89061 74238 -3600 -3200" />
+			<coords loc="91577 75214 -3600 -3200" />
+			<coords loc="92445 74710 -3600 -3200" />
+			<coords loc="92777 75434 -3600 -3200" />
+			<coords loc="92125 76318 -3600 -3200" />
+			<coords loc="92587 76918 -3600 -3200" />
+			<coords loc="94066 76677 -3600 -3200" />
+			<coords loc="94437 79460 -3600 -3200" />
+			<coords loc="93369 81194 -3600 -3200" />
+			<coords loc="91425 81782 -3600 -3200" />
+			<coords loc="90501 81054 -3600 -3200" />
+			<coords loc="90731 76824 -3432 -3032" />
+			<coords loc="91716 77112 -3432 -3032" />
+			<coords loc="93656 79500 -3432 -3032" />
+			<coords loc="91801 80446 -3432 -3032" />
+			<coords loc="88992 80261 -3432 -3032" />
+			<coords loc="88408 79497 -3432 -3032" />
+			<coords loc="89140 78440 -3432 -3032" />
+			<coords loc="87884 75539 -3432 -3032" />
+			<coords loc="89076 74755 -3432 -3032" />
+			<coords loc="90815 76046 -3432 -3032" />
+
+		</shape>
+	</zone>	
+	<zone id="999905" name="[PoL5]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6435;2" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="90731 76824 -3432 -3032" />
+			<coords loc="91716 77112 -3432 -3032" />
+			<coords loc="93656 79500 -3432 -3032" />
+			<coords loc="91801 80446 -3432 -3032" />
+			<coords loc="88992 80261 -3432 -3032" />
+			<coords loc="88408 79497 -3432 -3032" />
+			<coords loc="89140 78440 -3432 -3032" />
+			<coords loc="87884 75539 -3432 -3032" />
+			<coords loc="89076 74755 -3432 -3032" />
+			<coords loc="90815 76046 -3432 -3032" />
+			<coords loc="91337 77665 -3344 -3044" />
+			<coords loc="92093 78507 -3344 -3044" />
+			<coords loc="92023 79105 -3344 -3044" />
+			<coords loc="90291 79743 -3344 -3044" />
+			<coords loc="89466 79279 -3344 -3044" />
+			<coords loc="89600 77834 -3344 -3044" />
+			<coords loc="88778 76650 -3344 -3044" />
+			<coords loc="89692 76002 -3344 -3044" />
+			<coords loc="90764 77561 -3344 -3044" />
+
+		</shape>
+	</zone>
+	<zone id="999906" name="[PoL6]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6435;3" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="91337 77665 -3344 -3044" />
+			<coords loc="92093 78507 -3344 -3044" />
+			<coords loc="92023 79105 -3344 -3044" />
+			<coords loc="90291 79743 -3344 -3044" />
+			<coords loc="89466 79279 -3344 -3044" />
+			<coords loc="89600 77834 -3344 -3044" />
+			<coords loc="88778 76650 -3344 -3044" />
+			<coords loc="89692 76002 -3344 -3044" />
+			<coords loc="90764 77561 -3344 -3044" />
+		</shape>
+	</zone>	
+	<zone id="999907" name="[PoL7]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6435;1" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="94254 83444 -3700 -3400" />
+			<coords loc="93570 83984 -3700 -3400" />
+			<coords loc="93445 86178 -3700 -3400" />
+			<coords loc="91313 86422 -3700 -3400" />
+			<coords loc="90275 86358 -3700 -3400" />
+			<coords loc="89791 85414 -3700 -3400" />
+			<coords loc="90219 83874 -3700 -3400" />
+			<coords loc="89607 83262 -3700 -3400" />
+			<coords loc="90015 82634 -3700 -3400" />
+			<coords loc="92143 82182 -3700 -3400" />
+			<coords loc="94099 82550 -3700 -3400" />
+			<coords loc="92437 83030 -3728 -3428" />
+			<coords loc="93139 83525 -3728 -3428" />
+			<coords loc="92934 85775 -3728 -3428" />
+			<coords loc="92261 86141 -3728 -3428" />
+			<coords loc="90864 85353 -3728 -3428" />
+			<coords loc="90622 83941 -3728 -3428" />
+			<coords loc="91126 83342 -3728 -3428" />
+			<coords loc="91818 83153 -3728 -3428" />
+
+		</shape>
+	</zone>
+	<zone id="999908" name="[PoL8]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6435;2" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="92437 83030 -3728 -3428" />
+			<coords loc="93139 83525 -3728 -3428" />
+			<coords loc="92934 85775 -3728 -3428" />
+			<coords loc="92261 86141 -3728 -3428" />
+			<coords loc="90864 85353 -3728 -3428" />
+			<coords loc="90622 83941 -3728 -3428" />
+			<coords loc="91126 83342 -3728 -3428" />
+			<coords loc="91818 83153 -3728 -3428" />
+			<coords loc="92254 83601 -3744 -3444" />
+			<coords loc="92513 84114 -3744 -3444" />
+			<coords loc="92406 84883 -3744 -3444" />
+			<coords loc="92553 85384 -3744 -3444" />
+			<coords loc="91805 85573 -3744 -3444" />
+			<coords loc="91193 84531 -3744 -3444" />
+			<coords loc="91293 83868 -3744 -3444" />
+		</shape>
+	</zone>	
+	<zone id="999909" name="[PoL9]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6435;3" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="92254 83601 -3744 -3444" />
+			<coords loc="92513 84114 -3744 -3444" />
+			<coords loc="92406 84883 -3744 -3444" />
+			<coords loc="92553 85384 -3744 -3444" />
+			<coords loc="91805 85573 -3744 -3444" />
+			<coords loc="91193 84531 -3744 -3444" />
+			<coords loc="91293 83868 -3744 -3444" />
+		</shape>
+	</zone>	
+	<zone id="999910" name="[PoL10]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6435;1" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="94664 90851 -3640 -3140" />
+			<coords loc="93241 91517 -3640 -3140" />
+			<coords loc="92850 90548 -3640 -3140" />
+			<coords loc="91950 90369 -3640 -3140" />
+			<coords loc="91525 89361 -3640 -3140" />
+			<coords loc="90345 88918 -3640 -3140" />
+			<coords loc="91377 86446 -3640 -3140" />
+			<coords loc="93171 86240 -3640 -3140" />
+			<coords loc="94273 87094 -3640 -3140" />
+			<coords loc="94625 87946 -3640 -3140" />
+			<coords loc="95849 89386 -3640 -3140" />
+			<coords loc="95401 90138 -3640 -3140" />
+			<coords loc="94917 90406 -3640 -3140" />
+			<coords loc="92727 86380 -3620 -3220" />
+			<coords loc="94103 87753 -3620 -3220" />
+			<coords loc="94451 89784 -3620 -3220" />
+			<coords loc="93104 90072 -3620 -3220" />
+			<coords loc="91228 88097 -3620 -3220" />
+			<coords loc="91568 87205 -3620 -3220" />
+			<coords loc="92330 86409 -3620 -3220" />
+
+		</shape>
+	</zone>	
+	<zone id="999911" name="[PoL11]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6435;2" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="92727 86380 -3620 -3220" />
+			<coords loc="94103 87753 -3620 -3220" />
+			<coords loc="94451 89784 -3620 -3220" />
+			<coords loc="93104 90072 -3620 -3220" />
+			<coords loc="91228 88097 -3620 -3220" />
+			<coords loc="91568 87205 -3620 -3220" />
+			<coords loc="92330 86409 -3620 -3220" />
+			<coords loc="93513 87903 -3584 -3184" />
+			<coords loc="93911 88740 -3584 -3184" />
+			<coords loc="93830 89533 -3584 -3184" />
+			<coords loc="93276 89513 -3584 -3184" />
+			<coords loc="92059 88226 -3584 -3184" />
+			<coords loc="91971 87777 -3584 -3184" />
+			<coords loc="92480 87548 -3584 -3184" />
+			<coords loc="92795 87327 -3584 -3184" />
+			<coords loc="93262 87501 -3584 -3184" />
+		</shape>
+	</zone>	
+	<zone id="999912" name="[PoL12]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6435;3" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="93513 87903 -3584 -3184" />
+			<coords loc="93911 88740 -3584 -3184" />
+			<coords loc="93830 89533 -3584 -3184" />
+			<coords loc="93276 89513 -3584 -3184" />
+			<coords loc="92059 88226 -3584 -3184" />
+			<coords loc="91971 87777 -3584 -3184" />
+			<coords loc="92480 87548 -3584 -3184" />
+			<coords loc="92795 87327 -3584 -3184" />
+			<coords loc="93262 87501 -3584 -3184" />
+		</shape>
+	</zone>	
+	
+	<zone id="999913" name="[PoL13]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6435;1" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="90965 93248 -3600 -3000" />
+			<coords loc="86669 95030 -3600 -3000" />
+			<coords loc="86060 94247 -3600 -3000" />
+			<coords loc="85132 95244 -3600 -3000" />
+			<coords loc="83537 94333 -3600 -3000" />
+			<coords loc="84037 93518 -3600 -3000" />
+			<coords loc="85621 92454 -3600 -3000" />
+			<coords loc="86735 90612 -3600 -3000" />
+			<coords loc="90830 90531 -3600 -3000" />
+			<coords loc="91352 91601 -3600 -3000" />
+			<coords loc="92529 92534 -3600 -3000" />
+			<coords loc="92241 93634 -3600 -3000" />
+		</shape>
+	</zone>	
+	<zone id="999914" name="[PoL14]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6435;2" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="87196 94553 -3476 -2976" />
+			<coords loc="86308 93675 -3476 -2976" />
+			<coords loc="85314 94270 -3476 -2976" />
+			<coords loc="84520 93898 -3476 -2976" />
+			<coords loc="85968 92702 -3476 -2976" />
+			<coords loc="86478 91730 -3476 -2976" />
+			<coords loc="88406 91514 -3476 -2976" />
+			<coords loc="90392 91279 -3476 -2976" />
+			<coords loc="90923 92101 -3476 -2976" />
+			<coords loc="90953 92766 -3476 -2976" />
+			<coords loc="89935 93237 -3476 -2976" />
+			<coords loc="88741 93082 -3476 -2976" />
+			<coords loc="88416 93943 -3476 -2976" />
+			<coords loc="88568 92008 -3288 -2788" />
+			<coords loc="90012 92048 -3288 -2788" />
+			<coords loc="90093 92642 -3288 -2788" />
+			<coords loc="88464 92784 -3288 -2788" />
+			<coords loc="87451 93745 -3288 -2788" />
+			<coords loc="86372 92881 -3288 -2788" />
+			<coords loc="87136 92149 -3288 -2788" />
+
+		</shape>
+	</zone>	
+	<zone id="999915" name="[PoL15]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6435;3" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="88568 92008 -3288 -2788" />
+			<coords loc="90012 92048 -3288 -2788" />
+			<coords loc="90093 92642 -3288 -2788" />
+			<coords loc="88464 92784 -3288 -2788" />
+			<coords loc="87451 93745 -3288 -2788" />
+			<coords loc="86372 92881 -3288 -2788" />
+			<coords loc="87136 92149 -3288 -2788" />
+			<coords loc="87196 94553 -3476 -2976" />
+			<coords loc="86308 93675 -3476 -2976" />
+			<coords loc="85314 94270 -3476 -2976" />
+			<coords loc="84520 93898 -3476 -2976" />
+			<coords loc="85968 92702 -3476 -2976" />
+			<coords loc="86478 91730 -3476 -2976" />
+			<coords loc="88406 91514 -3476 -2976" />
+			<coords loc="90392 91279 -3476 -2976" />
+			<coords loc="90923 92101 -3476 -2976" />
+			<coords loc="90953 92766 -3476 -2976" />
+			<coords loc="89935 93237 -3476 -2976" />
+			<coords loc="88741 93082 -3476 -2976" />
+			<coords loc="88416 93943 -3476 -2976" />
+
+		</shape>
+	</zone>		
+	<zone id="999916" name="[PoLIntanceZone]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_name" val="6436;1" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="5" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="96971 84648 -3792 -3292" />
+			<coords loc="97842 86047 -3792 -3292" />
+			<coords loc="97803 86717 -3792 -3292" />
+			<coords loc="95982 86676 -3792 -3292" />
+			<coords loc="95046 85676 -3792 -3292" />
+			<coords loc="95166 84573 -3792 -3292" />
+			<coords loc="96095 84213 -3792 -3292" />
+		</shape>
+	</zone>	
+	<!-- Seed of Annihilation zone -->	
+	<zone id="60002" name="[SoAZoneTeleport]" type="other" >
+		<shape>
+			<coords loc="-182178;186223;-10593;-10293" />
+			<coords loc="-182164;187182;-10593;-10293" />
+			<coords loc="-183010;188068;-10593;-10293" />
+			<coords loc="-183541;187026;-10593;-10293" />
+		</shape>	
+	</zone>
+	<zone id="60003" name="[SoAZoneTeleport1]" type="other" >
+		<shape>
+			<coords loc="-213281 183864 -11042 -10842" />
+			<coords loc="-211849 183297 -11042 -10842" />
+			<coords loc="-213016 185336 -11042 -10842" />
+			<coords loc="-213377 185350 -11042 -10842" />
+		</shape>	
+	</zone>	
+	<zone id="60004" name="[SoAZoneTeleport2]" type="other" >
+		<shape>
+			<coords loc="-177056 187568 -10769 -10469" />
+			<coords loc="-177186 188192 -10769 -10469" />
+			<coords loc="-179236 188534 -10769 -10469" />
+			<coords loc="-178760 187618 -10769 -10469" />
+		</shape>	
+	</zone>	
+	<zone id="60005" name="[SoAZoneTeleport3]" type="other" >
+		<shape>
+			<coords loc="-180517 184547 -15206 -15006" />
+			<coords loc="-179616 184158 -15206 -15006" />
+			<coords loc="-179308 184501 -15206 -15006" />
+			<coords loc="-180340 185599 -15206 -15006" />
+		</shape>	
+	</zone>
+	<zone id="60006" name="[SoAZone1]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="90" />
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="-186850 174532 -10936 -6024" />
+			<coords loc="-170363 173029 -10936 -6024" />
+			<coords loc="-172598 183028 -10936 -6024" />
+			<coords loc="-176043 186755 -10936 -6024" />
+			<coords loc="-180214 182878 -10936 -6024" />
+			<coords loc="-186767 186465 -10936 -6024" />
+		</shape>
+		<restart_point>
+			<coords loc="-175689 154160 2712 0" />
+		</restart_point>
+	</zone>
+	<zone id="60007" name="[SoAZone2]" type="other" >
+		<set name="enabled" val="true" />	
+		<set name="target" val="pc" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="90" />	
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="-221685 172976 -13000 -4000" />
+			<coords loc="-205845 172982 -13000 -4000" />
+			<coords loc="-204997 187005 -13000 -4000" />
+			<coords loc="-212959 182829 -13000 -4000" />
+			<coords loc="-213397 182804 -13000 -4000" />
+			<coords loc="-216745 187021 -13000 -4000" />
+			<coords loc="-220549 187614 -13000 -4000" />
+		</shape>
+		<restart_point>
+			<coords loc="-175689 154160 2712 0" />
+		</restart_point>
+	</zone>
+	<zone id="60008" name="[SoAZone3]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="pc" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="90" />	
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="-175341 176261 -16312 -11528" />
+			<coords loc="-170711 188069 -16312 -11528" />
+			<coords loc="-177158 188527 -16312 -11528" />
+			<coords loc="-179830 183055 -16312 -11528" />
+			<coords loc="-180681 183067 -16312 -11528" />
+			<coords loc="-184522 188504 -16312 -11528" />
+			<coords loc="-188752 184597 -16312 -11528" />
+			<coords loc="-186625 174239 -16312 -11528" />
+		</shape>
+		<restart_point>
+			<coords loc="-175689 154160 2712 0" />
+		</restart_point>
+	</zone>
+	<zone id="60009" name="[14_23_beastacon_for_melee_1]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="npc" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="90" />	
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="-186850 174532 -10936 -6024" />
+			<coords loc="-170363 173029 -10936 -6024" />
+			<coords loc="-172598 183028 -10936 -6024" />
+			<coords loc="-176043 186755 -10936 -6024" />
+			<coords loc="-180214 182878 -10936 -6024" />
+			<coords loc="-186767 186465 -10936 -6024" />
+		</shape>
+	</zone>
+	<zone id="60010" name="[13_23_cocracon_for_melee_2]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="npc" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="90" />	
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="-221685 172976 -13000 -4000" />
+			<coords loc="-205845 172982 -13000 -4000" />
+			<coords loc="-204997 187005 -13000 -4000" />
+			<coords loc="-212959 182829 -13000 -4000" />
+			<coords loc="-213397 182804 -13000 -4000" />
+			<coords loc="-216745 187021 -13000 -4000" />
+			<coords loc="-220549 187614 -13000 -4000" />
+		</shape>
+	</zone>
+	<zone id="60011" name="[14_23_raptilicon_for_melee_3]" type="other" >
+		<set name="enabled" val="true" />
+		<set name="target" val="npc" />
+		<set name="skill_prob" val="100" />
+		<set name="unit_tick" val="90" />	
+		<set name="initial_delay" val="1" />
+		<shape>
+			<coords loc="-175341 176261 -16312 -11528" />
+			<coords loc="-170711 188069 -16312 -11528" />
+			<coords loc="-177158 188527 -16312 -11528" />
+			<coords loc="-179830 183055 -16312 -11528" />
+			<coords loc="-180681 183067 -16312 -11528" />
+			<coords loc="-184522 188504 -16312 -11528" />
+			<coords loc="-188752 184597 -16312 -11528" />
+			<coords loc="-186625 174239 -16312 -11528" />
+		</shape>
+	</zone>
+	<zone id="765" name="[schuttgart16_2214_71]" type="other">
+		<set name="enabled" val="true" />
+		<shape>
+			<coords loc="72373 -102673 -1082 -382" />
+			<coords loc="75334 -102778 -1082 -382" />
+			<coords loc="75764 -100853 -1082 -382" />
+			<coords loc="72165 -101278 -1082 -382" />
+		</shape>
+	</zone>
+	<zone id="766" name="[22_14_camp01_announce]" type="other">
+		<set name="enabled" val="true"/>
+		<shape>
+			<coords loc="72168 -129117 -3519 -2919"/>
+			<coords loc="72204 -128685 -3519 -2919"/>
+			<coords loc="71840 -128240 -3519 -2919"/>
+			<coords loc="71324 -128244 -3519 -2919"/>
+			<coords loc="70896 -128712 -3519 -2919"/>
+			<coords loc="70944 -129100 -3519 -2919"/>
+			<coords loc="71348 -129452 -3519 -2919"/>
+			<coords loc="71900 -129400 -3519 -2919"/>
+		</shape>
+	</zone>
+	<zone id="767" name="[22_14_camp02_announce]" type="other">
+		<set name="enabled" val="true"/>
+		<shape>
+			<coords loc="77184 -127180 -3342 -2742"/>
+			<coords loc="76764 -126524 -3342 -2742"/>
+			<coords loc="75916 -126308 -3342 -2742"/>
+			<coords loc="75176 -126700 -3342 -2742"/>
+			<coords loc="75072 -127552 -3342 -2742"/>
+			<coords loc="75484 -128376 -3342 -2742"/>
+			<coords loc="76492 -128520 -3342 -2742"/>
+			<coords loc="77052 -128036 -3342 -2742"/>
+		</shape>
+	</zone>
+	<zone id="768" name="[22_14_camp03_announce]" type="other">
+		<set name="enabled" val="true"/>
+		<shape>
+			<coords loc="71464 -126372 -3242 -2642"/>
+			<coords loc="71788 -125476 -3242 -2642"/>
+			<coords loc="71416 -124724 -3242 -2642"/>
+			<coords loc="70552 -124492 -3242 -2642"/>
+			<coords loc="69876 -125136 -3242 -2642"/>
+			<coords loc="69776 -125980 -3242 -2642"/>
+			<coords loc="70556 -126688 -3242 -2642"/>
+		</shape>
+	</zone>
+	<zone id="769" name="[22_14_camp04_announce]" type="other">
+		<set name="enabled" val="true"/>
+		<shape>
+			<coords loc="68524 -122780 -3102 -2502"/>
+			<coords loc="68444 -121724 -3102 -2502"/>
+			<coords loc="67708 -121192 -3102 -2502"/>
+			<coords loc="66844 -121364 -3102 -2502"/>
+			<coords loc="66404 -122176 -3102 -2502"/>
+			<coords loc="66568 -122952 -3102 -2502"/>
+			<coords loc="67232 -123400 -3102 -2502"/>
+			<coords loc="68012 -123296 -3102 -2502"/>
+		</shape>
+	</zone>
+	<zone id="770" name="[22_14_camp05_announce]" type="other">
+		<set name="enabled" val="true"/>
+		<shape>
+			<coords loc="75916 -121416 -3202 -2602"/>
+			<coords loc="75136 -120628 -3202 -2602"/>
+			<coords loc="74040 -120200 -3202 -2602"/>
+			<coords loc="72960 -121040 -3202 -2602"/>
+			<coords loc="72864 -122056 -3202 -2602"/>
+			<coords loc="74087 -122960 -3202 -2602"/>
+			<coords loc="75231 -122500 -3202 -2602"/>
+		</shape>
+	</zone>
+	<zone id="771" name="[22_14_camp06_announce]" type="other">
+		<set name="enabled" val="true"/>
+		<shape>
+			<coords loc="69187 -119774 -2758 -2158"/>
+			<coords loc="70093 -120120 -2758 -2158"/>
+			<coords loc="71017 -119331 -2758 -2158"/>
+			<coords loc="71171 -118853 -2758 -2158"/>
+			<coords loc="70857 -117824 -2758 -2158"/>
+			<coords loc="69432 -117941 -2758 -2158"/>
+			<coords loc="68884 -118969 -2758 -2158"/>
+		</shape>
+	</zone>
+	<zone id="772" name="[22_14_camp07_announce]" type="other">
+		<set name="enabled" val="true"/>
+		<shape>
+			<coords loc="75116 -117044 -2466 -1866"/>
+			<coords loc="74824 -116300 -2466 -1866"/>
+			<coords loc="74292 -116200 -2466 -1866"/>
+			<coords loc="73732 -116476 -2466 -1866"/>
+			<coords loc="73736 -117096 -2466 -1866"/>
+			<coords loc="73952 -117580 -2466 -1866"/>
+			<coords loc="74524 -117616 -2466 -1866"/>
+		</shape>
+	</zone>
+	<zone id="773" name="[22_14_camp08_announce]" type="other">
+		<set name="enabled" val="true"/>
+		<shape>
+			<coords loc="69332 -116324 -2298 -1698"/>
+			<coords loc="68952 -115328 -2298 -1698"/>
+			<coords loc="68240 -114852 -2298 -1698"/>
+			<coords loc="67500 -114968 -2298 -1698"/>
+			<coords loc="66908 -115888 -2298 -1698"/>
+			<coords loc="67004 -116766 -2298 -1698"/>
+			<coords loc="67740 -117315 -2298 -1698"/>
+			<coords loc="68774 -117127 -2298 -1698"/>
+		</shape>
+	</zone>
+	<zone id="774" name="[22_14_camp09_announce]" type="other">
+		<set name="enabled" val="true"/>
+		<shape>
+			<coords loc="68656 -108107 -1302 -702"/>
+			<coords loc="69063 -107170 -1302 -702"/>
+			<coords loc="68628 -106337 -1302 -702"/>
+			<coords loc="67744 -106032 -1302 -702"/>
+			<coords loc="67090 -106616 -1302 -702"/>
+			<coords loc="66910 -107145 -1302 -702"/>
+			<coords loc="67038 -107810 -1302 -702"/>
+			<coords loc="67700 -108282 -1302 -702"/>
+		</shape>
+	</zone>
+	<zone id="775" name="[22_14_camp10_announce]" type="other">
+		<set name="enabled" val="true"/>
+		<shape>
+			<coords loc="61543 -117575 -3290 -2690"/>
+			<coords loc="62221 -118430 -3290 -2690"/>
+			<coords loc="63818 -117532 -3290 -2690"/>
+			<coords loc="63457 -116818 -3290 -2690"/>
+			<coords loc="62481 -116277 -3290 -2690"/>
+			<coords loc="61598 -116550 -3290 -2690"/>
+		</shape>
+	</zone>
+	<zone id="776" name="[22_14_camp11_announce]" type="other">
+		<set name="enabled" val="true"/>
+		<shape>
+			<coords loc="63728 -107336 -2466 -1866"/>
+			<coords loc="63984 -106794 -2466 -1866"/>
+			<coords loc="63678 -106265 -2466 -1866"/>
+			<coords loc="62978 -105989 -2466 -1866"/>
+			<coords loc="62324 -106507 -2466 -1866"/>
+			<coords loc="62737 -107335 -2466 -1866"/>
+		</shape>
+	</zone>
+	<zone id="777" name="[22_16_stakato_announce]" type="other">
+		<set name="enabled" val="true"/>
+		<shape>
+			<coords loc="73945 -57263 -6368 -3496"/>
+			<coords loc="90046 -57259 -6368 -3496"/>
+			<coords loc="89999 -41698 -6368 -3496"/>
+			<coords loc="73982 -41655 -6368 -3496"/>
+		</shape>
+	</zone>
+	<zone id="500524" name="[giran_harbor_trade_zone]" type="other" >
+		<set name="enabled" val="true" />
+		<shape>
+			<coords loc="49288 183688 -3800 -3000" />
+			<coords loc="47704 185480 -3800 -3000" />
+			<coords loc="47176 185752 -3800 -3000" />
+			<coords loc="45512 186648 -3800 -3000" />
+			<coords loc="45704 186984 -3800 -3000" />
+			<coords loc="44248 187784 -3800 -3000" />
+			<coords loc="44040 187416 -3800 -3000" />
+			<coords loc="41896 188568 -3800 -3000" />
+			<coords loc="43128 190648 -3800 -3000" />
+			<coords loc="45400 189560 -3800 -3000" />
+			<coords loc="44632 188152 -3800 -3000" />
+			<coords loc="45768 187560 -3800 -3000" />
+			<coords loc="46536 188952 -3800 -3000" />
+			<coords loc="47544 187784 -3800 -3000" />
+			<coords loc="49064 186888 -3800 -3000" />
+			<coords loc="49528 187320 -3800 -3000" />
+			<coords loc="50584 186152 -3800 -3000" />
+			<coords loc="50104 185704 -3800 -3000" />
+			<coords loc="50744 185016 -3800 -3000" />	
+		</shape>
+	</zone>
+	<zone id="500525" name="[events_zone]" type="other" >
+		<set name="enabled" val="true" />
+		<shape>
+			<coords loc="-101224 256968 -3800 -2700" />
+			<coords loc="-100744 255624 -3800 -2700" />
+			<coords loc="-99637 254706 -3800 -2700" />
+			<coords loc="-99019 254662 -3800 -2700" />
+			<coords loc="-98448 256716 -3800 -2700" />
+			<coords loc="-97515 257832 -3800 -2700" />
+			<coords loc="-97330 258478 -3800 -2700" />
+			<coords loc="-95676 258706 -3800 -2700" />
+			<coords loc="-94772 257873 -3800 -2700" />
+			<coords loc="-93136 256170 -3800 -2700" />
+			<coords loc="-92456 256040 -3800 -2700" />
+			<coords loc="-92115 256520 -3800 -2700" />
+			<coords loc="-83840 254234 -3800 -2700" />
+			<coords loc="-81543 248799 -3800 -2700" />
+			<coords loc="-80444 243622 -3800 -2700" />
+			<coords loc="-82788 238903 -3800 -2700" />
+			<coords loc="-89992 236184 -3800 -2700" />
+			<coords loc="-97096 230616 -3800 -2700" />
+			<coords loc="-99687 228246 -3800 -2700" />
+			<coords loc="-99809 226618 -3800 -2700" />
+			<coords loc="-99376 223126 -3800 -2700" />
+			<coords loc="-100437 220279 -3800 -2700" />
+			<coords loc="-100526 218113 -3800 -2700" />
+			<coords loc="-99373 214689 -3800 -2700" />
+			<coords loc="-100385 212593 -3800 -2700" />
+			<coords loc="-102643 212530 -3800 -2700" />
+			<coords loc="-103257 212897 -3800 -2700" />
+			<coords loc="-104327 213042 -3800 -2700" />
+			<coords loc="-105278 214025 -3800 -2700" />
+			<coords loc="-107597 214102 -3800 -2700" />
+			<coords loc="-108492 213826 -3800 -2700" />
+			<coords loc="-113144 217096 -3800 -2700" />
+			<coords loc="-115394 218638 -3800 -2700" />
+			<coords loc="-116952 221240 -3800 -2700" />
+			<coords loc="-118872 226776 -3800 -2700" />
+			<coords loc="-119707 228785 -3800 -2700" />
+			<coords loc="-120280 234728 -3800 -2700" />
+			<coords loc="-119880 237672 -3800 -2700" />
+			<coords loc="-118776 239512 -3800 -2700" />
+			<coords loc="-118585 242266 -3800 -2700" />
+			<coords loc="-118690 243414 -3800 -2700" />
+			<coords loc="-117462 245351 -3800 -2700" />
+			<coords loc="-117444 248097 -3800 -2700" />
+			<coords loc="-116376 250056 -3800 -2700" />
+			<coords loc="-116357 250837 -3800 -2700" />
+			<coords loc="-115112 253048 -3800 -2700" />
+			<coords loc="-113324 253882 -3800 -2700" />
+			<coords loc="-109971 256265 -3800 -2700" />
+			<coords loc="-109172 255632 -3800 -2700" />
+			<coords loc="-109163 254273 -3800 -2700" />
+			<coords loc="-108824 253912 -3800 -2700" />
+			<coords loc="-106046 254257 -3800 -2700" />
+			<coords loc="-104541 254601 -3800 -2700" />
+			<coords loc="-103339 256312 -3800 -2700" />
+			<coords loc="-102359 257315 -3800 -2700" />
+		</shape>
+	</zone>
+	<zone id="500500" name="[no_freya]" type="other" >
+		<shape>
+			<coords loc="114864 -113360 -11210 -11190" />
+			<coords loc="114864 -111984 -11210 -11190" />
+			<coords loc="113600 -111984 -11210 -11190" />
+			<coords loc="113600 -113360 -11210 -11190" />
+		</shape>
+	</zone>
+	<zone id="500501" name="[toi_custom1]" type="other" >
+		<shape>
+			<coords loc="113272 10008 -7000 16000" />
+			<coords loc="118200 10536 -7000 16000" />
+			<coords loc="119592 12552 -7000 16000" />
+			<coords loc="120232 15384 -7000 16000" />
+			<coords loc="120056 17560 -7000 16000" />
+			<coords loc="119304 20648 -7000 16000" />
+			<coords loc="115544 22280 -7000 16000" />
+			<coords loc="114008 22360 -7000 16000" />
+			<coords loc="112008 21928 -7000 16000" />
+			<coords loc="110200 20952 -7000 16000" />
+			<coords loc="108184 18280 -7000 16000" />
+			<coords loc="109832 10440 -7000 16000" />
+		</shape>
+	</zone>
+</list>

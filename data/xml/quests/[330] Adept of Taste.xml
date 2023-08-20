@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="330" type="SOLO">
+		<name lang="en" val="Adept of Taste"/>
+		<name lang="ru" val="Гурман"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20147"/>	<!-- Hobgoblin -->
+			<event type="MOBKILLED" val="20154"/>	<!-- Mandragora Sprout -->
+			<event type="MOBKILLED" val="20155"/>	<!-- Mandragora Sapling -->
+			<event type="MOBKILLED" val="20156"/>	<!-- Mandragora Blossom -->
+			<event type="MOBKILLED" val="20204"/>	<!-- Bloody Bee -->
+			<event type="MOBKILLED" val="20223"/>	<!-- Mandragora Sprout -->
+			<event type="MOBKILLED" val="20226"/>	<!-- Gray Ant -->
+			<event type="MOBKILLED" val="20228"/>	<!-- Giant Crimson Ant -->
+			<event type="MOBKILLED" val="20229"/>	<!-- Stinger Wasp -->
+			<event type="MOBKILLED" val="20265"/>	<!-- Monster Eye Searcher -->
+			<event type="MOBKILLED" val="20266"/>	<!-- Monster Eye Gazer -->
+			<event type="QUEST_START" val="30469"/>	<!-- Jonas -->
+			<event type="QUEST_TALK" val="30469"/>	<!-- Jonas -->
+			<event type="QUEST_TALK" val="30062"/>	<!-- Sonia -->
+			<event type="QUEST_TALK" val="30067"/>	<!-- Glyvka -->
+			<event type="QUEST_TALK" val="30069"/>	<!-- Rollant -->
+			<event type="QUEST_TALK" val="30073"/>	<!-- Jacob -->
+			<event type="QUEST_TALK" val="30078"/>	<!-- Pano -->
+			<event type="QUEST_TALK" val="30461"/>	<!-- Mirien -->
+			<item id="1420"/>	<!-- Ingredient List -->
+			<item id="1421"/>	<!-- Sonia's Botany Book -->
+			<item id="1422"/>	<!-- Red Mandragora Root -->
+			<item id="1423"/>	<!-- White Mandragora Root -->
+			<item id="1426"/>	<!-- Jacob's Insect Book -->
+			<item id="1427"/>	<!-- Nectar -->
+			<item id="1428"/>	<!-- Royal Jelly -->
+			<item id="1431"/>	<!-- Pano's Contract -->
+			<item id="1432"/>	<!-- Hobgoblin Amulet -->
+			<item id="1434"/>	<!-- Glyvka's Botany Book -->
+			<item id="1435"/>	<!-- Green Marsh Moss -->
+			<item id="1436"/>	<!-- Brown Marsh Moss -->
+			<item id="1439"/>	<!-- Rollant's Creature Book -->
+			<item id="1440"/>	<!-- Body of Monster Eye -->
+			<item id="1424"/>	<!-- Red Mandragora Sap -->
+			<item id="1429"/>	<!-- Honey -->
+			<item id="1433"/>	<!-- Dionian Potato -->
+			<item id="1437"/>	<!-- Green Moss Bundle -->
+			<item id="1441"/>	<!-- Meat of Monster Eye -->
+			<item id="1425"/>	<!-- White Mandragora Sap -->
+			<item id="1430"/>	<!-- Golden Honey -->
+			<item id="1438"/>	<!-- Brown Moss Bundle -->
+			<item id="1442"/>	<!-- Jonas's 1st Steak Dish -->
+			<item id="1443"/>	<!-- Jonas's 2nd Steak Dish -->
+			<item id="1444"/>	<!-- Jonas's 3rd Steak Dish -->
+			<item id="1445"/>	<!-- Jonas's 4th Steak Dish -->
+			<item id="1446"/>	<!-- Jonas's 5th Steak Dish -->
+			<item id="1447"/>	<!-- Mirien's Review -->
+			<item id="1448"/>	<!-- Mirien's Review -->
+			<item id="1449"/>	<!-- Mirien's Review -->
+			<item id="1450"/>	<!-- Mirien's Review -->
+			<item id="1451"/>	<!-- Mirien's Review -->
+		</setting>
+	</quest>
+</quests>

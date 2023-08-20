@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+	Types: FPS, CUSTOM
+	anchor_points & relative_points: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER_CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+	ofc, you can set font names from CustomFonts.xml :)
+-->
+<list>
+	<screen_text_info id="0" enabled="false" type="FPS" text_en="[FPS: %d]" text_ru="[FPS: %d]" font_name="TestCustomFont" font_color="99FFFF" anchor_point="TOP_RIGHT" relative_point="TOP_RIGHT" offset_x="-300" offset_y="5" alpha="255"/>
+	<screen_text_info id="1" enabled="false" type="CUSTOM" text_en="Welcome! © ServerName" text_ru="Добро пожаловать! © ServerName" font_name="TestCustomFont" font_color="99FFFF" anchor_point="TOP_RIGHT" relative_point="TOP_RIGHT" offset_x="-300" offset_y="19" alpha="255"/>
+</list>
+
+

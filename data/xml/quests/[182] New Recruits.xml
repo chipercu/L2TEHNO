@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="182" type="SOLO">
+		<name lang="en" val="New Recruits"/>
+		<name lang="ru" val="Новобранцы"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="32138"/>	<!-- Kekropus -->
+			<event type="QUEST_TALK" val="32138"/>	<!-- Kekropus -->
+			<event type="QUEST_TALK" val="32138"/>	<!-- Kekropus -->
+			<event type="QUEST_TALK" val="32258"/>	<!-- Menacing Machine -->
+		</setting>
+	</quest>
+</quests>

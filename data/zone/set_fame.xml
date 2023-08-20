@@ -1,0 +1,17 @@
+<list>
+	<zone id="706006" name="[westland_fame]" type="set_fame" >
+		<set name="event" val="script;Util;StartPvPFlag" />
+		<set name="index" val="30" /> <!-- Количество начисляемого фейма при убийстве в данной зоне-->
+		<set name="add_item" val_id="6673" val_count="1" /> <!-- ID и количество предмета, выдаваемого при убийстве в данной зоне-->
+		<set name="hour_of_day" hour_of_day="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23"/>
+		<!-- Координаты крайних точек зоны. -->
+		<shape>
+			<coords loc="-15832 211528 -3552 -3452" />
+			<coords loc="-14040 210200 -3568 -3468" />
+			<coords loc="-16776 206568 -3664 -3564" />
+			<coords loc="-17352 206840 -3664 -3564" />
+			<coords loc="-17352 209512 -3664 -3564" />
+		</shape>
+	</zone>
+</list>
+

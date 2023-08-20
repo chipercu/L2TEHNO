@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="692" type="PARTY_ONE">
+		<name lang="en" val="How to Oppose Evil"/>
+		<name lang="ru" val="Сопротивление Злу"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="22536"/>	<!-- Royal Guard Captain -->
+			<event type="MOBKILLED" val="22537"/>	<!-- Dragon Steed Troop Grand Magician -->
+			<event type="MOBKILLED" val="22538"/>	<!-- Dragon Steed Troop Commander -->
+			<event type="MOBKILLED" val="22539"/>	<!-- Dragon Steed Troops No 1 Battalion Commander -->
+			<event type="MOBKILLED" val="22540"/>	<!-- White Dragon Leader -->
+			<event type="MOBKILLED" val="22541"/>	<!-- Dragon Steed Troop Infantry -->
+			<event type="MOBKILLED" val="22542"/>	<!-- Dragon Steed Troop Magic Leader -->
+			<event type="MOBKILLED" val="22543"/>	<!-- Dragon Steed Troop Magician -->
+			<event type="MOBKILLED" val="22544"/>	<!-- Dragon Steed Troop Magic Soldier -->
+			<event type="MOBKILLED" val="22546"/>	<!-- Warrior of Light -->
+			<event type="MOBKILLED" val="22547"/>	<!-- Dragon Steed Troop Healer -->
+			<event type="MOBKILLED" val="22548"/>	<!-- Dragon Steed Troop Javelin Thrower -->
+			<event type="MOBKILLED" val="22549"/>	<!-- Dragon Steed Troop Javelin Thrower -->
+			<event type="MOBKILLED" val="22550"/>	<!-- Savage Warrior -->
+			<event type="MOBKILLED" val="22551"/>	<!-- Priest of Darkness -->
+			<event type="MOBKILLED" val="22552"/>	<!-- Mutation Drake -->
+			<event type="MOBKILLED" val="22593"/>	<!-- Dragon Steed Troop Magic Soldier -->
+			<event type="MOBKILLED" val="22596"/>	<!-- White Dragon Leader -->
+			<event type="MOBKILLED" val="22597"/>	<!-- Dragon Steed Troop Infantry -->
+			<event type="MOBKILLED" val="22509"/>	<!-- Fanatic of Infinity -->
+			<event type="MOBKILLED" val="22510"/>	<!-- Rotten Messenger -->
+			<event type="MOBKILLED" val="22511"/>	<!-- Zealot of Infinity -->
+			<event type="MOBKILLED" val="22512"/>	<!-- Body Severer -->
+			<event type="MOBKILLED" val="22513"/>	<!-- Body Harvester -->
+			<event type="MOBKILLED" val="22514"/>	<!-- Soul Exploiter -->
+			<event type="MOBKILLED" val="22515"/>	<!-- Soul Devourer -->
+			<event type="MOBKILLED" val="22516"/>	<!-- Butcher of Infinity -->
+			<event type="MOBKILLED" val="22517"/>	<!-- Disciple of Infinity -->
+			<event type="MOBKILLED" val="22518"/>	<!-- Rotten Messenger -->
+			<event type="MOBKILLED" val="22519"/>	<!-- Body Harvester -->
+			<event type="MOBKILLED" val="22520"/>	<!-- Body Severer -->
+			<event type="MOBKILLED" val="22521"/>	<!-- Soul Exploiter -->
+			<event type="MOBKILLED" val="22522"/>	<!-- Soul Devourer -->
+			<event type="MOBKILLED" val="22524"/>	<!-- Emissary of Death -->
+			<event type="MOBKILLED" val="22526"/>	<!-- Emissary of Death -->
+			<event type="MOBKILLED" val="22528"/>	<!-- Cursed Prefect -->
+			<event type="MOBKILLED" val="22530"/>	<!-- Cursed Prefect -->
+			<event type="MOBKILLED" val="22532"/>	<!-- Law Scholar of Conclusions -->
+			<event type="MOBKILLED" val="22534"/>	<!-- Law Scholar of Conclusions -->
+			<event type="MOBKILLED" val="22750"/>	<!-- Elite Bgurent -->
+			<event type="MOBKILLED" val="22751"/>	<!-- Elite Brakian -->
+			<event type="MOBKILLED" val="22752"/>	<!-- Elite Groikan -->
+			<event type="MOBKILLED" val="22753"/>	<!-- Elite Treykan -->
+			<event type="MOBKILLED" val="22757"/>	<!-- Elite Turtlelian -->
+			<event type="MOBKILLED" val="22758"/>	<!-- Elite Krajian -->
+			<event type="MOBKILLED" val="22759"/>	<!-- Elite Tardyon -->
+			<event type="MOBKILLED" val="22763"/>	<!-- Elite Kanibi -->
+			<event type="MOBKILLED" val="22764"/>	<!-- Elite Kiriona -->
+			<event type="MOBKILLED" val="22765"/>	<!-- Elite Kaiona -->
+			<event type="MOBKILLED" val="18678"/>	<!-- Energy Seed - Water -->
+			<event type="MOBKILLED" val="18679"/>	<!-- Energy Seed - Fire -->
+			<event type="MOBKILLED" val="18680"/>	<!-- Energy Seed - Wind -->
+			<event type="MOBKILLED" val="18681"/>	<!-- Energy Seed - Earth -->
+			<event type="MOBKILLED" val="18682"/>	<!-- Energy Seed - Divinity -->
+			<event type="MOBKILLED" val="18683"/>	<!-- Energy Seed - Darkness -->
+			<event type="QUEST_START" val="32549"/>	<!-- Dilios -->
+			<event type="QUEST_TALK" val="32549"/>	<!-- Dilios -->
+			<event type="QUEST_TALK" val="32550"/>	<!-- Kirklan -->
+			<item id="13796"/>	<!-- Nucleus of a Freed Soul -->
+			<item id="13863"/>	<!-- Nucleus of an Incomplete Soul -->
+			<item id="13841"/>	<!-- Fleet Steed Troup's Charm -->
+			<item id="13865"/>	<!-- Fleet Steed Troup's Totem -->
+			<item id="13867"/>	<!-- Breath of Tiat -->
+			<item id="15536"/>	<!-- Spirit Stone Dust -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,27 @@
+<html><title>L2Open Admin Menu</title><body>
+<center>
+<table width=270 border=0 bgcolor="FFFF84">
+<tr>
+<td><button value="Char Menu" action="bypass -h admin_char_manage" width=65 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Events" action="bypass -h admin_show_html events/events.htm" width=65 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Server" action="bypass -h admin_show_html admserver.htm" width=65 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Other" action="bypass -h admin_show_html other.htm" width=65 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+<br>
+<table width=270>
+	<tr>
+		<td>
+			<center><font color="00ff00">Отправка почты всем кто онлайн:</font></center>
+		</td>
+	</tr>
+</table>
+<br>
+<font color="LEVEL">Сообщение:</font>
+<center><multiedit var="send_mail" width=250 height=220></center>
+<table width="200">
+	<tr>
+		<td><center><button value="Отправить" action="bypass -h admin_mail $send_mail" width=100 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></center></td>
+	</tr>
+</table>
+</body></html>

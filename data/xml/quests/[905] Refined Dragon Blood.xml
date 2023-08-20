@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="905" type="PARTY_ALL">
+		<name lang="en" val="Refined Dragon Blood"/>
+		<name lang="ru" val="Очищенная кров дракона"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="22852"/>	<!-- Dragon Guard -->
+			<event type="MOBKILLED" val="22853"/>	<!-- Dragon Mage -->
+			<event type="MOBKILLED" val="22844"/>	<!-- Dragon Knight -->
+			<event type="MOBKILLED" val="22845"/>	<!-- Dragon Knight -->
+			<event type="MOBKILLED" val="22848"/>	<!-- Drake Leader -->
+			<event type="MOBKILLED" val="22849"/>	<!-- Drake Warrior -->
+			<event type="MOBKILLED" val="22850"/>	<!-- Drake Scout -->
+			<event type="MOBKILLED" val="22851"/>	<!-- Drake Mage -->
+			<event type="QUEST_START" val="32864"/>	<!-- Separated Soul -->
+			<event type="QUEST_START" val="32865"/>	<!-- Separated Soul -->
+			<event type="QUEST_START" val="32866"/>	<!-- Separated Soul -->
+			<event type="QUEST_START" val="32867"/>	<!-- Separated Soul -->
+			<event type="QUEST_START" val="32868"/>	<!-- Separated Soul -->
+			<event type="QUEST_START" val="32869"/>	<!-- Separated Soul -->
+			<event type="QUEST_START" val="32870"/>	<!-- Separated Soul -->
+			<event type="QUEST_TALK" val="32864"/>	<!-- Separated Soul -->
+			<event type="QUEST_TALK" val="32865"/>	<!-- Separated Soul -->
+			<event type="QUEST_TALK" val="32866"/>	<!-- Separated Soul -->
+			<event type="QUEST_TALK" val="32867"/>	<!-- Separated Soul -->
+			<event type="QUEST_TALK" val="32868"/>	<!-- Separated Soul -->
+			<event type="QUEST_TALK" val="32869"/>	<!-- Separated Soul -->
+			<event type="QUEST_TALK" val="32870"/>	<!-- Separated Soul -->
+			<item id="21913"/>	<!-- Unrefined Red Dragon Blood -->
+			<item id="21914"/>	<!-- Unrefined Blue Dragon Blood -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="232" type="SOLO">
+		<name lang="en" val="Test of the Lord"/>
+		<name lang="ru" val="Испытание Верховного Шамана"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20583"/>	<!-- Timak Orc -->
+			<event type="MOBKILLED" val="20584"/>	<!-- Timak Orc Archer -->
+			<event type="MOBKILLED" val="20585"/>	<!-- Timak Orc Soldier -->
+			<event type="MOBKILLED" val="20586"/>	<!-- Timak Orc Warrior -->
+			<event type="MOBKILLED" val="20587"/>	<!-- Timak Orc Shaman -->
+			<event type="MOBKILLED" val="20588"/>	<!-- Timak Orc Overlord -->
+			<event type="MOBKILLED" val="20269"/>	<!-- Breka Orc Shaman -->
+			<event type="MOBKILLED" val="20270"/>	<!-- Breka Orc Overlord -->
+			<event type="MOBKILLED" val="20778"/>	<!-- Ragna Orc Overlord -->
+			<event type="MOBKILLED" val="20779"/>	<!-- Ragna Orc Seer -->
+			<event type="MOBKILLED" val="20233"/>	<!-- Marsh Spider -->
+			<event type="MOBKILLED" val="20564"/>	<!-- Enchanted Monstereye -->
+			<event type="QUEST_START" val="30565"/>	<!-- Kakai -->
+			<event type="QUEST_TALK" val="30565"/>	<!-- Kakai -->
+			<event type="QUEST_TALK" val="30510"/>	<!-- Somak -->
+			<event type="QUEST_TALK" val="30515"/>	<!-- Manakia -->
+			<event type="QUEST_TALK" val="30558"/>	<!-- Jakal -->
+			<event type="QUEST_TALK" val="30564"/>	<!-- Sumari -->
+			<event type="QUEST_TALK" val="30566"/>	<!-- Varkees -->
+			<event type="QUEST_TALK" val="30567"/>	<!-- Tantus -->
+			<event type="QUEST_TALK" val="30568"/>	<!-- Hatos -->
+			<event type="QUEST_TALK" val="30641"/>	<!-- Takuna -->
+			<event type="QUEST_TALK" val="30642"/>	<!-- Chianta -->
+			<event type="QUEST_TALK" val="30643"/>	<!-- First Orc -->
+			<event type="QUEST_TALK" val="30649"/>	<!-- Ancestor Martankus -->
+			<item id="3403"/>	<!-- Timak Orc Skull -->
+			<item id="3398"/>	<!-- Breka Orc Fang -->
+			<item id="3414"/>	<!-- Ragna Orc Head -->
+			<item id="3415"/>	<!-- Ragna Chief Notice -->
+			<item id="3407"/>	<!-- Marsh Spider Feeler -->
+			<item id="3408"/>	<!-- Marsh Spider Feet -->
+			<item id="3410"/>	<!-- Cornea of Enchanted Monster Eye -->
+			<item id="3391"/>	<!-- Ordeal Necklace -->
+			<item id="3392"/>	<!-- Varkee's Charm -->
+			<item id="3393"/>	<!-- Tantus's Charm -->
+			<item id="3394"/>	<!-- Hatos's Charm -->
+			<item id="3395"/>	<!-- Takuna's Charm -->
+			<item id="3396"/>	<!-- Chianta's Charm -->
+			<item id="3397"/>	<!-- Manakia's Orders -->
+			<item id="3399"/>	<!-- Manakia's Amulet -->
+			<item id="3400"/>	<!-- Huge Orc Fang -->
+			<item id="3401"/>	<!-- Sumari's Letter -->
+			<item id="3402"/>	<!-- Urutu Blade -->
+			<item id="3404"/>	<!-- Sword Into Skull -->
+			<item id="3405"/>	<!-- Neruga Axe Blade -->
+			<item id="3406"/>	<!-- Axe of Ceremony -->
+			<item id="3409"/>	<!-- Handiwork Spider Brooch -->
+			<item id="3411"/>	<!-- Monster Eye Woodcarving -->
+			<item id="3412"/>	<!-- Bear Fang Necklace -->
+			<item id="3413"/>	<!-- Martankus's Charm -->
+			<item id="3416"/>	<!-- Immortal Flame -->
+		</setting>
+	</quest>
+</quests>

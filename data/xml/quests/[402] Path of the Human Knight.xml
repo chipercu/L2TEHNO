@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="402" type="SOLO">
+		<name lang="en" val="Path of the Human Knight"/>
+		<name lang="ru" val="Путь Рыцаря"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20775"/>	<!-- Bugbear Raider -->
+			<event type="MOBKILLED" val="27024"/>	<!-- Undead Priest -->
+			<event type="MOBKILLED" val="20038"/>	<!-- Venomous Spider -->
+			<event type="MOBKILLED" val="20043"/>	<!-- Arachnid Tracker -->
+			<event type="MOBKILLED" val="20050"/>	<!-- Arachnid Predator -->
+			<event type="MOBKILLED" val="20030"/>	<!-- Langk Lizardman -->
+			<event type="MOBKILLED" val="20027"/>	<!-- Langk Lizardman Scout -->
+			<event type="MOBKILLED" val="20024"/>	<!-- Langk Lizardman Warrior -->
+			<event type="MOBKILLED" val="20103"/>	<!-- Giant Spider -->
+			<event type="MOBKILLED" val="20106"/>	<!-- Talon Spider -->
+			<event type="MOBKILLED" val="20108"/>	<!-- Blade Spider -->
+			<event type="MOBKILLED" val="20404"/>	<!-- Silent Horror -->
+			<event type="QUEST_START" val="30417"/>	<!-- Sir Klaus Vasper -->
+			<event type="QUEST_TALK" val="30417"/>	<!-- Sir Klaus Vasper -->
+			<event type="QUEST_TALK" val="30031"/>	<!-- Biotin -->
+			<event type="QUEST_TALK" val="30037"/>	<!-- Levian -->
+			<event type="QUEST_TALK" val="30039"/>	<!-- Gilbert -->
+			<event type="QUEST_TALK" val="30289"/>	<!-- Raymond -->
+			<event type="QUEST_TALK" val="30311"/>	<!-- Sir Collin Windawood -->
+			<event type="QUEST_TALK" val="30332"/>	<!-- Bathis -->
+			<event type="QUEST_TALK" val="30379"/>	<!-- Bezique -->
+			<event type="QUEST_TALK" val="30653"/>	<!-- Sir Aron Tanford -->
+			<item id="1169"/>	<!-- Bugbear Necklace -->
+			<item id="1171"/>	<!-- Einhasad's Crucifix -->
+			<item id="1173"/>	<!-- Venomous Spider Leg -->
+			<item id="1175"/>	<!-- Lizardman's Totem -->
+			<item id="1177"/>	<!-- Giant Spider's Husk -->
+			<item id="1179"/>	<!-- Skull of Silent Horror -->
+		</setting>
+	</quest>
+</quests>

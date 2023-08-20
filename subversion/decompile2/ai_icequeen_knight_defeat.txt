@@ -1,0 +1,111 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_knight_defeat : default_npc
+{
+parameter:
+	int	Skill01_ID = 458752001;
+	int	Skill01_Prob = 2500;
+	int	Skill02_ID = 458752001;
+	int	Skill02_Prob = 3333;
+
+handler:
+	EventHandler CREATED()
+	{
+		myself->SetMaxHateListSize(10);
+	}
+
+	EventHandler ATTACKED(attacker,damage)
+	{
+		myself->AddAttackDesire(attacker,1,( damage * 2 ));
+		if( myself->DistFromMe(attacker) >= 500 )
+		{
+			if( Skill02_ID != 458752001 )
+			{
+				if( gg->Rand(10000) < Skill02_Prob )
+				{
+					if( myself->Skill_GetConsumeMP(Skill02_ID) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Skill02_ID) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Skill02_ID) == 0 )
+					{
+						myself->AddUseSkillDesire(attacker,Skill02_ID,0,1,1000000);
+					}
+				}
+			}
+		}
+		if( ( attacker + 68 ) == 1 )
+		{
+			myself->BroadcastScriptEvent(23140043,gg->GetIndexFromCreature(( myself + 1480 )),1500);
+		}
+		if( Skill01_ID != 458752001 )
+		{
+			if( gg->Rand(10000) < Skill01_Prob )
+			{
+				if( gg->Rand(2) == 1 )
+				{
+					if( myself->Skill_GetConsumeMP(Skill01_ID) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Skill01_ID) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Skill01_ID) == 0 )
+					{
+						myself->AddUseSkillDesire(attacker,Skill01_ID,0,1,1000000);
+					}
+				}
+				else if( myself->IsNullCreature(( myself + 1504 )) == 0 )
+				{
+					if( myself->Skill_GetConsumeMP(Skill01_ID) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Skill01_ID) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Skill01_ID) == 0 )
+					{
+						myself->AddUseSkillDesire(( myself + 1504 ),Skill01_ID,0,1,1000000);
+					}
+				}
+			}
+		}
+	}
+
+	EventHandler CLAN_ATTACKED(attacker,victim,damage)
+	{
+		myself->AddAttackDesire(attacker,1,100);
+	}
+
+	EventHandler SCRIPT_EVENT(script_event_arg1,script_event_arg2,c0,i0)
+	{
+		if( script_event_arg1 == 23140045 )
+		{
+			c0 = gg->GetCreatureFromIndex(script_event_arg2);
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				myself->AddHateInfo(c0,1,0,1,1);
+				myself->BroadcastScriptEvent(23140043,gg->GetIndexFromCreature(( myself + 1480 )),1500);
+				myself->AddTimerEx(4321,3000);
+			}
+		}
+		else if( script_event_arg1 == 23140020 )
+		{
+		}
+	}
+
+	EventHandler TIMER_FIRED_EX(timer_id,c0,i0,h0)
+	{
+		if( timer_id == 4321 )
+		{
+			i0 = gg->Rand(myself->GetHateInfoCount());
+			h0 = myself->GetHateInfoByIndex(i0);
+			if( myself->IsNullHateInfo(h0) == 0 )
+			{
+				if( myself->IsNullCreature(( h0 + 8 )) == 0 )
+				{
+					myself->AddAttackDesire(( h0 + 8 ),1,1000);
+				}
+			}
+		}
+	}
+
+	EventHandler SEE_CREATURE(creature,c0)
+	{
+		if( ( creature + 68 ) == 1 )
+		{
+			myself->AddAttackDesire(c0,1,1000);
+		}
+	}
+
+}

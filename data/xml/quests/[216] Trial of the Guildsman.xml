@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="216" type="SOLO">
+		<name lang="en" val="Trial of the Guildsman"/>
+		<name lang="ru" val="Испытание умения"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20079"/>	<!-- Ant -->
+			<event type="MOBKILLED" val="20080"/>	<!-- Ant Captain -->
+			<event type="MOBKILLED" val="20081"/>	<!-- Ant Overseer -->
+			<event type="MOBKILLED" val="20223"/>	<!-- Mandragora Sprout -->
+			<event type="MOBKILLED" val="20154"/>	<!-- Mandragora Sprout -->
+			<event type="MOBKILLED" val="20155"/>	<!-- Mandragora Sapling -->
+			<event type="MOBKILLED" val="20156"/>	<!-- Mandragora Blossom -->
+			<event type="MOBKILLED" val="20267"/>	<!-- Breka Orc -->
+			<event type="MOBKILLED" val="20268"/>	<!-- Breka Orc Archer -->
+			<event type="MOBKILLED" val="20269"/>	<!-- Breka Orc Shaman -->
+			<event type="MOBKILLED" val="20270"/>	<!-- Breka Orc Overlord -->
+			<event type="MOBKILLED" val="20271"/>	<!-- Breka Orc Warrior -->
+			<event type="MOBKILLED" val="20200"/>	<!-- Strain -->
+			<event type="MOBKILLED" val="20201"/>	<!-- Ghoul -->
+			<event type="MOBKILLED" val="20202"/>	<!-- Dead Seeker -->
+			<event type="MOBKILLED" val="20083"/>	<!-- Granite Golem -->
+			<event type="MOBKILLED" val="20168"/>	<!-- Silenos -->
+			<event type="QUEST_START" val="30103"/>	<!-- Valkon -->
+			<event type="QUEST_TALK" val="30103"/>	<!-- Valkon -->
+			<event type="QUEST_TALK" val="30103"/>	<!-- Valkon -->
+			<event type="QUEST_TALK" val="30210"/>	<!-- Norman -->
+			<event type="QUEST_TALK" val="30283"/>	<!-- Altran -->
+			<event type="QUEST_TALK" val="30298"/>	<!-- Pinter -->
+			<event type="QUEST_TALK" val="30688"/>	<!-- Duning -->
+			<item id="3122"/>	<!-- Altran's Instructions -->
+			<item id="3120"/>	<!-- Valkon's Recommendation -->
+			<item id="3123"/>	<!-- Altran's 1st Recommendation -->
+			<item id="3125"/>	<!-- Norman's Instructions -->
+			<item id="3129"/>	<!-- Norman's List -->
+			<item id="3126"/>	<!-- Norman's Receipt -->
+			<item id="3124"/>	<!-- Altran's 2nd Recommendation -->
+			<item id="3135"/>	<!-- Pinter's Instructions -->
+			<item id="3127"/>	<!-- Duning's Instructions -->
+			<item id="3134"/>	<!-- Journeyman Gem -->
+			<item id="3138"/>	<!-- Journeyman Deco Beads -->
+			<item id="3139"/>	<!-- Journeyman Ring -->
+			<item id="3136"/>	<!-- Amber Bead -->
+			<item id="3137"/>	<!-- Amber Lump -->
+			<item id="3121"/>	<!-- Mandragora Berry -->
+			<item id="3128"/>	<!-- Duning's Key -->
+			<item id="3130"/>	<!-- Gray Bone Powder -->
+			<item id="3132"/>	<!-- Red Pigment -->
+			<item id="3131"/>	<!-- Granite Whetstone -->
+			<item id="3133"/>	<!-- Braided Yarn -->
+		</setting>
+	</quest>
+</quests>

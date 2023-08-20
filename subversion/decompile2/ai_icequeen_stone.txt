@@ -1,0 +1,241 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_stone : default_npc
+{
+parameter:
+	int	Buff = 458752001;
+	string	MAKER_summoner = "schuttgart29_2314_05m1";
+	string	MAKER_summoner_hard = "schuttgart29_2314_hd_05m1";
+	int	TIMER_suicide = 2314004;
+	int	TIMER_state_chg = 2314008;
+	int	Dispel_Debuff = 1;
+	int	debug_mode = 0;
+
+handler:
+	EventHandler CREATED()
+	{
+		myself->ChangeNPCState(( myself + 1480 ),1);
+		if( debug_mode )
+		{
+			myself->Say("°Y ¤ð");
+		}
+		myself->AddTimerEx(TIMER_state_chg,1400);
+		( myself + 1128 ) = 0;
+	}
+
+	EventHandler ATTACKED(attacker,damage)
+	{
+		if( ( myself + 1128 ) == 0 )
+		{
+			if( ( ( myself + 1480 ) + 328 ) < ( ( ( myself + 1480 ) + 6696 ) / 10.000000 ) )
+			{
+				if( debug_mode )
+				{
+					myself->Say("MPŒõ „ Ü");
+				}
+				if( ( ( myself + 1480 ) + 8232 ) == 1 )
+				{
+					if( myself->Skill_GetConsumeMP(412942338) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(412942338) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(412942338) == 0 )
+					{
+						myself->AddUseSkillDesire(( myself + 1480 ),412942338,1,1,1000000);
+					}
+				}
+				else if( myself->Skill_GetConsumeMP(412942337) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(412942337) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(412942337) == 0 )
+				{
+					myself->AddUseSkillDesire(( myself + 1480 ),412942337,1,1,1000000);
+				}
+				( myself + 1128 ) = 1;
+			}
+		}
+		( myself + 1256 ) = attacker;
+	}
+
+	EventHandler USE_SKILL_FINISHED(target,skill_name_id,success,maker0,i0)
+	{
+		if( debug_mode )
+		{
+			myself->Say("üÀPCX MPŒõ „ Ü DÌ.");
+		}
+		if( success == 1 && ( myself + 1128 ) == 1 )
+		{
+			if( skill_name_id == 412942337 || skill_name_id == 412942338 )
+			{
+				i0 = myself->InstantZone_GetId();
+				if( ( ( myself + 1480 ) + 8232 ) == 1 )
+				{
+					maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_summoner_hard);
+				}
+				else if( ( ( myself + 1480 ) + 8232 ) == 0 )
+				{
+					maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_summoner);
+				}
+				if( gg->IsNull(maker0) == 0 )
+				{
+					if( gg->Rand(100) < 75 )
+					{
+						if( debug_mode )
+						{
+							myself->Say("(° ¤ð à8");
+						}
+						if( myself->IsNullCreature(( myself + 1256 )) == 0 )
+						{
+							gg->SendMakerScriptEvent(maker0,23140012,gg->GetIndexFromCreature(( myself + 1480 )),gg->GetIndexFromCreature(( myself + 1256 )));
+						}
+						else
+						{
+							gg->SendMakerScriptEvent(maker0,23140012,gg->GetIndexFromCreature(( myself + 1480 )),0);
+						}
+					}
+				}
+				myself->AddTimerEx(TIMER_suicide,1000);
+			}
+		}
+	}
+
+	EventHandler TIMER_FIRED_EX(timer_id,maker0)
+	{
+		if( timer_id == TIMER_suicide )
+		{
+			if( debug_mode )
+			{
+				myself->Say("´.");
+			}
+			myself->ChangeStatus(2);
+			myself->ChangeNPCState(( myself + 1480 ),3);
+		}
+		else if( timer_id == TIMER_state_chg )
+		{
+			myself->ChangeNPCState(( myself + 1480 ),2);
+		}
+	}
+
+	EventHandler SCRIPT_EVENT(script_event_arg1,script_event_arg2,c0)
+	{
+		if( script_event_arg1 == 23140020 )
+		{
+			myself->ChangeNPCState(( myself + 1480 ),3);
+			myself->AddTimerEx(TIMER_suicide,1000);
+		}
+		else if( script_event_arg1 == 23140051 )
+		{
+			c0 = gg->GetCreatureFromIndex(script_event_arg2);
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				gg->SendScriptEvent(c0,23140052,gg->GetIndexFromCreature(( myself + 1480 )));
+			}
+		}
+		else if( script_event_arg1 == 23140048 )
+		{
+		}
+	}
+
+	EventHandler MY_DYING(maker0)
+	{
+		if( debug_mode )
+		{
+			myself->Say("my_dying.");
+		}
+		maker0 = myself->GetMyMaker();
+		if( gg->IsNull(maker0) == 0 )
+		{
+			gg->SendMakerScriptEvent(maker0,23140040,0,0);
+		}
+	}
+
+	EventHandler ABNORMAL_STATUS_CHANGED(speller,skill_id,skill_level,skill_name_id,s0,i0)
+	{
+		if( skill_level > 0 )
+		{
+			if( myself->Skill_GetAbnormalType(6029313) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(6029313)) > 0 )
+			{
+				myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(6029313));
+			}
+			else if( myself->Skill_GetAbnormalType(91357185) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(91357185)) > 0 )
+			{
+				myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(91357185));
+			}
+			else if( myself->Skill_GetAbnormalType(18284545) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(18284545)) > 0 )
+			{
+				myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(18284545));
+			}
+			else if( myself->Skill_GetAbnormalType(24051713) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(24051713)) > 0 )
+			{
+				myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(24051713));
+			}
+			else if( myself->Skill_GetAbnormalType(76611585) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(76611585)) > 0 )
+			{
+				myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(76611585));
+			}
+			else if( myself->Skill_GetAbnormalType(78708737) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(78708737)) > 0 )
+			{
+				myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(78708737));
+			}
+			else if( myself->Skill_GetAbnormalType(26411009) == myself->Skill_GetAbnormalType(skill_name_id) && gg->GetAbnormalLevel(( myself + 1480 ),myself->Skill_GetAbnormalType(26411009)) > 0 )
+			{
+				myself->Dispel(( myself + 1480 ),myself->Skill_GetAbnormalType(26411009));
+			}
+		}
+	}
+
+	EventHandler DEBUG_AI(creature,reply)
+	{
+		if( reply == 1 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("1 : ‘");
+				if( myself->Skill_GetConsumeMP(Buff) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Buff) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Buff) == 0 )
+				{
+					myself->AddUseSkillDesire(( myself + 1480 ),Buff,1,1,1000000);
+				}
+			}
+		}
+		else if( reply == 2 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("2 : ‘");
+				myself->AddTimerEx(TIMER_suicide,500);
+			}
+		}
+		else if( reply == 31 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("31 : ¤Lt¸ À½ - 1");
+				myself->ChangeNPCState(( myself + 1480 ),1);
+			}
+		}
+		else if( reply == 32 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("32 : ¤Lt¸ À½ - 2");
+				myself->ChangeNPCState(( myself + 1480 ),2);
+			}
+		}
+		else if( reply == 33 )
+		{
+			if( debug_mode )
+			{
+				myself->Say("33 : ¤Lt¸ À½ - 3");
+				myself->ChangeNPCState(( myself + 1480 ),3);
+			}
+		}
+		else if( debug_mode )
+		{
+			myself->Say("1 : „ðà (°¤ðXà ‘");
+			myself->Say("2 : øå ‘.");
+			myself->Say("31 : ¤Lt¸ À½ - 1");
+			myself->Say("32 : ¤Lt¸ À½ - 2");
+			myself->Say("33 : ¤Lt¸ À½ - 3");
+		}
+	}
+
+}

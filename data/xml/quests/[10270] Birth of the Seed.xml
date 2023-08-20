@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="10270" type="PARTY_ONE">
+		<name lang="en" val="Birth of the Seed"/>
+		<name lang="ru" val="Изучение Семени"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="25634"/>	<!-- Cohemenes -->
+			<event type="MOBKILLED" val="25665"/>	<!-- Yehan Klodekus -->
+			<event type="MOBKILLED" val="25666"/>	<!-- Yehan Klanikus -->
+			<event type="QUEST_START" val="32563"/>	<!-- Plenos -->
+			<event type="QUEST_TALK" val="32563"/>	<!-- Plenos -->
+			<event type="QUEST_TALK" val="32563"/>	<!-- Plenos -->
+			<event type="QUEST_TALK" val="32559"/>	<!-- Artius -->
+			<event type="QUEST_TALK" val="32566"/>	<!-- Ginby -->
+			<event type="QUEST_TALK" val="32567"/>	<!-- Lelrikia -->
+			<item id="13868"/>	<!-- Yehan Klodekus' Badge -->
+			<item id="13869"/>	<!-- Yehan Klanikus' Badge -->
+			<item id="13870"/>	<!-- Lich Crystal -->
+		</setting>
+	</quest>
+</quests>

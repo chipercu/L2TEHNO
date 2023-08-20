@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="13809" name="Court Magician's Magic Staff" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="icon" val="icon.weapon_apprentices_rod_i00"/>
+	</weapon>
+	<weapon id="13842" name="Tiat Two-Handed Weapon" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="icon" val="icon.weapon_monster_i00"/>
+		<set name="weight" val="2180"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<set name="crystal_type" val="D"/>
+		<set name="p_dam" val="78"/>
+		<set name="m_dam" val="39"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+	</weapon>
+	<weapon id="13843" name="Draconic Peltast Weapon" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="icon" val="icon.weapon_doomed_dagger_i00"/>
+		<set name="weight" val="300"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="743"/>
+		<set name="p_dam" val="5"/>
+		<set name="m_dam" val="5"/>
+		<set name="atk_speed" val="433"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="12"/>
+	</weapon>
+	<weapon id="13845" name="Attribute Master Yin's Sword" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_long_sword_i00"/>
+		<set name="weight" val="1560"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<set name="crystal_type" val="A"/>
+		<set name="p_dam" val="140"/>
+		<set name="m_dam" val="120"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="durability" val="10"/>
+		<set name="temporal" val="true"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="false"/>
+	</weapon>
+	<weapon id="13881" name="Attribute Master Yang's Sword" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_long_sword_i00"/>
+		<set name="weight" val="1560"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<set name="crystal_type" val="A"/>
+		<set name="p_dam" val="140"/>
+		<set name="m_dam" val="120"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="durability" val="10"/>
+		<set name="temporal" val="true"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="false"/>
+	</weapon>
+	<weapon id="13882" name="Dynasty Dual Daggers" type="DUALDAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.dual_dagger_i00"/>
+		<set name="weight" val="2150"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="4219"/>
+		<set name="p_dam" val="304"/>
+		<set name="m_dam" val="157"/>
+		<set name="atk_speed" val="433"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="12"/>
+		<set name="price" val="87901000"/>
+		<skills>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<enchant4_skill id="3044" lvl="20"/>
+	</weapon>
+	<weapon id="13883" name="Icarus Dual Daggers" type="DUALDAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.dual_dagger_i00"/>
+		<set name="weight" val="2100"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S80"/>
+		<set name="crystal_count" val="5845"/>
+		<set name="p_dam" val="332"/>
+		<set name="m_dam" val="169"/>
+		<set name="atk_speed" val="433"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="12"/>
+		<set name="price" val="121780000"/>
+		<skills>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<enchant4_skill id="3044" lvl="20"/>
+	</weapon>
+	<weapon id="13884" name="Vesper Dual Daggers" type="DUALDAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.dual_dagger_i00"/>
+		<set name="weight" val="2050"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S84"/>
+		<set name="crystal_count" val="8233"/>
+		<set name="p_dam" val="360"/>
+		<set name="m_dam" val="181"/>
+		<set name="atk_speed" val="433"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="12"/>
+		<set name="price" val="171530000"/>
+		<skills>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<enchant4_skill id="8298" lvl="1"/>
+	</weapon>
+</list>

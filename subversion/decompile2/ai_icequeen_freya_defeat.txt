@@ -1,0 +1,160 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_freya_defeat : default_npc
+{
+parameter:
+	int	Skill01_ID = 411435009;
+	int	Skill01_Prob = 1500;
+	int	Eternal_Blizzard = 411303937;
+	int	TIMER_SCENE_21 = 2314507;
+	int	TIMER_SCENE_21_END = 2314517;
+	int	scene_num_21 = 21;
+	int	TIMER_moving = 2314303;
+	int	TIMER_Blizzard = 2314304;
+	int	debug_mode = 0;
+
+handler:
+	EventHandler CREATED()
+	{
+		myself->CreateOnePrivateEx(1018919,"ai_icequeen_entrance_defeated",0,0,114394,-112383,-11200,0,0,0,0);
+		myself->AddTimerEx(TIMER_moving,( ( 1 * 60 ) * 1000 ));
+		myself->AddTimerEx(TIMER_Blizzard,( ( 3 * 60 ) * 1000 ));
+	}
+
+	EventHandler ATTACKED(attacker,damage)
+	{
+		if( ( myself + 1128 ) == 0 )
+		{
+			myself->AddAttackDesire(attacker,1,damage);
+			if( ( attacker + 68 ) == 1 )
+			{
+				myself->BroadcastScriptEvent(23140043,gg->GetIndexFromCreature(( myself + 1480 )),1500);
+			}
+			if( Skill01_ID != 458752001 )
+			{
+				if( gg->Rand(10000) < Skill01_Prob )
+				{
+					if( gg->Rand(2) == 1 )
+					{
+						if( myself->Skill_GetConsumeMP(Skill01_ID) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Skill01_ID) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Skill01_ID) == 0 )
+						{
+							myself->AddUseSkillDesire(attacker,Skill01_ID,0,1,1000000);
+						}
+					}
+					else if( myself->IsNullCreature(( myself + 1504 )) == 0 )
+					{
+						if( myself->Skill_GetConsumeMP(Skill01_ID) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Skill01_ID) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Skill01_ID) == 0 )
+						{
+							myself->AddUseSkillDesire(( myself + 1504 ),Skill01_ID,0,1,1000000);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	EventHandler SEE_CREATURE(creature)
+	{
+		if( ( myself + 1128 ) == 0 )
+		{
+			if( creature + 68 ) == || myself->IsInCategory(12,( creature + 7380 )) == 1 || myself->IsInCategory(123,( creature + 7380 )) == 1 )
+			{
+				myself->MakeAttackEvent(creature,200,0);
+			}
+		}
+	}
+
+	EventHandler TIMER_FIRED_EX(timer_id,c0)
+	{
+		if( timer_id == TIMER_SCENE_21 )
+		{
+			myself->StartScenePlayerAround(( myself + 1480 ),21,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+			gg->SendScriptEvent(( myself + 1256 ),231400001,0);
+		}
+		else if( timer_id == TIMER_moving )
+		{
+			if( debug_mode )
+			{
+				myself->Shout("| ÀÁ„ Ü‘ Àt8");
+			}
+			myself->AddMoveToDesire(114730,-114805,-11200,50);
+		}
+		else if( timer_id == TIMER_Blizzard )
+		{
+			if( debug_mode )
+			{
+				myself->Say("TIMER_Blizzard");
+			}
+			myself->Shout(gg->MakeFString(1801125,"","","","",""));
+			( ( myself + 1480 ) + 8249 ) = 1;
+			( ( myself + 1480 ) + 8250 ) = 1;
+			( myself + 1128 ) = 1;
+			myself->AddUseSkillDesire(( myself + 1480 ),Eternal_Blizzard,0,1,1000000000);
+		}
+	}
+
+	EventHandler USE_SKILL_FINISHED(target,skill_name_id,success)
+	{
+		if( skill_name_id == Eternal_Blizzard )
+		{
+			myself->BroadcastScriptEvent(23140020,0,4000);
+			if( debug_mode )
+			{
+				myself->Shout("UseSkillFinished - Blizzard");
+			}
+			myself->AddTimerEx(TIMER_SCENE_21,( 1 * 1000 ));
+		}
+	}
+
+	EventHandler SCRIPT_EVENT(script_event_arg1,script_event_arg2,i0,c0)
+	{
+		if( script_event_arg1 == 23140101 )
+		{
+			c0 = gg->GetCreatureFromIndex(script_event_arg2);
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				( myself + 1200 ) = script_event_arg2;
+			}
+		}
+		else if( script_event_arg1 == 23140043 )
+		{
+			c0 = gg->GetCreatureFromIndex(script_event_arg2);
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				myself->AddAttackDesire(c0,1,50);
+			}
+		}
+		else if( script_event_arg1 == 23140022 )
+		{
+			if( script_event_arg2 != 0 )
+			{
+				( myself + 1256 ) = gg->GetCreatureFromIndex(script_event_arg2);
+			}
+		}
+	}
+
+	EventHandler DEBUG_AI(creature,reply)
+	{
+		if( reply == 1 )
+		{
+			myself->AddTimerEx(TIMER_Blizzard,1000);
+		}
+	}
+
+	EventHandler MY_DYING(last_attacker)
+	{
+		if( debug_mode )
+		{
+			myself->Say("ä|t ˆD  Æ” |!. my_dying.");
+			myself->Say("´à Scene ôì. xt …Ì” Ü¤À JL");
+			myself->StartScenePlayerAround(( myself + 1480 ),21,4000,gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) - 1000 )),gg->FloatToInt(( ( ( myself + 1480 ) + 24 ) + 1000 )));
+		}
+	}
+
+}

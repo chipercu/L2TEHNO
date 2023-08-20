@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="286" type="SOLO">
+		<name lang="en" val="Fabulous Feathers"/>
+		<name lang="ru" val="Сказочные перья"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="22251"/>	<!-- Shady Muertos Captain -->
+			<event type="MOBKILLED" val="22253"/>	<!-- Shady Muertos Warrior -->
+			<event type="MOBKILLED" val="22254"/>	<!-- Shady Muertos Archer -->
+			<event type="MOBKILLED" val="22255"/>	<!-- Shady Muertos Commander -->
+			<event type="MOBKILLED" val="22256"/>	<!-- Shady Muertos Wizard -->
+			<event type="QUEST_START" val="32164"/>	<!-- Erinu -->
+			<event type="QUEST_TALK" val="32164"/>	<!-- Erinu -->
+			<item id="9746"/>	<!-- Commander's Feather -->
+		</setting>
+	</quest>
+</quests>

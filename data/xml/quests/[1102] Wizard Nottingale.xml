@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<!-- Какая то хрень -->
+	<quest id="1102" type="SOLO">
+		<name lang="en" val="Wizard Nottingale"/>
+		<name lang="ru" val="Чародей Нотингейль"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="NPC_FIRST_TALK" val="32627"/>	<!-- Nottingale -->
+		</setting>
+	</quest>
+</quests>

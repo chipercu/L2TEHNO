@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<!-- Какая то хрень -->
+	<quest id="1103" type="SOLO">
+		<name lang="en" val="Oracle Teleport"/>
+		<name lang="ru" val="Телепорт Оракула"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="31078"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_START" val="31079"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_START" val="31080"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_START" val="31081"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_START" val="31082"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_START" val="31083"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_START" val="31084"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_START" val="31085"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_START" val="31086"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_START" val="31087"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_START" val="31088"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_START" val="31089"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_START" val="31090"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_START" val="31091"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_START" val="31168"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_START" val="31169"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_START" val="31170"/>	<!-- Crest of Dawn -->
+			<event type="QUEST_START" val="31692"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_START" val="31693"/>	<!-- Priest of Dusk -->
+			<event type="QUEST_START" val="31694"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_START" val="31695"/>	<!-- Priest of Dusk -->
+			<event type="QUEST_START" val="31696"/>	<!-- Platis -->
+			<event type="QUEST_START" val="31997"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_START" val="31998"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_START" val="31999"/>	<!-- Preacher of Doom -->
+			<event type="QUEST_START" val="31127"/>	<!-- Festival Guide -->
+			<event type="QUEST_START" val="31128"/>	<!-- Festival Guide -->
+			<event type="QUEST_START" val="31129"/>	<!-- Festival Guide -->
+			<event type="QUEST_START" val="31130"/>	<!-- Festival Guide -->
+			<event type="QUEST_START" val="31131"/>	<!-- Festival Guide -->
+			<event type="QUEST_START" val="31132"/>	<!-- Festival Witch -->
+			<event type="QUEST_START" val="31133"/>	<!-- Festival Witch -->
+			<event type="QUEST_START" val="31134"/>	<!-- Festival Witch -->
+			<event type="QUEST_START" val="31135"/>	<!-- Festival Witch -->
+			<event type="QUEST_START" val="31136"/>	<!-- Festival Witch -->
+			<event type="QUEST_START" val="31137"/>	<!-- Festival Guide -->
+			<event type="QUEST_START" val="31138"/>	<!-- Festival Guide -->
+			<event type="QUEST_START" val="31139"/>	<!-- Festival Guide -->
+			<event type="QUEST_START" val="31140"/>	<!-- Festival Guide -->
+			<event type="QUEST_START" val="31141"/>	<!-- Festival Guide -->
+			<event type="QUEST_START" val="31142"/>	<!-- Festival Witch -->
+			<event type="QUEST_TALK" val="31078"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_TALK" val="31079"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_TALK" val="31080"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_TALK" val="31081"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_TALK" val="31082"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_TALK" val="31083"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_TALK" val="31084"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_TALK" val="31085"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_TALK" val="31086"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_TALK" val="31087"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_TALK" val="31088"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_TALK" val="31089"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_TALK" val="31090"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_TALK" val="31091"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_TALK" val="31168"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_TALK" val="31169"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_TALK" val="31170"/>	<!-- Crest of Dawn -->
+			<event type="QUEST_TALK" val="31692"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_TALK" val="31693"/>	<!-- Priest of Dusk -->
+			<event type="QUEST_TALK" val="31694"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_TALK" val="31695"/>	<!-- Priest of Dusk -->
+			<event type="QUEST_TALK" val="31696"/>	<!-- Platis -->
+			<event type="QUEST_TALK" val="31997"/>	<!-- Priest of Dawn -->
+			<event type="QUEST_TALK" val="31998"/>	<!-- Dusk Priestess -->
+			<event type="QUEST_TALK" val="31999"/>	<!-- Preacher of Doom -->
+			<event type="QUEST_TALK" val="31127"/>	<!-- Festival Guide -->
+			<event type="QUEST_TALK" val="31128"/>	<!-- Festival Guide -->
+			<event type="QUEST_TALK" val="31129"/>	<!-- Festival Guide -->
+			<event type="QUEST_TALK" val="31130"/>	<!-- Festival Guide -->
+			<event type="QUEST_TALK" val="31131"/>	<!-- Festival Guide -->
+			<event type="QUEST_TALK" val="31132"/>	<!-- Festival Witch -->
+			<event type="QUEST_TALK" val="31133"/>	<!-- Festival Witch -->
+			<event type="QUEST_TALK" val="31134"/>	<!-- Festival Witch -->
+			<event type="QUEST_TALK" val="31135"/>	<!-- Festival Witch -->
+			<event type="QUEST_TALK" val="31136"/>	<!-- Festival Witch -->
+			<event type="QUEST_TALK" val="31137"/>	<!-- Festival Guide -->
+			<event type="QUEST_TALK" val="31138"/>	<!-- Festival Guide -->
+			<event type="QUEST_TALK" val="31139"/>	<!-- Festival Guide -->
+			<event type="QUEST_TALK" val="31140"/>	<!-- Festival Guide -->
+			<event type="QUEST_TALK" val="31141"/>	<!-- Festival Guide -->
+			<event type="QUEST_TALK" val="31142"/>	<!-- Festival Witch -->
+		</setting>
+	</quest>
+</quests>

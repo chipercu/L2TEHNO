@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- [RU] Включить/выключить книгу предметов (включить - 1, выключить - 0) -->
+	<!-- [EN] Enable/Disable item book (enable - 1, disable - 0) -->
+	<interface_setting name="EnableItemBook" type="TYPE_CHAR" value="1" />
+	<!-- [RU] Название dat файла с данными о предметах -->
+	<!-- [EN] Name of the dat file with data about items -->
+	<interface_setting name="ItemDatName" type="TYPE_TEXT" value="DBItemData.dat" />
+	<!-- [RU] Название dat файла с данными о дропе -->
+	<!-- [EN] Name of the dat file with data about drop -->
+	<interface_setting name="ItemHtmlPath" type="TYPE_TEXT" value="..\\l2text\\ItemDataBase\\ServerId2" />
+</list>

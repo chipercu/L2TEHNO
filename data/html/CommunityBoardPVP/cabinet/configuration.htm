@@ -1,0 +1,424 @@
+<html noscrollbar>
+<title>Community by L2CCCP</title>
+<body><br>
+<table width=755>
+	<tr>
+		<center><td>
+			<table border=0 cellpadding=0 cellspacing=0 width=769 height=492 background="l2ui_ct1.Windows_DF_TooltipBG">
+				<tr>
+					<td valign="top" align="center">
+						<table width=755 height=468>
+							<tr>
+								<td width=755><br>
+									<table width=740 height=25>
+										<tr>
+											<td width=150 height=25 align=center>
+												Имя
+											</td>
+											<td width=190 height=25 align=center>
+												Профессия
+											</td>
+											<td width=120 height=25 align=center>
+												Клан
+											</td>
+											<td width=120 height=25 align=center>
+												Альянс
+											</td>
+											<td width=100 height=25 align=center>
+												PvP / Pk
+											</td>
+											<td width=25 height=25 align=center>
+												Ур.
+											</td>
+											<td width=100 height=25 align=center>
+												Время в игре
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td>
+															<table border=0 cellspacing=2>
+																<tr>
+																	<td valign=top>
+																		<?premium_img?>
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<td width=134 align=center>
+															<font color="0099FF"><?player_name?></font>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=190 align=center>
+															<?player_class?>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=120 align=center>
+															<font color="66FF66"><?player_clan1?></font>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=120 align=center>
+															<font color="99FF33"><?player_ally?></font>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=100 align=center>
+															<font color="009900"><?player_pvp?></font> / <font color="ff0000"><?player_pk?></font>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=25 align=center>
+															<?player_level?>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=100 align=center>
+															<?online_time?>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table><br>
+									<table border=0 width=754>
+										<tr>
+											<td width=200 align=center valign=top>
+												<?menu?>
+											</td>
+											<td width=250 align=center valign=top>
+												<table height=50 bgcolor=666666>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="branchsys.br_scroll_of_scooldie_i00" width=32 height=32>
+																	</td>
+																	<td width=112 align=left valign=top>
+																		<font color="0099FF">Транслит.</font>&nbsp;<br1>›&nbsp;Статус:&nbsp;<?player_translit?>
+																	</td>
+															       		<td align=left valign=top>
+													       					<table><tr><td></td></tr></table>
+													       					<combobox width=40 height=10 var="translit" list="on;off;tc"/>
+															       		</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<button value="OK" action="bypass -h _bbscabinet:cfg:translit: $translit" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="35" height="25"/>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=333333>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="branchsys.br_scroll_of_scooldie_i00" width=32 height=32>
+																	</td>
+																	<td width=160 align=left valign=top>
+																		<font color="0099FF">Показ торговцев.</font>&nbsp;<br1>›&nbsp;Статус:&nbsp;<?player_notraders?>
+																	</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<?button_notraders?>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=666666>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="branchsys.br_scroll_of_scooldie_i00" width=32 height=32>
+																	</td>
+																	<td width=160 align=left valign=top>
+																		<font color="0099FF">Анимация баффов.</font>&nbsp;<br1>›&nbsp;Статус:&nbsp;<?player_notShowBuffAnim?>
+																	</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<?button_notShowBuffAnim?>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=333333>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="branchsys.br_scroll_of_scooldie_i00" width=32 height=32>
+																	</td>
+																	<td width=160 align=left valign=top>
+																		<font color="0099FF">Блок опыта.</font>&nbsp;<br1>›&nbsp;Статус:&nbsp;<?player_noe?>
+																	</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<?button_noe?>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=666666>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="branchsys.br_scroll_of_scooldie_i00" width=32 height=32>
+																	</td>
+																	<td width=160 align=left valign=top>
+																		<font color="0099FF">Картинки в дроп-листе.</font>&nbsp;<br1>›&nbsp;Статус:&nbsp;<?player_dli?>
+																	</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<?button_dli?>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=333333>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="branchsys.br_scroll_of_scooldie_i00" width=32 height=32>
+																	</td>
+																	<td width=160 align=left valign=top>
+																		<font color="0099FF">Классический Shift.</font>&nbsp;<br1>›&nbsp;Статус:&nbsp;<?player_noShift?>
+																	</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<?button_noShift?>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=666666>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="branchsys.br_scroll_of_scooldie_i00" width=32 height=32>
+																	</td>
+																	<td width=160 align=left valign=top>
+																		<font color="0099FF">Поиск пути.</font>&nbsp;<br1>›&nbsp;Статус:&nbsp;<?player_trace?>
+																	</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<?button_trace?>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td width=250 align=center valign=top>
+												<table height=50 bgcolor=333333>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="branchsys.br_scroll_of_scooldie_i00" width=32 height=32>
+																	</td>
+																	<td width=112 align=left valign=top>
+																		<font color="0099FF">Язык.</font>&nbsp;<br1>›&nbsp;Текущий:&nbsp;<?player_lang?>
+																	</td>
+															       		<td align=left valign=top>
+													       					<table><tr><td></td></tr></table>
+													       					<combobox width=40 height=10 var="lang" list="ru;en"/>
+															       		</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<button value="OK" action="bypass -h _bbscabinet:cfg:lang: $lang" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="35" height="25"/>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=666666>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="branchsys.br_scroll_of_scooldie_i00" width=32 height=32>
+																	</td>
+																	<td width=160 align=left valign=top>
+																		<font color="0099FF">Шанс скилов.</font>&nbsp;<br1>›&nbsp;Статус:&nbsp;<?player_skill_chance?>
+																	</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<?button_skill_chance?>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=333333>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="branchsys.br_scroll_of_scooldie_i00" width=32 height=32>
+																	</td>
+																	<td width=112 align=left valign=top>
+																		<font color="0099FF">No Carrier.</font>&nbsp;<br1>›&nbsp;Время:&nbsp;<?player_noCarrier?>
+																	</td>
+															       		<td align=left valign=top>
+													       					<table><tr><td></td></tr></table>
+													       					<edit var="time" width=40 height=12 align=center valign=top>
+															       		</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<button value="OK" action="bypass -h _bbscabinet:cfg:nocarrier: $time" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="35" height="25"/>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=666666>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="branchsys.br_scroll_of_scooldie_i00" width=32 height=32>
+																	</td>
+																	<td width=160 align=left valign=top>
+																		<font color="0099FF">Автоподбор предметов.</font>&nbsp;<br1>›&nbsp;Статус:&nbsp;<?player_autolooth?>
+																	</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<?button_autolooth?>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=333333>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="branchsys.br_scroll_of_scooldie_i00" width=32 height=32>
+																	</td>
+																	<td width=160 align=left valign=top>
+																		<font color="0099FF">Автоподбор хербов.</font>&nbsp;<br1>›&nbsp;Статус:&nbsp;<?player_autolooth_herbs?>
+																	</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<?button_autolooth_herbs?>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=666666>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="branchsys.br_scroll_of_scooldie_i00" width=32 height=32>
+																	</td>
+																	<td width=160 align=left valign=top>
+																		<font color="0099FF">Шанс скилов монстров.</font>&nbsp;<br1>›&nbsp;Статус:&nbsp;<?player_monster_skill_chance?>
+																	</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<?button_monster_skill_chance?>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=333333>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="branchsys.br_scroll_of_scooldie_i00" width=32 height=32>
+																	</td>
+																	<td width=160 align=left valign=top>
+																		<font color="0099FF">Отслеживание пути.</font>&nbsp;<br1>›&nbsp;Статус:&nbsp;<?player_pathfind?>
+																	</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<?button_pathfind?>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td></center>
+	</tr>
+</table>
+</body></html>

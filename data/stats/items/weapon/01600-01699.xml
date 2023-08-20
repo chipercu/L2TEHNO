@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="1660" name="Cursed Maingauche" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_maingauche_i01"/>
+		<set name="weight" val="1070"/>
+		<set name="soulshots" val="3"/>
+		<set name="spiritshots" val="3"/>
+		<set name="crystal_type" val="D"/>
+		<set name="crystal_count" val="1983"/>
+		<set name="p_dam" val="62"/>
+		<set name="m_dam" val="42"/>
+		<set name="atk_speed" val="433"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="critical" val="12"/>
+		<set name="price" val="1074000"/>
+		<triggers>
+			<trigger id="3005" level="1" type="CRIT" chance="100" />
+		</triggers>
+	</weapon>
+</list>

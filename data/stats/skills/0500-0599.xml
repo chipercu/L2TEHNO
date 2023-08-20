@@ -1,0 +1,2035 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="500" levels="2" name="True Berserker">
+		<table name="#mp">-0.4</table>
+		<table name="#p_physical_attack">1.05 1.08</table>
+		<table name="#p_attack_speed">1.05 1.08</table>
+		<table name="#acc">2 4</table>
+		<table name="#evs">2 4</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#p_physical_attack">1.09 1.09 1.09 1.09 1.09 1.09 1.09 1.09 1.09 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.11 1.11 1.11 1.11 1.11 1.11 1.11 1.11 1.11 1.11 1.12</table>
+			<table name="#acc">4 4 4 4 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 6</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost">
+			<table name="#mp">-0.39 -0.39 -0.38 -0.38 -0.37 -0.37 -0.36 -0.36 -0.35 -0.35 -0.34 -0.34 -0.33 -0.33 -0.32 -0.32 -0.31 -0.31 -0.3 -0.3 -0.29 -0.29 -0.28 -0.28 -0.27 -0.27 -0.26 -0.26 -0.25 -0.25</table>
+		</enchant2>
+		<for>
+			<effect name="c_mp_by_level" param="#mp;5">
+				<mul order="0x30" stat="p_physical_attack" val="#p_physical_attack"/>
+				<mul order="0x30" stat="p_attack_speed" val="#p_attack_speed"/>
+				<add order="0x40" stat="p_hit" val="#acc"/>
+				<mul order="0x30" stat="p_physical_defence" val="0.9"/>
+				<sub order="0x40" stat="p_avoid" val="#evs"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="501" levels="12" name="Violent Temper">
+		<!--
+			Done by: abaddon
+			Last modify:	14.05.2009, SYS
+			Description: Temporarily reduces the enemy's P. Def and casting speed. Consumes 1 soul.
+		-->
+		<table name="#time">30</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Chance">
+		</enchant1>
+		<enchant2 levels="30" name="Time">
+			<table name="#time">33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120</table>
+		</enchant2>
+		<for>
+			<effect name="Buff" time="#time">
+				<mul order="0x30" stat="p_physical_defence" val="0.77"/>
+				<mul order="0x30" stat="p_magic_speed" val="0.85"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="502" levels="5" name="Life to Soul">
+		<!--
+			Done by:	SYS
+			Last modify:	15.12.2009, SYS
+			Description: Cannibalizes your own life to increase your soul.
+		-->
+		<table name="#souls">1 2 3 4 5</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CHARGE_SOUL"/>
+		<set name="numSouls" val="#souls"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#souls">6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20 20 21</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<for />
+	</skill>
+	<skill id="503" levels="3" name="Scorn">
+		<!--
+			Done by:	Diamond
+			Last modify:	15.12.2007, Diamond
+			Description:
+			Provokes enemies in front of you. Consumes 1 soul.
+		-->
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="400"/>
+		<set name="skillType" val="A1"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="504" levels="37" name="Triple Thrust">
+		<!--
+			Done by:	Diamond
+			Last modify:	20.05.2009, Magister
+			Description:
+			Makes three quick stabs. Consumes 1 soul. An equipped rapier is required to use this skill.
+		-->
+		<table name="#power">620 659 700 742 787 833 882 932 984 1038 1094 1152 1212 1274 1337 1403 1470 1539 1610 1682 1757 1832 1909 1987 2067 2147 2229 2311 2394 2478 2562 2647 2732 2816 2901 2985 3069</table>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
+		<table name="#powerPvP">0</table>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="element" val="#element"/>
+		<set name="power" val="#power"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="isMagic" val="false"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="soulBoost" val="true"/>
+		<cond msgId="113" addName="1">
+			<using kind="Rapier"/>
+		</cond>
+		<enchant1 levels="30" name="Power">
+			<table name="#power">3255 3278 3300 3322 3344 3366 3388 3411 3433 3455 3477 3499 3521 3544 3566 3588 3610 3632 3654 3676 3699 3721 3743 3765 3787 3809 3832 3854 3876 3898</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost">
+			<table name="#power">3255 3278 3300 3322 3344 3366 3388 3410 3432 3455 3477 3499 3521 3543 3565 3587 3609 3630 3654 3676 3698 3720 3742 3764 3786 3809 3831 3853 3875 3897</table>
+		</enchant2>
+		<enchant3 name="Fire Attack">
+			<table name="#element">fire</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant3>
+		<enchant4 name="Water Attack">
+			<table name="#element">water</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant4>
+		<enchant5 name="Wind Attack">
+			<table name="#element">wind</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant5>
+		<enchant6 name="Earth Attack">
+			<table name="#element">earth</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant6>
+		<enchant7 name="Duel">
+			<table name="#powerPvP">3123 3177 3230 3284 3338 3391 3445 3499 3552 3606 3659 3713 3767 3820 3874 3928 3981 4035 4089 4142 4196 4249 4303 4357 4410 4464 4518 4571 4625 4679</table>
+		</enchant7>
+		<for />
+	</skill>
+	<skill id="505" levels="28" name="Shining Edge">
+		<!--
+			Done by:	SYS
+			Last modify:	20.05.2009, Magister
+			Description:
+			1...28 A flashing attack at your enemy's vital organs. Consumes 2 soul. An equipped rapier is required to use this skill. Power 1853...5479
+			29...58 Enchant 1: +1...30 Power
+			59...88 Enchant 1: +1...30 Cost
+		-->
+		<table name="#power">1853 1953 2057 2164 2274 2388 2505 2625 2748 2875 3004 3136 3271 3408 3548 3690 3834 3980 4127 4275 4425 4575 4726 4878 5029 5180 5330 5479</table>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
+		<table name="#powerPvP">0</table>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="element" val="#element"/>
+		<set name="power" val="#power"/>
+		<set name="power2" val="200"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="onCrit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="blow" val="true"/>
+		<set name="soulBoost" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<using kind="Rapier"/>
+		</cond>
+		<enchant1 levels="30" name="Power">
+			<table name="#power">5813 5852 5892 5932 5971 6011 6050 6090 6129 6169 6209 6248 6288 6327 6367 6406 6446 6486 6525 6565 6604 6644 6683 6723 6763 6802 6842 6881 6921 6960</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost">
+			<table name="#power">5497 5515 5534 5552 5571 5589 5608 5626 5645 5663 5682 5700 5719 5737 5755 5774 5792 5811 5829 5848 5866 5885 5903 5922 5940 5959 5977 5996 6014 6032</table>
+		</enchant2>
+		<enchant3 name="Fire Attack">
+			<table name="#element">fire</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant3>
+		<enchant4 name="Water Attack">
+			<table name="#element">water</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant4>
+		<enchant5 name="Wind Attack">
+			<table name="#element">wind</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant5>
+		<enchant6 name="Earth Attack">
+			<table name="#element">earth</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant6>
+		<enchant7 name="Duel">
+			<table name="#powerPvP">5574 5670 5766 5862 5957 6053 6149 6245 6340 6436 6532 6628 6723 6819 6915 7011 7107 7202 7298 7394 7490 7585 7681 7777 7873 7968 8064 8160 8256 8352</table>
+		</enchant7>
+		<for />
+	</skill>
+	<skill id="506" levels="4" name="Checkmate">
+		<!--
+			Done by:	Diamond
+			Last modify:	20.05.2009, Magister
+			Description:
+			Inflict massive damage to a target marked with the brand of darkness. Consumes 2 soul. An equipped rapier is required to use this skill.
+		-->
+		<table name="#power">2388 3408 4275 5180</table>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
+		<table name="#powerPvP">0</table>
+		<set name="power" val="#power"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="element" val="#element"/>
+		<set name="isMagic" val="false"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="criticalRate" val="10"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="soulBoost" val="true"/>
+		<set name="shieldignore" val="true"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<using kind="Rapier"/>
+				<target hasBuffId="1435"/>
+			</and>
+		</cond>
+		<enchant1 levels="30" name="Power">
+			<table name="#power">5813 5852 5892 5932 5971 6011 6050 6090 6129 6169 6209 6248 6288 6327 6367 6406 6446 6486 6525 6565 6604 6644 6683 6723 6763 6802 6842 6881 6921 6960</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost">
+			<table name="#power">5359 5388 5417 5446 5475 5504 5533 5562 5591 5620 5649 5678 5707 5735 5764 5793 5822 5851 5880 5909 5938 5967 5996 6025 6054 6083 6112 6141 6170 6199</table>
+		</enchant2>
+		<enchant3 levels="30" name="Dark Attack">
+			<table name="#element">unholy</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant3>
+		<enchant4 name="Duel">
+			<table name="#powerPvP">5574 5670 5766 5862 5957 6053 6149 6245 6340 6436 6532 6628 6723 6819 6915 7011 7107 7202 7298 7394 7490 7585 7681 7777 7873 7968 8064 8160 8256 8352</table>
+		</enchant4>
+		<for />
+	</skill>
+	<skill id="507" levels="37" name="Twin Shot">
+		<!--
+			Done by:	Diamond
+			Last modify:	20.05.2009, Magister
+			Description:
+			Fire 2 back-to-back bolts. Consumes 1 soul. A critical hit is possible. A crossbow has to be equipped to use this skill. Over-hit is possible.
+		-->
+		<table name="#power">984 1046 1110 1178 1249 1322 1399 1479 1562 1647 1736 1828 1923 2021 2123 2227 2333 2443 2555 2670 2788 2908 3030 3154 3280 3408 3537 3668 3800 3933 4067 4201 4336 4470 4604 4738 4870</table>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
+		<table name="#powerPvP">0</table>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="element" val="#element"/>
+		<set name="power" val="#power"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="criticalRate" val="10"/>
+		<set name="overHit" val="true"/>
+		<set name="soulBoost" val="true"/>
+		<cond msgId="113" addName="1">
+			<using kind="Crossbow"/>
+		</cond>
+		<enchant1 levels="30" name="Power">
+			<table name="#power">5167 5202 5237 5273 5308 5343 5378 5413 5448 5484 5519 5554 5589 5624 5660 5695 5730 5765 5800 5835 5871 5906 5941 5976 6011 6046 6082 6117 6152 6187</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<enchant3 name="Fire Attack">
+			<table name="#element">fire</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant3>
+		<enchant4 name="Water Attack">
+			<table name="#element">water</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant4>
+		<enchant5 name="Wind Attack">
+			<table name="#element">wind</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant5>
+		<enchant6 name="Earth Attack">
+			<table name="#element">earth</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant6>
+		<enchant7 name="Duel">
+			<table name="#powerPvP">4955 5040 5125 5210 5295 5380 5465 5551 5636 5721 5806 5891 5976 6061 6147 6535 6317 6402 6487 6572 6657 6742 6828 6913 6998 7083 7168 7253 7338 7424</table>
+		</enchant7>
+		<for />
+	</skill>
+	<skill id="508" levels="31" name="Rising Shot">
+		<!--
+			Done by:	Diamond
+			Last modify:	20.05.2009, Magister
+			Description:
+			Shoot a bolt that rises from the ground. Consumes 3 souls. A  crossbow has to be equipped to use this skill.
+		-->
+		<table name="#power">350 370 391 412 434 457 481 506 531 557 584 611 639 668 697 727 758 789 820 852 885 917 950 984 1017 1051 1084 1118 1151 1185 1218</table>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
+		<table name="#powerPvP">0</table>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="element" val="#element"/>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="overHit" val="true"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isEnemy" val="true"/>
+		<cond msgId="113" addName="1">
+			<using kind="Crossbow"/>
+		</cond>
+		<enchant1 levels="30" name="Power">
+			<table name="#power">1292 1301 1310 1319 1327 1336 1345 1354 1362 1371 1380 1389 1398 1406 1415 1424 1433 1442 1450 1459 1468 1477 1486 1494 1503 1512 1521 1530 1538 1547</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<enchant3 name="Fire Attack">
+			<table name="#element">fire</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant3>
+		<enchant4 name="Water Attack">
+			<table name="#element">water</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant4>
+		<enchant5 name="Wind Attack">
+			<table name="#element">wind</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant5>
+		<enchant6 name="Earth Attack">
+			<table name="#element">earth</table>
+			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
+		</enchant6>
+		<enchant7 name="Duel">
+			<table name="#powerPvP">1329 1260 1281 1303 1324 1345 1366 1388 1409 1430 1451 1473 1494 1515 1537 1558 1579 1600 1622 1643 1664 1685 1707 1728 1749 1770 1792 1813 1834 1856</table>
+		</enchant7>
+		<for />
+	</skill>
+	<skill id="509" levels="34" name="Bleeding Shot">
+		<table name="#power">530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192</table>
+		<table name="#t_hp">-44 -44 -44 -44 -44 -44 -44 -44 -44 -54 -54 -54 -54 -54 -54 -54 -54 -54 -54 -62 -62 -62 -62 -62 -62 -62 -62 -62 -62 -67 -67 -67 -67 -67</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="overHit" val="true"/>
+		<set name="soulBoost" val="true"/>
+		<set name="itemConsumeId" val="10113"/>
+		<set name="itemConsumeCount" val="1"/>
+		<cond msgId="113" addName="1">
+			<using kind="Crossbow"/>
+		</cond>
+		<enchant1 levels="30" name="Power">
+			<table name="#power">2325 2341 2357 2373 2389 2405 2420 2436 2452 2468 2484 2500 2515 2531 2547 2563 2579 2595 2610 2626 2642 2658 2674 2690 2705 2721 2737 2753 2769 2784</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<enchant3 levels="30" name="Chance">
+		</enchant3>
+		<for>
+			<effect name="t_hp" param="#t_hp;5;diff"/>
+		</for>
+	</skill>
+	<skill id="510" levels="5" name="Deadly Roulette">
+		<!--
+			Done by:	Diamond
+			Last modify:	17.03.2010, Diamond
+			Description:
+			Can be used when HP is below 10 percent. Lethal strike is possible. Requires a crossbow. Consumes 1 Special Bolt.
+		-->
+		<table name="#chance">30 35 40 45 50</table>
+		<set name="power" val="0"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="LETHAL_SHOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="itemConsumeId" val="10113"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="lethal2" val="#chance"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<using kind="Crossbow"/>
+				<player percentHP="10"/>
+			</and>
+		</cond>
+		<enchant1 levels="30" name="Chance">
+            <table name="#chance">51 51 51 52 52 52 53 53 53 54 54 54 55 55 55 56 56 56 57 57 57 58 58 58 59 59 59 59 59 60</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost"/>
+		<for />
+	</skill>
+	<skill id="511" levels="1" name="Temptation">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="A1"/>
+		<set name="isPvm" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_add_hate" val="500" />
+		</for>
+	</skill>
+	<skill id="512" levels="10" name="Create Bio Potion">
+		<!-- Description: Create a potion that instantly replenishes 5% of health when used. Consumes 1 soul. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="513" levels="1" name="Create Dark Seed">
+		<!--
+			Done by:	Diamond
+			Last modify:	19.01.2009
+			Description: Transform a soul into a seed of darkness. Consumes 1 soul.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="SummonItemId" val="10112"/>
+		<set name="SummonMinCount" val="1"/>
+		<set name="SummonMaxCount" val="1"/>
+		<set name="soulsConsume" val="1"/>
+		<for />
+	</skill>
+	<skill id="514" levels="9" name="Fire Trap">
+		<table name="#npcId">13037 13038 13039 13040 13041 13042 13043 13044 13045</table>
+		<table name="#skill">1 2 3 4 5 6 7 8 9</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="addSkills" val="5267;#skill"/>
+		<set name="npcId" val="#npcId"/>
+		<set name="summonType" val="trap"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#npcId">13202 13202 13202 13203 13203 13203 13204 13204 13204 13205 13205 13205 13206 13206 13206 13207 13207 13207 13208 13208 13208 13209 13209 13209 13210 13210 13210 13211 13211 13212</table>
+			<table name="#skill">10 10 11 11 11 12 12 13 13 13 14 14 15 15 15 16 16 17 17 17 18 18 19 19 19 20 20 21 21 21</table>
+		</enchant1>
+		<enchant2 levels="30" name="Recycle"/>
+		<for />
+	</skill>
+	<skill id="515" levels="6" name="Poison Trap">
+		<table name="#npcId">13046 13047 13048 13049 13050 13051</table>
+		<table name="#skill">1 2 3 4 5 6</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="addSkills" val="5268;#skill"/>
+		<set name="npcId" val="#npcId"/>
+		<set name="summonType" val="trap"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#npcId">13213 13213 13213 13214 13214 13214 13215 13215 13215 13216 13216 13216 13217 13217 13217 13218 13218 13218 13219 13219 13219 13220 13220 13220 13221 13221 13221 13222 13222 13223</table>
+			<table name="#skill">7 7 7 8 8 8 9 9 9 10 10 10 11 11 11 12 12 12 13 13 14 14 15 15 15 16 16 16 17</table>
+		</enchant1>
+		<enchant2 levels="30" name="Recycle"/>
+		<for />
+	</skill>
+	<skill id="516" levels="6" name="Slow Trap">
+		<table name="#skill">1 2 3 4 5 6</table>
+		<table name="#npcId">13065 13066 13067 13068 13069 13070</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="addSkills" val="5269;#skill"/>
+		<set name="npcId" val="#npcId"/>
+		<set name="summonType" val="trap"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#npcId">13224 13224 13224 13225 13225 13225 13226 13226 13226 13227 13227 13227 13228 13228 13228 13229 13229 13229 13230 13230 13230 13231 13231 13231 13232 13232 13232 13233 13233 13234</table>
+			<table name="#skill">7 7 7 8 8 8 9 9 9 10 10 10 11 11 11 12 12 12 13 13 14 14 15 15 15 16 16 16 17</table>
+		</enchant1>
+		<enchant2 levels="30" name="Recycle"/>
+		<for />
+	</skill>
+	<skill id="517" levels="5" name="Flash Trap">
+		<table name="#npcId">13052 13053 13054 13055 13056</table>
+		<table name="#skill">1 2 3 4 5</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="addSkills" val="5270;#skill"/>
+		<set name="npcId" val="#npcId"/>
+		<set name="summonType" val="trap"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#skill">7 7 7 8 8 8 9 9 9 10 10 10 11 11 11 12 12 12 13 13 14 14 15 15 15 16 16 17</table>
+			<table name="#npcId">13235 13235 13235 13236 13236 13236 13237 13237 13237 13238 13238 13238 13239 13239 13239 13240 13240 13240 13241 13241 13241 13242 13242 13242 13243 13243 13243 13244 13244 13245</table>
+		</enchant1>
+		<enchant2 levels="30" name="Recycle"/>
+		<for />
+	</skill>
+	<skill id="518" levels="8" name="Binding Trap">
+		<table name="#npcId">13057 13058 13059 13060 13061 13062 13063 13064</table>
+		<table name="#skill">1 2 3 4 5 6 7 8</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="addSkills" val="5271;#skill"/>
+		<set name="npcId" val="#npcId"/>
+		<set name="summonType" val="trap"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#npcId">13246 13246 13246 13247 13247 13247 13248 13248 13248 13249 13249 13249 13250 13250 13250 13251 13251 13251 13252 13252 13252 13253 13253 13253 13254 13254 13254 13255 13255 13256</table>
+			<table name="#skill">9 9 9 10 10 10 11 11 11 12 12 12 13 13 14 14 15 15 15 16 16 16 17 17 17 18 18 18 19</table>
+		</enchant1>
+		<enchant2 levels="30" name="Recycle"/>
+		<for />
+	</skill>
+	<skill id="519" levels="1" name="Quiver of Bolts: A-Grade">
+		<!--
+			Done by:	SYS
+			Last modify:	17.04.2009, Magister
+			Description: Summons Mithril Bolts. Minimum 700, maximum 2800 bolts are summoned. Consumes 1 Crystal: A-Grade.
+		-->
+		<set name="itemConsumeId" val="1461"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="SummonItemId" val="9636"/>
+		<set name="SummonMinCount" val="700"/>
+		<set name="SummonMaxCount" val="2800"/>
+		<for />
+	</skill>
+	<skill id="520" levels="1" name="Quiver of Bolts: S-Grade">
+		<!--
+			Done by:	SYS
+			Last modify:	17.04.2009, Magister
+			Description: Summons Shining Bolts. Minimum 900, maximum 3600 bolts are summoned. Consumes 1 Crystal: S-Grade.
+		-->
+		<set name="itemConsumeId" val="1462"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="SummonItemId" val="9637"/>
+		<set name="SummonMinCount" val="900"/>
+		<set name="SummonMaxCount" val="3600"/>
+		<for />
+	</skill>
+	<skill id="521" levels="8" name="Sharpshooting">
+		<table name="#p_physical_attack">124 134 145 155 166 177 188 199</table>
+		<table name="#p_hit">3 3 4 4 5 5 6 6</table>
+		<table name="#pAtkRange">50 50 100 100 150 150 200 200</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<using kind="Crossbow"/>
+		</cond>
+		<enchant1 levels="30" name="Power">
+			<table name="#p_physical_attack">211 213 214 215 217 218 220 221 223 224 226 227 228 230 231 233 234 236 237 239 240 241 243 244 246 247 249 250 252 253</table>
+			<table name="#p_hit">6 6 6 6 6 6 6 7 7 7 7 7 7 7 8 8 8 8 8 8 8 8 9 9 9 9 9 9 9 10</table>
+		</enchant1>
+		<enchant2 levels="30" name="Time"/>
+		<for>
+			<effect name="p_block_move">
+				<add order="0x40" stat="p_physical_attack" val="#p_physical_attack">
+					<using kind="Crossbow"/>
+				</add>
+				<add order="0x40" stat="p_hit" val="#p_hit">
+					<using kind="Crossbow"/>
+				</add>
+				<add order="0x40" stat="p_critical_rate_per" val="20">
+					<using kind="Crossbow"/>
+				</add>
+				<add order="0x40" stat="pAtkRange" val="#pAtkRange">
+					<using kind="Crossbow"/>
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="522" levels="4" name="Real Target">
+		<table name="#trait_bow">-12 -16 -20 -24</table>
+		<table name="#trait_crossbow">-16 -24 -32 -40</table>
+		<table name="#p_physical_defence">1</table>
+		<table name="#p_physical_attack">1</table>
+		<table name="#p_magical_defence">1</table>
+		<table name="#p_magical_attack">1</table>
+		<table name="#abnormal_lv">1 2 3 4</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Decrease Defense">
+			<table name="#p_physical_defence">.99 .99 .99 .98 .98 .98 .97 .97 .97 .96 .96 .96 .96 .95 .95 .95 .94 .94 .94 .93 .93 .93 .93 .92 .92 .92 .91 .91 .91 .9</table>
+		</enchant1>
+		<enchant2 levels="30" name="Decrease Attack">
+			<table name="#p_physical_attack">.99 .99 .99 .98 .98 .98 .97 .97 .97 .96 .96 .96 .96 .95 .95 .95 .94 .94 .94 .93 .93 .93 .93 .92 .92 .92 .91 .91 .91 .9</table>
+		</enchant2>
+		<enchant2 levels="30" name="Decrease Magic Defense">
+			<table name="#p_magical_defence">.99 .99 .99 .98 .98 .98 .97 .97 .97 .96 .96 .96 .96 .95 .95 .95 .94 .94 .94 .93 .93 .93 .93 .92 .92 .92 .91 .91 .91 .9</table>
+		</enchant2>
+		<enchant3 levels="30" name="Decrease Magic Attack">
+			<table name="#p_magical_attack">.99 .99 .99 .98 .98 .98 .97 .97 .97 .96 .96 .96 .96 .95 .95 .95 .94 .94 .94 .93 .93 .93 .93 .92 .92 .92 .91 .91 .91 .9</table>
+		</enchant3>
+		<for>
+			<effect name="Buff" time="30" abnormal="realtarget">
+				<mul order="0x30" stat="p_physical_defence" val="#p_physical_defence"/>
+				<mul order="0x30" stat="p_physical_attack" val="#p_physical_attack"/>
+				<mul order="0x30" stat="p_magical_defence" val="#p_magical_defence"/>
+				<mul order="0x30" stat="p_magical_attack" val="#p_magical_attack"/>
+			</effect>
+			<effect name="p_defence_trait" param="trait_bow;#trait_bow"/> 
+			<effect name="p_defence_trait" param="trait_crossbow;#trait_crossbow"/> 
+		</for>
+	</skill>
+	<skill id="523" levels="7" name="Imbue Dark Seed">
+		<!--
+			Done by:	Diamond
+			Last modify:	18.03.2009, Diamond
+			Description:
+			Sow a dark seed into the body of an enemy.
+			The seed will grow within body, eating up health and eventually paralyzing the enemy when it is fully grown.
+			Consumes 1 Dark Seed.
+		-->
+		<table name="#dmg">154 154 154 154 166 166 166</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="itemConsumeId" val="10112"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="delayedEffect" val="5447"/>
+		<for>
+			<effect count="10" name="DamOverTime" time="2" val="#dmg"/>
+		</for>
+	</skill>
+	<skill id="524" levels="1" name="Cure Dark Seed">
+		<!--
+			Done by Diamond
+			Eliminates the seed of darkness. Consumes 1 soul.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="negateSkill" val="523"/>
+		<for />
+	</skill>
+	<skill id="525" levels="6" name="Decoy">
+		<!--
+			Done by:	Diamond
+			Last modify:	23.05.2009, Magister
+			Description:
+			Summon a mirror image that distracts the enemy. Consumes 4 soul.
+		-->
+		<table name="#npcId">13071 13072 13073 13074 13075 13076</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="npcId" val="#npcId"/>
+		<set name="lifeTime" val="20"/>
+		<set name="summonType" val="decoy"/>
+		<enchant1 levels="30" name="Cost"/>
+		<enchant2 levels="30" name="Recycle"/>
+		<enchant3 levels="30" name="Power" >
+			<table name="#npcId">13257 13257 13257 13258 13258 13258 13259 13259 13259 13260 13260 13260 13261 13261 13261 13262 13262 13262 13263 13263 13263 13264 13264 13264 13265 13265 13266 13266 13266 13267</table>
+		</enchant3>
+		<for />
+	</skill>
+	<skill id="526" levels="1" name="Enuma Elish">
+		<!--
+			Done by: Diamond
+			Last modify: 27.06.2009, Magister
+			Description:
+			Unleash the power of the Sword of Creation,slashing everything in the sky and on the earth. Consumes 5 Souls. Over-hit is possible. Power 6060.
+		-->
+		<table name="#power">6060</table>
+		<table name="#powerPvP">0</table>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
+		<set name="power" val="#power"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="element" val="#element"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="overHit" val="true"/>
+		<set name="skillRadius" val="400"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="soulBoost" val="true"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#power">6502 6535 6568 6601 6634 6667 6700 6733 6766 6799 6833 6866 6899 6932 6965</table>
+		</enchant1>
+		<enchant2 levels="15" name="Cost">
+			<table name="#power">6090 6120 6150 6180 6210 6240 6270 6300 6330 6360 6390 6420 6450 6480 6510</table>
+		</enchant2>
+		<enchant3 levels="15" name="Divine Attack">
+			<table name="#element">sacred</table>
+			<table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+		</enchant3>
+		<enchant4 name="Duel">
+			<table name="#powerPvP">6157 6253 6350 6446 6543 6639 6736 6832 6929 7025 7122 7218 7315 7411 7508</table>
+		</enchant4>
+		<for />
+	</skill>
+	<skill id="527" levels="1" name="Iron Shield">
+		<!--
+			Done by: Drizzy
+			Increases shield defense power with a certain chance when attacked.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="1200">
+				<add order="0x40" stat="sDef" val="100"/>
+				<triggers>
+					<trigger id="5425" level="1" type="RECEIVE_DAMAGE" chance="30">
+						<player damage="100;0"/>
+					</trigger>
+				</triggers>
+			</effect>
+		</for>
+	</skill>
+	<skill id="528" levels="1" name="Shield of Faith">
+		<!--
+			Done by:	SYS
+			Last modify:	17.06.2010, Diamond
+			Description: Use the Shield of Conviction on party members. Maximizes P. Def. and magic resistance for effective party members and absorbs most of the damage they will receive for the duration of the spell.
+		-->
+		<table name="#Tab-p_physical_defence">3600</table>
+		<table name="#Tab-p_magical_defence">2700</table>
+		<table name="#abnormal_time">15</table>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillRadius" val="1000"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#Tab-p_physical_defence">3720 3840 3960 4080 4200 4320 4440 4560 4680 4800 4920 5040 5160 5280 5400</table>
+			<table name="#Tab-p_magical_defence">2790 2880 2970 3060 3150 3240 3330 3420 3510 3600 3690 3780 3870 3960 4050</table>
+		</enchant1>
+		<enchant2 levels="15" name="Time">
+			<table name="#abnormal_time">16 17 18 19 20 21 22 23 24 25 26 27 28 29 30</table>
+		</enchant2>
+		<enchant3 levels="15" name="Recycle"/>
+		<for>
+			<effect name="TransferDam" time="#abnormal_time" val="90" stackOrder="1" stackType="pDefSpec">
+				<add order="0x40" stat="p_physical_defence" val="#Tab-p_physical_defence"/>
+				<add order="0x40" stat="p_magical_defence" val="#Tab-p_magical_defence"/>
+				<add order="0x40" stat="transferToEffectorDam" val="90" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="529" levels="1" name="Song of Elemental">
+		<!--
+			Done by: Magister
+			Description: Increases four-elemental resistance of a party member.
+		-->
+		<table name="#time">120</table>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMusic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="15" name="Time">
+			<table name="#time">128 136 144 152 160 168 176 184 192 200 208 216 224 232 240</table>
+		</enchant1>
+		<enchant2 levels="15" name="Cost"/>
+		<for>
+			<effect name="Buff" time="#time">
+				<sub order="0x40" stat="fireRcpt" val="30"/>
+				<sub order="0x40" stat="waterRcpt" val="30"/>
+				<sub order="0x40" stat="windRcpt" val="30"/>
+				<sub order="0x40" stat="earthRcpt" val="30"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="530" levels="1" name="Dance of Alignment">
+		<!--
+			Done by: Magister
+			Description: Increases 2 characteristic resistances of a party member.
+		-->
+		<table name="#time">120</table>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isMusic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="15" name="Time">
+			<table name="#time">128 136 144 152 160 168 176 184 192 200 208 216 224 232 240</table>
+		</enchant1>
+		<enchant2 levels="15" name="Cost"/>
+		<for>
+			<effect name="Buff" time="#time">
+				<sub order="0x40" stat="unholyRcpt" val="30"/>
+				<sub order="0x40" stat="sacredRcpt" val="30"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="531" levels="1" name="Critical Wound">
+		<!-- Done by: Drizzy -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="magicLvl" val="79"/>
+		<set name="isDebuff" val="true"/>
+		<set name="levelModifier" val="2"/>
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger"/>
+		</cond>
+		<for>
+			<effect name="Debuff" time="30" stackOrder="1" stackType="t_crt_rate_up">
+				<mul order="0x30" stat="critDamRcpt" val="1.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="532" levels="1" name="Counter Chance">
+		<!--
+			Done by: Drizzy
+			Description: When attacked, user's skill Casting Spd. is decreased by 15% and MP consumption is decreased by 5% for 1 minute.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5426" level="1" type="RECEIVE_DAMAGE" chance="5">
+				<player damage="100;0"/>
+			</trigger>
+		</triggers>
+	</skill>
+	<skill id="533" levels="1" name="Counter Rapid Shot">
+		<!--
+			Done by: Drizzy
+			Description: When attacked, party members' bow Atk. Spd. Is increased by 15% for 1 minute.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5427" level="1" type="RECEIVE_DAMAGE" chance="5">
+				<player damage="100;0"/>
+			</trigger>
+		</triggers>
+	</skill>
+	<skill id="534" levels="1" name="Counter Dash">
+		<!--
+			Done by: Drizzy
+			Description: When attacked, party members' movement speed is increased by 40 for 1 minute.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5428" level="1" type="RECEIVE_DAMAGE" chance="5">
+				<player damage="100;0"/>
+			</trigger>
+		</triggers>
+	</skill>
+	<skill id="535" levels="1" name="Counter Mind">
+		<!-- Description: When attacked, user's MP is recovered at a certain rate. -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5429" level="1" type="RECEIVE_DAMAGE" chance="5">
+				<player damage="100;0"/>
+			</trigger>
+		</triggers>
+	</skill>
+	<skill id="536" levels="1" name="Over the Body">
+		<!--
+			Done by:	SYS
+			Last modify:	20.06.2010, SYS
+			Description: Expends spirit points so that for 60 seconds, Max HP is increased by 35%, HP recovery bonus is increased by 15%, P. Atk. is increased by 25%, P. Def. is increased by 30%, Atk. Spd. is increased by 10%, and movement speed is increased 10%. Can be used when CP is more than 80%.
+		-->
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<player percentCP="80"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="CPDamPercent" time="60" val="100"/>
+			<effect name="Buff" stackOrder="2" stackType="ancient" time="60" >
+				<mul order="0x30" stat="p_max_hp" val="1.35"/>
+				<mul order="0x30" stat="p_physical_attack" val="1.25"/>
+				<mul order="0x30" stat="p_physical_defence" val="1.3"/>
+				<mul order="0x30" stat="p_attack_speed" val="1.1"/>
+				<mul order="0x30" stat="p_speed" val="1.1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="537" levels="1" name="Spoil Bomb">
+		<!--
+			Done by: Magister
+			Last modify: 07.10.2008
+			Description: Puts enemies near the target into a spoil state, exploding and inflicting damage after a set time.
+		-->
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="SPOIL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="delayedEffect" val="5430"/>
+		<for>
+			<effect name="Debuff"/>
+		</for>
+	</skill>
+	<skill id="538" levels="1" name="Final Form">
+		<!--
+			Done by:	SYS
+			Last modify:	15.09.2008, Diamond
+			Description: Transform into a final battle form. Consumes 20 soul.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="soulsConsume" val="20"/>
+		<set name="addSkills" val="539;1;540;1;1471;1;1472;1"/>
+		<set name="npcId" val="13088"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Transformation" time="300" val="251">
+				<set order="0x08" stat="STR" val="41"/>
+				<set order="0x08" stat="DEX" val="33"/>
+				<set order="0x08" stat="CON" val="31"/>
+				<set order="0x08" stat="INT" val="29"/>
+				<set order="0x08" stat="WIT" val="11"/>
+				<set order="0x08" stat="MEN" val="25"/>
+				<mul order="0x30" stat="p_max_hp" val="1.1"/>
+				<mul order="0x30" stat="p_max_cp" val="1.1"/>
+				<mul order="0x30" stat="p_max_mp" val="1.1"/>
+				<mul order="0x30" stat="p_physical_attack" val="2.0"/>
+				<mul order="0x30" stat="p_physical_defence" val="2.0"/>
+				<mul order="0x30" stat="p_magical_attack" val="2.0"/>
+				<mul order="0x30" stat="p_magical_defence" val="2.0"/>
+				<add order="0x40" stat="p_speed" val="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="539" levels="1" name="Nail Attack">
+		<!-- Description: A demonic clawed combo attack. Power 2583. -->
+		<set name="power" val="2583"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="540" levels="1" name="Wing Assault">
+		<!--
+			Done by:	Diamond
+			Last modify:	09.05.2009
+			Description:
+			Charges with wing spread, striking everything around the charge target.
+		-->
+		<set name="power" val="2067"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="skillRadius" val="600"/>
+		<set name="flyType" val="CHARGE"/>
+		<set name="flyRadius" val="600"/>
+		<set name="radius" val="100"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isEnemy" val="true"/>
+		<for />
+	</skill>
+	<skill id="541" levels="1" name="Transform Grail Apostle">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 22.01.2008
+			Description: Transform into a Grail Apostle.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="560;3;559;3;561;3;562;3"/>
+		<set name="npcId" val="13079"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="201">
+				<set order="0x08" stat="STR" val="40"/>
+				<set order="0x08" stat="DEX" val="30"/>
+				<set order="0x08" stat="CON" val="43"/>
+				<set order="0x08" stat="INT" val="21"/>
+				<set order="0x08" stat="WIT" val="11"/>
+				<set order="0x08" stat="MEN" val="25"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="542" levels="1" name="Transform Grail Apostle">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 22.01.2008
+			Description: Transform into a Grail Apostle.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="560;3;559;3;561;3;562;3"/>
+		<set name="npcId" val="13079"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="202">
+				<set order="0x08" stat="STR" val="40"/>
+				<set order="0x08" stat="DEX" val="30"/>
+				<set order="0x08" stat="CON" val="43"/>
+				<set order="0x08" stat="INT" val="21"/>
+				<set order="0x08" stat="WIT" val="11"/>
+				<set order="0x08" stat="MEN" val="25"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="543" levels="1" name="Transform Grail Apostle">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 22.01.2008
+			Description: Transform into a Grail Apostle.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="560;3;559;3;561;3;562;3"/>
+		<set name="npcId" val="13079"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="203">
+				<set order="0x08" stat="STR" val="40"/>
+				<set order="0x08" stat="DEX" val="30"/>
+				<set order="0x08" stat="CON" val="43"/>
+				<set order="0x08" stat="INT" val="21"/>
+				<set order="0x08" stat="WIT" val="11"/>
+				<set order="0x08" stat="MEN" val="25"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="544" levels="1" name="Transform Unicorn">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 22.01.2008
+			Description: Transform into a Unicorn.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="563;3;565;3;564;3;567;3"/>
+		<set name="npcId" val="13081"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="204">
+				<set order="0x08" stat="STR" val="36"/>
+				<set order="0x08" stat="DEX" val="35"/>
+				<set order="0x08" stat="CON" val="36"/>
+				<set order="0x08" stat="INT" val="23"/>
+				<set order="0x08" stat="WIT" val="14"/>
+				<set order="0x08" stat="MEN" val="26"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="545" levels="1" name="Transform Unicorn">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 22.01.2008
+			Description: Transform into a Unicorn.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="563;3;565;3;564;3;567;3"/>
+		<set name="npcId" val="13081"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="205">
+				<set order="0x08" stat="STR" val="36"/>
+				<set order="0x08" stat="DEX" val="35"/>
+				<set order="0x08" stat="CON" val="36"/>
+				<set order="0x08" stat="INT" val="23"/>
+				<set order="0x08" stat="WIT" val="14"/>
+				<set order="0x08" stat="MEN" val="26"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="546" levels="1" name="Transform Unicorn">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 22.01.2008
+			Description: Transform into a Unicorn.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="563;3;565;3;564;3;567;3"/>
+		<set name="npcId" val="13081"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="206">
+				<set order="0x08" stat="STR" val="36"/>
+				<set order="0x08" stat="DEX" val="35"/>
+				<set order="0x08" stat="CON" val="36"/>
+				<set order="0x08" stat="INT" val="23"/>
+				<set order="0x08" stat="WIT" val="14"/>
+				<set order="0x08" stat="MEN" val="26"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="547" levels="1" name="Transform Lilim Knight">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 23.01.2008
+			Description: Transform into a Lilim Knight.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="568;3;569;3;570;3;571;3"/>
+		<set name="npcId" val="13082"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="207">
+				<set order="0x08" stat="STR" val="41"/>
+				<set order="0x08" stat="DEX" val="34"/>
+				<set order="0x08" stat="CON" val="32"/>
+				<set order="0x08" stat="INT" val="25"/>
+				<set order="0x08" stat="WIT" val="12"/>
+				<set order="0x08" stat="MEN" val="26"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="548" levels="1" name="Transform Lilim Knight">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 23.01.2008
+			Description: Transform into a Lilim Knight.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="568;3;569;3;570;3;571;3"/>
+		<set name="npcId" val="13082"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="208">
+				<set order="0x08" stat="STR" val="41"/>
+				<set order="0x08" stat="DEX" val="34"/>
+				<set order="0x08" stat="CON" val="32"/>
+				<set order="0x08" stat="INT" val="25"/>
+				<set order="0x08" stat="WIT" val="12"/>
+				<set order="0x08" stat="MEN" val="26"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="549" levels="1" name="Transform Lilim Knight">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 23.01.2008
+			Description: Transform into a Lilim Knight.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="568;3;569;3;570;3;571;3"/>
+		<set name="npcId" val="13082"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="209">
+				<set order="0x08" stat="STR" val="41"/>
+				<set order="0x08" stat="DEX" val="34"/>
+				<set order="0x08" stat="CON" val="32"/>
+				<set order="0x08" stat="INT" val="25"/>
+				<set order="0x08" stat="WIT" val="12"/>
+				<set order="0x08" stat="MEN" val="26"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="550" levels="1" name="Transform Golem Guardian">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 23.01.2008
+			Description: Transform into a Golem Guardian.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="572;3;573;3;574;3;575;3"/>
+		<set name="npcId" val="13083"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="210">
+				<set order="0x08" stat="STR" val="39"/>
+				<set order="0x08" stat="DEX" val="29"/>
+				<set order="0x08" stat="CON" val="45"/>
+				<set order="0x08" stat="INT" val="20"/>
+				<set order="0x08" stat="WIT" val="10"/>
+				<set order="0x08" stat="MEN" val="27"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="551" levels="1" name="Transform Golem Guardian">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 23.01.2008
+			Description: Transform into a Golem Guardian.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="572;3;573;3;574;3;575;3"/>
+		<set name="npcId" val="13083"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="211">
+				<set order="0x08" stat="STR" val="39"/>
+				<set order="0x08" stat="DEX" val="29"/>
+				<set order="0x08" stat="CON" val="45"/>
+				<set order="0x08" stat="INT" val="20"/>
+				<set order="0x08" stat="WIT" val="10"/>
+				<set order="0x08" stat="MEN" val="27"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="552" levels="1" name="Transform Golem Guardian">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 23.01.2008
+			Description: Transform into a Golem Guardian.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="572;3;573;3;574;3;575;3"/>
+		<set name="npcId" val="13083"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="212">
+				<set order="0x08" stat="STR" val="39"/>
+				<set order="0x08" stat="DEX" val="29"/>
+				<set order="0x08" stat="CON" val="45"/>
+				<set order="0x08" stat="INT" val="20"/>
+				<set order="0x08" stat="WIT" val="10"/>
+				<set order="0x08" stat="MEN" val="27"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="553" levels="1" name="Transform Inferno Drake">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 25.01.2008
+			Description: Transform into a Inferno Drake.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="576;3;577;3;578;3;579;3"/>
+		<set name="npcId" val="13084"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="213">
+				<set order="0x08" stat="STR" val="40"/>
+				<set order="0x08" stat="DEX" val="26"/>
+				<set order="0x08" stat="CON" val="47"/>
+				<set order="0x08" stat="INT" val="18"/>
+				<set order="0x08" stat="WIT" val="12"/>
+				<set order="0x08" stat="MEN" val="27"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="554" levels="1" name="Transform Inferno Drake">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 25.01.2008
+			Description: Transform into a Inferno Drake.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="576;3;577;3;578;3;579;3"/>
+		<set name="npcId" val="13084"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="214">
+				<set order="0x08" stat="STR" val="40"/>
+				<set order="0x08" stat="DEX" val="26"/>
+				<set order="0x08" stat="CON" val="47"/>
+				<set order="0x08" stat="INT" val="18"/>
+				<set order="0x08" stat="WIT" val="12"/>
+				<set order="0x08" stat="MEN" val="27"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="555" levels="1" name="Transform Inferno Drake">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 25.01.2008
+			Description: Transform into a Inferno Drake.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="576;3;577;3;578;3;579;3"/>
+		<set name="npcId" val="13084"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="215">
+				<set order="0x08" stat="STR" val="40"/>
+				<set order="0x08" stat="DEX" val="26"/>
+				<set order="0x08" stat="CON" val="47"/>
+				<set order="0x08" stat="INT" val="18"/>
+				<set order="0x08" stat="WIT" val="12"/>
+				<set order="0x08" stat="MEN" val="27"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="556" levels="1" name="Transform Dragon Bomber">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 25.01.2008
+			Description: Transform into a Dragon Bomber.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="580;3;581;3;582;3;583;3"/>
+		<set name="npcId" val="13085"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="216">
+				<set order="0x08" stat="STR" val="41"/>
+				<set order="0x08" stat="DEX" val="33"/>
+				<set order="0x08" stat="CON" val="31"/>
+				<set order="0x08" stat="INT" val="29"/>
+				<set order="0x08" stat="WIT" val="11"/>
+				<set order="0x08" stat="MEN" val="25"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="557" levels="1" name="Transform Dragon Bomber">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 25.01.2008
+			Description: Transform into a Dragon Bomber.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="580;3;581;3;582;3;583;3"/>
+		<set name="npcId" val="13085"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="217">
+				<set order="0x08" stat="STR" val="41"/>
+				<set order="0x08" stat="DEX" val="33"/>
+				<set order="0x08" stat="CON" val="31"/>
+				<set order="0x08" stat="INT" val="29"/>
+				<set order="0x08" stat="WIT" val="11"/>
+				<set order="0x08" stat="MEN" val="25"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="558" levels="1" name="Transform Dragon Bomber">
+		<!--
+			Done by:	SYS
+			Last modify:	SYS, 25.01.2008
+			Description: Transform into a Dragon Bomber.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="580;3;581;3;582;3;583;3"/>
+		<set name="npcId" val="13085"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="218">
+				<set order="0x08" stat="STR" val="41"/>
+				<set order="0x08" stat="DEX" val="33"/>
+				<set order="0x08" stat="CON" val="31"/>
+				<set order="0x08" stat="INT" val="29"/>
+				<set order="0x08" stat="WIT" val="11"/>
+				<set order="0x08" stat="MEN" val="25"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="559" levels="4" name="Spear">
+		<table name="#power">900 1013 1129 1248</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="t_hp" param="-123;5;diff"/>
+		</for>
+	</skill>
+	<skill id="560" levels="4" name="Power Slash">
+		<!--
+			Done by:	SYS
+			Last modify:	22.01.2008
+			Description: A powerful frontal attack that involves swinging a spear to assault enemies.
+		-->
+		<table name="#power">1250 1406 1568 1733</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="561" levels="4" name="Bless of Angel">
+		<!--
+			Done by:	SYS
+			Last modify:	22.01.2008
+			Description: A divine blessing that increases the P.Atk. of all party members.
+			Comment: like Dance of Warrior: Doesnt stack with Warrior Dance and has same mp consumption rules as Dances/Songs!
+		-->
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="dance_of_warrior" time="120">
+				<mul order="0x30" stat="p_physical_attack" val="1.12"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="562" levels="4" name="Wind of Angel">
+		<!--
+			Done by:	SYS
+			Last modify:	22.01.2008
+			Description: A divine wind that increases the Evasion of all party members.
+			Comment: like Evasion Song(song of water): Doesnt stack with Evasion Song and has same mp consumption rules as Dances/Songs!
+		-->
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackType="SongOfWater" time="120">
+				<add order="0x40" stat="p_avoid" val="3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="563" levels="4" name="Horn of Doom">
+		<!--
+			Done by:	SYS
+			Last modify:	22.01.2008
+			Description: Uses the horn to charge the enemy with a powerful ram attack.
+		-->
+		<table name="#power">1250 1406 1568 1733</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="564" levels="4" name="Gravity Control">
+		<!--
+			Done by:	SYS
+			Last modify:	22.01.2008
+			Description: Uses the horn to decrease speed and attack speed of nearby enemies.
+			Comment: like the SWS aoe debuff(psycho symphony)
+		-->
+		<table name="#power">308 332 357 382</table>
+		<set name="levelModifier" val="2"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="power" val="#power"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="30">
+				<mul order="0x30" stat="p_speed" val="0.5"/>
+				<mul order="0x30" stat="p_attack_speed" val="0.8"/>
+				<mul order="0x30" stat="p_magic_speed" val="0.8"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="565" levels="4" name="Horn Assault">
+		<!--
+			Done by:	SYS
+			Last modify:	22.01.2008
+			Description: Releases the energy of the horn to attack a distant enemy.
+		-->
+		<table name="#power">938 1055 1176 1300</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="567" levels="4" name="Light of Heal">
+		<!--
+			Done by:	SYS
+			Last modify:	22.01.2008
+			Description: Draws from the force of light to bestow the ability of recovery.
+			Comment: like Major Heal
+		-->
+		<table name="#power">690 731 770 806</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="HEAL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="#power"/>
+		<for />
+	</skill>
+	<skill id="568" levels="4" name="Attack Buster">
+		<!--
+			Done by:	SYS
+			Last modify:	23.01.2008
+			Description: Detonates an energy charge to attack the enemy. Level 2 Energy charge is required.
+		-->
+		<table name="#power">1250 1406 1568 1733</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="chargeBoost" val="true"/>
+		<set name="num_charges" val="2"/>
+		<set name="charge_skill_id" val="570"/>
+		<!-- Attack Rage is the charger -->
+		<for />
+	</skill>
+	<skill id="569" levels="4" name="Attack Storm">
+		<!--
+			Done by:	SYS
+			Last modify:	23.01.2008
+			Description: Unleash a magical attack on distant enemies. Level 3 Energy charge is required.
+		-->
+		<table name="#power">625 703 784 867</table>
+		<set name="power" val="#power"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="chargeBoost" val="true"/>
+		<set name="num_charges" val="3"/>
+		<set name="charge_skill_id" val="570"/>
+		<set name="isEnemy" val="true"/>
+		<!-- Attack Rage is the charger -->
+		<for />
+	</skill>
+	<skill id="570" levels="4" name="Attack Rage">
+		<!--
+			Done by:	SYS
+			Last modify:	23.01.2008
+			Description: Gathers force while attacking an enemy. Critical hit is possible. Can be charged up to Level 1...4.
+			Comment: Like Sonic Rage skill from Duelist (charger for skills: 568, 569)
+		-->
+		<table name="#charges">1 2 3 4</table>
+		<set name="power" val="50"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="CHARGE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="criticalRate" val="10"/>
+		<set name="charges" val="#charges"/>
+		<set name="isOffensive" val="true"/>
+		<for />
+	</skill>
+	<skill id="571" levels="4" name="Poison Dust">
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="POISON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="t_hp" param="-58;5;diff"/>
+		</for>
+	</skill>
+	<skill id="572" levels="4" name="Double Slasher">
+		<!--
+			Done by:	SYS
+			Last modify:	23.01.2008
+			Description: Discharges a solid beam of sonic force towards a distant target.
+		-->
+		<table name="#power">938 1055 1176 1300</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="573" levels="4" name="Earthquake">
+		<!--
+			Done by:	SYS
+			Last modify:	23.01.2008
+			Description: Shocks the ground to stun nearby enemies.
+		-->
+		<table name="#power">625 703 784 867</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="overHit" val="true"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="criticalRate" val="10"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9"/>
+		</for>
+	</skill>
+	<skill id="574" levels="4" name="Bomb Installation">
+		
+		<table name="#npcId">13040 13041 13042 13043</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="addSkills" val="5267;9"/>
+		<set name="npcId" val="#npcId"/>
+		<set name="summonType" val="trap"/>
+		<for />
+	</skill>
+	<skill id="575" levels="4" name="Steel Cutter">
+		<!--
+			Done by:	SYS
+			Last modify:	23.01.2008
+			Description: Attacks with a sharp steel blade.
+		-->
+		<table name="#power">1250 1406 1568 1733</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="576" levels="4" name="Paw Strike">
+		<!--
+			Done by:	SYS
+			Last modify:	25.01.2008
+			Description: Inflict a powerful attack with your forefeet.
+		-->
+		<table name="#power">1250 1406 1568 1733</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="577" levels="4" name="Fire Breath">
+		<!--
+			Done by:	SYS
+			Last modify:	25.01.2008
+			Description: Gushes out a fire attack that attacks enemies in front of you.
+		-->
+		<table name="#power">875 984 1098 1213</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_TUNNEL"/>
+		<set name="overHit" val="true"/>
+		<set name="skillRadius" val="100"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="element" val="fire"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="578" levels="4" name="Blaze Quake">
+		<!--
+			Done by:	SYS
+			Last modify:	23.05.2009, Magister
+			Description: Inflict a burning fire attack on nearby enemies.
+		-->
+		<table name="#power">625 703 784 867</table>
+		<table name="#dmg">44 60 78 92</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="overHit" val="true"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="element" val="fire"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="15" name="DamOverTime" time="1" val="#dmg"/>
+		</for>
+	</skill>
+	<skill id="579" levels="4" name="Fire Armor">
+		<!--
+			Done by:	SYS
+			Last modify:	23.03.2008, Diamond
+			Description: An intense flame ignites and protects the body. Immobilized while in effect.
+		-->
+		<table name="#p_physical_defence">1000 1100 1200 1400</table>
+		<table name="#p_magical_defence">800 900 1000 1200</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_move">
+				<add order="0x40" stat="p_physical_defence" val="#p_physical_defence"/>
+				<add order="0x40" stat="p_magical_defence" val="#p_magical_defence"/>
+				<add order="0x40" stat="cancelRcpt" val="90"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="580" levels="4" name="Death Blow">
+		<!--
+			Done by:	SYS
+			Last modify:	25.01.2008
+			Description: Inflicts deadly blow. Lethal Strike is possible.
+		-->
+		<table name="#power">1500 2000 2500 3000</table>
+		<set name="power" val="#power"/>
+		<set name="power2" val="200"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="onCrit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="blow" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="lethal2" val="6"/>
+	</skill>
+	<skill id="581" levels="4" name="Sand Cloud">
+		<!--
+			Done by:	SYS
+			Last modify:	25.01.2008
+			Description: Uses blinding sand to decrease nearby enemies' accuracy.
+		-->
+		<table name="#rate">5 6 7 8</table>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="30">
+				<sub order="0x40" stat="p_hit" val="#rate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="582" levels="4" name="Scope Bleed">
+		<table name="#power">875 984 1098 1213</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="40"/>
+		<set name="overHit" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="t_hp" param="-123;5;diff"/>
+		</for>
+	</skill>
+	<skill id="583" levels="4" name="Assimilation">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_avoid_agro" param="100">
+				<div order="0x30" stat="p_physical_attack" val="1.45"/>
+				<div order="0x30" stat="p_physical_defence" val="1.15"/>
+				<div order="0x30" stat="p_magical_defence" val="1.15"/>
+				<sub order="0x40" stat="p_hit" val="12"/>
+				<sub order="0x40" stat="p_avoid" val="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="584" levels="1" name="Power Claw">
+		<!--
+			Done by:	SYS
+			Last modify:	10.12.2007
+			Description: Attacks the enemy with powerful claws. Power 1008.
+		-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="power" val="1008"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="585" levels="1" name="Fast Moving">
+		<!--
+			Done by:	SYS
+			Last modify:	Magister, 25.03.2009
+			Description: Temporarily but substantial increase to Speed.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="15">
+				<mul order="0x30" stat="p_speed" val="1.45"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="586" levels="2" name="Rolling Attack">
+		<!--
+			Done by:	darkevil
+			Last modify:	Magister, 25.03.2009
+			Description: Quickly swings your spear around, attacking nearby enemies. Power 840,984.
+		-->
+		<table name="#power">840 984</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="overHit" val="true"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="587" levels="2" name="Earth Storm">
+		<!--
+			Done by:	darkevil
+			Last modify:	SYS, 22.01.2008
+			Description: Inflict a powerful ground-piercing attack. Power 1200,1406.
+		-->
+		<table name="#power">1200 1406</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="element" val="earth"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="588" levels="2" name="Curse of Darkness">
+		<!--
+			Done by:	SYS
+			Last modify:	10.12.2007
+			Description: Casts powerful curse on your enemy.
+		-->
+		<table name="#power">208 300</table>
+		<table name="#p_speed">42 58</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="5" name="DamOverTime" time="3" val="#power">
+				<sub order="0x40" stat="p_speed" val="#p_speed"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="589" levels="2" name="Darkness Energy Drain">
+		<!--
+			Done by:	SYS
+			Last modify:	10.12.2007
+			Description: Absorbs energy from corpses to recover HP.
+		-->
+		<table name="#drain">360 399</table>
+		<set name="target" val="TARGET_CORPSE"/>
+		<set name="corpse" val="true"/>
+		<set name="skillType" val="DRAIN"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="absorbPart" val="0." />
+		<set name="absorbAbs" val="#drain"/>
+		<for>
+			<effect name="i_consume_body"/>
+		</for>
+	</skill>
+	<skill id="590" levels="1" name="Residence Body">
+		<!--
+			Done by:	Diamond
+			Last modify:	03.05.2009, Magister
+			Description: The Max HP of clan members in residence increases by 222.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_max_hp" val="222"/>
+		</for>
+	</skill>
+	<skill id="591" levels="1" name="Residence Spirit">
+		<!--
+			Done by:	Diamond
+			Last modify:	03.05.2009, Magister
+			Description: The Max CP of clan members in residence increases by 444.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_max_cp" val="444"/>
+		</for>
+	</skill>
+	<skill id="592" levels="1" name="Residence Soul">
+		<!--
+			Done by:	Diamond
+			Last modify:	03.05.2009, Magister
+			Description: The Max MP of clan members in residence increases by 168.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_max_mp" val="168"/>
+		</for>
+	</skill>
+	<skill id="593" levels="1" name="Residence Health">
+		<!--
+			Done by:	Diamond
+			Last modify:	03.05.2009, Diamond
+			Description: The HP recovery bonus of clan members in residence increases by 1.09.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add stat="regHp" val="1.09" order="0x40"/>
+		</for>
+	</skill>
+	<skill id="594" levels="1" name="Residence Moral">
+		<!--
+			Done by:	Diamond
+			Last modify:	03.05.2009, Diamond
+			Description: The CP recovery bonus of clan members in residence increases by 1.09.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add stat="regCp" val="1.09" order="0x40"/>
+		</for>
+	</skill>
+	<skill id="595" levels="1" name="Residence Clarity">
+		<!--
+			Done by:	Diamond
+			Last modify:	03.05.2009, Diamond
+			Description: The MP recovery bonus of clan members in residence increases by 0.47.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add stat="regMp" val="0.47" order="0x40"/>
+		</for>
+	</skill>
+	<skill id="596" levels="1" name="Residence Might">
+		<!--
+			Done by:	Diamond
+			Last modify:	03.05.2009, Diamond
+			Description: The P. Atk. of clan members in residence increases by 34.6.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add stat="p_physical_attack" val="34.6" order="0x40"/>
+		</for>
+	</skill>
+	<skill id="597" levels="1" name="Residence Shield">
+		<!--
+			Done by:	Diamond
+			Last modify:	03.05.2009, Diamond
+			Description: The P. Def. of clan members in residence increases by 54.7.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add stat="p_physical_defence" val="54.7" order="0x40"/>
+		</for>
+	</skill>
+	<skill id="598" levels="1" name="Residence Empower">
+		<!--
+			Done by:	Diamond
+			Last modify:	03.05.2009, Diamond
+			Description: The M. Atk. of clan members in residence increases by 40.4.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add stat="p_magical_attack" val="40.4" order="0x40"/>
+		</for>
+	</skill>
+	<skill id="599" levels="1" name="Residence Magic Barrier">
+		<!--
+			Done by:	Diamond
+			Last modify:	07.12.2008, Diamond
+			Description: The M. Def. of clan members in residence increases by 44.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add stat="p_magical_defence" val="44" order="0x40"/>
+		</for>
+	</skill>
+</list>

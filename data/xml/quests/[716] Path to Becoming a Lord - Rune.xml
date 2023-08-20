@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="716" type="SOLO">
+		<name lang="en" val="Path to Becoming a Lord - Rune"/>
+		<name lang="ru" val="Путь Лорда - Руна"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="22176"/>	<!-- Andreas Royal Guards -->
+			<event type="MOBKILLED" val="22146"/>	<!-- Triols Priest -->
+			<event type="MOBKILLED" val="22151"/>	<!-- Triols Priest -->
+			<event type="MOBKILLED" val="22138"/>	<!-- Chapel Guard -->
+			<event type="MOBKILLED" val="22141"/>	<!-- Forgotten Victim -->
+			<event type="MOBKILLED" val="22175"/>	<!-- Andreas Captain of the Royal Guard -->
+			<event type="MOBKILLED" val="22155"/>	<!-- Triols High Priest -->
+			<event type="MOBKILLED" val="22159"/>	<!-- Triols High Priest -->
+			<event type="MOBKILLED" val="22163"/>	<!-- Triols High Priest -->
+			<event type="MOBKILLED" val="22167"/>	<!-- Triols High Priest -->
+			<event type="MOBKILLED" val="22171"/>	<!-- Triols High Priest -->
+			<event type="MOBKILLED" val="22143"/>	<!-- Triols Believer -->
+			<event type="MOBKILLED" val="22137"/>	<!-- Penance Guard -->
+			<event type="MOBKILLED" val="22194"/>	<!-- Penance Guard -->
+			<event type="MOBKILLED" val="22164"/>	<!-- Triols Believer -->
+			<event type="MOBKILLED" val="22156"/>	<!-- Triols Priest -->
+			<event type="MOBKILLED" val="22166"/>	<!-- Triols Believer -->
+			<event type="MOBKILLED" val="22173"/>	<!-- Triols Priest -->
+			<event type="MOBKILLED" val="22170"/>	<!-- Triols Believer -->
+			<event type="MOBKILLED" val="22157"/>	<!-- Triols Priest -->
+			<event type="MOBKILLED" val="22160"/>	<!-- Triols Priest -->
+			<event type="MOBKILLED" val="22165"/>	<!-- Triols Priest -->
+			<event type="MOBKILLED" val="22168"/>	<!-- Triols Priest -->
+			<event type="MOBKILLED" val="22174"/>	<!-- Triols Priest -->
+			<event type="MOBKILLED" val="22158"/>	<!-- Triols Believer -->
+			<event type="MOBKILLED" val="22162"/>	<!-- Triols Believer -->
+			<event type="MOBKILLED" val="22149"/>	<!-- Ritual Offering -->
+			<event type="MOBKILLED" val="22147"/>	<!-- Ritual Offering -->
+			<event type="MOBKILLED" val="22154"/>	<!-- Ritual Sacrifice -->
+			<event type="MOBKILLED" val="22161"/>	<!-- Ritual Sacrifice -->
+			<event type="MOBKILLED" val="22169"/>	<!-- Ritual Sacrifice -->
+			<event type="MOBKILLED" val="22172"/>	<!-- Ritual Sacrifice -->
+			<event type="MOBKILLED" val="22145"/>	<!-- Ritual Sacrifice -->
+			<event type="MOBKILLED" val="22152"/>	<!-- Temple Guard -->
+			<event type="MOBKILLED" val="22153"/>	<!-- Temple Guard Captain -->
+			<event type="MOBKILLED" val="22136"/>	<!-- Gatekeeper Zombie -->
+			<event type="MOBKILLED" val="22150"/>	<!-- Triols Believer -->
+			<event type="MOBKILLED" val="22148"/>	<!-- Triols Believer -->
+			<event type="MOBKILLED" val="22142"/>	<!-- Triols Layperson -->
+			<event type="MOBKILLED" val="22144"/>	<!-- Resurrected Temple Knight -->
+			<event type="MOBKILLED" val="22139"/>	<!-- Old Aristocrats Soldier -->
+			<event type="MOBKILLED" val="22140"/>	<!-- Zombie Worker -->
+			<event type="QUEST_START" val="35509"/>	<!-- Frederick -->
+			<event type="QUEST_TALK" val="35509"/>	<!-- Frederick -->
+			<event type="QUEST_TALK" val="31348"/>	<!-- Agripel -->
+			<event type="QUEST_TALK" val="31328"/>	<!-- Innocentin -->
+		</setting>
+	</quest>
+</quests>

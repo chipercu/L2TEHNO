@@ -1,0 +1,44 @@
+<html>
+<body>
+<center>Информация о кланхоллах, которые выставлены на аукцион</center>
+<img src="L2UI.SquareWhite" width=280 height=1> <img src="L2UI.SquareBlank" width=1 height=3>
+<table width=280 border=0>
+<tr><td width=140><font color="a2a0a2">Название кланхолла: </font></td>
+<td width=140><font color="b09979">%AGIT_NAME%</font></td></tr>
+<tr><td><font color="a2a0a2">Владелец: </font></td>
+<td><font color="b09979">%AGIT_OWNER_PLEDGE_NAME%</font></td></tr>
+<tr><td><font color="a2a0a2">Лидер клана: </font></td>
+<td><font color="b09979">%OWNER_PLEDGE_MASTER%</font></td></tr>
+<tr><td><font color="a2a0a2">Размер кланхолла: </font></td>
+<td><font color="b09979">%AGIT_SIZE% рейтинг</font> (класс)</td></tr>
+<tr><td><font color="a2a0a2">Рента на кланхолл</font></td>
+<td><font color="b09979">%AGIT_LEASE%</font>аден<font color="LEVEL">/неделю</font></td></tr>
+<tr><td><font color="a2a0a2">Местонахождение кланхолла: </font></td>
+<td>%AGIT_LOCATION%</td></tr>
+</table>
+<img src="L2UI.SquareGray" width=280 height=1> <img src="L2UI.SquareBlank" width=1 height=3>
+<table width=280 border=0>
+<tr><td width=140><font color="a2a0a2">Дата и время окончания аукциона: </font></td>
+<td width=140><font color="b09979">%AGIT_AUCTION_END_YY% год %AGIT_AUCTION_END_MM% месяц %AGIT_AUCTION_END_DD% день %AGIT_AUCTION_END_HH% часов</font></td></tr>
+<tr><td><font color="a2a0a2">Время до окончания: </font></td>
+<td><font color="b09979">%AGIT_AUCTION_REMAIN%</font></td></tr>
+<tr><td><font color="a2a0a2">Минимальная ставка: </font></td>
+<td><font color="b09979">%AGIT_AUCTION_MINBID%</font> аден</td></tr>
+<tr><td><font color="a2a0a2">Количество участников: </font></td>
+<td><font color="b09979">%AGIT_AUCTION_BIDCOUNT%</font></td></tr>
+</table>
+<table width=280 border=0 bgcolor=333333>
+<tr><td width=280>%AGIT_AUCTION_DESC%</td></tr>
+</table>
+<img src="L2UI.SquareBlank" width=280 height=10> <img src="L2UI.SquareWhite" width=280 height=1> <img src="L2UI.SquareBlank" width=280 height=5>
+<table width=280 border=0>
+<tr>
+<td width=60></td>
+<td width=70 align=center><button action="bypass -h npc_%objectId%_bidding_AgitBidderList" value="Назад" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=70 align=center><button action="bypass -h npc_%objectId%_bidlist %id%" value="Участники" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=70 align=center><button action="bypass -h npc_%objectId%_cancelAuction" value="Отменить" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+</body>
+</html>

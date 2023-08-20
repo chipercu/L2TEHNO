@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="312" type="SOLO">
+		<name lang="en" val="Take Advantage of the Crisis!"/>
+		<name lang="ru" val="Take Advantage of the Crisis!"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="22678"/>	<!-- Grave Robber Summoner -->
+			<event type="MOBKILLED" val="22679"/>	<!-- Grave Robber Magician -->
+			<event type="MOBKILLED" val="22680"/>	<!-- Grave Robber Worker -->
+			<event type="MOBKILLED" val="22681"/>	<!-- Grave Robber Warrior -->
+			<event type="MOBKILLED" val="22682"/>	<!-- Grave Robber Warrior of Light -->
+			<event type="MOBKILLED" val="22683"/>	<!-- Servitor of Darkness -->
+			<event type="MOBKILLED" val="22684"/>	<!-- Servitor of Darkness -->
+			<event type="MOBKILLED" val="22685"/>	<!-- Servitor of Darkness -->
+			<event type="MOBKILLED" val="22686"/>	<!-- Servitor of Darkness -->
+			<event type="MOBKILLED" val="22687"/>	<!-- Phantoms of the Mine -->
+			<event type="MOBKILLED" val="22688"/>	<!-- Evil Spirits of the Mine -->
+			<event type="MOBKILLED" val="22689"/>	<!-- Mine Bug -->
+			<event type="MOBKILLED" val="22690"/>	<!-- Earthworms Descendant -->
+			<event type="QUEST_START" val="30535"/>	<!-- Filaur -->
+			<event type="QUEST_TALK" val="30535"/>	<!-- Filaur -->
+		</setting>
+	</quest>
+</quests>

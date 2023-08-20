@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- [RU] Настройки SideBar -->
+	<!-- [EN] SideBar settings -->
+	<!-- [RU] EnableSideBar: включить - 1, выключить - 0 -->
+	<!-- [EN] EnableSideBar: enable - 1, disable - 0 -->
+	<interface_setting name="EnableSideBar" type="TYPE_CHAR" value="1"/>
+	
+	<!-- [RU] SideBarBtnsCount: количество кнопок (не менее 1 и не более 10) -->
+	<!-- [EN] SideBarBtnsCount: buttons count (no less than 1 and no more than 240)-->
+	<interface_setting name="SideBarBtnsCount" type="TYPE_INT" value="1"/>
+	
+	<!-- [RU] Type: 0 - открыть окно интерфейса, 1 - голосовая команда, 2 - байпасс, 3 - открыть ссылку в браузере -->
+	<!-- [EN] Type: 0 - show interface window, 1 - voice command, 2 - bypass, 3 - open URL -->
+	<!-- [RU] Action: действие при нажатие на кнопку, в зависимости от Type -->
+	<!-- [EN] Action: action when the button is clicked, depending on the Type -->
+	<!-- [RU] Texture: иконка кнопки размером 32х32 -->
+	<!-- [EN] Texture: button icon, size 32x32 -->
+	<!-- [RU] Tooltip(Ru/En): описание при наведении на кнопку -->
+	<!-- [EN] Tooltip(Ru/En): description when hovering over the button -->
+	<interface_setting name="SideBarBtn0Type" type="TYPE_INT" value="0"/>
+	<interface_setting name="SideBarBtn0Action" type="TYPE_TEXT" value="Forge"/>
+	<interface_setting name="SideBarBtn0Texture" type="TYPE_TEXT" value="L2UI_CT2.SideBar.SideBar_TimeZoneIcon"/>
+	<interface_setting name="SideBarBtn0TooltipRu" type="TYPE_TEXT" value="Мастерская"/>
+	<interface_setting name="SideBarBtn0TooltipEn" type="TYPE_TEXT" value="Workshop"/>
+	
+	<interface_setting name="SideBarBtn1Type" type="TYPE_INT" value="0"/>
+	<interface_setting name="SideBarBtn1Action" type="TYPE_TEXT" value="RadioWnd"/>
+	<interface_setting name="SideBarBtn1Texture" type="TYPE_TEXT" value="L2UI_CT2.SideBar.SideBar_TimeZoneIcon"/>
+	<interface_setting name="SideBarBtn1TooltipRu" type="TYPE_TEXT" value="Радио"/>
+	<interface_setting name="SideBarBtn1TooltipEn" type="TYPE_TEXT" value="Radio"/>
+	
+	<interface_setting name="SideBarBtn2Type" type="TYPE_INT" value="1"/>
+	<interface_setting name="SideBarBtn2Action" type="TYPE_TEXT" value=".dressme"/>
+	<interface_setting name="SideBarBtn2Texture" type="TYPE_TEXT" value="L2UI_CT2.SideBar.SideBar_TimeZoneIcon"/>
+	<interface_setting name="SideBarBtn2TooltipRu" type="TYPE_TEXT" value="Визуализация"/>
+	<interface_setting name="SideBarBtn2TooltipEn" type="TYPE_TEXT" value="Visualisation"/>
+	
+	<interface_setting name="SideBarBtn3Type" type="TYPE_INT" value="2"/>
+	<interface_setting name="SideBarBtn3Action" type="TYPE_TEXT" value="test_bypass_0"/>
+	<interface_setting name="SideBarBtn3Texture" type="TYPE_TEXT" value="L2UI_CT2.SideBar.SideBar_TimeZoneIcon"/>
+	<interface_setting name="SideBarBtn3TooltipRu" type="TYPE_TEXT" value="Байпасс 0"/>
+	<interface_setting name="SideBarBtn3TooltipEn" type="TYPE_TEXT" value="Bypass 0"/>
+	
+	<interface_setting name="SideBarBtn4Type" type="TYPE_INT" value="0"/>
+	<interface_setting name="SideBarBtn4Action" type="TYPE_TEXT" value="InventoryWnd"/>
+	<interface_setting name="SideBarBtn4Texture" type="TYPE_TEXT" value="L2UI_CT2.SideBar.SideBar_TimeZoneIcon"/>
+	<interface_setting name="SideBarBtn4TooltipRu" type="TYPE_TEXT" value="Инвентарь"/>
+	<interface_setting name="SideBarBtn4TooltipEn" type="TYPE_TEXT" value="Inventory"/>
+	
+	<interface_setting name="SideBarBtn5Type" type="TYPE_INT" value="2"/>
+	<interface_setting name="SideBarBtn5Action" type="TYPE_TEXT" value="test_bypass_1"/>
+	<interface_setting name="SideBarBtn5Texture" type="TYPE_TEXT" value="L2UI_CT2.SideBar.SideBar_TimeZoneIcon"/>
+	<interface_setting name="SideBarBtn5TooltipRu" type="TYPE_TEXT" value="Байпасс 1"/>
+	<interface_setting name="SideBarBtn5TooltipEn" type="TYPE_TEXT" value="Bypass 1"/>
+	
+	<interface_setting name="SideBarBtn6Type" type="TYPE_INT" value="2"/>
+	<interface_setting name="SideBarBtn6Action" type="TYPE_TEXT" value="test_bypass_2"/>
+	<interface_setting name="SideBarBtn6Texture" type="TYPE_TEXT" value="L2UI_CT2.SideBar.SideBar_TimeZoneIcon"/>
+	<interface_setting name="SideBarBtn6TooltipRu" type="TYPE_TEXT" value="Байпасс 2"/>
+	<interface_setting name="SideBarBtn6TooltipEn" type="TYPE_TEXT" value="Bypass 2"/>
+	
+	<interface_setting name="SideBarBtn7Type" type="TYPE_INT" value="2"/>
+	<interface_setting name="SideBarBtn7Action" type="TYPE_TEXT" value="test_bypass_3"/>
+	<interface_setting name="SideBarBtn7Texture" type="TYPE_TEXT" value="L2UI_CT2.SideBar.SideBar_TimeZoneIcon"/>
+	<interface_setting name="SideBarBtn7TooltipRu" type="TYPE_TEXT" value="Байпасс 3"/>
+	<interface_setting name="SideBarBtn7TooltipEn" type="TYPE_TEXT" value="Bypass 3"/>
+	
+	<interface_setting name="SideBarBtn8Type" type="TYPE_INT" value="2"/>
+	<interface_setting name="SideBarBtn8Action" type="TYPE_TEXT" value="test_bypass_4"/>
+	<interface_setting name="SideBarBtn8Texture" type="TYPE_TEXT" value="L2UI_CT2.SideBar.SideBar_TimeZoneIcon"/>
+	<interface_setting name="SideBarBtn8TooltipRu" type="TYPE_TEXT" value="Байпасс 4"/>
+	<interface_setting name="SideBarBtn8TooltipEn" type="TYPE_TEXT" value="Bypass 4"/>
+	
+	<interface_setting name="SideBarBtn9Type" type="TYPE_INT" value="3"/>
+	<interface_setting name="SideBarBtn9Action" type="TYPE_TEXT" value="https://emu-dev.ru"/>
+	<interface_setting name="SideBarBtn9Texture" type="TYPE_TEXT" value="L2UI_CT2.SideBar.SideBar_TimeZoneIcon"/>
+	<interface_setting name="SideBarBtn9TooltipRu" type="TYPE_TEXT" value="Перейти на сайт разработчика"/>
+	<interface_setting name="SideBarBtn9TooltipEn" type="TYPE_TEXT" value="Open developer site"/>
+</list>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="101" type="SOLO">
+		<name lang="en" val="Sword of Solidarity"/>
+		<name lang="ru" val="Меч Единства"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20361"/>	<!-- Tunath Orc Marksman -->
+			<event type="MOBKILLED" val="20362"/>	<!-- Tunath Orc Warrior -->
+			<event type="QUEST_START" val="30008"/>	<!-- Roien -->
+			<event type="QUEST_TALK" val="30008"/>	<!-- Roien -->
+			<event type="QUEST_TALK" val="30008"/>	<!-- Roien -->
+			<event type="QUEST_TALK" val="30283"/>	<!-- Altran -->
+			<item id="742"/>	<!-- Altran's Note -->
+			<item id="937"/>	<!-- Directions to Ruins -->
+			<item id="741"/>	<!-- Broken Blade Top -->
+			<item id="740"/>	<!-- Broken Blade Bottom -->
+			<item id="796"/>	<!-- Roien's Letter -->
+			<item id="739"/>	<!-- Broken Sword Handle -->
+		</setting>
+	</quest>
+</quests>

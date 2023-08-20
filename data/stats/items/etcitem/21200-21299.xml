@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="21200" name="Mysterious Scroll - Prophecy of Wind" type="OTHER">
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+        <skill>
+			<skill id="22213" val="1" />
+        </skill>
+	</etcitem>
+	<etcitem id="21224" name="Transformation Scroll: Anakim" type="OTHER">
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />		
+		<set name="material" val="paper" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />		
+		<set name="stackable" val="true" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="9159" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21235" name="Fresh Milk" type="POTION">
+		<set name="icon" val="icon.etc_fresh_milk_i00"/>
+		<set name="weight" val="1"/>
+		<set name="class" val="CONSUMABLE"/>
+		<set name="stackable" val="true"/>
+		<set name="isConsume" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="2873" lvl="1"/>
+			<skill id="2874" lvl="1"/>
+			<skill id="2875" lvl="1"/>
+			<skill id="2876" lvl="1"/>
+			<skill id="2877" lvl="1"/>
+			<skill id="2878" lvl="1"/>
+			<skill id="2879" lvl="1"/>
+			<skill id="2885" lvl="1"/>
+			<skill id="2886" lvl="1"/>
+			<skill id="2887" lvl="1"/>
+			<skill id="2888" lvl="1"/>
+			<skill id="2889" lvl="1"/>
+			<skill id="2890" lvl="1"/>
+			<skill id="2891" lvl="6"/>
+		</skills>
+	</etcitem>
+	<etcitem id="21236" name="Fresh Milk - Event" type="POTION">
+		<set name="icon" val="icon.etc_fresh_milk_i00"/>
+		<set name="weight" val="1"/>
+		<set name="class" val="CONSUMABLE"/>
+		<set name="stackable" val="true"/>
+		<set name="isConsume" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="2873" lvl="1"/>
+			<skill id="2874" lvl="1"/>
+			<skill id="2875" lvl="1"/>
+			<skill id="2876" lvl="1"/>
+			<skill id="2877" lvl="1"/>
+			<skill id="2878" lvl="1"/>
+			<skill id="2879" lvl="1"/>
+			<skill id="2885" lvl="1"/>
+			<skill id="2886" lvl="1"/>
+			<skill id="2887" lvl="1"/>
+			<skill id="2888" lvl="1"/>
+			<skill id="2889" lvl="1"/>
+			<skill id="2890" lvl="1"/>
+			<skill id="2891" lvl="6"/>
+		</skills>
+	</etcitem>
+	<etcitem id="21239" name="Super Healthy Juice (HP)" type="OTHER">
+		<set name="icon" val="icon.etc_health_juice_i00"/>
+		<set name="weight" val="180"/>
+		<set name="stackable" val="true"/>
+		<set name="class" val="OTHER"/>
+		<skills>
+			<skill id="22217" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21240" name="Super Healthy Juice (HP) Event" type="OTHER">
+		<set name="icon" val="icon.etc_health_juice_i00"/>
+		<set name="weight" val="180"/>
+		<set name="stackable" val="true"/>
+		<set name="class" val="OTHER"/>
+		<skills>
+			<skill id="22218" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21243" name="Super Healthy Juice (CP)" type="OTHER">
+		<set name="icon" val="icon.etc_health_juice_i00"/>
+		<set name="weight" val="180"/>
+		<set name="stackable" val="true"/>
+		<set name="class" val="OTHER"/>
+		<skills>
+			<skill id="22219" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21244" name="Super Healthy Juice (CP) Event" type="OTHER">
+		<set name="icon" val="icon.etc_health_juice_i00"/>
+		<set name="weight" val="180"/>
+		<set name="stackable" val="true"/>
+		<set name="class" val="OTHER"/>
+		<skills>
+			<skill id="22220" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21251" name="Vitality Maintaining Potion (30 Minutes)" type="OTHER">
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="21255" name="Gludio Homemade Cookie" type="OTHER">
+		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
+		<set name="weight" val="120"/>
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="class" val="CONSUMABLE"/>
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="22225" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21256" name="Gludio Homemade Cookie - Event" type="OTHER">
+		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
+		<set name="weight" val="120"/>
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="class" val="CONSUMABLE"/>
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="22226" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21259" name="Dion Homemade Cookie" type="OTHER">
+		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
+		<set name="weight" val="120"/>
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="class" val="CONSUMABLE"/>
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="22227" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21260" name="Dion Homemade Cookie - Event" type="OTHER">
+		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
+		<set name="weight" val="120"/>
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="class" val="CONSUMABLE"/>
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="22228" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21263" name="Aden Designer Cookie" type="OTHER">
+		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
+		<set name="weight" val="120"/>
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="class" val="CONSUMABLE"/>
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="22229" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21264" name="Aden Designer Cookie - Event" type="OTHER">
+		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
+		<set name="weight" val="120"/>
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="class" val="CONSUMABLE"/>
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="22230" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21267" name="Giran Designer Cookie" type="OTHER">
+		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
+		<set name="weight" val="120"/>
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="class" val="CONSUMABLE"/>
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="22231" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21268" name="Giran Designer Cookie - Event" type="OTHER">
+		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
+		<set name="weight" val="120"/>
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="class" val="CONSUMABLE"/>
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="22231" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21271" name="Rune Designer Cookie" type="OTHER">
+		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
+		<set name="weight" val="120"/>
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="class" val="CONSUMABLE"/>
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="22233" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21272" name="Rune Designer Cookie - Event" type="OTHER">
+		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
+		<set name="weight" val="120"/>
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="class" val="CONSUMABLE"/>
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="22234" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21273" name="Necklace Pet Exchange Coupon Pack" type="OTHER">
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="21275" name="Hunting Helper Exchange Coupon" type="OTHER">
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+</list>
+
+
+
+

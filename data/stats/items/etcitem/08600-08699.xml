@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="8600" name="Herb of Life" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<skills>
+			<skill id="2278" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="8601" name="Greater Herb of Life" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<skills>
+			<skill id="2278" lvl="2" />
+		</skills>
+	</etcitem>
+	<etcitem id="8602" name="Superior Herb of Life" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<skills>
+			<skill id="2278" lvl="3" />
+		</skills>
+	</etcitem>
+	<etcitem id="8603" name="Herb of Mana" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<skills>
+			<skill id="2279" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="8604" name="Greater Herb of Mana" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<skills>
+			<skill id="2279" lvl="2" />
+		</skills>
+	</etcitem>
+	<etcitem id="8605" name="Superior Herb of Mana" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<skills>
+			<skill id="2279" lvl="3" />
+		</skills>
+	</etcitem>
+	<etcitem id="8606" name="Herb of Power" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<skills>
+			<skill id="2280" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="8607" name="Herb of Magic" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<skills>
+			<skill id="2281" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="8608" name="Herb of Atk. Spd." type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_attack_sp_herb_i00" />
+		<skills>
+			<skill id="2282" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="8609" name="Herb of Casting Spd." type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_magic_sp_herb_i00" />
+		<skills>
+			<skill id="2283" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="8610" name="Herb of Critical Attack - Probability" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_critical_herb_i00" />
+		<skills>
+			<skill id="2284" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="8611" name="Herb of Speed" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_move_herb_i00" />
+		<skills>
+			<skill id="2285" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="8612" name="Herb of the Warrior" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_warrior_set_i00" />
+		<skills>
+			<skill id="2280" lvl="1" />
+			<skill id="2282" lvl="1" />
+			<skill id="2284" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="8613" name="Herb of the Mystic" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_magic_set_i00" />
+		<skills>
+			<skill id="2281" lvl="1" />
+			<skill id="2283" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="8614" name="Herb of Recovery" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recovery_set_i00" />
+		<skills>
+			<skill id="2278" lvl="3" />
+			<skill id="2279" lvl="3" />
+		</skills>
+	</etcitem>
+	<etcitem id="8615" name="Summoning Crystal" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recall_crystal_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="35000" />
+	</etcitem>
+	<etcitem id="8616" name="Spellbook: Summon Friend" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_party_sommons_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="6250" />
+	</etcitem>
+	<etcitem id="8617" name="Spellbook: Word of Invitation" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_party_sommons_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="8700" />
+	</etcitem>
+	<etcitem id="8618" name="Ancient Book - Divine Inspiration (Modern Language Version)" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_add_buffslot_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8619" name="Ancient Book - Divine Inspiration (Original Language Version)" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_add_buffslot_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8620" name="Ancient Book - Divine Inspiration (Manuscript)" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_add_buffslot_i02" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8621" name="Ancient Book - Divine Inspiration (Original Version)" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_add_buffslot_i03" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8622" name="Elixir of Life (No Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_hp_potion_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1300" />
+		<skills>
+			<skill id="2287" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="8623" name="Elixir of Life (D-Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_hp_potion_i01" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="price" val="3450" />
+		<skills>
+			<skill id="2287" lvl="2" />
+		</skills>
+	</etcitem>
+	<etcitem id="8624" name="Elixir of Life (C-Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_hp_potion_i02" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="price" val="7200" />
+		<skills>
+			<skill id="2287" lvl="3" />
+		</skills>
+	</etcitem>
+	<etcitem id="8625" name="Elixir of Life (B-Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_hp_potion_i03" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="price" val="10000" />
+		<skills>
+			<skill id="2287" lvl="4" />
+		</skills>
+	</etcitem>
+	<etcitem id="8626" name="Elixir of Life (A-Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_hp_potion_i04" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="price" val="12500" />
+		<skills>
+			<skill id="2287" lvl="5" />
+		</skills>
+	</etcitem>
+	<etcitem id="8627" name="Elixir of Life (S-Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_hp_potion_i05" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="price" val="15000" />
+		<skills>
+			<skill id="2287" lvl="6" />
+		</skills>
+	</etcitem>
+	<etcitem id="8628" name="Elixir of Mental Strength (No Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_mp_potion_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1400" />
+		<skills>
+			<skill id="2288" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="8629" name="Elixir of Mental Strength (D-Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_mp_potion_i01" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="price" val="3400" />
+		<skills>
+			<skill id="2288" lvl="2" />
+		</skills>
+	</etcitem>
+	<etcitem id="8630" name="Elixir of Mental Strength (C-Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_mp_potion_i02" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="price" val="8700" />
+		<skills>
+			<skill id="2288" lvl="3" />
+		</skills>
+	</etcitem>
+	<etcitem id="8631" name="Elixir of Mental Strength (B-Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_mp_potion_i03" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="price" val="11600" />
+		<skills>
+			<skill id="2288" lvl="4" />
+		</skills>
+	</etcitem>
+	<etcitem id="8632" name="Elixir of Mental Strength (A-Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_mp_potion_i04" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="price" val="14400" />
+		<skills>
+			<skill id="2288" lvl="5" />
+		</skills>
+	</etcitem>
+	<etcitem id="8633" name="Elixir of Mental Strength (S-Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_mp_potion_i05" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="price" val="16800" />
+		<skills>
+			<skill id="2288" lvl="6" />
+		</skills>
+	</etcitem>
+	<etcitem id="8634" name="Elixir of CP (No Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_cp_potion_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="price" val="600" />
+		<skills>
+			<skill id="2289" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="8635" name="Elixir of CP (D-Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_cp_potion_i01" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="price" val="1400" />
+		<skills>
+			<skill id="2289" lvl="2" />
+		</skills>
+	</etcitem>
+	<etcitem id="8636" name="Elixir of CP (C-Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_cp_potion_i02" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="price" val="3000" />
+		<skills>
+			<skill id="2289" lvl="3" />
+		</skills>
+	</etcitem>
+	<etcitem id="8637" name="Elixir of CP (B-Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_cp_potion_i03" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="price" val="4000" />
+		<skills>
+			<skill id="2289" lvl="4" />
+		</skills>
+	</etcitem>
+	<etcitem id="8638" name="Elixir of CP (A-Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_cp_potion_i04" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="price" val="5000" />
+		<skills>
+			<skill id="2289" lvl="5" />
+		</skills>
+	</etcitem>
+	<etcitem id="8639" name="Elixir of CP (S-Grade)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_cp_potion_i05" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="price" val="6000" />
+		<skills>
+			<skill id="2289" lvl="6" />
+		</skills>
+	</etcitem>
+	<etcitem id="8640" name="Recipe: Elixir of Life (No Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="260" />
+	</etcitem>
+	<etcitem id="8641" name="Recipe: Elixir of Life (D-Grade)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="700" />
+	</etcitem>
+	<etcitem id="8642" name="Recipe: Elixir of Life (C-Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1440" />
+	</etcitem>
+	<etcitem id="8643" name="Recipe: Elixir of Life (B-Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2000" />
+	</etcitem>
+	<etcitem id="8644" name="Recipe: Elixir of Life (A-Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2500" />
+	</etcitem>
+	<etcitem id="8645" name="Recipe: Elixir of Life (S-Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="3000" />
+	</etcitem>
+	<etcitem id="8646" name="Recipe: Elixir of Mental Strength (No Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="280" />
+	</etcitem>
+	<etcitem id="8647" name="Recipe: Elixir of Mental Strength (D-Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="640" />
+	</etcitem>
+	<etcitem id="8648" name="Recipe: Elixir of Mental Strength (C-Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1760" />
+	</etcitem>
+	<etcitem id="8649" name="Recipe: Elixir of Mental Strength (B-Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2320" />
+	</etcitem>
+	<etcitem id="8650" name="Recipe: Elixir of Mental Strength (A-Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2880" />
+	</etcitem>
+	<etcitem id="8651" name="Recipe: Elixir of Mental Strength (S-Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="3360" />
+	</etcitem>
+	<etcitem id="8652" name="Recipe: Elixir of CP (No Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="120" />
+	</etcitem>
+	<etcitem id="8653" name="Recipe: Elixir of CP (D-Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="280" />
+	</etcitem>
+	<etcitem id="8654" name="Recipe: Elixir of CP (C-Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="600" />
+	</etcitem>
+	<etcitem id="8655" name="Recipe: Elixir of CP (B-Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="800" />
+	</etcitem>
+	<etcitem id="8656" name="Recipe: Elixir of CP (A-Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1000" />
+	</etcitem>
+	<etcitem id="8657" name="Recipe: Elixir of CP (S-Grade) (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1200" />
+	</etcitem>
+	<etcitem id="8658" name="Mysterious Solvent" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragon_blood_i00" />
+		<set name="class" val="MATHERIALS" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+		<set name="price" val="100" />
+	</etcitem>
+	<etcitem id="8659" name="Coffer of Shadows" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8663" name="Mystery Potion (Event)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lesser_potion_clear_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="50" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8664" name="Facelifting Potion - A (Event)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="50" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8665" name="Facelifting Potion - B (Event)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="50" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8666" name="Facelifting Potion - C (Event)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="50" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8667" name="Dye Potion - A (Event)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="50" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8668" name="Dye Potion - B (Event)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="50" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8669" name="Dye Potion - C (Event)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="50" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8670" name="Dye Potion - D (Event)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="50" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8671" name="Hair Style Change Potion - A (Event)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="50" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8672" name="Hair Style Change Potion - B (Event)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="50" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8673" name="Hair Style Change Potion - C (Event)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="50" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8674" name="Hair Style Change Potion - D (Event)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="50" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8675" name="Hair Style Change Potion - E (Event)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="50" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8676" name="Hair Style Change Potion - F (Event)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="50" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8677" name="Hair Style Change Potion - G (Event)" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="50" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="8690" name="Recipe: Sirra's Blade (60%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="706000" />
+	</etcitem>
+	<etcitem id="8691" name="Recipe: Sirra's Blade (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="706000" />
+	</etcitem>
+	<etcitem id="8692" name="Recipe: Sword of Ipos (60%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="706000" />
+	</etcitem>
+	<etcitem id="8693" name="Recipe: Sword of Ipos (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="706000" />
+	</etcitem>
+	<etcitem id="8694" name="Recipe: Barakiel's Axe (60%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="706000" />
+	</etcitem>
+	<etcitem id="8695" name="Recipe: Barakiel's Axe (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="706000" />
+	</etcitem>
+	<etcitem id="8696" name="Recipe: Behemoth's Tuning Fork (60%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="706000" />
+	</etcitem>
+	<etcitem id="8697" name="Recipe: Behemoth's Tuning Fork (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="706000" />
+	</etcitem>
+	<etcitem id="8698" name="Recipe: Naga Storm (60%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="706000" />
+	</etcitem>
+	<etcitem id="8699" name="Recipe: Naga Storm (100%)" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="706000" />
+	</etcitem>
+</list>

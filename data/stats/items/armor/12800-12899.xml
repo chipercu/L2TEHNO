@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<armor id="12811" name="Arcana Sigil" type="SIGIL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="arcana_sigil_i00" />
+		<set name="weight" val="940" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="161" />
+		<set name="avoid_modify" val="-8" />
+		<set name="p_def" val="13" />
+		<set name="price" val="3355000" />
+	</armor>
+	<armor id="12812" name="Dynasty Sigil" type="SIGIL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="dynasty_sigil_i00" />
+		<set name="weight" val="930" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="307" />
+		<set name="avoid_modify" val="-8" />
+		<set name="p_def" val="15" />
+		<set name="price" val="6404000" />
+	</armor>
+	<armor id="12813" name="Vesper Sigil" type="SIGIL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="verper_sigil_i00" />
+		<set name="weight" val="920" />
+		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="588" />
+		<set name="avoid_modify" val="-8" />
+		<set name="p_def" val="17" />
+		<set name="price" val="12250000" />
+	</armor>
+	<armor id="12815" name="Red Talisman - Max CP" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="TALISMAN" />
+		<set name="icon" val="icon.etc_talisman_i00" />
+		<set name="weight" val="150" />
+		<set name="durability" val="65" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3664" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="12816" name="Red Talisman - CP Regeneration" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="TALISMAN" />
+		<set name="icon" val="icon.etc_talisman_i00" />
+		<set name="weight" val="150" />
+		<set name="durability" val="65" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3665" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="12817" name="Yellow Talisman - Increase Force" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="TALISMAN" />
+		<set name="icon" val="icon.etc_talisman_i02" />
+		<set name="weight" val="150" />
+		<set name="durability" val="65" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3666" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="12818" name="Yellow Talisman - Damage Transition" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="TALISMAN" />
+		<set name="icon" val="icon.etc_talisman_i02" />
+		<set name="weight" val="150" />
+		<set name="durability" val="65" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3667" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="12835" name="Shadow Item - Teddy Bear Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_bear_cap_i00" />
+		<set name="weight" val="10" />
+		<set name="durability" val="300" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="12836" name="Shadow Item - Piggy Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_pig_cap_i00" />
+		<set name="weight" val="10" />
+		<set name="durability" val="300" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="12837" name="Shadow Item - Jester Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_jester_cap_i00" />
+		<set name="weight" val="10" />
+		<set name="durability" val="300" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="12838" name="Fish Hat (Event)" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_fish_cap_i00" />
+		<set name="weight" val="10" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="12839" name="Medieval Style Party Mask (Event)" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_middle_age_party_mask_i00" />
+		<set name="weight" val="10" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</armor>
+</list>

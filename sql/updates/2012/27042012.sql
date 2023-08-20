@@ -1,0 +1,1 @@
+ALTER TABLE `items` MODIFY COLUMN `name` varchar(100) NOT NULL DEFAULT '0';

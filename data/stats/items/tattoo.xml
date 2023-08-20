@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<item id="485" name="Tattoo of Power">
+		<add order="0x10" stat="p_physical_defence" val="53" />
+		<mul val='1.33' order='0x30' stat='p_physical_attack'/>
+		<enchant order="0x0C" stat="p_physical_defence" val="0" />
+	</item>
+	<item id="486" name="Tattoo of Fire">
+		<add order="0x10" stat="p_physical_defence" val="73" />
+		<add val='15' order='0x40' stat='reflectDam'/>
+		<mul val='1.05' order='0x20' stat='p_magical_defence'/>
+		<mul val='1.05' order='0x20' stat='p_magical_attack'/>
+	</item>
+	<item id="487" name="Tattoo of Resolve">
+		<add order="0x10" stat="p_physical_defence" val="73" />
+		<add val='33' order='0x10' stat='p_physical_attack'/>
+		<add val="33" order="0x40" stat='p_speed'/>
+		<mul val='1.05' order='0x20' stat='p_attack_speed'/>
+	</item>
+	<item id="488" name="Tattoo of Flame">
+		<add order="0x10" stat="p_physical_defence" val="139" />
+		<mul val='1.65' order='0x30' stat='p_magical_attack'/>
+		<mul val='1.45' order='0x20' stat='p_max_hp'/>
+	</item>
+	<item id="489" name="Tattoo of Bravery">
+		<add order="0x10" stat="p_physical_defence" val="110" />
+		<mul val='1.25' order='0x40' stat='p_critical_rate_per'/>
+		<mul val='1.10' order='0x20' stat='p_physical_attack'/>
+		<mul val='1.15' order='0x20' stat='p_max_hp'/>
+	</item>
+	<item id="490" name="Tattoo of Blood">
+		<add order="0x10" stat="p_physical_defence" val="132" />
+		<mul val='1.05' order='0x20' stat='p_attack_speed'/>
+		<mul val='1.15' order='0x20' stat='p_magic_speed'/>
+	</item>
+	<item id="491" name="Tattoo of Absolute">
+		<add order="0x10" stat="p_physical_defence" val="146" />
+		<mul val='1.15' order='0x20' stat='p_physical_attack'/>
+		<mul val='1.23' order='0x20' stat='p_max_hp'/>
+	</item>
+	<item id="492" name="Tattoo of Soul">
+		<add order="0x10" stat="p_physical_defence" val="65" />
+		<mul val='1.33' order='0x30' stat='p_attack_speed'/>
+	</item>
+	<item id="493" name="Tattoo of Avadon">
+		<add order="0x10" stat="p_physical_defence" val="117" />
+		<mul val='1.33' order='0x30' stat='p_magic_speed'/>
+		<mul val='1.10' order='0x20' stat='p_physical_attack'/>
+		<mul val='1.01' order='0x10' stat='p_attack_speed'/>
+	</item>
+	<item id="494" name="Tattoo of Doom">
+		<add order="0x10" stat="p_physical_defence" val="125" />
+		<add val='59' order='0x10' stat='p_physical_attack'/>
+	</item>
+	<item id="495" name="Tattoo of Pledge">
+		<add order="0x10" stat="p_physical_defence" val="124" />
+		<add val='7' order='0x40' stat='p_avoid'/>
+		<mul val='1.10' order='0x20' stat='p_magic_speed'/>
+		<mul val='2.10' order='0x20' stat='p_magical_attack'/>
+	</item>
+	<item id="496" name="Tattoo of Divine">
+		<add order="0x10" stat="p_physical_defence" val="131" />
+		<mul val='1.35' order='0x20' stat='p_magical_attack'/>
+	</item>
+</list>

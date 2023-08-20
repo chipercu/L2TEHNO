@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="632" type="PARTY_ONE">
+		<name lang="en" val="Necromancer's Request"/>
+		<name lang="ru" val="Просьба некроманта"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="21568"/>	<!-- Devil Bat -->
+			<event type="MOBKILLED" val="21573"/>	<!-- Atrox -->
+			<event type="MOBKILLED" val="21582"/>	<!-- Vampire Soldier -->
+			<event type="MOBKILLED" val="21585"/>	<!-- Vampire Magician -->
+			<event type="MOBKILLED" val="21586"/>	<!-- Vampire Adept -->
+			<event type="MOBKILLED" val="21587"/>	<!-- Vampire Warrior -->
+			<event type="MOBKILLED" val="21588"/>	<!-- Vampire Wizard -->
+			<event type="MOBKILLED" val="21589"/>	<!-- Vampire Wizard -->
+			<event type="MOBKILLED" val="21590"/>	<!-- Vampire Magister -->
+			<event type="MOBKILLED" val="21591"/>	<!-- Vampire Magister -->
+			<event type="MOBKILLED" val="21592"/>	<!-- Vampire Magister -->
+			<event type="MOBKILLED" val="21593"/>	<!-- Vampire Warlord -->
+			<event type="MOBKILLED" val="21594"/>	<!-- Vampire Warlord -->
+			<event type="MOBKILLED" val="21595"/>	<!-- Vampire Warlord -->
+			<event type="MOBKILLED" val="21547"/>	<!-- Corrupted Knight -->
+			<event type="MOBKILLED" val="21548"/>	<!-- Resurrected Knight -->
+			<event type="MOBKILLED" val="21549"/>	<!-- Corrupted Guard -->
+			<event type="MOBKILLED" val="21550"/>	<!-- Corrupted Guard -->
+			<event type="MOBKILLED" val="21551"/>	<!-- Resurrected Guard -->
+			<event type="MOBKILLED" val="21552"/>	<!-- Resurrected Guard -->
+			<event type="MOBKILLED" val="21555"/>	<!-- Slaughter Executioner -->
+			<event type="MOBKILLED" val="21556"/>	<!-- Slaughter Executioner -->
+			<event type="MOBKILLED" val="21562"/>	<!-- Guillotines Ghost -->
+			<event type="MOBKILLED" val="21571"/>	<!-- Ghost of Rebellion Soldier -->
+			<event type="MOBKILLED" val="21576"/>	<!-- Ghost of Guillotine  -->
+			<event type="MOBKILLED" val="21577"/>	<!-- Ghost of Guillotine  -->
+			<event type="MOBKILLED" val="21579"/>	<!-- Ghost of Rebellion Leader -->
+			<event type="QUEST_START" val="31522"/>	<!-- Mysterious Wizard -->
+			<event type="QUEST_TALK" val="31522"/>	<!-- Mysterious Wizard -->
+			<item id="7542"/>	<!-- Vampire's Heart -->
+			<item id="7543"/>	<!-- Zombie's Brain -->
+		</setting>
+	</quest>
+</quests>

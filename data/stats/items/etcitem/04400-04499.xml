@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="4400" name="White Fabric" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="4401" name="Green Dimensional Stone" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_gem_green_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="4402" name="Blue Dimensional Stone" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_gem_blue_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="4403" name="Red Dimensional Stone" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_gem_red_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="4404" name="Green Dimensional Stone - Shard" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10" />
+	</etcitem>
+	<etcitem id="4405" name="Blue Dimensional Stone - Shard" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_broken_crystal_blue_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10" />
+	</etcitem>
+	<etcitem id="4406" name="Red Dimensional Stone - Shard" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10" />
+	</etcitem>
+	<etcitem id="4407" name="Bill of Iason Heine" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10" />
+	</etcitem>
+	<etcitem id="4408" name="Musical Score - Theme of Love" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_musical_note_i01" />
+		<set name="weight" val="20" />
+		<set name="stackable" val="true" />
+		<set name="price" val="500" />
+	</etcitem>
+	<etcitem id="4409" name="Musical Score - Theme of Battle" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_musical_note_i01" />
+		<set name="weight" val="20" />
+		<set name="stackable" val="true" />
+		<set name="price" val="500" />
+	</etcitem>
+	<etcitem id="4410" name="Musical Score - Theme of Journey" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_musical_note_i01" />
+		<set name="weight" val="20" />
+		<set name="stackable" val="true" />
+		<set name="price" val="500" />
+	</etcitem>
+	<etcitem id="4411" name="Echo Crystal - Theme of Journey" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_echo_crystal_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<skills>
+			<skill id="2069" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="4412" name="Echo Crystal - Theme of Battle" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_echo_crystal_i01" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<skills>
+			<skill id="2068" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="4413" name="Echo Crystal - Theme of Love" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_echo_crystal_i02" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<skills>
+			<skill id="2070" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="4414" name="Echo Crystal - Theme of Solitude" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_echo_crystal_i03" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<skills>
+			<skill id="2072" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="4415" name="Echo Crystal - Theme of the Feast" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_echo_crystal_i04" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<skills>
+			<skill id="2071" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="4416" name="Echo Crystal - Theme of Celebration" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_echo_crystal_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<skills>
+			<skill id="2073" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="4417" name="Echo Crystal - Theme of Comedy" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_echo_crystal_i01" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<skills>
+			<skill id="2067" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="4418" name="Musical Score - Theme of Celebration" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_musical_note_i01" />
+		<set name="weight" val="20" />
+		<set name="stackable" val="true" />
+		<set name="price" val="500" />
+	</etcitem>
+	<etcitem id="4419" name="Musical Score - Theme of Comedy" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_musical_note_i01" />
+		<set name="weight" val="20" />
+		<set name="stackable" val="true" />
+		<set name="price" val="500" />
+	</etcitem>
+	<etcitem id="4420" name="Musical Score - Theme of Solitude" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_musical_note_i01" />
+		<set name="weight" val="20" />
+		<set name="stackable" val="true" />
+		<set name="price" val="500" />
+	</etcitem>
+	<etcitem id="4421" name="Musical Score - Theme of the Feast" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_musical_note_i02" />
+		<set name="weight" val="20" />
+		<set name="stackable" val="true" />
+		<set name="price" val="500" />
+	</etcitem>
+	<etcitem id="4422" name="Dragon Bugle of Wind" type="PET_COLLAR">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bugle_i00" />
+		<set name="weight" val="20" />
+		<set name="price" val="2000" />
+	</etcitem>
+	<etcitem id="4423" name="Dragon Bugle of Star" type="PET_COLLAR">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bugle_i00" />
+		<set name="weight" val="20" />
+		<set name="price" val="2000" />
+	</etcitem>
+	<etcitem id="4424" name="Dragon Bugle of Dusk" type="PET_COLLAR">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bugle_i00" />
+		<set name="weight" val="20" />
+		<set name="price" val="2000" />
+	</etcitem>
+	<etcitem id="4425" name="Penitent's Manacles" type="PET_COLLAR">
+		<!--Done By Drizzy (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_leash_i00" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="weight" val="800" />
+		
+	</etcitem>
+	<etcitem id="4426" name="Manacles of Penitent" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_leash_i00" />
+		<set name="weight" val="50" />
+		<set name="price" val="22000" />
+	</etcitem>
+	<etcitem id="4427" name="Alligator Leather Belt" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_prefect_belt_i00" />
+		<set name="weight" val="20" />
+		<set name="price" val="100" />
+	</etcitem>
+	<etcitem id="4428" name="Blue Alligator Leather Belt" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_prefect_belt_i00" />
+		<set name="weight" val="20" />
+		<set name="price" val="2000" />
+	</etcitem>
+	<etcitem id="4429" name="Bejeweled Leather Belt" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_prefect_belt_i00" />
+		<set name="weight" val="20" />
+		<set name="price" val="10000" />
+	</etcitem>
+	<etcitem id="4430" name="Alligator Leather Purse" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_handbag_i00" />
+		<set name="weight" val="20" />
+		<set name="price" val="200" />
+	</etcitem>
+	<etcitem id="4431" name="Blue Alligator Leather Purse" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_handbag_i00" />
+		<set name="weight" val="20" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="4432" name="Bejeweled Purse" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_handbag_i00" />
+		<set name="weight" val="20" />
+		<set name="price" val="20000" />
+	</etcitem>
+	<etcitem id="4433" name="Elemental Stone Powder" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_powder_white_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="50" />
+	</etcitem>
+	<etcitem id="4434" name="Elemental Stone Shards" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="500" />
+	</etcitem>
+	<etcitem id="4435" name="Elemental Stone Lump" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_crystal_green_i00" />
+		<set name="weight" val="1000" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5000" />
+	</etcitem>
+	<etcitem id="4436" name="Bentley's Request" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="4437" name="Carson's Request" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="4438" name="Knuckle Duster Edge" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="class" val="PIECES" />
+		<set name="weight" val="60" />
+		<set name="stackable" val="true" />
+		<set name="price" val="28044" />
+	</etcitem>
+	<etcitem id="4439" name="Avadon Shield Fragment" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="class" val="PIECES" />
+		<set name="weight" val="60" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2900" />
+	</etcitem>
+	<etcitem id="4440" name="Recipe: Knuckle Duster" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="57400" />
+	</etcitem>
+	<etcitem id="4441" name="Recipe: Avadon Shield" type="RECIPE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="class" val="RECIPIES" />
+		<set name="weight" val="30" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10900" />
+	</etcitem>
+	<etcitem id="4442" name="Lottery Ticket" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lottery_card_i00" />
+		<set name="weight" val="20" />
+		<set name="price" val="2" />
+	</etcitem>
+	<etcitem id="4443" name="Monster Race Ticket - Single" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_ticket_i00" />
+		<set name="weight" val="20" />
+		<set name="price" val="10" />
+	</etcitem>
+	<etcitem id="4444" name="Monster Race Ticket - Double" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_ticket_i00" />
+		<set name="weight" val="20" />
+		<set name="price" val="10" />
+	</etcitem>
+	<etcitem id="4445" name="Dye of STR &lt;Str+1 Con-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_str_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5100" />
+	</etcitem>
+	<etcitem id="4446" name="Dye of STR &lt;Str+1 Dex-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_str_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5100" />
+	</etcitem>
+	<etcitem id="4447" name="Dye of CON &lt;Con+1 Str-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_con_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5100" />
+	</etcitem>
+	<etcitem id="4448" name="Dye of CON &lt;Con+1 Dex-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_con_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5100" />
+	</etcitem>
+	<etcitem id="4449" name="Dye of DEX &lt;Dex+1 Str-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5100" />
+	</etcitem>
+	<etcitem id="4450" name="Dye of DEX &lt;Dex+1 Con-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5100" />
+	</etcitem>
+	<etcitem id="4451" name="Dye of INT &lt;Int+1 Men-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_int_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5100" />
+	</etcitem>
+	<etcitem id="4452" name="Dye of INT &lt;Int+1 Wit-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_int_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5100" />
+	</etcitem>
+	<etcitem id="4453" name="Dye of MEN &lt;Men+1 Int-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_men_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5100" />
+	</etcitem>
+	<etcitem id="4454" name="Dye of MEN &lt;Men+1 Wit-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_men_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5100" />
+	</etcitem>
+	<etcitem id="4455" name="Dye of WIT &lt;Wit+1 Int-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5100" />
+	</etcitem>
+	<etcitem id="4456" name="Dye of WIT &lt;Wit+1 Men-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5100" />
+	</etcitem>
+	<etcitem id="4457" name="Dye of STR &lt;Str+1 Con-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_str_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4458" name="Dye of STR &lt;Str+1 Dex-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_str_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4459" name="Dye of CON &lt;Con+1 Str-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_con_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4460" name="Dye of CON &lt;Con+1 Dex-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_con_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4461" name="Dye of DEX &lt;Dex+1 Str-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4462" name="Dye of DEX &lt;Dex+1 Con-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4463" name="Dye of INT &lt;Int+1 Men-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_int_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4464" name="Dye of INT &lt;Int+1 Wit-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_int_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4465" name="Dye of MEN &lt;Men+1 Int-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_men_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4466" name="Dye of MEN &lt;Men+1 Wit-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_men_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4467" name="Dye of WIT &lt;Wit+1 Int-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4468" name="Dye of WIT &lt;Wit+1 Men-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4469" name="Dye of STR &lt;Str+1 Con-1&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_str_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="35000" />
+	</etcitem>
+	<etcitem id="4470" name="Dye of STR &lt;Str+1 Dex-1&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_str_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="35000" />
+	</etcitem>
+	<etcitem id="4471" name="Dye of CON &lt;Con+1 Str-1&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_con_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="35000" />
+	</etcitem>
+	<etcitem id="4472" name="Dye of CON &lt;Con+1 Dex-1&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_con_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="35000" />
+	</etcitem>
+	<etcitem id="4473" name="Dye of DEX &lt;Dex+1 Str-1&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="35000" />
+	</etcitem>
+	<etcitem id="4474" name="Dye of DEX &lt;Dex+1 Con-1&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="35000" />
+	</etcitem>
+	<etcitem id="4475" name="Dye of INT &lt;Int+1 Men-1&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_int_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="35000" />
+	</etcitem>
+	<etcitem id="4476" name="Dye of INT &lt;Int+1 Wit-1&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_int_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="35000" />
+	</etcitem>
+	<etcitem id="4477" name="Dye of MEN &lt;Men+1 Int-1&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_men_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="35000" />
+	</etcitem>
+	<etcitem id="4478" name="Dye of MEN &lt;Men+1 Wit-1&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_men_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="35000" />
+	</etcitem>
+	<etcitem id="4479" name="Dye of WIT &lt;Wit+1 Int-1&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="35000" />
+	</etcitem>
+	<etcitem id="4480" name="Dye of WIT &lt;Wit+1 Men-1&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="35000" />
+	</etcitem>
+	<etcitem id="4481" name="Greater Dye of STR &lt;Str+1 Con-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_str_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4482" name="Greater Dye of STR &lt;Str+1 Dex-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_str_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4483" name="Greater Dye of CON&lt;Con+1 Str-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_con_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4484" name="Greater Dye of CON&lt;Con+1 Dex-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_con_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4485" name="Greater Dye of DEX &lt;Dex+1 Str-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dex_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4486" name="Greater Dye of DEX &lt;Dex+1 Con-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dex_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4487" name="Greater Dye of INT &lt;Int+1 Men-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_int_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4488" name="Greater Dye of INT &lt;Int+1 Wit-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_int_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4489" name="Greater Dye of MEN &lt;Men+1 Int-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_men_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4490" name="Greater Dye of MEN &lt;Men+1 Wit-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_men_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4491" name="Greater Dye of WIT &lt;Wit+1 Int-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_wit_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4492" name="Greater Dye of WIT &lt;Wit+1 Men-3&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_wit_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="12000" />
+	</etcitem>
+	<etcitem id="4493" name="Greater Dye of STR &lt;Str+1 Con-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_str_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="21000" />
+	</etcitem>
+	<etcitem id="4494" name="Greater Dye of STR &lt;Str+1 Dex-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_str_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="21000" />
+	</etcitem>
+	<etcitem id="4495" name="Greater Dye of CON &lt;Con+1 Str-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_con_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="21000" />
+	</etcitem>
+	<etcitem id="4496" name="Greater Dye of CON &lt;Con+1 Dex-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_con_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="21000" />
+	</etcitem>
+	<etcitem id="4497" name="Greater Dye of DEX &lt;Dex+1 Str-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dex_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="21000" />
+	</etcitem>
+	<etcitem id="4498" name="Greater Dye of DEX &lt;Dex+1 Con-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dex_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="21000" />
+	</etcitem>
+	<etcitem id="4499" name="Greater Dye of INT &lt;Int+1 Men-2&gt;" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_int_hena_i01" />
+		<set name="class" val="MISC" />
+		<set name="weight" val="150" />
+		<set name="stackable" val="true" />
+		<set name="price" val="21000" />
+	</etcitem>
+</list>

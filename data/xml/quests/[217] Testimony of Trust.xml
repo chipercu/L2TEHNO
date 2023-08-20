@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="217" type="SOLO">
+		<name lang="en" val="Testimony of Trust"/>
+		<name lang="ru" val="Испытание доверия"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20013"/>	<!-- Dryad -->
+			<event type="MOBKILLED" val="20157"/>	<!-- Marsh Stakato -->
+			<event type="MOBKILLED" val="20019"/>	<!-- Dryad Elder -->
+			<event type="MOBKILLED" val="20213"/>	<!-- Porta -->
+			<event type="MOBKILLED" val="20230"/>	<!-- Marsh Stakato Worker -->
+			<event type="MOBKILLED" val="20232"/>	<!-- Marsh Stakato Soldier -->
+			<event type="MOBKILLED" val="20234"/>	<!-- Marsh Stakato Drone -->
+			<event type="MOBKILLED" val="20036"/>	<!-- Lirein -->
+			<event type="MOBKILLED" val="20044"/>	<!-- Lirein Elder -->
+			<event type="MOBKILLED" val="27120"/>	<!-- Luell Of Zephyr Winds -->
+			<event type="MOBKILLED" val="27121"/>	<!-- Actea Of Verdant Wilds -->
+			<event type="MOBKILLED" val="20550"/>	<!-- Guardian Basilisk -->
+			<event type="MOBKILLED" val="20553"/>	<!-- Windsus -->
+			<event type="MOBKILLED" val="20082"/>	<!-- Ant Recruit -->
+			<event type="MOBKILLED" val="20084"/>	<!-- Ant Patrol -->
+			<event type="MOBKILLED" val="20086"/>	<!-- Ant Guard -->
+			<event type="MOBKILLED" val="20087"/>	<!-- Ant Soldier -->
+			<event type="MOBKILLED" val="20088"/>	<!-- Ant Warrior Captain -->
+			<event type="QUEST_START" val="30191"/>	<!-- Hollint -->
+			<event type="QUEST_TALK" val="30191"/>	<!-- Hollint -->
+			<event type="QUEST_TALK" val="30031"/>	<!-- Biotin -->
+			<event type="QUEST_TALK" val="30154"/>	<!-- Asterios -->
+			<event type="QUEST_TALK" val="30358"/>	<!-- Thifiell -->
+			<event type="QUEST_TALK" val="30464"/>	<!-- Clayton -->
+			<event type="QUEST_TALK" val="30515"/>	<!-- Manakia -->
+			<event type="QUEST_TALK" val="30531"/>	<!-- Lockirin -->
+			<event type="QUEST_TALK" val="30565"/>	<!-- Kakai -->
+			<event type="QUEST_TALK" val="30621"/>	<!-- Nikola -->
+			<event type="QUEST_TALK" val="30657"/>	<!-- Seresin -->
+			<item id="2740"/>	<!-- Scroll of Dark Elf Trust -->
+			<item id="2741"/>	<!-- Scroll of Elf Trust -->
+			<item id="2742"/>	<!-- Scroll of Dwarf Trust -->
+			<item id="2743"/>	<!-- Scroll of Orc Trust -->
+			<item id="2746"/>	<!-- Breath of Winds -->
+			<item id="2747"/>	<!-- Seed of Verdure -->
+			<item id="2745"/>	<!-- Order of Asterios -->
+			<item id="1558"/>	<!-- Letter to Elf -->
+			<item id="2755"/>	<!-- Order of Clayton -->
+			<item id="2752"/>	<!-- Basilisk Plasma -->
+			<item id="2754"/>	<!-- Stakato Ichor -->
+			<item id="2753"/>	<!-- Honey Dew -->
+			<item id="1556"/>	<!-- Letter to Dark Elf -->
+			<item id="2748"/>	<!-- Letter from Thifiell -->
+			<item id="2739"/>	<!-- Letter to Seresin -->
+			<item id="2738"/>	<!-- Letter to Orc -->
+			<item id="2758"/>	<!-- Letter of Manakia -->
+			<item id="2757"/>	<!-- Letter to Manakia -->
+			<item id="2756"/>	<!-- Parasite of Lota -->
+			<item id="2737"/>	<!-- Letter to Dwarf -->
+			<item id="2759"/>	<!-- Letter to Nikola -->
+			<item id="2761"/>	<!-- Heartstone of Porta -->
+			<item id="2760"/>	<!-- Order of Nikola -->
+			<item id="2744"/>	<!-- Recommendation of Hollint -->
+			<item id="2749"/>	<!-- Blood of Guardian Basilisk -->
+			<item id="2751"/>	<!-- Stakatos Fluids -->
+			<item id="2750"/>	<!-- Giant Aphid -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="25" type="SOLO">
+		<name lang="en" val="Hiding Behind the Truth"/>
+		<name lang="ru" val="Поиски правды"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="27218"/>	<!-- Triols Pawn -->
+			<event type="QUEST_START" val="31349"/>	<!-- Benedict -->
+			<event type="QUEST_TALK" val="31349"/>	<!-- Benedict -->
+			<event type="QUEST_TALK" val="31348"/>	<!-- Agripel -->
+			<event type="QUEST_TALK" val="31534"/>	<!-- Broken Bookshelf -->
+			<event type="QUEST_TALK" val="31536"/>	<!-- Coffin -->
+			<event type="QUEST_TALK" val="31532"/>	<!-- Maid of Lidia -->
+			<event type="QUEST_TALK" val="31522"/>	<!-- Mysterious Wizard -->
+			<event type="QUEST_TALK" val="31531"/>	<!-- Tombstone -->
+			<item id="7066"/>	<!-- Contract -->
+			<item id="7157"/>	<!-- Gemstone Key -->
+			<item id="7155"/>	<!-- Lidia's Dress -->
+			<item id="7063"/>	<!-- Map - Forest of the Dead -->
+			<item id="7158"/>	<!-- Suspicious Totem Doll -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="221" type="SOLO">
+		<name lang="en" val="Testimony of Prosperity"/>
+		<name lang="ru" val="Испытание успеха"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20154"/>	<!-- Mandragora Sprout -->
+			<event type="MOBKILLED" val="20155"/>	<!-- Mandragora Sapling -->
+			<event type="MOBKILLED" val="20156"/>	<!-- Mandragora Blossom -->
+			<event type="MOBKILLED" val="20223"/>	<!-- Mandragora Sprout -->
+			<event type="MOBKILLED" val="20228"/>	<!-- Giant Crimson Ant -->
+			<event type="MOBKILLED" val="20157"/>	<!-- Marsh Stakato -->
+			<event type="MOBKILLED" val="20230"/>	<!-- Marsh Stakato Worker -->
+			<event type="MOBKILLED" val="20232"/>	<!-- Marsh Stakato Soldier -->
+			<event type="MOBKILLED" val="20234"/>	<!-- Marsh Stakato Drone -->
+			<event type="MOBKILLED" val="20231"/>	<!-- Toad Lord -->
+			<event type="MOBKILLED" val="20233"/>	<!-- Marsh Spider -->
+			<event type="QUEST_START" val="30104"/>	<!-- Parman -->
+			<event type="QUEST_TALK" val="30104"/>	<!-- Parman -->
+			<event type="QUEST_TALK" val="30466"/>	<!-- Bright -->
+			<event type="QUEST_TALK" val="30620"/>	<!-- Emily -->
+			<event type="QUEST_TALK" val="30597"/>	<!-- Piotur -->
+			<event type="QUEST_TALK" val="30005"/>	<!-- Wilford -->
+			<event type="QUEST_TALK" val="30368"/>	<!-- Lilith -->
+			<event type="QUEST_TALK" val="30517"/>	<!-- Shari -->
+			<event type="QUEST_TALK" val="30519"/>	<!-- Mion -->
+			<event type="QUEST_TALK" val="30531"/>	<!-- Lockirin -->
+			<event type="QUEST_TALK" val="30532"/>	<!-- Spiron -->
+			<event type="QUEST_TALK" val="30533"/>	<!-- Balanki -->
+			<event type="QUEST_TALK" val="30534"/>	<!-- Keef -->
+			<event type="QUEST_TALK" val="30535"/>	<!-- Filaur -->
+			<event type="QUEST_TALK" val="30536"/>	<!-- Arin -->
+			<event type="QUEST_TALK" val="30553"/>	<!-- Maryse Redbonnet -->
+			<event type="QUEST_TALK" val="30554"/>	<!-- Bolter -->
+			<event type="QUEST_TALK" val="30555"/>	<!-- Torocco -->
+			<event type="QUEST_TALK" val="30556"/>	<!-- Toma -->
+			<event type="QUEST_TALK" val="30621"/>	<!-- Nikola -->
+			<event type="QUEST_TALK" val="30622"/>	<!-- Box Of Titan -->
+			<item id="3239"/>	<!-- 1st Ring of Testimony -->
+			<item id="3264"/>	<!-- Bright's List -->
+			<item id="3267"/>	<!-- Mandragora Bouquet -->
+			<item id="3242"/>	<!-- Blessed Seed -->
+			<item id="3243"/>	<!-- Emily's Recipe -->
+			<item id="3428"/>	<!-- Crystal Brooch -->
+			<item id="3244"/>	<!-- Lilith's Elven Wafer -->
+			<item id="3246"/>	<!-- Collection License -->
+			<item id="3247"/>	<!-- Lockirin's 1st Notice -->
+			<item id="3248"/>	<!-- Lockirin's 2nd Notice -->
+			<item id="3249"/>	<!-- Lockirin's 3rd Notice -->
+			<item id="3250"/>	<!-- Lockirin's 4th Notice -->
+			<item id="3251"/>	<!-- Lockirin's 5th Notice -->
+			<item id="3258"/>	<!-- 1st Receipt of Contribution -->
+			<item id="3259"/>	<!-- 2nd Receipt of Contribution -->
+			<item id="3260"/>	<!-- 3rd Receipt of Contribution -->
+			<item id="3261"/>	<!-- 4th Receipt of Contribution -->
+			<item id="3262"/>	<!-- 5th Receipt of Contribution -->
+			<item id="3241"/>	<!-- Old Account Book -->
+			<item id="3252"/>	<!-- Contribution of Shari -->
+			<item id="3254"/>	<!-- Contribution of Maryse -->
+			<item id="3253"/>	<!-- Contribution of Mion -->
+			<item id="3263"/>	<!-- Procuration of Torocco -->
+			<item id="3257"/>	<!-- Receipt of Bolter -->
+			<item id="3256"/>	<!-- Contribution of Toma -->
+			<item id="3255"/>	<!-- Maryse's Request -->
+			<item id="3268"/>	<!-- Parman's Instructions -->
+			<item id="3240"/>	<!-- 2nd Ring of Testimony -->
+			<item id="3245"/>	<!-- Maphr Tablet Fragment -->
+			<item id="3271"/>	<!-- Pattern of Keyhole -->
+			<item id="3270"/>	<!-- Clay Dough -->
+			<item id="3272"/>	<!-- Nikolas' List -->
+			<item id="3265"/>	<!-- Mandragora Petal -->
+			<item id="3266"/>	<!-- Crimson Moss -->
+			<item id="3273"/>	<!-- Stakato Shell -->
+			<item id="3274"/>	<!-- Toad Lord Sac -->
+			<item id="3275"/>	<!-- Spider Thorn -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="111" type="PARTY_ONE">
+		<name lang="en" val="Elrokian Hunter's Proof"/>
+		<name lang="ru" val="Испытание охотников племени Элроки"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="22196"/>	<!-- Velociraptor -->
+			<event type="MOBKILLED" val="22197"/>	<!-- Velociraptor -->
+			<event type="MOBKILLED" val="22198"/>	<!-- Velociraptor -->
+			<event type="MOBKILLED" val="22218"/>	<!-- Velociraptor -->
+			<event type="MOBKILLED" val="22200"/>	<!-- Ornithomimus -->
+			<event type="MOBKILLED" val="22201"/>	<!-- Ornithomimus -->
+			<event type="MOBKILLED" val="22202"/>	<!-- Ornithomimus -->
+			<event type="MOBKILLED" val="22219"/>	<!-- Ornithomimus -->
+			<event type="MOBKILLED" val="22208"/>	<!-- Pachycephalosaurus -->
+			<event type="MOBKILLED" val="22209"/>	<!-- Pachycephalosaurus -->
+			<event type="MOBKILLED" val="22210"/>	<!-- Pachycephalosaurus -->
+			<event type="MOBKILLED" val="22221"/>	<!-- Pachycephalosaurus -->
+			<event type="MOBKILLED" val="22226"/>	<!-- Pachycephalosaurus -->
+			<event type="MOBKILLED" val="22203"/>	<!-- Deinonychus -->
+			<event type="MOBKILLED" val="22204"/>	<!-- Deinonychus -->
+			<event type="MOBKILLED" val="22205"/>	<!-- Deinonychus -->
+			<event type="MOBKILLED" val="22220"/>	<!-- Deinonychus -->
+			<event type="QUEST_START" val="32113"/>	<!-- Marquez -->
+			<event type="QUEST_TALK" val="32113"/>	<!-- Marquez -->
+			<event type="QUEST_TALK" val="32114"/>	<!-- Mushika -->
+			<event type="QUEST_TALK" val="32115"/>	<!-- Asamah -->
+			<event type="QUEST_TALK" val="32116"/>	<!-- Kirikachin -->
+			<item id="8768"/>	<!-- Diary Fragment -->
+			<item id="8769"/>	<!-- Expedition Member's Letter -->
+			<item id="8770"/>	<!-- Ornithomimus Claw -->
+			<item id="8771"/>	<!-- Deinonychus Bone -->
+			<item id="8772"/>	<!-- Pachycephalosaurus Skin -->
+			<item id="8773"/>	<!-- Practice Elrokian Trap -->
+		</setting>
+	</quest>
+</quests>

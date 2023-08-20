@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="21874" name="Medal of Glory" type="QUEST">
+		<set name="icon" val="icon.etc_old_key_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="21895" name="Scroll: Valakas Call" type="SCROLL">
+		<!-- Description: One-time use scroll that teleports you to Watcher of Valakas Klein in the Hall of Flames.-->
+		<set name="icon" val="icon.call_of_fire_dragon" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="22290" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21896" name="Jewel of Valakas" type="SCROLL">
+		<!-- Description: Mysterious jewel that teleports you to Watcher of Valakas Klein in the Hall of Flames. Re-use time is 60 minutes.-->
+		<set name="icon" val="icon.orb_of_fire_dragon" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="false" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="22291" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21897" name="Scroll: Antharas Call" type="SCROLL">
+		<!-- Description: One-time use scroll that teleports you to the entrance to Antharas's Lair.-->
+		<set name="icon" val="icon.call_of_earth_dragon" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="22292" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21898" name="Jewel of Antharas" type="SCROLL">
+		<!-- Description: Mysterious jewel that teleports you to the entrance to Antharas's Lair. Re-use time is 60 minutes.-->
+		<set name="icon" val="icon.orb_of_earth_dragon" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="false" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="22293" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21899" name="Totem of Body" type="OTHER">
+		<set name="icon" val="BranchSys2.icon.totem_of_body"/>
+		<set name="weight" val="10"/>
+		<set name="stackable" val="true"/>
+		<set name="crystal_type" val="NONE"/>
+		<set name="sellable" val="false"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<cond msgId="1508">
+			<not>
+				<zone type="OlympiadStadia"/> 
+			</not>
+		</cond>
+	</etcitem>
+</list>

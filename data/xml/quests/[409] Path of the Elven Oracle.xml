@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="409" type="SOLO">
+		<name lang="en" val="Path of the Elven Oracle"/>
+		<name lang="ru" val="Путь Оракула Евы"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="27032"/>	<!-- Lizardman Warrior -->
+			<event type="MOBKILLED" val="27033"/>	<!-- Lizardman Scout -->
+			<event type="MOBKILLED" val="27034"/>	<!-- Lizardman -->
+			<event type="MOBKILLED" val="27035"/>	<!-- Tamil -->
+			<event type="QUEST_START" val="30293"/>	<!-- Manuel -->
+			<event type="QUEST_TALK" val="30293"/>	<!-- Manuel -->
+			<event type="QUEST_TALK" val="30424"/>	<!-- Allana -->
+			<event type="QUEST_TALK" val="30428"/>	<!-- Perrin -->
+			<item id="1232"/>	<!-- Swindler's Money -->
+			<item id="1233"/>	<!-- Allana's Diary -->
+			<item id="1234"/>	<!-- Lizard Captain Order -->
+			<item id="1231"/>	<!-- Crystal Medallion -->
+			<item id="1236"/>	<!-- Half of Diary -->
+			<item id="1275"/>	<!-- Tamil's Necklace -->
+		</setting>
+	</quest>
+</quests>

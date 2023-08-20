@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="9" type="SOLO">
+		<name lang="en" val="Into the City of Humans"/>
+		<name lang="ru" val="В город людей"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="30583"/>	<!-- Petukai -->
+			<event type="QUEST_TALK" val="30583"/>	<!-- Petukai -->
+			<event type="QUEST_TALK" val="30583"/>	<!-- Petukai -->
+			<event type="QUEST_TALK" val="30571"/>	<!-- Tanapi -->
+			<event type="QUEST_TALK" val="30576"/>	<!-- Tamil -->
+		</setting>
+	</quest>
+</quests>

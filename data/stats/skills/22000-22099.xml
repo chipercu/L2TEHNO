@@ -1,0 +1,1303 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<skill id="22000" levels="1" name="Spicy Kimchee">
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: Temporarily increases regeneration. Effect 1.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 04-11-2008  23:21
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22001" levels="1" name="Spicy Kimchee">
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: Temporarily increases regeneration and power. Effect 2.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 04-11-2008  23:21
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22002" levels="1" name="Spicy Kimchee">
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: "Temporarily increases regeneration, power and power speed. Effect 3."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 04-11-2008  23:21
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22003" levels="1" name="Sweet-and-Sour White Kimchee">
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: Increases the effective time of Spicy Kimchee.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 04-11-2008  23:21
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22004" levels="1" name="Energy Ginseng">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22005" levels="1" name="Energy Red Ginseng">
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="give" val="300" />
+		<set name="skillType" val="GIVE_VITALITY" />
+		<set name="target" val="TARGET_SELF" />
+	</skill>
+	<skill id="22006" levels="1" name="Halloween Candy" >
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="give" val="10000" />
+		<set name="skillType" val="GIVE_VITALITY" />
+		<set name="target" val="TARGET_SELF" />
+	</skill>
+	<skill id="22007" levels="1" name="Good Luck Lucky Bag" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22008" levels="1" name="Lucky Four-leaf Clover" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22009" levels="1" name="Holiday Miracle" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22010" levels="1" name="Mysterious Formal Dress" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22011" levels="1" name="Santa Claus' Gift - Joy" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22012" levels="1" name="Santa Claus' Gift - Enjoyment" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22013" levels="1" name="Holiday Festival" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: "Max HP/MP/CP, Physical/Defense Power, Moving Speed and P. Atk. are increased, and MP consumption for skills is decreased. Effect 3."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22014" levels="1" name="Holiday Festival" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: "Max HP/MP/CP, Physical/Defense Power, Moving Speed and P. Atk. are increased, and MP consumption for skills is decreased. Effect 3."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22015" levels="1" name="Holiday Festival" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: "Max HP/MP/CP, Physical/Defense Power and Moving Speed are increased, and MP consumption for skills is decreased. Effect 3."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22016" levels="1" name="Holiday Festival" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: "Max HP/MP/CP, Physical/Defense Power, Moving Speed and M. Atk. are increased, and MP consumption for skills is decreased. Effect 3."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22017" levels="1" name="Santa Claus' Gift - Luck" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22018" levels="1" name="Santa Claus' Gift - Luck" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22019" levels="1" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss)" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22020" levels="1" name="Extra Entrance Pass - Near Kamaloka" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22021" levels="1" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss)" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22022" levels="1" name="Premium Valentine Decoration" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 14-2-2009  21:42
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22023" levels="1" name="Simple Valentine Cake" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 14-2-2009  21:42
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22024" levels="1" name="Velvety Valentine Cake" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 14-2-2009  21:42
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22025" levels="1" name="Delectable Valentine Cake" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 14-2-2009  21:42
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22026" levels="1" name="Decadent Valentine Cake" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 14-2-2009  21:42
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22027" levels="1" name="Heavenly Valentine Cake" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 14-2-2009  21:42
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22028" levels="1" name="Chocolate Cookie" >
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="give" val="10000" />
+		<set name="skillType" val="GIVE_VITALITY" />
+		<set name="target" val="TARGET_SELF" />
+	</skill>
+	<skill id="22029" levels="1" name="Baguette Herb" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: Temporarily increases Atk. Spd.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 14-2-2009  21:42
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22030" levels="1" name="Cream Puff Herb" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: Recovers Vitality upon acquiring Exp. points.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 14-2-2009  21:42
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22031" levels="1" name="Buttery Herb" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: Temporarily increases Magic Casting Speed.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 14-2-2009  21:42
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22032" levels="1" name="Baguette Legacy" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 14-2-2009  21:42
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22033" levels="1" name="Baguette Legacy - Kamael" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 14-2-2009  21:42
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22034" levels="1" name="Birthday Cake">
+		<!-- Confirmed CT2.5 -->
+		<!-- Birthday Skill -->
+		<set name="despawnDelay" val="1200000" />
+		<set name="isSummonSpawn" val="true" />
+		<set name="itemConsumeId" val="20320" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="npcId" val="106" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="SPAWN" />
+		<set name="target" val="TARGET_SELF" />
+	</skill>
+	<skill id="22035" levels="1" name="Birthday Cake Effect" >
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="cancelable" val="false"/>
+		<for>
+			<effect name="Vitality" stackType="vitalityRegen" stackOrder="1" time="1200" />
+		</for>
+	</skill>
+	<skill id="22036" levels="1" name="Beast Soulshot" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22037" levels="1" name="Beast Spiritshot" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22038" levels="1" name="Blessed Beast Spiritshot" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: none
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22039" levels="2" name="Rune of Experience Points 30%" >
+		<!--
+		      Description: Acquired Experience Points increase by 30%,50%.
+		-->
+		<table name="#power">0.3 0.5</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="ExpMultiplier" val="#power"/>
+		</for>
+	</skill>
+	<skill id="22040" levels="2" name="Rune of SP 30%" >
+		<!--
+		      Description: Acquired SP increase by 30%,50%.
+		-->
+		<table name="#power">0.3 0.5</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="SpMultiplier" val="#power"/>
+		</for>
+	</skill>
+	<skill id="22041" levels="2" name="Rune of Crystal Form Level 3" >
+		<!--
+		      Description: One's Grade Penalty decreases by 3,5 level.
+		-->
+		<table name="#power">3 5</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="gradeExpertiseLevel" val="#power"/>
+		</for>
+	</skill>
+	<skill id="22042" levels="1" name="High Grade Potion of Will" >
+		<set name="itemConsumeId" val="20353"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="power" val="200"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="COMBATPOINTHEAL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+		<for />
+	</skill>
+	<skill id="22043" levels="6" name="Secret medicine of Will - D grade" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: start - 2lvl.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22044" levels="6" name="Secret medicine of Life - D grade" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: start - 2lvl.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22045" levels="1" name="Omen Beast Transformation Scroll">
+		<!-- Done by Magister Description: Transformed into Omen Beast.-->
+		<set name="itemConsumeId" val="20364"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="584;1;585;1;5491;1"/>
+		<set name="npcId" val="13077"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="1">
+				<set order="0x08" stat="STR" val="40"/>
+				<set order="0x08" stat="DEX" val="30"/>
+				<set order="0x08" stat="CON" val="43"/>
+				<set order="0x08" stat="INT" val="21"/>
+				<set order="0x08" stat="WIT" val="11"/>
+				<set order="0x08" stat="MEN" val="25"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22046" levels="1" name="Death Blader Transformation Scroll">
+		<!-- Done by Magister Description: Transformed into Death Blader.-->
+		<set name="itemConsumeId" val="20365"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="586;1;587;1;588;1;589;1;5491;1"/>
+		<set name="npcId" val="13078"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="2">
+				<set order="0x08" stat="STR" val="40"/>
+				<set order="0x08" stat="DEX" val="30"/>
+				<set order="0x08" stat="CON" val="43"/>
+				<set order="0x08" stat="INT" val="21"/>
+				<set order="0x08" stat="WIT" val="11"/>
+				<set order="0x08" stat="MEN" val="25"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22047" levels="1" name="Grail Apostle Transformation Scroll">
+		<!-- Done by Magister Description: Transformed into Grail Apostle.-->
+		<set name="itemConsumeId" val="20366"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="559;2;560;2;561;2;562;2;5491;1"/>
+		<set name="npcId" val="13080"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="202">
+				<set order="0x08" stat="STR" val="40"/>
+				<set order="0x08" stat="DEX" val="30"/>
+				<set order="0x08" stat="CON" val="43"/>
+				<set order="0x08" stat="INT" val="21"/>
+				<set order="0x08" stat="WIT" val="11"/>
+				<set order="0x08" stat="MEN" val="25"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22048" levels="1" name="Unicorn Transformation Scroll" >
+		<!--
+			Last modify:	SYS, 09.03.2010
+		-->
+		<set name="itemConsumeId" val="20367"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="563;3;565;3;564;3;567;3"/>
+		<set name="npcId" val="13081"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="204">
+				<set order="0x08" stat="STR" val="36"/>
+				<set order="0x08" stat="DEX" val="33"/>
+				<set order="0x08" stat="CON" val="38"/>
+				<set order="0x08" stat="INT" val="23"/>
+				<set order="0x08" stat="WIT" val="14"/>
+				<set order="0x08" stat="MEN" val="26"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22049" levels="1" name="Lilim Knight Transformation Scroll">
+		<!-- Done by Magister Description: Transformed into Lilim Knight.-->
+		<set name="itemConsumeId" val="20368"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="568;2;569;2;570;3;571;2;5491;1"/>
+		<set name="npcId" val="13082"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="208">
+				<set order="0x08" stat="STR" val="41"/>
+				<set order="0x08" stat="DEX" val="34"/>
+				<set order="0x08" stat="CON" val="32"/>
+				<set order="0x08" stat="INT" val="25"/>
+				<set order="0x08" stat="WIT" val="12"/>
+				<set order="0x08" stat="MEN" val="26"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22050" levels="1" name="Golem Guardian Transformation Scroll">
+		<!-- Done by Magister Description: Transformed into Golem Guardian.-->
+		<set name="itemConsumeId" val="20369"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="572;2;573;2;574;2;575;2;5491;1"/>
+		<set name="npcId" val="13083"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="211">
+				<set order="0x08" stat="STR" val="39"/>
+				<set order="0x08" stat="DEX" val="29"/>
+				<set order="0x08" stat="CON" val="45"/>
+				<set order="0x08" stat="INT" val="20"/>
+				<set order="0x08" stat="WIT" val="10"/>
+				<set order="0x08" stat="MEN" val="27"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22051" levels="1" name="Inferno Drake Transformation Scroll">
+		<!-- Done by Magister Description: Transformed into Inferno Drake.-->
+		<set name="itemConsumeId" val="20370"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="576;2;577;2;578;2;579;2;5491;1"/>
+		<set name="npcId" val="13084"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="214">
+				<set order="0x08" stat="STR" val="40"/>
+				<set order="0x08" stat="DEX" val="26"/>
+				<set order="0x08" stat="CON" val="47"/>
+				<set order="0x08" stat="INT" val="18"/>
+				<set order="0x08" stat="WIT" val="12"/>
+				<set order="0x08" stat="MEN" val="27"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22052" levels="1" name="Dragon Bomber Transformation Scroll" >
+		<!--
+			Last modify:	SYS, 09.03.2010
+		-->
+		<set name="itemConsumeId" val="20371"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="580;3;581;3;582;3;583;3"/>
+		<set name="npcId" val="13085"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="216">
+				<set order="0x08" stat="STR" val="41"/>
+				<set order="0x08" stat="DEX" val="31"/>
+				<set order="0x08" stat="CON" val="33"/>
+				<set order="0x08" stat="INT" val="29"/>
+				<set order="0x08" stat="WIT" val="11"/>
+				<set order="0x08" stat="MEN" val="25"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22053" levels="19" name="Escape - Talking Island Village" >
+		<!--
+		      Done by Magister
+		      Last modify: 29.07.2009
+		      Description:
+		      1. Escape - Talking Island Village
+		      2. Escape - Elven Village
+		      3. Escape - Dark Elven Village
+		      4. Escape - Orc Village
+		      5. Escape - Dwarven Village
+		      6. Escape - Gludin Village
+		      7. Escape - Town of Gludio
+		      8. Escape - Town of Dion
+		      9. Escape - Floran Village
+		     10. Escape - Giran Castle Town
+		     11. Escape - Hardin's Academy
+		     12. Escape - Heine
+		     13. Escape - Town of Oren
+		     14. Escape - Ivory Tower
+		     15. Escape - Hunters Village
+		     16. Escape - Town of Aden
+		     17. Escape - Town of Goddard
+		     18. Escape - Rune Township
+		     19. Escape - Town of Schuttgart
+		-->
+		<table name="#itemConsumeId">20372 20373 20374 20375 20376 20377 20378 20379 20380 20381 20382 20383 20384 20385 20386 20387 20388 20389 20390</table>
+		<table name="#townId">1 2 3 4 5 7 6 8 19 9 9 13 10 10 12 11 15 14 16</table>
+		<set name="townId" val="#townId"/>
+		<set name="itemConsumeId" val="#itemConsumeId"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RECALL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22054" levels="1" name="Potion of Energy Maintenance" >
+		<!-- Done by L2Open. not used. -->
+        <set name="itemConsumeId" val="20391"/>
+	    <set name="itemConsumeCount" val="1"/>
+	    <set name="target" val="TARGET_SELF"/>
+	    <set name="skillType" val="BUFF"/>
+	    <set name="operateType" val="OP_ACTIVE"/>
+	    <set name="isHandler" val="true"/>
+		<for>
+	        <effect name="Vitality" time="600"/>
+        </for>
+	</skill>
+	<skill id="22055" levels="1" name="Potion of Energy Replenishing" >
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="GIVE_VITALITY" />
+		<set name="give" val="2500" />
+		<set name="operateType" val="OP_ACTIVE" />
+	</skill>
+	<skill id="22056" levels="1" name="Wind Walk" >
+		<!-- Done by L2Open -->
+        <set name="itemConsumeId" val="20393"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="False"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="2" stackType="SpeedUp" time="6000">
+				<add order="0x40" stat="p_speed" val="33"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22057" levels="1" name="Haste" >
+		<!-- Done by L2Open -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="False"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="2" stackType="pAtkSpeedUp" time="6000">
+				<mul order="0x30" stat="p_attack_speed" val="1.33"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22058" levels="1" name="Might" >
+		<!-- Done by L2Open -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="False"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="p_physical_attack" time="6000">
+				<mul order="0x30" stat="p_physical_attack" val="1.15"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22059" levels="1" name="Shield" >
+		<!-- Done by L2Open -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="False"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="p_physical_defence" time="6000">
+				<mul order="0x30" stat="p_physical_defence" val="1.15"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22060" levels="1" name="Death Whisper" >
+		<!-- Done by L2Open -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="False"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="p_critical_damage_per" time="6000">
+				<mul order="0x30" stat="p_critical_damage_per" val="1.35"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22061" levels="1" name="Guidance" >
+		<!-- Done by L2Open -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="False"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="accuracyUp" time="6000">
+				<add order="0x40" stat="p_hit" val="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22062" levels="1" name="Empower" >
+		<!-- Done by L2Open -->
+        <set name="itemConsumeId" val="20394"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="False"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="p_magical_attack" time="6000">
+				<mul order="0x30" stat="p_magical_attack" val="1.75"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22063" levels="1" name="Grater Acumen" >
+		<!-- Done by L2Open -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="False"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="mAtkSpeedUp" time="6000">
+				<mul order="0x30" stat="p_magic_speed" val="1.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22064" levels="1" name="Vampiric Rage" >
+		<!-- Done by L2Open -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="False"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="9" stackType="vampRage" time="6000">
+				<add order="0x40" stat="absorbDam" val="9"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22065" levels="1" name="Bless the Body" >
+		<!-- Done by L2Open -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="False"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="6" stackType="hp_up" time="6000">
+				<mul order="0x30" stat="p_max_hp" val="1.35"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22066" levels="1" name="Berserker Spirit" >
+		<!-- Done by L2Open -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="False"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="2" stackType="berserk" time="6000">
+				<mul order="0x30" stat="p_magical_attack" val="1.16"/>
+				<mul order="0x30" stat="p_physical_attack" val="1.08"/>
+				<mul order="0x30" stat="p_physical_defence" val="0.92"/>
+				<mul order="0x30" stat="p_magical_defence" val="0.84"/>
+				<mul order="0x30" stat="p_magic_speed" val="1.08"/>
+				<mul order="0x30" stat="p_attack_speed" val="1.08"/>
+				<add order="0x40" stat="p_speed" val="8"/>
+				<sub order="0x40" stat="p_avoid" val="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22067" levels="1" name="Magic Barrier" >
+		<!-- Done by L2Open -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="False"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="MagicDefUp" time="6000">
+				<mul order="0x30" stat="p_magical_defence" val="1.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22068" levels="1" name="Bless the Soul" >
+		<!-- Done by L2Open -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="False"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="6" stackType="mp_up" time="6000">
+				<mul order="0x30" stat="p_max_mp" val="1.35"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22069" levels="1" name="Clarity" >
+		<!-- Done by L2Open -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="False"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="clarity" time="6000">
+				<mul order="0x30" stat="mpConsum" val="0.9"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.8"/>
+				<mul order="0x30" stat="mpDanceConsume" val="0.8"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22070" levels="1" name="Wild Magic" >
+		<!-- Done by L2Open -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player flying="False"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="2" stackType="magicCritUp" time="6000">
+				<add order="0x40" stat="mCritRate" val="2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22071" levels="1" name="Huge Fortuna Box" >
+		<!-- Done by L2Open. not used. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22072" levels="1" name="Huge Fortuna Cube" >
+		<!-- Done by L2Open. not used. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22073" levels="1" name="Weapon Enchant Scroll - S Grade" >
+		<!-- Done by L2Open. not used. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22074" levels="1" name="Armor Enchant Scroll - S Grade" >
+		<!-- Done by L2Open. not used. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22075" levels="1" name="Ancient Weapon Enchant Crystal - S grade" >
+		<!-- Done by L2Open. not used. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22076" levels="1" name="Ancient Armor Enchant Crystal - S grade" >
+		<!-- Done by L2Open. not used. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22077" levels="1" name="Divine Weapon Enchant Crystal - S grade" >
+		<!-- Done by L2Open. not used. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22078" levels="1" name="Divine Armor Enchant Crystal - S grade" >
+		<!-- Done by L2Open. not used. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22079" levels="1" name="Resist Aqua" >
+		<!-- Description: Increases resistance to water type attacks by 20% for 1 hour. -->
+		<set name="itemConsumeId" val="20523"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="3600">
+				<sub order="0x40" stat="waterRcpt" val="20"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22080" levels="1" name="Resist Wind" >
+		<!-- Description: Increases resistance to wind type attacks by 20% for 1 hour. -->
+		<set name="itemConsumeId" val="20524"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="3600">
+				<sub order="0x40" stat="windRcpt" val="20"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22081" levels="1" name="Resist Fire" >
+		<!-- Description: Increases resistance to fire type attacks by 20% for 1 hour. -->
+		<set name="itemConsumeId" val="20525"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="3600">
+				<sub order="0x40" stat="fireRcpt" val="20"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22082" levels="1" name="Resist Holy" >
+		<!-- Description: Increases resistance to divinity type attacks by 23% for 1 hour. -->
+		<set name="itemConsumeId" val="20526"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="3600">
+				<sub order="0x40" stat="sacredRcpt" val="23"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22083" levels="1" name="Resist Unholy" >
+		<!-- Description: Increases resistance to darkness type attacks by 23% for 1 hour. -->
+		<set name="itemConsumeId" val="20527"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="3600">
+				<sub order="0x40" stat="unholyRcpt" val="23"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22084" levels="1" name="Mental Shield" >
+		<set name="itemConsumeId" val="20528"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_derangement;40" stackOrder="3" stackType="mental" time="3600"/>
+			<effect name="p_defence_trait" param="trait_hold;40" stackOrder="3" stackType="mental" time="3600"/>
+			<effect name="p_defence_trait" param="trait_sleep;40" stackOrder="3" stackType="mental" time="3600"/>
+		</for>
+	</skill>
+	<skill id="22085" levels="1" name="Focus" >
+		<!-- Description: Increases Critical attack rate by 30 for 1 hour. -->
+		<set name="itemConsumeId" val="20529"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="p_critical_rate_per" time="3600">
+				<add order="0x40" stat="p_critical_rate_per" val="30"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22086" levels="1" name="Concentration" >
+		<!-- Description: Decreases magic cancel damage by 36 for 1 hour. -->
+		<table name="#concentration">0.64</table>
+		<set name="itemConsumeId" val="20530"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="concentration" time="3600">
+				<mul order="0x30" stat="concentration" val="#concentration"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22087" levels="1" name="Blessing Shield" >
+		<!-- Description: Increases Shield defense rate by 15 for 1 hour. -->
+		<set name="itemConsumeId" val="20531"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="2" stackType="shieldProbUp" time="3600">
+				<mul order="0x30" stat="rShld" val="1.15"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22088" levels="1" name="Agility" >
+		<!-- Description: Increases evasion rate by 4 for 1 hour. -->
+		<set name="itemConsumeId" val="20532"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="p_avoid" time="3600">
+				<add order="0x40" stat="p_avoid" val="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22089" levels="1" name="Regeneration" >
+		<!-- Description: Increases HP Regeneration by 20% for 1 hour. -->
+		<table name="#rate">1.2</table>
+		<set name="itemConsumeId" val="20533"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="hpregen" time="3600">
+				<mul order="0x30" stat="regHp" val="#rate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22090" levels="1" name="Advanced Block" >
+		<!-- Description: Increases Shield P. Def. by 40% for 1 hour. -->
+		<table name="#Tab-sDef">1.4</table>
+		<set name="itemConsumeId" val="20534"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="2" stackType="sDef" time="3600">
+				<mul order="0x30" stat="sDef" val="#Tab-sDef"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="22091" levels="1" name="Eva's Rune" >
+		<!-- Done by Drizzy -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="p_max_hp" val="1.1" />
+			<mul order="0x30" stat="mReuse" val="0.80" />
+			<mul order="0x30" stat="pReuse" val="0.80" />
+			<add order="0x40" stat="reflectDam" val="5"/>
+		</for>
+	</skill>
+	<skill id="22092" levels="1" name="Scroll Master 1" >
+		<!-- Done by L2Open. not used. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22093" levels="1" name="Scroll Master 2" >
+		<!-- Done by L2Open. not used. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22094" levels="1" name="Exp. Master" >
+		<!-- Done by L2Open. not used. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22095" levels="1" name="Summon Spirit of Fire" >
+		<!-- Done by L2Open. not used. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22096" levels="1" name="Summon Reckless Spirit of Fire" >
+		<!-- Done by L2Open. not used. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="22097" levels="1" name="Girl's Gift of Gratitude" >
+		<!-- Done by Drizzy -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+            <effect name="Buff" stackType="br_event_buf5" time="120">
+				<mul order="0x30" stat="p_max_hp" val="1.6"/>
+				<mul order="0x30" stat="p_max_mp" val="1.6"/>
+				<mul order="0x30" stat="p_max_cp" val="1.6"/>
+				<mul order="0x30" stat="p_physical_defence" val="1.3"/>
+				<mul order="0x30" stat="p_magical_defence" val="1.3"/>
+				<add order="0x40" stat="p_speed" val="30"/>
+				<mul order="0x30" stat="p_physical_attack" val="1.2"/>
+				<mul order="0x30" stat="mpConsum" val="0.9"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.9"/>
+				<mul order="0x30" stat="mpDanceConsume" val="0.9"/>
+            </effect>
+		</for>
+	</skill>
+	<skill id="22098" levels="1" name="Boy's Gift of Gratitude" >
+		<!-- Done by Drizzy -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+            <effect name="Buff" stackType="br_event_buf5" time="120">
+				<mul order="0x30" stat="p_max_hp" val="1.4"/>
+				<mul order="0x30" stat="p_max_mp" val="1.4"/>
+				<mul order="0x30" stat="p_max_cp" val="1.4"/>
+				<mul order="0x30" stat="p_physical_defence" val="1.3"/>
+				<mul order="0x30" stat="p_magical_defence" val="1.3"/>
+				<add order="0x40" stat="p_speed" val="20"/>
+				<mul order="0x30" stat="p_magical_attack" val="1.45"/>
+				<mul order="0x30" stat="mpConsum" val="0.9"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.9"/>
+				<mul order="0x30" stat="mpDanceConsume" val="0.9"/>
+            </effect>
+		</for>
+	</skill>
+	<skill id="22099" levels="1" name="Soul Silver Foil" >
+		<!-- Done by Drizzy -->
+		<set name="target" val="TARGET_CORPSE"/>
+		<set name="skillType" val="DRAIN"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="corpse" val="true"/>
+		<for>
+            <effect name="Buff" stackType="br_event_buf6" time="120" applyOnCaster="true">
+				<mul order="0x30" stat="p_max_hp" val="1.6"/>
+				<mul order="0x30" stat="p_max_mp" val="1.6"/>
+				<mul order="0x30" stat="p_max_cp" val="1.6"/>
+				<mul order="0x30" stat="p_physical_defence" val="1.3"/>
+				<mul order="0x30" stat="p_magical_defence" val="1.3"/>
+				<add order="0x40" stat="p_speed" val="30"/>
+				<mul order="0x30" stat="p_physical_attack" val="1.2"/>
+				<mul order="0x30" stat="mpConsum" val="0.9"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.9"/>
+				<mul order="0x30" stat="mpDanceConsume" val="0.9"/>
+            </effect>
+			<effect name="i_consume_body"/>
+		</for>
+	</skill>
+</list>

@@ -1,0 +1,134 @@
+<html>
+<body>
+<center>
+<br>
+<img src="L2UI.SquareWhite" width=740 height=1>
+<table width="740" bgcolor="FFFFFF" border=0 height=32 cellspacing=0 cellpadding=0>
+	<tr>
+		<td>
+			<center>
+				%menu%
+			</center>
+		</td>
+	</tr>
+</table>
+<img src="L2UI.SquareWhite" width=740 height=1><br>
+<br><center><font color=3293F3>Добро пожаловать в панель управления ботами :)</font></center><br>
+<button value="Обновить" action="bypass -h admin_bot_create_point" width=120 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+<table width=660 bgcolor="eeeeee" border=0>
+	<tr>
+		<td width=22>
+			<button value="freeway_begin(Начало)" action="bypass -h admin_bot_create_point freeway_begin" width=150 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td width=22>
+			<button value="freeway_id" action="bypass -h admin_bot_create_point freeway_id $id" width=150 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+		<td width=20>
+			<edit var="id" width=35 height=13>
+		</td>
+		<td width=400></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td width=22>
+			<button value="freeway_name" action="bypass -h admin_bot_create_point freeway_name $name" width=150 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+		<td width=20>
+			<edit var="name" width=180 height=13>
+		</td>
+	</tr>
+</table>
+<table width=450 bgcolor="000000" border=0>
+	<tr>
+		<td>
+			<button value="node_begin(Начало)" action="bypass -h admin_bot_create_point node_begin" width=150 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+		<td width=400></td>
+		<td width=400></td>
+		<td width=400></td>
+		<td width=400></td>
+		<td width=400></td>
+		<td width=400></td>
+		<td width=400></td>
+		<td width=400></td>
+		<td width=400></td>
+		<td width=400></td>
+		<td width=400></td>
+		<td width=400></td>
+		<td width=400></td>
+		<td width=400></td>
+		<td width=400></td>
+		<td width=400></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+			<button value="Pos" action="bypass -h admin_bot_create_point $race $class $male $spawn1 $count1 $interval" width=150 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+		<td>
+			<edit var="id" width=35 height=13>
+		</td>
+		<td>
+			<edit var="id" width=35 height=13>
+		</td>
+		<td>
+			<edit var="id" width=35 height=13>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+			<button value="Rnd" action="bypass -h admin_bot_create_point $race $class $male $spawn1 $count1 $interval" width=150 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+		<td>
+			<edit var="id" width=35 height=13>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+			<button value="delay_min" action="bypass -h admin_bot_create_point $race $class $male $spawn1 $count1 $interval" width=150 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+		<td>
+			<edit var="id" width=35 height=13>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+			<button value="delay_max" action="bypass -h admin_bot_create_point $race $class $male $spawn1 $count1 $interval" width=150 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+		<td>
+			<edit var="id" width=35 height=13>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+			<button value="Action" action="bypass -h admin_bot_create_point $race $class $male $spawn1 $count1 $interval" width=150 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+		<td>
+			<combobox width=50 var="race" list="move;teleport;atack;cast">
+		</td>
+	</tr>
+	<tr>
+		<td width=22>
+			<button value="node_end(Конец)" action="bypass -h admin_bot_create_point node_end" width=150 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+	</tr>
+</table>
+<table width=660 bgcolor="eeeeee" border=0>
+	<tr>
+		<td width=20>
+			<button value="freeway_end(Конец)" action="bypass -h admin_bot_create_point freeway_end" width=150 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+		<td width=734></td>
+	</tr>
+</table>
+<br><br>
+</center>
+</body>
+</html>

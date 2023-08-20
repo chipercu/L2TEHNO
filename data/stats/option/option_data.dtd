@@ -1,0 +1,32 @@
+<!ELEMENT list (option_data)*>
+<!ELEMENT option_data  (for|set|skills|triggers)*>
+<!ATTLIST option_data
+	id CDATA #REQUIRED>
+
+<!ELEMENT for (add|set)*>
+
+<!ELEMENT add (player|target|using|zone|or|not|and)*>
+<!ATTLIST add
+	order CDATA #REQUIRED
+	stat CDATA #REQUIRED
+	value CDATA #REQUIRED>
+<!ELEMENT set (player|target|using|zone|or|not|and)*>
+<!ATTLIST set
+	order CDATA #IMPLIED
+	stat CDATA #IMPLIED
+	value CDATA #REQUIRED>
+
+
+<!ELEMENT skills (skill)*>
+<!ELEMENT skill (#PCDATA)>
+<!ATTLIST skill
+	id CDATA #REQUIRED
+	level CDATA #REQUIRED>
+
+<!ELEMENT triggers (trigger)*>
+<!ELEMENT trigger (#PCDATA)>
+<!ATTLIST trigger
+	id CDATA #REQUIRED
+	level CDATA #REQUIRED
+	type CDATA #REQUIRED
+	chance CDATA #REQUIRED>

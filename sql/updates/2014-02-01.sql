@@ -1,0 +1,1 @@
+ALTER TABLE `items` ADD COLUMN `energy` int unsigned NOT NULL DEFAULT '0' AFTER `flags`;

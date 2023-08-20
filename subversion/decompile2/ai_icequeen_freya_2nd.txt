@@ -1,0 +1,22 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_freya_2nd : default_npc
+{
+parameter:
+	int	Skill_Display = 422772737;
+
+handler:
+	EventHandler SCRIPT_EVENT(script_event_arg1,script_event_arg2)
+	{
+		if( script_event_arg1 == 23140020 )
+		{
+		}
+	}
+
+}

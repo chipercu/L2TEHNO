@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="9000" name="Shadow Item: Stormbringer*Stormbringer" type="DUAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.time_weapon_dual_sword_i00" />
+		<set name="weight" val="780" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="crystal_type" val="C" />
+		<set name="p_dam" val="175" />
+		<set name="m_dam" val="78" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9001" name="Shadow Item: Great Sword" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_great_sword_i00" />
+		<set name="weight" val="650" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="p_dam" val="213" />
+		<set name="m_dam" val="91" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9002" name="Shadow Item: Heavy War Axe" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
+		<set name="weight" val="540" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="p_dam" val="175" />
+		<set name="m_dam" val="91" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9003" name="Shadow Item: Sprite's Staff" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_sprites_staff_i00" />
+		<set name="weight" val="320" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="p_dam" val="170" />
+		<set name="m_dam" val="134" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9004" name="Shadow Item: Keshanberk" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_kshanberk_i00" />
+		<set name="weight" val="460" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="p_dam" val="175" />
+		<set name="m_dam" val="91" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9005" name="Shadow Item: Sword of Valhalla" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_sword_of_valhalla_i00" />
+		<set name="weight" val="300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="p_dam" val="140" />
+		<set name="m_dam" val="122" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9006" name="Shadow Item: Kris" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_kris_i00" />
+		<set name="weight" val="330" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="p_dam" val="153" />
+		<set name="m_dam" val="91" />
+		<set name="atk_speed" val="433" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9007" name="Shadow Item: Arthro Nail" type="DUALFIST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_arthro_nail_i00" />
+		<set name="weight" val="480" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="p_dam" val="213" />
+		<set name="m_dam" val="91" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9008" name="Shadow Item: Dark Elven Long Bow" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_dark_elven_long_bow_i00" />
+		<set name="weight" val="580" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="p_dam" val="397" />
+		<set name="m_dam" val="100" />
+		<set name="atk_speed" val="227" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="mp_consume" val="4" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9009" name="Shadow Item: Sword of Delusion*Sword of Delusion" type="DUAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.time_weapon_dual_sword_i00" />
+		<set name="weight" val="720" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="p_dam" val="213" />
+		<set name="m_dam" val="91" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9010" name="Shadow Item: Great Axe" type="POLE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_great_axe_i00" />
+		<set name="weight" val="650" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="p_dam" val="175" />
+		<set name="m_dam" val="91" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9011" name="Shadow Item: Tallum Blade" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_tallum_blade_i00" />
+		<set name="weight" val="450" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="213" />
+		<set name="m_dam" val="107" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9012" name="Shadow Item: Halberd" type="POLE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_halbard_i00" />
+		<set name="weight" val="640" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="213" />
+		<set name="m_dam" val="107" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9013" name="Shadow Item: Dasparion's Staff" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_dasparions_staff_i00" />
+		<set name="weight" val="310" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="207" />
+		<set name="m_dam" val="157" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9014" name="Shadow Item: Bloody Orchid" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_bloody_orchid_i00" />
+		<set name="weight" val="320" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="186" />
+		<set name="m_dam" val="107" />
+		<set name="atk_speed" val="433" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9015" name="Shadow Item: Blood Tornado" type="DUALFIST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_blood_tornado_i00" />
+		<set name="weight" val="460" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="259" />
+		<set name="m_dam" val="107" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9016" name="Shadow Item: Carnage Bow" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_carnium_bow_i00" />
+		<set name="weight" val="560" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="440" />
+		<set name="m_dam" val="107" />
+		<set name="atk_speed" val="293" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="mp_consume" val="5" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9017" name="Shadow Item: Keshanberk*Keshanberk" type="DUAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.time_weapon_dual_sword_i00" />
+		<set name="weight" val="700" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="259" />
+		<set name="m_dam" val="107" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9018" name="Shadow Item: Meteor Shower" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_meteor_shower_i00" />
+		<set name="weight" val="540" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="213" />
+		<set name="m_dam" val="107" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9019" name="Shadow Item: Inferno Master" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_inferno_master_i00" />
+		<set name="weight" val="640" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="259" />
+		<set name="m_dam" val="107" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9020" name="Shadow Item: Keshanberk*Damascus" type="DUAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="weight" val="693" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="275" />
+		<set name="m_dam" val="112" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9021" name="Shadow Item: Dragon Slayer" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
+		<set name="weight" val="613" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="282" />
+		<set name="m_dam" val="114" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9022" name="Shadow Item: Sword of Miracles" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_sword_of_miracle_i00" />
+		<set name="weight" val="280" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="186" />
+		<set name="m_dam" val="152" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9023" name="Shadow Item: Elysian" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_elysian_i00" />
+		<set name="weight" val="527" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="232" />
+		<set name="m_dam" val="114" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9024" name="Shadow Item: Branch of the Mother Tree" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_worldtrees_branch_i00" />
+		<set name="weight" val="300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="226" />
+		<set name="m_dam" val="167" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9025" name="Shadow Item: Soul Separator" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_soul_separator_i00" />
+		<set name="weight" val="317" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="203" />
+		<set name="m_dam" val="114" />
+		<set name="atk_speed" val="433" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9026" name="Shadow Item: Dragon Grinder" type="DUALFIST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_dragon_grinder_i00" />
+		<set name="weight" val="450" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="282" />
+		<set name="m_dam" val="114" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9027" name="Shadow Item: Soul Bow" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_soul_bow_i00" />
+		<set name="weight" val="553" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="528" />
+		<set name="m_dam" val="125" />
+		<set name="atk_speed" val="227" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="mp_consume" val="5" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9028" name="Shadow Item: Tallum Glaive" type="POLE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
+		<set name="weight" val="613" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="232" />
+		<set name="m_dam" val="114" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9029" name="Shadow Item: Dark Legion" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
+		<set name="weight" val="440" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="p_dam" val="232" />
+		<set name="m_dam" val="114" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="9036" name="Shadow Item: Bone Shield" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_bone_shield_i00" />
+		<set name="weight" val="460" />
+		<set name="shield_def" val="90" />
+		<set name="shield_def_rate" val="20" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="avoid_modify" val="-8" />
+	</weapon>
+	<weapon id="9044" name="Shadow Item: Hoplon" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_hoplon_i00" />
+		<set name="weight" val="447" />
+		<set name="crystal_type" val="D" />
+		<set name="shield_def" val="128" />
+		<set name="shield_def_rate" val="20" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="avoid_modify" val="-8" />
+	</weapon>
+	<weapon id="9056" name="Shadow Item: Composite Shield" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_composite_shield_i00" />
+		<set name="weight" val="410" />
+		<set name="crystal_type" val="C" />
+		<set name="shield_def" val="190" />
+		<set name="shield_def_rate" val="20" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="avoid_modify" val="-8" />
+	</weapon>
+	<weapon id="9070" name="Shadow Item: Zubei's Shield" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_shrnoens_shield_i00" />
+		<set name="weight" val="403" />
+		<set name="crystal_type" val="B" />
+		<set name="shield_def" val="216" />
+		<set name="shield_def_rate" val="20" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="avoid_modify" val="-8" />
+	</weapon>
+	<weapon id="9084" name="Shadow Item: Dark Crystal Shield" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
+		<set name="weight" val="397" />
+		<set name="crystal_type" val="A" />
+		<set name="shield_def" val="243" />
+		<set name="shield_def_rate" val="20" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="avoid_modify" val="-8" />
+	</weapon>
+</list>

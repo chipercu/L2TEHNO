@@ -1,0 +1,1540 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<skill id="23000" levels="1" name="Majo Agathion Cute Trick">
+		<!--  Done by Magister
+		      Description: Allows you to watch the summoned spirit perform cute tricks.
+		-->
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1501"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23001" levels="1" name="Gold Majo Agathion Cute Trick">
+		<!--  Done by Magister
+		      Description: Allows you to watch the summoned spirit perform cute tricks.
+		-->
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1502"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23002" levels="1" name="Black Majo Agathion Cute Trick">
+		<!--  Done by Magister
+		      Description: Allows you to watch the summoned spirit perform cute tricks.
+		-->
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1503"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23003" levels="1" name="Plaipitak Agathion Cute Trick">
+		<!--  Done by Magister
+		      Description: Allows you to watch the summoned spirit perform cute tricks.
+		-->
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1504"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23004" levels="1" name="Majo Agathion Special Skill - Mysterious Power">
+		<!--  Done by Magister
+		      Description: Confers a mysterious, unknown power. Use with caution!
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1501"/>
+		</cond>
+		<for>
+			<effect abnormal="bighead" name="Buff" stackType="BigHead" time="120"/>
+		</for>
+	</skill>
+	<skill id="23005" levels="1" name="Gold Majo Agathion Special Skill - Power of Blessed Resurrection">
+		<!--  Done by Magister
+		      Description: Makes Power of Blessed Resurrection available.
+		-->
+		<table name="#power">120.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_CORPSE_PLAYER"/>
+		<set name="corpse" val="true"/>
+		<set name="skillType" val="RESURRECT"/>
+		<set name="canPet" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1502"/>
+		</cond>
+	</skill>
+	<skill id="23006" levels="1" name="Black Majo Agathion Special Skill - Power of Blessed Return">
+		<!--  Done by Magister
+		      Description: Makes Power of Blessed Return available.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RECALL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1503"/>
+		</cond>
+	</skill>
+	<skill id="23007" levels="1" name="Plaipitak Agathion Special Skill - Mysterious Power">
+		<!--  Done by Magister
+		      Description: Confers a mysterious, unknown power. Use with caution!
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1504"/>
+		</cond>
+		<for>
+			<effect abnormal="bighead" name="Buff" stackType="BigHead" time="120"/>
+		</for>
+	</skill>
+	<skill id="23008" levels="1" name="Plaipitak Agathion Special Skill - Power of Blessed Return">
+		<!--  Done by Magister
+		      Description: Makes Power of Blessed Return available.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RECALL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1504"/>
+		</cond>
+	</skill>
+	<skill id="23009" levels="1" name="Plaipitak Agathion Special Skill - Power of Blessed Resurrection">
+		<!--  Done by Magister
+		      Description: Makes Power of Blessed Resurrection available.
+		-->
+		<table name="#power">120.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_CORPSE_PLAYER"/>
+		<set name="corpse" val="true"/>
+		<set name="skillType" val="RESURRECT"/>
+		<set name="canPet" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1504"/>
+		</cond>
+	</skill>
+	<skill id="23010" levels="1" name="Baby Panda Agathion Cute Trick" >
+		<!--  Done by Magister
+		      Description: Able to see the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1505"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23011" levels="1" name="Bamboo Panda Agathion Cute Trick" >
+		<!--  Done by Magister
+		      Description: Able to see the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1506"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23012" levels="1" name="Sexy Panda Agathion Cute Trick" >
+		<!--  Done by Magister
+		      Description: Able to see the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1507"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23013" levels="1" name="Baby Panda Agathion Special Skill - Mysterious Power" >
+		<!--  Done by Magister
+		      Description: Confers a mysterious, unknown power. Use with caution!
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1505"/>
+		</cond>
+		<for>
+			<effect abnormal="bighead" name="Buff" stackType="BigHead" time="120"/>
+		</for>
+	</skill>
+	<skill id="23014" levels="1" name="Bamboo Panda Agathion Special Skill - Power of Blessed Resurrection" >
+		<!--  Done by Magister
+		      Description: Power of Blessed Resurrection is available.
+		-->
+		<table name="#power">100.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_CORPSE_PLAYER"/>
+		<set name="corpse" val="true"/>
+		<set name="skillType" val="RESURRECT"/>
+		<set name="canPet" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1506"/>
+		</cond>
+	</skill>
+	<skill id="23015" levels="1" name="Sexy Panda Agathion Special Skill - Power of Blessed Return" >
+		<!--  Done by Magister
+		      Description: Power of Blessed Return is available.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RECALL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1507"/>
+		</cond>
+	</skill>
+	<skill id="23016" levels="1" name="Rudolph Agathion Special Skill - Ability of Energy" >
+		<!--
+		      Done by Magister
+		      Last modify: 29.05.2009
+		      Description: You can recover Vitality as you gain Experience Points.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="16033"/>
+		</cond>
+		<for>
+			<effect name="Vitality" time="300"/>
+		</for>
+	</skill>
+	<skill id="23017" levels="1" name="Holiday Festival" >
+		<!--  Done by Magister
+		      Description: Max HP, MP and CP are increased; P. Def., Movement Speed, P. Atk., and M. Atk. are increased; MP consumption for skills is decreased. Effect 1.
+		-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="3600">
+				<add order="0x40" stat="p_max_hp" val="691"/>
+				<add order="0x40" stat="p_max_mp" val="186"/>
+				<add order="0x40" stat="p_max_cp" val="256"/>
+				<mul order="0x30" stat="p_physical_defence" val="1.19"/>
+				<add order="0x40" stat="p_speed" val="20"/>
+				<mul order="0x30" stat="p_physical_attack" val="1.1"/>
+				<mul order="0x30" stat="p_magical_attack" val="1.15"/>
+				<mul order="0x30" stat="p_magical_defence" val="1.19"/>
+				<mul order="0x30" stat="mpConsum" val="0.84"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.84"/>
+				<mul order="0x30" stat="mpDanceConsume" val="0.84"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23018" levels="1" name="Thomas D. Turkey's Mistake" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: "Max HP, MP and CP are increased; P. Def., Movement Speed, P. Atk., and M. Atk. are increased; MP consumption for skills is decreased. Effect 2."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23019" levels="3" name="Scissors" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: "Challenge opponent with ""Scissors."" Cannot move."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23020" levels="1" name="Challenge the Turkey" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: You challenge Thomas D. Turkey.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23021" levels="3" name="Turkey's Attack Scissors" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: "Thomas D. Turkey chooses ""Scissors."""
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23022" levels="10" name="First Win" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: "You've won your first ""Rock-Paper-Scissors"" match."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23023" levels="1" name="Reset Consecutive Wins" >
+		<!--  Automatically generated from The Gracia part II client files.
+		      Description: Reset Consecutive Wins
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 28-1-2009  22:00
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23024" levels="1" name="Agathion of Love Special Skill - Energy Recovery Ability" >
+		<!--
+		      Done by Magister
+		      Last modify: 01.07.2009, Magister
+		      Description: Recovers energy when acquiring Exp. for 20 minutes. Reuse Delay 12 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="16049"/>
+		</cond>
+		<for>
+			<effect name="Vitality" time="1200"/>
+		</for>
+	</skill>
+	<skill id="23025" levels="1" name="Charming Cupid Agathion Cute Trick" >
+		<!--
+		      Done by Magister
+		      Last modify: 19.02.2009
+		      Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1508"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23026" levels="1" name="Naughty Cupid Agathion Cute Trick" >
+		<!--
+		      Done by Magister
+		      Last modify: 19.02.2009
+		      Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1509"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23027" levels="1" name="White Maneki Neko Agathion Cute Trick I" >
+		<!--
+		      Done by Magister
+		      Last modify: 19.02.2009
+		      Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1510"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23028" levels="1" name="Black Maneki Neko Agathion Cute Trick I" >
+		<!--
+		      Done by Magister
+		      Last modify: 19.02.2009
+		      Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1511"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23029" levels="1" name="Brown Maneki Neko Agathion Cute Trick I" >
+		<!--
+		      Done by Magister
+		      Last modify: 19.02.2009
+		      Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1512"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23030" levels="1" name="White Maneki Neko Agathion Special Skill - Blessed Resurrection Ability" >
+		<!--
+		      Done by Magister
+		      Last modify: 29.05.2009
+		      Description: Allows you to use the Blessed Resurrection ability. Reuse Delay: 12 hours.
+		-->
+		<table name="#power">120.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_CORPSE_PLAYER"/>
+		<set name="corpse" val="true"/>
+		<set name="skillType" val="RESURRECT"/>
+		<set name="canPet" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1510"/>
+		</cond>
+	</skill>
+	<skill id="23031" levels="1" name="Black Maneki Neko Agathion Special Skill - Ability of Blessed Return" >
+		<!--
+		      Done by Magister
+		      Last modify: 29.05.2009
+		      Description: Allows you to use the Blessed Return ability. Reuse Delay: 12 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RECALL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1511"/>
+		</cond>
+	</skill>
+	<skill id="23032" levels="1" name="Brown Maneki Neko Agathion Special Skill - Ability of Energy Recovery" >
+		<!--
+		      Done by Magister
+		      Last modify: 01.07.2009, Magister
+		      Description: Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1512"/>
+		</cond>
+		<for>
+			<effect name="Vitality" time="300"/>
+		</for>
+	</skill>
+	<skill id="23033" levels="1" name="One-Eyed Bat Drove Agathion Cute Trick" >
+		<!--
+		      Done by Magister
+		      Last modify: 19.02.2009
+		      Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1513"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23034" levels="1" name="One-eyed Bat Drove Agathion Special Skill - Ability of Resist Unholy" >
+		<!--
+		      Done by Magister
+		      Last modify: 01.07.2009, Magister
+		      Description: Increases resistance to darkness type attacks by 30% for 5 minutes. Reuse Delay 1 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1513"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="unholyRcpt" time="300">
+				<sub order="0x40" stat="unholyRcpt" val="30"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23035" levels="1" name="One-eyed Bat Drove Agathion Special Skill - Ability of Energy Recovery" >
+		<!--
+		      Done by Magister
+		      Last modify: 01.07.2009, Magister
+		      Description: Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1513"/>
+		</cond>
+		<for>
+			<effect name="Vitality" time="300"/>
+		</for>
+	</skill>
+	<skill id="23036" levels="1" name="Pegasus Agathion Cute Trick" >
+		<!--
+		      Done by Magister
+		      Last modify: 19.02.2009
+		      Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1514"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23037" levels="1" name="Pegasus Agathion Special Skill - Ability of Wind Walk" >
+		<!--
+		      Done by Magister
+		      Last modify: 01.07.2009
+		      Description: Increases moving speed by 33 for 5 minutes. Reuse Delay 4 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1514"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="SpeedUp" time="300">
+				<add order="0x40" stat="p_speed" val="33"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23038" levels="1" name="Pegasus Agathion Special Skill - Blessed Return Ability" >
+		<!--
+		      Done by Magister
+		      Last modify: 29.05.2009
+		      Description: Allows you to use the Blessed Resurrection ability. Reuse Delay: 12 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RECALL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1514"/>
+		</cond>
+	</skill>
+	<skill id="23039" levels="1" name="Yellow-Robed Tojigong Agathion Cute Trick" >
+		<!--
+		      Done by Magister
+		      Last modify: 19.02.2009
+		      Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1515"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23040" levels="1" name="Blue-Robed Tojigong Agathion Cute Trick" >
+		<!--
+		      Done by Magister
+		      Last modify: 19.02.2009
+		      Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1516"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23041" levels="1" name="Green-Robed Tojigong Agathion Cute Trick" >
+		<!--
+		      Done by Magister
+		      Last modify: 19.02.2009
+		      Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1517"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23042" levels="1" name="Yellow-robed Tojigong Agathion Special Skill - Ability of Greater Heal" >
+		<set name="power" val="444"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="HEAL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1515"/>
+		</cond>
+		<for>
+			<effect name="t_hp" param="30;1;diff"/>
+		</for>
+	</skill>
+	<skill id="23043" levels="1" name="Blue-robed Tojigong Agathion Special Skill - Ability of Reflect Damage" >
+		<!--
+		      Done by Magister
+		      Last modify: 01.07.2009, Magister
+		      Description: For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours.
+		-->
+		<table name="#power">20</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1516"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="DmgShield" time="300">
+				<add order="0x40" stat="reflectDam" val="#power"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23044" levels="1" name="Green-robed Tojigong Agathion Special Skill - Ability of Mana Regeneration" >
+		<!--
+		      Done by Magister
+		      Last modify: 01.07.2009
+		      Description: Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1517"/>
+		</cond>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="mpregen" time="1200">
+				<mul order="0x30" stat="regMp" val="1.03"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23045" levels="1" name="Bugbear Agathion Cute Trick" >
+		<!--
+		      Done by Magister
+		      Last modify: 19.02.2009
+		      Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1518"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23046" levels="1" name="White Maneki Neko Agathion Cute Trick II" >
+		<!--
+		      Done by Magister
+		      Last modify: 19.02.2009
+		      Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1510"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23047" levels="1" name="Black Maneki Neko Agathion Cute Trick II" >
+		<!--
+		      Done by Magister
+		      Last modify: 19.02.2009
+		      Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1511"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23048" levels="1" name="Brown Maneki Neko Agathion Cute Trick II" >
+		<!--
+		      Done by Magister
+		      Last modify: 19.02.2009
+		      Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1512"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23049" levels="1" name="Red Sumo Wrestler Agathion Cute Trick" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1519"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23050" levels="1" name="Blue Sumo Wrestler Agathion Cute Trick" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1520"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23051" levels="1" name="Great Sumo Match Agathion Cute Trick" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1521"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23052" levels="1" name="Button-Eyed Bear Doll Agathion Cute Trick" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1522"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23053" levels="1" name="God of Fortune Agathion Cute Trick" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1523"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23054" levels="1" name="Dryad Agathion Cute Trick" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1524"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23055" levels="1" name="Wonboso Agathion Cute Trick" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1525"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23056" levels="1" name="Daewoonso Agathion Cute Trick" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1526"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23057" levels="1" name="Red Sumo Wrestler Agathion Special Skill - Death Whisper Ability" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1519"/>
+		</cond>
+		<for>
+			<effect name="Buff" time="300">
+				<mul order="0x30" stat="p_critical_damage_per" val="1.35"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23058" levels="1" name="Blue Sumo Wrestler Agathion Special Skill - Wild Magic Ability" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1520"/>
+		</cond>
+		<for>
+			<effect name="Buff" time="300">
+				<add order="0x40" stat="mCritRate" val="2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23059" levels="1" name="Great Sumo Match Agathion Special Skill - Mysterious Power" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: A mysterious power that no one knows. Use with caution! Reuse Delay 1 hour.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1521"/>
+		</cond>
+		<for>
+			<effect abnormal="bighead" name="Buff" stackType="BigHead" time="300"/>
+		</for>
+	</skill>
+	<skill id="23060" levels="1" name="Great Sumo Match Agathion Special Skill - Ability of Firework" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Set off firecrackers.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="HOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1521"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23061" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Return" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Can use the ability of Blessed Return. Reuse Delay 12 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RECALL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1522"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23062" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Resurrection" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Can use the ability of Blessed Resurrection. Reuse Delay 12 hours.
+		-->
+		<set name="power" val="100"/>
+		<set name="target" val="TARGET_CORPSE_PLAYER"/>
+		<set name="corpse" val="true"/>
+		<set name="skillType" val="RESURRECT"/>
+		<set name="useSS" val="false"/>
+		<set name="canPet" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1522"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23063" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Energy Recovery" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1522"/>
+		</cond>
+		<for>
+			<effect name="Vitality" time="300"/>
+		</for>
+	</skill>
+	<skill id="23064" levels="1" name="God of Fortune Agathion Special Skill - Energy Recovery Ability" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1523"/>
+		</cond>
+		<for>
+			<effect name="Vitality" time="300"/>
+		</for>
+	</skill>
+	<skill id="23065" levels="1" name="Wonboso Agathion Special Skill - Wind Walk Ability" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Increases moving speed by 20 for 5 minutes. Reuse Delay 1 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1525"/>
+		</cond>
+		<for>
+			<effect name="Buff" time="300">
+				<add order="0x40" stat="p_speed" val="20"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23066" levels="1" name="Daewoonso Agathion Special Skill - New Year's Gift Ability" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Can receive a New Year's Gift. Reuse Delay 1 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1526"/>
+		</cond>
+		<for>
+			<effect name="Buff" time="300">
+				<!-- TODO -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="23067" levels="1" name="Pomona Agathion Cute Trick" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Lets you watch the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1527"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23068" levels="4" name="Pomona Agathion Special Skill - Mental Shield Ability" >
+		<!--
+			Done by:	Diamond
+			Last modify:	29.07.2009
+			Description: Increases resistance to hold/sleep/abnormal mental attacks by 50 for 10 minutes. Reuse Delay 1 hours.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1527"/>
+		</cond>
+		<for>
+			<effect name="p_defence_trait" param="trait_derangement;50" time="600"/>
+			<effect name="p_defence_trait" param="trait_hold;50" time="600"/>
+			<effect name="p_defence_trait" param="trait_sleep;50" time="600"/>
+		</for>
+	</skill>
+	<skill id="23069" levels="1" name="Threatening Roar" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Spirit's power: Decreases moving speed and Atk. Spd. by 80% for 10 seconds.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23070" levels="1" name="Red Flame" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Spirit's power: Cannot damage the spirit for 10 seconds. Exclusive use for the Reckless Spirit of Fire.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23071" levels="1" name="Blue Flame" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Spirit's power: Cannot damage the spirit for 8 seconds. Exclusive use for the Spirit of Fire.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23072" levels="1" name="Eva's Wrath" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: You are endowed with the spirit of Eva's Wrath for the next 70 seconds. This allows you to do damage to a Spirit of Fire.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23073" levels="1" name="Switch Mode" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: State to switch the spirit's mode. Switches to counter-attack mode or deadly mode.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23074" levels="1" name="Icy Air Explosion" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: "For 4 seconds, damage inflicted on the spirit doubles."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23075" levels="1" name="Flame Shock" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Spirit's power: Loses the target.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23076" levels="1" name="Weaver Agathion Cute Trick" >
+		<!--
+		      Done by Magister
+		      Last modify: 30.12.2009
+		      Description: Able to see the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1528"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23077" levels="1" name="Weaver Agathion Special Skill - Power of the Golden Calf" >
+		<!--
+		      Done by Magister
+		      Last modify: 30.12.2009
+		      Description: For 20 minutes, receives help from the Golden Calf. Increases party members' Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, magic M. Def. by 30%, moving speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. Reuse delay 5 minutes. Consumes 1 Girl's Soul Ore during skill use.
+		-->
+		<set name="itemConsumeId" val="20597"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1528"/>
+		</cond>
+		<for>
+			<effect name="Buff" time="1200">
+				<mul order="0x30" stat="p_max_hp" val="1.6"/>
+				<mul order="0x30" stat="p_max_mp" val="1.6"/>
+				<mul order="0x30" stat="p_max_cp" val="1.6"/>
+				<mul order="0x30" stat="p_physical_defence" val="1.3"/>
+				<mul order="0x30" stat="p_magical_defence" val="1.3"/>
+				<add order="0x40" stat="p_speed" val="30"/>
+				<mul order="0x30" stat="p_physical_attack" val="1.2"/>
+				<mul order="0x30" stat="mpConsum" val="0.90"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.90"/>
+				<mul order="0x30" stat="mpDanceConsume" val="0.90"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23078" levels="1" name="Weaver Agathion Special Skill - Flute Sound" >
+		<!--
+		      Done by Magister
+		      Last modify: 30.12.2009
+		      Description: For 20 minutes, through the magic of the mysterious flute sound, increases Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, magic M. Def. by 30%, moving speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. Reuse delay 5 minutes. Consumes 1 Girl's Soul Ore during skill use.
+		-->
+		<set name="itemConsumeId" val="20597"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1528"/>
+		</cond>
+		<for>
+			<effect name="Buff" time="1200">
+				<mul order="0x30" stat="p_max_hp" val="1.4"/>
+				<mul order="0x30" stat="p_max_mp" val="1.4"/>
+				<mul order="0x30" stat="p_max_cp" val="1.4"/>
+				<mul order="0x30" stat="p_physical_defence" val="1.3"/>
+				<mul order="0x30" stat="p_magical_defence" val="1.3"/>
+				<add order="0x40" stat="p_speed" val="20"/>
+				<mul order="0x30" stat="p_magical_attack" val="1.45"/>
+				<mul order="0x30" stat="mpConsum" val="0.90"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.90"/>
+				<mul order="0x30" stat="mpDanceConsume" val="0.90"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23079" levels="1" name="Chon-chon Agathion Cute Trick" >
+		<!--
+		      Done by Magister
+		      Last modify: 30.12.2009
+		      Description: Able to see the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1529"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23080" levels="1" name="Chon-chon Agathion Special Skill - Great Warrior Soul Power" >
+		<!--
+		      Done by Magister
+		      Last modify: 30.12.2009
+		      Description: For five minutes, the Great Spirit increases critical attack damage by 20%, P.Atk. by 10% and moving speed by 20%.  Decreases the MP consumption of skills by 5%.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1529"/>
+		</cond>
+		<for>
+			<effect name="Buff" time="300">
+				<mul order="0x30" stat="p_critical_damage_per" val="1.2"/>
+				<add order="0x40" stat="p_speed" val="20"/>
+				<mul order="0x30" stat="p_physical_attack" val="1.1"/>
+				<mul order="0x30" stat="mpConsum" val="0.95"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.95"/>
+				<mul order="0x30" stat="mpDanceConsume" val="0.95"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23081" levels="1" name="Tang-tang Agathion Cute Trick" >
+		<!--
+		      Done by Magister
+		      Last modify: 30.12.2009
+		      Description: Able to see the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1530"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23082" levels="1" name="Tang-tang Agathion Special Skill - Great Wizard Soul Power" >
+		<!--
+		      Done by Magister
+		      Last modify: 30.12.2009
+		      Description: For five minutes, the Great Spirit increases the casting speed by 20%, M.Atk. by 20%, M.Def. by 20% . Increases the probability of critical hits with magic attacks by 2%.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1530"/>
+		</cond>
+		<for>
+			<effect name="Buff" time="300">
+				<mul order="0x30" stat="p_magic_speed" val="1.2"/>
+				<mul order="0x30" stat="p_magical_attack" val="1.2"/>
+				<mul order="0x30" stat="p_magical_defence" val="1.2"/>
+				<add order="0x40" stat="mCritRate" val="2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23083" levels="1" name="Dancing Kid Agathion Cute Trick" >
+		<!--
+		      Done by Magister
+		      Last modify: 30.12.2009
+		      Description: Able to see the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1531"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23084" levels="1" name="Dancing Kid Agathion Special Skill - Great Adventurer Soul Power" >
+		<!--
+		      Done by Magister
+		      Last modify: 30.12.2009
+		      Description: For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20% and moving speed by 20%.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1531"/>
+		</cond>
+		<for>
+			<effect name="Buff" time="300">
+				<mul order="0x30" stat="p_max_hp" val="1.2"/>
+				<mul order="0x30" stat="p_max_mp" val="1.2"/>
+				<mul order="0x30" stat="regMp" val="1.2"/>
+				<mul order="0x30" stat="regHp" val="1.2"/>
+				<add order="0x40" stat="p_speed" val="20"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23085" levels="1" name="Monkey King Agathion Cute Trick" >
+		<!--
+		      Done by Magister
+		      Last modify: 30.12.2009
+		      Description: Able to see the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1532"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23086" levels="1" name="Monkey King Agathion Special Skill - Great Wizard Soul Power" >
+		<!--
+		      Done by Magister
+		      Last modify: 30.12.2009
+		      Description: For five minutes, the Great Spirit increases the casting speed by 20%, M.Atk. by 20%, M.Def. by 20% . Increases the probability of critical magic attacks by 2%.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1532"/>
+		</cond>
+		<for>
+			<effect name="Buff" time="300">
+				<mul order="0x30" stat="p_magic_speed" val="1.2"/>
+				<mul order="0x30" stat="p_magical_attack" val="1.2"/>
+				<mul order="0x30" stat="p_magical_defence" val="1.2"/>
+				<add order="0x40" stat="mCritRate" val="2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23087" levels="1" name="Utanka Agathion Cute Trick" >
+		<!--
+		      Done by Magister
+		      Last modify: 30.12.2009
+		      Description: Able to see the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1533"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23088" levels="1" name="Utanka Agathion Special Skill - Great Warrior Soul Power" >
+		<!--
+		      Done by Magister
+		      Last modify: 30.12.2009
+		      Description: For five minutes, the Great Spirit increases critical attack damage by 20%, P.Atk. by 10% and P.Def. by 20%.  Bestows the ability to recover HP equal to 5% of the melee damage.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1533"/>
+		</cond>
+		<for>
+			<effect name="Buff" time="300">
+				<mul order="0x30" stat="p_critical_damage_per" val="1.2"/>
+				<mul order="0x30" stat="p_physical_attack" val="1.1"/>
+				<mul order="0x30" stat="p_physical_defence" val="1.2"/>
+				<add order="0x40" stat="absorbDam" val="5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23089" levels="1" name="Bonus B Agathion Cute Trick" >
+		<!--
+		      Done by Magister
+		      Last modify: 30.12.2009
+		      Description: Able to see the summoned spirit perform cute tricks.
+		-->
+		<set name="power" val="150"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1534"/>
+		</cond>
+		<for />
+	</skill>
+	<skill id="23090" levels="1" name="Bonus B Agathion Special Skill - Great Adventurer Soul Power" >
+		<!--
+		      Done by Magister
+		      Description: For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20% and moving speed by 20%.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<player agathion="1534"/>
+		</cond>
+		<for>
+			<effect name="Buff" time="300">
+				<mul order="0x30" stat="p_max_hp" val="1.2"/>
+				<mul order="0x30" stat="p_max_mp" val="1.2"/>
+				<mul order="0x30" stat="regMp" val="1.2"/>
+				<mul order="0x30" stat="regHp" val="1.2"/>
+				<add order="0x40" stat="p_speed" val="20"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="23091" levels="1" name="Trick of Halloween Children" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: "By trick of Halloween Children, increase max HP/MP/CP by 40% for 10 seconds."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23092" levels="1" name="Jack O'Lantern Card" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Halloween Ghost Skill Presentation
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23093" levels="1" name="Rotten Jack O'Lantern Card" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Halloween Ghost Skill Presentation
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23094" levels="1" name="Jack O'Lantern Card - Confirm Skill" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Halloween Ghost Skill Presentation
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23095" levels="1" name="Rotten Jack O'Lantern Card - Confirm Skill" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Halloween Ghost Skill Presentation
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23096" levels="1" name="Halloween Defeat" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Halloween Defeat Effect
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23097" levels="1" name="First Consecutive Win" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: 1st Consecutive Win in Jack Game.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23098" levels="1" name="2nd Consecutive Win" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: 2nd Consecutive Win in Jack Game.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="23099" levels="1" name="Third Consecutive Win" >
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: 3rd Consecutive Win in Jack Game.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-12-2009  19:13
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+</list>

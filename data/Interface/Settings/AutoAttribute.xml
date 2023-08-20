@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- [RU] Настройки авто-атрибута -->
+	<!-- [EN] Auto attribute settings -->
+	<!-- [RU] 0 - выключено для всех (отключает все нижеперечисленные опции, интерфейс будет работать по дефолту) -->
+	<!-- [EN] 0 - disabled for all (disables all of the following options, the interface will work by default) -->
+	<!-- [RU] 1 - включено только для игроков с ПА -->
+	<!-- [EN] 1 - enabled only for PA players -->
+	<!-- [RU] 2 - включено для всех -->
+	<!-- [EN] 2 - enabled for all -->
+	<interface_setting name="AttributeEnchantMode" type="TYPE_CHAR" value="2"/>
+
+	<!-- [RU] Минимальная задержка и значение на которое будет увеличиваться на каждое положение бегунка (в мс, 1 секунда = 1000 мс) -->
+	<!-- [EN] The minimum delay and the value that will increase for each position of the slider (in ms, 1 second = 1000 ms) -->
+	<interface_setting name="AttributeEnchantMinDelay" type="TYPE_INT" value="1000"/>
+	<interface_setting name="AttributeEnchantDelayRange" type="TYPE_INT" value="250"/>
+	
+	<!-- [RU] Разрешить/запретить вставку атрибута в бижутерию (разрешить - 1, запретить - 0) -->
+	<!-- [EN] Allow/prohibit the insertion of an attribute in jewelry (allow - 1, prohibit - 0) -->
+	<interface_setting name="AttributeEnchantEnableJewelry" type="TYPE_CHAR" value="0"/>
+	<!-- [RU] Разрешить/запретить вставку атрибута в пояса (разрешить - 1, запретить - 0) -->
+	<!-- [EN] Allow/prohibit the insertion of an attribute in belts (allow - 1, prohibit - 0) -->
+	<interface_setting name="AttributeEnchantEnableBelts" type="TYPE_CHAR" value="0"/>
+	<!-- [RU] Разрешить/запретить вставку атрибута в рубахи (разрешить - 1, запретить - 0) -->
+	<!-- [EN] Allow/prohibit the insertion of an attribute in shirts (allow - 1, prohibit - 0) -->
+	<interface_setting name="AttributeEnchantEnableShirts" type="TYPE_CHAR" value="0"/>
+</list>

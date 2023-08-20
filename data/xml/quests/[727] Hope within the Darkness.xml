@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:16 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="727" type="SOLO">
+		<name lang="en" val="Hope within the Darkness"/>
+		<name lang="ru" val="Надежда во тьме"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="25653"/>
+			<!-- Kanadis Herald -->
+			<event type="MOBKILLED" val="25654"/>
+			<!-- Kanadis Herald -->
+			<event type="MOBKILLED" val="25655"/>
+			<!-- Kanadis Herald -->
+			<event type="MOBKILLED" val="36562"/>
+			<!-- Seduced Knight -->
+			<event type="MOBKILLED" val="36563"/>
+			<!-- Seduced Ranger -->
+			<event type="MOBKILLED" val="36564"/>
+			<!-- Seduced Mage -->
+			<event type="MOBKILLED" val="36565"/>
+			<!-- Seduced Warrior -->
+			<event type="QUEST_START" val="36403"/>
+			<!-- Warden -->
+			<event type="QUEST_START" val="36404"/>
+			<!-- Warden -->
+			<event type="QUEST_START" val="36405"/>
+			<!-- Warden -->
+			<event type="QUEST_START" val="36406"/>
+			<!-- Warden -->
+			<event type="QUEST_START" val="36407"/>
+			<!-- Warden -->
+			<event type="QUEST_START" val="36408"/>
+			<!-- Warden -->
+			<event type="QUEST_START" val="36409"/>
+			<!-- Warden -->
+			<event type="QUEST_START" val="36410"/>
+			<!-- Warden -->
+			<event type="QUEST_START" val="36411"/>
+			<!-- Warden -->
+			<event type="QUEST_TALK" val="36403"/>
+			<!-- Warden -->
+			<event type="QUEST_TALK" val="36404"/>
+			<!-- Warden -->
+			<event type="QUEST_TALK" val="36405"/>
+			<!-- Warden -->
+			<event type="QUEST_TALK" val="36406"/>
+			<!-- Warden -->
+			<event type="QUEST_TALK" val="36407"/>
+			<!-- Warden -->
+			<event type="QUEST_TALK" val="36408"/>
+			<!-- Warden -->
+			<event type="QUEST_TALK" val="36409"/>
+			<!-- Warden -->
+			<event type="QUEST_TALK" val="36410"/>
+			<!-- Warden -->
+			<event type="QUEST_TALK" val="36411"/>
+			<!-- Warden -->
+			<item id="9797"/>
+			<!-- Dungeon Leader Mark -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="20000" name="Spicy Kimchee" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.etc_kimchi_power_i00" />
+	</etcitem>
+	<etcitem id="20001" name="Spicy Kimchee" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.etc_kimchi_power_i00" />
+	</etcitem>
+	<etcitem id="20002" name="Spicy Kimchee" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.etc_kimchi_power_i00" />
+	</etcitem>
+	<etcitem id="20003" name="Sweet-and-Sour White Kimchee" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.etc_kimchi_time_i00" />
+	</etcitem>
+	<etcitem id="20004" name="Energy Ginseng" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.etc_ginseng_recovery_i00" />
+	</etcitem>
+	<etcitem id="20005" name="Energy Red Ginseng" type="POTION">
+		<set name="class" val="CONSUMABLE" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="22005" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="20025" name="My Teleport Spellbook" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="bookmark_scroll_i00" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20026" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss)" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="ticket_i00" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20027" name="Extra Entrance Pass - Near Kamaloka" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="ticket_i00" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20028" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss)" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="ticket_i00" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20033" name="My Teleport Flag" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.br_flag_of_bookmark_i00" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20034" name="Revita-Pop" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.br_hallowinday_candy_i00" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="22006" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="20035" name="Majo Agathion Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20036" name="Gold Crown Majo Agathion Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20037" name="Black Crown Majo Agathion Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20038" name="Majo Agathion 30-Day Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="additional_name" val="Big Head" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20039" name="Gold Crown Majo Agathion 30-Day Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="additional_name" val="Resurrection" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20040" name="Black Crown Majo Agathion 30-Day Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="additional_name" val="Leave" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20041" name="Plaipitak Agathion Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20042" name="Plaipitak Agathion 30-Day Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="additional_name" val="Big Head" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20043" name="Plaipitak Agathion 30-Day Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="additional_name" val="Resurrection" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20044" name="Plaipitak Agathion 30-Day Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="additional_name" val="Leave" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20045" name="Horn-Rimmed Glasses Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="additional_name" val="Agility" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20046" name="Afro Hair Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20047" name="Afro Hair Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="additional_name" val="Big Head, Firework" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20048" name="Afro Hair Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="additional_name" val="Wind Walk" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20049" name="Uniform Hat Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20050" name="Assassin's Bamboo Hat Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20051" name="Ruthless Tribe Mask Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20052" name="Ribbon Hairband Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20053" name="Visor Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20054" name="My Teleport Spellbook 1-Sheet Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20055" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss) 1-Sheet Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20056" name="Extra Entrance Pass - Near Kamaloka 1-Sheet Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20057" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss) 1-Sheet Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20058" name="Light Purple-Maned Horse Bracelet Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20059" name="Light Purple Maned Horse Bracelet 30-Day Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20060" name="Kat the Cat Hat Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20061" name="Skull Hat Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20062" name="My Teleport Flag Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="20069" name="Baby Panda Agathion Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20070" name="Bamboo Panda Agathion Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20071" name="Sexy Panda Agathion Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20072" name="Agathion of Baby Panda 15 Day Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="additional_name" val="Big Head" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20073" name="Bamboo Panda Agathion 15 Day Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="additional_name" val="Resurrection" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20074" name="Agathion of Sexy Panda 15 Day Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="additional_name" val="Escape" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20075" name="Santa Claus' Gift - Joy" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.br_xmas_present_joy_i00" />
+		<set name="additional_name" val="4 Hour Expiration Period" />
+		<set name="weight" val="10" />
+		<set name="temporal" val="true" />
+		<set name="durability" val="240" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20076" name="Santa Claus' Gift - Enjoyment" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.br_xmas_present_fun_i00" />
+		<set name="additional_name" val="4 Hour Expiration Period" />
+		<set name="weight" val="10" />
+		<set name="temporal" val="true" />
+		<set name="durability" val="240" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20077" name="Santa Claus' Gift - Luck" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.br_xmas_present_luck_i00" />
+		<set name="additional_name" val="4 Hour Expiration Period" />
+		<set name="weight" val="10" />
+		<set name="temporal" val="true" />
+		<set name="durability" val="240" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20078" name="Santa Claus' Gift - Luck" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.br_xmas_present_luck_i00" />
+		<set name="additional_name" val="4 Hour Expiration Period" />
+		<set name="weight" val="10" />
+		<set name="temporal" val="true" />
+		<set name="durability" val="240" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20079" name="Good Luck Lucky Bag Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.br_four_leaf_clover_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20080" name="Lucky Four-leaf Clover Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.br_four_leaf_clover_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20081" name="Good Luck Lucky Bag" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.br_lucky_bag_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20082" name="Lucky Four-leaf Clover" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.br_four_leaf_clover_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20092" name="Holiday Spirit Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.br_four_leaf_clover_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20093" name="Spirit of the Holiday" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.br_xmas_miracle_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20096" name="Mysterious Formal Dress - Event Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.br_lucky_bag_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="20097" name="Mysterious Formal Dress - Event Pack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys.br_mysterious_wedding_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+</list>

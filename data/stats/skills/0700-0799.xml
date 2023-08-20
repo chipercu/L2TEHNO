@@ -1,0 +1,1824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+    <skill id="700" levels="1" name="Divine Healer Group Heal">
+        <set name="power" val="400"/>
+        <set name="target" val="TARGET_PARTY"/>
+        <set name="skillRadius" val="900"/>
+        <set name="skillType" val="HEAL"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+			<effect name="t_hp" param="27;1;diff"/>
+        </for>
+    </skill>
+    <skill id="701" levels="1" name="Divine Healer Resurrection">
+        <!--
+              Done by:	Magister
+              Last modify:	28.04.2010, Diamond
+              Description:
+              Resurrects a corpse. Restores the experience value about 70 percent additionally.
+          -->
+        <set name="power" val="70.0"/>
+        <set name="target" val="TARGET_CORPSE_PLAYER"/>
+        <set name="skillType" val="RESURRECT"/>
+        <set name="corpse" val="true"/>
+        <set name="canPet" val="true"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="702" levels="1" name="Divine Healer Clans">
+        <!--
+              Done by:	Magister
+              Last modify:	04.07.2008
+              Description:
+              Cancel all the debuffs of the target.
+          -->
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCleanse" val="true" />
+		<for>
+			<effect name="DispelEffects">
+				<def name="dispelType" val="cleanse" />
+				<def name="cancelRate" val="100" />
+				<def name="negateCount" val="10" />
+			</effect>
+		</for>
+    </skill>
+    <skill id="703" levels="1" name="Sacrifice Healer">
+        <!--
+              Done by Diamond
+              Description: Regenerate party member's HP and MP by sacrificing yourself. Usable only when MP is under 10 percent.
+          -->
+        <set name="target" val="TARGET_PARTY"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="addSkills" val="5602;1"/>
+        <cond msgId="113" addName="1">
+            <player percentMP="10"/>
+        </cond>
+        <for>
+			<effect name="CallSkills" applyOnCaster="true" instantly="true"/>
+            <effect name="HealPercent" instantly="true" val="100"/>
+            <effect name="ManaHealPercent" instantly="true" val="100"/>
+        </for>
+    </skill>
+    <skill id="704" levels="1" name="Divine Enchanter Water Spirit">
+        <!--
+              Done by:	Diamond
+              Last modify:	09.06.2009
+              Description:
+              For 2 minutes, a powerful spirit acts to increase the rate of Prominent Damage occurring through damage magic by 2, MP recovery bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buffs by 10%. Decreases movement speed by 20% and MP consumption for skill use by 5%. Consumes 10 Runestones.
+          -->
+        <set name="itemConsumeId" val="3031"/>
+        <set name="itemConsumeCount" val="10"/>
+        <set name="target" val="TARGET_PARTY_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="1" stackType="ancient" time="120">
+                <add order="0x40" stat="mCritRate" val="2"/>
+                <mul order="0x30" stat="regMp" val="1.2"/>
+                <mul order="0x30" stat="p_physical_attack" val="1.1"/>
+                <mul order="0x30" stat="p_physical_defence" val="1.2"/>
+                <mul order="0x30" stat="p_attack_speed" val="1.2"/>
+                <mul order="0x30" stat="p_magical_attack" val="1.2"/>
+                <mul order="0x30" stat="p_magical_defence" val="1.2"/>
+                <mul order="0x30" stat="p_magic_speed" val="1.2"/>
+                <add order="0x40" stat="debuffRcpt" val="10"/>
+                <mul order="0x30" stat="p_speed" val="0.8"/>
+                <mul order="0x30" stat="mpConsum" val="0.95"/>
+                <mul order="0x30" stat="mpConsumePhysical" val="0.95"/>
+                <mul order="0x30" stat="mpDanceConsume" val="0.95"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="705" levels="1" name="Divine Enchanter Fire Spirit">
+        <!--
+              Done by:	Diamond
+              Last modify:	09.06.2009
+              Description:
+              For 2 minutes, a powerful spirit acts to increase a party member's Max MP by 20%, HP recovery bonus by 20%, the rate of Prominent Damage occurring through damage magic by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buffs by 10%. Decreases movement speed by 20%. Consumes 10 Runestones.
+          -->
+        <set name="itemConsumeId" val="3031"/>
+        <set name="itemConsumeCount" val="10"/>
+        <set name="target" val="TARGET_PARTY_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="1" stackType="ancient" time="120">
+                <mul order="0x30" stat="p_max_mp" val="1.2"/>
+                <mul order="0x30" stat="regHp" val="1.2"/>
+                <add order="0x40" stat="mCritRate" val="2"/>
+                <mul order="0x30" stat="p_critical_damage_per" val="1.2"/>
+                <mul order="0x30" stat="p_physical_attack" val="1.1"/>
+                <mul order="0x30" stat="p_physical_defence" val="1.2"/>
+                <mul order="0x30" stat="p_attack_speed" val="1.2"/>
+                <mul order="0x30" stat="p_magical_attack" val="1.2"/>
+                <mul order="0x30" stat="p_magical_defence" val="1.2"/>
+                <mul order="0x30" stat="p_magic_speed" val="1.2"/>
+                <add order="0x40" stat="debuffRcpt" val="10"/>
+                <mul order="0x30" stat="p_speed" val="0.8"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="706" levels="1" name="Divine Enchanter Wind Spirit">
+        <set name="itemConsumeId" val="3031"/>
+        <set name="itemConsumeCount" val="10"/>
+        <set name="target" val="TARGET_PARTY_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff">
+				<add order="0x40" stat="absorbDam" val="5"/>
+                <mul order="0x30" stat="p_max_hp" val="1.2"/>
+                <add order="0x40" stat="p_critical_rate_per" val="20"/>
+                <mul order="0x30" stat="p_physical_attack" val="1.1"/>
+                <mul order="0x30" stat="p_physical_defence" val="1.2"/>
+                <mul order="0x30" stat="p_attack_speed" val="1.2"/>
+                <mul order="0x30" stat="p_magical_defence" val="1.2"/>
+                <mul order="0x30" stat="p_magical_attack" val="1.2"/>
+                <mul order="0x30" stat="p_magic_speed" val="1.2"/>
+                <add order="0x40" stat="debuffRcpt" val="10"/>
+                <mul order="0x30" stat="p_speed" val="0.8"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="707" levels="1" name="Divine Enchanter Hero Spirit">
+        <!--
+              Done by:	Diamond
+              Last modify:	09.06.2009
+              Description:
+              For 2 minutes, a powerful spirit acts to increase all party members' Max HP by 20%, the rate of Prominent Damage occurring through damage magic by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buffs by 10%. Decreases movement speed by 20%. Consumes 10 Runestones.
+          -->
+        <set name="itemConsumeId" val="3031"/>
+        <set name="itemConsumeCount" val="10"/>
+        <set name="target" val="TARGET_PARTY_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff">
+                <mul order="0x30" stat="p_max_hp" val="1.2"/>
+                <add order="0x40" stat="mCritRate" val="2"/>
+                <mul order="0x30" stat="p_critical_damage_per" val="1.2"/>
+                <mul order="0x30" stat="p_physical_attack" val="1.1"/>
+                <mul order="0x30" stat="p_physical_defence" val="1.2"/>
+                <mul order="0x30" stat="p_attack_speed" val="1.2"/>
+                <mul order="0x30" stat="p_magical_attack" val="1.2"/>
+                <mul order="0x30" stat="p_magical_defence" val="1.2"/>
+                <mul order="0x30" stat="p_magic_speed" val="1.2"/>
+                <add order="0x40" stat="debuffRcpt" val="10"/>
+                <mul order="0x30" stat="p_speed" val="0.8"/>
+            </effect>
+            <effect name="HealPercent" instantly="true" val="20"/>
+        </for>
+    </skill>
+	<skill id="708" levels="1" name="Divine Enchanter Mass Binding">
+        <!--
+              Done by:	Diamond
+              Last modify:	21.01.2009
+              Description: Instantly apply Hold to surrounding enemies. Additional Hold is not available while effects last.
+          -->
+        <set name="target" val="TARGET_AURA"/>
+        <set name="skillRadius" val="250"/>
+        <set name="skillType" val="ROOT"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="levelModifier" val="2"/>
+        <for>
+            <effect name="p_block_move"/>
+			<effect name="p_defence_trait" param="trait_hold;100"/>
+        </for>
+    </skill>
+    <skill id="709" levels="1" name="Sacrifice Enchanter">
+        <!--
+              Done by:	Diamond
+              Last modify:	20.05.2009
+              Description: Increase all the party member's abilities by sacrificing yourself. Usable only when MP is under 10 percent.
+          -->
+        <set name="target" val="TARGET_PARTY"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="addSkills" val="5602;1"/>
+        <cond msgId="113" addName="1">
+            <player percentMP="10"/>
+        </cond>
+        <for>
+			<effect name="CallSkills" applyOnCaster="true" instantly="true"/>
+            <effect name="Buff" time="60">
+                <!-- TODO не проверенные данные -->
+                <mul order="0x30" stat="p_max_hp" val="1.10"/>
+                <add order="0x40" stat="p_critical_rate_per" val="10"/>
+				<mul order="0x30" stat="p_critical_damage_per" val="1.1"/>
+                <add order="0x40" stat="p_speed" val="10"/>
+                <add order="0x40" stat="p_avoid" val="2"/>
+				<mul order="0x30" stat="p_physical_defence" val="1.1"/>
+				<mul order="0x30" stat="p_magical_defence" val="1.1"/>
+				<mul order="0x30" stat="p_physical_attack" val="1.1"/>
+				<mul order="0x30" stat="p_magical_attack" val="1.1"/>
+				<mul order="0x30" stat="p_magic_speed" val="1.1"/>
+				<mul order="0x30" stat="p_attack_speed" val="1.1"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="710" levels="1" name="Divine Summoner Summon Divine Beast">
+        <!--
+              Done by:	Magister
+              Last modify:	13.09.2008
+              Description: Summons the divine beast. Consumes 2 Crystals: A grade - when summoning, and consumes additional 1 Crystal - A grade per hour.
+          -->
+        <set name="itemConsumeId" val="1461"/>
+        <set name="itemConsumeCount" val="2"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="itemConsumeIdInTime" val="1461"/>
+        <set name="itemConsumeCountInTime" val="1"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="npcId" val="14870"/>
+        <for/>
+    </skill>
+    <skill id="711" levels="1" name="Divine Summoner Transfer Pain">
+        <!--
+              Done by:	Magister
+              Last modify:	13.09.2008
+              Description: Transfers some of the player's damage to the summoner. Consumes MP continuously.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="CONT"/>
+        <set name="operateType" val="OP_TOGGLE"/>
+        <for>
+            <effect name="c_mp_by_level" param="-0.4;5">
+                <add order="0x40" stat="transferPetDam" val="20"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="712" levels="1" name="Divine Summoner Final Servitor">
+        <!--
+              Done by:	Magister
+              Last modify:	09.06.2009, Diamond
+              Description:
+              Temporarily causes the summoner to be possessed with the spirit of an ancient hero. Consumes 20 Spirit Ores.
+          -->
+        <set name="itemConsumeId" val="3031"/>
+        <set name="itemConsumeCount" val="20"/>
+        <set name="target" val="TARGET_PET"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="1" stackType="ancient" time="1200">
+                <mul order="0x30" stat="p_max_hp" val="1.2"/>
+                <add order="0x40" stat="p_hit" val="4"/>
+                <mul order="0x30" stat="p_physical_attack" val="1.1"/>
+                <mul order="0x30" stat="p_physical_defence" val="1.2"/>
+                <mul order="0x30" stat="p_attack_speed" val="1.2"/>
+                <add order="0x40" stat="p_critical_rate_per" val="20"/>
+                <mul order="0x30" stat="p_critical_damage_per" val="1.2"/>
+                <mul order="0x30" stat="p_magical_defence" val="1.2"/>
+                <mul order="0x30" stat="p_magical_attack" val="1.2"/>
+                <mul order="0x30" stat="p_magic_speed" val="1.2"/>
+                <add order="0x40" stat="debuffRcpt" val="20"/>
+                <mul order="0x30" stat="p_speed" val="0.8"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="713" levels="1" name="Divine Summoner Servitor Hill">
+        <!--
+              Done by:	Magister
+              Last modify:	13.09.2008
+              Description: Regenerate the summoner's HP. Power 991.
+          -->
+        <table name="#power">991</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_PET"/>
+        <set name="skillType" val="HEAL"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="714" levels="1" name="Sacrifice Summoner">
+        <!--
+              Done by:	Diamond
+              Last modify:	20.05.2009
+              Description: Increase the party member's critical abilities by sacrificing yourself. Usable only when MP is under 10 percent.
+          -->
+        <set name="target" val="TARGET_PARTY"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="addSkills" val="5602;1"/>
+        <cond msgId="113" addName="1">
+            <player percentMP="10"/>
+        </cond>
+        <for>
+			<effect name="CallSkills" applyOnCaster="true" instantly="true"/>
+            <effect name="Buff" time="60">
+                <add order="0x40" stat="p_critical_rate_per" val="20"/>
+                <mul order="0x30" stat="p_critical_damage_per" val="1.20"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="715" levels="4" name="Zaken Energy Drain">
+        <!--
+              Done by:	Magister
+              Last modify:	15.07.2008
+              Description:
+              Exhausts enemy's HP/MP and absorbs some of HP.
+          -->
+        <table name="#power">116 122 126 129</table>
+        <set name="power" val="#power"/>
+        <set name="element" val="unholy"/>
+        <set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="100" />
+        <set name="skillType" val="DRAIN"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="absorbPart" val="0.8"/>
+		<set name="isEnemy" val="true"/>
+        <for/>
+    </skill>
+    <skill id="716" levels="4" name="Zaken Hold">
+        <!--
+              Done by:	Magister
+              Last modify:	15.07.2008
+              Description:
+              Instantly apply Hold to the enemy. Additional Hold is not available while effects last.
+          -->
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="ROOT"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="levelModifier" val="2"/>
+        <for>
+            <effect name="p_block_move"/>
+        </for>
+    </skill>
+    <skill id="717" levels="4" name="Zaken Concentrated Attack">
+        <!--
+              Done by:	Magister
+              Last modify:	20.05.2009, Magister
+              Description:
+              Concentrate force and attack only one specific place. Power 2751.
+          -->
+        <table name="#power">2751 3252 3752 4224</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="overHit" val="true"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="718" levels="4" name="Zaken Dancing Sword">
+        <!--
+              Done by:	Magister
+              Last modify:	20.05.2009, Diamond
+              Description:
+              Use Dancing Swords to attack the enemy all at once. Power 1651,1951,2251,2534.
+          -->
+        <table name="#power">1651 1951 2251 2534</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_AURA"/>
+        <set name="overHit" val="true"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="719" levels="1" name="Zaken Vampiric Rage">
+        <!--
+              Done by:	Magister
+              Last modify:	15.07.2008
+              Description:
+              Provides the ability to recover HP temporarily by damaging the enemy. Exclude damage caused by skills and long-range attacks. Effect 4.
+          -->
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="9" stackType="vampRage" time="1200">
+                <add order="0x40" stat="absorbDam" val="9"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="720" levels="2" name="Anakim Holy Light Burst">
+        <!--
+              Done by:	Magister
+              Last modify:	20.05.2009, Diamond
+              Description:
+              Strong pound attack. Over-hit is available. Power 3189,3590.
+          -->
+        <table name="#power">3189 3590</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="overHit" val="true"/>
+        <set name="element" val="sacred"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="721" levels="2" name="Anakim Energy Attack">
+        <!--
+              Done by:	Magister
+              Last modify:	23.06.2009, Diamond
+              Description:
+              Unleash concentrated energy. Power 186,197.
+          -->
+        <table name="#power">186 197</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="skillRadius" val="200"/>
+        <set name="element" val="sacred"/>
+        <set name="skillType" val="MDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isEnemy" val="true"/>
+        <for/>
+    </skill>
+    <skill id="722" levels="2" name="Anakim Holy Beam">
+        <!--
+              Done by:	Magister
+              Last modify:	15.07.2008
+              Description:
+              Last modify:	23.06.2009, Diamond
+          -->
+        <table name="#power">186 197</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="skillRadius" val="200"/>
+        <set name="element" val="sacred"/>
+        <set name="skillType" val="MDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isEnemy" val="true"/>
+        <for/>
+    </skill>
+    <skill id="723" levels="1" name="Anakim Sunshine">
+        <!--
+              Done by:	Magister
+              Last modify:	20.05.2009, Diamond
+              Description:
+              Recover the party member's HP immediately. Power 1340.
+          -->
+        <set name="power" val="1340"/>
+        <set name="target" val="TARGET_PARTY"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="skillType" val="HEAL"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="724" levels="1" name="Anakim Clans">
+        <!--
+              Done by:	Magister
+              Last modify:	20.05.2009, Diamond
+              Description: Cancel all of your debuffs.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCleanse" val="true" />
+		<for>
+			<effect name="DispelEffects">
+				<def name="dispelType" val="cleanse" />
+				<def name="cancelRate" val="100" />
+				<def name="negateCount" val="10" />
+			</effect>
+		</for>
+    </skill>
+    <skill id="725" levels="2" name="Venom Power Smash">
+        <!--
+              Done by:	Magister
+              Last modify:	09.07.2008
+              Description:
+              Unleash powerful strike. Power 2626, 2957.
+          -->
+        <table name="#power">2626 2957</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="overHit" val="true"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="726" levels="2" name="Venom Sonic Storm">
+        <!--
+              Done by:	Magister
+              Last modify:	09.07.2008
+              Description:
+              Attack the surrounding area by detonating the sword energy. Power 2626,2957.
+          -->
+        <table name="#power">2626 2957</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isEnemy" val="true"/>
+        <for/>
+    </skill>
+    <skill id="727" levels="1" name="Venom Disillusion">
+        <!--
+              Done by:	Magister
+              Last modify:	09.07.2008
+              Description:
+              Temporarily increase your attack power. Effect 1.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="1.08" stackType="p_physical_attack" time="1200">
+                <mul order="0x30" stat="p_physical_attack" val="1.08"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="728" levels="1" name="Gordon Beast Attack">
+        <!--
+              Done by:	Magister
+              Last modify:	08.07.2008
+              Description:
+              Unleash beast attack. Power 2957.
+          -->
+        <set name="power" val="2957"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="overHit" val="true"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="729" levels="1" name="Gordon Sword Stab">
+        <!--
+              Done by:	Magister
+              Last modify:	08.07.2008
+              Description:
+              Attack the enemies in the front. Power 2957.
+          -->
+        <set name="power" val="2957"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="overHit" val="true"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isEnemy" val="true"/>
+        <for/>
+    </skill>
+    <skill id="730" levels="1" name="Gordon Press">
+        <!--
+              Done by:	Magister
+              Last modify:	08.07.2008
+              Description:
+              Instantly decrease Spd./Atk. Spd./Casting Spd. of surrounding enemies. Effect 3.
+          -->
+        <set name="target" val="TARGET_AURA"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="DEBUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" time="30">
+                <mul order="0x30" stat="p_speed" val="0.7"/>
+                <mul order="0x30" stat="p_attack_speed" val="0.7"/>
+                <mul order="0x30" stat="p_magic_speed" val="0.7"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="731" levels="1" name="Ranku Dark Explosion">
+        <set name="power" val="162"/>
+        <set name="element" val="unholy"/>
+		<set name="elementPower" val="20"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="skillType" val="MDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isEnemy" val="true"/>
+        <for/>
+    </skill>
+    <skill id="732" levels="1" name="Ranku Stun Attack">
+        <!--
+              Done by:	Magister
+              Last modify:	08.07.2008
+              Description:
+              Causes damage and shock simultaneously. Puts an enemy into shock momentarily. Over-hit possible. Power 1.
+          -->
+        <set name="power" val="1"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="overHit" val="true"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Stun" stackType="Stun" time="9"/>
+        </for>
+    </skill>
+    <skill id="733" levels="1" name="Kechi Double Cutter">
+        <!--
+              Done by:	Magister
+              Last modify:	09.07.2008
+              Description:
+              Attack by crossing the sword. Power 2957.
+          -->
+        <set name="power" val="2957"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="overHit" val="true"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="734" levels="1" name="Kechi Air Blade">
+        <!--
+              Done by:	Magister
+              Last modify:	09.07.2008
+              Description:
+              Strikes the enemy a blow in a distance using sword energy. Critical enabled. Power 1812.
+          -->
+        <set name="power" val="1812"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="overHit" val="true"/>
+        <set name="criticalRate" val="10"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="735" levels="1" name="Devil Spinning Weapon">
+        <!--
+              Done by:	Magister
+              Last modify:	04.07.2008
+              Description:
+              Attack surrounding enemies by swinging the weapon. Power 162.
+          -->
+        <set name="power" val="162"/>
+        <set name="element" val="unholy"/>
+        <set name="target" val="TARGET_AURA"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="MDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="736" levels="1" name="Devil Seed">
+        <set name="target" val="TARGET_ONE"/>
+        <set name="element" val="unholy"/>
+        <set name="skillType" val="POISON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="delayedEffect" val="5248"/>
+        <for>
+            <effect name="t_hp" param="-351;5;diff"/>
+        </for>
+    </skill>
+    <skill id="737" levels="1" name="Devil Ultimate Defense">
+        <!--
+              Done by:	Magister
+              Last modify:	04.07.2008
+              Description:
+              Instantly and drastically increases tolerance to P. Def./M. Def, buff cancel attacks. The player cannot move while the effect lasts. Effect 2.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="p_block_move">
+                <add order="0x40" stat="p_physical_defence" val="3600"/>
+                <add order="0x40" stat="p_magical_defence" val="2700"/>
+                <add order="0x40" stat="cancelRcpt" val="80"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="738" levels="3" name="Heretic Heal">
+        <!--
+              Done by:	Magister
+              Last modify:	04.07.2008
+              Description:
+              Recover the target's HP immediately. Power 892,926,956.
+          -->
+        <table name="#power">892 926 956</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="HEAL"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="739" levels="3" name="Heretic Battle Heal">
+        <!--
+              Done by:	Magister
+              Last modify:	04.07.2008
+              Description:
+              Quickly recovers HP. Power 743,772,796.
+          -->
+        <table name="#power">743 772 796</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="HEAL"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="740" levels="3" name="Heretic Resurrection">
+        <!--
+              Done by:	Magister
+              Last modify:	04.07.2008
+              Description:
+              Resurrects a corpse. Regenerate additional 50,55,60 percent of the experience value.
+          -->
+        <table name="#power">50.0 55.0 60.0</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_CORPSE_PLAYER"/>
+        <set name="corpse" val="true"/>
+        <set name="skillType" val="RESURRECT"/>
+        <set name="canPet" val="true"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="741" levels="3" name="Heretic Heal Side Effect">
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="DEBUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+			<effect name="t_hp" param="-52;5;diff"/>
+        </for>
+    </skill>
+    <skill id="742" levels="3" name="Vale Master Bursting Flame">
+        <!--
+              Done by:	Magister
+              Last modify:	15.07.2008
+              Description:
+              Attack the enemy by unleashing dark flames. Power 112,117.
+          -->
+        <table name="#power">112 117 122</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="MDAM"/>
+        <set name="element" val="unholy"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="743" levels="3" name="Vale Master Dark Explosion">
+        <!--
+              Done by:	Magister
+              Last modify:	15.07.2008
+              Description:
+              Detonate the soul to attack surrounding enemies. Power 56,59,61.
+          -->
+        <table name="#power">56 59 61</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="skillRadius" val="200"/>
+        <set name="element" val="unholy"/>
+        <set name="skillType" val="MDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isEnemy" val="true"/>
+        <for/>
+    </skill>
+    <skill id="744" levels="3" name="Vale Master Dark Flare">
+        <!--
+              Done by:	Magister
+              Last modify:	15.07.2008
+              Description:
+              Attack a large number of enemies by creating huge explosion. Power 112,117,122.
+          -->
+        <table name="#power">112 117 122</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_AURA"/>
+        <set name="skillRadius" val="200"/>
+        <set name="element" val="unholy"/>
+        <set name="skillType" val="MDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="745" levels="3" name="Vale Master Dark Cure">
+        <!--
+              Done by:	Magister
+              Last modify:	15.07.2008
+              Description:
+              Cancel all the debuffs of the target.
+          -->
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCleanse" val="true" />
+		<for>
+			<effect name="DispelEffects">
+				<def name="dispelType" val="cleanse" />
+				<def name="cancelRate" val="100" />
+				<def name="negateCount" val="10" />
+			</effect>
+		</for>
+    </skill>
+    <skill id="746" levels="3" name="Saber Tooth Tiger Bite">
+        <!--
+              Done by:	Magister
+              Last modify:	27.07.2008
+              Description: Bite ferociously. Power 1789,1955,2117.
+          -->
+        <table name="#power">895 978 1059</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="overHit" val="true"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="747" levels="3" name="Saber Tooth Tiger Fear">
+        <!--
+              Done by:	Magister
+              Last modify:	27.07.2008
+              Description: Used to inflict damage to surrounding enemy while fleeing. Power 895,978,1059.
+          -->
+        <table name="#power">895 978 1059</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_AURA"/>
+        <set name="overHit" val="true"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect count="3" name="Fear" stackType="Fear" time="5"/>
+        </for>
+    </skill>
+    <skill id="748" levels="1" name="Saber Tooth Tiger Sprint">
+        <!--
+              Done by:	Magister
+              Last modify:	27.07.2008
+              Description: Temporarily increases your Spd. Effect 2.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="2" stackType="SpeedUp" time="1200">
+                <add order="0x40" stat="p_speed" val="33"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="749" levels="3" name="Oel Mahum Stun Attack">
+        <!--
+              Done by:	Magister
+              Last modify:	27.07.2008
+              Description: Cause damage and shock together at the same time. Make the enemies shocked momentarily. Over-hit is available. Power 895,978,1059.
+          -->
+        <table name="#power">895 978 1059</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="overHit" val="true"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="750" levels="1" name="Oel Mahum Ultimate Defense">
+        <!--
+              Done by:	Magister
+              Last modify:	27.07.2008
+              Description: Instantly and drastically increases tolerance to P. Def./M. Def, buff cancel attacks. The player cannot move while the effect lasts. Effect 2.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="p_block_move">
+                <add order="0x40" stat="p_physical_defence" val="3600"/>
+                <add order="0x40" stat="p_magical_defence" val="2700"/>
+                <add order="0x40" stat="cancelRcpt" val="80"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="751" levels="3" name="Oel Mahum Arm Flourish">
+        <!--
+              Done by: Magister
+              Last modify: 27.07.2008
+              Description: Flourish weapons to attack surrounding enemy. Over-hit is available. Power 1073,1173,1271.
+          -->
+        <table name="#power">1073 1173 1271</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="overHit" val="true"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="752" levels="3" name="Doll Blader Sting">
+        <!--
+              Done by: Magister
+              Last modify: 27.07.2008
+              Description: Causes injury by deadly attacks. Instantly causes the enemies to bleed. Over-hit is available. Power 1193. Effect 3.
+          -->
+        <table name="#power">1193 1303 1412</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="overHit" val="true"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="t_hp" param="-134;5;diff"/>
+        </for>
+    </skill>
+    <skill id="753" levels="3" name="Doll Blader Throwing Knife">
+        <!--
+              Done by: Magister
+              Last modify: 27.07.2008
+              Description: Throw a dagger to attack enemy in the distance. Over-hit is available. Power 4769,5211,5645.
+          -->
+        <table name="#power">4769 5211 5645</table>
+        <set name="power" val="#power"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="overHit" val="true"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="754" levels="1" name="Doll Blader Clairvoyance">
+        <!--
+              Done by: Magister
+              Last modify: 27.07.2008
+              Description: Temporarily increase the probability of Critical attack power. Effect 3.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="3" stackType="p_critical_rate_per" time="1200">
+                <add order="0x40" stat="p_critical_rate_per" val="30"/>
+            </effect>
+        </for>
+    </skill>
+	<skill id="755" levels="1" name="Protection of Rune">
+		<!--
+			Description:
+			M. Def. is increased, and when damage is incurred, additional M. Def. and resistance to attributes are increased instantly.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5556" level="1" type="RECEIVE_DAMAGE" chance="20">
+				<player damage="300;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<mul order="0x30" stat="p_magical_defence" val="1.15"/>
+		</for>
+	</skill>
+	<skill id="756" levels="1" name="Protection of Elemental">
+		<!--
+			Description:
+			Resistance to elemental attributes is increased. When damage is incurred, M. Def. and resistances to elemental attributes are additionally increased instantly.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5556" level="1" type="RECEIVE_DAMAGE" chance="20">
+				<player damage="100;0"/>
+			</trigger>
+		</triggers>
+		<for>
+            <sub order="0x40" stat="fireRcpt" val="20"/>
+            <sub order="0x40" stat="waterRcpt" val="20"/>
+            <sub order="0x40" stat="windRcpt" val="20"/>
+            <sub order="0x40" stat="earthRcpt" val="20"/>
+		</for>
+	</skill>
+	<skill id="757" levels="1" name="Protection of Alignment">
+		<!--
+			Description:
+			Resistance to tendency attributes is increased,and when damage is incurred, M. Def. and resistance to attributes are additionally increased instantly.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5556" level="1" type="RECEIVE_DAMAGE" chance="20">
+				<player damage="100;0"/>
+			</trigger>
+		</triggers>
+		<for>
+            <sub order="0x40" stat="unholyRcpt" val="20"/>
+            <sub order="0x40" stat="sacredRcpt" val="20"/>
+		</for>
+	</skill>
+	<skill id="758" levels="1" name="Fighter's Will">
+		<!--
+			Description:
+			Attack power and Atk. Spd. are increased when using a short-range weapon. There is also a chance that the physical skill's power and Critical Rate may be increased.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5559" level="1" type="ATTACK" chance="3">
+				<using kind="Sword, Blunt, Dagger, Big Blunt, Pole, Fist, Dual Sword, Dual Fist, Big Sword, Rapier, Ancient Sword, Dual Dagger"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x40" stat="p_physical_attack" val="100">
+				<using kind="Sword, Blunt, Dagger, Big Blunt, Pole, Fist, Dual Sword, Dual Fist, Big Sword, Rapier, Ancient Sword, Dual Dagger"/>
+			</add>
+			<mul order="0x30" stat="p_attack_speed" val="1.1">
+				<using kind="Sword, Blunt, Dagger, Big Blunt, Pole, Fist, Dual Sword, Dual Fist, Big Sword, Rapier, Ancient Sword, Dual Dagger"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="759" levels="1" name="Archer's Will">
+		<!--
+			Description:
+			Accuracy and range are increased when using a bow or crossbow. There is also a chance that the physical skill's power and Critical Rate may be increased.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5559" level="1" type="ATTACK" chance="3">
+				<using kind="Bow, Crossbow"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x40" stat="pAtkRange" val="50">
+				<using kind="Bow, Crossbow"/>
+			</add>
+			<add order="0x40" stat="p_hit" val="8">
+				<using kind="Bow, Crossbow"/>
+			</add>
+		</for>
+	</skill>
+    <skill id="760" levels="1" name="Anti Magic Armor">
+        <!--
+              Done by:	Diamond
+              Last modify:	31.08.2009, SYS
+              Description: Instantly increase magic resistance.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect abnormal="invul1" name="Buff" stackOrder="2" stackType="pd_up_special" time="30">
+                <add order="0x40" stat="p_magical_defence" val="5000"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="761" levels="1" name="Seed of Revenge">
+        <!--
+              Done by:	Diamond
+              Last modify:	17.02.2010
+              Description: One sows a seed of wrath himself. Seed of Wrath grows with a fixed rate when being attacked. P. Atk increases with growth.
+          -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="1" stackType="seed_of_knight" time="60">
+				<add order="0x40" stat="p_physical_attack" val="100" />
+				<triggers>
+					<trigger id="5561" level="1" type="RECEIVE_DAMAGE" chance="8">
+						<player damage="1;0"/>
+					</trigger>
+				</triggers>
+			</effect>
+		</for>
+    </skill>
+    <skill id="762" levels="1" name="Insane Crusher">
+        <!--
+              Done by:	Diamond
+              Last modify:	21.06.2010
+              Description:
+              Unleashes a powerful Dark Curse that cancels at least one of the enemy's buffs,
+              and decreases their maximum CP, resistance to de-buff attacks and the effectiveness of HP recovery magic.
+              Requires a sword or blunt weapon. Ignores shield defense. Critical hit and over-hit are possible. Power 6468.
+          -->
+        <set name="power" val="6468"/>
+        <set name="target" val="TARGET_AURA"/>
+        <set name="skillRadius" val="300"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="overHit" val="true"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="shieldignore" val="true"/>
+        <set name="criticalRate" val="50"/>
+		<set name="isCancel" val="true"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player hasBuffId="5561;3" />
+				<using kind="Sword,Blunt,Big Sword,Big Blunt" />
+			</and>
+		</cond>
+        <for>
+            <effect name="Buff" stackOrder="1" stackType="touch_of_death" time="60">
+                <sub order="0x40" stat="debuffRcpt" val="30"/>
+                <mul order="0x30" stat="hpEff" val="0.7"/>
+                <mul order="0x30" stat="p_max_cp" val="0.1"/>
+            </effect>
+			<effect name="DispelEffects">
+				<def name="dispelType" val="cancellation" />
+				<def name="cancelRate" val="25" />
+				<def name="negateCount" val="5" />
+			</effect>
+        </for>
+    </skill>
+    <skill id="763" levels="1" name="Hell Scream">
+        <!--
+              Done by:	Diamond
+              Last modify:	14.02.2009, Diamond
+              Description:
+              Roar with voice of hell. Frightens the enemies and decrease P. Def./M. Def. resistance, causing them to flee.
+          -->
+        <set name="target" val="TARGET_AURA"/>
+        <set name="skillType" val="DEBUFF"/>
+        <set name="skillRadius" val="200"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect count="3" name="Fear" stackType="Fear" time="5">
+                <mul order="0x30" stat="p_physical_defence" val="0.7"/>
+                <mul order="0x30" stat="p_magical_defence" val="0.7"/>
+				<mul order="0x30" stat="p_speed" val="0.7"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="764" levels="1" name="Song of Wind Storm">
+        <table name="#abnormal_time">120</table>
+        <set name="target" val="TARGET_PARTY"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="isMusic" val="true"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <enchant1 levels="15" name="Time">
+            <table name="#abnormal_time">128 136 144 152 160 168 176 184 192 200 208 216 224 232 240</table>
+        </enchant1>
+        <enchant1 levels="15" name="Cost"/>
+        <for>
+			<effect name="p_defence_trait" param="trait_bow;10" stackOrder="1" stackType="song_of_windstorm" time="#abnormal_time"/> 
+			<effect name="p_defence_trait" param="trait_crossbow;5" stackOrder="1" stackType="song_of_windstorm" time="#abnormal_time"/> 
+        </for>
+    </skill>
+    <skill id="765" levels="1" name="Dance of Blade Storm">
+        <table name="#abnormal_time">15</table>
+        <set name="weaponsAllowed" val="512"/>
+        <set name="target" val="TARGET_PARTY"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="isMusic" val="true"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <enchant1 levels="15" name="Time">
+            <table name="#abnormal_time">16 17 18 19 20 21 22 23 24 25 26 27 28 29 30</table>
+        </enchant1>
+        <enchant1 levels="15" name="Cost"/>
+        <for>
+            <effect name="Buff" time="#abnormal_time" stackOrder="1" stackType="dance_of_bladestorm">
+                <mul order="0x30" stat="p_magical_attack" val="0.01"/>
+            </effect>
+			<effect name="p_defence_trait" param="trait_bow;45" stackOrder="1" stackType="dance_of_bladestorm" time="#abnormal_time"/> 
+			<effect name="p_defence_trait" param="trait_crossbow;25" stackOrder="1" stackType="dance_of_bladestorm" time="#abnormal_time"/> 
+        </for>
+    </skill>
+    <skill id="766" levels="1" name="Sixth Sense">
+        <!--
+              Description: When stamina is almost used up, the sense reaches its peak. Increases Evasion when HP is lower than 30 percent.
+          -->
+        <table name="#final">15</table>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <add order="0x40" stat="p_avoid" val="#final">
+                <player percentHP="30"/>
+            </add>
+        </for>
+    </skill>
+    <skill id="767" levels="1" name="Expose Weak Point">
+        <!--
+              Done by:	Diamond
+              Last modify:	Diamond, 01.03.2009
+              Description:
+              Give flesh, and take bone. Decrease P. Def. of enemy by weakness exposure, and increase accuracy rate of critical hit of general attack.
+          -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5565" level="1" type="RECEIVE_DAMAGE" chance="5">
+				<player damage="1;0"/>
+			</trigger>
+		</triggers>
+    </skill>
+    <skill id="768" levels="1" name="Exciting Adventure">
+        <!--
+              Done by:	Diamond
+              Last modify:	Diamond, 17.09.2008
+              Description:
+              For 30 seconds, increases one's own moving speed by 20, evasion by 15, deadly attack success rate by 30%, physical skill evasion rate by 40%, and resistance to buff canceling attacks by 90.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect abnormal="invul1" name="Buff" time="30" stackOrder="3"
+                    stackType="UltimateEvasion">
+                <add order="0x40" stat="p_avoid" val="15"/>
+                <add order="0x40" stat="p_speed" val="20"/>
+                <mul order="0x30" stat="blowRate" val="1.3"/>
+                <add order="0x40" stat="pSkillEvasion" val="40"/>
+                <add order="0x40" stat="cancelRcpt" val="90"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="769" levels="1" name="Wind Riding">
+        <!--
+              Done by:	Diamond
+              Last modify:	Diamond, 17.09.2008
+              Description:
+              For 30 seconds, increases one's own moving speed by 50, evasion by 20, deadly attack success rate by 20%, physical skill evasion rate by 75%, and resistance to buff canceling attacks by 80.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect abnormal="invul1" name="Buff" time="30" stackOrder="3"
+                    stackType="UltimateEvasion">
+                <add order="0x40" stat="p_avoid" val="20"/>
+                <add order="0x40" stat="p_speed" val="50"/>
+                <mul order="0x30" stat="blowRate" val="1.2"/>
+                <add order="0x40" stat="pSkillEvasion" val="75"/>
+                <add order="0x40" stat="cancelRcpt" val="80"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="770" levels="1" name="Ghost Walking">
+        <!--
+              Done by:	Diamond
+              Last modify:	SYS, 27.04.2009
+              Description:
+              For 30 seconds, increases one's own moving speed by 33, evasion by 15, deadly attack success rate by 40%, physical skill evasion rate by 60%, and resistance to buff canceling attacks by 90.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect abnormal="invul1" name="Buff" time="30" stackOrder="3"
+                    stackType="UltimateEvasion">
+                <add order="0x40" stat="p_avoid" val="15"/>
+                <add order="0x40" stat="p_speed" val="33"/>
+                <mul order="0x30" stat="blowRate" val="1.4"/>
+                <add order="0x40" stat="pSkillEvasion" val="60"/>
+                <add order="0x40" stat="cancelRcpt" val="90"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="771" levels="1" name="Flame Hawk">
+        <!--
+              Done by:	Diamond
+              Last modify:	Diamond, 17.09.2008
+              Description:
+              Shoot an arrow filled with the energy of phoenix. Critical enabled. Available to use when using arrow weapons. Over-hit is available. Power 5750.
+          -->
+        <set name="power" val="8049"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="skillRadius" val="200"/>
+        <set name="element" val="1"/>
+        <set name="overHit" val="true"/>
+        <set name="criticalRate" val="10"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="addSkills" val="23298;1"/>
+        <cond msgId="113" addName="1">
+            <using kind="Bow"/>
+        </cond>
+		<for>
+			<effect name="CallSkills" instantly="true"/>
+		</for>
+    </skill>
+    <skill id="772" levels="1" name="Arrow Rain">
+        <!--
+              Done by:	Magister
+              Last modify:	08.07.2008
+              Description:
+              Causes arrows to rain from the sky to attack around the enemy with 4312 Power added to P. Atk. Requires a bow to be equipped. Over-hit. Critical.
+          -->
+        <set name="weaponsAllowed" val="32"/>
+        <set name="power" val="7043"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="skillRadius" val="200"/>
+        <set name="overHit" val="true"/>
+        <set name="criticalRate" val="10"/>
+        <set name="skillType" val="PDAM"/>
+		<set name="element" val="wind"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isEnemy" val="true"/>
+        <for>
+			<effect count="10" name="DamOverTime" time="1" val="300"/>
+		</for>
+    </skill>
+    <skill id="773" levels="1" name="Ghost Piercing">
+        <!--
+              Done by:	Diamond
+              Last modify:	Diamond, 17.09.2008
+              Description:
+              Ghost's arrow penetrates everything. Critical enabled. Available to use when using arrow weapons. Over-hit is available. Power 6037.
+          -->
+        <set name="power" val="8452"/>
+        <set name="target" val="TARGET_TUNNEL"/>
+        <set name="skillRadius" val="200"/>
+        <set name="element" val="6"/>
+        <set name="overHit" val="true"/>
+        <set name="criticalRate" val="10"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="addSkills" val="23300;1"/>
+        <cond msgId="113" addName="1">
+            <using kind="Bow"/>
+        </cond>
+		<for>
+			<effect name="CallSkills" instantly="true"/>
+		</for>
+    </skill>
+    <skill id="774" levels="1" name="Dread Pool">
+        <!--
+              Done by:	Diamond
+              Last modify:	22.05.2010
+              Description:
+              Spreads energy of fear around the area. When the moving speed of a nearby enemy is decreased,
+              it makes the enemy fearful and run away.
+          -->
+        <set name="target" val="TARGET_AURA"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="DEBUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect count="3" name="Fear" stackType="Fear" time="5">
+                <mul order="0x30" stat="p_speed" val="0.67"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="775" levels="1" name="Weapon Blockade">
+        <!--
+              Done by:	Diamond
+              Last modify:	15.01.2009, Diamond
+              Description:
+              Cancel enemy's weapon with dazzling movement. Unable to use weapons while effects last. Need to recharge 2nd stage sword energy. Requires dual weapons.
+          -->
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="DEBUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="num_charges" val="2"/>
+        <set name="charge_skill_id" val="8"/>
+        <cond msgId="113" addName="1">
+            <using kind="Dual Sword"/>
+        </cond>
+        <for>
+            <effect name="Disarm" time="5">
+                <mul order="0x30" stat="p_physical_attack" val="0.3"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="776" levels="1" name="Force of Destruction">
+        <!--
+              Done by:	Diamond
+              Last modify:	17.09.2008, Diamond
+              Description:
+              Infiltrate energy of destruction into the target. Need to recharge vitality level 2. Available with hand-to-hand combat weapons. Critical enabled. Power 2516
+          -->
+        <set name="power" val="2516"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="overHit" val="true"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="criticalRate" val="10"/>
+        <set name="chargeBoost" val="true"/>
+        <set name="num_charges" val="2"/>
+        <set name="charge_skill_id" val="50"/>
+        <cond msgId="113" addName="1">
+            <using kind="Fist, Dual Fist"/>
+        </cond>
+        <for>
+			<effect name="t_hp" param="-80;1;diff"/>
+        </for>
+    </skill>
+    <skill id="777" levels="1" name="Demolition Impact">
+        <set name="power" val="7475"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillRadius" val="200"/>
+        <set name="overHit" val="true"/>
+        <set name="criticalRate" val="10"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <cond msgId="113" addName="1">
+            <using kind="Big Sword, Big Blunt"/>
+        </cond>
+        <for/>
+    </skill>
+    <skill id="778" levels="1" name="Golem Armor">
+        <!--
+              Done by:	Diamond
+              Last modify:	17.09.2008, Diamond
+              Description: Transforms into a Golem with increased battle abilities.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="TRANSFORMATION"/>
+        <set name="addSkills" val="806;1;807;1;808;1;809;1"/>
+        <set name="npcId" val="13119"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Transformation" time="300" val="259">
+                <add order="0x40" stat="p_speed" val="11"/>
+                <mul order="0x30" stat="p_max_hp" val="1.10"/>
+                <mul order="0x30" stat="p_max_mp" val="1.10"/>
+                <mul order="0x30" stat="p_max_cp" val="0.72"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="779" levels="1" name="Summon Smart Cubic">
+        <set name="itemConsumeId" val="3031"/>
+        <set name="itemConsumeCount" val="38"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="npcId" val="10"/>
+        <set name="npcLevel" val="1"/>
+        <set name="expPenalty" val="0.0"/>
+        <set name="summonType" val="cubic"/>
+        <for/>
+    </skill>
+    <skill id="780" levels="1" name="Summon Smart Cubic">
+        <set name="itemConsumeId" val="3031"/>
+        <set name="itemConsumeCount" val="38"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="npcId" val="11"/>
+        <set name="npcLevel" val="1"/>
+        <set name="expPenalty" val="0.0"/>
+        <set name="summonType" val="cubic"/>
+        <for/>
+    </skill>
+    <skill id="781" levels="1" name="Summon Smart Cubic">
+        <set name="itemConsumeId" val="3031"/>
+        <set name="itemConsumeCount" val="38"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="npcId" val="12"/>
+        <set name="npcLevel" val="1"/>
+        <set name="expPenalty" val="0.0"/>
+        <set name="summonType" val="cubic"/>
+        <for/>
+    </skill>
+    <skill id="782" levels="1" name="Summon Smart Cubic">
+        <set name="itemConsumeId" val="3031"/>
+        <set name="itemConsumeCount" val="38"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="npcId" val="13"/>
+        <set name="npcLevel" val="1"/>
+        <set name="expPenalty" val="0.0"/>
+        <set name="summonType" val="cubic"/>
+        <for/>
+    </skill>
+    <skill id="783" levels="1" name="Summon Smart Cubic">
+        <set name="itemConsumeId" val="3031"/>
+        <set name="itemConsumeCount" val="38"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="npcId" val="14"/>
+        <set name="npcLevel" val="1"/>
+        <set name="expPenalty" val="0.0"/>
+        <set name="summonType" val="cubic"/>
+        <for/>
+    </skill>
+    <skill id="784" levels="1" name="Spirit of Phoenix">
+        <!--
+              Done by: Drizzy
+              Description: Share Phoenix's soul and yours. Soul of Phoenix expands with a fixed rate when being attacked. Additional effects appear as it expands.
+          -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="60" stackOrder="1" stackType="seed_of_knight">
+				<add order="0x40" stat="p_physical_defence" val="200"/>
+				<triggers>
+					<trigger id="5562" level="1" type="RECEIVE_DAMAGE" chance="20">
+						<player damage="1;0"/>
+					</trigger>
+				</triggers>
+			</effect>
+		</for>
+    </skill>
+    <skill id="785" levels="1" name="Flame Icon">
+        <!--
+              Done by: Drizzy
+              Description: "By receiving the Will of the Phoenix momentarily, it drastically increases the fighting ability of party members. The effectiveness of HP recovery magic is drastically decreased while the effect lasts."
+              В реальности: Атак спид на все виды оружия а не только на мечи/бланты, 100 к криту, а не 33 и 100% к крит дамагу, а не 33%.
+          -->
+        <set name="target" val="TARGET_PARTY"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <cond msgId="113" addName="1">
+            <target hasBuffId="5562;3"/>
+        </cond>
+        <for>
+            <effect name="Buff" time="60" stackOrder="2" stackType="knight_icon">
+                <mul order="0x30" stat="p_magical_defence" val="1.5"/>
+                <mul order="0x30" stat="p_physical_defence" val="1.5"/>
+                <add order="0x40" stat="p_speed" val="30"/>
+                <mul order="0x30" stat="hpEff" val="0.2"/>
+                <add order="0x40" stat="debuffRcpt" val="40"/>
+                <add order="0x40" stat="cancelRcpt" val="40"/>
+                <mul order="0x30" stat="p_attack_speed" val="1.3"/>
+                <add order="0x40" stat="p_hit" val="6"/>
+                <add order="0x40" stat="p_critical_rate_diff" val="100">
+                    <and>
+                        <using kind="Sword, Big Sword"/>
+                    </and>
+                </add>
+                <mul order="0x30" stat="p_critical_damage_per" val="2">
+                    <and>
+                        <using kind="Blunt, Big Blunt"/>
+                    </and>
+                </mul>
+            </effect>
+        </for>
+    </skill>
+    <skill id="786" levels="1" name="Eva's Will">
+        <!--
+              Done by: Drizzy
+              Description: Show Will of Eva through yourself. Will of Eva expands with a fixed rate when being attacked. Additional effects appear with growth.
+          -->
+ 		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="60" stackOrder="1" stackType="seed_of_knight">
+				<add order="0x40" stat="p_magical_defence" val="200"/>
+				<triggers>
+					<trigger id="5563" level="1" type="RECEIVE_DAMAGE" chance="20">
+						<player damage="1;0"/>
+					</trigger>
+				</triggers>
+			</effect>
+		</for>
+    </skill>
+    <skill id="787" levels="1" name="Touch of Eva">
+        <set name="power" val="50"/>
+        <set name="target" val="TARGET_PARTY"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="skillType" val="HOT"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <cond msgId="113" addName="1">
+            <target hasBuffId="5563;3"/>
+        </cond>
+        <for>
+			<effect name="i_hp_per_max" param="50"/>
+			<effect name="t_hp" param="50;5;diff"/>
+            <effect name="Buff">
+                <add order="0x40" stat="cancelRcpt" val="100"/>
+                <add order="0x40" stat="debuffRcpt" val="30"/>
+				<mul order="0x30" stat="hpEff" val="1.3"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="788" levels="1" name="Pain of Shilen">
+        <!--
+              Done by: Drizzy
+			  Description: Share Shilen's pain and yours. Shilen's pain increases with a fixed rate when being attacked. Additional effects appear with growth.
+          -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="60" stackOrder="1" stackType="seed_of_knight">
+				<mul order="0x30" stat="p_critical_damage_per" val="1.1"/>
+				<triggers>
+					<trigger id="5564" level="1" type="RECEIVE_DAMAGE" chance="20">
+						<player damage="1;0"/>
+					</trigger>
+				</triggers>
+			</effect>
+		</for>
+    </skill>
+    <skill id="789" levels="1" name="Spirit of Shilen">
+        <!--
+              Done by: Nano
+              skill_begin	skill_name = [s_spirit_of_shillien1]	/* [스피릿 오브 실렌] */	skill_id = 789	level = 1
+              operate_type = A2	magic_level = 81	self_effect = {}
+              effect = {
+              {p_physical_attack;{all};30;per};
+              {p_magical_attack;{all};30;per};
+              {p_speed;{all};30;diff};
+              {p_attack_speed_by_weapon;{all};30;per};
+              {p_critical_rate;{sword};10;diff};
+              {p_critical_damage;{blunt};100;per};
+              {p_vampiric_attack;40};
+              {p_heal_effect;{all};-80;per}
+              }	end_effect = {}	operate_cond = {{op_check_abnormal;seed_of_knight;4;1}}
+              is_magic = 0	mp_consume2 = 0	hp_consume = 1253	cast_range = -1	effective_range = -1	skill_hit_time = 1.8	skill_cool_time = 0
+              skill_hit_cancel_time = 0.5	reuse_delay = 150	activate_rate = -1	lv_bonus_rate = 0	basic_property = none	abnormal_time = 60
+              abnormal_lv = 3	abnormal_type = possession	abnormal_instant = 0	irreplaceable_buff = 0	buff_protect_level = 0
+              attribute = {attr_none;0}	trait = {trait_none}	effect_point = 835	target_type = self	affect_scope = party
+              affect_range = 1000	affect_object = friend	affect_limit = {0;0}	next_action = none	debuff = 0	ride_state = {@ride_none}
+              multi_class = 0	olympiad_use = 1	skill_end
+          -->
+        <set name="target" val="TARGET_PARTY"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="skillType" val="BUFF"/>
+        <cond msgId="113" addName="1">
+            <target hasBuffId="5564;3"/>
+        </cond>
+        <for>
+            <effect name="Buff" time="60" stackOrder="2" stackType="knight_icon">
+                <mul order="0x30" stat="p_physical_attack" val="1.3"/>
+                <mul order="0x30" stat="p_magical_attack" val="1.3"/>
+                <add order="0x40" stat="p_speed" val="30"/>
+                <mul order="0x30" stat="p_attack_speed" val="1.3"/>
+                <add order="0x40" stat="p_critical_rate_diff" val="100">
+                    <using kind="Sword, Big Sword" />
+                </add>
+                <mul order="0x30" stat="p_critical_damage_per" val="2">
+                    <using kind="Blunt, Big Blunt" />
+                </mul>
+                <add order="0x40" stat="absorbDam" val="40"/>
+                <mul order="0x30" stat="hpEff" val="0.2"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="790" levels="1" name="Wild Shot">
+        <!--
+              Done by:	Diamond
+              Last modify:	13.09.2008, Diamond
+              Description:
+              Fires bolt at random to attack enemies at the front with 5750 Power added to P. Atk. Requires a crossbow to be equipped. Over-hit. Critical. Increases power upon soul consumption. Up to 5 are consumed.
+          -->
+        <set name="power" val="7475"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="overHit" val="true"/>
+        <set name="criticalRate" val="10"/>
+        <set name="soulBoost" val="true"/>
+       <cond msgId="113" addName="1">
+            <using kind="Crossbow"/>
+        </cond>
+        <for/>
+    </skill>
+    <skill id="791" levels="1" name="Lightning Shock">
+        <set name="target" val="TARGET_AURA"/>
+        <set name="skillRadius" val="150"/>
+        <set name="power" val="69"/>
+        <set name="skillType" val="MDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="soulBoost" val="true"/>
+		<set name="delayedEffect" val="6092"/>
+		<for>
+			<effect name="Debuff" stackType="paralyze" time="5">
+				<mul order="0x30" stat="p_attack_speed" val="0.7"/>
+				<mul order="0x30" stat="p_speed" val="0.7"/>
+				<mul order="0x30" stat="p_magic_speed" val="0.7"/>
+			</effect>
+		</for>
+    </skill>
+    <skill id="792" levels="1" name="Betrayal Mark">
+        <!--
+              Description: "Stamp Mark of Betrayal on the enemy. When attacking enemy that has the mark, inflict damage to the enemy's party with a fixed rate. Consumes 1 soul."
+          -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<cond msgId="144">
+			<target pvp="true"/>
+		</cond>
+		<for>
+			<effect name="Buff" time="60">
+				<triggers>
+					<trigger id="5600" level="1" type="RECEIVE_DAMAGE" chance="10">
+						<player damage="1;0"/>
+					</trigger>
+				</triggers>
+			</effect>
+		</for>
+	</skill>
+    <skill id="793" levels="1" name="Rush Impact">
+        <!--
+              Done by:	Diamond
+              Last modify:	20.05.2009, Magister
+              Description:
+              Attacks to damage enemies in the front line, and puts them into shock.
+              Usable when Ancient Sword weapon is equipped.
+          -->
+        <table name="#power">4040</table>
+        <table name="#powerPvP">0</table>
+        <table name="#elementPower">0</table>
+        <table name="#element">none</table>
+        <set name="elementPower" val="#elementPower"/>
+        <set name="element" val="#element"/>
+        <set name="power" val="#power"/>
+        <set name="powerPvP" val="#powerPvP"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="skillRadius" val="600"/>
+		<set name="radius" val="60"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="flyType" val="CHARGE"/>
+        <set name="flyRadius" val="600"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="soulBoost" val="true"/>
+		<cond msgId="113" addName="1">
+            <using kind="Ancient Sword"/>
+        </cond>
+        <enchant1 levels="15" name="Power">
+            <table name="#power">4071 4102 4133 4164 4195 4226 4257 4289 4320 4351 4382 4413 4444 4475 4507</table>
+        </enchant1>
+        <enchant2 levels="15" name="Cost"/>
+        <enchant3 levels="15" name="Chance">
+        </enchant3>
+        <enchant4 name="Fire Attack">
+            <table name="#element">fire</table>
+            <table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+        </enchant4>
+        <enchant5 name="Water Attack">
+            <table name="#element">water</table>
+            <table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+        </enchant5>
+        <enchant6 name="Wind Attack">
+            <table name="#element">wind</table>
+            <table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+        </enchant6>
+        <enchant7 name="Earth Attack">
+            <table name="#element">earth</table>
+            <table name="#elementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50</table>
+        </enchant7>
+        <enchant8 name="Duel">
+            <table name="#powerPvP">4104 4168 4232 4297 4361 4425 4490 4554 4618 4683 4747 4811 4875 4940 5004</table>
+        </enchant8>
+        <for>
+            <effect name="Stun" stackType="Stun" time="9"/>
+        </for>
+    </skill>
+    <skill id="794" levels="1" name="Mass Disarm">
+        <!--
+              Done by:	Magister
+              Last modify:	03.05.2009, Magister
+              Description:
+              Disarms nearby enemies for 5 seconds.
+          -->
+        <set name="target" val="TARGET_AURA"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="DEBUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <enchant1 levels="15" name="Chance">
+        </enchant1>
+        <enchant2 levels="15" name="Recycle"/>
+        <for>
+            <effect name="Disarm" time="5">
+                <mul order="0x30" stat="p_physical_attack" val="0.3"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="795" levels="1" name="Divine Knight Brandish">
+        <!--
+              Done by: Magister
+              Last modify: 03.05.2009
+              Description: Attacks the enemies at the front by flourishing an ax. Over-hit is possible. Power 2322.
+          -->
+        <set name="power" val="2322"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="overHit" val="true"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="796" levels="1" name="Divine Knight Explosion Attack">
+        <!--
+              Description: Detonates the floor by striking it hard. Power 1900.
+          -->
+        <set name="power" val="1900"/>
+        <set name="target" val="TARGET_AURA"/>
+        <set name="skillRadius" val="250"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="797" levels="1" name="Divine Rogue Piercing Attack">
+        <!--
+              Done by: Magister
+              Last modify: 03.05.2009
+              Description: Attacks all enemies, even the enemies behind you, with a strong thrust. Over-hit is possible. Power 2111.
+          -->
+        <set name="power" val="2111"/>
+        <set name="target" val="TARGET_TUNNEL"/>
+        <set name="skillRadius" val="200"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="overHit" val="true"/>
+    </skill>
+    <skill id="798" levels="1" name="Divine Warrior Assault Attack">
+        <set name="power" val="1689"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="t_hp" param="-69;5;diff"/>
+        </for>
+    </skill>
+    <skill id="799" levels="3" name="Master Ability - Defense">
+        <!--
+              Done by:	Diamond
+              Last modify:	SYS, 03.02.2009
+              Description:
+              P. Def. is increased.
+          -->
+        <table name="#p_physical_defence">20 40 60</table>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <add order="0x40" val="#p_physical_defence" stat="p_physical_defence"/>
+        </for>
+    </skill>
+</list>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="212" type="SOLO">
+		<name lang="en" val="Trial of Duty"/>
+		<name lang="ru" val="Испытание верности"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20144"/>	<!-- Hangman Tree -->
+			<event type="MOBKILLED" val="20190"/>	<!-- Skeleton Marauder -->
+			<event type="MOBKILLED" val="20191"/>	<!-- Skeleton Raider -->
+			<event type="MOBKILLED" val="20200"/>	<!-- Strain -->
+			<event type="MOBKILLED" val="20201"/>	<!-- Ghoul -->
+			<event type="MOBKILLED" val="20270"/>	<!-- Breka Orc Overlord -->
+			<event type="MOBKILLED" val="27119"/>	<!-- Spirit of Sir Herod -->
+			<event type="MOBKILLED" val="20577"/>	<!-- Leto Lizardman -->
+			<event type="MOBKILLED" val="20578"/>	<!-- Leto Lizardman Archer -->
+			<event type="MOBKILLED" val="20579"/>	<!-- Leto Lizardman Soldier -->
+			<event type="MOBKILLED" val="20580"/>	<!-- Leto Lizardman Warrior -->
+			<event type="MOBKILLED" val="20581"/>	<!-- Leto Lizardman Shaman -->
+			<event type="MOBKILLED" val="20582"/>	<!-- Leto Lizardman Overlord -->
+			<event type="QUEST_START" val="30109"/>	<!-- Hannavalt -->
+			<event type="QUEST_TALK" val="30109"/>	<!-- Hannavalt -->
+			<event type="QUEST_TALK" val="30109"/>	<!-- Hannavalt -->
+			<event type="QUEST_TALK" val="30109"/>	<!-- Hannavalt -->
+			<event type="QUEST_TALK" val="30109"/>	<!-- Hannavalt -->
+			<event type="QUEST_TALK" val="30116"/>	<!-- Dustin -->
+			<event type="QUEST_TALK" val="30311"/>	<!-- Sir Collin Windawood -->
+			<event type="QUEST_TALK" val="30653"/>	<!-- Sir Aron Tanford -->
+			<event type="QUEST_TALK" val="30654"/>	<!-- Sir Kiel Nighthawk -->
+			<event type="QUEST_TALK" val="30655"/>	<!-- Isael Silvershadow -->
+			<event type="QUEST_TALK" val="30656"/>	<!-- Spirit Of Sir Talianus -->
+			<item id="2634"/>	<!-- Letter of Dustin -->
+			<item id="2635"/>	<!-- Knights Tear -->
+			<item id="3027"/>	<!-- Old Knight's Sword -->
+			<item id="2637"/>	<!-- Tear of Confession -->
+			<item id="2636"/>	<!-- Mirror of Orpic -->
+			<item id="2639"/>	<!-- Report Piece -->
+			<item id="2641"/>	<!-- Militas Article -->
+			<item id="2643"/>	<!-- Athebaldt's Skull -->
+			<item id="2644"/>	<!-- Athebaldt's Ribs -->
+			<item id="2645"/>	<!-- Athebaldt's Shin -->
+			<item id="2646"/>	<!-- Letter of Windawood -->
+			<item id="2640"/>	<!-- Tear of Loyalty -->
+			<item id="2642"/>	<!-- Saints Ashes Urn -->
+			<item id="2638"/>	<!-- Report Piece -->
+		</setting>
+	</quest>
+</quests>

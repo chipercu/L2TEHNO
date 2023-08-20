@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="617" type="PARTY_ONE">
+		<name lang="en" val="Gather the Flames"/>
+		<name lang="ru" val="Горящие факелы"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="22634"/>	<!-- Scarlet Stakato Worker -->
+			<event type="MOBKILLED" val="22635"/>	<!-- Scarlet Stakato Soldier -->
+			<event type="MOBKILLED" val="22636"/>	<!-- Scarlet Stakato Noble -->
+			<event type="MOBKILLED" val="22638"/>	<!-- Tepra Scarab -->
+			<event type="MOBKILLED" val="22639"/>	<!-- Assassin Beetle -->
+			<event type="MOBKILLED" val="22641"/>	<!-- Knight of Destruction -->
+			<event type="MOBKILLED" val="22647"/>	<!-- Lavasillisk -->
+			<event type="MOBKILLED" val="22642"/>	<!-- Lavastone Golem -->
+			<event type="MOBKILLED" val="22643"/>	<!-- Magma Golem -->
+			<event type="MOBKILLED" val="22644"/>	<!-- Arimanes of Destruction -->
+			<event type="MOBKILLED" val="22646"/>	<!-- Ashuras of Destruction -->
+			<event type="MOBKILLED" val="18799"/>	<!-- Newborn Lavasaurus -->
+			<event type="MOBKILLED" val="22645"/>	<!-- Balrog of Destruction -->
+			<event type="MOBKILLED" val="21391"/>	<!-- Lavasillisk -->
+			<event type="MOBKILLED" val="22648"/>	<!-- Blazing Ifrit -->
+			<event type="MOBKILLED" val="22649"/>	<!-- Magma Drake -->
+			<event type="MOBKILLED" val="22640"/>	<!-- Mercenary of Destruction -->
+			<event type="MOBKILLED" val="22637"/>	<!-- Tepra Scorpion -->
+			<event type="MOBKILLED" val="18800"/>	<!-- Fledgling Lavasaurus -->
+			<event type="MOBKILLED" val="18801"/>	<!-- Adult Lavasaurus -->
+			<event type="MOBKILLED" val="18802"/>	<!-- Elderly Lavasaurus -->
+			<event type="MOBKILLED" val="18803"/>	<!-- Ancient Lavasaurus -->
+			<event type="QUEST_START" val="31539"/>	<!-- Vulcan -->
+			<event type="QUEST_START" val="31271"/>	<!-- Hilda -->
+			<event type="QUEST_TALK" val="31539"/>	<!-- Vulcan -->
+			<event type="QUEST_TALK" val="31271"/>	<!-- Hilda -->
+		</setting>
+	</quest>
+</quests>

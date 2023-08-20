@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Ядро" default="dist" basedir=".">
+	<description></description>
+	
+	<property name="src" location="../java"/>
+	<property name="lib" location="../lib"/>
+	<property name="build" location="../build/kernel"/>
+	<property name="build.classes" location="${build}/classes"/>
+	<property name="build.l2open" location="${build}/l2open"/>
+
+	<path id="classpath">
+		<fileset dir="${lib}">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	<tstamp>
+		<format property="build.tstamp" pattern="yyyy.MM.dd HH:mm" />
+	</tstamp>
+	
+	<target name="dir">
+		<delete dir="${build}"/>
+		<mkdir dir="${build}"/>
+	</target>
+
+	<target name="compile" depends="dir" description="Compile the source.">
+		<exec dir="${basedir}" executable="svnversion" outputproperty="build.revision" failifexecutionfails="false">
+			<arg line="-n ../java" />
+		</exec>
+		<javac destdir="${build}" optimize="on" debug="on" source="1.8" target="1.8" encoding="UTF-8" nowarn="on">
+			<compilerarg value="-Xlint:all"></compilerarg>
+			<src path="${src}"/>
+			<classpath refid="classpath"/>
+		</javac>
+		<delete dir="${build}/events"/>
+		<jar destfile="${build}/l2openserver.jar">
+			<fileset dir="${build}"/>
+			<manifest>
+				<attribute name="Build-By" value="${user.name}" />
+				<attribute name="Build-Date" value="${build.tstamp}" />
+				<attribute name="Implementation-Build" value="${build.revision}" />
+			</manifest>
+	    </jar>
+	</target>
+	
+	<concat destfile="${build}/l2open/l2open-version.properties">
+		version=${build.revision}
+		builddate=${build.tstamp}
+		user=${user.name} ${user.dir} ${user.timezone}
+		os=${os.name} ${os.version} ${os.arch}
+		java=${java.version} ${java.vendor}
+		vm=${java.vm.name} ${java.vm.version}
+	</concat>
+	<target name="dist" depends="compile" description="Create jar-file">
+		<exec dir="../subversion" executable="svnversion" outputproperty="l2open.revision" failifexecutionfails="false">
+			<arg line="-n ."/>
+		</exec>
+		<tstamp>
+			<format property="build.tstamp" pattern="yyyy.MM.dd HH:mm"/>
+		</tstamp>
+		<!-- <jar destfile="${build}/l2openserver.jar" level="0">
+		<fileset dir="${build}"/>
+		<manifest>
+				<attribute name="Build-By" value="${user.name}"/>
+				<attribute name="Build-Date" value="${build.tstamp}"/>
+				<attribute name="Implementation-Build" value="${l2open.revision}"/>
+				<attribute name="Main-Class" value="l2open.Server"/>
+				<attribute name="Class-Path" value=". .jar"/>
+			</manifest>
+		</jar> -->
+		<!--<delete dir="${build.classes}"/>
+		<delete dir="${build.l2open}"/>
+		<delete dir="${build}/drin"/>
+
+		 <taskdef classpath="../lib/ClassGuard.jar" resource="net/jsecurity/classguard/bootstrap/antlib.xml" />
+		<crypt 
+			in="${build}/c-l2openserver.jar" 
+			out="${build}/l2openserver.jar" 
+			include="l2open/gameserver/GameStart,l2open/gameserver/GameServer,l2open/gameserver/GameTimeController,l2open/extensions/network/DateClient,l2open/extensions/network/SelectorThread"
+			includelibs="true"
+			startclass="l2open.Server"
+			resource="java"
+		/> -->
+		<!-- 
+			|============================|======================================|
+			| -in my_project.jar	     |Jar файл для криптования				|
+			|============================|======================================|
+			| -out crypted_jarfile.jar	 |Jar файл для сохранения закриптованого|
+			|============================|======================================|
+			| -include packages			 |Классы которые нужно закриптовать		|
+			|============================|======================================|
+			| -exclude packages			 |Классы которые нельзя криптовать		|
+			|============================|======================================|
+			| -platform platforms		 | x86_win,x86_osx,x86_linux,x64_linux	|
+			|============================|======================================|
+			| -cryptkey keyfile			 |Ключь шифрования						|
+			|============================|======================================|
+			| -includelibs true/false	 |Запаковать библиотеку для раскриптовки|
+			|============================|======================================|
+			| -resource					 |Список расширений файлов  шифрования  |
+			|============================|======================================|
+			| -startclass				 |Класс для запуска приложения			|
+			|============================|======================================|
+		 -->
+	</target>
+	
+</project>

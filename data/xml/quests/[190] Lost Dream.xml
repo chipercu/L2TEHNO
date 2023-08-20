@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="190" type="SOLO">
+		<name lang="en" val="Lost Dream"/>
+		<name lang="ru" val="Утерянная мечта"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="NPC_FIRST_TALK" val="30512"/>	<!-- Kusto -->
+			<event type="QUEST_TALK" val="30512"/>	<!-- Kusto -->
+			<event type="QUEST_TALK" val="30621"/>	<!-- Nikola -->
+			<event type="QUEST_TALK" val="30673"/>	<!-- Lorain -->
+			<event type="QUEST_TALK" val="30113"/>	<!-- Juris -->
+		</setting>
+	</quest>
+</quests>

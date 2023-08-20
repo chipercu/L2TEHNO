@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="154" type="SOLO">
+		<name lang="en" val="Sacrifice to the Sea"/>
+		<name lang="ru" val="Жертва морю"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20481"/>	<!-- Bearded Keltir -->
+			<event type="MOBKILLED" val="20544"/>	<!-- Elder Keltir -->
+			<event type="MOBKILLED" val="20545"/>	<!-- Young Keltir -->
+			<event type="QUEST_START" val="30312"/>	<!-- Rockswell -->
+			<event type="QUEST_TALK" val="30312"/>	<!-- Rockswell -->
+			<event type="QUEST_TALK" val="30051"/>	<!-- Cristel -->
+			<event type="QUEST_TALK" val="30055"/>	<!-- Rolfe -->
+			<item id="1032"/>	<!-- Fox Fur -->
+			<item id="1033"/>	<!-- Fox Fur Yarn -->
+			<item id="1034"/>	<!-- Maiden Doll -->
+		</setting>
+	</quest>
+</quests>

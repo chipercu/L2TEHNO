@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="709" type="SOLO">
+		<name lang="en" val="Path to Becoming a Lord - Dion"/>
+		<name lang="ru" val="Путь Лорда - Дион"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20211"/>	<!-- Ol Mahum Captain -->
+			<event type="MOBKILLED" val="20207"/>	<!-- Ol Mahum Guerilla -->
+			<event type="MOBKILLED" val="20208"/>	<!-- Ol Mahum Raider -->
+			<event type="MOBKILLED" val="20210"/>	<!-- Ol Mahum Sergeant -->
+			<event type="MOBKILLED" val="20209"/>	<!-- Ol Mahum Marksman -->
+			<event type="MOBKILLED" val="20154"/>	<!-- Mandragora Sprout -->
+			<event type="MOBKILLED" val="20155"/>	<!-- Mandragora Sapling -->
+			<event type="MOBKILLED" val="20156"/>	<!-- Mandragora Blossom -->
+			<event type="MOBKILLED" val="20223"/>	<!-- Mandragora Sprout -->
+			<event type="MOBKILLED" val="20549"/>	<!-- Ol Mahum Lord -->
+			<event type="MOBKILLED" val="20063"/>	<!-- Ol Mahum Shooter -->
+			<event type="MOBKILLED" val="20547"/>	<!-- Ol Mahum Reserve -->
+			<event type="MOBKILLED" val="27392"/>	<!-- Bloody Axe Aide -->
+			<event type="QUEST_START" val="35142"/>	<!-- Crosby -->
+			<event type="QUEST_TALK" val="35142"/>	<!-- Crosby -->
+			<event type="QUEST_TALK" val="30735"/>	<!-- Sophya -->
+			<event type="QUEST_TALK" val="31418"/>	<!-- Rouke -->
+		</setting>
+	</quest>
+</quests>

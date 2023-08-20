@@ -1,0 +1,2079 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="9300" name="Sharpshooter" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_taslam_i00"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="6"/>
+		<set name="spiritshots" val="3"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="1885"/>
+		<set name="p_dam" val="198"/>
+		<set name="m_dam" val="83"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="4713500"/>
+		<set name="kamaelAnalog" val="286"/>
+	</weapon>
+	<weapon id="9301" name="Sharpshooter" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_taslam_i01"/>
+		<set name="additional_name" val="Guidance"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="6"/>
+		<set name="spiritshots" val="3"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="1885"/>
+		<set name="p_dam" val="198"/>
+		<set name="m_dam" val="83"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="4713500"/>
+		<skills>
+			<skill id="3008" lvl="4"/>
+		</skills>
+		<set name="kamaelAnalog" val="4822"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9302" name="Sharpshooter" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_taslam_i01"/>
+		<set name="additional_name" val="Miser"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="6"/>
+		<set name="spiritshots" val="3"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="1885"/>
+		<set name="p_dam" val="198"/>
+		<set name="m_dam" val="83"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="miser" val="5"/>
+		<set name="miserChance" val="37"/>
+		<set name="price" val="4713500"/>
+		<set name="kamaelAnalog" val="4823"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9303" name="Sharpshooter" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_taslam_i01"/>
+		<set name="additional_name" val="Cheap Shot"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="6"/>
+		<set name="spiritshots" val="3"/>
+		<set name="crystal_type" val="C"/>
+		<set name="crystal_count" val="1885"/>
+		<set name="p_dam" val="198"/>
+		<set name="m_dam" val="83"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="4713500"/>
+		<set name="kamaelAnalog" val="4824"/>
+		<set name="isSa" val="true"/>
+		<skills>
+			<skill id="3360" lvl="1"/>
+		</skills>
+	</weapon>
+	<weapon id="9304" name="Military Fleuret" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_assult_fleuret_i00"/>
+		<set name="weight" val="1370"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="891"/>
+		<set name="p_dam" val="159"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="6680500"/>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="142"/>
+	</weapon>
+	<weapon id="9305" name="Military Fleuret" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_assult_fleuret_i01"/>
+		<set name="additional_name" val="Guidance"/>
+		<set name="weight" val="1370"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="891"/>
+		<set name="p_dam" val="159"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="6680500"/>
+		<skills>
+			<skill id="3007" lvl="5"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="4714"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9306" name="Military Fleuret" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_assult_fleuret_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1370"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="891"/>
+		<set name="p_dam" val="159"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="6680500"/>
+		<skills>
+			<skill id="3010" lvl="5"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="4715"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9307" name="Military Fleuret" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_assult_fleuret_i01"/>
+		<set name="additional_name" val="Back Blow"/>
+		<set name="weight" val="1370"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="891"/>
+		<set name="p_dam" val="159"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="6680500"/>
+		<skills>
+			<skill id="3018" lvl="5"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="4716"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9308" name="Innominate Victory" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_nameless_victory_i00"/>
+		<set name="weight" val="1930"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="891"/>
+		<set name="p_dam" val="190"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="6680500"/>
+		<set name="kamaelAnalog" val="78"/>
+	</weapon>
+	<weapon id="9309" name="Innominate Victory" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_nameless_victory_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1930"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="891"/>
+		<set name="p_dam" val="190"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="6680500"/>
+		<skills>
+			<skill id="3013" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="4723"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9310" name="Innominate Victory" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_nameless_victory_i01"/>
+		<set name="additional_name" val="Critical Damage"/>
+		<set name="weight" val="1930"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="891"/>
+		<set name="p_dam" val="190"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="6680500"/>
+		<skills>
+			<skill id="3023" lvl="5"/>
+		</skills>
+		<set name="kamaelAnalog" val="4724"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9311" name="Innominate Victory" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_nameless_victory_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1930"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="891"/>
+		<set name="p_dam" val="190"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="6680500"/>
+		<skills>
+			<skill id="3010" lvl="5"/>
+		</skills>
+		<set name="kamaelAnalog" val="4725"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9312" name="Peacemaker" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_peace_maker_i00"/>
+		<set name="weight" val="1720"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="891"/>
+		<set name="p_dam" val="221"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="6680500"/>
+		<set name="kamaelAnalog" val="284"/>
+	</weapon>
+	<weapon id="9313" name="Peacemaker" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_peace_maker_i01"/>
+		<set name="additional_name" val="Evasion"/>
+		<set name="weight" val="1720"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="891"/>
+		<set name="p_dam" val="221"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="6680500"/>
+		<skills>
+			<skill id="3009" lvl="5"/>
+		</skills>
+		<set name="kamaelAnalog" val="4825"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9314" name="Peacemaker" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_peace_maker_i01"/>
+		<set name="additional_name" val="Critical Bleed"/>
+		<set name="weight" val="1720"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="891"/>
+		<set name="p_dam" val="221"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="6680500"/>
+		<triggers>
+			<trigger id="3053" level="1" type="CRIT" chance="100" />
+		</triggers>
+		<set name="kamaelAnalog" val="4826"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9315" name="Peacemaker" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_peace_maker_i01"/>
+		<set name="additional_name" val="Miser"/>
+		<set name="weight" val="1720"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="891"/>
+		<set name="p_dam" val="221"/>
+		<set name="m_dam" val="91"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="miser" val="1"/>
+		<set name="miserChance" val="19"/>
+		<set name="price" val="6680500"/>
+		<set name="kamaelAnalog" val="4827"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9316" name="Colichemarde" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_colichemarde_i00"/>
+		<set name="weight" val="1350"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="1346"/>
+		<set name="p_dam" val="176"/>
+		<set name="m_dam" val="99"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="10091400"/>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="79"/>
+	</weapon>
+	<weapon id="9317" name="Colichemarde" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_colichemarde_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1350"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="1346"/>
+		<set name="p_dam" val="176"/>
+		<set name="m_dam" val="99"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="10091400"/>
+		<skills>
+			<skill id="3010" lvl="6"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="4717"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9318" name="Colichemarde" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_colichemarde_i01"/>
+		<set name="additional_name" val="Critical Damage"/>
+		<set name="weight" val="1350"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="1346"/>
+		<set name="p_dam" val="176"/>
+		<set name="m_dam" val="99"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="10091400"/>
+		<skills>
+			<skill id="3023" lvl="6"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="4718"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9319" name="Colichemarde" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_colichemarde_i01"/>
+		<set name="additional_name" val="Haste"/>
+		<set name="weight" val="1350"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="1346"/>
+		<set name="p_dam" val="176"/>
+		<set name="m_dam" val="99"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="10091400"/>
+		<skills>
+			<skill id="3036" lvl="6"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="4719"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9320" name="Dismantler" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dismantler_i00"/>
+		<set name="weight" val="1930"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="1346"/>
+		<set name="p_dam" val="210"/>
+		<set name="m_dam" val="99"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="10091400"/>
+		<set name="kamaelAnalog" val="7883"/>
+	</weapon>
+	<weapon id="9321" name="Dismantler" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dismantler_i01"/>
+		<set name="additional_name" val="Critical Drain"/>
+		<set name="weight" val="1930"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="1346"/>
+		<set name="p_dam" val="210"/>
+		<set name="m_dam" val="99"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="10091400"/>
+		<triggers>
+			<trigger id="3022" level="5" type="CRIT" chance="100" />
+		</triggers>
+		<set name="kamaelAnalog" val="8105"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9322" name="Dismantler" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dismantler_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1930"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="1346"/>
+		<set name="p_dam" val="210"/>
+		<set name="m_dam" val="99"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="10091400"/>
+		<skills>
+			<skill id="3013" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="8106"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9323" name="Dismantler" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dismantler_i01"/>
+		<set name="additional_name" val="Critical Bleed"/>
+		<set name="weight" val="1930"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="1346"/>
+		<set name="p_dam" val="210"/>
+		<set name="m_dam" val="99"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="10091400"/>
+		<triggers>
+			<trigger id="3055" level="1" type="CRIT" chance="100" />
+		</triggers>
+		<set name="kamaelAnalog" val="8107"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9324" name="Hell Hound" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_hell_hound_i00"/>
+		<set name="weight" val="1700"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="1346"/>
+		<set name="p_dam" val="245"/>
+		<set name="m_dam" val="99"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="10091400"/>
+		<set name="kamaelAnalog" val="287"/>
+	</weapon>
+	<weapon id="9325" name="Hell Hound" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_hell_hound_i01"/>
+		<set name="additional_name" val="Guidance"/>
+		<set name="weight" val="1700"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="1346"/>
+		<set name="p_dam" val="245"/>
+		<set name="m_dam" val="99"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="10091400"/>
+		<skills>
+			<skill id="3008" lvl="6"/>
+		</skills>
+		<set name="kamaelAnalog" val="4828"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9326" name="Hell Hound" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_hell_hound_i01"/>
+		<set name="additional_name" val="Quick Recovery"/>
+		<set name="weight" val="1700"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="1346"/>
+		<set name="p_dam" val="245"/>
+		<set name="m_dam" val="99"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="atk_reuse" val="715"/>
+		<set name="price" val="10091400"/>
+		<set name="kamaelAnalog" val="4829"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9327" name="Hell Hound" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_hell_hound_i01"/>
+		<set name="additional_name" val="Cheap Shot"/>
+		<set name="weight" val="1700"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="B"/>
+		<set name="crystal_count" val="1346"/>
+		<set name="p_dam" val="245"/>
+		<set name="m_dam" val="99"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="10091400"/>
+		<set name="kamaelAnalog" val="4830"/>
+		<set name="isSa" val="true"/>
+		<skills>
+			<skill id="3360" lvl="1"/>
+		</skills>
+	</weapon>
+	<weapon id="9328" name="White Lightning" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_lightning_blaze_i00"/>
+		<set name="weight" val="1330"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1128"/>
+		<set name="p_dam" val="193"/>
+		<set name="m_dam" val="107"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="14098000"/>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="80"/>
+	</weapon>
+	<weapon id="9329" name="White Lightning" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_lightning_blaze_i01"/>
+		<set name="additional_name" val="Critical Poison"/>
+		<set name="weight" val="1330"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1128"/>
+		<set name="p_dam" val="193"/>
+		<set name="m_dam" val="107"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="14098000"/>
+		<triggers>
+			<trigger id="3061" level="1" type="CRIT" chance="100" />
+		</triggers>
+		<skills>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="5635"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9330" name="White Lightning" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_lightning_blaze_i01"/>
+		<set name="additional_name" val="Haste"/>
+		<set name="weight" val="1330"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1128"/>
+		<set name="p_dam" val="193"/>
+		<set name="m_dam" val="107"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="14098000"/>
+		<skills>
+			<skill id="3068" lvl="2"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="5636"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9331" name="White Lightning" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_lightning_blaze_i01"/>
+		<set name="additional_name" val="Anger"/>
+		<set name="weight" val="1330"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1128"/>
+		<set name="p_dam" val="193"/>
+		<set name="m_dam" val="107"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="14098000"/>
+		<skills>
+			<skill id="3057" lvl="1"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="5637"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9332" name="Divine Pain" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_pain_of_godness_i00"/>
+		<set name="weight" val="1900"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1128"/>
+		<set name="p_dam" val="231"/>
+		<set name="m_dam" val="107"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="14098000"/>
+		<set name="kamaelAnalog" val="7884"/>
+	</weapon>
+	<weapon id="9333" name="Divine Pain" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_pain_of_godness_i01"/>
+		<set name="additional_name" val="Haste"/>
+		<set name="weight" val="1900"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1128"/>
+		<set name="p_dam" val="231"/>
+		<set name="m_dam" val="107"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="14098000"/>
+		<skills>
+			<skill id="3068" lvl="2"/>
+		</skills>
+		<set name="kamaelAnalog" val="8108"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9334" name="Divine Pain" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_pain_of_godness_i01"/>
+		<set name="additional_name" val="Critical Damage"/>
+		<set name="weight" val="1900"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1128"/>
+		<set name="p_dam" val="231"/>
+		<set name="m_dam" val="107"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="14098000"/>
+		<skills>
+			<skill id="3067" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="8109"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9335" name="Divine Pain" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_pain_of_godness_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1900"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1128"/>
+		<set name="p_dam" val="231"/>
+		<set name="m_dam" val="107"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="14098000"/>
+		<skills>
+			<skill id="3050" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="8110"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9336" name="Doomchanter" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_doom_singer_i00"/>
+		<set name="weight" val="1670"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1128"/>
+		<set name="p_dam" val="270"/>
+		<set name="m_dam" val="107"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="14098000"/>
+		<set name="kamaelAnalog" val="288"/>
+	</weapon>
+	<weapon id="9337" name="Doomchanter" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_doom_singer_i01"/>
+		<set name="additional_name" val="Light"/>
+		<set name="weight" val="1670"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1128"/>
+		<set name="p_dam" val="270"/>
+		<set name="m_dam" val="107"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="14098000"/>
+		<skills>
+			<skill id="3498" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="5608"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9338" name="Doomchanter" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_doom_singer_i01"/>
+		<set name="additional_name" val="Critical Bleed"/>
+		<set name="weight" val="1670"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1128"/>
+		<set name="p_dam" val="270"/>
+		<set name="m_dam" val="107"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="14098000"/>
+		<triggers>
+			<trigger id="3053" level="2" type="CRIT" chance="100" />
+		</triggers>
+		<set name="kamaelAnalog" val="5609"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9339" name="Doomchanter" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_doom_singer_i01"/>
+		<set name="additional_name" val="Mana Up"/>
+		<set name="weight" val="1670"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1128"/>
+		<set name="p_dam" val="270"/>
+		<set name="m_dam" val="107"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="14098000"/>
+		<skills>
+			<skill id="3014" lvl="2"/>
+		</skills>
+		<set name="kamaelAnalog" val="5610"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9340" name="Lacerator" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_greed_stinger_i00"/>
+		<set name="weight" val="1320"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1659"/>
+		<set name="p_dam" val="210"/>
+		<set name="m_dam" val="114"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="20741000"/>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="2500"/>
+	</weapon>
+	<weapon id="9341" name="Lacerator" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_greed_stinger_i01"/>
+		<set name="additional_name" val="Critical Damage"/>
+		<set name="weight" val="1320"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1659"/>
+		<set name="p_dam" val="210"/>
+		<set name="m_dam" val="114"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="20741000"/>
+		<skills>
+			<skill id="3067" lvl="2"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="5647"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9342" name="Lacerator" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_greed_stinger_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1320"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1659"/>
+		<set name="p_dam" val="210"/>
+		<set name="m_dam" val="114"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="20741000"/>
+		<skills>
+			<skill id="3013" lvl="3"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="5648"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9343" name="Lacerator" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_greed_stinger_i01"/>
+		<set name="additional_name" val="Rsk. Focus"/>
+		<set name="weight" val="1320"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1659"/>
+		<set name="p_dam" val="210"/>
+		<set name="m_dam" val="114"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="20741000"/>
+		<skills>
+			<skill id="3071" lvl="1"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="5649"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9344" name="Undertaker" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_death_bringer_i00"/>
+		<set name="weight" val="1840"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1659"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="114"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="20741000"/>
+		<set name="kamaelAnalog" val="81"/>
+	</weapon>
+	<weapon id="9345" name="Undertaker" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_death_bringer_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1840"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1659"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="114"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="20741000"/>
+		<skills>
+			<skill id="3013" lvl="3"/>
+		</skills>
+		<set name="kamaelAnalog" val="5644"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9346" name="Undertaker" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_death_bringer_i01"/>
+		<set name="additional_name" val="Critical Bleed"/>
+		<set name="weight" val="1840"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1659"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="114"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="20741000"/>
+		<triggers>
+			<trigger id="3055" level="2" type="CRIT" chance="100" />
+		</triggers>
+		<set name="kamaelAnalog" val="5645"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9347" name="Undertaker" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_death_bringer_i01"/>
+		<set name="additional_name" val="Critical Drain"/>
+		<set name="weight" val="1840"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1659"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="114"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="20741000"/>
+		<triggers>
+			<trigger id="3060" level="2" type="CRIT" chance="100" />
+		</triggers>
+		<set name="kamaelAnalog" val="5646"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9348" name="Reaper" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_soul_shooter_i00"/>
+		<set name="weight" val="1660"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1659"/>
+		<set name="p_dam" val="294"/>
+		<set name="m_dam" val="114"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="20741000"/>
+		<set name="kamaelAnalog" val="289"/>
+	</weapon>
+	<weapon id="9349" name="Reaper" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_soul_shooter_i01"/>
+		<set name="additional_name" val="Cheap Shot"/>
+		<set name="weight" val="1660"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1659"/>
+		<set name="p_dam" val="294"/>
+		<set name="m_dam" val="114"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="20741000"/>
+		<set name="kamaelAnalog" val="5611"/>
+		<set name="isSa" val="true"/>
+		<skills>
+			<skill id="3552" lvl="1"/>
+			<skill id="3360" lvl="1"/>
+		</skills>
+	</weapon>
+	<weapon id="9350" name="Reaper" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_soul_shooter_i01"/>
+		<set name="additional_name" val="Quick Recovery"/>
+		<set name="weight" val="1660"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1659"/>
+		<set name="p_dam" val="294"/>
+		<set name="m_dam" val="114"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="atk_reuse" val="700"/>
+		<set name="price" val="20741000"/>
+		<set name="kamaelAnalog" val="5612"/>
+		<triggers>
+			<trigger id="3062" level="1" type="CRIT" chance="100" />
+		</triggers>
+		<skills>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9351" name="Reaper" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_soul_shooter_i01"/>
+		<set name="additional_name" val="Critical Poison"/>
+		<set name="weight" val="1660"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="1659"/>
+		<set name="p_dam" val="294"/>
+		<set name="m_dam" val="114"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="20741000"/>
+		<triggers>
+			<trigger id="3062" level="1" type="CRIT" chance="100" />
+		</triggers>
+		<skills>
+			<skill id="3062" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="5613"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9352" name="Eclair Bijou" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_greed_stinger_i00"/>
+		<set name="weight" val="1300"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="228"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="26968400"/>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="8678"/>
+	</weapon>
+	<weapon id="9353" name="Eclair Bijou" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_greed_stinger_i01"/>
+		<set name="additional_name" val="Haste"/>
+		<set name="weight" val="1300"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="228"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3068" lvl="3"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="8788"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9354" name="Eclair Bijou" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_greed_stinger_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1300"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="228"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3013" lvl="3"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="8789"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9355" name="Eclair Bijou" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_greed_stinger_i01"/>
+		<set name="additional_name" val="Critical Poison"/>
+		<set name="weight" val="1300"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="228"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="26968400"/>
+		<triggers>
+			<trigger id="3024" level="1" type="CRIT" chance="100" />
+		</triggers>
+		<skills>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="8790"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9356" name="Durendal" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_death_bringer_i00"/>
+		<set name="weight" val="1820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="272"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="26968400"/>
+		<set name="kamaelAnalog" val="8679"/>
+	</weapon>
+	<weapon id="9357" name="Durendal" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_death_bringer_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="272"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3050" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="8791"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9358" name="Durendal" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_death_bringer_i01"/>
+		<set name="additional_name" val="Haste"/>
+		<set name="weight" val="1820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="272"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3068" lvl="3"/>
+		</skills>
+		<set name="kamaelAnalog" val="8792"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9359" name="Durendal" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_death_bringer_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="272"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3013" lvl="3"/>
+		</skills>
+		<set name="kamaelAnalog" val="8793"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9360" name="Screaming Vengeance" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_soul_shooter_i00"/>
+		<set name="weight" val="1640"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="318"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="26968400"/>
+		<set name="kamaelAnalog" val="8684"/>
+	</weapon>
+	<weapon id="9361" name="Screaming Vengeance" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_soul_shooter_i01"/>
+		<set name="additional_name" val="Cheap Shot"/>
+		<set name="weight" val="1640"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="318"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="26968400"/>
+		<set name="kamaelAnalog" val="8806"/>
+		<set name="isSa" val="true"/>
+		<skills>
+			<skill id="3552" lvl="1"/>
+			<skill id="3360" lvl="1"/>
+		</skills>
+	</weapon>
+	<weapon id="9362" name="Screaming Vengeance" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_soul_shooter_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1640"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="318"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3050" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="8807"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9363" name="Screaming Vengeance" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_soul_shooter_i01"/>
+		<set name="additional_name" val="Quick Recovery"/>
+		<set name="weight" val="1640"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="318"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="26968400"/>
+		<set name="atk_reuse" val="680"/>
+		<set name="kamaelAnalog" val="8808"/>
+		<set name="isSa" val="true"/>
+		<skills>
+			<skill id="3552" lvl="1"/>
+		</skills>
+	</weapon>
+	<weapon id="9364" name="Laevateinn" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_leavatein_i00"/>
+		<set name="weight" val="1300"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="2052"/>
+		<set name="p_dam" val="255"/>
+		<set name="m_dam" val="132"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="42759400"/>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="6364"/>
+	</weapon>
+	<weapon id="9365" name="Laevateinn" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_leavatein_i01"/>
+		<set name="additional_name" val="Haste"/>
+		<set name="weight" val="1300"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="2052"/>
+		<set name="p_dam" val="255"/>
+		<set name="m_dam" val="132"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="42759400"/>
+		<skills>
+			<skill id="3564" lvl="1"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="6581"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9366" name="Laevateinn" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_leavatein_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1300"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="2052"/>
+		<set name="p_dam" val="255"/>
+		<set name="m_dam" val="132"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="42759400"/>
+		<skills>
+			<skill id="3013" lvl="3"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="6582"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9367" name="Laevateinn" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_leavatein_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1300"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="2052"/>
+		<set name="p_dam" val="255"/>
+		<set name="m_dam" val="132"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="42759400"/>
+		<skills>
+			<skill id="3566" lvl="1"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="6583"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9368" name="Gram" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_gram_i00"/>
+		<set name="weight" val="1800"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="2052"/>
+		<set name="p_dam" val="304"/>
+		<set name="m_dam" val="132"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="42759400"/>
+		<set name="kamaelAnalog" val="6372"/>
+	</weapon>
+	<weapon id="9369" name="Gram" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_gram_i01"/>
+		<set name="additional_name" val="Haste"/>
+		<set name="weight" val="1800"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="2052"/>
+		<set name="p_dam" val="304"/>
+		<set name="m_dam" val="132"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="42759400"/>
+		<skills>
+			<skill id="3564" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="6605"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9370" name="Gram" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_gram_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1800"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="2052"/>
+		<set name="p_dam" val="304"/>
+		<set name="m_dam" val="132"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="42759400"/>
+		<skills>
+			<skill id="3013" lvl="3"/>
+		</skills>
+		<set name="kamaelAnalog" val="6606"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9371" name="Gram" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_gram_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1800"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="2052"/>
+		<set name="p_dam" val="304"/>
+		<set name="m_dam" val="132"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="42759400"/>
+		<skills>
+			<skill id="3566" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="6607"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9372" name="Sarnga" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_sarnga_i00"/>
+		<set name="weight" val="1600"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="2052"/>
+		<set name="p_dam" val="356"/>
+		<set name="m_dam" val="132"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="42759400"/>
+		<set name="kamaelAnalog" val="7575"/>
+	</weapon>
+	<weapon id="9373" name="Sarnga" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_sarnga_i01"/>
+		<set name="additional_name" val="Cheap Shot"/>
+		<set name="weight" val="1600"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="2052"/>
+		<set name="p_dam" val="356"/>
+		<set name="m_dam" val="132"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="42759400"/>
+		<set name="kamaelAnalog" val="7576"/>
+		<set name="isSa" val="true"/>
+		<skills>
+			<skill id="3552" lvl="1"/>
+			<skill id="3360" lvl="1"/>
+		</skills>
+	</weapon>
+	<weapon id="9374" name="Sarnga" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_sarnga_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1600"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="2052"/>
+		<set name="p_dam" val="356"/>
+		<set name="m_dam" val="132"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="42759400"/>
+		<skills>
+			<skill id="3567" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="7577"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9375" name="Sarnga" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_sarnga_i01"/>
+		<set name="additional_name" val="Critical Slow"/>
+		<set name="weight" val="1600"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="2052"/>
+		<set name="p_dam" val="356"/>
+		<set name="m_dam" val="132"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="42759400"/>
+		<triggers>
+			<trigger id="3574" level="1" type="CRIT" chance="100" />
+		</triggers>
+		<skills>
+			<skill id="3872" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="7578"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9376" name="Dynasty Rapier" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_rapier_i00"/>
+		<set name="weight" val="1280"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="302"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="74946000"/>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="9442"/>
+	</weapon>
+	<weapon id="9377" name="Dynasty Rapier" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_rapier_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1280"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="302"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3567" lvl="2"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="9854"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9378" name="Dynasty Rapier" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_rapier_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1280"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="302"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3013" lvl="5"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="9855"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9379" name="Dynasty Rapier" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_rapier_i01"/>
+		<set name="additional_name" val="Light"/>
+		<set name="weight" val="1280"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="302"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="406"/>
+		<set name="rnd_dam" val="40"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3498" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<enchant4_skill id="3426" lvl="1"/>
+		<set name="kamaelAnalog" val="9856"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9380" name="Dynasty Ancient Sword" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i00"/>
+		<set name="weight" val="1800"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="361"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="74946000"/>
+		<set name="kamaelAnalog" val="9443"/>
+	</weapon>
+	<weapon id="9381" name="Dynasty Ancient Sword" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1800"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="361"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3567" lvl="2"/>
+		</skills>
+		<set name="kamaelAnalog" val="9857"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9382" name="Dynasty Ancient Sword" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1800"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="361"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3013" lvl="5"/>
+		</skills>
+		<set name="kamaelAnalog" val="9858"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9383" name="Dynasty Ancient Sword" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01"/>
+		<set name="additional_name" val="Light"/>
+		<set name="weight" val="1800"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="361"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="350"/>
+		<set name="rnd_dam" val="15"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="2"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3498" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="9859"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9384" name="Dynasty Crossbow" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_crossbow_i00"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="401"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="74946000"/>
+		<set name="kamaelAnalog" val="9445"/>
+	</weapon>
+	<weapon id="9385" name="Dynasty Crossbow" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_crossbow_i01"/>
+		<set name="additional_name" val="Cheap Shot"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="401"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="74946000"/>
+		<set name="kamaelAnalog" val="9863"/>
+		<set name="isSa" val="true"/>
+		<skills>
+			<skill id="3552" lvl="1"/>
+			<skill id="3360" lvl="1"/>
+		</skills>
+	</weapon>
+	<weapon id="9386" name="Dynasty Crossbow" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_dynasty_crossbow_i01"/>
+		<set name="additional_name" val="Guidance"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="S"/>
+		<set name="crystal_count" val="3597"/>
+		<set name="p_dam" val="401"/>
+		<set name="m_dam" val="151"/>
+		<set name="atk_speed" val="303"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="10"/>
+		<set name="price" val="74946000"/>
+		<skills>
+			<skill id="3008" lvl="1"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="9864"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="9387" name="Dynasty Crossbow" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
+		<set name="additional_name" val="Focus" />
+		<set name="weight" val="1580" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="3597" />
+		<set name="p_dam" val="401" />
+		<set name="m_dam" val="151" />
+		<set name="atk_speed" val="303" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="10" />
+		<set name="price" val="74946000" />
+		<skills>
+			<skill id="3567" lvl="3" />
+		</skills>
+		<set name="kamaelAnalog" val="9865" />
+		<set name="isSa" val="true" />
+	</weapon>
+	<weapon id="9388" name="Infinity Rapier" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_infinity_rapier_i00" />
+		<set name="weight" val="1280" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="475" />
+		<set name="m_dam" val="230" />
+		<set name="atk_speed" val="406" />
+		<set name="rnd_dam" val="40" />
+		<set name="critical" val="10" />
+		<set name="att_atack_type" val="4" />
+		<set name="att_atack_value" val="250" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+		<triggers>
+			<trigger id="3579" level="1" type="CRIT" chance="100" />
+		</triggers>
+		<skills>
+			<skill id="3427" lvl="1" />
+		</skills>
+		<enchant4_skill id="3426" lvl="1" />
+	</weapon>
+	<weapon id="9389" name="Infinity Sword" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_infinity_sword_i00" />
+		<set name="weight" val="1800" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="568" />
+		<set name="m_dam" val="230" />
+		<set name="atk_speed" val="350" />
+		<set name="rnd_dam" val="15" />
+		<set name="critical" val="8" />
+		<set name="hit_modify" val="2" />
+		<set name="att_atack_type" val="4" />
+		<set name="att_atack_value" val="250" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+		<skills>
+			<skill id="3634" lvl="1" />
+		</skills>
+	</weapon>
+	<weapon id="9390" name="Infinity Shooter" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_infinity_shooter_i00" />
+		<set name="weight" val="1580" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="584" />
+		<set name="m_dam" val="230" />
+		<set name="atk_speed" val="303" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="10" />
+		<set name="att_atack_type" val="4" />
+		<set name="att_atack_value" val="250" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+		<skills>
+			<skill id="3635" lvl="1" />
+			<skill id="3360" lvl="1"/>
+		</skills>
+		<triggers>
+			<trigger id="3594" level="1" type="CRIT" chance="100" />
+		</triggers>
+	</weapon>
+</list>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="129" type="SOLO">
+		<name lang="en" val="Pailaka - Devil's Legacy"/>
+		<name lang="ru" val="Пайлака - Наследие Дьявола"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="18629"/>	<!-- Kams -->
+			<event type="MOBKILLED" val="18631"/>	<!-- Alkaso -->
+			<event type="MOBKILLED" val="18633"/>	<!-- Lematan -->
+			<event type="MOBKILLED" val="32495"/>	<!-- Treasure Box -->
+			<event type="MOBKILLED" val="18623"/>	<!-- Begrudged Archer -->
+			<event type="MOBKILLED" val="18624"/>	<!-- Deadmans Grudge -->
+			<event type="MOBKILLED" val="18625"/>	<!-- Deadmans Grudge -->
+			<event type="MOBKILLED" val="18626"/>	<!-- Deadmans Grudge -->
+			<event type="MOBKILLED" val="18627"/>	<!-- Deadmans Grudge -->
+			<event type="QUEST_START" val="32498"/>	<!-- Devils Isle Survivor -->
+			<event type="QUEST_TALK" val="32498"/>	<!-- Devils Isle Survivor -->
+			<event type="QUEST_TALK" val="32501"/>	<!-- Devils Isle Supporter -->
+			<event type="QUEST_TALK" val="32508"/>	<!-- Dwarf Adventurer -->
+			<event type="QUEST_TALK" val="32511"/>	<!-- Dwarf Adventurer -->
+			<item id="13042"/>	<!-- Ancient Legacy Sword -->
+			<item id="13043"/>	<!-- Enhanced Ancient Legacy Sword -->
+			<item id="13044"/>	<!-- Complete Ancient Legacy Sword -->
+			<item id="13046"/>	<!-- Pailaka Weapon Upgrade Stage 1 -->
+			<item id="13047"/>	<!-- Pailaka Weapon Upgrade Stage 2 -->
+			<item id="13150"/>	<!-- Pailaka All-Purpose Key -->
+			<item id="13033"/>	<!-- Quick Healing Potion -->
+			<item id="13048"/>	<!-- Pailaka Antidote -->
+			<item id="13049"/>	<!-- Divine Soul -->
+		</setting>
+	</quest>
+</quests>

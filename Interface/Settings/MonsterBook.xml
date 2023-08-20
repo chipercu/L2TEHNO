@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- [RU] Включить/выключить книгу монстров (включить - 1, выключить - 0) -->
+	<!-- [EN] Enable/Disable monster book (enable - 1, disable - 0) -->
+	<interface_setting name="EnableMonsterBook" type="TYPE_CHAR" value="1"/>
+	<!-- [RU] Название dat файла с данными о нпц -->
+	<!-- [EN] Name of the dat file with data about npc -->
+	<interface_setting name="NpcDatName" type="TYPE_TEXT" value="DBNpcData.dat"/>
+	<!-- [RU] Название dat файла с данными о дропе -->
+	<!-- [EN] Name of the dat file with data about drop -->
+	<interface_setting name="DropDatName" type="TYPE_TEXT" value="DBDropData.dat"/>
+	<!-- [RU] Название dat файла с данными о спойле -->
+	<!-- [EN] Name of the dat file with data about spoil -->
+	<interface_setting name="SpoilDatName" type="TYPE_TEXT" value="DBSpoilData.dat"/>
+</list>

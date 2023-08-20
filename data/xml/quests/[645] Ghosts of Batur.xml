@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="645" type="PARTY_ONE">
+		<name lang="en" val="Ghosts of Batur"/>
+		<name lang="ru" val="Призраки Батура"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="22703"/>	<!-- Contaminated Morek Warrior -->
+			<event type="MOBKILLED" val="22704"/>	<!-- Contaminated Batur Warrior -->
+			<event type="MOBKILLED" val="22705"/>	<!-- Contaminated Batur Commander -->
+			<event type="MOBKILLED" val="22706"/>	<!-- Turka Followers Ghost -->
+			<event type="MOBKILLED" val="22707"/>	<!-- Turka Commanders Ghost -->
+			<event type="QUEST_START" val="32017"/>	<!-- Karuda -->
+			<event type="QUEST_TALK" val="32017"/>	<!-- Karuda -->
+			<event type="QUEST_TALK" val="32017"/>	<!-- Karuda -->
+			<item id="14861"/>	<!-- Cursed Burial Items -->
+		</setting>
+	</quest>
+</quests>

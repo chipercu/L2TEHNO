@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="419" type="SOLO">
+		<name lang="en" val="Get a Pet"/>
+		<name lang="ru" val="Заведите питомца"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20103"/>	<!-- Giant Spider -->
+			<event type="MOBKILLED" val="20106"/>	<!-- Talon Spider -->
+			<event type="MOBKILLED" val="20108"/>	<!-- Blade Spider -->
+			<event type="MOBKILLED" val="20460"/>	<!-- Crimson Spider -->
+			<event type="MOBKILLED" val="20308"/>	<!-- Hook Spider -->
+			<event type="MOBKILLED" val="20466"/>	<!-- Pincer Spider -->
+			<event type="MOBKILLED" val="20025"/>	<!-- Lesser Dark Horror -->
+			<event type="MOBKILLED" val="20105"/>	<!-- Dark Horror -->
+			<event type="MOBKILLED" val="20034"/>	<!-- Prowler -->
+			<event type="MOBKILLED" val="20474"/>	<!-- Kasha Spider -->
+			<event type="MOBKILLED" val="20476"/>	<!-- Kasha Fang Spider -->
+			<event type="MOBKILLED" val="20478"/>	<!-- Kasha Blade Spider -->
+			<event type="MOBKILLED" val="20403"/>	<!-- Hunter Tarantula -->
+			<event type="MOBKILLED" val="20508"/>	<!-- Plunder Tarantula -->
+			<event type="MOBKILLED" val="22244"/>	<!-- Crimson Spider -->
+			<event type="QUEST_START" val="30731"/>	<!-- Martin -->
+			<event type="QUEST_TALK" val="30731"/>	<!-- Martin -->
+			<event type="QUEST_TALK" val="30731"/>	<!-- Martin -->
+			<event type="QUEST_TALK" val="30256"/>	<!-- Bella -->
+			<event type="QUEST_TALK" val="30091"/>	<!-- Ellie -->
+			<event type="QUEST_TALK" val="30072"/>	<!-- Metty -->
+			<item id="3417"/>	<!-- Animal Lover's List -->
+			<item id="3419"/>	<!-- Animal Slayer's 2nd List -->
+			<item id="3420"/>	<!-- Animal Slayer's 3rd List -->
+			<item id="3421"/>	<!-- Animal Slayer's 4th List -->
+			<item id="3422"/>	<!-- Animal Slayer's 5th List -->
+			<item id="10164"/>	<!-- Animal Slayer's List -->
+			<item id="3423"/>	<!-- Bloody Fang -->
+			<item id="3424"/>	<!-- Bloody Claw -->
+			<item id="3425"/>	<!-- Bloody Nail -->
+			<item id="3426"/>	<!-- Bloody Kasha Fang -->
+			<item id="3427"/>	<!-- Bloody Tarantula Nail -->
+			<item id="10165"/>	<!-- Bloody Red Claw -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="14815" name="Territory Health Recovery Potion" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_hp_potion_i05" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="A" />
+	</etcitem>
+	<etcitem id="14816" name="Territory Mana Recovery Potion" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_mp_potion_i05" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="A" />
+	</etcitem>
+	<etcitem id="14817" name="Territory CP Recovery Potion" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_super_cp_potion_i05" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="crystal_type" val="A" />
+	</etcitem>
+	<etcitem id="14818" name="Enriched Pet Food for Wolves" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pouch_red_i00" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="price" val="9000" />
+	</etcitem>
+	<etcitem id="14819" name="Guardian's Dragon Bugle" type="PET_COLLAR">
+		<!--Done By Drizzy (c)L2Open-Team-->
+		<!--LastChange: 15.06.2011-18:44-->
+		<set name="icon" val="icon.etc_bugle_i00" />
+		<set name="weight" val="20" />
+		<set name="price" val="2000" />
+	</etcitem>
+	<etcitem id="14820" name="Skull Key of Suffering" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_skeleton_key_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="14821" name="Skull Key of Erosion" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_skeleton_key_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="14822" name="Skull Key of the Heart" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_skeleton_key_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="14823" name="Soul Extraction Device" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_lantern_i00" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="14824" name="Ancient Herb - Slayer" type="OTHER">
+		<skills>
+			<skill id="2900" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="14825" name="Ancient Herb - Immortal" type="OTHER">
+		<skills>
+			<skill id="2901" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="14826" name="Ancient Herb - Terminator" type="OTHER">
+		<skills>
+			<skill id="2902" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="14827" name="Ancient Herb - Guide" type="OTHER">
+		<skills>
+			<skill id="2903" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="14828" name="Deinonychus Mesozoic Stone" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_life_stone_of_begining_i00" />
+		<set name="weight" val="20" />
+	</etcitem>
+	<etcitem id="14829" name="Cave Exploration Text 1 Sheet" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_cave_page_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14830" name="Cave Exploration Text 2 Sheet" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_cave_page_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14831" name="Cave Exploration Text 3 Sheet" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_cave_page_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14832" name="Growth Accelerator" type="OTHER">
+		<set name="icon" val="icon.etc_medicine_of_growth_i00" />
+		<set name="stackable" val="true" />
+		<cond msgId="109">
+			<or>
+				<target mobId="18793"/>
+				<target mobId="18794"/>
+				<target mobId="18795"/>
+				<target mobId="18796"/>
+				<target mobId="18797"/>
+				<target mobId="18798"/>
+			</or>
+		</cond>
+		<skills>
+			<skill id="2905" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="14833" name="Small Stakato Cocoon" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragon_egg_i04" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14834" name="Large Stakato Cocoon" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragon_egg_i01" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14835" name="Multi-colored Jewel" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_crystal_cave_crystal_i02" />
+		<set name="weight" val="1" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="stackable" val="true" />
+		<skills>
+			<skill id="2915" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="14836" name="Knowledge of the Giants Anthology, Chapter 1" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14837" name="Knowledge of the Giants Anthology, Chapter 2" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14838" name="Knowledge of the Giants Anthology, Chapter 3" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14839" name="Knowledge of the Giants Anthology, Chapter 4" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14840" name="Knowledge of the Giants Anthology, Chapter 5" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14841" name="Ancient Parchment" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14842" name="Wisdom of the Giants Text, Chapter 1" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14843" name="Wisdom of the Giants Text, Chapter 2" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14844" name="Wisdom of the Giants Text, Chapter 3" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14845" name="Wisdom of the Giants Text, Chapter 4" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14846" name="Wisdom of the Giants Text, Chapter 5" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_spell_books_white_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14847" name="Titan Ancient Book" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14848" name="Protection Soul's Pendant" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="ect_charm_of_protection_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14849" name="Kahman's Supply Box" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14850" name="Droph's Support Items" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14851" name="Cave Exploration Text 1 Sheet" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_cave_page_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14852" name="Cave Exploration Text 2 Sheet" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_cave_page_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14853" name="Cave Exploration Text 3 Sheet" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_cave_page_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14854" name="Recipe - Spiteful Soul Energy" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14855" name="Spiteful Soul Energy" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_crystal_ball_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14856" name="Spiteful Soul Vengeance" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="weight" val="2" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14857" name="Shell of Monsters" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bark_gold_i00" />
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14858" name="Scout's Note" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_piece_of_report_i00" />
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14859" name="Stakato Queen's Fang" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14860" name="Box Containing the Flame of the Holy Spirit" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14861" name="Cursed Burial Items" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_totem_black_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14862" name="Flauen's Letter" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14863" name="Letter to Doskozer" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14864" name="Letter to Athenia" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14865" name="Vicinity of the Field of Silence Research Center" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+	</etcitem>
+	<etcitem id="14866" name="Certificate of Support" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+	</etcitem>
+	<etcitem id="14867" name="Broken Pieve of Magic Force" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_charcoal_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14868" name="Guardian Spirit Fragment" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_crystal_ball_blue_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14869" name="Destroyed machine piece" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_plate_black_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14870" name="Enchanted Golem Fragment" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_plate_glay_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14871" name="Mucrokian Hide" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14872" name="Awakened Mucrokian Hide" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_leather_brown_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14873" name="Mucrokian Hide" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14874" name="Fallen Mucrokian Hide" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_leather_brown_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14875" name="Mineral Fragment" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_debris_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14876" name="Evidence of Migration" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14877" name="Replenished Power Bead" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_crystal_ball_blue_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14878" name="Discharged Power Bead" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14879" name="Stakato's Fangs" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14880" name="Dirty Bead" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14881" name="Soul Core Containing Evil Spirit" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_evil_soul_core_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+	</etcitem>
+	<etcitem id="14882" name="Ragna Orc's Amulet" type="QUEST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_totem_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="14883" name="Hisilrome's Heart" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_bodypart_heart_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="14884" name="Gludio Supply Box - Magic Rune Clip" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14885" name="Dion Supply Box - Magic Rune Clip" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14886" name="Giran Supply Box - Magic Rune Clip" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14887" name="Oren Supply Box - Magic Rune Clip" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14888" name="Aden Supply Box - Magic Rune Clip" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14889" name="Innadril Supply Box - Magic Rune Clip" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14890" name="Goddard Supply Box - Magic Rune Clip" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14891" name="Rune Supply Box - Magic Rune Clip" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14892" name="Schuttgart Supply Box - Magic Rune Clip" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14893" name="Gludio Supply Box - Magic Ornament" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14894" name="Dion Supply Box - Magic Ornament" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14895" name="Giran Supply Box - Magic Ornament" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14896" name="Oren Supply Box - Magic Ornament" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14897" name="Aden Supply Box - Magic Ornament" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14898" name="Innadril Supply Box - Magic Ornament" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="14899" name="Goddard Supply Box - Magic Ornament" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
+		<set name="additional_name" val="Grade S, A" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+	</etcitem>
+</list>

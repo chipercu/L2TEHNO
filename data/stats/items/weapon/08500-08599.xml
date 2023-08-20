@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="8527" name="For Monsters Only (Strengthened Bow)" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="weight" val="1870" />
+		<set name="soulshots" val="6" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="crystal_count" val="743" />
+		<set name="p_dam" val="82" />
+		<set name="m_dam" val="26" />
+		<set name="atk_speed" val="293" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="mp_consume" val="3" />
+	</weapon>
+	<weapon id="8528" name="For Monsters Only (Doom Hammer)" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="weight" val="1200" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="crystal_count" val="1170" />
+		<set name="p_dam" val="41" />
+		<set name="m_dam" val="43" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+	</weapon>
+	<weapon id="8529" name="For Monsters Only (Knife)" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="weight" val="1140" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="p_dam" val="10" />
+		<set name="m_dam" val="9" />
+		<set name="atk_speed" val="433" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+	</weapon>
+	<weapon id="8530" name="For Monsters Only (Squire's Sword)" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="weight" val="1600" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="p_dam" val="6" />
+		<set name="m_dam" val="5" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+	</weapon>
+	<weapon id="8531" name="For Monsters Only (Bone Staff)" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="weight" val="1060" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="crystal_count" val="743" />
+		<set name="p_dam" val="39" />
+		<set name="m_dam" val="35" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+	</weapon>
+	<weapon id="8532" name="For Monsters Only (Spinebone Sword)" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="weight" val="1510" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="crystal_count" val="1170" />
+		<set name="p_dam" val="51" />
+		<set name="m_dam" val="32" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+	</weapon>
+	<weapon id="8533" name="For Monsters Only (Crimson Sword)" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="weight" val="1490" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="crystal_count" val="1758" />
+		<set name="p_dam" val="64" />
+		<set name="m_dam" val="39" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+	</weapon>
+	<weapon id="8576" name="Apprentice's Staff (Event)" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
+		<set name="weight" val="1070" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="p_dam" val="23" />
+		<set name="m_dam" val="24" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="8577" name="Bone Club (Event)" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_club_i00" />
+		<set name="weight" val="1850" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="p_dam" val="24" />
+		<set name="m_dam" val="17" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="8578" name="Shining Knife (Event)" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_shining_knife_i00" />
+		<set name="weight" val="1120" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="p_dam" val="21" />
+		<set name="m_dam" val="17" />
+		<set name="atk_speed" val="433" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="8579" name="Cestus (Event)" type="DUALFIST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_vipers_canine_i00" />
+		<set name="weight" val="1570" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="p_dam" val="29" />
+		<set name="m_dam" val="17" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="8580" name="Forest Bow (Event)" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_short_bow_i00" />
+		<set name="weight" val="1900" />
+		<set name="soulshots" val="7" />
+		<set name="spiritshots" val="2" />
+		<set name="p_dam" val="49" />
+		<set name="m_dam" val="17" />
+		<set name="atk_speed" val="293" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="mp_consume" val="3" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="8581" name="Long Sword (Event)" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_long_sword_i00" />
+		<set name="weight" val="1560" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="p_dam" val="24" />
+		<set name="m_dam" val="17" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="8582" name="Mace of Prayer (Event)" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_mace_of_prayer_i00" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="p_dam" val="41" />
+		<set name="m_dam" val="43" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="8583" name="Dark Elven Bow (Event)" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_dark_elven_bow_i00" />
+		<set name="weight" val="1830" />
+		<set name="soulshots" val="6" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="p_dam" val="105" />
+		<set name="m_dam" val="32" />
+		<set name="atk_speed" val="293" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="mp_consume" val="4" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="8584" name="Long Bow (Event)" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_strengthening_bow_i00" />
+		<set name="weight" val="1830" />
+		<set name="soulshots" val="6" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="p_dam" val="114" />
+		<set name="m_dam" val="35" />
+		<set name="atk_speed" val="227" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="mp_consume" val="4" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="8585" name="Staff of Mana (Event)" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_staff_of_mana_i00" />
+		<set name="weight" val="1040" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="p_dam" val="50" />
+		<set name="m_dam" val="47" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="8586" name="Bastard Sword (Event)" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_bastard_sword_i00" />
+		<set name="weight" val="1510" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="p_dam" val="51" />
+		<set name="m_dam" val="32" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="8587" name="Divine Tomb (Event)" type="ETC">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_divine_tome_i00" />
+		<set name="weight" val="570" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="p_dam" val="41" />
+		<set name="m_dam" val="43" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="8588" name="Single-Edged Jamadhr (Event)" type="DUALFIST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_baghnakh_i00" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="p_dam" val="62" />
+		<set name="m_dam" val="32" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="8589" name="Tomahawk (Event)" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_tomahawk_i00" />
+		<set name="weight" val="1780" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="p_dam" val="51" />
+		<set name="m_dam" val="32" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="8590" name="Poniard Daggar (Event)" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_dirk_i00" />
+		<set name="weight" val="1090" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="p_dam" val="45" />
+		<set name="m_dam" val="32" />
+		<set name="atk_speed" val="433" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="8591" name="Pike (Event)" type="POLE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_pike_i00" />
+		<set name="weight" val="2090" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="p_dam" val="51" />
+		<set name="m_dam" val="32" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+</list>

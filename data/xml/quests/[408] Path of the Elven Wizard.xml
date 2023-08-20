@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="408" type="SOLO">
+		<name lang="en" val="Path of the Elven Wizard"/>
+		<name lang="ru" val="Путь Светлого Мага"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20019"/>	<!-- Dryad Elder -->
+			<event type="MOBKILLED" val="20466"/>	<!-- Pincer Spider -->
+			<event type="MOBKILLED" val="20047"/>	<!-- Sukar Wererat Leader -->
+			<event type="QUEST_START" val="30414"/>	<!-- Rosella -->
+			<event type="QUEST_TALK" val="30414"/>	<!-- Rosella -->
+			<event type="QUEST_TALK" val="30157"/>	<!-- Greenis -->
+			<event type="QUEST_TALK" val="30371"/>	<!-- Thalia -->
+			<event type="QUEST_TALK" val="30423"/>	<!-- Northwind -->
+			<item id="1218"/>	<!-- Rosella's Letter -->
+			<item id="1229"/>	<!-- Fertility Peridot -->
+			<item id="1224"/>	<!-- Immortal Love -->
+			<item id="1222"/>	<!-- Appetizing Apple -->
+			<item id="1272"/>	<!-- Charm of Grain -->
+			<item id="1220"/>	<!-- Magical Powers Ruby -->
+			<item id="1273"/>	<!-- Sap of the Mother Tree -->
+			<item id="1221"/>	<!-- Pure Aquamarine -->
+			<item id="1274"/>	<!-- Lucky Potpourri -->
+			<item id="1226"/>	<!-- Nobility Amethyst -->
+			<item id="1223"/>	<!-- Gold Leaves -->
+			<item id="1219"/>	<!-- Red Down -->
+			<item id="1225"/>	<!-- Amethyst -->
+		</setting>
+	</quest>
+</quests>

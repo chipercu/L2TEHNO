@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="21900" name="Totem of Spirit" type="OTHER">
+		<set name="icon" val="BranchSys2.icon.totem_of_mind"/>
+		<set name="weight" val="10"/>
+		<set name="stackable" val="true"/>
+		<set name="crystal_type" val="NONE"/>
+		<set name="sellable" val="false"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<cond msgId="1508">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="21901" name="Totem of Courage" type="OTHER">>
+		<set name="icon" val="BranchSys2.icon.totem_of_bravery"/>
+		<set name="weight" val="10"/>
+		<set name="stackable" val="true"/>
+		<set name="crystal_type" val="NONE"/>
+		<set name="sellable" val="false"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<cond msgId="1508">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="21902" name="Totem of Fortitude" type="OTHER">>
+		<set name="icon" val="BranchSys2.icon.totem_of_fortitude"/>
+		<set name="weight" val="10"/>
+		<set name="stackable" val="true"/>
+		<set name="crystal_type" val="NONE"/>
+		<set name="sellable" val="false"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<cond msgId="1508">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="21903" name="Refined Red Dragon Blood" type="OTHER">>
+		<set name="icon" val="BranchSys2.icon.refined_red_blood_of_dragon"/>
+		<set name="weight" val="10"/>
+		<set name="stackable" val="true"/>
+		<set name="crystal_type" val="NONE"/>
+		<set name="sellable" val="false"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<cond msgId="1508">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="21904" name="Refined Blue Dragon Blood" type="OTHER">>
+		<set name="icon" val="BranchSys2.icon.refined_blue_blood_of_dragon"/>
+		<set name="weight" val="10"/>
+		<set name="stackable" val="true"/>
+		<set name="class" val="OTHER"/>
+		<set name="crystal_type" val="NONE"/>
+		<set name="type" val="OTHER"/>
+		<set name="sellable" val="false"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="reuse_delay" val="300000"/>
+		<cond msgId="1508">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="21905" name="Clear Crystal" type="QUEST">
+		<set name="icon" val="icon.etc_bead_white_i00" />
+		<set name="material" val="steel" />
+		<set name="stackable" val="true" />
+		<set name="dropable" val="false" />
+	</etcitem>
+		<etcitem id="21906" name="Empty Crystal" type="QUEST">
+		<set name="icon" val="icon.etc_bead_white_i00" />
+		<set name="material" val="steel" />
+		<set name="stackable" val="true" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="21907" name="Filled Crystal (Antharas Energy)" type="QUEST">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="material" val="steel" />
+		<set name="stackable" val="true" />
+		<set name="dropable" val="false" />
+	</etcitem>
+		<etcitem id="21908" name="Filled Crystal (Valakas Energy)" type="QUEST">
+		<set name="icon" val="icon.etc_bead_red_i00" />
+		<set name="material" val="steel" />
+		<set name="stackable" val="true" />
+		<set name="dropable" val="false" />
+	</etcitem>
+		<etcitem id="21909" name="Lavasaurus Stone Fragment" type="QUEST">
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="material" val="steel" />
+		<set name="stackable" val="true" />
+	</etcitem>
+		<etcitem id="21910" name="Lavasaurus Head Fragment" type="QUEST">
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="material" val="steel" />
+		<set name="stackable" val="true" />
+	</etcitem>
+		<etcitem id="21911" name="Lavasaurus Body Fragment" type="QUEST">
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="material" val="steel" />
+		<set name="stackable" val="true" />
+	</etcitem>
+		<etcitem id="21912" name="Lavasaurus Horn Fragment" type="QUEST">
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="material" val="steel" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21913" name="Unrefined Red Dragon Blood" type="QUEST">
+		<set name="icon" val="icon.etc_potion_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="21914" name="Unrefined Blue Dragon Blood" type="QUEST">
+		<set name="icon" val="icon.etc_potion_blue_i00" />
+		<set name="stackable" val="true" />
+		<set name="dropable" val="false" />
+	</etcitem>
+		<etcitem id="21915" name="Ice Candy Piece" type="QUEST">
+		<set name="icon" val="BranchSys.icon.br_valentine_cream_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+		<etcitem id="21916" name="Super Kat the Cat Z Summon Necklace" type="OTHER">
+		<set name="icon" val="BranchSys2.icon.g_supercat_cat_i00" />
+		<set name="weight" val="10" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+		<etcitem id="21917" name="Super Feline Queen Z Summon Necklace" type="OTHER">
+		<set name="icon" val="BranchSys2.icon.g_supercat_queen_i00" />
+		<set name="weight" val="10" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+		<etcitem id="21918" name="Super Mew the Cat Z Summon Necklace" type="OTHER">
+		<set name="icon" val="BranchSys2.icon.g_supercat_mew_i00" />
+		<set name="weight" val="10" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="21991" name="Tarask Dragon's Leather Fragment" type="QUEST">
+		<set name="icon" val="icon.etc_old_key_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="21992" name="Behemoth Dragon Leather" type="QUEST">
+		<set name="icon" val="icon.etc_old_key_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="21993" name="Lavasaurus Alpha Fragment" type="QUEST">
+		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21994" name="Vitality Replenishing Beverage - Pack of 9" type="OTHER">
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="21995" name="Vitality Replenishing Beverage - Pack of 12" type="OTHER">
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="21996" name="Vitality Replenishing Beverage - Pack of 15" type="OTHER">
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="21997" name="Shattered Bones" type="QUEST">
+		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21998" name="Cannibalistic Stakato Leader Claw" type="QUEST">
+		<set name="icon" val="icon.etc_parasite_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21999" name="Anais Scroll" type="QUEST">
+		<set name="icon" val="BranchSys2.icon.g_ancient_book_piece_high" />
+		<set name="stackable" val="true" />
+	</etcitem>
+</list>
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="508" type="PARTY_ALL">
+		<name lang="en" val="A Clan's Reputation"/>
+		<name lang="ru" val="Репутация Клана"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="25252"/>	<!-- Palibati Queen Themis -->
+			<event type="MOBKILLED" val="25478"/>	<!-- Shilens Priest Hisilrome -->
+			<event type="MOBKILLED" val="25255"/>	<!-- Gargoyle Lord Tiphon -->
+			<event type="MOBKILLED" val="25245"/>	<!-- Last Lesser Giant Glaki -->
+			<event type="MOBKILLED" val="25051"/>	<!-- Rahha -->
+			<event type="MOBKILLED" val="25524"/>	<!-- Flamestone Giant -->
+			<event type="QUEST_START" val="30868"/>	<!-- Sir Eric Rodemai -->
+			<event type="QUEST_TALK" val="30868"/>	<!-- Sir Eric Rodemai -->
+			<item id="8277"/>	<!-- Themis' Scale -->
+			<item id="8282"/>	<!-- Rahha's Fang -->
+			<item id="8280"/>	<!-- Tiphon Shard -->
+			<item id="8281"/>	<!-- Glaki's Necleus -->
+			<item id="8282"/>	<!-- Rahha's Fang -->
+			<item id="8494"/>	<!-- Nucleus of Flamestone Giant -->
+		</setting>
+	</quest>
+</quests>

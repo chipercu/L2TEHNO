@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="21702" name="Olf's Thanksgiving Pack" type="OTHER">
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="21704" name="Honey Rice Cakes" type="OTHER">
+		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_c_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="weight" val="5" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="22251" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21707" name="Blessed Olf's T-shirt Enchant Scroll - Event" type="SCROLL">
+		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
+		<set name="class" val="MISC"/>
+		<set name="weight" val="120"/>
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="21708" name="Honey Rice Cakes - Event" type="OTHER">
+		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_c_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="isConsume" val="true" />
+		<set name="weight" val="5" />
+		<skills>
+			<skill id="22251" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21713" name="Sealed Cloak of Zaken" type="OTHER">
+        <set name="icon" val="BranchSys2.Icon.br_zaken_cloak_i00" />
+		<set name="weight" val="220" />
+		<set name="tradeable" val="true" />
+		<set name="dropable" val="true" />
+	</etcitem>
+	<etcitem id="21714" name="Sealed Cloak of Freya" type="OTHER">
+        <set name="icon" val="BranchSys2.Icon.br_freya_cloak_i00" />
+		<set name="weight" val="220" />
+		<set name="tradeable" val="true" />
+		<set name="dropable" val="true" />
+	</etcitem>
+	<etcitem id="21715" name="Sealed Cloak of Frintezza" type="OTHER">
+        <set name="icon" val="BranchSys2.Icon.br_frintessa_cloak_i00" />
+		<set name="weight" val="220" />
+		<set name="tradeable" val="true" />
+		<set name="dropable" val="true" />
+	</etcitem>
+	<etcitem id="21722" name="Zaken Soul Fragment" type="QUEST">
+		<set name="icon" val="icon.etc_jewel_gold_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="21723" name="Freya Soul Fragment" type="QUEST">
+		<set name="icon" val="icon.etc_jewel_gold_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="21724" name="Frintezza Soul Fragment" type="QUEST">
+		<set name="icon" val="icon.etc_jewel_gold_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="21725" name="Staff of Goddess: Rain Song Fragment" type="QUEST">
+		<set name="icon" val="icon.etc_i.etc_vesper_caster_piece_i00" />
+		<set name="material" val="wood" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21730" name="Letter Collector's Gift" type="OTHER">
+		<set name="stackable" val="true"/>
+		<set name="class" val="CONSUMABLE"/>
+		<set name="crystal_type" val="NONE"/>
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="22270" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21746" name="Maestro's Key" type="OTHER">
+		<set name="icon" val="icon.etc_old_key_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1688"/>
+		<skills>
+			<skill id="22271" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="21747" name="Beginner Adventurer's Treasure Sack" type="OTHER">
+		<set name="icon" val="BranchSys2.icon.etc_ancient_treasure_sack_i00"/>
+		<set name="stackable" val="true"/>
+		<!--<cond msgId="1508">
+			<player olympiad="false"/>
+		</cond>-->
+	</etcitem>
+	<etcitem id="21748" name="Experienced Adventurer's Treasure Sack" type="OTHER">
+		<set name="icon" val="BranchSys2.icon.etc_ancient_treasure_sack_i00"/>
+		<set name="stackable" val="true"/>
+		<!--<cond msgId="1508">
+			<player olympiad="false"/>
+		</cond>-->
+	</etcitem>
+	<etcitem id="21749" name="Great Adventurer's Treasure Sack" type="OTHER">
+		<set name="icon" val="BranchSys2.icon.etc_ancient_treasure_sack_i00"/>
+		<set name="stackable" val="true"/>
+		<!--<cond msgId="1508">
+			<player olympiad="false"/>
+		</cond>-->
+	</etcitem>
+	<etcitem id="21750" name="Blue Elmore Coin" type="OTHER">
+		<set name="icon" val="icon.etc_coins_blue_i00"/>
+		<set name="stackable" val="true"/>
+		<set name="class" val="OTHER"/>
+		<set name="dropable" val="false"/>
+		<set name="tradeable" val="false"/>
+		<set name="sellable" val="false"/>
+		<set name="crystal_type" val="NONE"/>
+	</etcitem>
+	<etcitem id="21751" name="Rune Jewelry Box - Crystal" type="OTHER">
+		<set name="icon" val="icon.etc_treasure_box_i07"/>
+		<set name="stackable" val="true"/>
+		<set name="class" val="OTHER"/>
+		<set name="crystal_type" val="NONE"/>
+	</etcitem>
+	<etcitem id="21752" name="Rune Jewelry Box - Talisman" type="OTHER">
+		<set name="icon" val="icon.etc_treasure_box_i06"/>
+		<set name="stackable" val="true"/>
+		<set name="class" val="OTHER"/>
+		<set name="crystal_type" val="NONE"/>
+	</etcitem>
+	<etcitem id="21753" name="Pablo's Box" type="OTHER">
+		<set name="icon" val="icon.etc_treasure_box_i01"/>
+		<set name="stackable" val="true"/>
+		<set name="class" val="OTHER"/>
+		<set name="crystal_type" val="NONE"/>
+	</etcitem>
+</list>
+
+
+

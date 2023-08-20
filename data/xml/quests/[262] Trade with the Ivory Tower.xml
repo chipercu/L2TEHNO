@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="262" type="SOLO">
+		<name lang="en" val="Trade with the Ivory Tower"/>
+		<name lang="ru" val="Торговля с Башней Слоновой Кости"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20400"/>	<!-- Blood Fungus -->
+			<event type="MOBKILLED" val="20007"/>	<!-- Green Fungus -->
+			<event type="QUEST_START" val="30137"/>	<!-- Vollodos -->
+			<event type="QUEST_TALK" val="30137"/>	<!-- Vollodos -->
+			<item id="707"/>	<!-- Spore Sac -->
+		</setting>
+	</quest>
+</quests>

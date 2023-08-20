@@ -1,0 +1,1 @@
+ALTER TABLE items ADD COLUMN `temporal` enum('false','true') NOT NULL default 'false' AFTER flags;

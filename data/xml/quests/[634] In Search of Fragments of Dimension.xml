@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="634" type="PARTY_ONE">
+		<name lang="en" val="In Search of Fragments of Dimension"/>
+		<name lang="ru" val="Частицы Разлома"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="21208"/>	<!-- Hallowed Watchman -->
+			<event type="MOBKILLED" val="21209"/>	<!-- Hallowed Seer -->
+			<event type="MOBKILLED" val="21210"/>	<!-- Vault Guardian -->
+			<event type="MOBKILLED" val="21211"/>	<!-- Vault Seer -->
+			<event type="MOBKILLED" val="21212"/>	<!-- Hallowed Sentinel -->
+			<event type="MOBKILLED" val="21213"/>	<!-- Hallowed Monk -->
+			<event type="MOBKILLED" val="21214"/>	<!-- Vault Sentinel -->
+			<event type="MOBKILLED" val="21215"/>	<!-- Vault Monk -->
+			<event type="MOBKILLED" val="21216"/>	<!-- Overlord of the Holy Lands -->
+			<event type="MOBKILLED" val="21217"/>	<!-- Hallowed Priest -->
+			<event type="MOBKILLED" val="21218"/>	<!-- Vault Overlord -->
+			<event type="MOBKILLED" val="21219"/>	<!-- Vault Priest -->
+			<event type="MOBKILLED" val="21220"/>	<!-- Sepulcher Archon -->
+			<event type="MOBKILLED" val="21221"/>	<!-- Sepulcher Inquisitor -->
+			<event type="MOBKILLED" val="21222"/>	<!-- Sepulcher Archon -->
+			<event type="MOBKILLED" val="21223"/>	<!-- Sepulcher Inquisitor -->
+			<event type="MOBKILLED" val="21224"/>	<!-- Sepulcher Guardian -->
+			<event type="MOBKILLED" val="21225"/>	<!-- Sepulcher Sage -->
+			<event type="MOBKILLED" val="21226"/>	<!-- Sepulcher Guardian -->
+			<event type="MOBKILLED" val="21227"/>	<!-- Sepulcher Sage -->
+			<event type="MOBKILLED" val="21228"/>	<!-- Sepulcher Guard  -->
+			<event type="MOBKILLED" val="21229"/>	<!-- Sepulcher Preacher -->
+			<event type="MOBKILLED" val="21230"/>	<!-- Sepulcher Guard -->
+			<event type="MOBKILLED" val="21231"/>	<!-- Sepulcher Preacher -->
+			<event type="MOBKILLED" val="21232"/>	<!-- Barrow Guardian -->
+			<event type="MOBKILLED" val="21233"/>	<!-- Barrow Seer -->
+			<event type="MOBKILLED" val="21234"/>	<!-- Grave Guardian -->
+			<event type="MOBKILLED" val="21235"/>	<!-- Grave Seer -->
+			<event type="MOBKILLED" val="21236"/>	<!-- Barrow Sentinel -->
+			<event type="MOBKILLED" val="21237"/>	<!-- Barrow Monk -->
+			<event type="MOBKILLED" val="21238"/>	<!-- Grave Sentinel -->
+			<event type="MOBKILLED" val="21239"/>	<!-- Grave Monk -->
+			<event type="MOBKILLED" val="21240"/>	<!-- Barrow Overlord -->
+			<event type="MOBKILLED" val="21241"/>	<!-- Barrow Priest -->
+			<event type="MOBKILLED" val="21242"/>	<!-- Grave Overlord -->
+			<event type="MOBKILLED" val="21243"/>	<!-- Grave Priest -->
+			<event type="MOBKILLED" val="21244"/>	<!-- Crypt Archon -->
+			<event type="MOBKILLED" val="21245"/>	<!-- Crypt Inquisitor -->
+			<event type="MOBKILLED" val="21246"/>	<!-- Tomb Archon -->
+			<event type="MOBKILLED" val="21247"/>	<!-- Tomb Inquisitor -->
+			<event type="MOBKILLED" val="21248"/>	<!-- Crypt Guardian -->
+			<event type="MOBKILLED" val="21249"/>	<!-- Crypt Sage -->
+			<event type="MOBKILLED" val="21250"/>	<!-- Tomb Guardian -->
+			<event type="MOBKILLED" val="21251"/>	<!-- Tomb Sage -->
+			<event type="MOBKILLED" val="21252"/>	<!-- Crypt Guard  -->
+			<event type="MOBKILLED" val="21253"/>	<!-- Crypt Preacher -->
+			<event type="MOBKILLED" val="21254"/>	<!-- Tomb Guard -->
+			<event type="MOBKILLED" val="21255"/>	<!-- Tomb Preacher -->
+			<event type="QUEST_START" val="31494"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31495"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31496"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31497"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31498"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31499"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31500"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31501"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31502"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31503"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31504"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31505"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31506"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_START" val="31507"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31494"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31494"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31495"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31495"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31496"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31496"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31497"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31497"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31498"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31498"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31499"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31499"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31500"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31500"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31501"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31501"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31502"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31502"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31503"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31503"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31504"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31504"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31505"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31505"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31506"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31506"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31507"/>	<!-- Dimensional Gate Keeper -->
+			<event type="QUEST_TALK" val="31507"/>	<!-- Dimensional Gate Keeper -->
+		</setting>
+	</quest>
+</quests>

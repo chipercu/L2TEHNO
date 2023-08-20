@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="287" type="SOLO">
+		<name lang="en" val="Figuring It Out!"/>
+		<name lang="ru" val="Когда-нибудь обязательно узнаешь"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="22768"/>	<!-- Tanta Lizardman Scout -->
+			<event type="MOBKILLED" val="22769"/>	<!-- Tanta Lizardman Warrior -->
+			<event type="MOBKILLED" val="22770"/>	<!-- Tanta Lizardman Soldier -->
+			<event type="MOBKILLED" val="22771"/>	<!-- Tanta Lizardman Berserker -->
+			<event type="MOBKILLED" val="22772"/>	<!-- Tanta Lizardman Archer -->
+			<event type="MOBKILLED" val="22773"/>	<!-- Tanta Lizardman Magician -->
+			<event type="MOBKILLED" val="22774"/>	<!-- Tanta Lizardman Summoner -->
+			<event type="QUEST_START" val="32742"/>	<!-- Laki -->
+			<event type="QUEST_TALK" val="32742"/>	<!-- Laki -->
+			<item id="15499"/>	<!-- Vial of Tanta Blood -->
+		</setting>
+	</quest>
+</quests>

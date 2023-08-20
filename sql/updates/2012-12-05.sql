@@ -1,0 +1,1 @@
+ALTER TABLE `character_variables` MODIFY COLUMN `value` varchar(500) character set utf8 NOT NULL default 0;

@@ -1,0 +1,1464 @@
+package l2open.util;
+
+import l2open.common.ThreadPoolManager;
+import l2open.config.ConfigSystem;
+import l2open.config.ConfigValue;
+import l2open.database.DatabaseUtils;
+import l2open.database.FiltredPreparedStatement;
+import l2open.database.L2DatabaseFactory;
+import l2open.database.ThreadConnection;
+import l2open.extensions.multilang.CustomMessage;
+import l2open.gameserver.common.DifferentMethods;
+import l2open.gameserver.model.*;
+import l2open.gameserver.model.L2Zone.ZoneType;
+import l2open.gameserver.instancemanager.ServerVariables;
+import l2open.gameserver.serverpackets.ExShowScreenMessage;
+import l2open.gameserver.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
+import l2open.gameserver.tables.SkillTable;
+import l2open.gameserver.taskmanager.MemoryWatchDog;
+
+import java.io.File;
+import java.lang.reflect.Array;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.sql.ResultSet;
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.concurrent.Future;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
+
+public class Util {
+    public static long failCount = 0;
+    private static Logger _log = Logger.getLogger(Util.class.getName());
+
+    static final String PATTERN = "0.0000000000E00";
+    static final DecimalFormat df;
+    public static final SimpleDateFormat datetimeFormatter = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+    public static HashMap<String, String> _hwids = new HashMap<String, String>();
+
+    public enum TargetDirection {
+        NONE,
+        FRONT,
+        SIDE,
+        BEHIND
+    }
+
+    private static final int MAX_ANGLE = 360;
+
+    private static final int FRONT_MAX_ANGLE = 40; // 90
+    private static final int BACK_MAX_ANGLE = 40; // 70
+
+    /**
+     * Форматтер для адены.<br>
+     * Locale.KOREA заставляет его фортматировать через ",".<br>
+     * Locale.FRANCE форматирует через " "<br>
+     * Для форматирования через "." убрать с аргументов Locale.FRANCE
+     */
+    private static NumberFormat adenaFormatter;
+
+    static {
+        adenaFormatter = NumberFormat.getIntegerInstance(Locale.FRANCE);
+        df = (DecimalFormat) NumberFormat.getNumberInstance(Locale.ENGLISH);
+        df.applyPattern(PATTERN);
+        df.setPositivePrefix("+");
+    }
+
+    public static TargetDirection getDirectionTo(L2Character target, L2Character attacker) {
+        if (target == null || attacker == null)
+            return TargetDirection.NONE;
+        if (isBehind(target, attacker))
+            return TargetDirection.BEHIND;
+        if (isInFrontOf(target, attacker))
+            return TargetDirection.FRONT;
+        return TargetDirection.SIDE;
+    }
+
+    /**
+     * Those are altered formulas for blow lands
+     * Return True if the target is IN FRONT of the L2Character.<BR><BR>
+     */
+    public static boolean isInFrontOf(L2Character target, L2Character attacker) {
+        if (target == null)
+            return false;
+
+        double angleChar, angleTarget, angleDiff;
+        angleTarget = calculateAngleFrom(target, attacker);
+        angleChar = convertHeadingToDegree(target.getHeading());
+        angleDiff = angleChar - angleTarget;
+        if (angleDiff <= -MAX_ANGLE + FRONT_MAX_ANGLE)
+            angleDiff += MAX_ANGLE;
+        if (angleDiff >= MAX_ANGLE - FRONT_MAX_ANGLE)
+            angleDiff -= MAX_ANGLE;
+        if (Math.abs(angleDiff) <= FRONT_MAX_ANGLE)
+            return true;
+        return false;
+    }
+
+    /**
+     * Those are altered formulas for blow lands
+     * Return True if the L2Character is behind the target and can't be seen.<BR><BR>
+     */
+    public static boolean isBehind(L2Character target, L2Character attacker) {
+        if (target == null)
+            return false;
+
+        double angleChar, angleTarget, angleDiff;
+        angleChar = calculateAngleFrom(attacker, target);
+        angleTarget = convertHeadingToDegree(target.getHeading());
+        angleDiff = angleChar - angleTarget;
+        if (angleDiff <= -MAX_ANGLE + BACK_MAX_ANGLE)
+            angleDiff += MAX_ANGLE;
+        if (angleDiff >= MAX_ANGLE - BACK_MAX_ANGLE)
+            angleDiff -= MAX_ANGLE;
+        if (Math.abs(angleDiff) <= BACK_MAX_ANGLE)
+            return true;
+        return false;
+    }
+
+    public static boolean isInternalIP(String ipAddress) {
+        if (ConfigSystem.INTERNAL_NETLIST != null)
+            return ConfigSystem.INTERNAL_NETLIST.isIpInNets(ipAddress);
+
+        for (String s : ConfigSystem.INTERNAL_IP)
+            if (checkIfIpInRange(ipAddress, s))
+                return true;
+        return false;
+    }
+
+    static boolean checkIfIpInRange(String ip, String ipRange) {
+        //DATA FIELD
+        //Ip format. 110.20.30.40 - 50.50.30.40
+        int userIp1 = -1;
+        int userIp2 = -1;
+        int userIp3 = -1;
+        int userIp4 = -1;
+        String firstIp;
+        String lastIp;
+        //Data field end.
+
+        ip = ip.replace(".", ",");
+        for (String s : ip.split(","))
+            if (userIp1 == -1)
+                userIp1 = Integer.parseInt(s);
+            else if (userIp2 == -1)
+                userIp2 = Integer.parseInt(s);
+            else if (userIp3 == -1)
+                userIp3 = Integer.parseInt(s);
+            else
+                userIp4 = Integer.parseInt(s);
+
+        int ipMin1 = -1;
+        int ipMin2 = -1;
+        int ipMin3 = -1;
+        int ipMin4 = -1; //IP values for min ip
+        int ipMax1 = -1;
+        int ipMax2 = -1;
+        int ipMax3 = -1;
+        int ipMax4 = -1; //Ip values for max ip
+
+        StringTokenizer st = new StringTokenizer(ipRange, "-"); // Try to split them by "-" symbol
+
+        if (st.countTokens() == 2) {
+            firstIp = st.nextToken(); //get our first ip string
+            lastIp = st.nextToken(); //get out second ip string.
+
+            firstIp = firstIp.replace(".", ",");
+            lastIp = lastIp.replace(".", ",");
+
+            //Set our minimum ip
+            for (String s1 : firstIp.split(","))
+                if (ipMin1 == -1)
+                    ipMin1 = Integer.parseInt(s1);
+                else if (ipMin2 == -1)
+                    ipMin2 = Integer.parseInt(s1);
+                else if (ipMin3 == -1)
+                    ipMin3 = Integer.parseInt(s1);
+                else
+                    ipMin4 = Integer.parseInt(s1);
+
+            //set our maximum ip
+            for (String s2 : lastIp.split(","))
+                if (ipMax1 == -1)
+                    ipMax1 = Integer.parseInt(s2);
+                else if (ipMax2 == -1)
+                    ipMax2 = Integer.parseInt(s2);
+                else if (ipMax3 == -1)
+                    ipMax3 = Integer.parseInt(s2);
+                else
+                    ipMax4 = Integer.parseInt(s2);
+
+            //Now we are making some checks with our ips.
+            if (userIp1 > ipMin1 && userIp1 < ipMax1)
+                return true; // it's internal
+            else if (userIp1 < ipMin1 || userIp1 > ipMax1)
+                return false; // it's external
+            else if (userIp1 == ipMin1 && userIp1 != ipMax1) {
+                if (userIp2 > ipMin2)
+                    return true;
+                else if (userIp2 < ipMin2)
+                    return false;
+                else if (userIp3 > ipMin3)
+                    return true;
+                else if (userIp3 < ipMin3)
+                    return false;
+                else
+                    return userIp4 >= ipMin4;
+            } else if (userIp1 != ipMin1 && userIp1 == ipMax1) {
+                if (userIp2 < ipMax2)
+                    return true;
+                else if (userIp2 > ipMax2)
+                    return false;
+                else if (userIp3 < ipMax3)
+                    return true;
+                else if (userIp3 > ipMax3)
+                    return false;
+                else
+                    return userIp4 <= ipMax4;
+            } else if (userIp2 > ipMin2 && userIp2 < ipMax2)
+                return true; // it's internal
+            else if (userIp2 < ipMin2 || userIp2 > ipMax2)
+                return false; // it's external
+            else if (userIp2 == ipMin2 && userIp2 != ipMax2) {
+                if (userIp3 > ipMin3)
+                    return true;
+                else if (userIp3 < ipMin3)
+                    return false;
+                else
+                    return userIp4 >= ipMin4;
+            } else if (userIp2 != ipMin2 && userIp2 == ipMax2) {
+                if (userIp3 < ipMax3)
+                    return true;
+                else if (userIp3 > ipMax3)
+                    return false;
+                else
+                    return userIp4 <= ipMax4;
+            } else if (userIp3 > ipMin3 && userIp3 < ipMax3)
+                return true; // it's internal
+            else if (userIp3 < ipMin3 || userIp3 > ipMax3)
+                return false; // it's external
+            else if (userIp3 == ipMin3 && userIp3 != ipMax3)
+                return userIp4 >= ipMin4;
+            else if (userIp3 != ipMin3 && userIp3 == ipMax3)
+                return userIp4 <= ipMax4;
+            else if (userIp4 >= ipMin4 && userIp4 <= ipMax4)
+                return true; // it's internal
+            else if (userIp4 < ipMin4 || userIp4 > ipMax4)
+                return false; // it's external
+        } else if (st.countTokens() == 1) {
+            if (ip.equalsIgnoreCase(ipRange))
+                return true;
+        } else
+            _log.warning("Error in internal ip detection: " + ipRange);
+        return false;
+    }
+
+    /**
+     * Проверяет строку на соответсвие регулярному выражению
+     *
+     * @param text     Строка-источник
+     * @param template Шаблон для поиска
+     * @return true в случае соответвия строки шаблону
+     */
+    public static boolean isMatchingRegexp(String text, String template) {
+        Pattern pattern = null;
+        try {
+            pattern = Pattern.compile(template);
+        } catch (PatternSyntaxException e) // invalid template
+        {
+            e.printStackTrace();
+        }
+        if (pattern == null)
+            return false;
+        Matcher regexp = pattern.matcher(text);
+        return regexp.matches();
+    }
+
+    /**
+     * Производит замену в строке по регулярному выражению
+     *
+     * @param source      Строка-источник
+     * @param template    Шаблон для замены
+     * @param replacement Строка замена
+     * @return Замененную строку
+     */
+    public static String replaceRegexp(String source, String template, String replacement) {
+        Pattern pattern = null;
+        try {
+            pattern = Pattern.compile(template);
+        } catch (PatternSyntaxException e) // invalid template
+        {
+            e.printStackTrace();
+        }
+        if (pattern != null) {
+            Matcher regexp = pattern.matcher(source);
+            source = regexp.replaceAll(replacement);
+        }
+        return source;
+    }
+
+    public static String printData(byte[] data, int len) {
+        StringBuffer result = new StringBuffer();
+
+        int counter = 0;
+
+        for (int i = 0; i < len; i++) {
+            if (counter % 16 == 0)
+                result.append(fillHex(i, 4) + ": ");
+
+            result.append(fillHex(data[i] & 0xff, 2) + " ");
+            counter++;
+            if (counter == 16) {
+                result.append("   ");
+                int charpoint = i - 15;
+                for (int a = 0; a < 16; a++) {
+                    int t1 = data[charpoint++];
+                    if (t1 > 0x1f && t1 < 0x80)
+                        result.append((char) t1);
+                    else
+                        result.append('.');
+                }
+                result.append("\n");
+                counter = 0;
+            }
+        }
+
+        int rest = data.length % 16;
+        if (rest > 0) {
+            for (int i = 0; i < 17 - rest; i++)
+                result.append("   ");
+
+            int charpoint = data.length - rest;
+            for (int a = 0; a < rest; a++) {
+                int t1 = data[charpoint++];
+                if (t1 > 0x1f && t1 < 0x80)
+                    result.append((char) t1);
+                else
+                    result.append('.');
+            }
+            result.append("\n");
+        }
+
+        return result.toString();
+    }
+
+    public static String fillHex(int data, int digits) {
+        String number = Integer.toHexString(data);
+
+        for (int i = number.length(); i < digits; i++)
+            number = "0" + number;
+
+        return number;
+    }
+
+    /**
+     * @param raw
+     * @return
+     */
+    public static String printData(byte[] raw) {
+        return printData(raw, raw.length);
+    }
+
+    /**
+     * Returns current timestamp in seconds (without milliseconds). Returned timestamp
+     * is obtained with the following expression: <p>
+     * <p/>
+     * <code>(System.currentTimeMillis() + 500L) / 1000L</code>
+     *
+     * @return Current timestamp
+     */
+    public static long getTime() {
+        return (System.currentTimeMillis() + 500L) / 1000L;
+    }
+
+    public static long calcFixedReuse(int hour, int minute, long lastUse) {
+        Calendar data = Calendar.getInstance();
+        if (data.get(Calendar.HOUR_OF_DAY) < hour || (data.get(Calendar.HOUR_OF_DAY) == hour && data.get(Calendar.MINUTE) < minute))
+            data.add(5, -1);
+        data.set(Calendar.HOUR_OF_DAY, hour);
+        data.set(Calendar.MINUTE, minute);
+        data.set(Calendar.SECOND, 0);
+        if (data.getTimeInMillis() > lastUse)
+            return 0;
+        data.add(5, 1);
+        return data.getTimeInMillis() - System.currentTimeMillis();
+    }
+
+    public static String formatDouble(double x, String nanString, boolean forceExponents) {
+        if (Double.isNaN(x))
+            return nanString;
+        if (forceExponents)
+            return df.format(x);
+        if ((long) x == x)
+            return String.valueOf((long) x);
+        return String.valueOf(x);
+    }
+
+    public static void handleIllegalPlayerAction(L2Player actor, String etc_str1, String etc_str2, int isBug) {
+        ThreadPoolManager.getInstance().schedule(new IllegalPlayerAction(actor, etc_str1, etc_str2, isBug), 500);
+    }
+
+    public static String getRelativePath(File base, File file) {
+        return file.toURI().getPath().substring(base.toURI().getPath().length());
+    }
+
+    public static double calculateAngleFrom(L2Object obj1, L2Object obj2) {
+        return calculateAngleFrom(obj1.getX(), obj1.getY(), obj2.getX(), obj2.getY());
+    }
+
+    public static double calculateAngleFrom(int obj1X, int obj1Y, int obj2X, int obj2Y) {
+        double angleTarget = Math.toDegrees(Math.atan2(obj2Y - obj1Y, obj2X - obj1X));
+        if (angleTarget < 0)
+            angleTarget = 360 + angleTarget;
+        return angleTarget;
+    }
+
+    public static boolean checkIfInRange(int range, int x1, int y1, int x2, int y2) {
+        return checkIfInRange(range, x1, y1, 0, x2, y2, 0, false);
+    }
+
+    public static boolean checkIfInRange(int range, int x1, int y1, int z1, int x2, int y2, int z2, boolean includeZAxis) {
+        long dx = x1 - x2;
+        long dy = y1 - y2;
+
+        if (includeZAxis) {
+            long dz = z1 - z2;
+            return dx * dx + dy * dy + dz * dz <= range * range;
+        }
+        return dx * dx + dy * dy <= range * range;
+    }
+
+    public static boolean checkIfInRange(int range, L2Object obj1, L2Object obj2, boolean includeZAxis) {
+        if (obj1 == null || obj2 == null)
+            return false;
+        return checkIfInRange(range, obj1.getX(), obj1.getY(), obj1.getZ(), obj2.getX(), obj2.getY(), obj2.getZ(), includeZAxis);
+    }
+
+    public static double convertHeadingToDegree(int heading) {
+        return heading / 182.044444444;
+    }
+
+    public static double convertHeadingToRadian(int heading) {
+        return Math.toRadians(convertHeadingToDegree(heading) - 90);
+    }
+
+    public static int calculateHeadingFrom(L2Object obj1, L2Object obj2) {
+        return calculateHeadingFrom(obj1.getX(), obj1.getY(), obj2.getX(), obj2.getY());
+    }
+
+    public static int calculateHeadingFrom(int obj1X, int obj1Y, int obj2X, int obj2Y) {
+        double angleTarget = Math.toDegrees(Math.atan2(obj2Y - obj1Y, obj2X - obj1X));
+        if (angleTarget < 0)
+            angleTarget = MAX_ANGLE + angleTarget;
+        return (int) (angleTarget * 182.044444444);
+    }
+
+    public final static int convertDegreeToClientHeading(double degree) {
+        if (degree < 0)
+            degree = 360 + degree;
+        return (int) (degree * 182.044444444);
+    }
+
+    public static double calculateDistance(int x1, int y1, int z1, int x2, int y2) {
+        return calculateDistance(x1, y1, 0, x2, y2, 0, false);
+    }
+
+    public static double calculateDistance(int x1, int y1, int z1, int x2, int y2, int z2, boolean includeZAxis) {
+        long dx = x1 - x2;
+        long dy = y1 - y2;
+
+        if (includeZAxis) {
+            long dz = z1 - z2;
+            return Math.sqrt(dx * dx + dy * dy + dz * dz);
+        }
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+
+    public static double calculateDistance(L2Object obj1, L2Object obj2, boolean includeZAxis) {
+        if (obj1 == null || obj2 == null)
+            return 1000000;
+        return calculateDistance(obj1.getX(), obj1.getY(), obj1.getZ(), obj2.getX(), obj2.getY(), obj2.getZ(), includeZAxis);
+    }
+
+    public static short getShort(byte[] bs, int offset) {
+        return (short) (bs[offset + 1] << 8 | bs[offset] & 0xff);
+    }
+
+    public static double getDistance(int x1, int y1, int x2, int y2) {
+        return Math.hypot(x1 - x2, y1 - y2);
+    }
+
+    /**
+     * Return amount of adena formatted with " " delimiter
+     *
+     * @param amount
+     * @return String formatted adena amount
+     */
+    public static String formatAdena(long amount) {
+		/*
+		String s = "";
+		int rem = amount % 1000;
+		s = Integer.toString(rem);
+		amount = (amount - rem) / 1000;
+		while(amount > 0)
+		{
+			if(rem < 99)
+				s = '0' + s;
+			if(rem < 9)
+				s = '0' + s;
+			rem = amount % 1000;
+			s = Integer.toString(rem) + " " + s;
+			amount = (amount - rem) / 1000;
+		}
+		return s;
+		*/
+        return adenaFormatter.format(amount);
+    }
+
+    public static String formatSize(long size) {
+        if (size > 0x3FFFFFFF)
+            return String.format("%.2f G", 1.0 * size / 0x40000000);
+        if (size > 0xFFFFF)
+            return String.format("%.2f M", 1.0 * size / 0x100000);
+        if (size > 0x3FF)
+            return String.format("%.2f K", 1.0 * size / 0x400);
+        return String.format("%d", size);
+    }
+
+    /**
+     * Получает длинну пакета из 2-х первых байт.<BR>
+     * Используется для общения между LS и GS.
+     *
+     * @param first  первый байт пакета
+     * @param second второй байт пакета
+     * @return длинна пакета
+     */
+    public static int getPacketLength(byte first, byte second) {
+        int lenght = first & 0xff;
+        return lenght |= second << 8 & 0xff00;
+    }
+
+    /**
+     * Дописывает длинну пакета.<BR>
+     * Используется для общения между LS и GS.
+     *
+     * @param data пакет для отправления (зашифрован уже)
+     * @return готовый пакет для отправления
+     */
+    public static byte[] writeLenght(byte[] data) {
+        int newLenght = data.length + 2;
+        byte[] result = new byte[newLenght];
+        result[0] = (byte) (newLenght & 0xFF);
+        result[1] = (byte) (newLenght >> 8 & 0xFF);
+        System.arraycopy(data, 0, result, 2, data.length);
+        return result;
+    }
+
+    public static byte[] generateHex(int size) {
+        byte[] array = new byte[size];
+        Random rnd = new Random();
+        for (int i = 0; i < size; i++)
+            array[i] = (byte) rnd.nextInt(256);
+        return array;
+    }
+
+    /**
+     * форматирует время в секундах в дни/часы/минуты/секунды
+     */
+    public static String formatTime(long time) {
+        if (time == 0)
+            return "now";
+        time = Math.abs(time);
+        String ret = "";
+        long numDays = time / 86400;
+        time -= numDays * 86400;
+        long numHours = time / 3600;
+        time -= numHours * 3600;
+        long numMins = time / 60;
+        time -= numMins * 60;
+        long numSeconds = time;
+        if (numDays > 0)
+            ret += numDays + "d ";
+        if (numHours > 0)
+            ret += numHours + "h ";
+        if (numMins > 0)
+            ret += numMins + "m ";
+        if (numSeconds > 0)
+            ret += numSeconds + "s";
+        return ret.trim();
+    }
+
+    /**
+     * Инструмент для подсчета выпавших вещей с учетом рейтов.
+     * Возвращает 0 если шанс не прошел, либо количество если прошел.
+     * Корректно обрабатывает шансы превышающие 100%.
+     * Шанс в 1:1000000 (L2Drop.MAX_CHANCE)
+     */
+    public static long rollDrop(long min, long max, double calcChance, boolean rate, L2Player player) {
+        if (calcChance <= 0 || min <= 0 || max <= 0)
+            return 0;
+        double dropmult = 1;
+        if (rate)
+            calcChance *= RateService.getRateDropItems(player);
+        if (calcChance > L2Drop.MAX_CHANCE)
+            if (calcChance % L2Drop.MAX_CHANCE == 0) // если кратен 100% то тупо умножаем количество
+                dropmult = (calcChance / L2Drop.MAX_CHANCE);
+            else {
+                dropmult = Math.ceil(calcChance / L2Drop.MAX_CHANCE); // множитель равен шанс / 100% округление вверх
+                calcChance = calcChance / dropmult; // шанс равен шанс / множитель
+            }
+        return Rnd.chance(calcChance / 10000.) ? (long) Rnd.get(min * dropmult, max * dropmult) : 0;
+    }
+
+    public static int GetCharIDbyName(String name) {
+        int res = 0;
+
+        ThreadConnection con = null;
+        FiltredPreparedStatement statement = null;
+        ResultSet rset = null;
+        try {
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement("SELECT obj_Id FROM characters WHERE char_name=? LIMIT 1");
+            statement.setString(1, name);
+            rset = statement.executeQuery();
+
+            if (rset.next())
+                res = rset.getInt("obj_Id");
+        } catch (Exception e) {
+        } finally {
+            DatabaseUtils.closeDatabaseCSR(con, statement, rset);
+        }
+
+        return res;
+    }
+
+    public static int packInt(int[] a, int bits) throws Exception {
+        int m = 32 / bits;
+        if (a.length > m)
+            throw new Exception("Overflow");
+
+        int result = 0;
+        int next;
+        int mval = (int) Math.pow(2, bits);
+        for (int i = 0; i < m; i++) {
+            result <<= bits;
+            if (a.length > i) {
+                next = a[i];
+                if (next >= mval || next < 0)
+                    throw new Exception("Overload, value is out of range");
+            } else
+                next = 0;
+            result += next;
+        }
+        return result;
+    }
+
+    public static long packLong(int[] a, int bits) throws Exception {
+        int m = 64 / bits;
+        if (a.length > m)
+            throw new Exception("Overflow");
+
+        long result = 0;
+        int next;
+        int mval = (int) Math.pow(2, bits);
+        for (int i = 0; i < m; i++) {
+            result <<= bits;
+            if (a.length > i) {
+                next = a[i];
+                if (next >= mval || next < 0)
+                    throw new Exception("Overload, value is out of range");
+            } else
+                next = 0;
+            result += next;
+        }
+        return result;
+    }
+
+    public static int[] unpackInt(int a, int bits) {
+        int m = 32 / bits;
+        int mval = (int) Math.pow(2, bits);
+        int[] result = new int[m];
+        int next;
+        for (int i = m; i > 0; i--) {
+            next = a;
+            a = a >> bits;
+            result[i - 1] = next - a * mval;
+        }
+        return result;
+    }
+
+    public static int[] unpackLong(long a, int bits) {
+        int m = 64 / bits;
+        int mval = (int) Math.pow(2, bits);
+        int[] result = new int[m];
+        long next;
+        for (int i = m; i > 0; i--) {
+            next = a;
+            a = a >> bits;
+            result[i - 1] = (int) (next - a * mval);
+        }
+        return result;
+    }
+
+    public static float[] parseCommaSeparatedFloatArray(String s) {
+        if (s.isEmpty())
+            return new float[]{};
+        String[] tmp = s.replaceAll(",", ";").split(";");
+        float[] ret = new float[tmp.length];
+        for (int i = 0; i < tmp.length; i++)
+            ret[i] = Float.parseFloat(tmp[i]);
+        return ret;
+    }
+
+    public static double[] parseCommaSeparatedDoubleArray(String s) {
+        if (s.isEmpty())
+            return new double[]{};
+        String[] tmp = s.replaceAll(",", ";").split(";");
+        double[] ret = new double[tmp.length];
+        for (int i = 0; i < tmp.length; i++)
+            ret[i] = Double.parseDouble(tmp[i]);
+        return ret;
+    }
+
+    public static String[] parseCommaSeparatedStringArray(String s) {
+        if (s.isEmpty())
+            return new String[]{};
+        return s.replaceAll(",", ";").split(";");
+    }
+
+    public static int[] parseCommaSeparatedIntegerArray(String s) {
+        if (s.isEmpty())
+            return new int[]{};
+        String[] tmp = s.replaceAll(",", ";").split(";");
+        int[] ret = new int[tmp.length];
+        for (int i = 0; i < tmp.length; i++) {
+            String s2 = tmp[i];
+            try {
+                ret[i] = Integer.parseInt(s2);
+            } catch (Exception e) // Если ошибка, возможно у нас RGB код, пытаемся декодировать...
+            {
+                if (!s2.trim().startsWith("0x"))
+                    ret[i] = Long.decode("0x" + s2).intValue();
+                else
+                    ret[i] = Long.decode(s2).intValue();
+            }
+        }
+        return ret;
+    }
+
+    public static long[] parseCommaSeparatedLongArray(String s) {
+        if (s.isEmpty())
+            return new long[]{};
+        String[] tmp = s.replaceAll(",", ";").split(";");
+        long[] ret = new long[tmp.length];
+        for (int i = 0; i < tmp.length; i++)
+            ret[i] = Long.parseLong(tmp[i]);
+        return ret;
+    }
+
+    public static long[][] parseCommaSeparatedLongArrays(String s) {
+        if (s.isEmpty())
+            return new long[][]{};
+        String[] tmp = s.split(";");
+        int size1 = tmp.length;
+
+        long[][] ret = new long[size1][];
+        for (int i = 0; i < size1; i++) {
+            String[] tmp2 = tmp[i].split(",");
+            ret[i] = new long[tmp2.length];
+            for (int i2 = 0; i2 < tmp2.length; i2++)
+                ret[i][i2] = Long.parseLong(tmp2[i2]);
+        }
+        return ret;
+    }
+
+    public static int[][] parseCommaSeparatedIntegerArrays(String s) {
+        if (s.isEmpty())
+            return new int[][]{};
+        String[] tmp = s.split(";");
+        int size1 = tmp.length;
+
+        int[][] ret = new int[size1][];
+        for (int i = 0; i < size1; i++) {
+            String[] tmp2 = tmp[i].split(",");
+            ret[i] = new int[tmp2.length];
+            for (int i2 = 0; i2 < tmp2.length; i2++) {
+                ret[i][i2] = Integer.parseInt(tmp2[i2]);
+            }
+        }
+        return ret;
+    }
+
+    /**
+     * 1;4037,1,-1,213144,179816,-256,0,0;57,1,-1,213144,179816,-256,0,0:\
+     * 2;4037,1,-1,213144,179816,-256,0,0;57,1,-1,213144,179816,-256,0,0
+     **/
+    public static int[][][] parseCommaSeparatedIntegerArrays3(String s) {
+        if (s.isEmpty())
+            return new int[][][]{};
+
+        String[] tmp = s.split(":");
+        int size = tmp.length;
+
+        int[][][] ret = new int[size][][];
+
+
+        for (int i = 0; i < size; i++) {
+            String[] tmp1 = tmp[i].split(";");
+            int size2 = tmp1.length;
+
+            ret[i] = new int[size2][];
+
+            for (int i1 = 0; i1 < size2; i1++) {
+                String[] tmp2 = tmp1[i1].split(",");
+                ret[i][i1] = new int[tmp2.length];
+                for (int i2 = 0; i2 < tmp2.length; i2++)
+                    ret[i][i1][i2] = Integer.parseInt(tmp2[i2]);
+            }
+        }
+        return ret;
+    }
+
+    /**
+     * Just alias
+     */
+    public static String FormatTable(Collection<String> tds, int rows, boolean appendTD) {
+        return Strings.FormatTable(tds, rows, appendTD);
+    }
+
+    /**
+     * Just alias
+     */
+    public static String joinStrings(String glueStr, String[] strings, int startIdx, int maxCount) {
+        return Strings.joinStrings(glueStr, strings, startIdx, maxCount);
+    }
+
+    /**
+     * Just alias
+     */
+    public static String joinStrings(String glueStr, String[] strings, int startIdx) {
+        return Strings.joinStrings(glueStr, strings, startIdx, -1);
+    }
+
+    public static boolean isNumber(String s) {
+        try {
+            Double.parseDouble(s);
+        } catch (NumberFormatException e) {
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isIntNumber(String s) {
+        try {
+            Integer.parseInt(s);
+        } catch (NumberFormatException e) {
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isLongNumber(String s) {
+        try {
+            Long.parseLong(s);
+        } catch (NumberFormatException e) {
+            return false;
+        }
+        return true;
+    }
+
+    public static long gc(int i, int delay) {
+        long freeMemBefore = MemoryWatchDog.getMemFree();
+        if (ConfigValue.GCbreak) {
+            Runtime rt = Runtime.getRuntime();
+            rt.gc();
+            while (--i > 0) {
+                try {
+                    Thread.sleep(delay);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                rt.gc();
+            }
+            rt.runFinalization();
+        }
+        return MemoryWatchDog.getMemFree() - freeMemBefore;
+    }
+
+    /**
+     * Добавляет элемент o в конец массива arr либо создает новый массив, если arr == null. Не работает с примитивами.
+     *
+     * @param arr — массив для расширения, может быть null (будет создан новый массив из одного элемента)
+     * @param o   — объект для добавления, может быть null (массив просто будет расширен)
+     * @param c   — класс массива, указывается явно
+     * @return новый массив, состоящий из копии входящего и добавленного элемента
+     */
+    public static Object[] addElementToArray(Object[] arr, Object o, Class<?> c) {
+        if (arr == null) {
+            arr = (Object[]) Array.newInstance(c, 1);
+            arr[0] = o;
+            return arr;
+        }
+        int len = arr.length;
+        Object[] tmp = (Object[]) Array.newInstance(c, len + 1);
+        System.arraycopy(arr, 0, tmp, 0, len);
+        tmp[len] = o;
+        return tmp;
+    }
+
+    public static int getHeadingTo(L2Object actor, L2Object target) {
+        if (actor == null || target == null || target == actor)
+            return -1;
+        return getHeadingTo(actor.getLoc(), target.getLoc());
+    }
+
+    public static int getHeadingTo(Location actor, Location target) {
+        if (actor == null || target == null || target.equals(actor))
+            return -1;
+
+        int dx = target.x - actor.x;
+        int dy = target.y - actor.y;
+        int heading = target.h - (int) (Math.atan2(-dy, -dx) * L2Character.HEADINGS_IN_PI + 32768);
+
+        if (heading < 0)
+            heading = heading + 1 + Integer.MAX_VALUE & 0xFFFF;
+        else if (heading > 0xFFFF)
+            heading &= 0xFFFF;
+
+        return heading;
+    }
+
+    public static boolean isCharNameAvail(String name) {
+        ThreadConnection con = null;
+        FiltredPreparedStatement st = null;
+        ResultSet rs = null;
+
+        try {
+            con = L2DatabaseFactory.getInstance().getConnection();
+            st = con.prepareStatement("SELECT char_name FROM characters WHERE char_name LIKE ?");
+            st.setString(1, name);
+            rs = st.executeQuery();
+            return !rs.next();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        } finally {
+            DatabaseUtils.closeDatabaseCSR(con, st, rs);
+        }
+    }
+
+    public static String dumpObject(Object o, boolean simpleTypes, boolean parentFields, boolean ignoreStatics) {
+        Class<?> cls = o.getClass();
+        String val, type, result = "[" + (simpleTypes ? cls.getSimpleName() : cls.getName()) + "\n";
+        Object fldObj;
+        GArray<Field> fields = new GArray<Field>();
+        while (cls != null) {
+            for (Field fld : cls.getDeclaredFields())
+                if (!fields.contains(fld)) {
+                    if (ignoreStatics && Modifier.isStatic(fld.getModifiers()))
+                        continue;
+                    fields.add(fld);
+                }
+            cls = cls.getSuperclass();
+            if (!parentFields)
+                break;
+        }
+
+        for (Field fld : fields) {
+            fld.setAccessible(true);
+            try {
+                fldObj = fld.get(o);
+                if (fldObj == null)
+                    val = "NULL";
+                else
+                    val = fldObj.toString();
+            } catch (Throwable e) {
+                e.printStackTrace();
+                val = "<ERROR>";
+            }
+            type = simpleTypes ? fld.getType().getSimpleName() : fld.getType().toString();
+
+            result += String.format("\t%s [%s] = %s;\n", fld.getName(), type, val);
+        }
+
+        result += "]\n";
+        return result;
+    }
+
+    public static String getPlayerNameByObjId(int oid) {
+        String pName = null;
+        ThreadConnection con = null;
+        FiltredPreparedStatement statement = null;
+        ResultSet rset = null;
+
+        try {
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement("SELECT `char_name` FROM `characters` WHERE `obj_Id`=\"" + oid + "\" LIMIT 1");
+            rset = statement.executeQuery();
+
+            if (rset.next())
+                pName = rset.getString(1);
+        } catch (Exception e) {
+            _log.warning("SQL Error: " + e);
+            e.printStackTrace();
+        } finally {
+            DatabaseUtils.closeDatabaseCSR(con, statement, rset);
+        }
+
+        return pName;
+    }
+
+    public static void waitForFreePorts(String host, int... ports) {
+        boolean binded = false;
+        while (!binded)
+            for (int port : ports)
+                try {
+                    ServerSocket ss = host.equalsIgnoreCase("*") ? new ServerSocket(port) : new ServerSocket(port, 50, InetAddress.getByName(host));
+                    _log.fine("Port " + port + " binded successfully.");
+                    ss.close();
+                    binded = true;
+                } catch (Exception e) {
+                    _log.warning("\nPort " + port + " is allready binded. Please free it and restart server.");
+                    binded = false;
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e2) {
+                    }
+                }
+    }
+
+    public static boolean contains(Object[] args, Object obj) {
+        for (Object a : args) {
+            if (a == obj)
+                return true;
+        }
+        return false;
+    }
+
+    public static boolean contains(int[] array, int obj) {
+        for (int element : array)
+            if (element == obj)
+                return true;
+        return false;
+    }
+
+    public static boolean contains_int(int[] array, int obj) {
+        for (int element : array)
+            if (element == obj)
+                return true;
+        return false;
+    }
+
+    public static boolean contains(String[] array, String obj) {
+        for (String element : array)
+            if (element.toLowerCase().startsWith(obj.toLowerCase()))
+                return true;
+        return false;
+    }
+
+    public static boolean contains_s(String[] array, String obj) {
+        for (String element : array)
+            if (obj.toLowerCase().contains(element.toLowerCase()))
+                return true;
+        return false;
+    }
+
+    public static boolean contains_sk(int[] array_list, int skill_id, int skill_lvl) {
+        if (array_list.length == 0)
+            return false;
+        for (int i = 0; i < array_list.length; i = i + 2)
+            if (array_list[i] == skill_id && array_list[i + 1] == skill_lvl)
+                return true;
+        return false;
+    }
+
+    public static boolean isInArray(int a, int[] array) {
+        for (int i = 0; i < array.length; i++)
+            if (array[i] == a)
+                return true;
+        return false;
+    }
+
+    public static void cancelFuture(boolean a, Future[] array) {
+        for (int i = 0; i < array.length; i++) {
+            Future future;
+            if ((future = array[i]) != null) {
+                future.cancel(a);
+                future = null;
+            }
+        }
+    }
+
+    @SuppressWarnings("deprecation")
+    // Запиздоливаем эту функцию в любой метод и мы увидем откуда тот метод вызвался...
+    public static void test() {
+//        Class<?> self = sun.reflect.Reflection.getCallerClass(1);
+//        Class<?> caller = sun.reflect.Reflection.getCallerClass(3);
+//        try {
+//            if (self != caller)
+//                throw new java.lang.IllegalAccessError();
+//        } catch (IllegalAccessError e) {
+//            //e.printStackTrace();
+//            _log.log(Level.WARNING, "Test:", e);
+//        }
+    }
+
+    public static String test_return(String text_add) {
+        try {
+            throw new java.lang.IllegalAccessError();
+        } catch (IllegalAccessError e) {
+            StringBuilder sb = new StringBuilder();
+            sb.append(text_add);
+            for (int i = 0; i < e.getStackTrace().length; i++) {
+                StackTraceElement el = e.getStackTrace()[i];
+                sb.append(el.toString());
+            }
+            return sb.toString();
+        }
+    }
+
+    // Util.test(getName(), skill, false, "debug_param_sleeping");
+    // имя папки
+    // название файла
+    public static void test(String text, String folder_name, String file_name) {
+        try {
+            throw new java.lang.IllegalAccessError();
+        } catch (IllegalAccessError e) {
+            for (int i = 2; i < e.getStackTrace().length; i++) {
+                StackTraceElement el = e.getStackTrace()[i];
+                if (el != null) {
+                    if (el.getFileName() != null)
+                        text += el.getFileName().replace(".java", "");
+                    if (el.getMethodName() != null)
+                        text += ":" + el.getMethodName();
+                    text += "(" + el.getLineNumber() + ")<-";
+                }
+            }
+            Log.addMy(text, folder_name, file_name);
+        }
+    }
+
+    public static void test(String name, L2Skill skill, String value, String type) {
+        try {
+            throw new java.lang.IllegalAccessError();
+        } catch (IllegalAccessError e) {
+            String _log2 = "Skill(" + skill + ") setValue(" + value + "): ";
+            for (int i = 2; i < e.getStackTrace().length; i++) {
+                StackTraceElement el = e.getStackTrace()[i];
+                if (el != null) {
+                    if (el.getFileName() != null)
+                        _log2 += el.getFileName().replace(".java", "");
+                    if (el.getMethodName() != null)
+                        _log2 += ":" + el.getMethodName();
+                    _log2 += "(" + el.getLineNumber() + ")<-";
+                }
+            }
+            Log.addMy(_log2, type, name);
+        }
+    }
+
+    public static boolean isDigit(String text) {
+        if (text == null || text.isEmpty())
+            return false;
+        for (char c : text.toCharArray())
+            if (!Character.isDigit(c))
+                return false;
+        return true;
+    }
+
+    // возвращает имя квадрата геодаты по координатам...
+    public static String getGeoSquare(int x, int y) {
+        return (Math.floor(((x - Math.abs(11 - 20 << 15 / 2048)) * 2048) / 32768) + 20) + "_" + (Math.floor(((y - Math.abs(10 - 18 << 15 / 2048)) * 2048) / 32768) + 18);
+    }
+
+    public static String getDateString(Date date) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        return dateFormat.format(date.getTime());
+    }
+
+    public static int regionX(L2Object o) {
+        return regionX(o.getX());
+    }
+
+    public static int regionY(L2Object o) {
+        return regionY(o.getY());
+    }
+
+    public static int regionX(int x) {
+        return (x - L2World.MAP_MIN_X >> 15) + ConfigValue.GeoFirstX;
+    }
+
+    public static int regionY(int y) {
+        return (y - L2World.MAP_MIN_Y >> 15) + ConfigValue.GeoFirstY;
+    }
+
+    private static final DateFormat TIME_FORMAT = new SimpleDateFormat("HH:mm");
+
+    public static String time() {
+        return TIME_FORMAT.format(new Date(System.currentTimeMillis()));
+    }
+
+    public static String[] checkIP(L2Player player) {
+        String allow_ip = "";
+
+        CustomMessage No = new CustomMessage("common.result.no", player);
+        CustomMessage SecurityLock = new CustomMessage("communityboard.security.lock", player);
+        CustomMessage SecurityUnlock = new CustomMessage("communityboard.security.unlock", player);
+        CustomMessage Yes = new CustomMessage("common.result.yes", player);
+
+        ThreadConnection con = null;
+        FiltredPreparedStatement statement = null;
+        ResultSet rset = null;
+
+        try {
+            con = L2DatabaseFactory.getInstanceLogin().getConnection();
+            statement = con.prepareStatement("SELECT AllowIPs FROM accounts WHERE login=? LIMIT 1");
+            statement.setString(1, player.getAccountName());
+            rset = statement.executeQuery();
+            if (rset.next()) {
+                allow_ip = rset.getString("AllowIPs");
+            }
+        } catch (Exception e) {
+            _log.warning("SQL Error: " + e);
+        } finally {
+            DatabaseUtils.closeDatabaseCSR(con, statement, rset);
+        }
+
+        boolean IP = allow_ip.equals("") || allow_ip.equals("*");
+
+        String result = IP ? "<font color=\"FF0000\">" + No + "</font>" : "<font color=\"18FF00\">" + Yes + "</font>";
+        String button = "<a action=\"bypass -h " + (IP ? "_bbssecurity:lockip\">" + SecurityLock + "" : "_bbssecurity:unlockip\">" + SecurityUnlock + "") + "</a>&nbsp;&nbsp;-&nbsp;&nbsp;";
+
+        return new String[]{result, button};
+    }
+
+    public static String[] checkHWID(L2Player player) {
+        CustomMessage No = new CustomMessage("common.result.no", player);
+        String result;
+        String button;
+
+        if (ConfigValue.AccHwidLockEnable && ConfigValue.ProtectEnable) {
+            CustomMessage SecurityLock = new CustomMessage("communityboard.security.lock", player).addNumber((int) ((ConfigValue.AddHwidBonus - 1) * 100));
+            CustomMessage SecurityUnlock = new CustomMessage("communityboard.security.unlock", player).addNumber((int) ((ConfigValue.AddHwidBonus - 1) * 100));
+            CustomMessage Yes = new CustomMessage("common.result.yes", player);
+            boolean HWID = player.getAccLock() == null || !contains(player.getAccLock(), player.getHWIDs());
+
+            result = HWID ? "<font color=\"FF0000\">" + No + "</font>&nbsp;&nbsp; &nbsp;&nbsp;" : "<font color=\"18FF00\">" + Yes + "</font>&nbsp;&nbsp; &nbsp;&nbsp;";
+            button = "<a action=\"bypass -h " + (HWID ? "_bbssecurity:lockhwid\">" + SecurityLock + "" : "_bbssecurity:unlockhwid\">" + SecurityUnlock + "") + "</a>&nbsp;&nbsp; &nbsp;&nbsp;";
+        } else {
+            result = "<font color=\"FF0000\">" + No + "</font>";
+            button = "";
+        }
+
+        return new String[]{result, button};
+    }
+
+    public static int max_online = 0;
+    public static int max_online_day = 0;
+
+    public static void setMaxOnline(L2Player player) {
+        int online = Math.max(L2ObjectsStorage.getOnlineCount(), max_online_day);
+        if (max_online_day < online) {
+            max_online_day = online;
+            ServerVariables.set("MaxOnlineDay", max_online_day);
+            if (max_online_day > max_online) {
+                max_online = max_online_day;
+                ServerVariables.set("MaxOnline", max_online_day);
+            }
+        }
+
+        _hwids.put(player.getHWIDs(), player.getHWIDs());
+    }
+
+    // Обрезаем число @in, до @pow знаков, после точки...
+    public static double prune(double in, int pow) {
+        return ((int) (in * Math.pow(10, pow))) / Math.pow(10, pow);
+    }
+
+    public static final String asHex(byte[] raw) {
+        StringBuffer strbuf = new StringBuffer(raw.length * 2);
+        for (int i = 0; i < raw.length; i++) {
+            if ((raw[i] & 0xFF) < 16)
+                strbuf.append("0");
+            strbuf.append(Long.toString(raw[i] & 0xFF, 16));
+        }
+        return strbuf.toString();
+    }
+
+    public static String ArrayToString(String[] array, int start) {
+        String text = "";
+
+        if (array.length > 1) {
+            int count = 1;
+            for (int i = start; i < array.length; i++) {
+                text += (count > 1 ? " " : "") + array[i];
+                count++;
+            }
+        } else
+            text = array[start];
+
+        return text;
+    }
+
+    public static boolean getClanPay(L2Player player, int itemid, long price, boolean b) {
+        L2Clan clan;
+
+        if ((clan = player.getClan()) == null)
+            return false;
+
+        long wh = clan.getWarehouse().countOf(itemid);
+        if (clan.getWarehouse().countOf(itemid) >= price) {
+            clan.getWarehouse().destroyItem(itemid, price);
+            return true;
+        }
+        long enought = price - wh;
+        enoughtItem(player, itemid, enought);
+        return false;
+    }
+
+    private static void enoughtItem(L2Player player, int itemid, long count) {
+        player.sendPacket(new ExShowScreenMessage(new CustomMessage("util.enoughItemCount", player).addString(formatPay(player, count, itemid)).toString(), 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, false));
+        player.sendMessage(new CustomMessage("util.enoughItemCount", player).addString(formatPay(player, count, itemid)));
+    }
+
+    public static String formatPay(L2Player player, long count, int item) {
+        if (count > 0)
+            return formatAdena(count) + " " + DifferentMethods.getItemName(item);
+        else
+            return new CustomMessage("price.free", player).toString();
+    }
+
+    public static long donate_2_server = 0;
+
+    public static float[][] parseCommaSeparatedFloatArrays(String s) {
+        if (s.isEmpty())
+            return new float[0][];
+        String[] tmp = s.split(";");
+        int size1 = tmp.length;
+
+        float[][] ret = new float[size1][];
+        for (int i = 0; i < size1; i++) {
+            String[] tmp2 = tmp[i].split(",");
+            ret[i] = new float[tmp2.length];
+            for (int i2 = 0; i2 < tmp2.length; i2++)
+                ret[i][i2] = Float.parseFloat(tmp2[i2]);
+        }
+        return ret;
+    }
+
+    public static double[][] parseCommaSeparatedDoubleArrays(String s) {
+        if (s.isEmpty())
+            return new double[0][];
+        String[] tmp = s.split(";");
+        int size1 = tmp.length;
+
+        double[][] ret = new double[size1][];
+        for (int i = 0; i < size1; i++) {
+            String[] tmp2 = tmp[i].split(",");
+            ret[i] = new double[tmp2.length];
+            for (int i2 = 0; i2 < tmp2.length; i2++)
+                ret[i][i2] = Double.parseDouble(tmp2[i2]);
+        }
+        return ret;
+    }
+
+    // -----
+    public static boolean isFacing(L2Character attacker, L2Object target, int maxAngle) {
+        if (target == null)
+            return false;
+        double angleChar, angleTarget, angleDiff, maxAngleDiff;
+        maxAngleDiff = maxAngle / 2;
+        angleTarget = calculateAngleFrom(attacker, target);
+        angleChar = convertHeadingToDegree(attacker.getHeading());
+        angleDiff = angleChar - angleTarget;
+        if (angleDiff <= -MAX_ANGLE + maxAngleDiff)
+            angleDiff += MAX_ANGLE;
+        if (angleDiff >= MAX_ANGLE - maxAngleDiff)
+            angleDiff -= MAX_ANGLE;
+        if (Math.abs(angleDiff) <= maxAngleDiff)
+            return true;
+        return false;
+    }
+
+    public static boolean isFacingWithCollision(L2Character attacker, L2Object target, int maxAngle) {
+        double angleChar, angleTarget, angleDiff, maxAngleDiff;
+        if (target == null)
+            return false;
+        maxAngleDiff = maxAngle / 2;
+        angleChar = convertHeadingToRadian(attacker.getHeading());
+        angleTarget = calculateAngleFrom((int) (attacker.getX() - attacker.getColRadius() * Math.cos(angleChar)), (int) (attacker.getY() - attacker.getColRadius() * Math.sin(angleChar)), target.getX(), target.getY());
+        angleChar = convertHeadingToDegree(attacker.getHeading());
+        angleDiff = angleChar - angleTarget;
+        if (angleDiff <= -MAX_ANGLE + maxAngleDiff) angleDiff += MAX_ANGLE;
+        if (angleDiff >= MAX_ANGLE - maxAngleDiff) angleDiff -= MAX_ANGLE;
+        if (Math.abs(angleDiff) <= maxAngleDiff)
+            return true;
+        return false;
+    }
+
+    public static int getAIndexLong(long val, long[][] array_list, int index) {
+        if (array_list.length == 0)
+            return -1;
+        for (int i = 0; i < array_list.length; i++)
+            if (val == array_list[i][index])
+                return i;
+        return -1;
+    }
+
+    public static int getIndex(int val, int[][] array_list) {
+        if (array_list.length == 0)
+            return -1;
+        for (int i = 0; i < array_list.length; i++)
+            for (int i2 = 0; i2 < array_list.length; i2++)
+                if (val == array_list[i][i2])
+                    return i;
+        return -1;
+    }
+
+    public static L2Skill[][] parseCommaSeparatedL2SkillArrays(String s) {
+        if (s.isEmpty())
+            return new L2Skill[0][];
+        String[] tmp = s.split(";");
+        int size1 = tmp.length;
+
+        L2Skill[][] ret = new L2Skill[size1][];
+        for (int i = 0; i < size1; i++) {
+            String[] tmp2 = tmp[i].split(",");
+            ret[i] = new L2Skill[tmp2.length];
+            for (int i2 = 0; i2 < tmp2.length; i2 = i2 + 2)
+                ret[i][i2 / 2] = SkillTable.getInstance().getInfo(Integer.parseInt(tmp2[i2]), Integer.parseInt(tmp2[i2 + 1]));
+        }
+        return ret;
+    }
+
+    public static ZoneType[] parseCommaSeparatedZoneTypeArray(String s) {
+        if (s.isEmpty())
+            return new ZoneType[]{};
+        String[] tmp = s.replaceAll(",", ";").split(";");
+        ZoneType[] ret = new ZoneType[tmp.length];
+        for (int i = 0; i < tmp.length; i++)
+            ret[i] = Enum.valueOf(ZoneType.class, tmp[i].trim());
+        return ret;
+    }
+
+    public static int contains_i1(int val, int[][] array_list, int index) {
+        if (array_list.length == 0)
+            return -1;
+        for (int i = 0; i < array_list.length; i++)
+            if (val == array_list[i][index])
+                return i;
+        return -1;
+    }
+
+    public static String boolToString(boolean b) {
+        return b ? "True" : "False";
+    }
+}

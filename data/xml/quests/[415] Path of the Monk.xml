@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="415" type="SOLO">
+		<name lang="en" val="Path of the Monk"/>
+		<name lang="ru" val="Путь Монаха"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20479"/>	<!-- Kasha Bear -->
+			<event type="MOBKILLED" val="20478"/>	<!-- Kasha Blade Spider -->
+			<event type="MOBKILLED" val="20415"/>	<!-- Scarlet Salamander -->
+			<event type="MOBKILLED" val="20017"/>	<!-- Vuku Orc Fighter -->
+			<event type="MOBKILLED" val="20359"/>	<!-- Ratman Warrior -->
+			<event type="MOBKILLED" val="20024"/>	<!-- Langk Lizardman Warrior -->
+			<event type="MOBKILLED" val="20014"/>	<!-- Felim Lizardman Warrior -->
+			<event type="QUEST_START" val="30587"/>	<!-- Gantaki Zu Urutu -->
+			<event type="QUEST_TALK" val="30587"/>	<!-- Gantaki Zu Urutu -->
+			<event type="QUEST_TALK" val="30590"/>	<!-- Rosheek -->
+			<event type="QUEST_TALK" val="30501"/>	<!-- Kasman -->
+			<event type="QUEST_TALK" val="30591"/>	<!-- Toruku -->
+			<item id="1600"/>	<!-- Kasha Bear Claw -->
+			<item id="1601"/>	<!-- Kasha Blade Spider Talon -->
+			<item id="1602"/>	<!-- Scarlet Salamander Scale -->
+			<item id="1609"/>	<!-- Vuku Orc Tusk -->
+			<item id="1610"/>	<!-- Ratman Fang -->
+			<item id="1611"/>	<!-- Langk Lizardman Tooth -->
+			<item id="1612"/>	<!-- Felim Lizardman Tooth -->
+			<item id="1593"/>	<!-- Pomegranate -->
+			<item id="1594"/>	<!-- 1st Leather Pouch -->
+			<item id="1597"/>	<!-- 1st Leather Pouch (Full) -->
+			<item id="1595"/>	<!-- 2nd Leather Pouch -->
+			<item id="1598"/>	<!-- 2nd Leather Pouch (Full) -->
+			<item id="1596"/>	<!-- 3rd Leather Pouch -->
+			<item id="1599"/>	<!-- 3rd Leather Pouch (Full) -->
+			<item id="1606"/>	<!-- Fig -->
+			<item id="1603"/>	<!-- Fiery Spirit Scroll -->
+			<item id="1604"/>	<!-- Rosheek's Letter -->
+			<item id="1605"/>	<!-- Gantaki's Letter of Recommendation -->
+			<item id="1607"/>	<!-- 4th Leather Pouch -->
+			<item id="1608"/>	<!-- 4th Leather Pouch (Full) -->
+			<item id="1613"/>	<!-- Iron Will Scroll -->
+			<item id="1614"/>	<!-- Toruku's Letter -->
+		</setting>
+	</quest>
+</quests>

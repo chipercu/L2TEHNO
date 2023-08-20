@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="10200" name="Alternative Blue Coda Seed" type="SEED">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="weight" val="1" />
+		<set name="stackable" val="true" />
+		<set name="price" val="10" />
+	</etcitem>
+	<etcitem id="10201" name="Seed: Alternative Golden Coda" type="SEED">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="weight" val="1" />
+		<set name="stackable" val="true" />
+		<set name="price" val="20" />
+	</etcitem>
+	<etcitem id="10202" name="Seed: Golden Coda" type="SEED">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="weight" val="1" />
+		<set name="stackable" val="true" />
+		<set name="price" val="20" />
+	</etcitem>
+	<etcitem id="10203" name="Spellbook - Empowering Echo" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="40000" />
+	</etcitem>
+	<etcitem id="10204" name="Battle Manual - Soul Gathering" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4250" />
+	</etcitem>
+	<etcitem id="10205" name="White Seed of Evil Lump" type="SEED">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_poison_pouch_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="30000" />
+	</etcitem>
+	<etcitem id="10206" name="Black Seed of Evil Lump" type="SEED">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_poison_pouch_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="price" val="21000" />
+	</etcitem>
+	<etcitem id="10213" name="Inventory" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+	</etcitem>
+	<etcitem id="10254" name="1st Place Treasure Sack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_treasure_sack_1_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="10255" name="2nd Place Treasure Sack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_treasure_sack_2_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="10256" name="3rd Place Treasure Sack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_treasure_sack_3_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="10257" name="4th Place Treasure Sack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_treasure_sack_4_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="10258" name="5th Place Treasure Sack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_treasure_sack_5_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="10259" name="6th Place Treasure Sack" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_treasure_sack_6_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="10260" name="Haste Juice" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="2429" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="10261" name="Accuracy Juice" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="2430" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="10262" name="Critical Power Juice" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="2431" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="10263" name="Critical Attack Juice" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i03" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="2432" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="10264" name="Casting Spd. Juice" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="2433" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="10265" name="Evasion Juice" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="2434" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="10266" name="Magic Power Juice" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="2435" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="10267" name="Power Juice" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="2436" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="10268" name="Speed Juice" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i08" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="2437" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="10269" name="Defense Juice" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="2438" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="10270" name="MP Consumption Juice" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="isConsume" val="true" />
+		<skills>
+			<skill id="2439" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="10271" name="Marvelous Fruit Juice #12" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="10272" name="Treasure Sack Piece" type="MATERIAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_treasure_sack_fragment_i00" />
+		<set name="class" val="PIECES" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="10274" name="Rabbit Transformation Scroll" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<skills>
+			<skill id="2428" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="10275" name="Battle Manual - Warp" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2050" />
+	</etcitem>
+	<etcitem id="10276" name="Battle Manual - Soul Shock" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2600" />
+	</etcitem>
+	<etcitem id="10279" name="Onyx Beast Transform Scroll" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="10280" name="Certificate - Emergent Ability" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_all_subjob_skillbook_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+	</etcitem>
+	<etcitem id="10281" name="Certificate - Warrior Ability" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_warrior_subjob_skillbook_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+	</etcitem>
+	<etcitem id="10282" name="Certificate - Knight Ability" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_knight_subjob_skillbook_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+	</etcitem>
+	<etcitem id="10283" name="Certificate - Rogue Ability" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_archer_subjob_skillbook_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+	</etcitem>
+	<etcitem id="10284" name="Certificate - Wizard Ability" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_wizard_subjob_skillbook_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+	</etcitem>
+	<etcitem id="10285" name="Certificate - Healer Ability" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_healer_subjob_skillbook_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+	</etcitem>
+	<etcitem id="10286" name="Certificate - Summoner Ability" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_summon_subjob_skillbook_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+	</etcitem>
+	<etcitem id="10287" name="Certificate - Enchanter Ability" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_enchanter_subjob_skillbook_i00" />
+		<set name="class" val="SPELLBOOKS" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+	</etcitem>
+	<etcitem id="10288" name="Transform Sealbook - Divine Knight" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+	</etcitem>
+	<etcitem id="10289" name="Transform Sealbook - Divine Warrior" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+	</etcitem>
+	<etcitem id="10290" name="Transform Sealbook - Divine Rogue" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+	</etcitem>
+	<etcitem id="10291" name="Transform Sealbook - Divine Healer" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+	</etcitem>
+	<etcitem id="10292" name="Transform Sealbook - Divine Wizard" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+	</etcitem>
+	<etcitem id="10293" name="Transform Sealbook - Divine Enchanter" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+	</etcitem>
+	<etcitem id="10294" name="Transform Sealbook - Divine Summoner" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<set name="storeable" val="false"/>
+	</etcitem>
+	<etcitem id="10295" name="Transform Sealbook - Zaken" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+		<set name="price" val="67000" />
+	</etcitem>
+	<etcitem id="10296" name="Transform Sealbook - Anakim" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+		<set name="price" val="30000000" />
+	</etcitem>
+	<etcitem id="10297" name="Transform Sealbook - Venom" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+		<set name="price" val="67000" />
+	</etcitem>
+	<etcitem id="10298" name="Transform Sealbook - Gordon" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+		<set name="price" val="2500000" />
+	</etcitem>
+	<etcitem id="10299" name="Transform Sealbook - Ranku" type="SPELLBOOK">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
+		<set name="weight" val="120" />
+		<set name="stackable" val="true" />
+		<set name="durability" val="100" />
+		<set name="price" val="67000" />
+	</etcitem>
+</list>

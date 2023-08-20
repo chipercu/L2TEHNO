@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="17" name="Wooden Arrow" type="ARROW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.etc_wooden_quiver_i00" />
+		<set name="class" val="EQUIPMENT" />
+		<set name="weight" val="6" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2" />
+	</etcitem>
+	<etcitem id="53" name="(Not In Use)" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="54" name="(Not In Use)" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="55" name="Shiny Agathion 7 Day Pack (Event)" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i02" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="56" name="Sobbing Agathion 7 Day Pack (Event)" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pi_gift_box_i02" />
+		<set name="weight" val="100" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="57" name="Adena" type="MONEY">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_adena_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1" />
+	</etcitem>
+	<etcitem id="65" name="Red Potion" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_potion_red_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="80" />
+		<set name="stackable" val="true" />
+		<set name="price" val="40" />
+		<skills>
+			<skill id="2001" lvl="1" />
+		</skills>
+	</etcitem>
+</list>

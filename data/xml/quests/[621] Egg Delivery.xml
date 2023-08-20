@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="621" type="SOLO">
+		<name lang="en" val="Egg Delivery"/>
+		<name lang="ru" val="Доставка яиц"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="31521"/>	<!-- Jeremy -->
+			<event type="QUEST_TALK" val="31521"/>	<!-- Jeremy -->
+			<event type="QUEST_TALK" val="31584"/>	<!-- Valentine -->
+			<event type="QUEST_TALK" val="31543"/>	<!-- Pulin -->
+			<event type="QUEST_TALK" val="31544"/>	<!-- Naff -->
+			<event type="QUEST_TALK" val="31545"/>	<!-- Crocus -->
+			<event type="QUEST_TALK" val="31546"/>	<!-- Kuber -->
+			<event type="QUEST_TALK" val="31547"/>	<!-- Beolin -->
+			<item id="7206"/>	<!-- Boiled Eggs for Delivery -->
+			<item id="7196"/>	<!-- Fee of Boiled Egg -->
+		</setting>
+	</quest>
+</quests>

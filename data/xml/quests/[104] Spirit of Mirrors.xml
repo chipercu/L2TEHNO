@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="104" type="SOLO">
+		<name lang="en" val="Spirit of Mirrors"/>
+		<name lang="ru" val="Духи Зеркал"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="27003"/>	<!-- Spirit Of Mirrors -->
+			<event type="MOBKILLED" val="27004"/>	<!-- Spirit Of Mirrors -->
+			<event type="MOBKILLED" val="27005"/>	<!-- Spirit Of Mirrors -->
+			<event type="QUEST_START" val="30017"/>	<!-- Gallint -->
+			<event type="QUEST_TALK" val="30017"/>	<!-- Gallint -->
+			<event type="QUEST_TALK" val="30017"/>	<!-- Gallint -->
+			<event type="QUEST_TALK" val="30041"/>	<!-- Arnold -->
+			<event type="QUEST_TALK" val="30043"/>	<!-- Johnstone -->
+			<event type="QUEST_TALK" val="30045"/>	<!-- Kenyos -->
+		</setting>
+	</quest>
+</quests>

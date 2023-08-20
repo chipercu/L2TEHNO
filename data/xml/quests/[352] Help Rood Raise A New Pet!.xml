@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="352" type="SOLO">
+		<name lang="en" val="Help Rood Raise A New Pet!"/>
+		<name lang="ru" val="Новый питомец"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20786"/>	<!-- Lienrik -->
+			<event type="MOBKILLED" val="20787"/>	<!-- Lienrik Lad -->
+			<event type="QUEST_START" val="31067"/>	<!-- Rood -->
+			<event type="QUEST_TALK" val="31067"/>	<!-- Rood -->
+			<item id="5860"/>	<!-- Lienrik Egg -->
+			<item id="5861"/>	<!-- Lienrik Egg -->
+		</setting>
+	</quest>
+</quests>

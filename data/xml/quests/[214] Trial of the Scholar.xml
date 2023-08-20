@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="214" type="SOLO">
+		<name lang="en" val="Trial of the Scholar"/>
+		<name lang="ru" val="Испытание мудрости"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20068"/>	<!-- Monster Eye Destroyer -->
+			<event type="MOBKILLED" val="20158"/>	<!-- Medusa -->
+			<event type="MOBKILLED" val="20201"/>	<!-- Ghoul -->
+			<event type="MOBKILLED" val="20235"/>	<!-- Shackle -->
+			<event type="MOBKILLED" val="20269"/>	<!-- Breka Orc Shaman -->
+			<event type="MOBKILLED" val="20552"/>	<!-- Fettered Soul -->
+			<event type="MOBKILLED" val="20554"/>	<!-- Grandis -->
+			<event type="MOBKILLED" val="20567"/>	<!-- Enchanted Gargoyle -->
+			<event type="MOBKILLED" val="20580"/>	<!-- Leto Lizardman Warrior -->
+			<event type="QUEST_START" val="30461"/>	<!-- Mirien -->
+			<event type="QUEST_TALK" val="30461"/>	<!-- Mirien -->
+			<event type="QUEST_TALK" val="30070"/>	<!-- Sylvain -->
+			<event type="QUEST_TALK" val="30071"/>	<!-- Lucas -->
+			<event type="QUEST_TALK" val="30103"/>	<!-- Valkon -->
+			<event type="QUEST_TALK" val="30111"/>	<!-- Dieter -->
+			<event type="QUEST_TALK" val="30115"/>	<!-- Jurek -->
+			<event type="QUEST_TALK" val="30230"/>	<!-- Edroc -->
+			<event type="QUEST_TALK" val="30316"/>	<!-- Raut -->
+			<event type="QUEST_TALK" val="30458"/>	<!-- Poitan -->
+			<event type="QUEST_TALK" val="30608"/>	<!-- Maria -->
+			<event type="QUEST_TALK" val="30609"/>	<!-- Creta -->
+			<event type="QUEST_TALK" val="30610"/>	<!-- Cronos -->
+			<event type="QUEST_TALK" val="30611"/>	<!-- Triff -->
+			<event type="QUEST_TALK" val="30612"/>	<!-- Casian -->
+			<item id="2708"/>	<!-- Scripture Chapter 3 -->
+			<item id="2687"/>	<!-- Brown Scroll Scrap -->
+			<item id="2695"/>	<!-- Monster Eye Destroyer Skin -->
+			<item id="2696"/>	<!-- Shaman's Necklace -->
+			<item id="2697"/>	<!-- Shackle's Scalp -->
+			<item id="2716"/>	<!-- Ghoul's Skin -->
+			<item id="2717"/>	<!-- Medusa's Blood -->
+			<item id="2718"/>	<!-- Fettered Soul's Ichor -->
+			<item id="2719"/>	<!-- Enchanted Gargoyle's Nail -->
+		</setting>
+	</quest>
+</quests>

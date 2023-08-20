@@ -1,0 +1,214 @@
+<html noscrollbar>
+<title>Community by L2CCCP</title>
+<body><br>
+<table width=755>
+	<tr>
+		<center><td>
+			<table border=0 cellpadding=0 cellspacing=0 width=769 height=492 background="l2ui_ct1.Windows_DF_TooltipBG">
+				<tr>
+					<td valign="top" align="center">
+						<table width=755 height=468>
+							<tr>
+								<td width=755><br>
+									<table width=740 height=25>
+										<tr>
+											<td width=150 height=25 align=center>
+												Имя
+											</td>
+											<td width=190 height=25 align=center>
+												Профессия
+											</td>
+											<td width=120 height=25 align=center>
+												Клан
+											</td>
+											<td width=120 height=25 align=center>
+												Альянс
+											</td>
+											<td width=100 height=25 align=center>
+												PvP / Pk
+											</td>
+											<td width=25 height=25 align=center>
+												Ур.
+											</td>
+											<td width=100 height=25 align=center>
+												Время в игре
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td>
+															<table border=0 cellspacing=2>
+																<tr>
+																	<td valign=top>
+																		<?premium_img?>
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<td width=134 align=center>
+															<font color="0099FF"><?player_name?></font>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=190 align=center>
+															<?player_class?>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=120 align=center>
+															<font color="66FF66"><?player_clan1?></font>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=120 align=center>
+															<font color="99FF33"><?player_ally?></font>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=100 align=center>
+															<font color="009900"><?player_pvp?></font> / <font color="ff0000"><?player_pk?></font>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=25 align=center>
+															<?player_level?>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=100 align=center>
+															<?online_time?>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table><br>
+									<table border=0 width=754>
+										<tr>
+											<td width=200 align=center valign=top>
+												<?menu?>
+											</td>
+											<td width=250 align=center valign=top>
+												<table height=50 bgcolor=333333>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="icon.etc_cave_page_i00" width=32 height=32>
+																	</td>
+																	<td width=170 align=left valign=top>
+																		<font color="0099FF">Смена имени клана.</font>&nbsp;<br1>›&nbsp;<?rename_count?> &#<?rename_item?>;.
+																	</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<button value="$" action="bypass -h _bbsscripts; ;services.Rename:rename_clan_page;_bbscabinet:clan" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="25" height="25"/>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+												<br>
+												<table height=50 bgcolor=666666>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="icon.etc_cave_page_i00" width=32 height=32>
+																	</td>
+																	<td width=170 align=left valign=top>
+																		<font color="0099FF">Повысить уровень клана.</font>&nbsp;<br1>›&nbsp;<?level_count?> &#<?level_item?>;.
+																	</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<button value="$" action="bypass -h _bbsscripts; ;services.Clan.Clan:show_level;_bbscabinet:clan" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="25" height="25"/>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td width=250 align=center valign=top>
+												<table height=50 bgcolor=666666>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="icon.etc_quest_add_reward_i00" width=32 height=32>
+																	</td>
+																	<td width=170 align=left valign=top>
+																		<font color="0099FF">Купить репутацию клана.</font>&nbsp;<br1>›&nbsp;<?rep_count?> &#<?rep_item?>;.
+																	</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<button value="$" action="bypass -h _bbsscripts; ;services.Clan.Clan:show_point;_bbscabinet:clan" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="25" height="25"/>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+												<br>
+												<table height=50 bgcolor=333333>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="icon.etc_quest_add_reward_i00" width=32 height=32>
+																	</td>
+																	<td width=170 align=left valign=top>
+																		<font color="0099FF">Расширить клан склад.</font>&nbsp;<br1>›&nbsp;<?cwh_count?> &#<?cwh_item?>;.
+																	</td>
+															       		<td align=left valign=top>
+																       		<table><tr><td></td></tr></table>
+																       		<button value="$" action="bypass -h _bbsscripts; ;services.ExpandCWH:show;_bbscabinet:clan" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="25" height="25"/>
+															       		</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td></center>
+	</tr>
+</table>
+</body></html>

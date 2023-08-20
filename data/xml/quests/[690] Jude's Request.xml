@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="690" type="SOLO">
+		<name lang="en" val="Jude's Request"/>
+		<name lang="ru" val="Просьба Джуда"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="22398"/>	<!-- Lesser Evil -->
+			<event type="MOBKILLED" val="22399"/>	<!-- Greater Evil -->
+			<event type="QUEST_START" val="32356"/>	<!-- Jude -->
+			<event type="QUEST_TALK" val="32356"/>	<!-- Jude -->
+			<event type="QUEST_TALK" val="32356"/>	<!-- Jude -->
+			<item id="10327"/>	<!-- Evil Weapon -->
+		</setting>
+	</quest>
+</quests>

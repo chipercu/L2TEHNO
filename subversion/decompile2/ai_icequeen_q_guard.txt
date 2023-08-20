@@ -1,0 +1,113 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_q_guard : default_npc
+{
+parameter:
+	int	Skill01_ID = 458752001;
+	int	Skill01_Prob = 2000;
+	int	is_leader = -1;
+	int	TIMER_call_knight = 2314888;
+	int	TIMER_soulshot = 2314889;
+	string	MAKER_freya_defeatdun = "schuttgart29_2314_300m1";
+	string	IceQueen_Defeatdun = "icequeen_door_002";
+	int	debug_mode = 0;
+
+handler:
+	EventHandler CREATED()
+	{
+		( myself + 1128 ) = 0;
+		( myself + 1136 ) = 0;
+		if( is_leader == 1 )
+		{
+			gg->Castle_GateOpenCloseEx(IceQueen_Defeatdun,0,myself->InstantZone_GetId());
+		}
+	}
+
+	EventHandler NO_DESIRE(c0)
+	{
+		c0 = gg->GetCreatureFromIndex(( myself + 1136 ));
+		if( myself->IsNullCreature(c0) == 0 )
+		{
+			myself->AddFollowDesire2(c0,10,1,( gg->Rand(100) + 100 ),( ( gg->Rand(60) - 30 ) + 180 ));
+		}
+	}
+
+	EventHandler ATTACKED(attacker,damage)
+	{
+		myself->AddAttackDesire(attacker,1,damage);
+		if( Skill01_ID != 458752001 )
+		{
+			if( gg->Rand(10000) < Skill01_Prob )
+			{
+				if( gg->Rand(2) == 1 )
+				{
+					if( myself->Skill_GetConsumeMP(Skill01_ID) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Skill01_ID) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Skill01_ID) == 0 )
+					{
+						myself->AddUseSkillDesire(attacker,Skill01_ID,0,1,1000000);
+					}
+				}
+				else if( myself->IsNullCreature(( myself + 1504 )) == 0 )
+				{
+					if( myself->Skill_GetConsumeMP(Skill01_ID) < ( ( myself + 1480 ) + 400 ) && myself->Skill_GetConsumeHP(Skill01_ID) < ( ( myself + 1480 ) + 328 ) && myself->Skill_InReuseDelay(Skill01_ID) == 0 )
+					{
+						myself->AddUseSkillDesire(( myself + 1504 ),Skill01_ID,0,1,1000000);
+					}
+				}
+			}
+		}
+	}
+
+	EventHandler SEE_CREATURE(creature,i0,maker0)
+	{
+		if( ( creature + 68 ) == 1 )
+		{
+			( myself + 1136 ) = gg->GetIndexFromCreature(creature);
+			if( ( myself + 1128 ) == 0 )
+			{
+				if( is_leader == 1 )
+				{
+					i0 = myself->InstantZone_GetId();
+					maker0 = gg->InstantZone_GetNpcMaker(i0,MAKER_freya_defeatdun);
+					if( gg->IsNull(maker0) == 0 )
+					{
+						gg->SendMakerScriptEvent(maker0,23140101,gg->GetIndexFromCreature(creature),0);
+					}
+					myself->Say(gg->MakeFString(1801096,( creature + 344 ),"","","",""));
+					myself->UseSoulShot(10);
+				}
+				myself->AddTimerEx(TIMER_call_knight,( 5 * 1000 ));
+				( myself + 1128 ) = 1;
+			}
+		}
+	}
+
+	EventHandler SCRIPT_EVENT(script_event_arg1,script_event_arg2,i0,c0)
+	{
+		if( script_event_arg1 == 23140043 )
+		{
+			c0 = gg->GetCreatureFromIndex(script_event_arg2);
+			if( myself->IsNullCreature(c0) == 0 )
+			{
+				myself->UseSoulShot(10);
+				myself->AddAttackDesire(c0,1,150);
+			}
+		}
+	}
+
+	EventHandler TIMER_FIRED_EX(timer_id)
+	{
+		if( timer_id == TIMER_call_knight )
+		{
+			myself->UseSoulShot(10);
+			myself->BroadcastScriptEvent(23140045,gg->GetIndexFromCreature(( myself + 1480 )),3500);
+			myself->AddTimerEx(TIMER_call_knight,( 3 * 1000 ));
+		}
+	}
+
+}

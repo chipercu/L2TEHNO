@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="21579" name="Neolithic Crystal - S84" type="OTHER">
+		<set name="icon" val="icon.etc_warding_orb_gold_i00" />
+		<set name="weight" val="20" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="21581" name="Olf's T-shirt Enchant Scroll" type="SCROLL">
+		<set name="icon" val="icon.etc_scroll_of_enchant_shirt_i01"/>
+		<set name="class" val="MISC"/>
+		<set name="weight" val="120"/>
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="21582" name="Olf's T-shirt Blessed Enchant Scroll" type="SCROLL">
+		<set name="icon" val="icon.etc_scroll_of_enchant_shirt_i00"/>
+		<set name="class" val="MISC"/>
+		<set name="weight" val="120"/>
+		<set name="stackable" val="true"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+	</etcitem>
+	<etcitem id="21593" name="Ziggo's Jewel" type="OTHER">
+		<set name="icon" val="icon.etc_jewel_red_i00"/>
+		<set name="stackable" val="true"/>
+		<set name="class" val="OTHER"/>
+		<set name="price" val="200000000"/>
+	</etcitem>
+	<etcitem id="21595" name="Birthday Cake" type="OTHER">
+		<set name="icon" val="BranchSys.icon.br_birthday_cake_i00"/>
+		<set name="weight" val="10"/>
+		<set name="stackable" val="true"/>
+		<set name="class" val="OTHER"/>
+		<set name="sellable" val="false"/>
+		<set name="tradeable" val="false"/>
+		<set name="dropable" val="false"/>
+		<skills>
+			<skill id="22249" lvl="1"/>
+		</skills>
+		<cond msgId="1508">
+			<not>
+				<zone type="OlympiadStadia"/> 
+			</not>
+		</cond>
+	</etcitem>
+</list>
+

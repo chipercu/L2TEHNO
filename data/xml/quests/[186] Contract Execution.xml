@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="186" type="SOLO">
+		<name lang="en" val="Contract Execution"/>
+		<name lang="ru" val="Выполнение условий договора"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20577"/>	<!-- Leto Lizardman -->
+			<event type="MOBKILLED" val="20578"/>	<!-- Leto Lizardman Archer -->
+			<event type="MOBKILLED" val="20579"/>	<!-- Leto Lizardman Soldier -->
+			<event type="MOBKILLED" val="20580"/>	<!-- Leto Lizardman Warrior -->
+			<event type="MOBKILLED" val="20581"/>	<!-- Leto Lizardman Shaman -->
+			<event type="MOBKILLED" val="20582"/>	<!-- Leto Lizardman Overlord -->
+			<event type="MOBKILLED" val="20583"/>	<!-- Timak Orc -->
+			<event type="NPC_FIRST_TALK" val="30673"/>	<!-- Lorain -->
+			<event type="QUEST_TALK" val="31437"/>	<!-- Luka -->
+			<event type="QUEST_TALK" val="30621"/>	<!-- Nikola -->
+			<event type="QUEST_TALK" val="30673"/>	<!-- Lorain -->
+			<item id="10362"/>	<!-- Loraine's Certificate -->
+			<item id="10366"/>	<!-- Metallograph - Research Report -->
+			<item id="10367"/>	<!-- Leto Lizardman Accessory -->
+		</setting>
+	</quest>
+</quests>

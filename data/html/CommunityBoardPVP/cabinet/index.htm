@@ -1,0 +1,352 @@
+<html noscrollbar>
+<title>Community by L2CCCP</title>
+<body><br>
+<table width=755>
+	<tr>
+		<center><td>
+			<table border=0 cellpadding=0 cellspacing=0 width=769 height=492 background="l2ui_ct1.Windows_DF_TooltipBG">
+				<tr>
+					<td valign="top" align="center">
+						<table width=755 height=468>
+							<tr>
+								<td width=755><br>
+									<table width=740 height=25>
+										<tr>
+											<td width=150 height=25 align=center>
+												Имя
+											</td>
+											<td width=190 height=25 align=center>
+												Профессия
+											</td>
+											<td width=120 height=25 align=center>
+												Клан
+											</td>
+											<td width=120 height=25 align=center>
+												Альянс
+											</td>
+											<td width=100 height=25 align=center>
+												PvP / Pk
+											</td>
+											<td width=25 height=25 align=center>
+												Ур.
+											</td>
+											<td width=100 height=25 align=center>
+												Время в игре
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td>
+															<table border=0 cellspacing=2>
+																<tr>
+																	<td valign=top>
+																		<?premium_img?>
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<td width=134 align=center>
+															<font color="0099FF"><?player_name?></font>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=190 align=center>
+															<?player_class?>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=120 align=center>
+															<font color="66FF66"><?player_clan1?></font>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=120 align=center>
+															<font color="99FF33"><?player_ally?></font>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=100 align=center>
+															<font color="009900"><?player_pvp?></font> / <font color="ff0000"><?player_pk?></font>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=25 align=center>
+															<?player_level?>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table height=25 bgcolor=333333>
+													<tr>
+														<td width=100 align=center>
+															<?online_time?>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table><br>
+									<table border=0 width=754>
+										<tr>
+											<td width=200 align=center valign=top>
+												<?menu?>
+											</td>
+											<td width=250 align=center valign=top>
+												<table height=50 bgcolor=333333>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="icon.high_fuel_i00" width=32 height=32>
+																	</td>
+																	<td width=170 align=left valign=top>
+																		<font color="0099FF">Смена пола.</font>&nbsp;<br1>›&nbsp;<?sex_count?> &#<?sex_item?>;.
+																        </td>
+																	<td align=left valign=top>
+																		<table><tr><td></td></tr></table>
+																		<button value="$" action="bypass -h _bbsscripts; ;services.Rename:changesex_page;_bbscabinet:show" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="25" height="25"/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=666666>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="icon.color_name_i00" width=32 height=32>
+																	</td>
+																	<td width=170 align=left valign=top>
+																		<font color="0099FF">Цвет ника.</font>&nbsp;<br1>›&nbsp;<?name_color_count?> &#<?name_color_item?>;.
+																	</td>
+																	<td align=left valign=top>
+																		<table><tr><td></td></tr></table>
+																		<button value="$" action="bypass -h _bbsscripts; ;services.NickColor:list 1;_bbscabinet:show" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="25" height="25"/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=333333>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="icon.etc_quest_add_reward_i00" width=32 height=32>
+																	</td>
+																	<td width=170 align=left valign=top>
+																		<font color="0099FF">Расширить инвентарь.</font>&nbsp;<br1>›&nbsp;<?inventory_count?> &#<?inventory_item?>;.
+																	</td>
+																	<td align=left valign=top>
+																		<table><tr><td></td></tr></table>
+																		<button value="$" action="bypass -h _bbsscripts; ;services.ExpandInventory:show;_bbscabinet:show" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="25" height="25"/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=666666>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="icon.etc_quest_subclass_reward_i00" width=32 height=32>
+																	</td>
+																	<td width=170 align=left valign=top>
+																		<font color="0099FF">Отделить сабкласс.</font>&nbsp;<br1>›&nbsp;<?separate_count?> &#<?separate_item?>;.
+																	</td>
+																	<td align=left valign=top>
+																		<table><tr><td></td></tr></table>
+																		<button value="$" action="bypass -h _bbsscripts; ;services.Rename:separate_page;_bbscabinet:show" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="25" height="25"/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=333333>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="icon.etc_transform_warrior_i00" width=32 height=32>
+																	</td>
+																	<td width=170 align=left valign=top>
+																		<font color="0099FF">Сменить базовый класс.</font>&nbsp;<br1>›&nbsp;<?changebase_count?> &#<?changebase_item?>;.
+																	</td>
+																	<td align=left valign=top>
+																		<table><tr><td></td></tr></table>
+																		<button value="$" action="bypass -h _bbsscripts; ;services.Rename:changebase_page;_bbscabinet:show" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="25" height="25"/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=666666>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="icon.etc_exp_point_i00" width=32 height=32>
+																	</td>
+																	<td width=170 align=left valign=top>
+																		<font color="0099FF">Управление уровнем.</font>&nbsp;<br1>›&nbsp;Цена зависит от уровня.
+																	</td>
+																	<td align=left valign=top>
+																		<table><tr><td></td></tr></table>
+																		<button value="$" action="bypass -h _bbsscripts; ;services.Level.Level:show;_bbscabinet:show" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="25" height="25"/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td width=250 align=center valign=top>
+												<table height=50 bgcolor=666666>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="icon.etc_cave_page_i00" width=32 height=32>
+																	</td>
+																	<td width=170 align=left valign=top>
+																		<font color="0099FF">Смена ника.</font>&nbsp;<br1>›&nbsp;<?name_count?> &#<?name_item?>;.
+																	</td>
+																	<td align=left valign=top>
+																		<table><tr><td></td></tr></table>
+																		<button value="$" action="bypass -h _bbsscripts; ;services.Rename:rename_page;_bbscabinet:show" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="25" height="25"/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=333333>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="icon.color_name_i00" width=32 height=32>
+																	</td>
+																	<td width=170 align=left valign=top>
+																		<font color="0099FF">Цвет титула.</font>&nbsp;<br1>›&nbsp;<?title_color_count?> &#<?title_color_item?>;.
+																	</td>
+																	<td align=left valign=top>
+																		<table><tr><td></td></tr></table>
+																		<button value="$" action="bypass -h _bbsscripts; ;services.NickColor:list2;_bbscabinet:show" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="25" height="25"/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=666666>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="icon.etc_quest_add_reward_i00" width=32 height=32>
+																	</td>
+																	<td width=170 align=left valign=top>
+																		<font color="0099FF">Расширить склад.</font>&nbsp;<br1>›&nbsp;<?wh_count?> &#<?wh_item?>;.
+																	</td>
+																	<td align=left valign=top>
+																		<table><tr><td></td></tr></table>
+																		<button value="$" action="bypass -h _bbsscripts; ;services.ExpandWarhouse:show;_bbscabinet:show" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="25" height="25"/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=333333>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="icon.event_hero_treasure_box_i00" width=32 height=32>
+																	</td>
+																	<td width=170 align=left valign=top>
+																		<font color="0099FF">Купить Геройство.</font>&nbsp;<br1>›&nbsp;Цена зависит от дней.
+																	</td>
+																	<td align=left valign=top>
+																		<table><tr><td></td></tr></table>
+																		<button value="$" action="bypass -h _bbsscripts; ;services.Hero.BuyHero:list;_bbscabinet:show" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="25" height="25"/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table><br>
+												<table height=50 bgcolor=666666>
+													<tr>
+														<td width=250 align=center>
+															<table border=0 cellspacing=2 cellpadding=3>
+																<tr>
+																	<td align=right valign=top>
+																		<img src="icon.etc_cave_page_i00" width=32 height=32>
+																	</td>
+																	<td width=170 align=left valign=top>
+																		<font color="0099FF">Смена имени пета.</font>&nbsp;<br1>›&nbsp;<?pet_name_count?> &#<?pet_name_item?>;.
+																	</td>
+																	<td align=left valign=top>
+																		<table><tr><td></td></tr></table>
+																		<button value="$" action="bypass -h _bbsscripts; ;services.petevolve.exchange:showErasePetName;_bbscabinet:show" back="l2ui_ct1.button.button_df_small_down" fore="l2ui_ct1.button.button_df_small" width="25" height="25"/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td></center>
+	</tr>
+</table>
+</body></html>

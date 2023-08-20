@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="120" type="SOLO">
+		<name lang="en" val="Pavel's Research"/>
+		<name lang="ru" val="Исследование Павла"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="32046"/>	<!-- Suspicious-Looking Pile of Stones -->
+			<event type="QUEST_TALK" val="32046"/>	<!-- Suspicious-Looking Pile of Stones -->
+			<event type="QUEST_TALK" val="32045"/>	<!-- Doctor Chaos Secret Bookshelf -->
+			<event type="QUEST_TALK" val="32046"/>	<!-- Suspicious-Looking Pile of Stones -->
+			<event type="QUEST_TALK" val="32042"/>	<!-- Weathermaster -->
+			<event type="QUEST_TALK" val="32043"/>	<!-- Weathermaster -->
+			<event type="QUEST_TALK" val="32044"/>	<!-- Weathermaster -->
+			<event type="QUEST_TALK" val="32047"/>	<!-- Wendy -->
+			<event type="QUEST_TALK" val="32041"/>	<!-- Yumi -->
+			<item id="8058"/>	<!-- Lockup Research Report -->
+			<item id="8059"/>	<!-- Research Report -->
+			<item id="8060"/>	<!-- Key of Enigma -->
+			<item id="8290"/>	<!-- Flower of Pavel -->
+			<item id="8291"/>	<!-- Heart of Atlanta -->
+			<item id="8292"/>	<!-- Wendy's Necklace -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="60" type="SOLO">
+		<name lang="en" val="Good Work's Reward"/>
+		<name lang="ru" val="Награда за хорошую работу"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="27340"/>	<!-- Pursuer -->
+			<event type="QUEST_START" val="31435"/>	<!-- Daeger -->
+			<event type="QUEST_TALK" val="31435"/>	<!-- Daeger -->
+			<event type="QUEST_TALK" val="30081"/>	<!-- Helvetia -->
+			<event type="QUEST_TALK" val="31092"/>	<!-- Black Marketeer of Mammon -->
+			<event type="QUEST_TALK" val="32487"/>	<!-- Mark -->
+			<item id="10867"/>	<!-- Bloody Cloth Fragment -->
+			<item id="10868"/>	<!-- Helvetia's Antidote -->
+		</setting>
+	</quest>
+</quests>

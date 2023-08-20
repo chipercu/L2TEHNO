@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="710" type="SOLO">
+		<name lang="en" val="Path to Becoming a Lord - Giran"/>
+		<name lang="ru" val="Путь Лорда - Гиран"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="21631"/>	<!-- Zombie Captains Spiritual Body -->
+			<event type="MOBKILLED" val="20835"/>	<!-- Zakens Seer -->
+			<event type="MOBKILLED" val="20832"/>	<!-- Zakens Pikeman -->
+			<event type="MOBKILLED" val="20843"/>	<!-- Zakens Royal Guard -->
+			<event type="MOBKILLED" val="21625"/>	<!-- Zakens Elite Guard -->
+			<event type="MOBKILLED" val="21604"/>	<!-- Zakens Elite Pikeman -->
+			<event type="MOBKILLED" val="21607"/>	<!-- Zakens Elite Archer -->
+			<event type="MOBKILLED" val="20833"/>	<!-- Zakens Archer -->
+			<event type="MOBKILLED" val="21610"/>	<!-- Zakens High Grade Watchman -->
+			<event type="MOBKILLED" val="20847"/>	<!-- Vale Master -->
+			<event type="MOBKILLED" val="20839"/>	<!-- Unpleasant Humming -->
+			<event type="MOBKILLED" val="21613"/>	<!-- Unpleasant Shout -->
+			<event type="MOBKILLED" val="20988"/>	<!-- Sairons Puppet -->
+			<event type="MOBKILLED" val="20987"/>	<!-- Sairons Doll -->
+			<event type="MOBKILLED" val="20986"/>	<!-- Sairon -->
+			<event type="MOBKILLED" val="21619"/>	<!-- Pit Archer -->
+			<event type="MOBKILLED" val="20845"/>	<!-- Pirates Zombie Captain -->
+			<event type="MOBKILLED" val="20836"/>	<!-- Pirate Zombie -->
+			<event type="MOBKILLED" val="20842"/>	<!-- Musveren -->
+			<event type="MOBKILLED" val="21628"/>	<!-- Kaim Vanul Lad -->
+			<event type="MOBKILLED" val="20844"/>	<!-- Kaim Vanul -->
+			<event type="MOBKILLED" val="21622"/>	<!-- Greater Musveren -->
+			<event type="MOBKILLED" val="21616"/>	<!-- Gigantic Flyer -->
+			<event type="MOBKILLED" val="20841"/>	<!-- Fiend Archer -->
+			<event type="MOBKILLED" val="20846"/>	<!-- Doll Blader -->
+			<event type="MOBKILLED" val="20840"/>	<!-- Death Flyer -->
+			<event type="MOBKILLED" val="21637"/>	<!-- Crimson Vale Master -->
+			<event type="MOBKILLED" val="21634"/>	<!-- Crimson Doll Blader -->
+			<event type="QUEST_START" val="35184"/>	<!-- Saul -->
+			<event type="QUEST_START" val="30511"/>	<!-- Gesto -->
+			<event type="QUEST_TALK" val="35184"/>	<!-- Saul -->
+			<event type="QUEST_TALK" val="30511"/>	<!-- Gesto -->
+			<event type="QUEST_TALK" val="30879"/>	<!-- Felton -->
+			<event type="QUEST_TALK" val="32243"/>	<!-- Cargo Box -->
+		</setting>
+	</quest>
+</quests>

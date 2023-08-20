@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="350" type="SOLO">
+		<name lang="en" val="Enhance Your Weapon"/>
+		<name lang="ru" val="Усиление оружия"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOB_TARGETED_BY_SKILL" val="20583"/>	<!-- Timak Orc -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20584"/>	<!-- Timak Orc Archer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20585"/>	<!-- Timak Orc Soldier -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20586"/>	<!-- Timak Orc Warrior -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20587"/>	<!-- Timak Orc Shaman -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20588"/>	<!-- Timak Orc Overlord -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20625"/>	<!-- Malruk Knight -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20626"/>	<!-- Malruk Berserker -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20627"/>	<!-- Malruk Lord -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20628"/>	<!-- Limal Karinness -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20629"/>	<!-- Karik -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20636"/>	<!-- Forest of Mirrors Ghost -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20637"/>	<!-- Forest of Mirrors Ghost -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20638"/>	<!-- Forest of Mirrors Ghost -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20639"/>	<!-- Mirror -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20640"/>	<!-- Harit Lizardman -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20641"/>	<!-- Harit Lizardman Grunt -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20642"/>	<!-- Harit Lizardman Archer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20646"/>	<!-- Halingka -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20647"/>	<!-- Yintzu -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20648"/>	<!-- Paliote -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20649"/>	<!-- Hamrut -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20650"/>	<!-- Kranrot -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20674"/>	<!-- Doom Knight -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20761"/>	<!-- Pytan -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20762"/>	<!-- Pytan Knight -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20767"/>	<!-- Timak Orc Troop Leader -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20768"/>	<!-- Timak Orc Troop Shaman -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20769"/>	<!-- Timak Orc Troop Warrior -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20770"/>	<!-- Timak Orc Troop Archer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20793"/>	<!-- Nos -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20794"/>	<!-- Blade Stakato -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20795"/>	<!-- Blade Stakato Worker -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20796"/>	<!-- Blade Stakato Warrior -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20797"/>	<!-- Blade Stakato Drone -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20798"/>	<!-- Water Giant -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20799"/>	<!-- Queen Undine Lad -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20800"/>	<!-- Evas Seeker -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20801"/>	<!-- Theeder Piker -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20802"/>	<!-- Theeder Mage -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20803"/>	<!-- Doll Master -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20821"/>	<!-- Erin Ediunce -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20823"/>	<!-- Platinum Tribe Soldier -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20826"/>	<!-- Platinum Tribe Archer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20827"/>	<!-- Platinum Tribe Warrior -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20828"/>	<!-- Platinum Tribe Shaman -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20829"/>	<!-- Platinum Tribe Overlord -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20830"/>	<!-- Guardian Angel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20831"/>	<!-- Seal Angel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20839"/>	<!-- Unpleasant Humming -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20840"/>	<!-- Death Flyer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20841"/>	<!-- Fiend Archer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20842"/>	<!-- Musveren -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20843"/>	<!-- Zakens Royal Guard -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20844"/>	<!-- Kaim Vanul -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20845"/>	<!-- Pirates Zombie Captain -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20846"/>	<!-- Doll Blader -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20847"/>	<!-- Vale Master -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20848"/>	<!-- Light Bringer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20849"/>	<!-- Light Worm -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20860"/>	<!-- Seal Angel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20986"/>	<!-- Sairon -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20987"/>	<!-- Sairons Doll -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20988"/>	<!-- Sairons Puppet -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20994"/>	<!-- Garden Guard Leader -->
+			<event type="MOB_TARGETED_BY_SKILL" val="20995"/>	<!-- Garden Guard -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21006"/>	<!-- Doom Servant -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21007"/>	<!-- Doom Guard -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21008"/>	<!-- Doom Archer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21009"/>	<!-- Doom Trooper  -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21010"/>	<!-- Doom Warrior -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21062"/>	<!-- Messenger Angel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21063"/>	<!-- Messenger Angel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21064"/>	<!-- Platinum Guardian Archer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21065"/>	<!-- Platinum Guardian Warrior -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21066"/>	<!-- Platinum Guardian Shaman -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21067"/>	<!-- Guardian Archangel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21068"/>	<!-- Guardian Archangel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21069"/>	<!-- Platinum Guardian Prefect -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21070"/>	<!-- Seal Archangel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21071"/>	<!-- Seal Archangel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21072"/>	<!-- Platinum Guardian Chief -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21611"/>	<!-- Unpleasant Humming -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21612"/>	<!-- Unpleasant Humming -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21614"/>	<!-- Death Flyer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21615"/>	<!-- Death Flyer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21617"/>	<!-- Fiend Archer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21620"/>	<!-- Musveren -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21621"/>	<!-- Musveren -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21623"/>	<!-- Zakens Guard -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21624"/>	<!-- Zakens Guard -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21626"/>	<!-- Kaim Vanul -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21627"/>	<!-- Kaim Vanul -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21629"/>	<!-- Pirate Zombie Captain -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21630"/>	<!-- Pirate Zombie Captain -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21632"/>	<!-- Doll Blader -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21633"/>	<!-- Doll Blader -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21635"/>	<!-- Vale Master -->
+			<event type="MOB_TARGETED_BY_SKILL" val="21636"/>	<!-- Vale Master -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29026"/>	<!-- Pirate Zombie Captain -->
+			<event type="MOB_TARGETED_BY_SKILL" val="35412"/>	<!-- Doom Guard -->
+			<event type="MOB_TARGETED_BY_SKILL" val="35413"/>	<!-- Doom Archer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29001"/>	<!-- Queen Ant -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29006"/>	<!-- Core -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29014"/>	<!-- Orfen -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29022"/>	<!-- Zaken -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29176"/>	<!-- Zaken -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29181"/>	<!-- Zaken -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25016"/>	<!-- The 3rd Underwater Guardian -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25106"/>	<!-- Ghost of the Well Lidia -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25179"/>	<!-- Guardian of the Statue of Giant Karum -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25234"/>	<!-- Ancient Weird Drake -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25256"/>	<!-- Taik High Prefect Arak -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25407"/>	<!-- Lord Ishka  -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25423"/>	<!-- Fairy Queen Timiniel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25226"/>	<!-- Roaring Lord Kastor -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25051"/>	<!-- Rahha -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25125"/>	<!-- Fierce Tiger King Angel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25255"/>	<!-- Gargoyle Lord Tiphon -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25444"/>	<!-- Enmity Ghost Ramdal -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25478"/>	<!-- Shilens Priest Hisilrome -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25322"/>	<!-- Demons Agent Falston -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25263"/>	<!-- Kernons Faithful Servant Kelone -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25337"/>	<!-- Anakazel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25073"/>	<!-- Bloody Priest Rudelto -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25233"/>	<!-- Spirit of Andras, the Betrayer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25035"/>	<!-- Shilens Messenger Cabrio -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25092"/>	<!-- Korim -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25163"/>	<!-- Roaring Skylancer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25198"/>	<!-- Fafurions Herald Lokness -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25252"/>	<!-- Palibati Queen Themis -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25269"/>	<!-- Beast Lord Behemoth -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25281"/>	<!-- Anakims Nemesis Zakaron -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25325"/>	<!-- Flame of Splendor Barakiel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25453"/>	<!-- Meanas Anor -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25328"/>	<!-- Eilhalder von Hellmann -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25447"/>	<!-- Immortal Savior Mardil -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25199"/>	<!-- Water Dragon Seer Sheshark -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25235"/>	<!-- Vanor Chief Kandra -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25248"/>	<!-- Doom Blade Tanatos -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25220"/>	<!-- Death Lord Hallate -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25523"/>	<!-- Plague Golem -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25109"/>	<!-- Antharas Priest Cloe -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25202"/>	<!-- Krokian Padisha Sobekk -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25296"/>	<!-- Icicle Emperor Bumbalump -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29020"/>	<!-- Baium -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25054"/>	<!-- Kernon -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25229"/>	<!-- Storm Winged Naga -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25244"/>	<!-- Last Lesser Giant Olkuth -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25249"/>	<!-- Palatanos of Horrific Power -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25266"/>	<!-- Bloody Empress Decarbia -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25276"/>	<!-- Death Lord Ipos -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25282"/>	<!-- Death Lord Shax -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25205"/>	<!-- Ocean Flame Ashakiel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25524"/>	<!-- Flamestone Giant -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25703"/>	<!-- Gigantic Golem -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25143"/>	<!-- Fire of Wrath Shuriel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25245"/>	<!-- Last Lesser Giant Glaki -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25290"/>	<!-- Daimon the White-Eyed -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25293"/>	<!-- Hesti Guardian Deity of the Hot Springs -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25338"/>	<!-- Anakazel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25126"/>	<!-- Longhorn Golkonda -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25450"/>	<!-- Cherub Galaxia -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29062"/>	<!-- Andreas Van Halter -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29065"/>	<!-- Sailren -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29095"/>	<!-- Gordon -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25283"/>	<!-- Lilith -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25286"/>	<!-- Anakim -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25299"/>	<!-- Ketras Hero Hekaton -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25302"/>	<!-- Ketras Commander Tayr -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25305"/>	<!-- Ketras Chief Brakki -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25306"/>	<!-- Soul of Fire Nastron -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25309"/>	<!-- Varkas Hero Shadith -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25312"/>	<!-- Varkas Commander Mos -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25315"/>	<!-- Varkas Chief Horus -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25316"/>	<!-- Soul of Water Ashutar -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25319"/>	<!-- Ember -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25527"/>	<!-- Uruka -->
+			<event type="MOB_TARGETED_BY_SKILL" val="22216"/>	<!-- Tyrannosaurus -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25536"/>	<!-- Hannibal -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25539"/>	<!-- Typhoon -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25643"/>	<!-- Awakened Ancient Sentry -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25644"/>	<!-- Awakened Ancient Severer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25645"/>	<!-- Awakened Ancient Soul Extractor -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25646"/>	<!-- Awakened Ancient Soul Devourer -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25647"/>	<!-- Awakened Ancient Fighter -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25648"/>	<!-- Awakened Ancient Fighter -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25649"/>	<!-- Awakened Ancient Executor -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25650"/>	<!-- Awakened Ancient Executor -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25651"/>	<!-- Awakened Ancient Prophet -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25652"/>	<!-- Awakened Ancient Prophet -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25665"/>	<!-- Yehan Klodekus -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25666"/>	<!-- Yehan Klanikus -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25690"/>	<!-- Aenkinel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25691"/>	<!-- Aenkinel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25692"/>	<!-- Aenkinel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25693"/>	<!-- Aenkinel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25694"/>	<!-- Aenkinel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25695"/>	<!-- Aenkinel -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25667"/>	<!-- Cannibalistic Stakato Chief -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25668"/>	<!-- Cannibalistic Stakato Chief -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25669"/>	<!-- Cannibalistic Stakato Chief -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25670"/>	<!-- Cannibalistic Stakato Chief -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25609"/>	<!-- Epidos -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25610"/>	<!-- Epidos -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25611"/>	<!-- Epidos -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25612"/>	<!-- Epidos -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25162"/>	<!-- Giant Marpanak -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25467"/>	<!-- Gorgolos -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29150"/>	<!-- Ekimus -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29163"/>	<!-- Tiat -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25540"/>	<!-- Demon Prince -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25542"/>	<!-- Ranku -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25544"/>	<!-- Tully -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25674"/>	<!-- Gwindorr -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25680"/>	<!-- Giant Marpanak -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25681"/>	<!-- Gorgolos -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25684"/>	<!-- Last Titan Utenus -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25687"/>	<!-- Hekaton Prime -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29118"/>	<!-- Beleth -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25701"/>	<!-- Anays -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25677"/>	<!-- Water Spirit Lian -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25603"/>	<!-- Darion -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25671"/>	<!-- Queen Shyeed -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25713"/>	<!-- Darnels -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25714"/>	<!-- Kietch -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25716"/>	<!-- Tears -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25699"/>	<!-- Glakias -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25700"/>	<!-- Glakias -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25696"/>	<!-- Taklacan -->
+			<event type="MOB_TARGETED_BY_SKILL" val="25698"/>	<!-- Dopagen -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29186"/>	<!-- Balor -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29047"/>	<!-- Scarlet van Halisha -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29179"/>	<!-- Freya -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29180"/>	<!-- Freya -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29019"/>	<!-- Antharas -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29066"/>	<!-- Antharas -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29067"/>	<!-- Antharas -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29068"/>	<!-- Antharas -->
+			<event type="MOB_TARGETED_BY_SKILL" val="29028"/>	<!-- Valakas -->
+			<event type="MOBKILLED" val="20583"/>	<!-- Timak Orc -->
+			<event type="MOBKILLED" val="20584"/>	<!-- Timak Orc Archer -->
+			<event type="MOBKILLED" val="20585"/>	<!-- Timak Orc Soldier -->
+			<event type="MOBKILLED" val="20586"/>	<!-- Timak Orc Warrior -->
+			<event type="MOBKILLED" val="20587"/>	<!-- Timak Orc Shaman -->
+			<event type="MOBKILLED" val="20588"/>	<!-- Timak Orc Overlord -->
+			<event type="MOBKILLED" val="20625"/>	<!-- Malruk Knight -->
+			<event type="MOBKILLED" val="20626"/>	<!-- Malruk Berserker -->
+			<event type="MOBKILLED" val="20627"/>	<!-- Malruk Lord -->
+			<event type="MOBKILLED" val="20628"/>	<!-- Limal Karinness -->
+			<event type="MOBKILLED" val="20629"/>	<!-- Karik -->
+			<event type="MOBKILLED" val="20636"/>	<!-- Forest of Mirrors Ghost -->
+			<event type="MOBKILLED" val="20637"/>	<!-- Forest of Mirrors Ghost -->
+			<event type="MOBKILLED" val="20638"/>	<!-- Forest of Mirrors Ghost -->
+			<event type="MOBKILLED" val="20639"/>	<!-- Mirror -->
+			<event type="MOBKILLED" val="20640"/>	<!-- Harit Lizardman -->
+			<event type="MOBKILLED" val="20641"/>	<!-- Harit Lizardman Grunt -->
+			<event type="MOBKILLED" val="20642"/>	<!-- Harit Lizardman Archer -->
+			<event type="MOBKILLED" val="20646"/>	<!-- Halingka -->
+			<event type="MOBKILLED" val="20647"/>	<!-- Yintzu -->
+			<event type="MOBKILLED" val="20648"/>	<!-- Paliote -->
+			<event type="MOBKILLED" val="20649"/>	<!-- Hamrut -->
+			<event type="MOBKILLED" val="20650"/>	<!-- Kranrot -->
+			<event type="MOBKILLED" val="20674"/>	<!-- Doom Knight -->
+			<event type="MOBKILLED" val="20761"/>	<!-- Pytan -->
+			<event type="MOBKILLED" val="20762"/>	<!-- Pytan Knight -->
+			<event type="MOBKILLED" val="20767"/>	<!-- Timak Orc Troop Leader -->
+			<event type="MOBKILLED" val="20768"/>	<!-- Timak Orc Troop Shaman -->
+			<event type="MOBKILLED" val="20769"/>	<!-- Timak Orc Troop Warrior -->
+			<event type="MOBKILLED" val="20770"/>	<!-- Timak Orc Troop Archer -->
+			<event type="MOBKILLED" val="20793"/>	<!-- Nos -->
+			<event type="MOBKILLED" val="20794"/>	<!-- Blade Stakato -->
+			<event type="MOBKILLED" val="20795"/>	<!-- Blade Stakato Worker -->
+			<event type="MOBKILLED" val="20796"/>	<!-- Blade Stakato Warrior -->
+			<event type="MOBKILLED" val="20797"/>	<!-- Blade Stakato Drone -->
+			<event type="MOBKILLED" val="20798"/>	<!-- Water Giant -->
+			<event type="MOBKILLED" val="20799"/>	<!-- Queen Undine Lad -->
+			<event type="MOBKILLED" val="20800"/>	<!-- Evas Seeker -->
+			<event type="MOBKILLED" val="20801"/>	<!-- Theeder Piker -->
+			<event type="MOBKILLED" val="20802"/>	<!-- Theeder Mage -->
+			<event type="MOBKILLED" val="20803"/>	<!-- Doll Master -->
+			<event type="MOBKILLED" val="20821"/>	<!-- Erin Ediunce -->
+			<event type="MOBKILLED" val="20823"/>	<!-- Platinum Tribe Soldier -->
+			<event type="MOBKILLED" val="20826"/>	<!-- Platinum Tribe Archer -->
+			<event type="MOBKILLED" val="20827"/>	<!-- Platinum Tribe Warrior -->
+			<event type="MOBKILLED" val="20828"/>	<!-- Platinum Tribe Shaman -->
+			<event type="MOBKILLED" val="20829"/>	<!-- Platinum Tribe Overlord -->
+			<event type="MOBKILLED" val="20830"/>	<!-- Guardian Angel -->
+			<event type="MOBKILLED" val="20831"/>	<!-- Seal Angel -->
+			<event type="MOBKILLED" val="20839"/>	<!-- Unpleasant Humming -->
+			<event type="MOBKILLED" val="20840"/>	<!-- Death Flyer -->
+			<event type="MOBKILLED" val="20841"/>	<!-- Fiend Archer -->
+			<event type="MOBKILLED" val="20842"/>	<!-- Musveren -->
+			<event type="MOBKILLED" val="20843"/>	<!-- Zakens Royal Guard -->
+			<event type="MOBKILLED" val="20844"/>	<!-- Kaim Vanul -->
+			<event type="MOBKILLED" val="20845"/>	<!-- Pirates Zombie Captain -->
+			<event type="MOBKILLED" val="20846"/>	<!-- Doll Blader -->
+			<event type="MOBKILLED" val="20847"/>	<!-- Vale Master -->
+			<event type="MOBKILLED" val="20848"/>	<!-- Light Bringer -->
+			<event type="MOBKILLED" val="20849"/>	<!-- Light Worm -->
+			<event type="MOBKILLED" val="20860"/>	<!-- Seal Angel -->
+			<event type="MOBKILLED" val="20986"/>	<!-- Sairon -->
+			<event type="MOBKILLED" val="20987"/>	<!-- Sairons Doll -->
+			<event type="MOBKILLED" val="20988"/>	<!-- Sairons Puppet -->
+			<event type="MOBKILLED" val="20994"/>	<!-- Garden Guard Leader -->
+			<event type="MOBKILLED" val="20995"/>	<!-- Garden Guard -->
+			<event type="MOBKILLED" val="21006"/>	<!-- Doom Servant -->
+			<event type="MOBKILLED" val="21007"/>	<!-- Doom Guard -->
+			<event type="MOBKILLED" val="21008"/>	<!-- Doom Archer -->
+			<event type="MOBKILLED" val="21009"/>	<!-- Doom Trooper  -->
+			<event type="MOBKILLED" val="21010"/>	<!-- Doom Warrior -->
+			<event type="MOBKILLED" val="21062"/>	<!-- Messenger Angel -->
+			<event type="MOBKILLED" val="21063"/>	<!-- Messenger Angel -->
+			<event type="MOBKILLED" val="21064"/>	<!-- Platinum Guardian Archer -->
+			<event type="MOBKILLED" val="21065"/>	<!-- Platinum Guardian Warrior -->
+			<event type="MOBKILLED" val="21066"/>	<!-- Platinum Guardian Shaman -->
+			<event type="MOBKILLED" val="21067"/>	<!-- Guardian Archangel -->
+			<event type="MOBKILLED" val="21068"/>	<!-- Guardian Archangel -->
+			<event type="MOBKILLED" val="21069"/>	<!-- Platinum Guardian Prefect -->
+			<event type="MOBKILLED" val="21070"/>	<!-- Seal Archangel -->
+			<event type="MOBKILLED" val="21071"/>	<!-- Seal Archangel -->
+			<event type="MOBKILLED" val="21072"/>	<!-- Platinum Guardian Chief -->
+			<event type="MOBKILLED" val="21611"/>	<!-- Unpleasant Humming -->
+			<event type="MOBKILLED" val="21612"/>	<!-- Unpleasant Humming -->
+			<event type="MOBKILLED" val="21614"/>	<!-- Death Flyer -->
+			<event type="MOBKILLED" val="21615"/>	<!-- Death Flyer -->
+			<event type="MOBKILLED" val="21617"/>	<!-- Fiend Archer -->
+			<event type="MOBKILLED" val="21620"/>	<!-- Musveren -->
+			<event type="MOBKILLED" val="21621"/>	<!-- Musveren -->
+			<event type="MOBKILLED" val="21623"/>	<!-- Zakens Guard -->
+			<event type="MOBKILLED" val="21624"/>	<!-- Zakens Guard -->
+			<event type="MOBKILLED" val="21626"/>	<!-- Kaim Vanul -->
+			<event type="MOBKILLED" val="21627"/>	<!-- Kaim Vanul -->
+			<event type="MOBKILLED" val="21629"/>	<!-- Pirate Zombie Captain -->
+			<event type="MOBKILLED" val="21630"/>	<!-- Pirate Zombie Captain -->
+			<event type="MOBKILLED" val="21632"/>	<!-- Doll Blader -->
+			<event type="MOBKILLED" val="21633"/>	<!-- Doll Blader -->
+			<event type="MOBKILLED" val="21635"/>	<!-- Vale Master -->
+			<event type="MOBKILLED" val="21636"/>	<!-- Vale Master -->
+			<event type="MOBKILLED" val="29026"/>	<!-- Pirate Zombie Captain -->
+			<event type="MOBKILLED" val="35412"/>	<!-- Doom Guard -->
+			<event type="MOBKILLED" val="35413"/>	<!-- Doom Archer -->
+			<event type="MOBKILLED" val="29001"/>	<!-- Queen Ant -->
+			<event type="MOBKILLED" val="29006"/>	<!-- Core -->
+			<event type="MOBKILLED" val="29014"/>	<!-- Orfen -->
+			<event type="MOBKILLED" val="29022"/>	<!-- Zaken -->
+			<event type="MOBKILLED" val="29176"/>	<!-- Zaken -->
+			<event type="MOBKILLED" val="29181"/>	<!-- Zaken -->
+			<event type="MOBKILLED" val="25016"/>	<!-- The 3rd Underwater Guardian -->
+			<event type="MOBKILLED" val="25106"/>	<!-- Ghost of the Well Lidia -->
+			<event type="MOBKILLED" val="25179"/>	<!-- Guardian of the Statue of Giant Karum -->
+			<event type="MOBKILLED" val="25234"/>	<!-- Ancient Weird Drake -->
+			<event type="MOBKILLED" val="25256"/>	<!-- Taik High Prefect Arak -->
+			<event type="MOBKILLED" val="25407"/>	<!-- Lord Ishka  -->
+			<event type="MOBKILLED" val="25423"/>	<!-- Fairy Queen Timiniel -->
+			<event type="MOBKILLED" val="25226"/>	<!-- Roaring Lord Kastor -->
+			<event type="MOBKILLED" val="25051"/>	<!-- Rahha -->
+			<event type="MOBKILLED" val="25125"/>	<!-- Fierce Tiger King Angel -->
+			<event type="MOBKILLED" val="25255"/>	<!-- Gargoyle Lord Tiphon -->
+			<event type="MOBKILLED" val="25444"/>	<!-- Enmity Ghost Ramdal -->
+			<event type="MOBKILLED" val="25478"/>	<!-- Shilens Priest Hisilrome -->
+			<event type="MOBKILLED" val="25322"/>	<!-- Demons Agent Falston -->
+			<event type="MOBKILLED" val="25263"/>	<!-- Kernons Faithful Servant Kelone -->
+			<event type="MOBKILLED" val="25337"/>	<!-- Anakazel -->
+			<event type="MOBKILLED" val="25073"/>	<!-- Bloody Priest Rudelto -->
+			<event type="MOBKILLED" val="25233"/>	<!-- Spirit of Andras, the Betrayer -->
+			<event type="MOBKILLED" val="25035"/>	<!-- Shilens Messenger Cabrio -->
+			<event type="MOBKILLED" val="25092"/>	<!-- Korim -->
+			<event type="MOBKILLED" val="25163"/>	<!-- Roaring Skylancer -->
+			<event type="MOBKILLED" val="25198"/>	<!-- Fafurions Herald Lokness -->
+			<event type="MOBKILLED" val="25252"/>	<!-- Palibati Queen Themis -->
+			<event type="MOBKILLED" val="25269"/>	<!-- Beast Lord Behemoth -->
+			<event type="MOBKILLED" val="25281"/>	<!-- Anakims Nemesis Zakaron -->
+			<event type="MOBKILLED" val="25325"/>	<!-- Flame of Splendor Barakiel -->
+			<event type="MOBKILLED" val="25453"/>	<!-- Meanas Anor -->
+			<event type="MOBKILLED" val="25328"/>	<!-- Eilhalder von Hellmann -->
+			<event type="MOBKILLED" val="25447"/>	<!-- Immortal Savior Mardil -->
+			<event type="MOBKILLED" val="25199"/>	<!-- Water Dragon Seer Sheshark -->
+			<event type="MOBKILLED" val="25235"/>	<!-- Vanor Chief Kandra -->
+			<event type="MOBKILLED" val="25248"/>	<!-- Doom Blade Tanatos -->
+			<event type="MOBKILLED" val="25220"/>	<!-- Death Lord Hallate -->
+			<event type="MOBKILLED" val="25523"/>	<!-- Plague Golem -->
+			<event type="MOBKILLED" val="25109"/>	<!-- Antharas Priest Cloe -->
+			<event type="MOBKILLED" val="25202"/>	<!-- Krokian Padisha Sobekk -->
+			<event type="MOBKILLED" val="25296"/>	<!-- Icicle Emperor Bumbalump -->
+			<event type="MOBKILLED" val="29020"/>	<!-- Baium -->
+			<event type="MOBKILLED" val="25054"/>	<!-- Kernon -->
+			<event type="MOBKILLED" val="25229"/>	<!-- Storm Winged Naga -->
+			<event type="MOBKILLED" val="25244"/>	<!-- Last Lesser Giant Olkuth -->
+			<event type="MOBKILLED" val="25249"/>	<!-- Palatanos of Horrific Power -->
+			<event type="MOBKILLED" val="25266"/>	<!-- Bloody Empress Decarbia -->
+			<event type="MOBKILLED" val="25276"/>	<!-- Death Lord Ipos -->
+			<event type="MOBKILLED" val="25282"/>	<!-- Death Lord Shax -->
+			<event type="MOBKILLED" val="25205"/>	<!-- Ocean Flame Ashakiel -->
+			<event type="MOBKILLED" val="25524"/>	<!-- Flamestone Giant -->
+			<event type="MOBKILLED" val="25703"/>	<!-- Gigantic Golem -->
+			<event type="MOBKILLED" val="25143"/>	<!-- Fire of Wrath Shuriel -->
+			<event type="MOBKILLED" val="25245"/>	<!-- Last Lesser Giant Glaki -->
+			<event type="MOBKILLED" val="25290"/>	<!-- Daimon the White-Eyed -->
+			<event type="MOBKILLED" val="25293"/>	<!-- Hesti Guardian Deity of the Hot Springs -->
+			<event type="MOBKILLED" val="25338"/>	<!-- Anakazel -->
+			<event type="MOBKILLED" val="25126"/>	<!-- Longhorn Golkonda -->
+			<event type="MOBKILLED" val="25450"/>	<!-- Cherub Galaxia -->
+			<event type="MOBKILLED" val="29062"/>	<!-- Andreas Van Halter -->
+			<event type="MOBKILLED" val="29065"/>	<!-- Sailren -->
+			<event type="MOBKILLED" val="29095"/>	<!-- Gordon -->
+			<event type="MOBKILLED" val="25283"/>	<!-- Lilith -->
+			<event type="MOBKILLED" val="25286"/>	<!-- Anakim -->
+			<event type="MOBKILLED" val="25299"/>	<!-- Ketras Hero Hekaton -->
+			<event type="MOBKILLED" val="25302"/>	<!-- Ketras Commander Tayr -->
+			<event type="MOBKILLED" val="25305"/>	<!-- Ketras Chief Brakki -->
+			<event type="MOBKILLED" val="25306"/>	<!-- Soul of Fire Nastron -->
+			<event type="MOBKILLED" val="25309"/>	<!-- Varkas Hero Shadith -->
+			<event type="MOBKILLED" val="25312"/>	<!-- Varkas Commander Mos -->
+			<event type="MOBKILLED" val="25315"/>	<!-- Varkas Chief Horus -->
+			<event type="MOBKILLED" val="25316"/>	<!-- Soul of Water Ashutar -->
+			<event type="MOBKILLED" val="25319"/>	<!-- Ember -->
+			<event type="MOBKILLED" val="25527"/>	<!-- Uruka -->
+			<event type="MOBKILLED" val="22216"/>	<!-- Tyrannosaurus -->
+			<event type="MOBKILLED" val="25536"/>	<!-- Hannibal -->
+			<event type="MOBKILLED" val="25539"/>	<!-- Typhoon -->
+			<event type="MOBKILLED" val="25643"/>	<!-- Awakened Ancient Sentry -->
+			<event type="MOBKILLED" val="25644"/>	<!-- Awakened Ancient Severer -->
+			<event type="MOBKILLED" val="25645"/>	<!-- Awakened Ancient Soul Extractor -->
+			<event type="MOBKILLED" val="25646"/>	<!-- Awakened Ancient Soul Devourer -->
+			<event type="MOBKILLED" val="25647"/>	<!-- Awakened Ancient Fighter -->
+			<event type="MOBKILLED" val="25648"/>	<!-- Awakened Ancient Fighter -->
+			<event type="MOBKILLED" val="25649"/>	<!-- Awakened Ancient Executor -->
+			<event type="MOBKILLED" val="25650"/>	<!-- Awakened Ancient Executor -->
+			<event type="MOBKILLED" val="25651"/>	<!-- Awakened Ancient Prophet -->
+			<event type="MOBKILLED" val="25652"/>	<!-- Awakened Ancient Prophet -->
+			<event type="MOBKILLED" val="25665"/>	<!-- Yehan Klodekus -->
+			<event type="MOBKILLED" val="25666"/>	<!-- Yehan Klanikus -->
+			<event type="MOBKILLED" val="25690"/>	<!-- Aenkinel -->
+			<event type="MOBKILLED" val="25691"/>	<!-- Aenkinel -->
+			<event type="MOBKILLED" val="25692"/>	<!-- Aenkinel -->
+			<event type="MOBKILLED" val="25693"/>	<!-- Aenkinel -->
+			<event type="MOBKILLED" val="25694"/>	<!-- Aenkinel -->
+			<event type="MOBKILLED" val="25695"/>	<!-- Aenkinel -->
+			<event type="MOBKILLED" val="25667"/>	<!-- Cannibalistic Stakato Chief -->
+			<event type="MOBKILLED" val="25668"/>	<!-- Cannibalistic Stakato Chief -->
+			<event type="MOBKILLED" val="25669"/>	<!-- Cannibalistic Stakato Chief -->
+			<event type="MOBKILLED" val="25670"/>	<!-- Cannibalistic Stakato Chief -->
+			<event type="MOBKILLED" val="25609"/>	<!-- Epidos -->
+			<event type="MOBKILLED" val="25610"/>	<!-- Epidos -->
+			<event type="MOBKILLED" val="25611"/>	<!-- Epidos -->
+			<event type="MOBKILLED" val="25612"/>	<!-- Epidos -->
+			<event type="MOBKILLED" val="25162"/>	<!-- Giant Marpanak -->
+			<event type="MOBKILLED" val="25467"/>	<!-- Gorgolos -->
+			<event type="MOBKILLED" val="29150"/>	<!-- Ekimus -->
+			<event type="MOBKILLED" val="29163"/>	<!-- Tiat -->
+			<event type="MOBKILLED" val="25540"/>	<!-- Demon Prince -->
+			<event type="MOBKILLED" val="25542"/>	<!-- Ranku -->
+			<event type="MOBKILLED" val="25544"/>	<!-- Tully -->
+			<event type="MOBKILLED" val="25674"/>	<!-- Gwindorr -->
+			<event type="MOBKILLED" val="25680"/>	<!-- Giant Marpanak -->
+			<event type="MOBKILLED" val="25681"/>	<!-- Gorgolos -->
+			<event type="MOBKILLED" val="25684"/>	<!-- Last Titan Utenus -->
+			<event type="MOBKILLED" val="25687"/>	<!-- Hekaton Prime -->
+			<event type="MOBKILLED" val="29118"/>	<!-- Beleth -->
+			<event type="MOBKILLED" val="25701"/>	<!-- Anays -->
+			<event type="MOBKILLED" val="25677"/>	<!-- Water Spirit Lian -->
+			<event type="MOBKILLED" val="25603"/>	<!-- Darion -->
+			<event type="MOBKILLED" val="25671"/>	<!-- Queen Shyeed -->
+			<event type="MOBKILLED" val="25713"/>	<!-- Darnels -->
+			<event type="MOBKILLED" val="25714"/>	<!-- Kietch -->
+			<event type="MOBKILLED" val="25716"/>	<!-- Tears -->
+			<event type="MOBKILLED" val="25699"/>	<!-- Glakias -->
+			<event type="MOBKILLED" val="25700"/>	<!-- Glakias -->
+			<event type="MOBKILLED" val="25696"/>	<!-- Taklacan -->
+			<event type="MOBKILLED" val="25698"/>	<!-- Dopagen -->
+			<event type="MOBKILLED" val="29186"/>	<!-- Balor -->
+			<event type="MOBKILLED" val="29047"/>	<!-- Scarlet van Halisha -->
+			<event type="MOBKILLED" val="29179"/>	<!-- Freya -->
+			<event type="MOBKILLED" val="29180"/>	<!-- Freya -->
+			<event type="MOBKILLED" val="29019"/>	<!-- Antharas -->
+			<event type="MOBKILLED" val="29066"/>	<!-- Antharas -->
+			<event type="MOBKILLED" val="29067"/>	<!-- Antharas -->
+			<event type="MOBKILLED" val="29068"/>	<!-- Antharas -->
+			<event type="MOBKILLED" val="29028"/>	<!-- Valakas -->
+			<event type="QUEST_START" val="30115"/>	<!-- Jurek -->
+			<event type="QUEST_START" val="30194"/>	<!-- Gideon -->
+			<event type="QUEST_START" val="30856"/>	<!-- Winonin -->
+			<event type="QUEST_TALK" val="30115"/>	<!-- Jurek -->
+			<event type="QUEST_TALK" val="30194"/>	<!-- Gideon -->
+			<event type="QUEST_TALK" val="30856"/>	<!-- Winonin -->
+		</setting>
+	</quest>
+</quests>

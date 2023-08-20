@@ -1,0 +1,16 @@
+!Донат
+
+<font color="LEVEL">Декущие количество поинтов:</font>    <?points?><br1>
+<font color="LEVEL">Получите поинтов за 1 донат монету:</font>    <?points_add?><br1>
+<font color="LEVEL">Всего можно обменять:</font>    <?points_all?><br1>
+<table width=240>
+	<tr>
+		<td>
+			</td><td><edit var="count" type=number width=105 height=10>
+		</td>
+		<td>
+			<button value="Обменять" action="bypass -h scripts_items.BuyPoints:buy $count" width=120 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+		</td>
+	</tr>
+
+</table><br>

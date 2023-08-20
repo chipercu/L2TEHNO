@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="224" type="SOLO">
+		<name lang="en" val="Test of Sagittarius"/>
+		<name lang="ru" val="Испытание меткости"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20230"/>	<!-- Marsh Stakato Worker -->
+			<event type="MOBKILLED" val="20232"/>	<!-- Marsh Stakato Soldier -->
+			<event type="MOBKILLED" val="20233"/>	<!-- Marsh Spider -->
+			<event type="MOBKILLED" val="20234"/>	<!-- Marsh Stakato Drone -->
+			<event type="MOBKILLED" val="20269"/>	<!-- Breka Orc Shaman -->
+			<event type="MOBKILLED" val="20270"/>	<!-- Breka Orc Overlord -->
+			<event type="MOBKILLED" val="27090"/>	<!-- Serpent Demon Kadesh -->
+			<event type="MOBKILLED" val="20551"/>	<!-- Road Scavenger -->
+			<event type="MOBKILLED" val="20563"/>	<!-- Manashen Gargoyle -->
+			<event type="MOBKILLED" val="20577"/>	<!-- Leto Lizardman -->
+			<event type="MOBKILLED" val="20578"/>	<!-- Leto Lizardman Archer -->
+			<event type="MOBKILLED" val="20579"/>	<!-- Leto Lizardman Soldier -->
+			<event type="MOBKILLED" val="20580"/>	<!-- Leto Lizardman Warrior -->
+			<event type="MOBKILLED" val="20581"/>	<!-- Leto Lizardman Shaman -->
+			<event type="MOBKILLED" val="20582"/>	<!-- Leto Lizardman Overlord -->
+			<event type="MOBKILLED" val="20079"/>	<!-- Ant -->
+			<event type="MOBKILLED" val="20080"/>	<!-- Ant Captain -->
+			<event type="MOBKILLED" val="20081"/>	<!-- Ant Overseer -->
+			<event type="MOBKILLED" val="20082"/>	<!-- Ant Recruit -->
+			<event type="MOBKILLED" val="20084"/>	<!-- Ant Patrol -->
+			<event type="MOBKILLED" val="20086"/>	<!-- Ant Guard -->
+			<event type="MOBKILLED" val="20089"/>	<!-- Noble Ant -->
+			<event type="MOBKILLED" val="20090"/>	<!-- Noble Ant Leader -->
+			<event type="QUEST_START" val="30702"/>	<!-- Bernard -->
+			<event type="QUEST_TALK" val="30702"/>	<!-- Bernard -->
+			<event type="QUEST_TALK" val="30514"/>	<!-- Vokian -->
+			<event type="QUEST_TALK" val="30626"/>	<!-- Hamil -->
+			<event type="QUEST_TALK" val="30653"/>	<!-- Sir Aron Tanford -->
+			<event type="QUEST_TALK" val="30702"/>	<!-- Bernard -->
+			<event type="QUEST_TALK" val="30717"/>	<!-- Gauen -->
+			<item id="3299"/>	<!-- Hunter's 2nd Rune -->
+			<item id="3028"/>	<!-- Crescent Moon Bow -->
+			<item id="3300"/>	<!-- Talisman of Kadesh -->
+			<item id="3306"/>	<!-- Blood of Lizardman -->
+			<item id="3294"/>	<!-- Bernard's Introduction -->
+			<item id="3298"/>	<!-- Hunter's 1st Rune -->
+			<item id="3295"/>	<!-- Hamil's 1st Letter -->
+			<item id="3301"/>	<!-- Talisman of Snake -->
+			<item id="3296"/>	<!-- Hamil's 2nd Letter -->
+			<item id="3297"/>	<!-- Hamil's 3rd Letter -->
+			<item id="3302"/>	<!-- Mithril Clip -->
+			<item id="3303"/>	<!-- Stakato Chitin -->
+			<item id="3304"/>	<!-- Reinforced Bowstring -->
+			<item id="3305"/>	<!-- Manashen's Horn -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,26 @@
+<html>
+<body>
+<table width=280 border=0>
+<tr><td width=140>Стандартная цена: </td>
+<td width=140><font color="aaccff">%AGIT_AUCTION_MIN%</font> аден</td></tr>
+<tr><td width=140>Минимальная цена: </td>
+<td width=140><font color="aaccff">%AGIT_AUCTION_MINBID%</font> аден</td></tr>
+<tr><td width=140>Длительность аукциона: </td>
+<td width=140>%x% дней</td></tr>
+<tr><td width=140>Дата окончания аукциона: </td>
+<td width=140>%AGIT_AUCTION_END_YY% год %AGIT_AUCTION_END_MM% месяц %AGIT_AUCTION_END_DD% день %AGIT_AUCTION_END_HH% часов</td></tr>
+</table>
+<table width=280 border=0 bgcolor=333333>
+<tr><td width=280>%AGIT_AUCTION_DESC%</td></tr>
+</table>
+Вы можете изменить информацию, нажав кнопку "Назад"<br>Хотите продолжить и выставить кланхолл на аукцион? <img src="L2UI.SquareBlank" width=270 height=10> <img src="L2UI.SquareWhite" width=270 height=1> <img src="L2UI.SquareBlank" width=270 height=5>
+<table width=280 border=0>
+<tr>
+<td width=130></td>
+<td width=70 align=center><button action="bypass -h npc_%objectId%_sale2" value="Назад" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td> 
+<td width=70 align=center><button action="bypass -h npc_%objectId%_confirmAuction" value="Ok" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td> 
+</tr>
+</table>
+<br>
+</body>
+</html>

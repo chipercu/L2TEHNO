@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="138" type="SOLO">
+		<name lang="en" val="Temple Champion II"/>
+		<name lang="ru" val="Воитель Храма - 2"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20176"/>	<!-- Wyrm -->
+			<event type="MOBKILLED" val="20550"/>	<!-- Guardian Basilisk -->
+			<event type="MOBKILLED" val="20551"/>	<!-- Road Scavenger -->
+			<event type="MOBKILLED" val="20552"/>	<!-- Fettered Soul -->
+			<event type="NPC_FIRST_TALK" val="30070"/>	<!-- Sylvain -->
+			<event type="QUEST_TALK" val="30070"/>	<!-- Sylvain -->
+			<event type="QUEST_TALK" val="30118"/>	<!-- Pupina -->
+			<event type="QUEST_TALK" val="30474"/>	<!-- Angus -->
+			<event type="QUEST_TALK" val="30666"/>	<!-- Sla -->
+			<item id="10341"/>	<!-- Temple Manifesto -->
+			<item id="10342"/>	<!-- Relics of the Dark Elf Trainee -->
+			<item id="10343"/>	<!-- Angus' Recommendation -->
+			<item id="10344"/>	<!-- Pupina's Recommendation -->
+		</setting>
+	</quest>
+</quests>

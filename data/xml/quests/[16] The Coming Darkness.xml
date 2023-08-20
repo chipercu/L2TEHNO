@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="16" type="SOLO">
+		<name lang="en" val="The Coming Darkness"/>
+		<name lang="ru" val="Приближение Тьмы"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="31517"/>	<!-- Hierarch -->
+			<event type="QUEST_TALK" val="31517"/>	<!-- Hierarch -->
+			<event type="QUEST_TALK" val="31512"/>	<!-- Evil Altar -->
+			<event type="QUEST_TALK" val="31513"/>	<!-- Evil Altar -->
+			<event type="QUEST_TALK" val="31514"/>	<!-- Evil Altar -->
+			<event type="QUEST_TALK" val="31515"/>	<!-- Evil Altar -->
+			<event type="QUEST_TALK" val="31516"/>	<!-- Evil Altar -->
+			<item id="7167"/>	<!-- Crystal of Seal -->
+		</setting>
+	</quest>
+</quests>

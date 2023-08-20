@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!--
+ Coin of Luck shop base 
+ 100 CoL == 1 WMZ
+-->
+
+<list>
+  <config showall="true" notax="true" keepenchanted="false" />
+
+  <!-- 1 WMZ == 150k adena -->
+  <item>
+    <ingredient id="4037" count="1"/>
+    <production id="57" count="1500"/>
+  </item>
+
+  <!-- 1 WMZ == 75k ancient adena -->
+  <item>
+    <ingredient id="4037" count="1"/>
+    <production id="5575" count="750"/>
+  </item>
+
+  <!-- 1 WMZ == 1 Dual Craft Stamp -->
+  <item>
+    <ingredient id="4037" count="100"/>
+    <production id="5126" count="1"/>
+  </item>
+
+  <!-- 1 WMZ == 21400 Silver Arrows -->
+  <item>
+    <ingredient id="4037" count="1"/>
+    <production id="1343" count="214"/>
+  </item>
+
+  <!-- 1 WMZ == 18700 Mithril Arrows -->
+  <item>
+    <ingredient id="4037" count="1"/>
+    <production id="1344" count="187"/>
+  </item>
+
+  <!-- 1 WMZ == 15000 Shining Arrows -->
+  <item>
+    <ingredient id="4037" count="1"/>
+    <production id="1345" count="150"/>
+  </item>
+
+  <!-- 1 WMZ == 21400 Silver Bolts -->
+  <item>
+    <ingredient id="4037" count="1"/>
+    <production id="9635" count="214"/>
+  </item>
+
+  <!-- 1 WMZ == 18700 Mithril Bolts -->
+  <item>
+    <ingredient id="4037" count="1"/>
+    <production id="9636" count="187"/>
+  </item>
+
+  <!-- 1 WMZ == 15000 Shining Bolts -->
+  <item>
+    <ingredient id="4037" count="1"/>
+    <production id="9637" count="150"/>
+  </item>
+
+</list>

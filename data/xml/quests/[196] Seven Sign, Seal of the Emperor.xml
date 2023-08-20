@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="196" type="SOLO">
+		<name lang="en" val="Seven Sign, Seal of the Emperor"/>
+		<name lang="ru" val="Семь Печатей, Печать Императора"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="27384"/>	<!-- Seal Device -->
+			<event type="MOBKILLED" val="27371"/>	<!-- Lilim Butcher -->
+			<event type="MOBKILLED" val="27372"/>	<!-- Lilim Magus -->
+			<event type="MOBKILLED" val="27373"/>	<!-- Lilim Slave Knight -->
+			<event type="MOBKILLED" val="27374"/>	<!-- Shilens Evil Thoughts -->
+			<event type="MOBKILLED" val="27375"/>	<!-- Shilens Evil Thoughts -->
+			<event type="MOBKILLED" val="27377"/>	<!-- Lilim Assassin -->
+			<event type="MOBKILLED" val="27378"/>	<!-- Lilim Great Magus -->
+			<event type="MOBKILLED" val="27379"/>	<!-- Lilim Guard Knight -->
+			<event type="QUEST_START" val="30969"/>	<!-- Iason Heine -->
+			<event type="QUEST_TALK" val="30969"/>	<!-- Iason Heine -->
+			<event type="QUEST_TALK" val="32584"/>	<!-- Merchant of Mammon -->
+			<event type="QUEST_TALK" val="32585"/>	<!-- Promise of Mammon -->
+			<event type="QUEST_TALK" val="32586"/>	<!-- Shunaiman -->
+			<event type="QUEST_TALK" val="32587"/>	<!-- Leon -->
+			<event type="QUEST_TALK" val="32598"/>	<!-- Court Magician -->
+			<event type="QUEST_TALK" val="32657"/>	<!-- Disciples Gatekeeper -->
+			<event type="QUEST_TALK" val="32593"/>	<!-- Wood -->
+			<item id="13846"/>	<!-- Seal of Binding -->
+			<item id="13809"/>	<!-- Court Magician's Magic Staff -->
+			<item id="13808"/>	<!-- Elmoreden Holy Water -->
+			<item id="15310"/>	<!-- Sacred Sword of Einhasad -->
+		</setting>
+	</quest>
+</quests>

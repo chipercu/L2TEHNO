@@ -1,0 +1,913 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!--
+	Примечание: списки №2 и №3 обычно для noble tp
+	-->
+
+	<npc id="30006" name="Roxxy">
+		<sublist id="1">
+			<target loc="-80684 149770 -3040" price="18000" name="The Village of Gludin;Глудин" />
+			<target loc="9744 15645 -4568" price="24000" name="Dark Elven Village;Деревня Темных Эльфов" />
+			<target loc="115120 -178224 -880" price="46000" name="Dwarven Village;Деревня Гномов" />
+			<target loc="46951 51550 -2976" price="23000" name="Elven Village;Эльфийская Деревня" />
+			<target loc="-45158 -112583 -240" price="35000" name="Orc Village;Деревня Орков" />
+			<target loc="-117251 46771 360" price="20000" name="Kamael Village;Деревня Камаэль" />
+			<target loc="-112367 234703 -3668" price="830" name="Elven Ruins;Эльфийские Руины" />
+			<target loc="-111728 244330 -3448" price="770" name="Singing Waterfall;Поющий Водопад" />
+			<target loc="-106696 214691 -3424" price="1000" name="Talking Island, Northen Territory;Говорящий Остров - север" />
+			<target loc="-99586 237637 -3568" price="470" name="Obelisk of Victory;Обелиск Победы" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="49315 248452 -5960" price="1000" name="Center of the Elven Ruins;Середина Эльфийских Руин" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="49315 248452 -5960" price="1" item="6651" name="Center of the Elven Ruins;Середина Эльфийских Руин" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="30059" name="Trisha">
+		<sublist id="1">
+			<target loc="83463 148045 -3400" price="6800" name="The Town of Giran;Гиран" />
+			<target loc="111455 219400 -3544" price="12000" name="Heine;Хейн" />
+			<target loc="-12787 122779 -3112" price="3400" name="The Town of Gludio;Глудио" />
+			<target loc="147850 -55300 -2728" price="71000" name="The Town of Goddard;Годдард" />
+			<target loc="43835 -47749 -792" price="57000" name="Rune Township;Руна" />
+			<target loc="87170 -143355 -1288" price="88000" name="The Town of Schuttgart;Шутгарт" />
+			<target loc="146783 25808 -2008" price="52000" name="The Town of Aden;Аден" />
+			<target loc="82971 53207 -1488" price="33000" name="The Town of Oren;Орен" />
+			<target loc="5106 126916 -3664" price="760" name="Cruma Marshland;Топи Крумы" />
+			<target loc="17225 114173 -3440" price="2300" name="Cruma Tower;Башня Крумы" />
+			<target loc="47382 111278 -2104" price="1700" name="Fortress of Resistance;Укрепление Партизан" />
+			<target loc="630 179184 -3720" price="1500" name="Plains of Dion;Равнины Диона" />
+			<target loc="34475 188095 -2976" price="2900" name="Bee Hive;Пасека" />
+			<target loc="58316 163851 -2816" price="3900" name="Tanor Canyon;Каньон Танор" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="51055 141959 -2869" price="1000" name="Execution Grounds;Земля Казненных" />
+			<target loc="26810 172787 -3376" price="1000" name="Floran Agricultural Area;Угодья Флорана" />
+			<target loc="15941 125455 -3640" price="1000" name="The Center of the Cruma Marshlands;Середина Топей Крумы" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="49315 248452 -5960" price="1" item="6651" name="Execution Grounds;Земля Казненных" />
+			<target loc="26810 172787 -3376" price="1" item="6651" name="Floran Agricultural Area;Угодья Флорана" />
+			<target loc="15941 125455 -3640" price="1" item="6651" name="The Center of the Cruma Marshlands;Середина Топей Крумы" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="30080" name="Clarissa">
+		<sublist id="1">
+			<target loc="82888 53300 -1488" price="9400" name="The Town of Oren;Орен" />
+			<target loc="111455 219400 -3544" price="7600" name="Heine;Хейн" />
+			<target loc="15472 142880 -2688" price="6800" name="The Town of Dion;Дион" />
+			<target loc="147850 -55300 -2728" price="63000" name="The Town of Goddard;Годдард" />
+			<target loc="43835 -47749 -792" price="59000" name="Rune Township;Руна" />
+			<target loc="87170 -143355 -1288" price="87000" name="Town of Schuttgart;Шутгарт" />
+			<target loc="-12787 122779 -3112" price="29000" name="The Town of Gludio;Глудио" />
+			<target loc="146783 25808 -2008" price="13000" name="The Town of Aden;Аден" />
+			<target loc="47935 186810 -3420" price="5200" name="Giran Harbor;Гавань Гирана" />
+			<target loc="105918 109759 -3192" price="4400" name="Hardin's Academy;Академия Хардина" />
+			<target loc="43408 206881 -3752" price="5000" name="Devil's Isle;Остров Дьявола" />
+			<target loc="85546 131328 -3672" price="1000" name="Breka's Stronghold;Укрепление Бреки" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="113553 134813 -3640" price="1000" name="Gorgon Flower Garden;Сад Горгон" />
+			<target loc="105918 109759 -3192" price="1000" name="Hardins Private Academy;Академия Хардина" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="113553 134813 -3640" price="1" item="6651" name="Gorgon Flower Garden;Сад Горгон" />
+			<target loc="105918 109759 -3192" price="1" item="6651" name="Hardins Private Academy;Академия Хардина" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="30134" name="Jasmine">
+		<sublist id="1">
+			<target loc="-12787 122779 -3112" price="10000" name="The Town of Gludio;Глудио" />
+			<target loc="115120 -178224 -880" price="22000" name="Dwarven Village;Деревня Гномов" />
+			<target loc="-84141 244623 -3728" price="24000" name="Talking Island Village;Деревня Говорящего Острова" />
+			<target loc="-45158 -112583 -240" price="13000" name="Orc Village;Деревня Орков" />
+			<target loc="-117251 46771 360" price="13000" name="Kamael Village;Деревня Камаэль" />
+			<target loc="-22224 14168 -3232" price="890" name="Dark Forest;Темный Лес" />
+			<target loc="-21966 40544 -3192" price="1100" name="Swampland;Топи" />
+			<target loc="-61095 75104 -3352" price="3600" name="Spider Nest;Гнездо Пауков" />
+			<target loc="-10612 75881 -3592" price="1700" name="Neutral Zone;Нейтральная Зона" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="-18415 85624 -3680" price="1000" name="The Center of the Neutral Zone;Середина Нейтральной Зоны" />
+			<target loc="-14129 27094 -3680" price="1000" name="The Center of the Dark Forest;Сердце Темного Леса" />
+			<target loc="-49185 49441 -5912" price="1000" name="Center of the School of Dark Arts;Середина Школы Темных Искуств" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="-18415 85624 -3680" price="1" item="6651" name="The Center of the Neutral Zone;Середина Нейтральной Зоны" />
+			<target loc="-14129 27094 -3680" price="1" item="6651" name="The Center of the Dark Forest;Сердце Темного Леса" />
+			<target loc="-49185 49441 -5912" price="1" item="6651" name="Center of the School of Dark Arts;Середина Школы Темных Искуств" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="30146" name="Mirabel">
+		<sublist id="1">
+			<target loc="-12787 122779 -3112" price="9200" name="The Town of Gludio;Глудио" />
+			<target loc="115120 -178224 -880" price="23000" name="Dwarven Village;Деревня Гномов" />
+			<target loc="-84141 244623 -3728" price="23000" name="Talking Island Village;Деревня Говорящего Острова" />
+			<target loc="-45158 -112583 -240" price="18000" name="Orc Village;Деревня Орков" />
+			<target loc="-117251 46771 360" price="16000" name="Kamael Village;Деревня Камаэль" />
+			<target loc="21362 51122 -3688" price="710" name="Elven Forest;Эльфийский Лес" />
+			<target loc="29294 74968 -3776" price="820" name="Elven Fortress;Эльфийская Крепость" />
+			<target loc="-10612 75881 -3592" price="1700" name="Neutral Zone;Нейтральная Зона" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="-18415 85624 -3680" price="1000" name="The Center of the Neutral Zone;Центр Нейтральной Зоны" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="-18415 85624 -3680" price="1" item="6651" name="The Center of the Neutral Zone;Центр Нейтральной Зоны" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="30162" name="Karin">
+		<sublist id="1">
+			<target loc="85475 16087 -3640" price="0" name="1st Floor Lobby;1-й этаж - Вход" />
+			<target loc="85475 16087 -2780" price="0" name="2nd Floor Human Wizard Guild;2-й этаж - Гильдия Магов" />
+			<target loc="85475 16087 -2270" price="0" name="3rd Floor Elf Wizard Guild;3-й этаж - Гильдия Светлых Магов" />
+			<target loc="85475 16087 -1750" price="0" name="4th Floor Dark Elf Wizard Guild;4-й этаж - Гильдия Темных Магов" />
+		</sublist>
+	</npc>
+
+	<npc id="30177" name="Valentina">
+		<sublist id="1">
+			<target loc="146783 25808 -2008" price="6900" name="The Town of Aden;Аден" />
+			<target loc="83463 148045 -3400" price="9400" name="The Town of Giran;Гиран" />
+			<target loc="43835 -47749 -792" price="10000" name="Rune Township;Руна" />
+			<target loc="147850 -55300 -2728" price="37000" name="The Town of Goddard;Годдард" />
+			<target loc="111455 219400 -3544" price="50000" name="Heine;Хейн" />
+			<target loc="15472 142880 -2688" price="33000" name="The Town of Dion;Дион" />
+			<target loc="87145 -143372 -1288" price="59000" name="The Town of Schuttgart;Шутгарт" />
+			<target loc="-12787 122779 -3112" price="35000" name="The Town of Gludio;Глудио" />
+			<target loc="85475 16087 -3672" price="3700" name="Ivory Tower;Башня Слоновой Кости" />
+			<target loc="117088 76931 -2688" price="4100" name="Hunters Village;Деревня Охотников" />
+			<target loc="105918 109759 -3192" price="6100" name="Hardins Private Academy;Академия Хардина" />
+			<target loc="76839 63851 -3648" price="780" name="Headmaster`s Authority (West Gate);Школа Полномочий (Западные Ворота)" />
+            <target loc="79414 71496 -3448" price="780" name="Headmaster`s Authority (South Gate);Школа Полномочий (Южные Ворота)" />
+            <target loc="87472 61473 -3664" price="780" name="Headmaster`s Authority (Center Gate);Школа Полномочий (Центральные Ворота)" />
+			<target loc="87252 85514 -3056" price="1900" name="Plains of the Lizardmen;Долина Ящеров" />
+			<target loc="91539 -12204 -2440" price="5200" name="Outlaw Forest;Лес Разбойников" />
+			<target loc="64328 26803 -3768" price="2500" name="Sea of Spores;Море спор" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="93218 16969 -3904" price="1000" name="Forest of Evil;Лес Зла" />
+			<target loc="67097 68815 -3648" price="1000" name="Timak Outpost;Застава Тимак" />
+			<target loc="-44566 77508 -3736" price="1000" name="Altar of Rites;Церемониальный Алтарь" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="93218 16969 -3904" price="1" item="6651" name="Forest of Evil;Лес Зла" />
+			<target loc="67097 68815 -3648" price="1" item="6651" name="Timak Outpost;Застава Тимак" />
+			<target loc="-44566 77508 -3736" price="1" item="6651" name="Altar of Rites;Церемониальный Алтарь" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="30233" name="Esmeralda">
+		<sublist id="1">
+			<target loc="146783 25808 -2008" price="5900" name="The Town of Aden;Аден" />
+			<target loc="82971 53207 -1488" price="4100" name="The Town of Oren;Орен" />
+			<target loc="105918 109759 -3192" price="3400" name="Hardins Private Academy;Академия Хардина" />
+			<target loc="124904 61992 -3920" price="1300" name="Southern Region The Enchanted Valley;Волшебная Долина - юг" />
+			<target loc="104426 33746 -3800" price="3600" name="Northern Region The Enchanted Valley;Волшебная Долина - север" />
+			<target loc="142065 81300 -3000" price="2000" name="Entrance to the Forest of Mirrors;Лес Зеркал" />
+			<target loc="73024 118485 -3696" price="1800" name="Dragon Valley;Долина Драконов" />
+			<target loc="131557 114509 -3712" price="7000" name="The Heart of Antharas's Lair;Логово Антараса (Центр)" />
+			<target loc="85391 16228 -3672" price="13000" name="Ivory Tower;Башня Слоновой Кости" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="166080 75574 -2992" price="1000" name="The Center of the Forest of Mirrors;Середина Леса Зеркал" />
+			<target loc="114674 44150 -3376" price="1000" name="The Center of the Enchanted Valley;Середина Волшебной Долины" />
+			<target loc="114306 86573 -3112" price="1000" name="Hunters Valley;Ущелье Охотников" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+			<target loc="154396 121235 -3808" price="1000" name="The Heart of Antharas's Lair;Логово Антараса (Центр)" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="166080 75574 -2992" price="1" item="6651" name="The Center of the Forest of Mirrors;Середина Леса Зеркал" />
+			<target loc="114674 44150 -3376" price="1" item="6651" name="The Center of the Enchanted Valley;Середина Волшебной Долины" />
+			<target loc="114306 86573 -3112" price="1" item="6651" name="Hunters Valley;Ущелье Охотников" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+			<target loc="154396 121235 -3808" price="1" item="13722" name="The Heart of Antharas's Lair;Логово Антараса (Центр)" />
+		</sublist>
+	</npc>
+
+	<npc id="30256" name="Bella">
+		<sublist id="1">
+			<target loc="87145 -143372 -1288" price="85000" name="The Town of Schuttgart;Шутгарт" />
+			<target loc="111455 219400 -3544" price="47000" name="Heine;Хейн" />
+			<target loc="146783 25808 -2008" price="56000" name="The Town of Aden;Аден" />
+			<target loc="82971 53207 -1488" price="35000" name="The Town of Oren;Орен" />
+			<target loc="15472 142880 -2678" price="3400" name="The Town of Dion;Дион" />
+			<target loc="147850 -55300 -2728" price="71000" name="The Town of Goddard;Годдард" />
+			<target loc="83463 148045 -3400" price="29000" name="The Town of Giran;Гиран" />
+			<target loc="43835 -47749 -792" price="53000" name="Rune Township;Руна" />
+			<target loc="-80684 149770 -3040" price="7300" name="The Village of Gludin;Глудин" />
+			<target loc="46951 51550 -2976" price="9200" name="The Elven Village;Эльфийская Деревня" />
+			<target loc="9744 15645 -4568" price="10000" name="The Dark Elven Village;Деревня Темных Эльфов" />
+			<target loc="115120 -178224 -880" price="32000" name="Dwarven Village;Деревня Гномов" />
+			<target loc="-45158 -112583 -240" price="23000" name="Orc Village;Деревня Орков" />
+			<target loc="-117251 46771 360" price="12000" name="Kamael Village;Деревня Камаэль" />
+			<target loc="-41248 122848 -2904" price="790" name="Ruins of Agony;Руины Страданий" />
+			<target loc="-19120 136816 -3752" price="610" name="Ruins of Despair;Руины Отчаяния" />
+			<target loc="-9959 176184 -4160" price="2100" name="The Ant Nest;Муравейник" />
+			<target loc="-28327 155125 -3496" price="1400" name="Windawood Manor;Поместье Виндавуд" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="-6989 109503 -3040" price="1000" name="Evil Hunting Grounds;Охотничти Угодья Зла" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="-6989 109503 -3040" price="1" item="6651" name="Evil Hunting Grounds;Охотничти Угодья Зла" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="30320" name="Richlin">
+		<sublist id="1">
+			<target loc="-12787 122779 -3112" price="7300" name="The Town of Gludio;Глудио" />
+			<target loc="-84141 244623 -3729" price="9400" name="Talking Island Village;Деревня Говорящего Острова" />
+			<target loc="46951 51550 -2976" price="16000" name="The Elven Village;Эльфийская Деревня" />
+			<target loc="9744 15645 -4500" price="16000" name="The Dark Elven Village;Деревня Темных Эльфов" />
+			<target loc="115120 -178224 -917" price="38000" name="Dwarven Village;Деревня Гномов" />
+			<target loc="-45158 -112583 -236" price="26000" name="Orc Village;Деревня Орков" />
+			<target loc="-117251 46771 360" price="10000" name="Kamael Village;Деревня Камаэль" />
+			<target loc="-44763 203470 -3592" price="1800" name="Langk Lizardman Dwellings;Поселение Ящеров Лангк" />
+			<target loc="-75437 168800 -3632" price="550" name="Windmill Hill;Холм Ветряных Мельниц" />
+			<target loc="-63736 101522 -3552" price="1400" name="Fellmere Harvest Grounds;Охотничьи Угодья Фельмер" />
+			<target loc="-53001 191425 -3568" price="2000" name="Forgotten Temple;Забытый Храм" />
+			<target loc="-89763 105359 -3576" price="1800" name="Orc Barracks;Лагерь Орков" />
+			<target loc="-88539 83389 -2864" price="2600" name="Windy Hill;Холм Ветров" />
+			<target loc="-49853 147089 -2784" price="1200" name="Abandoned Camp;Заброшенный Лагерь" />
+			<target loc="-16526 208032 -3664" price="3400" name="Wastelands;Пустошь" />
+			<target loc="-42256 198333 -2800" price="3700" name="Red Rock Ridge;Красная Гора" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="-54026 179504 -4640" price="1000" name="Center of the Forgotten Temple;Середина Забытого Храма" />
+			<target loc="-47506 179572 -3632" price="1000" name="Wasteland, Western Region;Пустошь, Западный Регион" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="-54026 179504 -4640" price="1" item="6651" name="Center of the Forgotten Temple;Середина Забытого Храма" />
+			<target loc="-47506 179572 -3632" price="1" item="6651" name="Wasteland, Western Region;Пустошь - запад" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="30540" name="Wirphy">
+		<sublist id="1">
+			<target loc="-12787 122779 -3112" price="32000" name="The Town of Gludio;Глудио" />
+			<target loc="87170 -143355 -1288" price="4400" name="The Town of Schuttgart;Шутгарт" />
+			<target loc="9709 15566 -4568" price="22000" name="Dark Elven Village;Деревня Темных Эльфов" />
+			<target loc="-84141 244623 -3728" price="46000" name="Talking Island Village;Деревня Говорящего Острова" />
+			<target loc="46951 51550 -2976" price="23000" name="Elven Village;Эльфийская Деревня" />
+			<target loc="-45158 -112583 -240" price="17000" name="Orc Village;Деревня Орков" />
+			<target loc="-117251 46771 360" price="32000" name="Kamael Village;Деревня Камаэль" />
+			<target loc="139714 -177456 -1536" price="690" name="Abandoned Coal Mines;Заброшенный Угольный Рудник" />
+			<target loc="169008 -208272 -3496" price="2400" name="Eastern Mining Zone (Northeastern Shore);Западные Рудники (северо-восточное побережье)" />
+			<target loc="136910 -205082 -3664" price="970" name="Western Mining Zone (Central Shore);Западные Рудники (центральное побережье)" />
+			<target loc="171946 -173352 3440" price="11000" name="Mithril Mines Western Entrace;Западный Вход в Мифриловый Рудник" />
+			<target loc="178591 -184615 -360" price="12000" name="Mithril Mines Eastern Entrace;Северный Вход в Мифриловый Рудник" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="175499 -181586 -904" price="1000" name="The Center of the Mithril Mines;Сердце Мифрилового Рудника" />
+			<target loc="144706 -173223 -1520" price="1000" name="The Center of the Abandoned Coal Mines;Сердце Заброшенного Угольного Рудника" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="175499 -181586 -904" price="1" item="6651" name="The Center of the Mithril Mines;Сердце Мифрилового Рудника" />
+			<target loc="144706 -173223 -1520" price="1" item="6651" name="The Center of the Abandoned Coal Mines;Сердце Заброшенного Угольного Рудника" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="30576" name="Tamil">
+		<sublist id="1">
+			<target loc="-12787 122779 -3112" price="23000" name="The Town of Gludio;Глудио" />
+			<target loc="87170 -143355 -1288" price="13000" name="The Town of Schuttgart;Шутгарт" />
+			<target loc="9744 15645 -4568" price="13000" name="Dark Elven Village;Деревня Темных Эльфов" />
+			<target loc="115120 -178224 -880" price="17000" name="Dwarven Village;Деревня Гномов" />
+			<target loc="-84141 244623 -3728" price="35000" name="Talking Island Village;Деревня Говорящего Острова" />
+			<target loc="46951 51550 -2976" price="18000" name="Elven Village;Эльфийская Деревня" />
+			<target loc="-117251 46771 360" price="17000" name="Kamael Village;Деревня Камаэль" />
+			<target loc="-4190 -80040 -2696" price="2000" name="Immortal Plateau, Southern Region;Плато Бессмертия, юг" />
+			<target loc="-10983 -117484 -2464" price="960" name="The Immortal Plateau;Плато Бессмертия" />
+			<target loc="9340 -112509 -2509" price="1500" name="Cave of Trials;Пещера Испытаний" />
+			<target loc="8652 -139941 -1144" price="1600" name="Frozen Waterfall;Замерзший Водопад" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="-25309 -131569 -680" price="1000" name="Immortal Plateau, Northen Region;Плато Бессмертия, север" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="-25309 -131569 -680" price="1" item="6651" name="Immortal Plateau, Northen Region;Плато Бессмертия, север" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="30716" name="Cecile">
+		<sublist id="1">
+			<target loc="84856 15912 -4270" price="0" name="1st Floor Underground Shopping Area;Подвал - Торговая зона" />
+			<target loc="85336 16137 -3640" price="0" name="1st Floor Lobby;1-й этаж - Вход" />
+			<target loc="85391 16228 -2270" price="0" name="3rd Floor Elven Wizard Guild;3-й этаж - Гильдия Светлых Магов" />
+			<target loc="85391 16228 -1750" price="0" name="4th Floor Dark Wizard Guild;4-й этаж - Гильдия Темных Магов" />
+		</sublist>
+	</npc>
+
+	<npc id="30719" name="Mariell">
+		<sublist id="1">
+			<target loc="84970 15961 -4270" price="0" name="1st Floor Underground Shopping Area;Подвал - Торговая зона" />
+			<target loc="85475 16087 -3640" price="0" name="1st Floor Lobby;1-й этаж - Вход" />
+			<target loc="85475 16087 -2780" price="0" name="2nd Floor Human Wizard Guild;2-й этаж - Гильдия Магов" />
+			<target loc="85475 16087 -1750" price="0" name="4th Floor Dark Wizard Guild;4-й этаж - Гильдия Темных Магов" />
+		</sublist>
+	</npc>
+
+	<npc id="30722" name="Merian">
+		<sublist id="1">
+			<target loc="84971 15961 -4270" price="0" name="1st Floor Underground Shopping Area;Подвал - Торговая зона" />
+			<target loc="85475 16087 -3640" price="0" name="1st Floor Lobby;1-й этаж - Вход" />
+			<target loc="85475 16087 -2780" price="0" name="2nd Floor Human Wizard Guild;2-й этаж - Гильдия Магов" />
+			<target loc="85475 16087 -2270" price="0" name="3rd Floor Elven Wizard Guild;3-й этаж - Гильдия Светлых Магов" />
+		</sublist>
+	</npc>
+
+	<npc id="30727" name="Verona">
+		<sublist id="1">
+			<target loc="82971 53207 -1488" price="3700" name="The Town of Oren;Орен" />
+			<target loc="117088 76931 -2688" price="6800" name="The Hunter Village;Деревня Охотников" />
+			<target loc="146783 25808 -2008" price="6200" name="The Town of Aden;Аден" />
+		</sublist>
+		<sublist id="2">
+			<target loc="84971 15961 -4270" price="0" name="1st Floor Underground Shopping Area;Подвал - Торговая зона" />
+			<target loc="85475 16087 -2780" price="0" name="2nd Floor Human Wizard Guild;2-й этаж - Гильдия Магов" />
+			<target loc="85475 16087 -2270" price="0" name="3rd Floor Elven Wizard Guild;3-й этаж - Гильдия Светлых Магов" />
+			<target loc="85475 16087 -1750" price="0" name="4th Floor Dark Wizard Guild;4-й этаж - Гильдия Темных Магов" />
+		</sublist>
+	</npc>
+
+	<npc id="30836" name="Minevea">
+		<sublist id="1">
+			<target loc="83463 148023 -3400" price="4400" name="The Town of Giran;Гиран" />
+			<target loc="82971 53207 -1488" price="6100" name="The Town of Oren;Орен" />
+			<target loc="117088 76931 -2688" price="3400" name="The Hunters Village;Деревня Охотников" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="113553 134813 -3640" price="1000" name="Gorgon Flower Garden;Сад Горгон" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="113553 134813 -3640" price="1" item="6651" name="Gorgon Flower Garden;Сад Горгон" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="30727" name="Verona">
+		<sublist id="1">
+			<target loc="82971 53207 -1488" price="3700" name="The Town of Oren;Орен" />
+			<target loc="117088 76931 -2688" price="6800" name="The Hunter Village;Деревня Охотников" />
+			<target loc="146783 25808 -2008" price="6200" name="The Town of Aden;Аден" />
+		</sublist>
+		<sublist id="2">
+			<target loc="84971 15961 -4270" price="0" name="1st Floor Underground Shopping Area;Подвал - Торговая зона" />
+			<target loc="85475 16087 -2780" price="0" name="2nd Floor Human Wizard Guild;2-й этаж - Гильдия Магов" />
+			<target loc="85475 16087 -2270" price="0" name="3rd Floor Elven Wizard Guild;3-й этаж - Гильдия Светлых Магов" />
+			<target loc="85475 16087 -1750" price="0" name="4th Floor Dark Wizard Guild;4-й этаж - Гильдия Темных Магов" />
+		</sublist>
+	</npc>
+
+	<npc id="30848" name="Elisa">
+		<sublist id="1">
+			<target loc="147850 -55300 -2728" price="8100" name="The Town of Goddard;Годдард" />
+			<target loc="82971 53207 -1488" price="6900" name="The Town of Oren;Орен" />
+			<target loc="83463 148045 -3400" price="13000" name="The Town of Giran;Гиран" />
+			<target loc="111455 219400 -3544" price="59000" name="Heine;Хейн" />
+			<target loc="87170 -143355 -1288" price="53000" name="The Town of Schuttgart;Шутгарт" />
+			<target loc="15472 142880 -2688" price="52000" name="The Town of Dion;Дион" />
+			<target loc="-12787 122779 -3112" price="56000" name="The Town of Gludio;Глудио" />
+			<target loc="43835 -47749 -792" price="37000" name="Rune Township;Руна" />
+			<target loc="-117251 46771 360" price="26000" name="Kamael Village;Деревня Камаэль" />
+			<target loc="117088 76931 -2688" price="5900" name="The Hunters Village;Деревня Охотников" />
+			<target loc="146440 46723 -3423" price="2000" name="Coliseum;Колизей" />
+			<target loc="168217 37990 -4072" price="1900" name="Forsaken Plains;Забытые Равнины" />
+			<target loc="184737 19750 -3168" price="3000" name="Seal of Shilen;Запретные Врата" />
+			<target loc="142065 81300 -3000" price="4400" name="Forest of Mirrors;Лес Зеркал" />
+			<target loc="155310 -16339 -3320" price="6800" name="Blazing Swamp;Раскаленные Топи" />
+			<target loc="183543 -14974 -2776" price="6500" name="Fields of Massacre;Поле Брани" />
+			<target loc="106517 -2871 -3416" price="5900" name="Ancient Battleground;Древнее Поле Битвы" />
+			<target loc="170838 55776 -5280" price="6100" name="Silent Valley;Долина Безмолвия" />
+			<target loc="119900 16090 -5000" price="4200" name="Tower of Insolence;Башня Дерзости" />
+			<target loc="174491 50942 -4360" price="7400" name="Entrace to Giant's Cave;Вход в Пещеру Гигантов" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="183985 61424 -3992" price="1000" name="The Giant's Cave Upper Layer;Пещера Гигантов - верх" />
+			<target loc="191754 56760 -7624" price="1000" name="The Giant's Cave Lower Layer;Пещера Гигантов - низ" />
+			<target loc="135756 19557 -3424" price="1000" name="Plains of Glory;Равнины Славы" />
+			<target loc="156898 11217 -4032" price="1000" name="War-Torn Plains;Равнины Неистовства" />
+			<target loc="110848 16154 -2120" price="1000" name="Tower of Insolence, 3rd Floor;Башня Дерзости, 3-й этаж" />
+			<target loc="118404 15988 832" price="1000" name="Tower of Insolence, 5th Floor;Башня Дерзости, 5-й этаж" />
+			<target loc="115064 12181 2960" price="1000" name="Tower of Insolence, 7th Floor;Башня Дерзости, 7-й этаж" />
+			<target loc="118525 16455 5984" price="1000" name="Tower of Insolence, 10th Floor;Башня Дерзости, 10-й этаж" />
+			<target loc="115384 16820 9000" price="1000" name="Tower of Insolence, 13th Floor;Башня Дерзости, 13-й этаж" />
+			<target loc="114306 86573 -3112" price="1000" name="Hunters Valley;Деревня Охотников" />
+			<target loc="166182 91560 -3168" price="1000" name="Anghel Waterfall;Ангельский Водопад" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="183985 61424 -3992" price="1" item="6651" name="The Giant's Cave Upper Layer;Пещера Гигантов - верх" />
+			<target loc="191754 56760 -7624" price="1" item="6651" name="The Giant's Cave Lower Layer;Пещера Гигантов - низ" />
+			<target loc="135756 19557 -3424" price="1" item="6651" name="Plains of Glory;Равнины Славы" />
+			<target loc="156898 11217 -4032" price="1" item="6651" name="War-Torn Plains;Равнины Неистовства" />
+			<target loc="110848 16154 -2120" price="1" item="6651" name="Tower of Insolence, 3rd Floor;Башня Дерзости, 3-й этаж" />
+			<target loc="118404 15988 832" price="1" item="6651" name="Tower of Insolence, 5th Floor;Башня Дерзости, 5-й этаж" />
+			<target loc="115064 12181 2960" price="1" item="6651" name="Tower of Insolence, 7th Floor;Башня Дерзости, 7-й этаж" />
+			<target loc="118525 16455 5984" price="1" item="6651" name="Tower of Insolence, 10th Floor;Башня Дерзости, 10-й этаж" />
+			<target loc="115384 16820 9000" price="1" item="6651" name="Tower of Insolence, 13th Floor;Башня Дерзости, 13-й этаж" />
+			<target loc="114306 86573 -3112" price="1" item="6651" name="Hunters Valley;Деревня Охотников" />
+			<target loc="166182 91560 -3168" price="1" item="6651" name="Anghel Waterfall;Ангельский Водопад" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="30878" name="Angelina">
+		<sublist id="1">
+			<target loc="83463 148045 -3400" price="5200" name="The Town of Giran;Гиран" />
+			<target loc="111333 219345 -3546" price="7100" name="Heine;Хейн" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="30899" name="Flauen">
+		<sublist id="1">
+			<target loc="83463 148045 -3400" price="7600" name="The Town of Giran;Гиран" />
+			<target loc="82971 53207 -1488" price="50000" name="The Town of Oren;Орен" />
+			<target loc="15472 142880 -2688" price="12000" name="The Town of Dion;Дион" />
+			<target loc="146783 25808 -2008" price="59000" name="The Town of Aden;Аден" />
+			<target loc="147850 -55300 -2728" price="83000" name="The Town of Goddard;Годдард" />
+			<target loc="43835 -47749 -792" price="82000" name="Rune Township;Руна" />
+			<target loc="87170 -143355 -1288" price="100000" name="The Town of Schuttgart;Шутгарт" />
+			<target loc="-12787 122779 -3112" price="47000" name="The Town of Gludio;Глудио" />
+			<target loc="47938 186864 -3480" price="7100" name="Giran Harbor;Гавань Гирана" />
+			<target loc="87691 162835 -3563" price="12000" name="Field of Silence;Поля Безмолвия" />
+			<target loc="82192 226128 -3664" price="5900" name="Field of Whispers;Шепчущие Поля" />
+			<target loc="115583 192261 -3488" price="2100" name="Alligator Island;Остров Аллигаторов" />
+			<target loc="84413 234334 -3656" price="2400" name="Garden of Eva;Сад Богини Евы" />
+			<target loc="149518 195280 -3736" price="7200" name="Isle of Prayer;Кристальный Остров" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="80987 182423 -3504" price="1000" name="Field of Silence Center;Середина Полей Безмолвия" />
+			<target loc="86147 218268 -3592" price="1000" name="Field of Whispers Center;Середина Шепчущих Полей" />
+			<target loc="75387 195263 -3000" price="1000" name="Field of Silence (Western Section);Поля Безмолвия (Запад)" />
+			<target loc="97786 209303 -3040" price="1000" name="Field of Whispers (Western Section);Шепчущие Поля (Запад)" />
+			<target loc="113708 178387 -3232" price="1000" name="The Center of Alligator Island;Центр Острова Аллигаторов" />
+			<target loc="82693 242220 -6712" price="1000" name="Inside the Garden of Eva;Сад Богини Евы" />
+			<target loc="79248 247390 -8816" price="1000" name="Garden of Eva - 2nd level;Сад Богини Евы - 2-й этаж" />
+			<target loc="77868 250400 -9328" price="1000" name="Garden of Eva - 3rd level;Сад Богини Евы - 3-й этаж" />
+			<target loc="78721 253309 -9840" price="1000" name="Garden of Eva - 4th level;Сад Богини Евы - 4-й этаж" />
+			<target loc="82951 252354 -10592" price="1000" name="Garden of Eva - 5th level;Сад Богини Евы - 5-й этаж" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="80987 182423 -3504" price="1" item="6651" name="Field of Silence Center;Середина Полей Безмолвия" />
+			<target loc="86147 218268 -3592" price="1" item="6651" name="Field of Whispers Center;Середина Шепчущих Полей" />
+			<target loc="75387 195263 -3000" price="1" item="6651" name="Field of Silence (Western Section);Поля Безмолвия (Запад)" />
+			<target loc="97786 209303 -3040" price="1" item="6651" name="Field of Whispers (Western Section);Шепчущие Поля (Запад)" />
+			<target loc="113708 178387 -3232" price="1" item="6651" name="The Center of Alligator Island;Центр Острова Аллигаторов" />
+			<target loc="82693 242220 -6712" price="1" item="6651" name="Inside the Garden of Eva;Сад Богини Евы" />
+			<target loc="79248 247390 -8816" price="1" item="6651" name="Garden of Eva, 2nd level;Сад Богини Евы - 2-й этаж" />
+			<target loc="77868 250400 -9328" price="1" item="6651" name="Garden of Eva, 3rd level;Сад Богини Евы - 3-й этаж" />
+			<target loc="78721 253309 -9840" price="1" item="6651" name="Garden of Eva, 4th level;Сад Богини Евы - 4-й этаж" />
+			<target loc="82951 252354 -10592" price="1" item="6651" name="Garden of Eva, 5th level;Сад Богини Евы - 5-й этаж" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="31212" name="Event">
+		<sublist id="1">
+			<target loc="-99586 237637 -3568" price="140" name="Obelisk Of Victory;Обелиск Победы" />
+			<target loc="-106696 214691 -3424" price="310" name="Western Territory Of Talking Island;Говорящий Остров - Запад" />
+			<target loc="-111728 244330 -3448" price="230" name="Singing Waterfall;Поющий Водопад" />
+		</sublist>
+	</npc>
+
+	<npc id="31213" name="Event">
+		<sublist id="1">
+			<target loc="21362 51122 -3688" price="210" name="Elven Forest;Эльфийский Лес" />
+			<target loc="-10612 75881 -3592" price="520" name="Neutral Zone;Нейтральная Зона" />
+			<target loc="-18415 85624 -3680" price="610" name="The Center of the Neutral Zone;Середина Нейтральной Зоны" />
+		</sublist>
+	</npc>
+
+	<npc id="31214" name="Event">
+		<sublist id="1">
+			<target loc="-22224 14168 -3232" price="260" name="Dark Forest;Темный Лес" />
+			<target loc="-14129 27094 -3680" price="220" name="The center of the Dark Forest;Сердце Темного Леса" />
+			<target loc="-21966 40544 -3192" price="330" name="Swampland;Топи" />
+			<target loc="-10612 75881 -3592" price="530" name="Neutral Zone;Нейтральная Зона" />
+			<target loc="-18415 85624 -3680" price="630" name="The Center of the Neutral Zone;Середина Нейтральной Зоны" />
+			<target loc="-61095 75104 -3352" price="1100" name="Spider Nest;Логово Пауков" />
+		</sublist>
+	</npc>
+
+	<npc id="31215" name="Event">
+		<sublist id="1">
+			<target loc="-4190 -80040 -2696" price="620" name="Immortal Plateau, Southern Region;Плато Бессмертия - юг" />
+			<target loc="-10983 -117484 -2464" price="290" name="Immortal Plateau, Northern Region;Плато Бессмертия - север" />
+			<target loc="-25309 -131569 -680" price="230" name="Immortal Plateau, Western Region;Плато Бессмертия - запад" />
+			<target loc="8652 -139941 -1144" price="500" name="Frozen Waterfall;Замерзший Водопад" />
+		</sublist>
+	</npc>
+
+	<npc id="31216" name="Event">
+		<sublist id="1">
+			<target loc="169008 -208272 -3496" price="740" name="Eastern Mining Zone (Northeastern Shore);Восточные Рудники" />
+			<target loc="136910 -205082 -3664" price="290" name="Western Mining Zone (Central Shore);Западные Рудники" />
+		</sublist>
+	</npc>
+
+	<npc id="31217" name="Event">
+		<sublist id="1">
+			<target loc="-49853 147089 -2784" price="370" name="Abandoned Camp;Заброшенный Лагерь" />
+			<target loc="-88539 83389 -2864" price="800" name="Windy Hill;Холм Ветров" />
+			<target loc="-89763 105359 -3576" price="540" name="Orc Barracks;Лагерь Орков" />
+			<target loc="-63736 101522 -3552" price="430" name="Fellmere Harvest Grounds;Фермерские Угодья" />
+			<target loc="-75437 168800 -3632" price="160" name="Windmill Hill;Холм Ветряных Мельниц" />
+			<target loc="-42256 198333 -2800" price="1100" name="Red Rock Ridge;Красная Гора" />
+			<target loc="-47506 179572 -3632" price="530" name="Wastelands, Western Region;Пустошь - запад" />
+			<target loc="-44763 203470 -3592" price="540" name="Langk Lizardmen Dwellings;Поселение Ящеров Лангк" />
+			<target loc="-53001 191425 -3568" price="590" name="Forgotten Temple Entrance;Забытый Храм - Вход" />
+			<target loc="-16526 208032 -3664" price="1000" name="Wastelands;Пустошь" />
+		</sublist>
+	</npc>
+
+	<npc id="31218" name="Event">
+		<sublist id="1">
+			<target loc="-41248 122848 -2904" price="230" name="Ruins of Agony;Руины Страданий" />
+			<target loc="-19120 136816 -3752" price="180" name="Ruins of Despair;Руины Отчаяния" />
+			<target loc="-6989 109503 -3040" price="120" name="Evil Hunting Grounds;Охотничьи Угодья Зла" />
+			<target loc="-9959 176184 -4160" price="640" name="The Ant Nest;Муравейник;" />
+			<target loc="-28327 155125 -3496" price="430" name="Windawood Manor;Поместье Виндавуд" />
+		</sublist>
+	</npc>
+
+	<npc id="31219" name="Event">
+		<sublist id="1">
+			<target loc="5106 126916 -3664" price="220" name="Cruma Marshlands;Топи Крумы" />
+			<target loc="17743 120165 -3696" price="270" name="The Center of the Cruma Marshland;Середина Топей Крумы" />
+			<target loc="47382 111278 -2104" price="530" name="Fortress of Resistance;Укрепление Партизан" />
+			<target loc="630 179184 -3720" price="470" name="Plains of Dion;Равнины Диона" />
+			<target loc="8312 154875 -2985" price="570" name="Floran Agricultural Area;Угодья Флорана" />
+			<target loc="34475 188095 -2976" price="880" name="Bee Hive;Пасека" />
+			<target loc="50568 152408 -2656" price="430" name="Execution Grounds;Земля Казненных" />
+			<target loc="58316 163851 -2816" price="1100" name="Tanor Canyon;Каньон Танор" />
+		</sublist>
+	</npc>
+
+	<npc id="31220" name="Event">
+		<sublist id="1">
+			<target loc="73024 118485 -3688" price="560" name="Dragon Valley;Долина Драконов" />
+			<target loc="122824 110836 -3720" price="970" name="The Center of Dragon Valley;Сердце Долины Драконов" />
+			<target loc="85546 131328 -3672" price="300" name="Breka's Stronghold;Укрепление Орков Брека" />
+			<target loc="113553 134553 -3640" price="590" name="Gorgon Flower Garden;Сад Горгон" />
+		</sublist>
+	</npc>
+
+	<npc id="31221" name="Event">
+		<sublist id="1">
+			<target loc="67097 68815 -3648" price="530" name="Timak Outpost;Застава Тимак" />
+			<target loc="87252 85514 -3056" price="580" name="Plains of the Lizardmen;Долина Ящеров" />
+			<target loc="89914 46276 -3616" price="230" name="Skyshadow Meadow;Школа Полномочий" />
+			<target loc="91539 -12204 -2440" price="1500" name="Outlaw Forest;Лес Разбойников" />
+			<target loc="64328 26803 -3768" price="770" name="Sea of Spores;Море Спор" />
+			<target loc="93710 17495 -3800" price="900" name="Forest of Evil;Лес Зла" />
+		</sublist>
+	</npc>
+
+	<npc id="31222" name="Event">
+		<sublist id="1">
+			<target loc="91088 182384 -3192" price="750" name="Field of Silence;Поля Безмолвия" />
+			<target loc="69748 186111 -2872" price="950" name="West Field of Silence;Поля Безмолвия - запад" />
+			<target loc="97786 209303 -3040" price="300" name="East Field of Whispers;Шепчущие Поля - восток" />
+			<target loc="74592 207656 -3032" price="690" name="West Field of Whispers;Шепчущие Поля - запад" />
+			<target loc="115583 192261 -3488" price="650" name="Alligator Island;Остров Аллигаторов" />
+			<target loc="113708 178387 -3232" price="980" name="The Center of Alligator Island;Центр Острова Аллигаторов" />
+		</sublist>
+	</npc>
+
+	<npc id="31223" name="Event">
+		<sublist id="1">
+			<target loc="124904 61992 -3920" price="400" name="Enchanted Valley, Southern Region;Волшебная Долина - юг" />
+			<target loc="104426 33746 -3800" price="1000" name="Enchanted Valley, Northern Region;Волшебная Долина - север" />
+			<target loc="114674 44150 -3376" price="780" name="The Center of Enchanted Valley;Сердце Волшебной Долины" />
+			<target loc="142065 81300 -3000" price="600" name="Forest of Mirrors;Лес Зеркал" />
+			<target loc="163707 78135 -2376" price="1100" name="The Center of Forest of Mirrors;Сердце Леса Зеркал" />
+		</sublist>
+	</npc>
+
+	<npc id="31224" name="Event">
+		<sublist id="1">
+			<target loc="106517 -2871 -3416" price="1700" name="Ancient Battleground;Древнее Поле Битвы" />
+			<target loc="168217 37990 -4072" price="590" name="Forsaken Plains;Забытые Равнины" />
+			<target loc="135580 19467 -3424" price="300" name="Plains of Glory;Равнины Славы" />
+			<target loc="156898 11217 -4032" price="420" name="War-Torn Plains;Равнины Неистовства" />
+			<target loc="188611 20588 -3696" price="1000" name="Seal of Shilen;Печать Шилен" />
+			<target loc="142506 63388 -3272" price="1300" name="Forest of Mirrors;Лес Зеркал" />
+			<target loc="114306 86573 -3112" price="1600" name="Hunters Valley;Долина Охотников" />
+			<target loc="166182 91560 -3160" price="1600" name="Anghel Waterfall;Ангельский Водопад" />
+			<target loc="183543 -14974 -2776" price="1900" name="Fields of Massacre;Поле Брани" />
+			<target loc="170838 55776 -5280" price="1800" name="Silent Valley;Долина Безмолвия" />
+			<target loc="155310 -16339 -3320" price="2000" name="Blazing Swamp;Раскаленные Топи" />
+		</sublist>
+	</npc>
+
+	<npc id="31275" name="Tatiana">
+		<sublist id="1">
+			<target loc="-12787 122779 -3112" price="71000" name="The Town of Gludio;Глудио" />
+			<target loc="83463 148045 -3400" price="63000" name="The Town of Giran;Гиран" />
+			<target loc="15472 142880 -2688" price="71000" name="The Town of Dion;Дион" />
+			<target loc="43835 -47749 -792" price="10000" name="The Rune Township;Руна" />
+			<target loc="111455 219400 -3544" price="83000" name="Heine;Хейн" />
+			<target loc="87170 -143355 -1288" price="10000" name="The Town of Schuttgart;Шутгарт" />
+			<target loc="146783 25808 -2008" price="8100" name="The Town of Aden;Аден" />
+			<target loc="82971 53207 -1488" price="37000" name="The Town of Oren;Орен" />
+			<target loc="125740 -40864 -3726" price="4200" name="Varkas Silenos Stronghold;Лагерь Фавнов Варка" />
+			<target loc="146990 -67128 -3640" price="1800" name="Ketra Orc Outpost;Застава Орков Кетра" />
+			<target loc="144880 -113468 -2560" price="9300" name="Hot Springs;Горячие Источники" />
+			<target loc="165054 -47861 -3560" price="2200" name="Wall of Argos;Стена Аргоса" />
+			<target loc="106414 -87799 -2920" price="10000" name="Monastery of Silence;Монастырь Безмолвия" />
+			<target loc="169018 -116303 -2432" price="10000" name="Entrace of the Forge of the Gods;Вход в Кузницу Богов" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="107929 -52248 -2408" price="1000" name="Varka Silenos Village;Деревня Фавнов Варка" />
+			<target loc="149817 -80053 -5576" price="1000" name="Ketra Orc Village;Деревня Орков Кетра" />
+			<target loc="106349 -61870 -2904" price="1000" name="Devil's Pass;Ущелье Дьявола" />
+			<target loc="132997 -60608 -2960" price="1000" name="Garden of Wild Beasts;Ферма Диких Зверей" />
+			<target loc="144625 -101291 -3384" price="1000" name="The Center of the Hot Springs;Сердце Горячих Источников" />
+			<target loc="183140 -53307 -1896" price="1000" name="The Center of the Wall of Argos;Середина Стены Аргоса" />
+			<target loc="191257 -59388 -2872" price="1000" name="Shrine of Loyality;Усыпальница Вечности" />
+			<target loc="178127 -84435 -7216" price="1000" name="Four Sepulchers;Четыре Гробницы" />
+			<target loc="186699 -75915 -2824" price="1000" name="Imperial Tomb;Гробница Императоров" />
+			<target loc="173436 -112725 -3680" price="1000" name="Forge of the Gods - Top Level;Кузня Богов - Верх" />
+			<target loc="179887 -111241 -5824" price="1000" name="Forge of the Gods - Lower Level;Кузня Богов - Низ" />
+			<target loc="106414 -87799 -2920" price="1000" name="Monastery of Silence;Монастырь Безмолвия" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей;" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="107929 -52248 -2408" price="1" item="6651" name="Varka Silenos Village;Деревня Фавнов Варка" />
+			<target loc="149817 -80053 -5576" price="1" item="6651" name="Ketra Orc Village;Деревня Орков Кетра" />
+			<target loc="106349 -61870 -2904" price="1" item="6651" name="Devil's Pass;Ущелье Дьявола" />
+			<target loc="132997 -60608 -2960" price="1" item="6651" name="Garden of Wild Beasts;Сад Диких Зверей" />
+			<target loc="144625 -101291 -3384" price="1" item="6651" name="The Center of the Hot Springs;Сердце Горячих Источников" />
+			<target loc="183140 -53307 -1896" price="1" item="6651" name="The Center of the Wall of Argos;Середина Стены Аргоса" />
+			<target loc="191257 -59388 -2872" price="1" item="6651" name="Shrine of Loyality;Усыпальница Вечности" />
+			<target loc="178127 -84435 -7216" price="1" item="6651" name="Four Sepulchers;Четыре Гробницы" />
+			<target loc="186699 -75915 -2824" price="1" item="6651" name="Imperial Tomb;Гробница Императоров" />
+			<target loc="173436 -112725 -3680" price="1" item="6651" name="Forge of the Gods - Top Level;Кузня Богов - Верх" />
+			<target loc="179887 -111241 -5824" price="1" item="6651" name="Forge of the Gods - Lower Level;Кузня Богов - Низ" />
+			<target loc="106414 -87799 -2920" price="1" item="6651" name="Monastery of Silence;Монастырь Безмолвия" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="31320" name="Ilyana">
+		<sublist id="1">
+			<target loc="147850 -55300 -2728" price="10000" name="The Town of Goddard;Годдард" />
+			<target loc="-12787 122779 -3112" price="53000" name="The Town of Gludio;Глудио" />
+			<target loc="83463 148045 -3400" price="59000" name="The Town of Giran;Гиран" />
+			<target loc="15472 142880 -2688" price="57000" name="The Town of Dion;Дион" />
+			<target loc="111455 219400 -3544" price="82000" name="Heine;Хейн" />
+			<target loc="87170 -143355 -1288" price="10000" name="The Town of Schuttgart;Шутгарт" />
+			<target loc="146783 25808 -2008" price="37000" name="The Town of Aden;Аден" />
+			<target loc="82971 53207 -1488" price="10000" name="The Town of Oren;Орен" />
+			<target loc="43805 -88010 -2752" price="4800" name="Wild Beast Pastures;Ферма Диких Зверей" />
+			<target loc="65307 -71445 -3696" price="3800" name="Valley of Saints;Долина Святых" />
+			<target loc="52107 -54328 -3152" price="1200" name="Forest of the Dead;Лес Неупокоенных" />
+			<target loc="69340 -50203 -3288" price="3000" name="Swamp of Screams;Болото Криков" />
+			<target loc="106414 -87799 -2920" price="14000" name="Monestary of Silence;Монастырь Безмолвия" />
+			<target loc="89513 -44800 -2136" price="9100" name="Stakato Nest;Гнездо Стакато" />
+			<target loc="11235 -24026 -3640" price="6400" name="Primeval Isle Wharf;Пристань Первобытного Острова" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="54425 -41692 -3072" price="1000" name="The Center of the Forest of the Dead;Центр Леса Неупокоенных" />
+			<target loc="84092 -80084 -3504" price="1000" name="The Center of the Valley of Saints;Центр Долины Святых" />
+			<target loc="57670 -41672 -3144" price="1000" name="Cursed Village;Проклятая Деревня" />
+			<target loc="76911 -55295 -5824" price="1000" name="Stakato Nest;Гнездо Стакато" />
+			<target loc="106414 -87799 -2920" price="1000" name="Monastery of Silence;Монастырь Безмолвия" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="54425 -41692 -3072" price="1" item="6651" name="The Center of the Forest of the Dead;Центр Леса Неупокоенных" />
+			<target loc="84092 -80084 -3504" price="1" item="6651" name="The Center of the Valley of Saints;Центр Долины Святых" />
+			<target loc="57670 -41672 -3144" price="1" item="6651" name="Cursed Village;Проклятая Деревня" />
+			<target loc="76911 -55295 -5824" price="1" item="6651" name="Stakato Nest;Гнездо Стакато" />
+			<target loc="106414 -87799 -2920" price="1" item="6651" name="Monastery of Silence;Монастырь Безмолвия" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="31698" name="Arisha">
+		<sublist id="1">
+			<target loc="38320 -48092 -1153" price="150" name="Rune Castle Town Guild;Гильдия Руны" />
+		</sublist>
+	</npc>
+
+	<npc id="31699" name="Stanislava">
+		<sublist id="1">
+			<target loc="38308 -48138 870" price="150" name="Rune Castle Town Guild;Гильдия Руны" />
+		</sublist>
+	</npc>
+
+	<npc id="31767" name="Event">
+		<sublist id="1">
+			<target loc="165054 -47861 -3560" price="660" name="Wall of Argos;Стена Аргоса" />
+			<target loc="181322 -49933 -3526" price="1200" name="The Center of the Wall of Argos;Середина Стены Аргоса" />
+			<target loc="132997 -60608 -2960" price="570" name="Garden of Wild Beasts;Ферма Диких Зверей" />
+			<target loc="106349 -61870 -2904" price="1500" name="Devil's Pass;Ущелье Дьявола" />
+			<target loc="125740 -40864 -3726" price="1200" name="Varkas Silenos Stronghold;Лагерь Фавнов Варка" />
+			<target loc="146990 -67128 -3640" price="570" name="Ketra Orc Outpost;Застава Орков Кетра" />
+			<target loc="144880 -113468 -2560" price="2700" name="Hot Springs;Горячии источники" />
+			<target loc="144337 -102384 -3512" price="2200" name="The Center of Hot Springs;Сердце Горячих Источников" />
+		</sublist>
+	</npc>
+
+	<npc id="31861" name="">
+		<sublist id="1">
+			<target loc="114649 18587 -3609" price="100000" name="2nd Floor 100.000;2-й этаж 100.000" />
+			<target loc="113098 14532 10077" price="900000" name="14th Baium 900.000;Баюм 900.000" />
+		</sublist>
+	</npc>
+
+	<npc id="31964" name="Bilia">
+		<sublist id="1">
+			<target loc="43835 -47749 -792" price="10000" name="Rune Township;Руна" />
+			<target loc="147850 -55300 -2728" price="10000" name="The Town of Goddard;Годдард" />
+			<target loc="146783 25808 -2008" price="53000" name="The Town of Aden;Аден" />
+			<target loc="82971 53207 -1488" price="59000" name="The Town of Oren;Орен" />
+			<target loc="111455 219400 -3544" price="100000" name="Heine;Хейн" />
+			<target loc="83463 148045 -3400" price="87000" name="The Town of Giran;Гиран" />
+			<target loc="15472 142880 -2688" price="88000" name="The Town of Dion;Дион" />
+			<target loc="-12787 122779 -3112" price="85000" name="The Town of Gludio;Глудио" />
+			<target loc="-45158 -112583 -240" price="13000" name="Orc Village;Деревня Орков" />
+			<target loc="115120 -178224 -880" price="4400" name="Dwarven Village;Деревня Гномов" />
+			<target loc="68693 -110438 -1904" price="7500" name="Den of Evil;Логово Зла" />
+			<target loc="111965 -154172 -1528" price="1600" name="Plunderous Plains;Разграбленные Равнины" />
+			<target loc="113903 -108752 -848" price="3500" name="Frozen Labyrinth;Ледяной Лабиринт" />
+			<target loc="47692 -115745 -3744" price="9600" name="Crypts of Disgrace;Склепы Позора" />
+			<target loc="91280 -117152 -3928" price="2100" name="Pavel Ruins;Заброшенная Мастерская" />
+			<target loc="171946 -173352 3440" price="17000" name="Mithril Mines;Мифриловый Рудник" />
+		</sublist>
+		<sublist id="2">
+			<target loc="107577 -122392 -3632" price="1000" name="Frost Lake;Замерзшее Озеро" />
+			<target loc="44221 -114232 -2784" price="1000" name="Graverobber Hideout;Укрытие Грабителей Могил" />
+			<target loc="121618 -141554 -1496" price="1000" name="Sky Wagon Relic;Руины Воздушной Дороги" />
+			<target loc="-87328 142266 -3640" price="1000" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1000" name="Giran Arena;Арена Гирана" />
+			<target loc="146440 46723 -3432" price="1000" name="Coliseum;Колизей" />
+		</sublist>
+		<sublist id="3">
+			<target loc="107577 -122392 -3632" price="1" item="6651" name="Frost Lake;Замерзшее Озеро" />
+			<target loc="44221 -114232 -2784" price="1" item="6651" name="Graverobber Hideout;Укрытие Грабителей Могил" />
+			<target loc="121618 -141554 -1496" price="1" item="6651" name="Sky Wagon Relic;Руины Воздушной Дороги" />
+			<target loc="-87328 142266 -3640" price="1" item="6651" name="Gludin Arena;Арена Глудина" />
+			<target loc="73579 142709 -3768" price="1" item="6651" name="Giran Arena;Арена Гирана" />
+			<target loc="146440 46723 -3432" price="1" item="6651" name="Coliseum;Колизей" />
+		</sublist>
+	</npc>
+
+	<npc id="32048" name="Event">
+		<sublist id="1">
+			<target loc="47692 -115745 -3744" price="570" name="Crypts of Disgrace;Склепы Позора" />
+			<target loc="111965 -154172 -1528" price="480" name="Plunderous Plains;Разграбленные Равнины" />
+			<target loc="68693 -110438 -1904" price="900" name="Den of Evil;Логово Зла" />
+			<target loc="91280 -117152 -3928" price="630" name="Pavel Ruins;Заброшенная Мастерская" />
+			<target loc="113903 -108752 -848" price="1000" name="Frozen Labyrinth;Ледяной Лабиринт" />
+		</sublist>
+	</npc>
+
+	<npc id="32163" name="Ragara">
+		<sublist id="1">
+			<target loc="-12787 122779 -3112" price="12000" name="The Town of Gludio;Глудио" />
+			<target loc="146783 25808 -2008" price="26000" name="The Town of Aden;Аден" />
+			<target loc="-84141 244623 -3728" price="20000" name="Talking Island Village;Деревня Говорящего Острова" />
+			<target loc="9744 15645 -4568" price="13000" name="Dark Elven Village;Деревня Темных Эльфов" />
+			<target loc="46951 51550 -2976" price="16000" name="Elven Village;Эльфийская Деревня" />
+			<target loc="115120 -178224 -880" price="32000" name="Dwarven Village;Деревня Гномов" />
+			<target loc="-45158 -112583 -240" price="17000" name="Orc Village;Деревня Орков" />
+			<target loc="-122410 73205 -2872" price="2600" name="Stronghold I;Алтарь Золота" />
+			<target loc="-95540 52150 -2024" price="2200" name="Stronghold II;Алтарь Мимира" />
+			<target loc="-85928 37095 -2048" price="3200" name="Stronghold III;Алтарь Норнил" />
+			<target loc="-74016 51932 -3680" price="4300" name="Isle of Souls Harbor;Гавань Острова Душ" />
+		</sublist>
+		<sublist id="2">
+			<target loc="-122410 73205 -2872" price="0" name="Stronghold I;Алтарь Золота" />
+			<target loc="-95540 52150 -2024" price="0" name="Stronghold II;Алтарь Мимира" />
+			<target loc="-85928 37095 -2048" price="0" name="Stronghold III;Алтарь Норнил" />
+		</sublist>
+	</npc>
+
+	<npc id="32189" name="Largo">
+		<sublist id="1">
+			<target loc="-12787 122779 -3112" price="9300" name="The Town of Gludio;Глудио" />
+			<target loc="146783 25808 -2008" price="22000" name="The Town of Aden;Аден" />
+			<target loc="-117250 46750 360" price="4300" name="Kamael Village;Деревня Камаэль" />
+		</sublist>
+	</npc>
+
+	<npc id="35563" name="Belinda">
+		<sublist id="1">
+			<target loc="114649 18587 -3609" price="150000" name="2nd Floor;2-й этаж" />
+			<target loc="112714 14111 10077" price="900000" name="14th Baium;Баюм" />
+		</sublist>
+	</npc>
+	<npc id="32782" name="Lionel">
+		<sublist id="1">
+			<target loc="-212808 209672 4257" price="150000" name="Seed of Infinity;Семя Бессмертия" />
+			<target loc="-248536 250280 4311" price="150000" name="Seed of Destruction;Семя Разрушения" />
+			<target loc="-175512 154488 2689" price="150000" name="Seed of Annihilation;Семя Уничтожения" />
+		</sublist>
+	</npc>
+</list>

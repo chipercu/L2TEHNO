@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="511" type="SOLO">
+		<name lang="en" val="Awl Under Foot"/>
+		<name lang="ru" val="Опасность в подземелье"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="25572"/>	<!-- Hager the Outlaw -->
+			<event type="MOBKILLED" val="25575"/>	<!-- All-Seeing Rango -->
+			<event type="MOBKILLED" val="25578"/>	<!-- Jakard -->
+			<event type="MOBKILLED" val="25579"/>	<!-- Helsing -->
+			<event type="MOBKILLED" val="25582"/>	<!-- Gillien -->
+			<event type="MOBKILLED" val="25585"/>	<!-- Medici -->
+			<event type="MOBKILLED" val="25588"/>	<!-- Immortal Muus -->
+			<event type="MOBKILLED" val="25589"/>	<!-- Brand the Exile -->
+			<event type="MOBKILLED" val="25592"/>	<!-- Commander Koenig -->
+			<event type="MOBKILLED" val="25593"/>	<!-- Gerg the Hunter -->
+			<event type="QUEST_START" val="35666"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="35698"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="35735"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="35767"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="35804"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="35835"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="35867"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="35904"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="35936"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="35974"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="36011"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="36043"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="36081"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="36118"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="36149"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="36181"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="36219"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="36257"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="36294"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="36326"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_START" val="36364"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="35666"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="35698"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="35735"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="35767"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="35804"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="35835"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="35867"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="35904"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="35936"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="35974"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="36011"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="36043"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="36081"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="36118"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="36149"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="36181"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="36219"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="36257"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="36294"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="36326"/>	<!-- Detention Camp Warden -->
+			<event type="QUEST_TALK" val="36364"/>	<!-- Detention Camp Warden -->
+			<item id="9797"/>	<!-- Dungeon Leader Mark -->
+		</setting>
+	</quest>
+</quests>

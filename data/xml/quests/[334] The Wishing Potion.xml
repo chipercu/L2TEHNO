@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="334" type="SOLO">
+		<name lang="en" val="The Wishing Potion"/>
+		<name lang="ru" val="Зелье Желаний"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="27139"/>	<!-- Secret Keeper Tree -->
+			<event type="MOBKILLED" val="20199"/>	<!-- Amber Basilisk -->
+			<event type="MOBKILLED" val="20078"/>	<!-- Whispering Wind -->
+			<event type="MOBKILLED" val="20250"/>	<!-- Glass Jaguar -->
+			<event type="MOBKILLED" val="20227"/>	<!-- Horror Mist Ripper -->
+			<event type="MOBKILLED" val="20168"/>	<!-- Silenos -->
+			<event type="MOBKILLED" val="20087"/>	<!-- Ant Soldier -->
+			<event type="MOBKILLED" val="20088"/>	<!-- Ant Warrior Captain -->
+			<event type="MOBKILLED" val="20192"/>	<!-- Tyrant -->
+			<event type="MOBKILLED" val="20193"/>	<!-- Tyrant Kingpin -->
+			<event type="MOBKILLED" val="20248"/>	<!-- Turak Bugbear -->
+			<event type="MOBKILLED" val="20249"/>	<!-- Turak Bugbear Warrior -->
+			<event type="QUEST_START" val="30738"/>	<!-- Matild -->
+			<event type="QUEST_TALK" val="30738"/>	<!-- Matild -->
+			<event type="QUEST_TALK" val="30738"/>	<!-- Matild -->
+			<event type="QUEST_TALK" val="30557"/>	<!-- Torai -->
+			<event type="QUEST_TALK" val="30743"/>	<!-- Wisdom Chest -->
+			<event type="QUEST_TALK" val="30742"/>	<!-- Rupina -->
+			<item id="3678"/>	<!-- Alchemy Text -->
+			<item id="3679"/>	<!-- Secret Book of Potion -->
+			<item id="3684"/>	<!-- Amber Scale -->
+			<item id="3685"/>	<!-- Wind Soulstone -->
+			<item id="3686"/>	<!-- Glass Eye -->
+			<item id="3687"/>	<!-- Horror Ectoplasm -->
+			<item id="3688"/>	<!-- Silenos Horn -->
+			<item id="3689"/>	<!-- Ant Soldier Aphid -->
+			<item id="3690"/>	<!-- Tyrant's Chitin -->
+			<item id="3691"/>	<!-- Bugbear Blood -->
+		</setting>
+	</quest>
+</quests>

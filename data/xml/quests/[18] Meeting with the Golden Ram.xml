@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="18" type="SOLO">
+		<name lang="en" val="Meeting with the Golden Ram"/>
+		<name lang="ru" val="Встреча с наемниками"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="31314"/>	<!-- Donal -->
+			<event type="QUEST_TALK" val="31314"/>	<!-- Donal -->
+			<event type="QUEST_TALK" val="31314"/>	<!-- Donal -->
+			<event type="QUEST_TALK" val="31315"/>	<!-- Daisy -->
+			<event type="QUEST_TALK" val="31555"/>	<!-- Abercrombie -->
+			<item id="7245"/>	<!-- Supply Box -->
+		</setting>
+	</quest>
+</quests>

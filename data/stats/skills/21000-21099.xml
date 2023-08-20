@@ -1,0 +1,1243 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+    <skill id="21000" levels="1" name="Release Seal on Agathion - Majo">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.12.2008
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+        <set name="npcId" val="1501"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21001" levels="1" name="Release Seal on Agathion - Gold Majo">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.12.2008
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+        <set name="npcId" val="1502"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21002" levels="1" name="Release Seal on Agathion - Black Majo">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.12.2008
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+        <set name="npcId" val="1503"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21003" levels="1" name="Release Seal on Agathion - Plaipitak">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.12.2008
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+        <set name="npcId" val="1504"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21004" levels="1" name="Wind Walk">
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="26" stackType="SpeedUp" time="120">
+                <add order="0x40" stat="p_speed" val="20"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21005" levels="3" name="Agility">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="26" stackType="p_avoid" time="3600">
+                <add order="0x40" stat="p_avoid" val="4"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21006" levels="1" name="Large Firework Effect">
+        <!--
+              Description: Sets off a string of firecrackers.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="HOT"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21007" levels="1" name="Ability of Doubt">
+        <!--
+                Automatically generated from The Gracia part II client files.
+                Last modify: 31.10.2009
+                Description: Enlarges your head.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <for>
+            <effect abnormal="bighead" name="Buff" stackType="BigHead" time="120"/>
+        </for>
+    </skill>
+    <skill id="21008" levels="1" name="Release Seal on Agathion Baby Panda">
+        <!--
+              Done by:	Magister
+              Last modify:	29.01.2009
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1505"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21009" levels="1" name="Release Seal on Agathion Bamboo Panda">
+        <!--
+              Done by:	Magister
+              Last modify:	29.01.2009
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1506"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21010" levels="1" name="Release Seal on Agathion Sexy Panda">
+        <!--
+              Done by:	Magister
+              Last modify:	29.01.2009
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1507"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21011" levels="1" name="Energy Recovery">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.07.2009
+              Description: Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Vitality" time="300"/>
+        </for>
+    </skill>
+    <skill id="21012" levels="1" name="Energy Recovery">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Vitality" time="300"/>
+        </for>
+    </skill>
+    <skill id="21013" levels="1" name="Energy Recovery">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.07.2009
+              Description: Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Vitality" time="300"/>
+        </for>
+    </skill>
+    <skill id="21014" levels="1" name="Scissors">
+        <!--  Automatically generated from The Gracia part II client files.
+                Description: "Challenge opponent with ""Scissors."" Can only be used on Thomas D. Turkey."
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 28-1-2009  22:00
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21015" levels="1" name="Rock">
+        <!--  Automatically generated from The Gracia part II client files.
+                Description: "Challenge opponent with ""Rock."" Can only be used on Thomas D. Turkey."
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 28-1-2009  22:00
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21016" levels="1" name="Paper">
+        <!--  Automatically generated from The Gracia part II client files.
+                Description: "Challenge opponent with ""Paper."" Can only be used on Thomas D. Turkey."
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 28-1-2009  22:00
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21017" levels="1" name="Holiday Dream Weapon">
+        <!--
+              Done by: SYS
+              Description: Max CP is increased. The rate of critical attacks is increased. Bestow the ability to regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attacks.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="p_max_cp" val="1.30"/>
+            <add order="0x40" stat="p_critical_rate_diff" val="100"/>
+            <add order="0x40" stat="absorbDam" val="10"/>
+        </for>
+    </skill>
+    <skill id="21018" levels="1" name="Holiday Dream Weapon">
+        <!--
+              Done by: SYS
+              Description: Max CP is increased. The rate and power of critical attacks are increased.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="p_max_cp" val="1.30"/>
+            <mul order="0x30" stat="p_critical_damage_per" val="1.25"/>
+			<add order="0x40" stat="p_critical_rate_diff" val="100"/>
+        </for>
+    </skill>
+    <skill id="21019" levels="1" name="Holiday Dream Weapon">
+        <!--
+              Done by: SYS
+              Description: Max CP is increased. The probability of deadly attacks is increased, and MP consumption for skills is decreased.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="p_max_cp" val="1.30"/>
+            <mul order="0x30" stat="blowRate" val="1.25"/>
+            <mul order="0x30" stat="mpConsumePhysical" val="0.8"/>
+        </for>
+    </skill>
+    <skill id="21020" levels="1" name="Holiday Dream Weapon">
+        <!--
+              Done by: SYS
+              Description: Max CP and critical attack rate are increased.  Will also regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attacks.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="p_max_cp" val="1.30"/>
+            <add order="0x40" stat="p_critical_rate_diff" val="100"/>
+            <add order="0x40" stat="absorbDam" val="10"/>
+        </for>
+    </skill>
+    <skill id="21021" levels="1" name="Holiday Dream Weapon">
+        <!--
+              Done by: SYS
+              Description: Max CP is increased. The rate and power of critical attacks are increased.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="p_max_cp" val="1.30"/>
+            <mul order="0x30" stat="p_critical_damage_per" val="1.25"/>
+            <add order="0x40" stat="p_critical_rate_diff" val="100"/>
+        </for>
+    </skill>
+    <skill id="21022" levels="1" name="Holiday Dream Weapon">
+        <!--
+              Done by: SYS
+              Description: Max CP is increased. Casting speed is increased, and MP consumption for skills is decreased.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="p_max_cp" val="1.30"/>
+            <mul order="0x30" stat="p_magic_speed" val="1.25"/>
+            <mul order="0x30" stat="mpConsum" val="0.8"/>
+        </for>
+    </skill>
+    <skill id="21023" levels="1" name="Holiday Dream Weapon">
+        <!--
+              Done by: SYS
+              Description: Max CP and M. Atk. are increased, and MP consumption for skills is decreased.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="p_max_cp" val="1.30"/>
+            <mul order="0x30" stat="p_magical_attack" val="1.50"/>
+            <mul order="0x30" stat="mpConsum" val="0.8"/>
+        </for>
+    </skill>
+    <skill id="21024" levels="1" name="Holiday Dream Weapon">
+        <!--
+              Done by: SYS
+              Description: Max CP is increased. MP consumption per skill is decreased. Bestow the ability to regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attacks.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="p_max_cp" val="1.30"/>
+            <add order="0x40" stat="absorbDam" val="10"/>
+            <mul order="0x30" stat="mpConsumePhysical" val="0.8"/>
+        </for>
+    </skill>
+    <skill id="21025" levels="1" name="Holiday Dream Weapon">
+        <!--
+              Done by: SYS
+              Description: Max CP is increased. The rate and range of critical attacks are increased.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="p_max_cp" val="1.30"/>
+            <mul order="0x30" stat="p_critical_damage_per" val="1.25"/>
+            <mul order="0x30" stat="pAtkRange" val="1.25">
+                <using kind="Bow, Crossbow"/>
+            </mul>
+        </for>
+    </skill>
+    <skill id="21026" levels="1" name="Holiday Dream Weapon">
+        <!--
+              Done by: SYS
+              Description: Max CP is increased. Number of enemies which can be attacked at the same time increases. Bestow the ability to regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attacks.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="p_max_cp" val="1.30"/>
+            <add order="0x40" stat="absorbDam" val="10"/>
+        </for>
+    </skill>
+    <skill id="21027" levels="1" name="Holiday Dream Weapon">
+        <!--
+              Done by: SYS
+              Description: Max CP is increased. Atk. Spd. increases, and MP consumption for skills is decreased.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="p_max_cp" val="1.30"/>
+            <mul order="0x30" stat="p_attack_speed" val="1.25"/>
+            <mul order="0x30" stat="mpDanceConsume" val="0.8"/>
+        </for>
+    </skill>
+    <skill id="21028" levels="1" name="Holiday Dream Weapon">
+        <!--
+              Done by: SYS
+              Description: Max CP is increased. The rate of critical attacks is increased. Bestow the ability to regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attacks.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+			<mul order="0x30" stat="p_max_cp" val="1.30"/>
+			<add order="0x40" stat="p_critical_rate_diff" val="100"/>
+			<add order="0x40" stat="absorbDam" val="10"/>
+        </for>
+    </skill>
+    <skill id="21029" levels="1" name="Holiday Dream Weapon">
+        <!--
+              Done by: SYS
+              Description: Max CP is increased. The rate and power of critical attacks are increased.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="p_max_cp" val="1.30"/>
+            <mul order="0x30" stat="p_critical_damage_per" val="1.25"/>
+			<add order="0x40" stat="p_critical_rate_diff" val="100"/>
+        </for>
+    </skill>
+    <skill id="21030" levels="1" name="Holiday Dream Weapon">
+        <!--
+              Done by: SYS
+              Description: Max CP is increased. Evasion and Accuracy are increased.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="p_max_cp" val="1.30"/>
+            <add order="0x40" stat="p_avoid" val="5"/>
+            <add order="0x40" stat="p_hit" val="5"/>
+        </for>
+    </skill>
+    <skill id="21031" levels="1" name="Agathion Seal Release - Charming Cupid">
+        <!--
+              Done by:	Magister
+              Last modify:	15.02.2009
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1508"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21032" levels="1" name="Agathion Seal Release - Naughty Cupid">
+        <!--
+              Done by:	Magister
+              Last modify:	15.02.2009
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1509"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21033" levels="1" name="Release Seal on Agathion - White Maneki Neko">
+        <!--
+              Done by:	Magister
+              Last modify:	15.02.2009
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1510"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21034" levels="1" name="Release Seal on Agathion - Black Maneki Neko">
+        <!--
+              Done by:	Magister
+              Last modify:	15.02.2009
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1511"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21035" levels="1" name="Release Seal on Agathion - Brown Maneki Neko">
+        <!--
+              Done by:	Magister
+              Last modify:	15.02.2009
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1512"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21036" levels="1" name="Release Seal on Agathion - One-eyed Bat Drove">
+        <!--
+              Done by:	Magister
+              Last modify:	15.02.2009
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1513"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21037" levels="1" name="Release Seal on Agathion - Pegasus">
+        <!--
+              Done by:	Magister
+              Last modify:	15.02.2009
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1514"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21038" levels="1" name="Release Seal on Agathion - Yellow-robed Tojigong">
+        <!--
+              Done by:	Magister
+              Last modify:	15.02.2009
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1515"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21039" levels="1" name="Release Seal on Agathion - Blue-robed Tojigong">
+        <!--
+              Done by:	Magister
+              Last modify:	15.02.2009
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1516"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21040" levels="1" name="Release Seal on Agathion - Green-Robed Tojigong">
+        <!--
+              Done by:	Magister
+              Last modify:	15.02.2009
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1517"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21041" levels="1" name="Release Seal on Agathion - Bugbear">
+        <!--
+              Done by:	Magister
+              Last modify:	15.02.2009
+              Description:	Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1518"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21042" levels="1" name="Baguette's Blessing">
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="HealPercent" instantly="true" val="100"/>
+            <effect name="ManaHealPercent" instantly="true" val="50"/>
+		</for>
+    </skill>
+    <skill id="21043" levels="1" name="Agathion Seal Cancel - Red Sumo Wrestler">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.07.2009
+              Description: Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1519"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21044" levels="1" name="Agathion Seal Cancel - Blue Sumo Wrestler Agathion">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.07.2009
+              Description: Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1520"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21045" levels="1" name="Agathion Seal Cancel - Great Sumo Match">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.07.2009
+              Description: Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1521"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21046" levels="1" name="Agathion Seal Cancel - Button-Eyed Bear Doll">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.07.2009
+              Description: Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1522"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21047" levels="1" name="Agathion Seal Cancel - God of Fortune">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.07.2009
+              Description: Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+        <set name="npcId" val="1523"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21048" levels="1" name="Agathion Seal Cancel - Dryad">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.07.2009
+              Description: Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+        <set name="npcId" val="1524"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21049" levels="1" name="Agathion Seal Cancel - Wonboso">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.07.2009
+              Description: Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1525"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21050" levels="1" name="Agathion Seal Cancel - Daewoonso">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.07.2009
+              Description: Summon an Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1526"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21051" levels="1" name="Steam Beatle Mount">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.07.2009
+              Description: Mounts a Steam Beatle.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="RIDE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="npcId" val="13147"/>
+        <for/>
+    </skill>
+    <skill id="21052" levels="4" name="Bless the Body">
+        <!--
+                Done by Magister
+                Last modify: 31.10.2009
+                Description: Increases Max HP by 25% for 30 minutes.
+          -->
+        <table name="#Tab-p_max_hp">1.25</table>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="6" stackType="hp_up" time="1800">
+                <mul order="0x30" stat="p_max_hp" val="#Tab-p_max_hp"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21053" levels="4" name="Bless the Soul">
+        <!-- Done Nano-->
+        <table name="#Tab-p_max_mp">1.25</table>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="26" stackType="mp_up" time="1800">
+                <mul order="0x30" stat="p_max_mp" val="#Tab-p_max_mp"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21054" levels="1" name="Blessed Resurrection Ability">
+        <!-- Done Nano -->
+        <set name="power" val="100"/>
+        <set name="target" val="TARGET_CORPSE_PLAYER"/>
+        <set name="corpse" val="true"/>
+        <set name="skillType" val="RESURRECT"/>
+        <set name="useSS" val="false"/>
+        <set name="canPet" val="true"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <for/>
+    </skill>
+    <skill id="21055" levels="1" name="Wind Walk">
+        <!--
+                Done by Magister
+                Last modify: 31.10.2009
+                Description: Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes.
+          -->
+        <table name="#Tab-p_speed">20</table>
+        <table name="#abnormal_time">120</table>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="26" stackType="SpeedUp" time="#abnormal_time">
+                <add order="0x40" stat="p_speed" val="#Tab-p_speed"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21056" levels="3" name="Agility">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="26" stackType="p_avoid" time="3600">
+                <add order="0x40" stat="p_avoid" val="4"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21057" levels="1" name="Reflect">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="26" stackType="DmgShield" time="300">
+                <add order="0x40" stat="reflectDam" val="20"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21058" levels="1" name="Mana Regeneration">
+        <!--
+                Done by Magister
+                Last modify: 06.11.2009
+                Description: Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="1" stackType="mpregen" time="300">
+                <mul order="0x30" stat="regMp" val="1.03"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21059" levels="1" name="Greater Heal">
+        <!--  Automatically generated from The Gracia Final client files.
+                Description: Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours.
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 01-7-2009  11:04
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21060" levels="1" name="Death Whisper">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <for>
+            <effect name="Buff" stackOrder="26" time="300">
+                <mul order="0x30" stat="p_critical_damage_per" val="1.35"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21061" levels="3" name="Agility">
+        <!-- Done Nano -->
+        <table name="#Tab-p_avoid">4</table>
+        <table name="#abnormal_lv">26</table>
+        <table name="#abnormal_time">3600</table>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="#abnormal_lv" stackType="p_avoid" time="#abnormal_time">
+                <add order="0x40" stat="p_avoid" val="#Tab-p_avoid"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21062" levels="1" name="Wild Magic">
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <for>
+            <effect name="Buff" stackOrder="26" time="300">
+                <add order="0x40" stat="mCritRate" val="2"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21063" levels="1" name="Wind Walk">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="1" stackType="SpeedUp" time="120">
+                <add order="0x40" stat="p_speed" val="20"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21064" levels="1" name="Mana Regeneration">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <effect name="Buff" stackOrder="1" stackType="26" time="300">
+            <for>
+                <add order="0x40" stat="regMp" val="3.09"/>
+            </for>
+        </effect>
+    </skill>
+    <skill id="21065" levels="1" name="Reflect">
+        <!-- Done Nano -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="26" stackType="DmgShield" time="300">
+				<add order="0x40" stat="reflectDam" val="20"/>
+			</effect>
+		</for>
+    </skill>
+    <skill id="21066" levels="1" name="Energy Recovery">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Vitality" time="300"/>
+        </for>
+    </skill>
+    <skill id="21067" levels="1" name="Blessed Escape Ability">
+        <!--
+                Done by Magister
+                Last modify: 06.11.2009
+                Description: Can use the ability of Blessed Return. Reuse Delay 12 hours.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="RECALL"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <for/>
+    </skill>
+    <skill id="21068" levels="1" name="Resist Unholy">
+        <!--
+                Done by Magister
+                Last modify: 06.11.2009
+                Description: Increases resistance to darkness type attacks by 30 for 5 minutes. Reuse Delay 1 hours.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="1" stackType="unholyRcpt" time="300">
+                <sub order="0x40" stat="unholyRcpt" val="30"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21069" levels="1" name="Wind Walk">
+        <!--  Automatically generated from The Gracia Final client files.
+                Description: Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes.
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 01-7-2009  11:04
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21070" levels="1" name="Death Whisper">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <for>
+            <effect name="Buff" stackOrder="26" time="300">
+                <mul order="0x30" stat="p_critical_damage_per" val="1.35"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21071" levels="3" name="Agility">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="26" stackType="p_avoid" time="3600">
+                <add order="0x40" stat="p_avoid" val="4"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21072" levels="1" name="Wild Magic">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <for>
+            <effect name="Buff" stackOrder="26" time="300">
+                <add order="0x40" stat="mCritRate" val="2"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21073" levels="1" name="Mana Regeneration">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="26" stackType="mpregen" time="300">
+                <mul order="0x30" stat="regMp" val="1.03"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21074" levels="1" name="Reflect">
+        <!--  Automatically generated from The Gracia Final client files.
+                Description: "For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours."
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 01-7-2009  11:04
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21075" levels="1" name="Greater Heal">
+        <set name="power" val="444"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="HEAL"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="t_hp" param="30;1;diff"/>
+        </for>
+    </skill>
+    <skill id="21076" levels="1" name="Resist Unholy">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="26" stackType="unholyRcpt" time="300">
+                <sub order="0x40" stat="unholyRcpt" val="30"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21077" levels="1" name="Wind Walk">
+        <!--  Automatically generated from The Gracia Final client files.
+                Description: Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes.
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 01-7-2009  11:04
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21078" levels="1" name="Death Whisper">
+        <!--  Automatically generated from The Gracia Final client files.
+                Description: Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours.
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 01-7-2009  11:04
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21079" levels="3" name="Agility">
+        <!--  Automatically generated from The Gracia Final client files.
+                Description: Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours.
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 01-7-2009  11:04
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21080" levels="1" name="Wild Magic">
+        <!--  Automatically generated from The Gracia Final client files.
+                Description: "For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours."
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 01-7-2009  11:04
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21081" levels="1" name="Mana Regeneration">
+        <!--  Automatically generated from The Gracia Final client files.
+                Description: Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours.
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 01-7-2009  11:04
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21082" levels="1" name="Reflect">
+        <!--  Automatically generated from The Gracia Final client files.
+                Description: "For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours."
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 01-7-2009  11:04
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21083" levels="1" name="Greater Heal">
+        <set name="power" val="444"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="HEAL"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+           <effect name="t_hp" param="30;1;diff"/>
+        </for>
+    </skill>
+    <skill id="21084" levels="1" name="Energy Recovery">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Vitality" stackOrder="26" time="300"/>
+        </for>
+    </skill>
+    <skill id="21085" levels="1" name="Agathion Seal Cancel - Pomona">
+        <!--
+              Done by:	Diamond
+              Last modify:	29.07.2009
+              Description:	Removes the seal on the Agathion.
+          -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <set name="useSS" val="false"/>
+        <set name="npcId" val="1527"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+    <skill id="21086" levels="1" name="Blessing of Love">
+        <!--
+              Done by SYS
+          -->
+        <set name="target" val="TARGET_ONE"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <for>
+			<effect name="p_block_getdamage" param="block_hp" cancelOnAction="true"/>
+			<effect name="p_block_getdamage" param="block_mp" cancelOnAction="true"/>
+			<effect name="p_block_debuff" cancelOnAction="true">			
+				<add order="0x40" stat="cancelRcpt" val="100"/>
+			</effect>
+        </for>
+    </skill>
+    <skill id="21087" levels="1" name="Berserker Spirit">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="26" stackType="berserk" time="1200">
+                <mul order="0x30" stat="p_physical_attack" val="1.08"/>
+                <mul order="0x30" stat="p_attack_speed" val="1.08"/>
+                <mul order="0x30" stat="p_magical_attack" val="1.16"/>
+                <mul order="0x30" stat="p_magic_speed" val="1.08"/>
+                <add order="0x40" stat="p_speed" val="8"/>
+                <mul order="0x30" stat="p_physical_defence" val="0.92"/>
+                <mul order="0x30" stat="p_magical_defence" val="0.84"/>
+                <sub order="0x40" stat="p_avoid" val="4"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21088" levels="1" name="Summon Friend">
+        <!--  Automatically generated from The Gracia Final client files.
+                Description: Summons your friend.
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 31-10-2009  14:08
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21089" levels="1" name="Dance of Shadows">
+        <!--  Automatically generated from The Gracia Final client files.
+                Description: "Receives the soul's help, and for 2 minutes, decreases one's own moving speed by 50% and invokes the ability not to receive the preemptive attack of monsters."
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 31-10-2009  14:08
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21090" levels="1" name="Soul of Phoenix">
+        <!--  Automatically generated from The Gracia Final client files.
+                Description: "Receives the soul's help, and revives from death with completely recovered status. Buff/de-buff doesn't disappear at death but is maintained."
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 31-10-2009  14:08
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21091" levels="1" name="Agathion Seal Cancel - Weaver">
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="SUMMON"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+        <set name="npcId" val="1528"/>
+        <set name="summonType" val="agathion"/>
+        <for/>
+    </skill>
+	<skill id="21092" levels="1" name="Theme - Love">
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21093" levels="1" name="Theme - Hero">
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+    <skill id="21094" levels="1" name="Theme - Theme Park">
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+    </skill>
+    <skill id="21095" levels="1" name="Blessed Resurrection">
+        <!-- Done Nano -->
+        <set name="power" val="100"/>
+        <set name="target" val="TARGET_CORPSE_PLAYER"/>
+        <set name="corpse" val="true"/>
+        <set name="skillType" val="RESURRECT"/>
+        <set name="useSS" val="false"/>
+        <set name="canPet" val="true"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+       <for/>
+    </skill>
+    <skill id="21096" levels="1" name="Ability of Cool Watermelon">
+        <!-- Done Nano -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="26" stackType="improve_crt_rate_dmg_up" time="1800">
+                <add order="0x40" stat="p_critical_rate_per" val="30"/>
+                <mul order="0x30" stat="p_critical_damage_per" val="1.35"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21097" levels="1" name="Summon Friend">
+        <!--  Automatically generated from The Gracia Final client files.
+                Description: Summons your friend.
+                Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+                created 31-10-2009  14:08
+          -->
+        <set name="target" val="TARGET_NONE"/>
+        <set name="skillType" val="NOTDONE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for/>
+    </skill>
+    <skill id="21098" levels="1" name="Great Adventurer's Soul Power : Endless">
+        <!-- Dome Nano -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="26" stackType="multi_buff" time="300">
+                <mul order="0x30" stat="p_max_hp" val="1.2"/>
+                <mul order="0x30" stat="p_max_mp" val="1.2"/>
+                <mul order="0x30" stat="p_speed" val="1.2"/>
+                <add order="0x40" stat="debuffRcpt" val="10"/>
+            </effect>
+        </for>
+    </skill>
+    <skill id="21099" levels="1" name="Great Warrior's Soul Power: Strength">
+        <!-- Dome Nano -->
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <for>
+            <effect name="Buff" stackOrder="26" stackType="multi_buff" time="300">
+                <mul order="0x30" stat="p_attack_speed" val="1.2"/>
+                <mul order="0x30" stat="p_physical_defence" val="1.2"/>
+                <mul order="0x30" stat="p_physical_attack" val="1.1"/>
+                <add order="0x40" stat="absorbDam" val="5"/>
+            </effect>
+        </for>
+    </skill>
+</list>

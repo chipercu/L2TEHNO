@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="663" type="SOLO">
+		<name lang="en" val="Seductive Whispers"/>
+		<name lang="ru" val="Обольщающий шепот"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20674"/>	<!-- Doom Knight -->
+			<event type="MOBKILLED" val="20678"/>	<!-- Tortured Undead -->
+			<event type="MOBKILLED" val="20954"/>	<!-- Hungered Corpse -->
+			<event type="MOBKILLED" val="20955"/>	<!-- Ghostly Warrior -->
+			<event type="MOBKILLED" val="20956"/>	<!-- Past Knight -->
+			<event type="MOBKILLED" val="20957"/>	<!-- Nihil Invader -->
+			<event type="MOBKILLED" val="20958"/>	<!-- Death Agent -->
+			<event type="MOBKILLED" val="20959"/>	<!-- Dark Guard -->
+			<event type="MOBKILLED" val="20960"/>	<!-- Bloody Ghost -->
+			<event type="MOBKILLED" val="20961"/>	<!-- Bloody Knight -->
+			<event type="MOBKILLED" val="20962"/>	<!-- Bloody Priest -->
+			<event type="MOBKILLED" val="20974"/>	<!-- Spiteful Soul Leader -->
+			<event type="MOBKILLED" val="20975"/>	<!-- Spiteful Soul Wizard -->
+			<event type="MOBKILLED" val="20976"/>	<!-- Spiteful Soul Fighter -->
+			<event type="MOBKILLED" val="20996"/>	<!-- Spiteful Ghost of Ruins -->
+			<event type="MOBKILLED" val="20997"/>	<!-- Soldier of Grief -->
+			<event type="MOBKILLED" val="20998"/>	<!-- Cruel Punisher -->
+			<event type="MOBKILLED" val="20999"/>	<!-- Roving Soul -->
+			<event type="MOBKILLED" val="21001"/>	<!-- Wretched Archer -->
+			<event type="MOBKILLED" val="21002"/>	<!-- Doom Scout -->
+			<event type="MOBKILLED" val="21006"/>	<!-- Doom Servant -->
+			<event type="MOBKILLED" val="21007"/>	<!-- Doom Guard -->
+			<event type="MOBKILLED" val="21008"/>	<!-- Doom Archer -->
+			<event type="MOBKILLED" val="21009"/>	<!-- Doom Trooper  -->
+			<event type="MOBKILLED" val="21010"/>	<!-- Doom Warrior -->
+			<event type="QUEST_START" val="30846"/>	<!-- Wilbert -->
+			<event type="QUEST_TALK" val="30846"/>	<!-- Wilbert -->
+		</setting>
+	</quest>
+</quests>

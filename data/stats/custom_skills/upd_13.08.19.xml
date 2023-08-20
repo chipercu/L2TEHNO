@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="1511" levels="8" name="Curse of Life Flow">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Time"/>
+		<enchant2 levels="30" name="Chance"/>
+		<triggers>
+			<trigger id="5591" level="1" type="RECEIVE_DAMAGE" chance="30">
+				<player damage="100;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<effect name="Debuff"/>
+		</for>
+	</skill>
+	<skill id="5591" levels="8" name="Light Flow">
+		<table name="#i_heal">189 196 203 210 217 223 229 234</table>
+		<set name="power" val="#i_heal"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="HEAL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+</list>

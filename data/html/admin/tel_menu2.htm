@@ -1,0 +1,32 @@
+<title>Меню Телепортации</title>
+<center>
+<table width=265>
+  <tr>
+    <td width=50>
+		<button value="Назад" action="bypass -h admin_tel_menu" width=50 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+    </td>
+    <td width=165>
+    </td>
+    <td width=50>
+      <button value="Меню" action="bypass -h admin_admin" width=50 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+    </td>
+  </tr>
+</table>
+<img src="L2UI.SquareWhite" width=260 height=1><br>
+%menu%
+<img src="L2UI.SquareWhite" width=260 height=1><br>
+*Переместиться в координаты*<br>
+<table>
+  <tr>
+    <td><center>X:</center></td>
+    <td><center>Y:</center></td>
+    <td><center>Z:</center></td>
+  </tr>
+  <tr>
+    <td><edit var="cord_x" width=60></td>
+    <td><edit var="cord_y" width=60></td>
+    <td><edit var="cord_z" width=60></td>
+  <tr>
+</table><br>
+<button value="Переместиться" action="bypass -h admin_move_to $cord_x $cord_y $cord_z" width=200 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+</center>

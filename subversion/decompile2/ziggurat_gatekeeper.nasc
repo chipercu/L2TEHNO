@@ -1,0 +1,178 @@
+class 1 ziggurat_gatekeeper : (null)
+{
+handler:
+  EventHandler TALK_SELECTED( fhtml0, i0, s0, talker )
+  {
+    if( _from_choice == 0 )
+    {
+      if( myself::HaveMemo( talker, @restriction_of_the_past ) == 0 )
+      {
+        _choiceN = _choiceN + 1;
+        _code = 0;
+        myself::AddChoice( 0, "Yoke of the Past" );
+      }
+      if( myself::HaveMemo( talker, @restriction_of_the_past ) == 1 &&
+          myself::OwnItemCount( talker, @q_scroll_of_ancient_magic ) < 1 )
+      {
+        _choiceN = _choiceN + 1;
+        _code = 1;
+        myself::AddChoice( 1, "Yoke of the Past (continue)" );
+      }
+      if( myself::HaveMemo( talker, @restriction_of_the_past ) == 1 &&
+          myself::OwnItemCount( talker, @q_scroll_of_ancient_magic ) > 0 )
+      {
+        _choiceN = _choiceN + 1;
+        _code = 2;
+        myself::AddChoice( 2, "Yoke of the Past (continue)" );
+      }
+      if( _choiceN > 1 )
+      {
+        myself::ShowChoicePage( talker, 1 );
+        return;
+      }
+    }
+    if( _from_choice || _choiceN == 1 )
+    {
+      switch( _code )
+      {
+        case 0:
+        {
+          if( myself::GetMemoCount( talker ) < 15 )
+          {
+            if( talker.level >= 20 )
+            {
+              s0 = "enter_necropolis1_q0385_01.htm";
+            }
+            else
+            {
+              s0 = "enter_necropolis1_q0385_02.htm";
+            }
+            myself::FHTML_SetFileName( fhtml0, s0 );
+            myself::FHTML_SetInt( fhtml0, "quest_id", 385 );
+            myself::ShowFHTML( talker, fhtml0 );
+          }
+          else
+          {
+            myself::ShowPage( talker, "fullquest.htm" );
+          }
+        }
+        case 1:
+        {
+          myself::ShowPage( talker, "enter_necropolis1_q0385_08.htm" );
+        }
+        case 2:
+        {
+          if( myself::GetCurrentTick() - talker.quest_last_reward_time > 1 )
+          {
+            talker.quest_last_reward_time = myself::GetCurrentTick();
+          }
+          else
+          {
+            return;
+          }
+          if( ( talker.occupation < 53 && talker.nobless_type > 70 ) ||
+              ( talker.occupation > 52 && talker.occupation < 58 &&
+                talker.nobless_type > 90 ) )
+          {
+            myself::ShowSystemMessage( talker, 1118 );
+            return;
+          }
+          i0 = myself::OwnItemCount( talker, @q_scroll_of_ancient_magic );
+          if( i0 > 0 )
+          {
+            myself::DeleteItem1( talker, @q_scroll_of_ancient_magic, i0 );
+            myself::GiveItem1( talker, @q_blank_scrl, i0 );
+            myself::ShowPage( talker, "enter_necropolis1_q0385_09.htm" );
+          }
+          else
+          {
+            myself::ShowPage( talker, "enter_necropolis1_q0385_08.htm" );
+          }
+        }
+      }
+      return;
+    }
+    super;
+  }
+
+  EventHandler QUEST_ACCEPTED( quest_id, talker )
+  {
+    if( quest_id == 385 )
+    {
+      if( myself::GetCurrentTick() - talker.quest_last_reward_time > 1 )
+      {
+        talker.quest_last_reward_time = myself::GetCurrentTick();
+      }
+      else
+      {
+        return;
+      }
+      if( ( talker.occupation < 53 && talker.nobless_type > 70 ) ||
+          ( talker.occupation > 52 && talker.occupation < 58 &&
+            talker.nobless_type > 90 ) )
+      {
+        myself::ShowSystemMessage( talker, 1118 );
+        return;
+      }
+      if( myself::HaveMemo( talker, quest_id ) == 1 )
+      {
+        return;
+      }
+      if( quest_id < 256 )
+      {
+        if( myself::GetOneTimeQuestFlag( talker, quest_id ) == 1 )
+        {
+          return;
+        }
+      }
+      if( myself::GetMemoCount( talker ) > 14 )
+      {
+        return;
+      }
+      myself::SetMemo( talker, quest_id );
+      myself::SoundEffect( talker, "ItemSound.quest_accept" );
+      myself::ShowPage( talker, "enter_necropolis1_q0385_05.htm" );
+      return;
+    }
+    super;
+  }
+
+  EventHandler MENU_SELECTED( ask, fhtml0, i0, i1, reply, talker )
+  {
+    if( ask == 385 )
+    {
+      if( reply == 1 )
+      {
+        myself::ShowPage( talker, "enter_necropolis1_q0385_03.htm" );
+      }
+      else if( reply == 2 )
+      {
+        myself::FHTML_SetFileName( fhtml0, "enter_necropolis1_q0385_04.htm" );
+        myself::FHTML_SetInt( fhtml0, "quest_id", 385 );
+        myself::ShowFHTML( talker, fhtml0 );
+      }
+      else if( reply == 3 )
+      {
+        myself::FHTML_SetFileName( fhtml0, "enter_necropolis1_q0385_07.htm" );
+        myself::FHTML_SetInt( fhtml0, "quest_id", 385 );
+        myself::ShowFHTML( talker, fhtml0 );
+      }
+      else if( reply == 4 )
+      {
+        myself::ShowPage( talker, "enter_necropolis1_q0385_06.htm" );
+      }
+      else if( reply == 5 )
+      {
+        myself::RemoveMemo( talker, @restriction_of_the_past );
+        myself::SoundEffect( talker, "ItemSound.quest_finish" );
+        myself::ShowPage( talker, "enter_necropolis1_q0385_10.htm" );
+      }
+      else if( reply == 6 )
+      {
+        myself::ShowPage( talker, "enter_necropolis1_q0385_11.htm" );
+      }
+    }
+    super;
+  }
+}
+

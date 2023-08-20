@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="218" type="SOLO">
+		<name lang="en" val="Testimony of Life"/>
+		<name lang="ru" val="Испытание жизни"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20145"/>	<!-- Harpy -->
+			<event type="MOBKILLED" val="20176"/>	<!-- Wyrm -->
+			<event type="MOBKILLED" val="20233"/>	<!-- Marsh Spider -->
+			<event type="MOBKILLED" val="27077"/>	<!-- Unicorn Of Eva -->
+			<event type="MOBKILLED" val="20550"/>	<!-- Guardian Basilisk -->
+			<event type="MOBKILLED" val="20581"/>	<!-- Leto Lizardman Shaman -->
+			<event type="MOBKILLED" val="20582"/>	<!-- Leto Lizardman Overlord -->
+			<event type="MOBKILLED" val="20082"/>	<!-- Ant Recruit -->
+			<event type="MOBKILLED" val="20084"/>	<!-- Ant Patrol -->
+			<event type="MOBKILLED" val="20086"/>	<!-- Ant Guard -->
+			<event type="MOBKILLED" val="20087"/>	<!-- Ant Soldier -->
+			<event type="MOBKILLED" val="20088"/>	<!-- Ant Warrior Captain -->
+			<event type="QUEST_START" val="30460"/>	<!-- Cardien -->
+			<event type="QUEST_TALK" val="30460"/>	<!-- Cardien -->
+			<event type="QUEST_TALK" val="30154"/>	<!-- Asterios -->
+			<event type="QUEST_TALK" val="30300"/>	<!-- Pushkin -->
+			<event type="QUEST_TALK" val="30371"/>	<!-- Thalia -->
+			<event type="QUEST_TALK" val="30375"/>	<!-- Adonius -->
+			<event type="QUEST_TALK" val="30419"/>	<!-- Arkenia -->
+			<event type="QUEST_TALK" val="30460"/>	<!-- Cardien -->
+			<event type="QUEST_TALK" val="30655"/>	<!-- Isael Silvershadow -->
+			<item id="3142"/>	<!-- Camomile Charm -->
+			<item id="3141"/>	<!-- Cardien's Letter -->
+			<item id="3160"/>	<!-- Water of Life -->
+			<item id="3144"/>	<!-- Moonflower Charm -->
+			<item id="3143"/>	<!-- Hierarch's Letter -->
+			<item id="3155"/>	<!-- Stardust -->
+			<item id="3150"/>	<!-- Pure Mithril Cup -->
+			<item id="3148"/>	<!-- Thalia's Instructions -->
+			<item id="3157"/>	<!-- Isael's Letter -->
+			<item id="3159"/>	<!-- Tears of Unicorn -->
+			<item id="3145"/>	<!-- Grail Diagram -->
+			<item id="3149"/>	<!-- Pushkin's List -->
+			<item id="3146"/>	<!-- Thalia's 1st Letter -->
+			<item id="3151"/>	<!-- Arkenia's Contract -->
+			<item id="3154"/>	<!-- Andariel Scripture Copy -->
+			<item id="3152"/>	<!-- Arkenia's Instructions -->
+			<item id="3153"/>	<!-- Adonius's list -->
+			<item id="3147"/>	<!-- Thalia's 2nd Letter -->
+			<item id="3166"/>	<!-- Talin's Spear Blade -->
+			<item id="3167"/>	<!-- Talin's Spear Shaft -->
+			<item id="3168"/>	<!-- Talin's Ruby -->
+			<item id="3169"/>	<!-- Talin's Aquamarine -->
+			<item id="3170"/>	<!-- Talin's Amethyst -->
+			<item id="3171"/>	<!-- Talin's Peridot -->
+			<item id="3156"/>	<!-- Isael's Instructions -->
+			<item id="3158"/>	<!-- Grail of Purity -->
+		</setting>
+	</quest>
+</quests>

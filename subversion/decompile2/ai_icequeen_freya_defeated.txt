@@ -1,0 +1,28 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_freya_defeated : default_npc
+{
+parameter:
+	int	ITEM_invisi_1hs = 15280;
+
+handler:
+	EventHandler CREATED()
+	{
+		myself->EquipItem(ITEM_invisi_1hs);
+		myself->ChangeStatus(0);
+	}
+
+	EventHandler SCRIPT_EVENT(script_event_arg1)
+	{
+		if( script_event_arg1 == 23140020 )
+		{
+		}
+	}
+
+}

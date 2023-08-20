@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="174" type="SOLO">
+		<name lang="en" val="Supply Check"/>
+		<name lang="ru" val="Проверка снабжения"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="32173"/>	<!-- Marcela -->
+			<event type="QUEST_TALK" val="32173"/>	<!-- Marcela -->
+			<event type="QUEST_TALK" val="32170"/>	<!-- Benis -->
+			<event type="QUEST_TALK" val="32167"/>	<!-- Nika -->
+			<item id="9792"/>	<!-- Warehouse Manifest -->
+			<item id="9793"/>	<!-- Grocery Store Manifest -->
+		</setting>
+	</quest>
+</quests>

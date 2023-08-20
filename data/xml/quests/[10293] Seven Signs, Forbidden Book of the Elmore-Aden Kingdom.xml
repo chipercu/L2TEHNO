@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="10293" type="SOLO">
+		<name lang="en" val="Seven Signs, Forbidden Book of the Elmore-Aden Kingdom"/>
+		<name lang="ru" val="Семь Печатей, Запрещенная Эльмореденом книга"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="32784"/>	<!-- Elcadia -->
+			<event type="QUEST_TALK" val="32784"/>	<!-- Elcadia -->
+			<event type="QUEST_TALK" val="32596"/>	<!-- Sophia -->
+			<event type="QUEST_TALK" val="32861"/>	<!-- Sophia -->
+			<event type="QUEST_TALK" val="32785"/>	<!-- Elcadia -->
+			<event type="QUEST_TALK" val="32863"/>	<!-- Sophia -->
+			<event type="QUEST_TALK" val="32809"/>	<!-- Pile of Books -->
+			<event type="QUEST_TALK" val="32810"/>	<!-- Pile of Books -->
+			<event type="QUEST_TALK" val="32811"/>	<!-- Pile of Books -->
+			<event type="QUEST_TALK" val="32812"/>	<!-- Pile of Books -->
+			<event type="QUEST_TALK" val="32813"/>	<!-- Pile of Books -->
+			<item id="17213"/>	<!-- Solina's Biography -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="219" type="SOLO">
+		<name lang="en" val="Testimony of Fate"/>
+		<name lang="ru" val="Испытание судьбы"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20158"/>	<!-- Medusa -->
+			<event type="MOBKILLED" val="20233"/>	<!-- Marsh Spider -->
+			<event type="MOBKILLED" val="20202"/>	<!-- Dead Seeker -->
+			<event type="MOBKILLED" val="20192"/>	<!-- Tyrant -->
+			<event type="MOBKILLED" val="20193"/>	<!-- Tyrant Kingpin -->
+			<event type="MOBKILLED" val="20230"/>	<!-- Marsh Stakato Worker -->
+			<event type="MOBKILLED" val="20157"/>	<!-- Marsh Stakato -->
+			<event type="MOBKILLED" val="20232"/>	<!-- Marsh Stakato Soldier -->
+			<event type="MOBKILLED" val="20234"/>	<!-- Marsh Stakato Drone -->
+			<event type="MOBKILLED" val="20554"/>	<!-- Grandis -->
+			<event type="MOBKILLED" val="20600"/>	<!-- Karul Bugbear -->
+			<event type="MOBKILLED" val="20270"/>	<!-- Breka Orc Overlord -->
+			<event type="MOBKILLED" val="20582"/>	<!-- Leto Lizardman Overlord -->
+			<event type="MOBKILLED" val="27079"/>	<!-- Black Willow Lurker -->
+			<event type="MOBKILLED" val="20144"/>	<!-- Hangman Tree -->
+			<event type="QUEST_START" val="30476"/>	<!-- Kaira -->
+			<event type="QUEST_TALK" val="30476"/>	<!-- Kaira -->
+			<event type="QUEST_TALK" val="30614"/>	<!-- Metheus -->
+			<event type="QUEST_TALK" val="30463"/>	<!-- Ixia -->
+			<event type="QUEST_TALK" val="30613"/>	<!-- Alders Spirit -->
+			<event type="QUEST_TALK" val="30114"/>	<!-- Roa -->
+			<event type="QUEST_TALK" val="30210"/>	<!-- Norman -->
+			<event type="QUEST_TALK" val="30358"/>	<!-- Thifiell -->
+			<event type="QUEST_TALK" val="30419"/>	<!-- Arkenia -->
+			<event type="QUEST_TALK" val="31845"/>	<!-- Bloody Pixy -->
+			<event type="QUEST_TALK" val="31850"/>	<!-- Blight Treant -->
+			<item id="3173"/>	<!-- Kaira's Letter -->
+			<item id="3174"/>	<!-- Metheus's Funeral Jar -->
+			<item id="3175"/>	<!-- Kasandra's Remains -->
+			<item id="3177"/>	<!-- Ixia's List -->
+			<item id="3183"/>	<!-- Belladonna -->
+			<item id="3184"/>	<!-- Alder's Skull -->
+			<item id="3185"/>	<!-- Alders Skull -->
+			<item id="3186"/>	<!-- Alder's Receipt -->
+			<item id="3187"/>	<!-- Revelations Manuscript -->
+			<item id="3189"/>	<!-- Kaira's Recommendation -->
+			<item id="3188"/>	<!-- Kaira's Instructions -->
+			<item id="3191"/>	<!-- Thifiell's Letter -->
+			<item id="3190"/>	<!-- Palus Charm -->
+			<item id="3192"/>	<!-- Arkenia's Note -->
+			<item id="3193"/>	<!-- Pixy Garnet -->
+			<item id="3199"/>	<!-- Blight Treant Seed -->
+			<item id="3198"/>	<!-- Red Fairy Dust -->
+			<item id="3201"/>	<!-- Blight Treant Sap -->
+			<item id="1246"/>	<!-- Arkenia's Letter -->
+			<item id="3178"/>	<!-- Medusa's Ichor -->
+			<item id="3179"/>	<!-- Marsh Spider Fluids -->
+			<item id="3180"/>	<!-- Dead Seeker Dung -->
+			<item id="3181"/>	<!-- Tyrant's Blood -->
+			<item id="3182"/>	<!-- Nightshade Root -->
+			<item id="3194"/>	<!-- Grandis's Skull -->
+			<item id="3195"/>	<!-- Karul Bugbear Skull -->
+			<item id="3196"/>	<!-- Breka Overlord Skull -->
+			<item id="3197"/>	<!-- Leto Overlord Skull -->
+			<item id="3200"/>	<!-- Black Willow Leaf -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,135 @@
+<html><body><center><br><table border=0 cellspacing=0 cellpadding=0><tr><td width=50></td><td align=center width=695 height=25 align=left>
+<img src="l2ui.bbs_lineage2" width=128 height=16 ></td></tr></table>
+<img src="L2UI.SquareWhite" width=740 height=1>
+<table width="740" bgcolor="FFFFFF" border=0 height=32 cellspacing=0 cellpadding=0><tr><td><center>
+%menu%
+</center></td></tr></table>
+<img src="L2UI.SquareWhite" width=740 height=1><br>
+<table width="740" height="400" background="L2UI_CH3.refinewnd_back_Pattern"><tr><td>
+<br><br>
+<center>
+	<table width=600 height=370>
+			<tr>
+				<td>
+					<center>
+						<table>
+							<tr>
+								<td><center><font color=00FFAA>Операции бафера</font></center></td>
+							</tr>
+							<tr>
+								<td>
+									<center><button value="Набор для мага" action="bypass -h _bbsbuff;grp;2; $tvari" width=130 height=40 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></center>
+									<center><button value="Набор для война" action="bypass -h _bbsbuff;grp;1; $tvari" width=130 height=40 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></center>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<center>
+									<table>
+										<tr>
+											<td><button value="Сброс" action="bypass -h _bbsbuff;cancel" width=55 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+											<td><button value="Мана" action="bypass -h _bbsbuff;regmp" width=70 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+										</tr>
+									</table>
+									</center>
+								</td>
+							</tr>
+						</table>
+					</center> 
+					<center>
+						<table>
+							<tr>
+								<td><center><font color=00FFAA>выбор цели бафа</font></center></td>
+							</tr>
+							<tr>
+								<td>
+									<combobox width=130 var="tvari" list="Player;Pet">
+								</td>
+							</tr>
+						</table>
+					</center>  
+					<center>
+						<table>
+							<tr>
+								<td><center><font color=00FFAA>Ваши наборы бафов</font></center></td>
+							</tr>
+							<tr>
+								<td>
+									<center><edit var="name" width=130 height=10 length=10></center>
+									<center><button value="Сохранить" action="bypass -h _bbsbuff;save; $name" width=130 height=40 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></center>
+								</td>
+							</tr>
+							<tr>
+							    <td>
+								<center>%sch%</center>
+								</td>
+							</tr>
+						</table>
+					</center> 
+				</td>    
+				<td width=450 align=center>
+					<center>
+					<table width=260>
+					<tr>
+						<td><center><button value="Предыдущая" action="bypass -h _bbsbuff;" width=90 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></center></td>
+						<td><center><font color=00FFAA>2 Страница</font></center></td>
+						<td><center><button value="Следующая" action="bypass -h _bbstop;3" width=90 height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></center></td>
+					</tr>
+					</table>
+					<table width=400>
+						<tr>
+							<td align=center>
+								<img src=icon.skill1352 width=32 height=32><button value="Elemental P." action="bypass -h _bbsbuff;buff;2;1352;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1353 width=32 height=32><button value="Divine P." action="bypass -h _bbsbuff;buff;2;1353;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1354 width=32 height=32><button value="Arcane P." action="bypass -h _bbsbuff;buff;2;1354;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1035 width=32 height=32><button value="Mental Shield" action="bypass -h _bbsbuff;buff;2;1035;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1259 width=32 height=32><button value="Resist Shock" action="bypass -h _bbsbuff;buff;2;1259;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1304 width=32 height=32><button value="Adv. Block" action="bypass -h _bbsbuff;buff;2;1304;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+							</td>
+							<td align=center>
+								<img src=icon.skill1460 width=32 height=32><button value="Mana Gain" action="bypass -h _bbsbuff;buff;2;1460;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1073 width=32 height=32><button value="Kiss of Eva" action="bypass -h _bbsbuff;buff;2;1073;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1044 width=32 height=32><button value="Regeneration" action="bypass -h _bbsbuff;buff;2;1044;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1307 width=32 height=32><button value="Prayer" action="bypass -h _bbsbuff;buff;2;1307;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1078 width=32 height=32><button value="Concentration" action="bypass -h _bbsbuff;buff;2;1078;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"> 
+								<img src=icon.skill1243 width=32 height=32><button value="Bless Shield" action="bypass -h _bbsbuff;buff;2;1243;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">															
+							</td>
+							<td align=center>
+								<img src=icon.skill1356 width=32 height=32><button value="Pro. of Fire" action="bypass -h _bbsbuff;buff;2;1356;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1355 width=32 height=32><button value="Pro. of Water" action="bypass -h _bbsbuff;buff;2;1355;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1357 width=32 height=32><button value="Pro. of Wind" action="bypass -h _bbsbuff;buff;2;1357;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1499 width=32 height=32><button value="Imp. Combat" action="bypass -h _bbsbuff;buff;2;1499;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1500 width=32 height=32><button value="Imp. Magic" action="bypass -h _bbsbuff;buff;2;1500;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1501 width=32 height=32><button value="Imp. Condition" action="bypass -h _bbsbuff;buff;2;1501;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">								
+							</td>
+							<td align=center>
+								<img src=icon.skill1502 width=32 height=32><button value="Imp. Critical" action="bypass -h _bbsbuff;buff;2;1502;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1503 width=32 height=32><button value="Imp. Shield" action="bypass -h _bbsbuff;buff;2;1503;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1504 width=32 height=32><button value="Imp. Movement" action="bypass -h _bbsbuff;buff;2;1504;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1043 width=32 height=32><button value="Holy Weapon" action="bypass -h _bbsbuff;buff;2;1043;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"> 
+								<img src=icon.skill1443 width=32 height=32><button value="Dark Weapon" action="bypass -h _bbsbuff;buff;2;1443;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1442 width=32 height=32><button value="Dark Weapon" action="bypass -h _bbsbuff;buff;2;1442;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"> 																
+							</td>
+							<td align=center>
+								<img src=icon.skill0264 width=32 height=32><button value="Earth" action="bypass -h _bbsbuff;buff;2;264;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill0265 width=32 height=32><button value="Life" action="bypass -h _bbsbuff;buff;2;265;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill0267 width=32 height=32><button value="Warding" action="bypass -h _bbsbuff;buff;2;267;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill0268 width=32 height=32><button value="Wind" action="bypass -h _bbsbuff;buff;2;268;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"> 
+								<img src=icon.skill0269 width=32 height=32><button value="Hunter" action="bypass -h _bbsbuff;buff;2;269;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill0304 width=32 height=32><button value="Vitality" action="bypass -h _bbsbuff;buff;2;304;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"> 																
+							</td>
+							<td align=center>
+								<img src=icon.skill1393 width=32 height=32><button value="Unholy Resist" action="bypass -h _bbsbuff;buff;2;1393;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill0349 width=32 height=32><button value="Renewal" action="bypass -h _bbsbuff;buff;2;349;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill0363 width=32 height=32><button value="Meditation" action="bypass -h _bbsbuff;buff;2;363;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill0364 width=32 height=32><button value="Champion" action="bypass -h _bbsbuff;buff;2;364;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill0273 width=32 height=32><button value="Mystic" action="bypass -h _bbsbuff;buff;2;273;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								<img src=icon.skill1542 width=32 height=32><button value="Counter Critical" action="bypass -h _bbsbuff;buff;2;1542;1; $tvari" width=90 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+							</td>
+						</tr>
+					</table>
+					</center>
+				</td>
+			</tr>
+	</table>
+</center>

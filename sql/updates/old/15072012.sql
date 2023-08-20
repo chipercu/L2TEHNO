@@ -1,0 +1,1 @@
+ALTER TABLE `character_skills` MODIFY COLUMN `skill_name` varchar(100) default NULL;

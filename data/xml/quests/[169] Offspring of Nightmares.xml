@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="169" type="SOLO">
+		<name lang="en" val="Offspring of Nightmares"/>
+		<name lang="ru" val="Исчадие ада"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20105"/>	<!-- Dark Horror -->
+			<event type="MOBKILLED" val="20025"/>	<!-- Lesser Dark Horror -->
+			<event type="QUEST_START" val="30145"/>	<!-- Vlasty -->
+			<event type="QUEST_TALK" val="30145"/>	<!-- Vlasty -->
+			<event type="QUEST_TALK" val="30145"/>	<!-- Vlasty -->
+			<item id="1030"/>	<!-- Cracked Skull -->
+			<item id="1031"/>	<!-- Perfect Skull -->
+		</setting>
+	</quest>
+</quests>

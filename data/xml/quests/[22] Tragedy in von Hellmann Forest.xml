@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="22" type="SOLO">
+		<name lang="en" val="Tragedy in von Hellmann Forest"/>
+		<name lang="ru" val="Трагедия в лесу"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="27217"/>	<!-- Soul of Well -->
+			<event type="MOBKILLED" val="21547"/>	<!-- Corrupted Knight -->
+			<event type="MOBKILLED" val="21548"/>	<!-- Resurrected Knight -->
+			<event type="MOBKILLED" val="21549"/>	<!-- Corrupted Guard -->
+			<event type="MOBKILLED" val="21550"/>	<!-- Corrupted Guard -->
+			<event type="MOBKILLED" val="21551"/>	<!-- Resurrected Guard -->
+			<event type="MOBKILLED" val="21552"/>	<!-- Resurrected Guard -->
+			<event type="MOBKILLED" val="21553"/>	<!-- Trampled Man -->
+			<event type="MOBKILLED" val="21554"/>	<!-- Trampled Man -->
+			<event type="MOBKILLED" val="21555"/>	<!-- Slaughter Executioner -->
+			<event type="MOBKILLED" val="21556"/>	<!-- Slaughter Executioner -->
+			<event type="MOBKILLED" val="21557"/>	<!-- Bone Snatcher -->
+			<event type="MOBKILLED" val="21558"/>	<!-- Bone Snatcher -->
+			<event type="MOBKILLED" val="21559"/>	<!-- Bone Maker -->
+			<event type="MOBKILLED" val="21560"/>	<!-- Bone Shaper -->
+			<event type="MOBKILLED" val="21561"/>	<!-- Sacrificed Man -->
+			<event type="MOBKILLED" val="21562"/>	<!-- Guillotines Ghost -->
+			<event type="MOBKILLED" val="21563"/>	<!-- Bone Collector -->
+			<event type="MOBKILLED" val="21564"/>	<!-- Skull Collector -->
+			<event type="MOBKILLED" val="21565"/>	<!-- Bone Animator -->
+			<event type="MOBKILLED" val="21566"/>	<!-- Skull Animator -->
+			<event type="MOBKILLED" val="21567"/>	<!-- Bone Slayer -->
+			<event type="MOBKILLED" val="21568"/>	<!-- Devil Bat -->
+			<event type="MOBKILLED" val="21569"/>	<!-- Devil Bat -->
+			<event type="MOBKILLED" val="21570"/>	<!-- Ghost of Betrayer -->
+			<event type="MOBKILLED" val="21571"/>	<!-- Ghost of Rebellion Soldier -->
+			<event type="MOBKILLED" val="21572"/>	<!-- Bone Sweeper -->
+			<event type="MOBKILLED" val="21573"/>	<!-- Atrox -->
+			<event type="MOBKILLED" val="21574"/>	<!-- Bone Grinder -->
+			<event type="MOBKILLED" val="21575"/>	<!-- Bone Grinder -->
+			<event type="MOBKILLED" val="21576"/>	<!-- Ghost of Guillotine  -->
+			<event type="MOBKILLED" val="21577"/>	<!-- Ghost of Guillotine  -->
+			<event type="MOBKILLED" val="21578"/>	<!-- Behemoth Zombie -->
+			<event type="QUEST_START" val="31334"/>	<!-- Tifaren -->
+			<event type="QUEST_TALK" val="31334"/>	<!-- Tifaren -->
+			<event type="QUEST_TALK" val="31334"/>	<!-- Tifaren -->
+			<event type="QUEST_TALK" val="31528"/>	<!-- Ghost of Priest -->
+			<event type="QUEST_TALK" val="31328"/>	<!-- Innocentin -->
+			<event type="QUEST_TALK" val="31529"/>	<!-- Ghost of Adventurer -->
+			<event type="QUEST_TALK" val="31527"/>	<!-- Well -->
+			<item id="7142"/>	<!-- Lost Skull of Elf -->
+		</setting>
+	</quest>
+</quests>

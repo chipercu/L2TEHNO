@@ -1,0 +1,58 @@
+<html>
+<body>
+<center>
+<table>
+<tr>
+<td><button value="Новости" action="bypass -h _bbstop" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Магазин" action="bypass -h _bbstop;30" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Баффер" action="bypass -h _bbsbuff;" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Телепорт" action="bypass -h _bbsteleport;" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Карьера" action="bypass -h _bbsclass;" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Сервис" action="bypass -h _bbstop;40" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Крафт" action="bypass -h _bbstop;70" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Аукцион" action="bypass -h _marketpage;index" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<title>Регистрация</title>
+<body>
+<br><br><br>
+<center>Регистрация на аукционе/рынке.</center>
+<br><br><br>
+Убедительная просьба, указывайте настоящие данные иначе вы не сможете вывести деньги.
+<br><br><br>
+1. Укажите ваше имя:   
+<table width="300">
+	<tr>
+		<td>
+			<edit var="name" width=120 height=15>
+		</td>
+	</tr>
+</table><br><br><br>
+2. Укажите вашу фамилию: 
+<table width="300">
+	<tr>
+		<td>
+			<edit var="firstname" width=120 height=15>
+		</td>
+	</tr>
+</table><br><br>
+3. Укажите ваш номер кошелька WebMoney: <br>
+<table width="300">
+	<tr>
+		<td>
+			<combobox var="cash1" width="100" List="WMR;WMU;WMZ">
+		</td>
+		<td>
+			<edit var="cash2" width=120 height=15>
+		</td>
+	</tr>
+</table><br> <br> <br> <br>
+<center><button value="Зарегистрироватся" action="bypass -h _marketpage;reg; $name $firstname  $cash1 $cash2" width=180 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></center>
+
+
+<center> %backlink% </center>
+<br>
+<br>
+</body>
+</title>
+</html>

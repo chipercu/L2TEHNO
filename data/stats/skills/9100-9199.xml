@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="9100" levels="1" name="Vesper Weapon Box">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9101" levels="1" name="Icarus Weapon Box">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9102" levels="1" name="Dynasty Weapon Box">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9103" levels="1" name="Box of Vesper Armor">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9104" levels="1" name="Box of Moirai Armor">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9105" levels="1" name="Box of Dynasty Armor">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9106" levels="1" name="Soul Crystal Box - Level 14">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9107" levels="1" name="Soul Crystal Box - Level 15">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9108" levels="1" name="Soul Crystal Box - Level 16">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9109" levels="1" name="Box of Facelift Potions">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9110" levels="1" name="Box of Haircolor Change Potions">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9111" levels="1" name="Box of Hairstyle Change Potions">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9112" levels="1" name="Box of Gold Apiga">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9113" levels="1" name="Vitality Potion">
+		<!-- Maintains the current Vitality for 10 minutes. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9114" levels="1" name="Nevit's Voice">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9115" levels="1" name="Nevit's Hourglass - 1 hour">
+		<!-- Increases Nevit's blessing by 1 hour. -->
+		<set name="itemConsumeId" val="17095"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="1"/>
+				<player maxLevel="19"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="3600"/>
+		</for>	
+	</skill>
+	<skill id="9116" levels="1" name="Nevit's Hourglass - 1.5 hour">
+		<!-- Increases Nevit's blessing by 1.5 hour. -->
+		<set name="itemConsumeId" val="17096"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="1"/>
+				<player maxLevel="19"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="5400"/>
+		</for>
+	</skill>
+	<skill id="9117" levels="1" name="Nevit's Hourglass - 2 hour">
+		<!-- Increases Nevit's blessing by 2 hour. -->
+		<set name="itemConsumeId" val="17097"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="1"/>
+				<player maxLevel="19"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="7200"/>
+		</for>
+	</skill>
+	<skill id="9118" levels="1" name="Nevit's Hourglass - 2.5 hour">
+		<!-- Increases Nevit's blessing by 2.5 hour. -->
+		<set name="itemConsumeId" val="17098"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="1"/>
+				<player maxLevel="19"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="9000"/>
+		</for>
+	</skill>
+	<skill id="9119" levels="1" name="Nevit's Hourglass - 3 hour">
+		<!-- Increases Nevit's blessing by 3 hour. -->
+		<set name="itemConsumeId" val="17099"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="1"/>
+				<player maxLevel="19"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="10800"/>
+		</for>
+	</skill>
+	<skill id="9120" levels="1" name="Nevit's Hourglass - 1 hour">
+		<!-- Increases Nevit's blessing by 1 hour. -->
+		<set name="itemConsumeId" val="17100"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="20"/>
+				<player maxLevel="39"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="3600"/>
+		</for>
+	</skill>
+	<skill id="9121" levels="1" name="Nevit's Hourglass - 1.5 hour">
+		<!-- Increases Nevit's blessing by 1.5 hour. -->
+		<set name="itemConsumeId" val="17101"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="20"/>
+				<player maxLevel="39"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="5400"/>
+		</for>
+	</skill>
+	<skill id="9122" levels="1" name="Nevit's Hourglass - 2 hour">
+		<!-- Increases Nevit's blessing by 2 hour. -->
+		<set name="itemConsumeId" val="17102"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="20"/>
+				<player maxLevel="39"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="7200"/>
+		</for>
+	</skill>
+	<skill id="9123" levels="1" name="Nevit's Hourglass - 2.5 hour">
+		<!-- Increases Nevit's blessing by 2.5 hour. -->
+		<set name="itemConsumeId" val="17103"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="20"/>
+				<player maxLevel="39"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="9000"/>
+		</for>
+	</skill>
+	<skill id="9124" levels="1" name="Nevit's Hourglass - 3 hour">
+		<!-- Increases Nevit's blessing by 3 hour. -->
+		<set name="itemConsumeId" val="17104"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="20"/>
+				<player maxLevel="39"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="10800"/>
+		</for>
+	</skill>
+	<skill id="9125" levels="1" name="Nevit's Hourglass - 1 hour">
+		<!-- Increases Nevit's blessing by 1 hour. -->
+		<set name="itemConsumeId" val="17105"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="40"/>
+				<player maxLevel="51"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="3600"/>
+		</for>
+	</skill>
+	<skill id="9126" levels="1" name="Nevit's Hourglass - 1.5 hour">
+		<!-- Increases Nevit's blessing by 1.5 hour. -->
+		<set name="itemConsumeId" val="17106"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="40"/>
+				<player maxLevel="51"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung"/>
+		</for>
+	</skill>
+	<skill id="9127" levels="1" name="Nevit's Hourglass - 2 hour">
+		<!-- Increases Nevit's blessing by 2 hour. -->
+		<set name="itemConsumeId" val="17107"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="40"/>
+				<player maxLevel="51"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung"/>
+		</for>
+	</skill>
+	<skill id="9128" levels="1" name="Nevit's Hourglass - 2.5 hour">
+		<!-- Increases Nevit's blessing by 2.5 hour. -->
+		<set name="itemConsumeId" val="17108"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="40"/>
+				<player maxLevel="51"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung"/>
+		</for>
+	</skill>
+	<skill id="9129" levels="1" name="Nevit's Hourglass - 3 hour">
+		<!-- Increases Nevit's blessing by 3 hour. -->
+		<set name="itemConsumeId" val="17109"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="40"/>
+				<player maxLevel="51"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung"/>
+		</for>
+	</skill>
+	<skill id="9130" levels="1" name="Nevit's Hourglass - 1 hour">
+		<!-- Increases Nevit's blessing by 1 hour. -->
+		<set name="itemConsumeId" val="17110"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="52"/>
+				<player maxLevel="60"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="3600"/>
+		</for>
+	</skill>
+	<skill id="9131" levels="1" name="Nevit's Hourglass - 1.5 hour">
+		<!-- Increases Nevit's blessing by 1.5 hour. -->
+		<set name="itemConsumeId" val="17111"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="52"/>
+				<player maxLevel="60"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="5400"/>
+		</for>
+	</skill>
+	<skill id="9132" levels="1" name="Nevit's Hourglass - 2 hour">
+		<!-- Increases Nevit's blessing by 2 hour. -->
+		<set name="itemConsumeId" val="17112"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="52"/>
+				<player maxLevel="60"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="7200"/>
+		</for>
+	</skill>
+	<skill id="9133" levels="1" name="Nevit's Hourglass - 2.5 hour">
+		<!-- Increases Nevit's blessing by 2.5 hour. -->
+		<set name="itemConsumeId" val="17113"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="52"/>
+				<player maxLevel="60"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="9000"/>
+		</for>
+	</skill>
+	<skill id="9134" levels="1" name="Nevit's Hourglass - 3 hour">
+		<!-- Increases Nevit's blessing by 3 hour. -->
+		<set name="itemConsumeId" val="17114"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="52"/>
+				<player maxLevel="60"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="10800"/>
+		</for>
+	</skill>
+	<skill id="9135" levels="1" name="Nevit's Hourglass - 1 hour">
+		<!-- Increases Nevit's blessing by 1 hour. -->
+		<set name="itemConsumeId" val="17115"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="61"/>
+				<player maxLevel="75"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="3600"/>
+		</for>
+	</skill>
+	<skill id="9136" levels="1" name="Nevit's Hourglass - 1.5 hour">
+		<!-- Increases Nevit's blessing by 1.5 hour. -->
+		<set name="itemConsumeId" val="17116"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="61"/>
+				<player maxLevel="75"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="5400"/>
+		</for>
+	</skill>
+	<skill id="9137" levels="1" name="Nevit's Hourglass - 2 hour">
+		<!-- Increases Nevit's blessing by 2 hour. -->
+		<set name="itemConsumeId" val="17117"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="61"/>
+				<player maxLevel="75"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="7200"/>
+		</for>
+	</skill>
+	<skill id="9138" levels="1" name="Nevit's Hourglass - 2.5 hour">
+		<!-- Increases Nevit's blessing by 2.5 hour. -->
+		<set name="itemConsumeId" val="17118"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="61"/>
+				<player maxLevel="75"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="9000"/>
+		</for>
+	</skill>
+	<skill id="9139" levels="1" name="Nevit's Hourglass - 3 hour">
+		<!-- Increases Nevit's blessing by 3 hour. -->
+		<set name="itemConsumeId" val="17119"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="61"/>
+				<player maxLevel="75"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="10800"/>
+		</for>
+	</skill>
+	<skill id="9140" levels="1" name="Nevit's Hourglass - 1 hour">
+		<!-- Increases Nevit's blessing by 1 hour. -->
+		<set name="itemConsumeId" val="17120"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="76"/>
+				<player maxLevel="79"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="3600"/>
+		</for>
+	</skill>
+	<skill id="9141" levels="1" name="Nevit's Hourglass - 1.5 hour">
+		<!-- Increases Nevit's blessing by 1.5 hour. -->
+		<set name="itemConsumeId" val="17121"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="76"/>
+				<player maxLevel="79"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="5400"/>
+		</for>
+	</skill>
+	<skill id="9142" levels="1" name="Nevit's Hourglass - 2 hour">
+		<!-- Increases Nevit's blessing by 2 hour. -->
+		<set name="itemConsumeId" val="17122"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="76"/>
+				<player maxLevel="79"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="7200"/>
+		</for>
+	</skill>
+	<skill id="9143" levels="1" name="Nevit's Hourglass - 2.5 hour">
+		<!-- Increases Nevit's blessing by 2.5 hour. -->
+		<set name="itemConsumeId" val="17123"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="76"/>
+				<player maxLevel="79"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="9000"/>
+		</for>
+	</skill>
+	<skill id="9144" levels="1" name="Nevit's Hourglass - 3 hour">
+		<!-- Increases Nevit's blessing by 3 hour. -->
+		<set name="itemConsumeId" val="17124"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="76"/>
+				<player maxLevel="79"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung"/>
+		</for>
+	</skill>
+	<skill id="9145" levels="1" name="Nevit's Hourglass - 1 hour">
+		<!-- Increases Nevit's blessing by 1 hour. -->
+		<set name="itemConsumeId" val="17125"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="80"/>
+				<player maxLevel="85"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="3600"/>
+		</for>
+	</skill>
+	<skill id="9146" levels="1" name="Nevit's Hourglass - 1.5 hour">
+		<!-- Increases Nevit's blessing by 1.5 hour. -->
+		<set name="itemConsumeId" val="17126"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="80"/>
+				<player maxLevel="85"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="5400"/>
+		</for>
+	</skill>
+	<skill id="9147" levels="1" name="Nevit's Hourglass - 2 hour">
+		<!-- Increases Nevit's blessing by 2 hour. -->
+		<set name="itemConsumeId" val="17127"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="80"/>
+				<player maxLevel="85"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="7200"/>
+		</for>
+	</skill>
+	<skill id="9148" levels="1" name="Nevit's Hourglass - 2.5 hour">
+		<!-- Increases Nevit's blessing by 2.5 hour. -->
+		<set name="itemConsumeId" val="17128"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="80"/>
+				<player maxLevel="85"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="9000"/>
+		</for>
+	</skill>
+	<skill id="9149" levels="1" name="Nevit's Hourglass - 3 hour">
+		<!-- Increases Nevit's blessing by 3 hour. -->
+		<set name="itemConsumeId" val="17129"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player minLevel="80"/>
+				<player maxLevel="85"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="BuffHung" stackType="Hourglass" time="10800"/>
+		</for>
+	</skill>
+	<skill id="9150" levels="1" name="Freesia Bouquet - Event">
+		<set name="itemConsumeId" val="17130"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9151" levels="1" name="Baby's Breath Bouquet - Event">
+		<set name="itemConsumeId" val="17131"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isSkillTimePermanent" val="true"/>
+	</skill>
+	<skill id="9152" levels="1" name="Pink Lady - Event">
+		<set name="itemConsumeId" val="17132"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9153" levels="1" name="June Bug - Event">
+		<set name="itemConsumeId" val="17133"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9154" levels="1" name="Soft Cheese Cake - Event">
+		<set name="itemConsumeId" val="17134"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9155" levels="1" name="Freshly-Baked Baguette - Event">
+		<set name="itemConsumeId" val="17135"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9156" levels="1" name="Sweet Cream-filled Bread - Event">
+		<set name="itemConsumeId" val="17136"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9157" levels="1" name="White Day Candy - Event">
+		<set name="itemConsumeId" val="17137"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<!-- TODO:
+	<skill id="9158" levels="1" name="Freya's Gift">
+		<table name="#extractableItems">
+			16026,1,0.0001;9627,1,0.1417;17139,1,1.4172;17140,1,1.4172;14052,1,2.8345;6622,1,18.424;2134,2,21.2585;14701,1,54.5068
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="skillType" val="EXTRACTABLE"/>
+		<set name="staticReuse" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<cond msgId="129">
+			<and>
+				<player invSize="10"/>
+				<player weight="80"/>
+			</and>
+		</cond>
+	</skill>
+	-->
+	<skill id="9159" levels="1" name="Transformation Scroll - Anakim">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="721;2;724;1;722;2;720;2;723;1"/>
+		<set name="npcId" val="13100"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="306">
+				<set order="0x08" stat="STR" val="46"/>
+				<set order="0x08" stat="DEX" val="30"/>
+				<set order="0x08" stat="CON" val="49"/>
+				<set order="0x08" stat="INT" val="50"/>
+				<set order="0x08" stat="WIT" val="20"/>
+				<set order="0x08" stat="MEN" val="45"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="9160" levels="1" name="Transformation Scroll - Zaken">
+		<set name="itemConsumeId" val="17140"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="717;4;718;4;715;4;716;4;719;1"/>
+		<set name="npcId" val="13099"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<zone type="OlympiadStadia"/>
+			</not>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="305">
+				<set order="0x08" stat="STR" val="48"/>
+				<set order="0x08" stat="DEX" val="30"/>
+				<set order="0x08" stat="CON" val="52"/>
+				<set order="0x08" stat="INT" val="45"/>
+				<set order="0x08" stat="WIT" val="20"/>
+				<set order="0x08" stat="MEN" val="45"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="9161" levels="1" name="Vesper's Mighty Power">
+		<set name="itemConsumeId" val="17158"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isHandler" val="true"/>
+		<for>
+			<effect name="Buff" time="600" stackOrder="1" stackType="wp_event_buf1" abnormal="sunk12">
+				<mul order="0x30" stat="p_physical_attack" val="1.15"/>
+				<mul order="0x30" stat="p_magical_attack" val="1.2"/>
+				<add order="0x40" stat="p_speed" val="10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="9162" levels="1" name="Vesper's Critical Attack Power">
+		<set name="itemConsumeId" val="17159"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isHandler" val="true"/>
+		<for>
+			<effect name="Buff" time="600" stackOrder="1" stackType="wp_event_buf1" abnormal="vesper_red">
+				<add order="0x40" stat="p_critical_rate_per" val="15"/>
+				<add order="0x40" stat="mCritRate" val="2"/>
+				<add order="0x40" stat="p_speed" val="10"/>
+				<add order="0x40" stat="absorbDam" val="5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="9163" levels="1" name="Invincible Vesper">
+		<set name="itemConsumeId" val="17160"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isHandler" val="true"/>
+		<for>
+			<effect name="Buff" time="600" stackOrder="1" stackType="wp_event_buf1" abnormal="vesper_noble">
+				<mul order="0x30" stat="p_attack_speed" val="1.2"/>
+				<mul order="0x30" stat="p_magic_speed" val="1.2"/>
+				<add order="0x40" stat="p_speed" val="20"/>
+			</effect>
+		</for>
+	</skill>
+	<!--
+	<skill id="9164" levels="1" name="Special Gift of April Fool's Day - Event">
+		<table name="#extractableItems">
+			13143,1,5.882;14105,1,5.882;14108,1,5.882;14109,1,5.882;14110,1,5.882;14111,1,5.882;13144,1,5.882;14106,1,5.882;14112,1,5.882;14113,1,5.882;14114,1,5.882;13145,1,5.882;14107,1,5.882;14115,1,5.882;14116,1,5.882;14117,1,5.882;13887,1,5.88799999999999
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="skillType" val="EXTRACTABLE"/>
+		<set name="staticReuse" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<cond msgId="129">
+			<and>
+				<player invSize="10"/>
+				<player weight="80"/>
+			</and>
+		</cond>
+	</skill>
+	-->
+	<skill id="9165" levels="1" name="Energy of Sprout">
+		<!-- For 1 hour, receives help from the Energy of Sprout to increase Max MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20%, the rate of Prominent Damage occurring through damage magic by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buffs by 10%. Decreases moving speed by 20% and MP consumption needed for skill use by 5%.-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9174" levels="1" name="Energy of Sprout">
+		<set name="itemConsumeId" val="17184"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="power" val="500000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SPHEAL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+		<for />
+	</skill>
+	<skill id="9175" levels="1" name="Energy of Sprout">
+		<set name="itemConsumeId" val="17185"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="power" val="1000000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SPHEAL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+		<for />
+	</skill>
+	<skill id="9179" levels="1" name="Antharas's Blood Crystal" >
+		<set name="castRange" val="4000" />
+		<set name="hitTime" val="3000" />
+		<set name="power" val="100" />
+		<set name="isHandler" val="true" />
+		<set name="hitCancelTime" val="500" />
+		<set name="target" val="TARGET_COMMAND_CHANEL" />
+		<set name="skillType" val="RESURRECT" />
+		<set name="operateType" val="OP_ACTIVE" />
+	</skill>
+	<skill id="9180" levels="2" name="Energy of Sprout">
+		<table name="#power">5000000 10000000</table>
+		<table name="#item">17276 17277</table>
+		<set name="itemConsumeId" val="#item"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SPHEAL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+		<for />
+	</skill>
+</list>

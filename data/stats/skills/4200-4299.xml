@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="4200" levels="12" name="Decrease Atk. Spd.">
+		<!-- Done by Diamond -->
+		<table name="#rate">1.17 1.20 1.20 1.23 1.23 1.23 1.23 1.23 1.23 1.23 1.23 1.23</table>
+		<table name="#time">5 10 10 15 15 15 15 15 15 15 15 15</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="p_attack_speedDown" time="#time">
+				<div order="0x30" stat="p_attack_speed" val="#rate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4201" levels="12" name="Sleep">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="SLEEP"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Sleep" stackType="Sleep" time="30"/>
+		</for>
+	</skill>
+	<skill id="4202" levels="12" name="Hold">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="ROOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_move"/>
+		</for>
+	</skill>
+	<skill id="4203" levels="12" name="Decrease Speed">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="RunSpeedDown" time="30">
+				<mul order="0x30" stat="p_speed" val="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4204" levels="12" name="Bleed">
+		<table name="#t_hp">-19 -28 -38 -49 -60 -69 -75 -75 -78 -78 -79 -79</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BLEED"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="t_hp" param="#t_hp;5;diff"/>
+		</for>
+	</skill>
+	<skill id="4205" levels="12" name="Paralysis">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PARALYZE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Paralyze" stackType="paralyze" time="30"/>
+		</for>
+	</skill>
+	<skill id="4206" levels="12" name="Decrease MP">
+		<table name="#dmg">-2 -2 -2 -2 -2 -4 -5 -7 -8 -10 -12 -12</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="t_mp" param="#dmg;5;diff"/>
+		</for>
+	</skill>
+	<skill id="4207" levels="12" name="BOSS Power Shot">
+		<!-- Done by Diamond -->
+		<table name="#power">500 1000 1500 2000 2500 3000 3500 4000 4500 5000 5500 6000</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="wind"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4208" levels="12" name="Stun">
+		<!-- Done by Diamond -->
+		<table name="#power">500 1000 1500 2000 2500 3000 3500 4000 4500 5000 5500 6000</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Stun" stackType="Stun" time="9"/>
+		</for>
+	</skill>
+	<skill id="4209" levels="12" name="BOSS Heal">
+		<!-- Done by Diamond -->
+		<table name="#power">1768.0 3037.0 4819.0 7103.0 9754.0 12035.0 13182.0 13501.0 13624.0 13544.0 13303.0 13157.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="HEAL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4210" levels="12" name="BOSS Chant of Life">
+		<table name="#power">180 225 337 544 819 1060 1225 1292 1358 1427 951 940</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="HOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_hp_per_max" param="3"/>
+			<effect name="t_hp" param="#power;1;diff"/>
+		</for>
+	</skill>
+	<skill id="4211" levels="12" name="BOSS Might">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="99" stackType="p_physical_attack" time="60">
+				<mul order="0x30" stat="p_physical_attack" val="1.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4212" levels="12" name="BOSS Shield">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="99" stackType="p_physical_defence" time="1200">
+				<mul order="0x30" stat="p_physical_defence" val="1.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4213" levels="12" name="BOSS Haste">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="99" stackType="pAtkSpeedUp" time="60">
+				<mul order="0x30" stat="p_attack_speed" val="1.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4214" levels="12" name="BOSS Reflect Damage">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_CLAN"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="99" stackType="DmgShield" time="60">
+				<add order="0x40" stat="reflectDam" val="20"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4215" levels="1" name="Raid Curse">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PARALYZE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="cancelable" val="false"/>
+		<for>
+			<effect name="Petrification" stackType="paralyze" time="3600">
+				<mul order="0x80" stat="regHp"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4216" levels="1" name="Scatter Enemy">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="TELEPORT_NPC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4217" levels="1" name="none">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillType" val="TELEPORT_NPC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillRadius" val="300"/>
+		<for />
+	</skill>
+	<skill id="4218" levels="1" name="Absorb HP MP">
+		<set name="power" val="57"/>
+		<set name="absorbPart" val="80"/>
+		<set name="absorbAbs" val="0"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="100"/>
+		<set name="skillType" val="DRAIN"/>
+		<set name="element" val="unholy"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_mp" param="-274;diff"/>
+		</for>
+	</skill>
+	<skill id="4219" levels="1" name="Hold">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="ROOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_move"/>
+		</for>
+	</skill>
+	<skill id="4220" levels="1" name="Deadly Dual-Sword Weapon">
+		<!-- Done by Diamond -->
+		<set name="power" val="7224"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4221" levels="1" name="Deadly Dual-Sword Weapon: Range Attack">
+		<!-- Done by Diamond -->
+		<set name="power" val="7224"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4222" levels="1" name="Instant Move">
+		<!-- Zaken skills - teleport -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4223" levels="1" name="Face Chance: Night to Day">
+		<!-- Zaken skills - change face -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4224" levels="1" name="Face Chance: Day to Night">
+		<!-- Zaken skills - change face -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4225" levels="5" name="Resist Stun Attacks">
+		<!-- Done by SYS -->
+		<table name="#Tab-trait_shock">15 30 50 70 90</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_shock;#Tab-trait_shock"/>
+		</for>
+	</skill>
+	<skill id="4226" levels="1" name="Ban Heal">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4227" levels="1" name="Zaken Regeneration">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4228" levels="12" name="NPC Double Dagger Attack">
+		<!-- Done by Diamond -->
+		<table name="#power">122.0 279.0 584.0 1110.0 1923.0 3030.0 4336.0 5002.0 5632.0 6187.0 6632.0 6978.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4229" levels="12" name="NPC Double Wind Fist">
+		<!-- Done by Diamond -->
+		<table name="#power">122.0 279.0 584.0 1110.0 1923.0 3030.0 4336.0 5002.0 5632.0 6187.0 6632.0 6978.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4230" levels="1" name="Wild Cannon">
+		<!-- Done by Diamond -->
+		<set name="power" val="532048"/>
+		<set name="target" val="TARGET_SIEGE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4231" levels="12" name="NPC Spit Attack">
+		<!-- Done by Diamond -->
+		<table name="#power">18.0 26.0 38.0 52.0 68.0 85.0 102.0 110.0 116.0 122.0 126.0 129.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4232" levels="12" name="NPC AE Strike">
+		<!-- Done by Diamond -->
+		<table name="#power">46.0 105.0 219.0 417.0 722.0 1136.0 1626.0 1876.0 2112.0 2320.0 2487.0 2617.0</table>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4233" levels="1" name="Vampiric Attack">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="absorbDam" val="15"/>
+		</for>
+	</skill>
+	<skill id="4234" levels="12" name="BOSS Spear Attack">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4235" levels="1" name="none">
+		<!-- Dietrich/Mikhail/Gustav Recall Skill -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4236" levels="1" name="Decrease Heal">
+		<!-- Done by Diamond -->
+		<set name="power" val="51.0"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="120">
+				<mul order="0x30" stat="regHp" val="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4237" levels="1" name="Decrease Speed">
+		<!-- Done by Diamond -->
+		<set name="power" val="72.0"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="element" val="water"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="0.5" stackType="RunSpeedDown" time="30">
+				<mul order="0x30" stat="p_speed" val="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4238" levels="1" name="Increase Re-use Time">
+		<!-- Dietrich Skill pReuse needed-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4239" levels="1" name="Antharas Regeneration">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4240" levels="1" name="Antharas Regeneration">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4241" levels="1" name="Antharas Regeneration">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4242" levels="1" name="Zaken Regeneration">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4243" levels="1" name="Venomous Poison">
+		<set name="power" val="9.0"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4244" levels="12" name="NPC Wild Sweep">
+		<!-- Done by Diamond -->
+		<table name="#power">46.0 105.0 219.0 417.0 722.0 1136.0 1626.0 1876.0 2112.0 2320.0 2487.0 2617.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4245" levels="1" name="Mimic of Wrath">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4246" levels="1" name="Strong in nan activity magic DOT">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bow;50"/> 
+		</for>
+	</skill>
+	<skill id="4247" levels="12" name="NPC Windstrike - Slow">
+		<!-- Done by Diamond -->
+		<table name="#power">5.0 8.0 12.0 17.0 24.0 31.0 39.0 39.0 39.0 39.0 39.0 39.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4248" levels="12" name="NPC HP Drain - Slow">
+		<!-- Done by Diamond -->
+		<table name="#power">5.0 8.0 12.0 17.0 24.0 31.0 39.0 39.0 39.0 39.0 39.0 39.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="absorbPart" val="0.2"/>
+		<for />
+	</skill>
+	<skill id="4249" levels="12" name="Decrease Speed">
+		<!-- Done by Diamond -->
+		<table name="#power">4.0 6.0 8.0 11.0 15.0 19.0 24.0 24.0 24.0 24.0 24.0 24.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="water"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="2" stackType="RunSpeedDown" time="30">
+				<mul order="0x30" stat="p_speed" val="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4250" levels="12" name="NPC Twister - Slow">
+		<!-- Done by Diamond -->
+		<table name="#power">5.0 8.0 12.0 17.0 24.0 31.0 39.0 39.0 39.0 39.0 39.0 39.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4251" levels="12" name="NPC Curve Beam Cannon - Slow">
+		<!-- Done by Diamond -->
+		<table name="#power">5.0 8.0 12.0 17.0 24.0 31.0 39.0 39.0 39.0 39.0 39.0 39.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4252" levels="12" name="NPC Flamestrike - Slow">
+		<!-- Done by Diamond -->
+		<table name="#power">3.0 5.0 7.0 9.0 13.0 16.0 20.0 20.0 20.0 20.0 20.0 20.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4253" levels="12" name="NPC Blaze - Slow">
+		<!-- Done by Diamond -->
+		<table name="#power">3.0 5.0 7.0 9.0 13.0 16.0 20.0 20.0 20.0 20.0 20.0 20.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4254" levels="12" name="NPC Prominence - Slow">
+		<!-- Done by Diamond -->
+		<table name="#power">5.0 8.0 12.0 17.0 24.0 31.0 39.0 39.0 39.0 39.0 39.0 39.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4255" levels="12" name="NPC Straight Beam Cannon - Slow">
+		<!-- Done by Diamond -->
+		<table name="#power">5.0 8.0 12.0 17.0 24.0 31.0 39.0 39.0 39.0 39.0 39.0 39.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4256" levels="1" name="100% Stun Resistance.">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_shock;100"/>
+		</for>
+	</skill>
+	<skill id="4257" levels="12" name="NPC Hydroblast - Magic">
+		<!-- Done by Diamond -->
+		<table name="#power">9.0 13.0 19.0 26.0 34.0 43.0 51.0 55.0 58.0 61.0 63.0 65.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="element" val="water"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4258" levels="1" name="Hinder Strider">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="RunSpeedDown" time="1200">
+				<mul order="0x30" stat="p_speed" val="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4259" levels="12" name="Toxic Smoke">
+		<table name="#t_hp">-16 -24 -32 -41 -50 -58 -63 -63 -66 -66 -68 -68</table>
+		<set name="skillRadius" val="200"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="POISON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="t_hp" param="#t_hp;5;diff"/>
+		</for>
+	</skill>
+	<skill id="4260" levels="12" name="Steal Blood">
+		<!-- Done by Diamond -->
+		<table name="#power">18.0 26.0 38.0 52.0 68.0 85.0 102.0 110.0 116.0 122.0 126.0 129.0</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="sacred"/>
+		<set name="skillType" val="DRAIN"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="absorbPart" val="0.2"/>
+		<!-- absorbs 20% of damage -->
+		<for />
+	</skill>
+	<skill id="4261" levels="12" name="Mega Storm Strike">
+		<!-- Done by Diamond -->
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="wind"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4262" levels="2" name="Holiday Wind Walk">
+		<table name="#Tab-p_speed">33</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="2" stackType="SpeedUp" time="1200">
+				<add order="0x40" stat="p_speed" val="#Tab-p_speed"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4263" levels="1" name="Holiday Haste">
+		<!-- Done by Diamond -->
+		<table name="#Tab-p_attack_speed">1.15</table>
+		<table name="#power">1</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="pAtkSpeedUp" time="1200">
+				<mul order="0x30" stat="p_attack_speed" val="#Tab-p_attack_speed"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4264" levels="1" name="Holiday Empower">
+		<!-- Done by Diamond -->
+		<table name="#Tab-p_magical_attack">1.55</table>
+		<table name="#power">1</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="p_magical_attack" time="1200">
+				<mul order="0x30" stat="p_magical_attack" val="#Tab-p_magical_attack"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4265" levels="3" name="Holiday Might">
+		<!-- Done by Diamond -->
+		<table name="#rate">1.15</table>
+		<table name="#power">1</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="p_physical_attack" time="1200">
+				<mul order="0x30" stat="p_physical_attack" val="#rate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4266" levels="3" name="Holiday Shield">
+		<!-- Done by Diamond -->
+		<table name="#rate">1.15</table>
+		<table name="#power">1</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#power" stackType="p_physical_defence" time="1200">
+				<mul order="0x30" stat="p_physical_defence" val="#rate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="4267" levels="7" name="Grade Penalty">
+		<!-- Done by Diamond -->
+		<table name="#power">10 20 30 40 40 40 40</table>
+		<table name="#rate">0.65 0.55 0.45 0.35 0.25 0.15 0.12</table>
+		<set name="displayLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<!-- offlike -->
+			<sub order="0x40" stat="p_hit" val="16"/>
+			<sub order="0x40" stat="p_critical_rate_per" val="#power"/>
+			<sub order="0x40" stat="p_critical_damage_per" val="#power"/>
+			<sub order="0x40" stat="magicPower" val="#power"/>
+			<mul order="0x80" stat="p_attack_speed" val="0.9"/>
+			<mul order="0x80" stat="p_physical_attack" val="0.9"/>
+			<!-- not offlike -->
+			<mul order="0x80" stat="p_avoid" val="0.75"/>
+			<mul order="0x80" stat="p_speed" val="#rate"/>
+			<mul order="0x80" stat="regHp" val="#rate"/>
+			<mul order="0x80" stat="regCp" val="#rate"/>
+		</for>
+	</skill>
+	<skill id="4268" levels="1" name="Danger Area">
+		<!-- NOT USED IN C4 -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4269" levels="1" name="Block All Chat">
+		<!-- NOT USED IN C4 -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4270" levels="4" name="Weight Penalty">
+		<!-- Done by Diamond -->
+		<table name="#rate">0.5 0.5 0.15 0.0</table>
+		<table name="#rateSpd">1.0 0.5 0.15 0.0</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x80" stat="regHp" val="#rate"/>
+			<mul order="0x80" stat="regMp" val="#rate"/>
+			<mul order="0x80" stat="p_speed" val="#rateSpd"/>
+		</for>
+	</skill>
+	<skill id="4271" levels="8" name="Increase Force">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4272" levels="1" name="Higher Resist Bow/Crossbow Weapons">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bow;70"/> 
+			<effect name="p_defence_trait" param="trait_crossbow;70"/> 
+		</for>
+	</skill>
+	<skill id="4273" levels="5" name="Resist Daggers/Rapier Weapon">
+		<table name="#Tab-daggerRcpt">10 20 30 40 50</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_dagger;#Tab-daggerRcpt"/> 
+			<effect name="p_defence_trait" param="trait_rapier;#Tab-daggerRcpt"/> 
+			<effect name="p_defence_trait" param="trait_dualdagger;#Tab-daggerRcpt"/> 
+		</for>
+	</skill>
+	<skill id="4274" levels="5" name="Blunt Weapon Weak Point">
+		<table name="#Tab-bluntRcpt">-11 -25 -43 -67 -100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_blunt;#Tab-bluntRcpt"/> 
+		</for>
+	</skill>
+	<skill id="4275" levels="5" name="Sacred Attack Weak Point">
+		<!-- Done by Diamond -->
+		<table name="#res">20 25 30 35 40</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="sacredRcpt" val="#res"/>
+			<sub order="0x40" stat="unholyRcpt" val="#res"/>
+		</for>
+	</skill>
+	<skill id="4276" levels="5" name="Weak Point against Bow/Crossbow Weapons">
+		<table name="#Tab-bowRcpt">-11 -25 -43 -67 -100</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bow;#Tab-bowRcpt"/> 
+			<effect name="p_defence_trait" param="trait_crossbow;#Tab-bowRcpt"/> 
+		</for>
+	</skill>
+	<skill id="4277" levels="6" name="Resist Poison Attacks">
+		<table name="#trait_poison">5 10 15 20 25 30</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_poison;#trait_poison"/>
+		</for>
+	</skill>
+	<skill id="4278" levels="1" name="Dark Attack">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<set order="0x10" stat="attackUnholy" val="20"/>
+		</for>
+	</skill>
+	<skill id="4279" levels="5" name="Fire Attack Weak Point">
+		<!-- Done by Diamond -->
+		<table name="#Res">20 25 30 35 40</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="fireRcpt" val="#Res"/>
+			<sub order="0x40" stat="waterRcpt" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4280" levels="5" name="Water Attack Weak Point">
+		<!-- Done by Diamond -->
+		<table name="#Res">20 25 30 35 40</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="waterRcpt" val="#Res"/>
+			<sub order="0x40" stat="fireRcpt" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4281" levels="5" name="Wind Attack Weak Point">
+		<!-- Done by Diamond -->
+		<table name="#Res">20 25 30 35 40</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="windRcpt" val="#Res"/>
+			<sub order="0x40" stat="earthRcpt" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4282" levels="5" name="Earth Attack Weak Point">
+		<!-- Done by Diamond -->
+		<table name="#Res">20 25 30 35 40</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="earthRcpt" val="#Res"/>
+			<sub order="0x40" stat="windRcpt" val="#Res"/>
+		</for>
+	</skill>
+	<skill id="4283" levels="1" name="Greater Resist Magic Attack">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="p_magical_defence" val="2"/>
+		</for>
+	</skill>
+	<skill id="4284" levels="5" name="Resist Bleed Attacks">
+		<!-- Done by Diamond -->
+		<table name="#trait_bleed">10 20 30 40 50</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_bleed;#trait_bleed"/>
+		</for>
+	</skill>
+	<skill id="4285" levels="5" name="Resist Sleep Attacks">
+		<!-- Done by Diamond -->
+		<table name="#Tab-trait_sleep">10 20 30 40 50</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sleep;#Tab-trait_sleep"/>
+		</for>
+	</skill>
+	<skill id="4286" levels="1" name="Greater Resist Sleep">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sleep;95"/>
+		</for>
+	</skill>
+	<skill id="4287" levels="5" name="Resist Hold Attacks">
+		<!-- Done by Diamond -->
+		<table name="#Tab-trait_hold">10 20 30 40 50</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_hold;#Tab-trait_hold"/>
+		</for>
+	</skill>
+	<skill id="4288" levels="1" name="Greater Resist Hold">
+		<!-- Done by Diamond -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_hold;95"/>
+		</for>
+	</skill>
+	<skill id="4289" levels="1" name="Wyvern Breath">
+		<!-- Done by Diamond -->
+		<set name="power" val="379.0"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="4290" levels="1" name="Race">
+		<!-- 1: Undead -->
+		<!-- Skill not used -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4291" levels="1" name="Race">
+		<!-- 1: Construct -->
+		<!-- Skill not used -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4292" levels="1" name="Race">
+		<!-- 1: Beast -->
+		<!-- Skill not used -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4293" levels="1" name="Race">
+		<!-- 1: Animal -->
+		<!-- Skill not used -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4294" levels="1" name="Race">
+		<!-- 1: Plant -->
+		<!-- Skill not used -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4295" levels="1" name="Race">
+		<!-- 1: Humanoid -->
+		<!-- Skill not used -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4296" levels="1" name="Race">
+		<!-- 1: Spirit -->
+		<!-- Skill not used -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4297" levels="1" name="Race">
+		<!-- 1: Divine -->
+		<!-- Skill not used -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4298" levels="1" name="Race">
+		<!-- 1: Demonic -->
+		<!-- Skill not used -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+	<skill id="4299" levels="1" name="Race">
+		<!-- 1: Dragon -->
+		<!-- Skill not used -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for />
+	</skill>
+</list>

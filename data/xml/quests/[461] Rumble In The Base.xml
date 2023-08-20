@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="461" type="SOLO">
+		<name lang="en" val="Rumble In The Base"/>
+		<name lang="ru" val="Разрушай от основания"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="22780"/>	<!-- Sel Mahum Recruit -->
+			<event type="MOBKILLED" val="22782"/>	<!-- Sel Mahum Recruit -->
+			<event type="MOBKILLED" val="22784"/>	<!-- Sel Mahum Recruit -->
+			<event type="MOBKILLED" val="18908"/>	<!-- Sel Mahum Chef -->
+			<event type="QUEST_START" val="30200"/>	<!-- Stan -->
+			<event type="QUEST_TALK" val="30200"/>	<!-- Stan -->
+			<item id="15503"/>	<!-- Shiny Salmon -->
+			<item id="16382"/>	<!-- Shoes String of Sel Mahum -->
+		</setting>
+	</quest>
+</quests>

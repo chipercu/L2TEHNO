@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="464" type="SOLO">
+		<name lang="en" val="Oath"/>
+		<name lang="ru" val="Клятва"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_TALK" val="32596"/>	<!-- Sophia -->
+			<event type="QUEST_TALK" val="30657"/>	<!-- Seresin -->
+			<event type="QUEST_TALK" val="30839"/>	<!-- Holly -->
+			<event type="QUEST_TALK" val="30899"/>	<!-- Flauen -->
+			<event type="QUEST_TALK" val="31350"/>	<!-- Dominic -->
+			<event type="QUEST_TALK" val="30539"/>	<!-- Chichirin -->
+			<event type="QUEST_TALK" val="30297"/>	<!-- Tobias -->
+			<event type="QUEST_TALK" val="31960"/>	<!-- Buryun -->
+			<event type="QUEST_TALK" val="31588"/>	<!-- Agnes -->
+			<item id="15538"/>	<!-- Book of Silence  -->
+			<item id="15539"/>	<!-- Book of Silence  -->
+		</setting>
+	</quest>
+</quests>

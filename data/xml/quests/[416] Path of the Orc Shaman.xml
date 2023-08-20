@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="416" type="SOLO">
+		<name lang="en" val="Path of the Orc Shaman"/>
+		<name lang="ru" val="Путь Шамана"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20479"/>	<!-- Kasha Bear -->
+			<event type="MOBKILLED" val="20478"/>	<!-- Kasha Blade Spider -->
+			<event type="MOBKILLED" val="20415"/>	<!-- Scarlet Salamander -->
+			<event type="MOBKILLED" val="20335"/>	<!-- Grizzly Bear -->
+			<event type="MOBKILLED" val="20038"/>	<!-- Venomous Spider -->
+			<event type="MOBKILLED" val="20043"/>	<!-- Arachnid Tracker -->
+			<event type="MOBKILLED" val="27056"/>	<!-- Durka Spirit -->
+			<event type="MOBKILLED" val="27319"/>	<!-- Black Leopard -->
+			<event type="QUEST_START" val="30585"/>	<!-- Tataru Zu Hestui -->
+			<event type="QUEST_TALK" val="30585"/>	<!-- Tataru Zu Hestui -->
+			<event type="QUEST_TALK" val="30592"/>	<!-- Hestui Totem Spirit -->
+			<event type="QUEST_TALK" val="30502"/>	<!-- Umos -->
+			<event type="QUEST_TALK" val="30593"/>	<!-- Duda-Mara Totem Spirit -->
+			<event type="QUEST_TALK" val="31979"/>	<!-- Moira -->
+			<event type="QUEST_TALK" val="32057"/>	<!-- Totem Spirit of Gandi -->
+			<event type="QUEST_TALK" val="32090"/>	<!-- Dead Leopards Carcass -->
+			<item id="1617"/>	<!-- Kasha Bear Pelt -->
+			<item id="1618"/>	<!-- Kasha Blade Spider Husk -->
+			<item id="1619"/>	<!-- 1st Fiery Egg -->
+			<item id="1625"/>	<!-- Grizzly Blood -->
+			<item id="1616"/>	<!-- Fire Charm -->
+			<item id="1620"/>	<!-- Hestui Mask -->
+			<item id="1621"/>	<!-- 2nd Fiery Egg -->
+			<item id="1622"/>	<!-- Totem Spirit Claw -->
+			<item id="1623"/>	<!-- Tataru's Letter of Recommendation -->
+			<item id="1624"/>	<!-- Flame Charm -->
+			<item id="1626"/>	<!-- Blood Cauldron -->
+			<item id="1627"/>	<!-- Spirit Net -->
+			<item id="1628"/>	<!-- Bound Durka Spirit -->
+			<item id="1629"/>	<!-- Durka Parasite -->
+			<item id="1630"/>	<!-- Totem Spirit Blood -->
+		</setting>
+	</quest>
+</quests>

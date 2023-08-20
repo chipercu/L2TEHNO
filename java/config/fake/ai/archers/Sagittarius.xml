@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+	<ClassObject class_id="92" class_name="Sagittarius">
+		<ai_type type="auto_attacker" spawn_type="archer" party_type="nuker"  buff_scheme="[archers]" />
+		<henna id1="174"/>
+		<items>
+			<underwear name="[pvp_defence_cp]" />
+			<jewels name="[aq_valakas]" />
+			<sets>
+				<set name="[vorpal_light]" shield="-1"/>
+				<set name="[elegia_light]" shield="-1"/>
+			</sets>
+			<PhantomWeapons>
+				<weapon id="16015" enchant="10" is_random="false" augment_chance="50" attribute_min="300" attribute_max="300" attribute="holy" is_att_random="false"/>
+			</PhantomWeapons>
+			<PhantomInventoryItems>
+				<item id="5591" count="30"/> <!-- CP 50 -->
+				<item id="5592" count="30"/> <!-- CP 200 -->
+				<item id="8875" count="30"/> <!-- Battle Symbol -->
+				<item id="3031" count="30"/> <!-- Spirit Ore -->
+				<item id="1785" count="30"/> <!-- Soul Ore -->
+			</PhantomInventoryItems>
+		</items>
+		<nuke_skills>
+			<skill id="990" level="1" /> <!-- Death Shot -->
+			<skill id="987" level="1" /> <!-- Multiple Shot -->
+		</nuke_skills>
+		<rare_nuke_skills>
+			<skill id="771" level="1" /> <!-- Flame Hawk -->
+			<skill id="924" level="1" /> <!-- Seven Arrow -->
+		</rare_nuke_skills>
+		<detection_skills>
+			<skill id="933" level="1" />	<!-- Detection -->
+		</detection_skills>
+		<self_buff_skills>
+			<skill id="99" level="2" />	<!-- Rapid Shot -->
+			<skill id="4" level="1"/> <!-- Dash -->
+			<skill id="416" level="3"/> <!-- Blessing of Sagittarius -->
+		</self_buff_skills>
+		<situation_skills>
+			<skill id="111" level="1" target="self" cond="hp;70;0"/> <!-- Ultimate Evasion -->
+		</situation_skills>
+		<debuff_skills>
+			<skill id="101" level="40" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="1"/>	<!-- Stun Shot -->
+		</debuff_skills>
+		<rare_debuff_skills>
+			<skill id="354" level="1" /> <!-- Hamstring Shot -->
+		</rare_debuff_skills>
+		<passive_skills>
+			<skill id="631" level="6" />	<!-- Emergent Ability - Attack -->
+			<skill id="652" level="1" />	<!-- Knight Ability - Defense -->
+			<skill id="655" level="1" />	<!-- Enchanter Ability - Barrier -->
+			<skill id="651" level="1" />	<!-- Warrior Ability - Haste -->
+			<skill id="26074" level="1" />	<!-- Bot Vicious Stance -->
+			<skill id="208" level="52" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="2"/> <!-- Bow Mastery -->
+			<skill id="233" level="47" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="2"/> <!-- Light Armor Mastery -->
+			<skill id="169" level="2" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="1"/> <!-- Quick Step -->
+			<skill id="431" level="1" is_enchantable="true" is_random="false" ench_max_value="15" ench_route="1"/> <!-- Archery -->
+			<skill id="328" level="1" is_enchantable="true" is_random="false" ench_max_value="15" ench_route="3"/> <!-- Wisdom -->
+		</passive_skills>
+		<consumble_skills>
+			<skill id="6439" level="1" target="self" cond="MP;50;0"/> <!-- MP Potion, бот использует когда MP меньше 50% один раз -->
+		</consumble_skills>
+	</ClassObject>
+ </list>

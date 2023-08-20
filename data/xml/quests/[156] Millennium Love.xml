@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="156" type="SOLO">
+		<name lang="en" val="Millennium Love"/>
+		<name lang="ru" val="Вечная любовь"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="QUEST_START" val="30368"/>	<!-- Lilith -->
+			<event type="QUEST_TALK" val="30368"/>	<!-- Lilith -->
+			<event type="QUEST_TALK" val="30368"/>	<!-- Lilith -->
+			<event type="QUEST_TALK" val="30368"/>	<!-- Lilith -->
+			<event type="QUEST_TALK" val="30368"/>	<!-- Lilith -->
+			<event type="QUEST_TALK" val="30369"/>	<!-- Baenedes -->
+			<item id="1022"/>	<!-- Lilith's Letter -->
+			<item id="1023"/>	<!-- Theon's Diary -->
+		</setting>
+	</quest>
+</quests>

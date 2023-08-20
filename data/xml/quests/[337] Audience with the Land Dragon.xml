@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="337" type="SOLO">
+		<name lang="en" val="Audience with the Land Dragon"/>
+		<name lang="ru" val="Аудиенция у Дракона Земли"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBGOTATTACKED" val="27165"/>	<!-- Abyssal Jewel 1 -->
+			<event type="MOBGOTATTACKED" val="27166"/>	<!-- Abyssal Jewel 2 -->
+			<event type="MOBGOTATTACKED" val="27167"/>	<!-- Abyssal Jewel 3 -->
+			<event type="MOBKILLED" val="18002"/>	<!-- Blood Queen -->
+			<event type="MOBKILLED" val="20679"/>	<!-- Marsh Stalker -->
+			<event type="MOBKILLED" val="20680"/>	<!-- Marsh Drake -->
+			<event type="MOBKILLED" val="27171"/>	<!-- Sacrifice Of The Sacrificed -->
+			<event type="MOBKILLED" val="20644"/>	<!-- Harit Lizardman Shaman -->
+			<event type="MOBKILLED" val="20645"/>	<!-- Harit Lizardman Matriarch -->
+			<event type="MOBKILLED" val="27172"/>	<!-- Harit Lizardman Zealot -->
+			<event type="MOBKILLED" val="20649"/>	<!-- Hamrut -->
+			<event type="MOBKILLED" val="20650"/>	<!-- Kranrot -->
+			<event type="MOBKILLED" val="27165"/>	<!-- Abyssal Jewel 1 -->
+			<event type="MOBKILLED" val="27166"/>	<!-- Abyssal Jewel 2 -->
+			<event type="MOBKILLED" val="20246"/>	<!-- Cave Keeper -->
+			<event type="MOBKILLED" val="20134"/>	<!-- Cave Maiden -->
+			<event type="MOBKILLED" val="27167"/>	<!-- Abyssal Jewel 3 -->
+			<event type="MOBKILLED" val="27168"/>	<!-- Jewel Guardian Mara -->
+			<event type="MOBKILLED" val="27169"/>	<!-- Jewel Guardian Musfel -->
+			<event type="MOBKILLED" val="27170"/>	<!-- Jewel Guardian Pyton -->
+			<event type="QUEST_START" val="30753"/>	<!-- Gabrielle -->
+			<event type="QUEST_TALK" val="30753"/>	<!-- Gabrielle -->
+			<event type="QUEST_TALK" val="30498"/>	<!-- Moke -->
+			<event type="QUEST_TALK" val="30678"/>	<!-- Helton -->
+			<event type="QUEST_TALK" val="30705"/>	<!-- Chakiris -->
+			<event type="QUEST_TALK" val="30720"/>	<!-- Kaiena -->
+			<event type="QUEST_TALK" val="30754"/>	<!-- Gilmore -->
+			<event type="QUEST_TALK" val="30755"/>	<!-- Theodric -->
+			<event type="QUEST_TALK" val="30851"/>	<!-- Kendra -->
+			<event type="QUEST_TALK" val="30857"/>	<!-- Orven -->
+			<item id="3852"/>	<!-- Feather of Gabrielle -->
+			<item id="3890"/>	<!-- Herald of Slayer -->
+			<item id="3853"/>	<!-- Marsh Stalker Horn -->
+			<item id="3854"/>	<!-- Marsh Drake Talons -->
+			<item id="3857"/>	<!-- Remains of Sacrified -->
+			<item id="3858"/>	<!-- Totem of Land Dragon -->
+			<item id="3856"/>	<!-- Hamrut Leg -->
+			<item id="3855"/>	<!-- Kranrot Skin -->
+			<item id="3862"/>	<!-- Mara Fang -->
+			<item id="3859"/>	<!-- 1st Fragment of Abyss Jewel -->
+			<item id="3863"/>	<!-- Musfel Fang -->
+			<item id="3860"/>	<!-- 2nd Fragment of Abyss Jewel -->
+			<item id="3861"/>	<!-- 3rd Fragment of Abyss Jewel -->
+			<item id="3864"/>	<!-- Mark of Watchman -->
+		</setting>
+	</quest>
+</quests>

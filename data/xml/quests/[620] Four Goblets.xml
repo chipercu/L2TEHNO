@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="620" type="SOLO">
+		<name lang="en" val="Four Goblets"/>
+		<name lang="ru" val="Четыре Кубка"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="18120"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="18121"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="18122"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="18123"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="18124"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="18125"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="18126"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="18127"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="18128"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="18129"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="18130"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="18131"/>	<!-- Halishas Officer -->
+			<event type="MOBKILLED" val="18132"/>	<!-- Imperial Healer -->
+			<event type="MOBKILLED" val="18133"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="18134"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="18135"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="18136"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="18137"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="18138"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="18139"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="18140"/>	<!-- Imperial Mosaic -->
+			<event type="MOBKILLED" val="18141"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="18142"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="18143"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="18144"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="18145"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="18146"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="18147"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="18148"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="18149"/>	<!-- Beetle of Grave -->
+			<event type="MOBKILLED" val="18150"/>	<!-- Victim -->
+			<event type="MOBKILLED" val="18151"/>	<!-- Victim -->
+			<event type="MOBKILLED" val="18152"/>	<!-- Victim -->
+			<event type="MOBKILLED" val="18153"/>	<!-- Victim -->
+			<event type="MOBKILLED" val="18154"/>	<!-- Victim -->
+			<event type="MOBKILLED" val="18155"/>	<!-- Victim -->
+			<event type="MOBKILLED" val="18156"/>	<!-- Victim -->
+			<event type="MOBKILLED" val="18157"/>	<!-- Victim -->
+			<event type="MOBKILLED" val="18158"/>	<!-- Executioner of Halisha -->
+			<event type="MOBKILLED" val="18159"/>	<!-- Executioner of Halisha -->
+			<event type="MOBKILLED" val="18160"/>	<!-- Executioner of Halisha -->
+			<event type="MOBKILLED" val="18161"/>	<!-- Executioner of Halisha -->
+			<event type="MOBKILLED" val="18162"/>	<!-- Executioner of Halisha -->
+			<event type="MOBKILLED" val="18163"/>	<!-- Executioner of Halisha -->
+			<event type="MOBKILLED" val="18164"/>	<!-- Executioner of Halisha -->
+			<event type="MOBKILLED" val="18165"/>	<!-- Executioner of Halisha -->
+			<event type="MOBKILLED" val="18166"/>	<!-- Imperial Guard -->
+			<event type="MOBKILLED" val="18167"/>	<!-- Imperial Guard -->
+			<event type="MOBKILLED" val="18168"/>	<!-- Imperial Guard -->
+			<event type="MOBKILLED" val="18169"/>	<!-- Imperial Guard -->
+			<event type="MOBKILLED" val="18170"/>	<!-- Imperial Guard -->
+			<event type="MOBKILLED" val="18171"/>	<!-- Imperial Guard -->
+			<event type="MOBKILLED" val="18172"/>	<!-- Imperial Guard -->
+			<event type="MOBKILLED" val="18173"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18174"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18175"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18176"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18177"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18178"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18179"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18180"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18181"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18182"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18183"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18184"/>	<!-- Halishas Foreman -->
+			<event type="MOBKILLED" val="18185"/>	<!-- Evil Astrologer -->
+			<event type="MOBKILLED" val="18186"/>	<!-- Evil Astrologer -->
+			<event type="MOBKILLED" val="18187"/>	<!-- Knight of Darkness -->
+			<event type="MOBKILLED" val="18188"/>	<!-- Knight of Darkness -->
+			<event type="MOBKILLED" val="18189"/>	<!-- Knight of Darkness -->
+			<event type="MOBKILLED" val="18190"/>	<!-- Knight of Darkness -->
+			<event type="MOBKILLED" val="18191"/>	<!-- Witch of dust -->
+			<event type="MOBKILLED" val="18192"/>	<!-- Witch of dust -->
+			<event type="MOBKILLED" val="18193"/>	<!-- Witch of dust -->
+			<event type="MOBKILLED" val="18194"/>	<!-- Witch of dust -->
+			<event type="MOBKILLED" val="18195"/>	<!-- Signet of Emperor -->
+			<event type="MOBKILLED" val="18196"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18197"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18198"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18199"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18200"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18201"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18202"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18203"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18204"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18205"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18206"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18207"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18208"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18209"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18210"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18211"/>	<!-- Charm of Corner -->
+			<event type="MOBKILLED" val="18212"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18213"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18214"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18215"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18216"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18217"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18218"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18219"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18220"/>	<!-- Shaman of Darkness -->
+			<event type="MOBKILLED" val="18221"/>	<!-- Shaman of Darkness -->
+			<event type="MOBKILLED" val="18222"/>	<!-- Assassin of Darkness -->
+			<event type="MOBKILLED" val="18223"/>	<!-- Assassin of Darkness -->
+			<event type="MOBKILLED" val="18224"/>	<!-- Assassin of Darkness -->
+			<event type="MOBKILLED" val="18225"/>	<!-- Assassin of Darkness -->
+			<event type="MOBKILLED" val="18226"/>	<!-- Caster of Darkness -->
+			<event type="MOBKILLED" val="18227"/>	<!-- Caster of Darkness -->
+			<event type="MOBKILLED" val="18228"/>	<!-- Caster of Darkness -->
+			<event type="MOBKILLED" val="18229"/>	<!-- Caster of Darkness -->
+			<event type="MOBKILLED" val="18230"/>	<!-- Signet of Emperor -->
+			<event type="MOBKILLED" val="18231"/>	<!-- Statue of Protection -->
+			<event type="MOBKILLED" val="18232"/>	<!-- Statue of Protection -->
+			<event type="MOBKILLED" val="18233"/>	<!-- Statue of Protection -->
+			<event type="MOBKILLED" val="18234"/>	<!-- Statue of Protection -->
+			<event type="MOBKILLED" val="18235"/>	<!-- Statue of Protection -->
+			<event type="MOBKILLED" val="18236"/>	<!-- Statue of Protection -->
+			<event type="MOBKILLED" val="18237"/>	<!-- Statue of Protection -->
+			<event type="MOBKILLED" val="18238"/>	<!-- Statue of Protection -->
+			<event type="MOBKILLED" val="18239"/>	<!-- Statue of Protection -->
+			<event type="MOBKILLED" val="18240"/>	<!-- Statue of Protection -->
+			<event type="MOBKILLED" val="18241"/>	<!-- Statue of Protection -->
+			<event type="MOBKILLED" val="18242"/>	<!-- Statue of Protection -->
+			<event type="MOBKILLED" val="18243"/>	<!-- Statue of Protection -->
+			<event type="MOBKILLED" val="18244"/>	<!-- Watchman of Grave -->
+			<event type="MOBKILLED" val="18245"/>	<!-- Watchman of Grave -->
+			<event type="MOBKILLED" val="18246"/>	<!-- Watchman of Grave -->
+			<event type="MOBKILLED" val="18247"/>	<!-- Watchman of Grave -->
+			<event type="MOBKILLED" val="18248"/>	<!-- Watchman of Grave -->
+			<event type="MOBKILLED" val="18249"/>	<!-- Watchman of Grave -->
+			<event type="MOBKILLED" val="18250"/>	<!-- Watchman of Grave -->
+			<event type="MOBKILLED" val="18251"/>	<!-- Watchman of Grave -->
+			<event type="MOBKILLED" val="18252"/>	<!-- Watchman of Grave -->
+			<event type="MOBKILLED" val="18253"/>	<!-- Watchman of Grave -->
+			<event type="MOBKILLED" val="18254"/>	<!-- Watchman of Grave -->
+			<event type="MOBKILLED" val="18255"/>	<!-- Watchman of Grave -->
+			<event type="MOBKILLED" val="18256"/>	<!-- Halishas Treasure Box -->
+			<event type="QUEST_START" val="31453"/>	<!-- Nameless Spirit -->
+			<event type="QUEST_START" val="31921"/>	<!-- Conquerors Sepulcher Manager -->
+			<event type="QUEST_START" val="31922"/>	<!-- Emperors Sepulcher Manager -->
+			<event type="QUEST_START" val="31923"/>	<!-- Great Sages Sepulcher Manager -->
+			<event type="QUEST_START" val="31924"/>	<!-- Judges Sepulcher Manager -->
+			<event type="QUEST_START" val="31919"/>	<!-- Ghost Chamberlain of Elmoreden -->
+			<event type="QUEST_START" val="31920"/>	<!-- Ghost Chamberlain of Elmoreden -->
+			<event type="QUEST_TALK" val="31453"/>	<!-- Nameless Spirit -->
+			<event type="QUEST_TALK" val="31921"/>	<!-- Conquerors Sepulcher Manager -->
+			<event type="QUEST_TALK" val="31922"/>	<!-- Emperors Sepulcher Manager -->
+			<event type="QUEST_TALK" val="31923"/>	<!-- Great Sages Sepulcher Manager -->
+			<event type="QUEST_TALK" val="31924"/>	<!-- Judges Sepulcher Manager -->
+			<event type="QUEST_TALK" val="31919"/>	<!-- Ghost Chamberlain of Elmoreden -->
+			<event type="QUEST_TALK" val="31920"/>	<!-- Ghost Chamberlain of Elmoreden -->
+			<event type="QUEST_TALK" val="31452"/>	<!-- Ghost of Wigoth -->
+			<event type="QUEST_TALK" val="31454"/>	<!-- Ghost of Wigoth -->
+			<item id="7255"/>	<!-- Sealed Box -->
+			<item id="7261"/>	<!-- Used Grave Pass -->
+			<item id="7256"/>	<!-- Goblet of Alectia -->
+			<item id="7257"/>	<!-- Goblet of Tishas -->
+			<item id="7258"/>	<!-- Goblet of Mekara -->
+			<item id="7259"/>	<!-- Goblet of Morigul -->
+		</setting>
+	</quest>
+</quests>

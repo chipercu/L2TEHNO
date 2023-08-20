@@ -1,0 +1,24 @@
+/***************************************************************************
+*                                Change Log
+*                            ------------------
+*   24.05.2011
+*   Script Decompiled by SauDecompiler build 102306.2
+*
+***************************************************************************/
+
+class ai_icequeen_jinia : ai_icequeen_help_pc
+{
+parameter:
+	int	is_hard_mode = 0;
+
+handler:
+	EventHandler CREATED()
+	{
+		if( is_hard_mode == 0 )
+		{
+			myself->CreateOnePrivateEx(1018935,"ai_icequeen_p4_buff",0,0,114707,-114797,-11199,0,0,0,0);
+		}
+		super;
+	}
+
+}

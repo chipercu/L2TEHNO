@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="15300" name="NPC exclusive transparent dual" type="DUAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="weight" val="2080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S80" />
+		<set name="p_dam" val="282" />
+		<set name="m_dam" val="114" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+	</weapon>
+	<weapon id="15301" name="NPC exclusive transparent pole" type="POLE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_long_spear_i00" />
+		<set name="weight" val="1950" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="crystal_type" val="S80" />
+		<set name="p_dam" val="156" />
+		<set name="m_dam" val="83" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+	</weapon>
+	<weapon id="15302" name="NPC exclusive transparent bow" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_long_bow_i00" />
+		<set name="weight" val="1830" />
+		<set name="soulshots" val="6" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="S80" />
+		<set name="p_dam" val="114" />
+		<set name="m_dam" val="35" />
+		<set name="atk_speed" val="227" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="mp_consume" val="4" />
+	</weapon>
+	<weapon id="15303" name="NPC exclusive transparent claw" type="DUALFIST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_foxs_nail_i00" />
+		<set name="weight" val="1013" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S80" />
+		<set name="p_dam" val="376" />
+		<set name="m_dam" val="119" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+	</weapon>
+	<weapon id="15304" name="NPC exclusive transparent bowgun" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_hunting_gun_i00" />
+		<set name="weight" val="1850" />
+		<set name="soulshots" val="4" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="S80" />
+		<set name="p_dam" val="64" />
+		<set name="m_dam" val="32" />
+		<set name="atk_speed" val="303" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="10" />
+	</weapon>
+	<weapon id="15305" name="NPC exclusive transparent rapier" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_rapier_i00" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="S80" />
+		<set name="p_dam" val="36" />
+		<set name="m_dam" val="26" />
+		<set name="atk_speed" val="406" />
+		<set name="rnd_dam" val="40" />
+		<set name="critical" val="10" />
+	</weapon>
+	<weapon id="15306" name="NPC exclusive transparent dual dagger" type="DUALDAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.dual_dagger_i00" />
+		<set name="weight" val="2150" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S80" />
+		<set name="p_dam" val="304" />
+		<set name="m_dam" val="157" />
+		<set name="atk_speed" val="433" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="12" />
+	</weapon>
+	<weapon id="15310" name="Sacred Sword of Einhasad" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
+		<set name="weight" val="150" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="7" />
+		<set name="m_dam" val="5" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="isSa" val="true"/>
+		<skills>
+			<skill id="8357" lvl="1" />
+		</skills>
+	</weapon>
+	<weapon id="15313" name="PC cafe' exclusive - Forgotten Blade" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
+		<set name="additional_name" val="Weapons for PC Cafe Use" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="281" />
+		<set name="m_dam" val="132" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="180" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="isSa" val="true"/>
+		<skills>
+			<skill id="3566" lvl="1"/>
+		</skills>
+	</weapon>
+	<weapon id="15314" name="For PC cafe use -  Basalt Battlehammer" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
+		<set name="additional_name" val="Weapons for PC Cafe Use" />
+		<set name="weight" val="1570" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="281" />
+		<set name="m_dam" val="132" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="durability" val="180" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="isSa" val="true"/>
+		<skills>
+			<skill id="3013" lvl="3"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+	</weapon>
+	<weapon id="15315" name="For PC cafe use - Imperial Staff" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_imperial_staff_i00" />
+		<set name="additional_name" val="Weapons for PC Cafe Use" />
+		<set name="weight" val="910" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="274" />
+		<set name="m_dam" val="193" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="durability" val="180" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3576" lvl="1"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="15316" name="For PC cafe use - Angel Slayer" type="DAGGER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_angel_slayer_i00" />
+		<set name="additional_name" val="Weapons for PC Cafe Use" />
+		<set name="weight" val="950" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="246" />
+		<set name="m_dam" val="132" />
+		<set name="atk_speed" val="433" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="durability" val="180" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3572" lvl="1"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="15317" name="For PC cafe use - Dragon Hunter Axe" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
+		<set name="additional_name" val="Weapons for PC Cafe Use" />
+		<set name="weight" val="1820" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="342" />
+		<set name="m_dam" val="132" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="durability" val="180" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3569" lvl="1"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="15318" name="For PC cafe use - Saint Spear" type="POLE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_saint_spear_i00" />
+		<set name="additional_name" val="Weapons for PC Cafe Use" />
+		<set name="weight" val="1800" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="281" />
+		<set name="m_dam" val="132" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="180" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3013" lvl="4"/>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="15319" name="For PC cafe use - Demon Splinter" type="DUALFIST">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_demon_splinter_i00" />
+		<set name="additional_name" val="Weapons for PC Cafe Use" />
+		<set name="weight" val="1350" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="342" />
+		<set name="m_dam" val="132" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="durability" val="180" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+        <skills>
+			<skill id="3565" lvl="1" />
+		</skills>
+		<set name="isSa" val="true" />
+	</weapon>
+	<weapon id="15320" name="For PC cafe use - Heaven's Divider" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_heavens_divider_i00" />
+		<set name="additional_name" val="Weapons for PC Cafe Use" />
+		<set name="weight" val="1380" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="342" />
+		<set name="m_dam" val="132" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="180" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3566" lvl="1"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="15321" name="For PC cafe use - Arcana Macw" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_arcana_mace_i00" />
+		<set name="additional_name" val="Weapons for PC Cafe Use" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="225" />
+		<set name="m_dam" val="175" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="20" />
+		<set name="critical" val="4" />
+		<set name="hit_modify" val="4" />
+		<set name="durability" val="180" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3047" lvl="2" />
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="isSa" val="true" />
+	</weapon>
+	<weapon id="15322" name="For PC cafe use - Draconic Bow" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_draconic_bow_i00" />
+		<set name="additional_name" val="Weapons for PC Cafe Use" />
+		<set name="weight" val="1650" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="581" />
+		<set name="m_dam" val="132" />
+		<set name="atk_speed" val="293" />
+		<set name="rnd_dam" val="5" />
+		<set name="critical" val="12" />
+		<set name="mp_consume" val="11" />
+		<set name="durability" val="180" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3567" lvl="1"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="15323" name="For PC cafe use - Laevateinn" type="RAPIER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_leavatein_i00" />
+		<set name="additional_name" val="Weapons for PC Cafe Use" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="255" />
+		<set name="m_dam" val="132" />
+		<set name="atk_speed" val="406" />
+		<set name="rnd_dam" val="40" />
+		<set name="critical" val="10" />
+		<set name="durability" val="180" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<enchant4_skill id="3426" lvl="1"/>
+		<skills>
+			<skill id="3564" lvl="1"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="15324" name="For PC cafe use - Gram" type="ANCIENTSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_gram_i01" />
+		<set name="additional_name" val="Weapons for PC Cafe Use" />
+		<set name="weight" val="1800" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="304" />
+		<set name="m_dam" val="132" />
+		<set name="atk_speed" val="350" />
+		<set name="rnd_dam" val="15" />
+		<set name="critical" val="8" />
+		<set name="hit_modify" val="2" />
+		<set name="durability" val="180" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3566" lvl="1"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="15325" name="For PC cafe use - Sarnga" type="CROSSBOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_sarnga_i00" />
+		<set name="additional_name" val="Weapons for PC Cafe Use" />
+		<set name="weight" val="1600" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="356" />
+		<set name="m_dam" val="132" />
+		<set name="atk_speed" val="303" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="10" />
+		<set name="durability" val="180" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3567" lvl="1"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="15326" name="For PC cafe use - Tallum Blade *Dark Legion" type="DUAL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="additional_name" val="Weapons for PC Cafe Use" />
+		<set name="weight" val="2080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="S" />
+		<set name="p_dam" val="342" />
+		<set name="m_dam" val="132" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="180" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<enchant4_skill id="3570" lvl="1"/>
+	</weapon>
+	<weapon id="15342" name="Aqua Elf Transforming Harp" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.harp_of_transform_i00" />
+		<set name="additional_name" val="60 day limited period" />
+		<set name="p_dam" val="1" />
+		<set name="m_dam" val="1" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="86400" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+	<weapon id="15344" name="Aqua Elf Transforming Harp - Event" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.harp_of_transform_i00" />
+		<set name="additional_name" val="60 day limited period" />
+		<set name="p_dam" val="1" />
+		<set name="m_dam" val="1" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+		<set name="durability" val="86400" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</weapon>
+</list>

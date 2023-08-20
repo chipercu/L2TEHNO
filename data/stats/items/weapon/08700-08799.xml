@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="8763" name="Elrokian Trap" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_seize_mace_i00"/>
+		<set name="weight" val="500"/>
+		<set name="crystal_type" val="A"/>
+		<set name="atk_speed" val="379"/>
+		<set name="price" val="250000"/>
+		<skills>
+			<skill id="3626" lvl="1"/>
+			<skill id="3627" lvl="1"/>
+			<skill id="3628" lvl="1"/>
+		</skills>
+	</weapon>
+	<weapon id="8788" name="Sirra's Blade" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_sirr_blade_i01"/>
+		<set name="additional_name" val="Haste"/>
+		<set name="weight" val="1300"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3068" lvl="3"/>
+		</skills>
+		<set name="kamaelAnalog" val="9353"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="8789" name="Sirra's Blade" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_sirr_blade_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1300"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3013" lvl="3"/>
+		</skills>
+		<set name="kamaelAnalog" val="9354"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="8790" name="Sirra's Blade" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_sirr_blade_i01"/>
+		<set name="additional_name" val="Critical Poison"/>
+		<set name="weight" val="1300"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="26968400"/>
+		<triggers>
+			<trigger id="3024" level="1" type="CRIT" chance="100" />
+		</triggers>
+		<skills>
+			<skill id="3552" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="9355"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="8791" name="Sword of Ipos" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_sword_of_ipos_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="305"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3050" lvl="1"/>
+		</skills>
+		<set name="kamaelAnalog" val="9357"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="8792" name="Sword of Ipos" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_sword_of_ipos_i01"/>
+		<set name="additional_name" val="Haste"/>
+		<set name="weight" val="1820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="305"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3068" lvl="3"/>
+		</skills>
+		<set name="kamaelAnalog" val="9358"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="8793" name="Sword of Ipos" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_sword_of_ipos_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1820"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="305"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="critical" val="8"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3013" lvl="3"/>
+		</skills>
+		<set name="kamaelAnalog" val="9359"/>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="8794" name="Barakiel's Axe" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_barakiel_axe_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3013" lvl="3"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="8795" name="Barakiel's Axe" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_barakiel_axe_i01"/>
+		<set name="additional_name" val="Haste"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3068" lvl="3"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="8796" name="Barakiel's Axe" type="BLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND"/>
+		<set name="icon" val="icon.weapon_barakiel_axe_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="251"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="379"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3050" lvl="1"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="8797" name="Behemoth's Tuning Fork" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01"/>
+		<set name="additional_name" val="Focus"/>
+		<set name="weight" val="1890"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="305"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3050" lvl="1"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="8798" name="Behemoth's Tuning Fork" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01"/>
+		<set name="additional_name" val="Health"/>
+		<set name="weight" val="1890"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="305"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3013" lvl="3"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+	<weapon id="8799" name="Behemoth's Tuning Fork" type="BIGBLUNT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND"/>
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01"/>
+		<set name="additional_name" val="Anger"/>
+		<set name="weight" val="1890"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="A"/>
+		<set name="crystal_count" val="2157"/>
+		<set name="p_dam" val="305"/>
+		<set name="m_dam" val="121"/>
+		<set name="atk_speed" val="325"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4"/>
+		<set name="price" val="26968400"/>
+		<skills>
+			<skill id="3057" lvl="2"/>
+		</skills>
+		<set name="isSa" val="true"/>
+	</weapon>
+</list>

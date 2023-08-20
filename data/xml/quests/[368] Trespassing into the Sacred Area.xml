@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="368" type="SOLO">
+		<name lang="en" val="Trespassing into the Sacred Area"/>
+		<name lang="ru" val="Вторжение на Святую Землю"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20794"/>	<!-- Blade Stakato -->
+			<event type="MOBKILLED" val="20795"/>	<!-- Blade Stakato Worker -->
+			<event type="MOBKILLED" val="20796"/>	<!-- Blade Stakato Warrior -->
+			<event type="MOBKILLED" val="20797"/>	<!-- Blade Stakato Drone -->
+			<event type="QUEST_START" val="30926"/>	<!-- Restina -->
+			<event type="QUEST_TALK" val="30926"/>	<!-- Restina -->
+		</setting>
+	</quest>
+</quests>

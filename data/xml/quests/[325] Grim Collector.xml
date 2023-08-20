@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="325" type="SOLO">
+		<name lang="en" val="Grim Collector"/>
+		<name lang="ru" val="Беспощадный коллекционер"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20026"/>	<!-- Ruin Zombie -->
+			<event type="MOBKILLED" val="20029"/>	<!-- Ruin Zombie Leader -->
+			<event type="MOBKILLED" val="20035"/>	<!-- Tracker Skeleton -->
+			<event type="MOBKILLED" val="20042"/>	<!-- Tracker Skeleton Leader -->
+			<event type="MOBKILLED" val="20045"/>	<!-- Skeleton Scout -->
+			<event type="MOBKILLED" val="20457"/>	<!-- Zombie Soldier -->
+			<event type="MOBKILLED" val="20458"/>	<!-- Zombie Warrior -->
+			<event type="MOBKILLED" val="20051"/>	<!-- Skeleton Bowman -->
+			<event type="MOBKILLED" val="20514"/>	<!-- Shield Skeleton -->
+			<event type="MOBKILLED" val="20515"/>	<!-- Skeleton Infantryman -->
+			<event type="QUEST_START" val="30336"/>	<!-- Curtis -->
+			<event type="QUEST_TALK" val="30336"/>	<!-- Curtis -->
+			<event type="QUEST_TALK" val="30336"/>	<!-- Curtis -->
+			<event type="QUEST_TALK" val="30342"/>	<!-- Varsak -->
+			<event type="QUEST_TALK" val="30434"/>	<!-- Samed -->
+			<item id="1350"/>	<!-- Zombie Head -->
+			<item id="1351"/>	<!-- Zombie Heart -->
+			<item id="1352"/>	<!-- Zombie Liver -->
+			<item id="1353"/>	<!-- Skull -->
+			<item id="1354"/>	<!-- Rib Bone -->
+			<item id="1355"/>	<!-- Spine -->
+			<item id="1356"/>	<!-- Arm Bone -->
+			<item id="1357"/>	<!-- Thigh Bone -->
+			<item id="1358"/>	<!-- Complete Skeleton -->
+			<item id="1349"/>	<!-- Anatomy Diagram -->
+		</setting>
+	</quest>
+</quests>

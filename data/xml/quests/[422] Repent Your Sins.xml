@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="422" type="SOLO">
+		<name lang="en" val="Repent Your Sins"/>
+		<name lang="ru" val="Покаяние"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20039"/>	<!-- Scavenger Wererat -->
+			<event type="MOBKILLED" val="20494"/>	<!-- Turek War Hound -->
+			<event type="MOBKILLED" val="20193"/>	<!-- Tyrant Kingpin -->
+			<event type="MOBKILLED" val="20561"/>	<!-- Trisalim Tarantula -->
+			<event type="QUEST_START" val="30981"/>	<!-- Black Judge -->
+			<event type="QUEST_TALK" val="30981"/>	<!-- Black Judge -->
+			<event type="QUEST_TALK" val="30668"/>	<!-- Katari -->
+			<event type="QUEST_TALK" val="30597"/>	<!-- Piotur -->
+			<event type="QUEST_TALK" val="30612"/>	<!-- Casian -->
+			<event type="QUEST_TALK" val="30718"/>	<!-- Joan -->
+			<event type="QUEST_TALK" val="30300"/>	<!-- Pushkin -->
+			<item id="4326"/>	<!-- Ratman Scavenger's Skull -->
+			<item id="4327"/>	<!-- Turek War Hound's Tail -->
+			<item id="4328"/>	<!-- Tyrant Kingpin's Heart -->
+			<item id="4329"/>	<!-- Trisalim Tarantula's Venom Sac -->
+			<item id="4331"/>	<!-- Manual of Manacles -->
+			<item id="4425"/>	<!-- Penitent's Manacles -->
+			<item id="4330"/>	<!-- Penitent's Manacles -->
+		</setting>
+	</quest>
+</quests>

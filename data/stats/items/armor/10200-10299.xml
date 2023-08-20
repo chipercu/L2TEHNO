@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<armor id="10207" name="Enhanced Striped Scale Shirt" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="UNDERWEAR" />
+		<set name="icon" val="icon.etc_stripe_shirts_a_i04" />
+		<set name="weight" val="130" />
+		<set name="crystal_type" val="A" />
+		<set name="crystal_count" val="59" />
+		<set name="p_def" val="26" />
+		<set name="price" val="880000" />
+	</armor>
+	<armor id="10208" name="Enhanced Striped Mithril Shirt" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="UNDERWEAR" />
+		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
+		<set name="weight" val="130" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="122" />
+		<set name="p_def" val="30" />
+		<set name="mp_bonus" val="70" />
+		<set name="price" val="2540000" />
+	</armor>
+	<armor id="10209" name="Enhanced Steel Bracelet" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="RBRACELET" />
+		<set name="icon" val="icon.etc_rbracelet_a_i02" />
+		<set name="weight" val="150" />
+		<set name="crystal_type" val="A" />
+		<set name="crystal_count" val="76" />
+		<set name="mp_bonus" val="60" />
+		<set name="price" val="1144000" />
+		<skills>
+			<skill id="3324" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="10210" name="Enhanced Mithril Bracelet" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="RBRACELET" />
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
+		<set name="weight" val="150" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="170" />
+		<set name="mp_bonus" val="120" />
+		<set name="price" val="3556000" />
+		<skills>
+			<skill id="3325" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="10211" name="Blessed Ring of Resurrection" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="LRFINGER" />
+		<set name="icon" val="accessary_ring_of_mana_i00" />
+		<set name="weight" val="150" />
+		<set name="durability" val="180" />
+		<set name="m_def" val="24" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="10214" name="Dynasty Leather Armor" type="LIGHT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t92_u_i00" />
+		<set name="additional_name" val="Summoner" />
+		<set name="weight" val="4180" />
+		<!--Bard, BowMaster, DaggerMaster, Enchanter, ForceMaster, Healer, ShieldMaster, Summoner, WeaponMaster, Wizard-->
+		<set name="player_class" val="Summoner" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="878" />
+		<set name="p_def" val="170" />
+		<set name="price" val="18298000" />
+	</armor>
+	<armor id="10227" name="Dynasty Platinum Plate" type="HEAVY">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t91_u_i00" />
+		<set name="weight" val="7570" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="1616" />
+		<set name="p_def" val="226" />
+		<set name="price" val="33673000" />
+	</armor>
+	<armor id="10228" name="Dynasty Platinum Plate" type="HEAVY">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t91_uk_i00" />
+		<set name="additional_name" val="Shield Master" />
+		<set name="weight" val="7570" />
+		<!--Bard, BowMaster, DaggerMaster, Enchanter, ForceMaster, Healer, ShieldMaster, Summoner, WeaponMaster, Wizard-->
+		<set name="player_class" val="ShieldMaster" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="1616" />
+		<set name="p_def" val="226" />
+		<set name="price" val="33673000" />
+	</armor>
+	<armor id="10229" name="Dynasty Platinum Plate" type="HEAVY">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t91_uw_i00" />
+		<set name="additional_name" val="Weapon Master" />
+		<set name="weight" val="7570" />
+		<!--Bard, BowMaster, DaggerMaster, Enchanter, ForceMaster, Healer, ShieldMaster, Summoner, WeaponMaster, Wizard-->
+		<set name="player_class" val="WeaponMaster" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="1616" />
+		<set name="p_def" val="226" />
+		<set name="price" val="33673000" />
+	</armor>
+	<armor id="10230" name="Dynasty Platinum Plate" type="HEAVY">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t91_uf_i00" />
+		<set name="additional_name" val="Force Master" />
+		<set name="weight" val="7570" />
+		<!--Bard, BowMaster, DaggerMaster, Enchanter, ForceMaster, Healer, ShieldMaster, Summoner, WeaponMaster, Wizard-->
+		<set name="player_class" val="ForceMaster" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="1616" />
+		<set name="p_def" val="226" />
+		<set name="price" val="33673000" />
+	</armor>
+	<armor id="10231" name="Dynasty Platinum Plate" type="HEAVY">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t91_uke_i00" />
+		<set name="additional_name" val="Bard" />
+		<set name="weight" val="7570" />
+		<!--Bard, BowMaster, DaggerMaster, Enchanter, ForceMaster, Healer, ShieldMaster, Summoner, WeaponMaster, Wizard-->
+		<set name="player_class" val="Bard" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="1616" />
+		<set name="p_def" val="226" />
+		<set name="price" val="33673000" />
+	</armor>
+	<armor id="10232" name="Dynasty Jewel Leather Mail" type="LIGHT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t92_u_i00" />
+		<set name="weight" val="4180" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="1212" />
+		<set name="p_def" val="170" />
+		<set name="price" val="25255000" />
+	</armor>
+	<armor id="10233" name="Dynasty Jewel Leather Mail" type="LIGHT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t92_ud_i00" />
+		<set name="additional_name" val="Dagger Master" />
+		<set name="weight" val="4180" />
+		<!--Bard, BowMaster, DaggerMaster, Enchanter, ForceMaster, Healer, ShieldMaster, Summoner, WeaponMaster, Wizard-->
+		<set name="player_class" val="DaggerMaster" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="1212" />
+		<set name="p_def" val="170" />
+		<set name="price" val="25255000" />
+	</armor>
+	<armor id="10234" name="Dynasty Jewel Leather Mail" type="LIGHT">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t92_ub_i00" />
+		<set name="additional_name" val="Bow Master" />
+		<set name="weight" val="4180" />
+		<!--Bard, BowMaster, DaggerMaster, Enchanter, ForceMaster, Healer, ShieldMaster, Summoner, WeaponMaster, Wizard-->
+		<set name="player_class" val="BowMaster" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="1212" />
+		<set name="p_def" val="170" />
+		<set name="price" val="25255000" />
+	</armor>
+	<armor id="10235" name="Dynasty Silver Satin Tunic" type="MAGIC">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t93_u_i00" />
+		<set name="weight" val="1780" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="1212" />
+		<set name="p_def" val="113" />
+		<set name="mp_bonus" val="592" />
+		<set name="price" val="25255000" />
+	</armor>
+	<armor id="10236" name="Dynasty Silver Satin Tunic" type="MAGIC">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t93_uh_i00" />
+		<set name="additional_name" val="Healer" />
+		<set name="weight" val="1780" />
+		<!--Bard, BowMaster, DaggerMaster, Enchanter, ForceMaster, Healer, ShieldMaster, Summoner, WeaponMaster, Wizard-->
+		<set name="player_class" val="Healer" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="1212" />
+		<set name="p_def" val="113" />
+		<set name="mp_bonus" val="592" />
+		<set name="price" val="25255000" />
+	</armor>
+	<armor id="10237" name="Dynasty Silver Satin Tunic" type="MAGIC">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t93_ue_i00" />
+		<set name="additional_name" val="Enchanter" />
+		<set name="weight" val="1780" />
+		<!--Bard, BowMaster, DaggerMaster, Enchanter, ForceMaster, Healer, ShieldMaster, Summoner, WeaponMaster, Wizard-->
+		<set name="player_class" val="Enchanter" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="1212" />
+		<set name="p_def" val="113" />
+		<set name="mp_bonus" val="592" />
+		<set name="price" val="25255000" />
+	</armor>
+	<armor id="10238" name="Dynasty Silver Satin Tunic" type="MAGIC">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t93_us_i00" />
+		<set name="additional_name" val="Summoner" />
+		<set name="weight" val="1780" />
+		<!--Bard, BowMaster, DaggerMaster, Enchanter, ForceMaster, Healer, ShieldMaster, Summoner, WeaponMaster, Wizard-->
+		<set name="player_class" val="Summoner" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="1212" />
+		<set name="p_def" val="113" />
+		<set name="mp_bonus" val="592" />
+		<set name="price" val="25255000" />
+	</armor>
+	<armor id="10239" name="Dynasty Silver Satin Tunic" type="MAGIC">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="CHEST" />
+		<set name="icon" val="icon.armor_t93_uw_i00" />
+		<set name="additional_name" val="Wizard" />
+		<set name="weight" val="1780" />
+		<!--Bard, BowMaster, DaggerMaster, Enchanter, ForceMaster, Healer, ShieldMaster, Summoner, WeaponMaster, Wizard-->
+		<set name="player_class" val="Wizard" />
+		<set name="crystal_type" val="S" />
+		<set name="crystal_count" val="1212" />
+		<set name="p_def" val="113" />
+		<set name="mp_bonus" val="592" />
+		<set name="price" val="25255000" />
+	</armor>
+	<armor id="10240" name="Bird Nest" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_nest_hat_i00" />
+		<set name="weight" val="10" />
+		<set name="price" val="2000000" />
+	</armor>
+	<armor id="10241" name="Purple Viking Circlet" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_viking_circlet_violet_i00" />
+		<set name="weight" val="10" />
+		<set name="price" val="2000000" />
+	</armor>
+	<armor id="10242" name="Golden Viking Circlet" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_viking_circlet_gold_i00" />
+		<set name="weight" val="10" />
+		<set name="price" val="2000000" />
+	</armor>
+	<armor id="10243" name="Panda Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_panda_cap_i00" />
+		<set name="weight" val="10" />
+		<set name="price" val="2000000" />
+	</armor>
+	<armor id="10244" name="White Sheep Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_sheep_cap_white_i00" />
+		<set name="weight" val="10" />
+		<set name="price" val="2000000" />
+	</armor>
+	<armor id="10245" name="Black Sheep Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_sheep_cap_black_i00" />
+		<set name="weight" val="10" />
+		<set name="price" val="2000000" />
+	</armor>
+	<armor id="10246" name="Frog Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_frog_cap_i00" />
+		<set name="weight" val="10" />
+		<set name="price" val="2000000" />
+	</armor>
+	<armor id="10247" name="Fish Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_fish_cap_i00" />
+		<set name="weight" val="10" />
+		<set name="price" val="2000000" />
+	</armor>
+	<armor id="10248" name="Straw Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_straw_hat_i00" />
+		<set name="weight" val="10" />
+		<set name="price" val="2000000" />
+	</armor>
+	<armor id="10249" name="Chicken Hat" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_chicken_cap_i00" />
+		<set name="weight" val="10" />
+		<set name="price" val="2000000" />
+	</armor>
+	<armor id="10250" name="Adventurer Hat (Event)" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_explorer_hat_i00" />
+		<set name="weight" val="10" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+	</armor>
+	<armor id="10251" name="Medieval Party Mask" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:55-->
+		<set name="bodypart" val="HAIRALL" />
+		<set name="icon" val="accessory_middle_age_party_mask_i00" />
+		<set name="weight" val="10" />
+		<set name="price" val="2000000" />
+	</armor>
+	<armor id="10273" name="Wolf Summoning Bracelet" type="NONE">
+		<set name="bodypart" val="LBRACELET" />
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
+		<set name="weight" val="150" />
+		<set name="durability" val="200" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false"/>
+		<skills>
+			<skill id="3421" lvl="1" />
+			<skill id="3422" lvl="1" />
+		</skills>
+	</armor>
+</list>

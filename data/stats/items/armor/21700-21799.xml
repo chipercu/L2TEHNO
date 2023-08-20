@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<armor id="21706" name="Olf's T-shirt Event" type="NONE">
+		<set name="icon" val="BranchSys2.icon.7anni_shirt_i00" />
+		<set name="bodypart" val="UNDERWEAR" />
+		<set name="material" val="crystal" />
+		<set name="weight" val="130" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="p_def" val="28" />
+		<set name="m_def" val="8" />
+		<enchant_options>
+			<level val="4">
+				<option id="24975"/>
+			</level>
+			<level val="5">
+				<option id="24976"/>
+				<option id="24981"/>
+			</level>
+			<level val="6">
+				<option id="24977"/>
+				<option id="24981"/>
+			</level>
+			<level val="7">
+				<option id="24978"/>
+				<option id="24981"/>
+				<option id="24982"/>
+			</level>
+			<level val="8">
+				<option id="24979"/>
+				<option id="24981"/>
+				<option id="24982"/>
+			</level>
+			<level val="9">
+				<option id="24980"/>
+				<option id="24981"/>
+				<option id="24983"/>
+			</level>
+			<level val="10">
+				<option id="24981"/>
+				<option id="24983"/>
+				<option id="24985"/>
+			</level>
+		</enchant_options>
+	</armor>
+	<armor id="21712" name="Greather Earring of Zaken" type="NONE">
+		<set name="bodypart" val="LREAR" />
+		<set name="icon" val="accessory_earring_of_zaken_i00" />
+		<set name="weight" val="150" />
+		<set name="crystal_type" val="S84" />
+		<set name="crystal_count" val="124" />
+		<set name="m_def" val="94" />
+		<set name="mp_bonus" val="37" />
+		<set name="price" val="2590000" />
+		<skills>
+			<skill id="3559" lvl="2" />
+		</skills>
+	</armor>
+	<armor id="21716" name="Cloak of Zaken" type="NONE">
+		<set name="bodypart" val="BACK" />
+        <set name="icon" val="BranchSys2.Icon.br_zaken_cloak_i00" />
+		<set name="weight" val="220" />
+		<set name="tradeable" val="true" />
+		<set name="dropable" val="true" />
+		<set name="p_def" val="20" />
+		<set name="crystal_type" val="S80" />
+		<set name="att_def_type" val="5;15;15;5;5;15" />
+		<skills>
+			<skill id="21242" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="21717" name="Cloak of Freya" type="NONE">
+		<set name="bodypart" val="BACK" />
+        <set name="icon" val="BranchSys2.Icon.br_freya_cloak_i00" />
+		<set name="weight" val="220" />
+		<set name="tradeable" val="true" />
+		<set name="dropable" val="true" />
+		<set name="p_def" val="30" />
+		<set name="crystal_type" val="S84" />
+		<set name="att_def_type" val="10;20;20;10;20;10" />
+		<skills>
+			<skill id="21243" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="21718" name="Cloak of Frintezza" type="NONE">
+		<set name="bodypart" val="BACK" />
+        <set name="icon" val="BranchSys2.Icon.br_frintessa_cloak_i00" />
+		<set name="weight" val="220" />
+		<set name="tradeable" val="true" />
+		<set name="dropable" val="true" />
+		<set name="p_def" val="20" />
+		<set name="crystal_type" val="S80" />
+		<set name="att_def_type" val="15;5;5;15;5;15" />
+		<skills>
+			<skill id="21244" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="21719" name="Soul Cloak of Zaken" type="NONE">
+		<set name="bodypart" val="BACK" />
+        <set name="icon" val="BranchSys2.Icon.br_zaken_cloak_i00" />
+		<set name="weight" val="220" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="p_def" val="40" />
+		<set name="crystal_type" val="S80" />
+		<set name="att_def_type" val="5;10;10;5;5;10" />
+		<skills>
+			<skill id="21242" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="21720" name="Soul Cloak of Freya" type="NONE">
+		<set name="bodypart" val="BACK" />
+        <set name="icon" val="BranchSys2.Icon.br_freya_cloak_i00" />
+		<set name="weight" val="220" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="p_def" val="60" />
+		<set name="crystal_type" val="S84" />
+		<set name="att_def_type" val="5;15;15;5;15;5" />
+		<skills>
+			<skill id="21243" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="21721" name="Soul Cloak of Frintezza" type="NONE">
+		<set name="bodypart" val="BACK" />
+        <set name="icon" val="BranchSys2.Icon.br_frintessa_cloak_i00" />
+		<set name="weight" val="220" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="p_def" val="40" />
+		<set name="crystal_type" val="S80" />
+		<set name="att_def_type" val="10;5;5;10;5;10" />
+		<skills>
+			<skill id="21244" lvl="1" />
+		</skills>
+	</armor>	
+	<armor id="21727" type="NONE" name="Zinenze Agathion Bracelet (3 day) - 3-day limited period">
+		<!-- Description: Bracelet skill that let's you summon Zinenze for 3 days. Upon using the skill name, instantly recovers Exp, HP, MP, and CP, and makes you invincible for 5 seconds. (But can only be used when HP is below 30%.). Cool time is 12 hour(s). Can be stored in a private warehouse. But cannot be exchange, dropped, or sold in shops. -->
+		<set name="icon" val="BranchSys2.Icon.br_aga_jinjiayan_i00" />
+		<set name="bodypart" val="LBRACELET" />
+		<set name="weight" val="120" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false"/>
+		<set name="durability" val="4320" />
+		<skills>
+			<skill id="21248" lvl="1" />
+			<skill id="23305" lvl="1" />
+			<skill id="23306" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="21728" type="NONE" name="Zinenze Agathion Bracelet (7 day) - 7-day limited period">
+		<!-- Description: Bracelet skill that let's you summon Zinenze for 3 days. Upon using the skill name, instantly recovers Exp, HP, MP, and CP, and makes you invincible for 5 seconds. (But can only be used when HP is below 31%.). Cool time is 12 hour(s). Can be stored in a private warehouse. But cannot be exchange, dropped, or sold in shops. -->
+		<set name="icon" val="BranchSys2.Icon.br_aga_jinjiayan_i00" />
+		<set name="bodypart" val="LBRACELET" />
+		<set name="weight" val="120" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false"/>
+		<set name="durability" val="10080" />
+		<skills>
+			<skill id="21248" lvl="1" />
+			<skill id="23305" lvl="1" />
+			<skill id="23306" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="21729" type="NONE" name="Enze Agathion Bracelet - Permanent">
+		<!-- Description: Enze Agathion. Upon skill use, transforms into an Enze fairy. Can stay as an Enze fairy for 10 minutes. Cool time is 5 hours. Can be traded, sold at a private store, and stored in a private warehouse. But cannot be dropped or sold at a shop. -->
+		<set name="icon" val="BranchSys2.Icon.br_aga_jiayan_i00" />
+		<set name="bodypart" val="LBRACELET" />
+		<set name="weight" val="120" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="sellable" val="false"/>
+		<skills>
+			<skill id="21249" lvl="1" />
+			<skill id="23307" lvl="1" />
+		</skills>
+	</armor>
+	<armor id="21088" name="Jet Bike Mounting Bracelet" type="NONE">
+		<!--Done By Byldas (c)Revolt-Team-->
+		<!--LastChange: 10.05.2011-17:01-->
+		<set name="bodypart" val="LBRACELET" />
+		<set name="icon" val="BranchSys2.icon.br_z_bike_i00" />
+		<set name="weight" val="30" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="destroyable" val="false" />
+		<skills>
+			<skill id="21171" lvl="1" />
+		</skills>
+	</armor>
+</list>

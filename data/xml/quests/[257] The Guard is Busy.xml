@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="257" type="SOLO">
+		<name lang="en" val="The Guard is Busy"/>
+		<name lang="ru" val="Помощь страже"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20130"/>	<!-- Orc -->
+			<event type="MOBKILLED" val="20131"/>	<!-- Orc Grunt -->
+			<event type="MOBKILLED" val="20132"/>	<!-- Werewolf -->
+			<event type="MOBKILLED" val="20342"/>	<!-- Werewolf Chieftain -->
+			<event type="MOBKILLED" val="20343"/>	<!-- Werewolf Hunter -->
+			<event type="MOBKILLED" val="20006"/>	<!-- Orc Archer -->
+			<event type="MOBKILLED" val="20093"/>	<!-- Orc Fighter -->
+			<event type="MOBKILLED" val="20096"/>	<!-- Orc Lieutenant -->
+			<event type="MOBKILLED" val="20098"/>	<!-- Orc Fighter Leader -->
+			<event type="QUEST_START" val="30039"/>	<!-- Gilbert -->
+			<event type="QUEST_TALK" val="30039"/>	<!-- Gilbert -->
+			<item id="752"/>	<!-- Orc Amulet -->
+			<item id="1085"/>	<!-- Orc's Necklace -->
+			<item id="1086"/>	<!-- Werewolf's Fang -->
+			<item id="1084"/>	<!-- Gludio Lord's Mark -->
+		</setting>
+	</quest>
+</quests>

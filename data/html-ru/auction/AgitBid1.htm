@@ -1,0 +1,14 @@
+<html>
+<body>
+<font color="LEVEL">Ставку можно сделать только на один кланхолл.</font> Когда ставка уже сделана, сумма ставки <font color="LEVEL">изымается</font> с кланового хранилища в пользу аукциона. <font color="LEVEL">Так же взымается налог на участие в аукционе, он составляет 10% от ставки.</font> И он не возвращается, если Вы отмените ставку.<br> <font color="LEVEL">Сумма ставки</font> должна быть больше минимальной ставки (или больше предыдущей, если вы перебиваете ставку), и клан, который поставит максимальную ставку выигрывает в аукционе.<br> На данный момент в клановом хранилище имеется <font color="aaccff">%PLEDGE_ADENA%</font> аден. Минимальная сумма ставки <font color="aaccff">%AGIT_AUCTION_MINBID%</font> аден.<br> Сколько Вы будете ставить?
+<table width=270 border=0><tr><td width=220 align=right><edit var=bidprice width=230 align=right type=number></td><td width=40 align=right>аден</td></tr></table>
+<img src="L2UI.SquareBlank" width=270 height=10> <img src="L2UI.SquareWhite" width=270 height=1> <img src="L2UI.SquareBlank" width=270 height=5>
+<table width=270 border=0>
+<tr>
+<td width=130></td>
+<td width=70 align=center><button action="%AGIT_LINK_BACK%" value="Назад" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=70 align=center><button action="bypass -h npc_%objectId%_bid $bidprice" value="Ok" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+</body></html>

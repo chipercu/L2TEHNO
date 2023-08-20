@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="503" type="PARTY_ALL">
+		<name lang="en" val="Pursuit of Clan Ambition!"/>
+		<name lang="ru" val="Амбиции Клана"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBGOTATTACKED" val="27181"/>	<!-- Imperial Gravekeeper -->
+			<event type="MOBKILLED" val="20282"/>	<!-- Thunder Wyrm -->
+			<event type="MOBKILLED" val="20243"/>	<!-- Thunder Wyrm -->
+			<event type="MOBKILLED" val="20137"/>	<!-- Drake -->
+			<event type="MOBKILLED" val="20285"/>	<!-- Drake -->
+			<event type="MOBKILLED" val="27178"/>	<!-- Blitz Wyrm -->
+			<event type="MOBKILLED" val="20974"/>	<!-- Spiteful Soul Leader -->
+			<event type="MOBKILLED" val="20668"/>	<!-- Grave Guard -->
+			<event type="MOBKILLED" val="27179"/>	<!-- Grave Keymaster -->
+			<event type="MOBKILLED" val="27181"/>	<!-- Imperial Gravekeeper -->
+			<event type="QUEST_START" val="30760"/>	<!-- Sir Gustav Athebaldt -->
+			<event type="QUEST_TALK" val="30760"/>	<!-- Sir Gustav Athebaldt -->
+			<event type="QUEST_TALK" val="30645"/>	<!-- Martien -->
+			<event type="QUEST_TALK" val="30758"/>	<!-- Athrea -->
+			<event type="QUEST_TALK" val="30759"/>	<!-- Kalis -->
+			<event type="QUEST_TALK" val="30761"/>	<!-- Corpse Of Fritz -->
+			<event type="QUEST_TALK" val="30762"/>	<!-- Corpse Of Lutz -->
+			<event type="QUEST_TALK" val="30763"/>	<!-- Corpse Of Kurtz -->
+			<event type="QUEST_TALK" val="30512"/>	<!-- Kusto -->
+			<event type="QUEST_TALK" val="30764"/>	<!-- Balthazar -->
+			<event type="QUEST_TALK" val="30868"/>	<!-- Sir Eric Rodemai -->
+			<event type="QUEST_TALK" val="30765"/>	<!-- Imperial Coffer -->
+			<event type="QUEST_TALK" val="30766"/>	<!-- Cleo -->
+			<item id="3839"/>	<!-- Mist Drake Egg -->
+			<item id="3840"/>	<!-- Blitz Wyrm Egg -->
+			<item id="3841"/>	<!-- Drake Egg -->
+			<item id="3842"/>	<!-- Thunder Wyrm Egg -->
+			<item id="3843"/>	<!-- Brooch of the Magpie -->
+			<item id="3844"/>	<!-- Nebulite Crystals -->
+			<item id="3845"/>	<!-- Broken Titan's Powerstone -->
+			<item id="3846"/>	<!-- Titan's Powerstone -->
+			<item id="3847"/>	<!-- Imperial Key -->
+			<item id="3848"/>	<!-- Undead Ash -->
+			<item id="3866"/>	<!-- Gustav's 1st Letter -->
+			<item id="3867"/>	<!-- Gustav's 2nd Letter -->
+			<item id="3868"/>	<!-- Gustav's 3rd Letter -->
+			<item id="3869"/>	<!-- Scepter of Judgment -->
+			<item id="14854"/>	<!-- Recipe - Spiteful Soul Energy -->
+			<item id="14855"/>	<!-- Spiteful Soul Energy -->
+			<item id="14856"/>	<!-- Spiteful Soul Vengeance -->
+		</setting>
+	</quest>
+</quests>

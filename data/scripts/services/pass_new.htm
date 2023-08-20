@@ -1,0 +1,48 @@
+<html>
+	<body>
+		<br><br><br><br>
+		<center>Сами пишите сюда текст...</center>
+		<br><br><br><br>
+		<br><br><br><br>
+		<br><br><br><br>
+
+		<center>
+			<table border=0 width=285>
+				<tr>
+					<td height=20 align=right>
+						<font color=8040FF>Введите пароль:</font>
+					</td>
+					<td height=20>
+						<edit var="pass1" width=120 height=10 length=16/>
+					</td>
+				</tr>
+				<tr>
+					<td height=20 align=right>
+						<font color=8040FF>Повторите пароль:</font>
+					</td>
+					<td height=20>
+						<edit var="pass2" width=120 height=10 length=16/>
+					</td>
+				</tr>
+				<tr>
+					<td height=20 align=right>
+						<font color=8040FF>Введите секретный вопрос:</font>
+					</td>
+					<td height=20>
+						<edit var="question" width=120 height=10 length=16/>
+					</td>
+				</tr>
+				<tr>
+					<td height=20 align=right>
+						<font color=8040FF>Введите ответ:</font>
+					</td>
+					<td height=20>
+						<edit var="answer" width=120 height=10 length=16/>
+					</td>
+				</tr>
+			</table>
+		</center>
+
+		<center><button width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" action="bypass -h script_services.Password:set_pass $pass1 ;:; $pass2 ;:; $question ;:; $answer" value="Подтвердить"></center>
+	</body>
+</html>

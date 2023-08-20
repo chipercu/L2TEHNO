@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="213" type="SOLO">
+		<name lang="en" val="Trial of the Seeker"/>
+		<name lang="ru" val="Испытание искателя"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="20198"/>	<!-- Neer Ghoul Berserker -->
+			<event type="MOBKILLED" val="20211"/>	<!-- Ol Mahum Captain -->
+			<event type="MOBKILLED" val="20495"/>	<!-- Turek Orc Warlord -->
+			<event type="MOBKILLED" val="20080"/>	<!-- Ant Captain -->
+			<event type="MOBKILLED" val="20249"/>	<!-- Turak Bugbear Warrior -->
+			<event type="MOBKILLED" val="20158"/>	<!-- Medusa -->
+			<event type="MOBKILLED" val="20234"/>	<!-- Marsh Stakato Drone -->
+			<event type="MOBKILLED" val="20270"/>	<!-- Breka Orc Overlord -->
+			<event type="MOBKILLED" val="20088"/>	<!-- Ant Warrior Captain -->
+			<event type="MOBKILLED" val="20580"/>	<!-- Leto Lizardman Warrior -->
+			<event type="QUEST_START" val="30106"/>	<!-- Dufner -->
+			<event type="QUEST_TALK" val="30106"/>	<!-- Dufner -->
+			<event type="QUEST_TALK" val="30106"/>	<!-- Dufner -->
+			<event type="QUEST_TALK" val="30064"/>	<!-- Terry -->
+			<event type="QUEST_TALK" val="30684"/>	<!-- Viktor -->
+			<event type="QUEST_TALK" val="30715"/>	<!-- Marina -->
+			<event type="QUEST_TALK" val="30526"/>	<!-- Brunon -->
+			<item id="2647"/>	<!-- Dufners Letter -->
+			<item id="2648"/>	<!-- Terry's 1st Order -->
+			<item id="2649"/>	<!-- Terry's 2nd Order -->
+			<item id="2650"/>	<!-- Terry's Letter -->
+			<item id="2658"/>	<!-- Terry's Box -->
+			<item id="2651"/>	<!-- Viktor's Letter -->
+			<item id="2659"/>	<!-- Viktor's Request -->
+			<item id="2652"/>	<!-- Hawkeye's Letter -->
+			<item id="2661"/>	<!-- Shilen's Spirit Ore -->
+			<item id="2662"/>	<!-- Analysis Request -->
+			<item id="2663"/>	<!-- Marina's Letter -->
+			<item id="2664"/>	<!-- Experiment Tools -->
+			<item id="2665"/>	<!-- Analysis Result -->
+			<item id="2667"/>	<!-- List of Host -->
+			<item id="2666"/>	<!-- Terry's 3rd Order -->
+			<item id="2672"/>	<!-- Terry's Report -->
+			<item id="2653"/>	<!-- Mysterious Spirit Ore -->
+			<item id="2654"/>	<!-- Ol Mahum Spirit Ore -->
+			<item id="2655"/>	<!-- Turek Spirit Ore -->
+			<item id="2656"/>	<!-- Ant Spirit Ore -->
+			<item id="2657"/>	<!-- Turak Bugbear Spirit Ore -->
+			<item id="2660"/>	<!-- Medusa Scales -->
+			<item id="2668"/>	<!-- Abyss Spirit Ore -->
+			<item id="2669"/>	<!-- Abyss Spirit Ore -->
+			<item id="2670"/>	<!-- Abyss Spirit Ore -->
+			<item id="2671"/>	<!-- Abyss Spirit Ore -->
+		</setting>
+	</quest>
+</quests>

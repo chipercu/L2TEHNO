@@ -1,0 +1,197 @@
+﻿<html noscrollbar>
+<body>
+<center>
+<br>
+<img src="L2UI.SquareWhite" width=740 height=1>
+<table width="740" bgcolor="FFFFFF" border=0 height=32 cellspacing=0 cellpadding=0>
+	<tr>
+		<td>
+			<center>
+				%menu%
+			</center>
+		</td>
+	</tr>
+</table>
+<img src="L2UI.SquareWhite" width=740 height=1><br>
+<br><center><font color=3293F3>Добро пожаловать в панель управления ботами :)</font></center><br>
+<table border=0>
+	<tr>
+		<td>
+			<button value="Обновить" action="bypass -h admin_bot_create" width=120 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+		<td>
+			<button value="Назад" action="bypass -h admin_bot" width=120 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+		</td>
+	<tr>
+</table>
+<table border=0>
+	<tr>
+		<td width=130>
+			<font color=00ff00>Чистый онлайн:</font>
+		</td>
+		<td width=60>
+			<font color=00ff00>%clear_online%</font>
+		</td>
+	</tr>
+	<tr>
+		<td width=130>
+			<font color=00ff00>Оффтрейд:</font>
+		</td>
+		<td width=60>
+			<font color=00ff00>%offline_online%</font>
+		</td>
+	</tr>
+	<tr>
+		<td width=130>
+			<font color=00ff00>Всего ботов:</font>
+		</td>
+		<td width=60>
+			<font color=00ff00>%botAll%</font>
+		</td>
+	</tr>
+	<tr>
+		<td width=130>
+			<font color=00ff00>Ботов в игре:</font>
+		</td>
+		<td width=60>
+			<font color=00ff00>%botOnline%</font>
+		</td>
+	</tr>
+	<tr>
+		<td width=130>
+			<font color=00ff00>Свободных ников:</font>
+		</td>
+		<td width=60>
+			<font color=00ff00>%botNameFree%</font>
+		</td>
+	</tr>
+</table>
+<table border=0 width="450">
+	<tr>
+		<td>Рекомендуемое время спауна на старте 3-10с...</td>
+	</tr>
+</table>
+<table width=630 border=0 cellpadding=0 cellspacing=0>
+	<tr>
+		<td width=90 height=20></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+			<font color=LEVEL>     Расса</font>
+		</td>
+		<td>
+			<font color=LEVEL>       Тип</font>
+		</td>
+		<td>
+			<font color=LEVEL>       Пол</font>
+		</td>
+		<td>
+			<font color=LEVEL>  Количество</font>
+		</td>
+		<td>
+			<font color=LEVEL>Задержка(с)</font>
+		</td>
+	</tr>
+	<tr>
+		<td width=120>
+			<button value="Создать" action="bypass -h admin_bot_create $race $class $male true $count1 $interval" width=120 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+		<td width=90>
+			<combobox width=90 var="race" list="Человек;Эльф;ТемныйЭльф;Орк;Гном;Камаэль">
+		</td>
+		<td width=90>
+			<combobox width=90 var="class" list="Воин;Мистик">
+		</td>
+		<td width=90>
+			<combobox width=90 var="male" list="Мужчина;Женщина">
+		</td>
+		<td width=90>
+			<edit var="count1" width=90 height=13>
+		</td>
+		<td width=90>
+			<edit var="interval" width=90 height=13>
+		</td>
+	</tr>
+	<tr>
+		<td width=90 height=13></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+			<font color=LEVEL>  Количество</font>
+		</td>
+		<td>
+			<font color=LEVEL>Задержка(с)</font>
+		</td>
+	</tr>
+	<tr>
+		<td width=120>
+			<button value="Создать Рандомно" action="bypass -h admin_bot_create $count2 $interval3" width=120 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+		<td width=90>
+			<edit var="count2" width=90 height=13>
+		</td>
+		<td width=90>
+			<edit var="interval3" width=90 height=13>
+		</td>
+	</tr>
+	<tr>
+		<td width=90 height=10></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+			<font color=LEVEL>  Количество</font>
+		</td>
+		<td>
+			<font color=LEVEL>  Шмот: 0-6</font>
+		</td>
+		<td>
+			<font color=LEVEL>Задержка(с)</font>
+		</td>
+		<td>
+			<font color=LEVEL> Lvl</font>
+		</td>
+		<td>
+			<font color=LEVEL>Задача</font>
+		</td>
+		<td>
+			<font color=LEVEL> Шаг</font>
+		</td>
+		<td width=75>
+		</td>
+	</tr>
+	<tr>
+		<td width=120>
+			<button value="Создать в точке" action="bypass -h admin_bot_create 0 0 0 true $count3 $interval2 $level $id_point $index_point $item_grade" width=120 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+		</td>
+		<td width=90>
+			<edit var="count3" width=90 height=13>
+		</td>
+		<td width=90>
+			<edit var="item_grade" width=90 height=13>
+		</td>
+		<td width=90>
+			<edit var="interval2" width=90 height=13>
+		</td>
+		<td width=90>
+			<edit var="level" width=90 height=13>
+		</td>
+		<td width=90>
+			<edit var="id_point" width=90 height=13>
+		</td>
+		<td width=90>
+			<edit var="index_point" width=90 height=13>
+		</td>
+		<td width=75>
+		</td>
+	</tr>
+</table>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<img src="L2UI.SquareWhite" width=600 height=1>
+<br>
+<font color=3293F3>Community Board PVP | OpenTeam &copy 2010</font>
+</center>
+</body>
+</html>

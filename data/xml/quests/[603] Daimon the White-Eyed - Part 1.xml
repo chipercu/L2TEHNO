@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="603" type="PARTY_ONE">
+		<name lang="en" val="Daimon the White-Eyed - Part 1"/>
+		<name lang="ru" val="Белоглазый Демон - ч. 1"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="21299"/>	<!-- Buffalo Slave -->
+			<event type="MOBKILLED" val="21297"/>	<!-- Canyon Bandersnatch Slave -->
+			<event type="MOBKILLED" val="21304"/>	<!-- Grendel Slave -->
+			<event type="QUEST_START" val="31683"/>	<!-- Eye of Argos -->
+			<event type="QUEST_TALK" val="31683"/>	<!-- Eye of Argos -->
+			<event type="QUEST_TALK" val="31548"/>	<!-- Mysterious Ancient Tablet -->
+			<event type="QUEST_TALK" val="31549"/>	<!-- Mysterious Ancient Tablet -->
+			<event type="QUEST_TALK" val="31550"/>	<!-- Mysterious Ancient Tablet -->
+			<event type="QUEST_TALK" val="31551"/>	<!-- Mysterious Ancient Tablet -->
+			<event type="QUEST_TALK" val="31552"/>	<!-- Mysterious Ancient Tablet -->
+			<item id="7190"/>	<!-- Evil Spirit of Darkness -->
+		</setting>
+	</quest>
+</quests>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="79" type="SOLO">
+		<name lang="en" val="Saga of the Adventurer"/>
+		<name lang="ru" val="Сага Авантюриста"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBGOTATTACKED" val="27302"/>	<!-- Monument Defender Azrael -->
+			<event type="MOBKILLED" val="27299"/>	<!-- Monument Watcher Ezekiel -->
+			<event type="MOBKILLED" val="27228"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="27302"/>	<!-- Monument Defender Azrael -->
+			<event type="MOBKILLED" val="21646"/>	<!-- Grave Scarab -->
+			<event type="MOBKILLED" val="21647"/>	<!-- Scavenger Scarab -->
+			<event type="MOBKILLED" val="21648"/>	<!-- Grave Ant -->
+			<event type="MOBKILLED" val="21649"/>	<!-- Scavenger Ant -->
+			<event type="MOBKILLED" val="21650"/>	<!-- Shrine Knight -->
+			<event type="MOBKILLED" val="21651"/>	<!-- Shrine Guard -->
+			<event type="MOBKILLED" val="27214"/>	<!-- Guardian of Forbidden Knowledge -->
+			<event type="MOBKILLED" val="27215"/>	<!-- Guardian of Forbidden Knowledge -->
+			<event type="MOBKILLED" val="27216"/>	<!-- Guardian of Forbidden Knowledge -->
+			<event type="MOBKILLED" val="18212"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18213"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18214"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18215"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18216"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18217"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18218"/>	<!-- Archon of Halisha -->
+			<event type="MOBKILLED" val="18219"/>	<!-- Archon of Halisha -->
+			<event type="NPC_FIRST_TALK" val="31619"/>	<!-- Erica Ken Weber -->
+			<event type="QUEST_START" val="31603"/>	<!-- Black Cat -->
+			<event type="QUEST_TALK" val="31603"/>	<!-- Black Cat -->
+			<event type="QUEST_TALK" val="31603"/>	<!-- Black Cat -->
+			<event type="QUEST_TALK" val="31584"/>	<!-- Valentine -->
+			<event type="QUEST_TALK" val="31579"/>	<!-- Klaus -->
+			<event type="QUEST_TALK" val="31615"/>	<!-- Hermit -->
+			<event type="QUEST_TALK" val="31619"/>	<!-- Erica Ken Weber -->
+			<event type="QUEST_TALK" val="31646"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31647"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31651"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31654"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31655"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31658"/>	<!-- Tablet of Vision -->
+			<event type="QUEST_TALK" val="31616"/>	<!-- Hermit -->
+			<item id="7516"/>	<!-- Ice Wine -->
+			<item id="7494"/>	<!-- Halisha's Mark -->
+			<item id="7277"/>	<!-- Resonance Amulet - 1 -->
+			<item id="7308"/>	<!-- Resonance Amulet - 2 -->
+			<item id="7339"/>	<!-- Resonance Amulet - 3 -->
+			<item id="7370"/>	<!-- Resonance Amulet - 4 -->
+			<item id="7401"/>	<!-- Resonance Amulet - 5 -->
+			<item id="7432"/>	<!-- Resonance Amulet - 6 -->
+			<item id="7102"/>	<!-- Guardian Angel of the Tablet - Vol. 1 -->
+		</setting>
+	</quest>
+</quests>

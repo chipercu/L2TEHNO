@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="999" type="SOLO">
+		<name lang="en" val="T1 Tutorial"/>
+		<name lang="ru" val="T1 Учебник"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="18342"/>	<!-- Gremlin -->
+			<event type="MOBKILLED" val="20001"/>	<!-- Gremlin -->
+			<event type="NPC_FIRST_TALK" val="30008"/>	<!-- Roien -->
+			<event type="NPC_FIRST_TALK" val="30009"/>	<!-- Newbie Helper -->
+			<event type="NPC_FIRST_TALK" val="30017"/>	<!-- Gallint -->
+			<event type="NPC_FIRST_TALK" val="30019"/>	<!-- Newbie Helper -->
+			<event type="NPC_FIRST_TALK" val="30129"/>	<!-- Mitraell -->
+			<event type="NPC_FIRST_TALK" val="30131"/>	<!-- Newbie Helper -->
+			<event type="NPC_FIRST_TALK" val="30573"/>	<!-- Vulkus -->
+			<event type="NPC_FIRST_TALK" val="30575"/>	<!-- Newbie Helper -->
+			<event type="NPC_FIRST_TALK" val="30370"/>	<!-- Nerupa -->
+			<event type="NPC_FIRST_TALK" val="30528"/>	<!-- Laferon -->
+			<event type="NPC_FIRST_TALK" val="30530"/>	<!-- Newbie Helper -->
+			<event type="NPC_FIRST_TALK" val="30400"/>	<!-- Newbie Helper -->
+			<event type="NPC_FIRST_TALK" val="30401"/>	<!-- Newbie Helper -->
+			<event type="NPC_FIRST_TALK" val="30402"/>	<!-- Newbie Helper -->
+			<event type="NPC_FIRST_TALK" val="30403"/>	<!-- Newbie Helper -->
+			<event type="NPC_FIRST_TALK" val="30404"/>	<!-- Newbie Helper -->
+			<event type="NPC_FIRST_TALK" val="32133"/>	<!-- Perwan -->
+			<event type="NPC_FIRST_TALK" val="32134"/>	<!-- Newbie Helper -->
+			<event type="QUEST_START" val="30008"/>	<!-- Roien -->
+			<event type="QUEST_START" val="30009"/>	<!-- Newbie Helper -->
+			<event type="QUEST_START" val="30017"/>	<!-- Gallint -->
+			<event type="QUEST_START" val="30019"/>	<!-- Newbie Helper -->
+			<event type="QUEST_START" val="30129"/>	<!-- Mitraell -->
+			<event type="QUEST_START" val="30131"/>	<!-- Newbie Helper -->
+			<event type="QUEST_START" val="30573"/>	<!-- Vulkus -->
+			<event type="QUEST_START" val="30575"/>	<!-- Newbie Helper -->
+			<event type="QUEST_START" val="30370"/>	<!-- Nerupa -->
+			<event type="QUEST_START" val="30528"/>	<!-- Laferon -->
+			<event type="QUEST_START" val="30530"/>	<!-- Newbie Helper -->
+			<event type="QUEST_START" val="30400"/>	<!-- Newbie Helper -->
+			<event type="QUEST_START" val="30401"/>	<!-- Newbie Helper -->
+			<event type="QUEST_START" val="30402"/>	<!-- Newbie Helper -->
+			<event type="QUEST_START" val="30403"/>	<!-- Newbie Helper -->
+			<event type="QUEST_START" val="30404"/>	<!-- Newbie Helper -->
+			<event type="QUEST_START" val="32133"/>	<!-- Perwan -->
+			<event type="QUEST_START" val="32134"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30008"/>	<!-- Roien -->
+			<event type="QUEST_TALK" val="30009"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30017"/>	<!-- Gallint -->
+			<event type="QUEST_TALK" val="30019"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30129"/>	<!-- Mitraell -->
+			<event type="QUEST_TALK" val="30131"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30573"/>	<!-- Vulkus -->
+			<event type="QUEST_TALK" val="30575"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30370"/>	<!-- Nerupa -->
+			<event type="QUEST_TALK" val="30528"/>	<!-- Laferon -->
+			<event type="QUEST_TALK" val="30530"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30400"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30401"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30402"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30403"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30404"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="32133"/>	<!-- Perwan -->
+			<event type="QUEST_TALK" val="32134"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30008"/>	<!-- Roien -->
+			<event type="QUEST_TALK" val="30009"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30017"/>	<!-- Gallint -->
+			<event type="QUEST_TALK" val="30019"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30129"/>	<!-- Mitraell -->
+			<event type="QUEST_TALK" val="30131"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30573"/>	<!-- Vulkus -->
+			<event type="QUEST_TALK" val="30575"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30370"/>	<!-- Nerupa -->
+			<event type="QUEST_TALK" val="30528"/>	<!-- Laferon -->
+			<event type="QUEST_TALK" val="30530"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30400"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30401"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30402"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30403"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="30404"/>	<!-- Newbie Helper -->
+			<event type="QUEST_TALK" val="32133"/>	<!-- Perwan -->
+			<event type="QUEST_TALK" val="32134"/>	<!-- Newbie Helper -->
+		</setting>
+	</quest>
+</quests>

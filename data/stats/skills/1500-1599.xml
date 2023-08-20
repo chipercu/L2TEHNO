@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="1500" levels="1" name="Improved Magic">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="ma_up;100"/>
+			<effect name="i_dispel_by_slot" param="md_up;100"/>
+			<effect name="Buff">
+				<mul order="0x30" stat="p_magical_attack" val="1.75"/>
+				<mul order="0x30" stat="p_magical_defence" val="1.3"/>
+			</effect>
+			<effect name="p_block_buff_slot" param="ma_up;md_up"/>
+		</for>
+	</skill>
+	<skill id="1501" levels="1" name="Improved Condition">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="max_hp_up;100"/>
+			<effect name="i_dispel_by_slot" param="max_mp_up;100"/>
+			<effect name="Buff">
+				<mul order="0x30" stat="p_max_hp" val="1.35"/>
+				<mul order="0x30" stat="p_max_mp" val="1.35"/>
+			</effect>
+			<effect name="p_block_buff_slot" param="max_hp_up;max_mp_up"/>
+		</for>
+	</skill>
+	<skill id="1502" levels="1" name="Improved Critical Attack">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="critical_prob_up;100"/>
+			<effect name="i_dispel_by_slot" param="critical_dmg_up;100"/>
+			<effect name="Buff">
+				<add order="0x40" stat="p_critical_rate_per" val="30"/>
+				<mul order="0x30" stat="p_critical_damage_per" val="1.35"/>
+			</effect>
+			<effect name="p_block_buff_slot" param="critical_prob_up;critical_dmg_up"/>
+		</for>
+	</skill>
+	<skill id="1503" levels="1" name="Improved Shield Defense">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="shield_prob_up;100"/>
+			<effect name="i_dispel_by_slot" param="shield_defence_up;100"/>
+			<effect name="Buff">
+				<mul order="0x30" stat="rShld" val="1.3"/>
+				<mul order="0x30" stat="sDef" val="1.5"/>
+			</effect>
+			<effect name="p_block_buff_slot" param="shield_prob_up;shield_defence_up"/>
+		</for>
+	</skill>
+	<skill id="1504" levels="1" name="Improved Movement">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="speed_up;100"/>
+			<effect name="i_dispel_by_slot" param="avoid_up;100"/>
+			<effect name="Buff">
+				<add order="0x40" stat="p_speed" val="33"/>
+				<add order="0x40" stat="p_avoid" val="4"/>
+			</effect>
+			<effect name="p_block_buff_slot" param="speed_up;avoid_up"/>
+		</for>
+	</skill>
+	<skill id="1505" levels="1" name="Sublime Self-Sacrifice">
+		<!--
+			Done by:	Diamond
+			Last modify:	SYS, 23.08.2009
+			Description: Sacrifices oneself to fully recover the HP/MP/CP of party members excluding oneself and to become invincible for 15 seconds.
+		-->
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="HealPercent" instantly="true" val="100"/>
+			<effect name="ManaHealPercent" instantly="true" val="100"/>
+			<effect name="HealCPPercent" instantly="true" val="100"/>
+			<effect name="p_block_getdamage" param="block_hp" cancelOnAction="true"/>
+			<effect name="p_block_getdamage" param="block_mp" cancelOnAction="true"/>
+			<effect name="p_block_debuff" cancelOnAction="true"/>
+		</for>
+	</skill>
+	<skill id="1506" levels="1" name="Blessing of Eva">
+		<!--Done by L2Open. Update to CT2.5-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCleanse" val="true" />
+		<cond msgId="113" addName="1"> 
+			<target mob="false"/> 
+		</cond>
+		<for>
+			<effect name="HealPercent" instantly="true" val="100"/>
+			<effect name="ManaHealPercent" instantly="true" val="100"/>
+			<effect name="HealCPPercent" instantly="true" val="100"/>
+			<effect name="DispelEffects">
+				<def name="dispelType" val="cleanse"/>
+				<def name="cancelRate" val="50"/>
+				<def name="negateCount" val="10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1507" levels="1" name="Lord of Vampire">
+		<!--
+			Last modify:	SYS, 16.05.2009
+			Description: For 30 seconds, 80% of the standard short-range physical damage inflicted on the enemy is recovered as HP.
+		-->
+		<table name="#Tab-absorbDam">80</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillType" val="BUFF"/>
+		<for>
+			<effect name="Buff" time="30">
+				<add order="0x40" stat="absorbDam" val="#Tab-absorbDam"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1508" levels="1" name="Throne Root">
+		<!--
+			HFEDIT
+		-->
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="ROOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="p_block_move"/>
+			<effect name="t_hp" param="-90;1;diff"/>
+			<effect name="t_mp" param="-30;1;diff"/>
+			<effect name="p_defence_trait" param="trait_hold;100"/>
+		</for>
+	</skill>
+	<skill id="1509" levels="1" name="Seal of Limit">
+		<!--
+			Done by:	Diamond
+			Last modify:	28.04.2010, Diamond
+			Description: For 5 minutes, blocks the CP/HP/MP recovery of nearby enemies by 70%.
+		-->
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="Buff" time="300">
+				<mul order="0x30" stat="p_limit_hp" val="0.3"/>
+				<mul order="0x30" stat="mpLimit" val="0.3"/>
+				<mul order="0x30" stat="cpLimit" val="0.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1510" levels="1" name="Soul Cleanse">
+		<!--
+			Done by:	Magister
+			Last modify:	18.03.2009, Diamond
+			Description:
+			Cancel up to 3 de-buffs. Can only be used within the same race.
+		-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCleanse" val="true" />
+		<cond msgId="113" addName="1">
+			<target playerRace="Kamael"/>
+		</cond>
+		<for>
+			<effect name="DispelEffects">
+				<def name="dispelType" val="cleanse"/>
+				<def name="cancelRate" val="100"/>
+				<def name="negateCount" val="3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1511" levels="8" name="Curse of Life Flow">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Time"/>
+		<enchant2 levels="30" name="Chance"/>
+		<triggers>
+			<trigger id="5591" level="1" type="RECEIVE_DAMAGE" chance="30">
+				<player damage="100;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<effect name="Debuff"/>
+		</for>
+	</skill>
+	<skill id="1512" levels="1" name="Soul Vortex">
+		<!--
+			Done by Magister
+			Last modify: 20.05.2009
+			Stirs up a vortex connecting to the dimension of souls and inflicts non-attribute damage on the enemy with 112 power added to magic power.
+			For 30 seconds, decreases moving speed by 20%, Atk. Spd. by 30%, and Casting Spd. by 30%. Consumes 12 MP every second. Over-hit.
+		-->
+		<table name="#power">112</table>
+		<table name="#powerPvP">0</table>
+		<set name="power" val="#power"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="soulBoost" val="true"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#power">113 114 115 116 117 118 119 119 120 121 122 123 124 125 126</table>
+		</enchant1>
+		<enchant2 levels="15" name="Cost"/>
+		<enchant3 levels="15" name="Chance">
+		</enchant3>
+		<enchant4 levels="15" name="Duel">
+			<table name="#powerPvP">114 116 118 119 121 123 124 126 128 130 131 133 135 136 138</table>
+		</enchant4>
+		<for>
+			<effect name="t_mp" param="-12;5;diff">
+				<mul order="0x30" stat="p_speed" val="0.8"/>
+				<mul order="0x30" stat="p_attack_speed" val="0.7"/>
+				<mul order="0x30" stat="p_magic_speed" val="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1513" levels="1" name="Soul Vortex Extinction">
+		<!--
+			Done by Drizzy
+			Description: Detonates an Soul Vortex to inflict non-attribute damage on the enemy with 195 power added to magic power. Increases power upon soul consumption. Up to 5 are consumed.
+		-->
+		<table name="#power">195</table>
+		<table name="#powerPvP">0</table>
+		<set name="power" val="#power"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="negateSkill" val="1512"/>
+		<set name="soulBoost" val="true"/>
+		<cond msgId="113" addName="1">
+			<target hasBuffId="1512"/>
+		</cond>
+		<enchant1 levels="15" name="Power">
+			<table name="#power">197 198 198 199 199 200 200 201 202 202 203 203 204 204 205</table>
+		</enchant1>
+		<enchant2 levels="15" name="Cost"/>
+		<enchant3 name="Duel">
+			<table name="#powerPvP">198 199 201 202 204 205 206 208 209 211 212 213 215 216 218</table>
+		</enchant3>
+		<for>
+			<effect name="DispelEffects">
+				<def name="dispelType" val="bane" />
+				<def name="cancelRate" val="100" />
+				<def name="negateCount" val="3" /> <!-- Для 100% снятия -->
+				<def name="negateStackTypes" val="vortex" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="1514" levels="1" name="Soul Barrier">
+		<table name="#abnormal_time">10</table>
+		<table name="#p_physical_defence">0</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Time">
+			<table name="#abnormal_time">11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40</table>
+		</enchant1>
+		<enchant2 levels="30" name="Defence">
+			<table name="#p_physical_defence">10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200 210 220 230 240 250 260 270 280 290 300</table>
+		</enchant2>
+		<for>
+			<effect name="Buff" time="#abnormal_time" stackOrder="1" stackType="pd_up_bow">
+				<add order="0x40" stat="p_physical_defence" val="#p_physical_defence"/>
+				<mul order="0x30" stat="p_magical_defence" val="2"/>
+			</effect>
+			<effect name="p_defence_trait" param="trait_bow;10" stackOrder="1" stackType="pd_up_bow" time="#abnormal_time"/> 
+			<effect name="p_defence_trait" param="trait_crossbow;6" stackOrder="1" stackType="pd_up_bow" time="#abnormal_time"/> 
+		</for>
+	</skill>
+	<skill id="1515" levels="1" name="Lightning Barrier">
+		<!-- Done by: Drizzy-->
+		<table name="#triggerLevel">1</table>
+		<table name="#rate">20</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#rate">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35</table>
+		</enchant1>
+		<enchant2 levels="15" name="Cost">
+			<table name="#rate">21 21 21 22 22 22 23 23 23 24 24 24 25 25 26</table>
+		</enchant2>
+		<enchant3 levels="15" name="Chance">
+			<table name="#triggerLevel">2 3 4 5 6 7 8 9 10 11 12 13 14 15 16</table>
+		</enchant3>
+		<for>
+			<effect name="Buff" time="1200">
+				<triggers>
+					<trigger id="5592" level="#triggerLevel" type="RECEIVE_DAMAGE" chance="#rate">
+						<player damage="100;0"/>
+					</trigger>
+				</triggers>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1516" levels="1" name="Soul Strike">
+		<!--
+			Done by Magister
+			Last modify: 20.05.2009
+			Description: Consecutively throws souls to inflict non-attribute damage on the enemy using 166 Power added to magic power. Increases power upon soul consumption. Up to 5 are consumed.
+		-->
+		<table name="#power">166</table>
+		<table name="#powerPvP">0</table>
+		<set name="power" val="#power"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="soulBoost" val="true"/>
+		<enchant1 levels="15" name="Power">
+			<table name="#power">167 168 169 170 171 173 174 175 176 177 178 180 181 182 183</table>
+		</enchant1>
+		<enchant2 name="Duel">
+			<table name="#powerPvP">168 170 172 174 176 178 180 182 184 186 188 190 192 194 196</table>
+		</enchant2>
+		<for />
+	</skill>
+	<skill id="1517" levels="1" name="Chant of Combat">
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillRadius" val="1000"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="pa_up;100"/>
+			<effect name="i_dispel_by_slot" param="pd_up;100"/>
+			<effect name="Buff">
+				<mul order="0x30" stat="p_physical_attack" val="1.15"/>
+				<mul order="0x30" stat="p_physical_defence" val="1.15"/>
+			</effect>
+			<effect name="p_block_buff_slot" param="pa_up;pd_up"/>
+		</for>
+	</skill>
+	<skill id="1518" levels="1" name="Chant of Critical Attack">
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillRadius" val="1000"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="critical_prob_up;100"/>
+			<effect name="i_dispel_by_slot" param="critical_dmg_up;100"/>
+			<effect name="Buff">
+				<add order="0x40" stat="p_critical_rate_per" val="30"/>
+				<mul order="0x30" stat="p_critical_damage_per" val="1.35"/>
+			</effect>
+			<effect name="p_block_buff_slot" param="critical_prob_up;critical_dmg_up"/>
+		</for>
+	</skill>
+	<skill id="1519" levels="1" name="Chant of Blood Awakening">
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillRadius" val="1000"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="vampiric_attack;100"/>
+			<effect name="i_dispel_by_slot" param="attack_time_down;100"/>
+			<effect name="Buff">
+				<mul order="0x30" stat="p_attack_speed" val="1.33"/>
+				<add order="0x40" stat="absorbDam" val="9"/>
+			</effect>
+			<effect name="p_block_buff_slot" param="vampiric_attack;attack_time_down"/>
+		</for>
+	</skill>
+	<skill id="1520" levels="1" name="Inquisitor">
+		<!--
+			Done by:	Magister
+			Last modify:	08.09.2008
+			Description:
+			Receives the ability to judge those who oppose the gods' authority. Can use divine attacks and magic. For class Bishop.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="1523;-2;1528;-2;1524;-2;1525;-2;1430;0;1043;0;1418;0;1042;0;1400;0"/>
+		<set name="npcId" val="0"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<set name="useSS" val="false"/>
+		<for>
+			<effect name="Transformation" time="18000" val="312"/>
+		</for>
+	</skill>
+	<skill id="1521" levels="1" name="Inquisitor">
+		<!--
+			Done by:	Magister
+			Last modify:	08.09.2008
+			Description:
+			Receives the ability to judge those who oppose the gods' authority. Can use divine attacks and magic. For class Elven Elder.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="1523;-2;1528;-2;1524;-2;1525;-2;1430;0;1043;1;1303;0;1400;0"/>
+		<set name="npcId" val="0"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<set name="useSS" val="false"/>
+		<for>
+			<effect name="Transformation" time="18000" val="313"/>
+		</for>
+	</skill>
+	<skill id="1522" levels="1" name="Inquisitor">
+		<!--
+			Done by:	Magister
+			Last modify:	08.09.2008
+			Description:
+			Receives the ability to judge those who oppose the gods' authority. Can use divine attacks and magic. For class Shillien Elder.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="1523;-2;1528;-2;1524;-2;1525;-2;1430;0;1043;1;1059;0;1303;0"/>
+		<set name="npcId" val="0"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<set name="useSS" val="false"/>
+		<for>
+			<effect name="Transformation" time="18000" val="314"/>
+		</for>
+	</skill>
+	<skill id="1523" levels="42" name="Divine Punishment">
+		<!--
+		      Description: Brings down the gods' retribution upon an enemy. Power 51.
+		-->
+		<table name="#power">51 52 54 55 57 58 60 61 63 64 66 68 69 71 72 74 75 77 78 80 81 83 85 86 88 89 90 92 93 95 96 97 99 100 101 102 103 105 106 107 108 109</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="sacred"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<mul order="0x30" stat="p_magical_attack" val="0.4">
+				<target pvp="true"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="1524" levels="42" name="Surrender to the Holy">
+		<!--
+			Done by:	Magister
+			Last modify:	15.05.2009
+			Description:
+			Instantly decreases resistance to divine attacks and increases resistance to darkness attacks.
+		-->
+		<set name="element" val="sacred"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<for>
+			<effect name="Buff" stackOrder="4" stackType="SacredAtr" time="30">
+				<add order="0x40" stat="sacredRcpt" val="25"/>
+				<sub order="0x40" stat="unholyRcpt" val="12"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1525" levels="42" name="Divine Curse">
+		<table name="#t_hp">-9 -9 -9 -9 -9 -9 -11 -11 -11 -11 -11 -11 -11 -11 -11 -11 -13 -13 -13 -13 -13 -13 -13 -13 -13 -13 -14 -14 -14 -14 -14 -14 -14 -14 -14 -14 -15 -15 -15 -15 -15 -15</table>
+		<table name="#power">.5</table>
+		<set name="element" val="sacred"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="hpEff" val="#power"/>
+			</effect>
+			<effect name="t_hp" param="#t_hp;5;diff"/>
+		</for>
+	</skill>
+	<skill id="1526" levels="3" name="Steal Mana">
+		<table name="#skill">5676 5677 5678</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="#skill" level="1" type="ATTACK" chance="10">
+				<player damage="50;0"/>
+			</trigger>
+		</triggers>
+	</skill>
+	<skill id="1527" levels="3" name="Expert Casting">
+		<!--
+			Done by: Magister
+			Last modify: 15.05.2009, Magister
+			Description: Increases spell casting speed by 10% and decreases magic's reuse time by 10%.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<table name="#mReuse">0.9 0.85 0.8</table>
+		<for>
+			<mul order="0x30" stat="p_magic_speed" val="1.10"/>
+			<mul order="0x30" stat="mReuse" val="#mReuse"/>
+		</for>
+	</skill>
+	<skill id="1528" levels="42" name="Divine Flash">
+		<!--
+			Done by:	Magister
+			Last modify:	06.09.2008
+			Description:
+			Detonates sacred energy to attack surrounding enemies. Power 29-61.
+		-->
+		<table name="#power">29 29 30 31 32 33 33 34 35 36 37 38 39 39 40 41 42 43 44 45 45 46 47 48 49 50 50 51 52 53 54 54 55 56 56 57 58 58 59 60 60 61</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="element" val="sacred"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isEnemy" val="true"/>
+		<for>
+			<mul order="0x30" stat="p_magical_attack" val="0.4">
+				<target pvp="true"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="1529" levels="7" name="Soul Web">
+		<!--
+			Done by:	Diamond
+			Last modify:	15.05.2009, Magister
+			Description: Spreads a soul net to decrease the moving speed near the enemy by 30% for 1 minute.
+		-->
+		<table name="#abnormal_time">60</table>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="levelModifier" val="2"/>
+		<enchant1 levels="30" name="Cost"/>
+		<enchant2 levels="30" name="Chance">
+		</enchant2>
+		<enchant3 levels="30" name="Time">
+			<table name="#abnormal_time">62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120</table>
+		</enchant3>
+		<for>
+			<effect name="Buff" stackOrder="3" stackType="RunSpeedDown" time="#abnormal_time">
+				<mul order="0x30" stat="p_speed" val="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1530" levels="13" name="Death Spike">
+		<table name="#power">33 39 43 47 49 51 53 56 58 59 61 63 65</table>
+		<table name="#elementPower">0</table>
+		<table name="#powerPvP">0</table>
+		<set name="power" val="#power"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="power" val="#power"/>
+		<set name="element" val="unholy"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#power">66 66 67 68 69 70 70 71 72 73 73 74 75 76 76 77 78 79 79 80 81 82 82 83 84 85 86 86 87 88</table>
+		</enchant1>
+		<enchant2 levels="30" name="Dark Attack">
+			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
+		</enchant2>
+		<enchant3 name="Duel">
+			<table name="#powerPvP">66 68 69 71 73 74 76 78 79 81 83 84 86 88 89 91 92 94 96 97 99 101 102 104 106 107 109 111 112 114</table>
+		</enchant3>
+		<for />
+	</skill>
+	<skill id="1531" levels="7" name="Bless the Blood">
+		<table name="#level">1 2 3 4 5 6 7</table>
+		<table name="#time">15</table>
+		<set name="target" val="TARGET_PARTY_ONE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#level">8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37</table>
+		</enchant1>
+		<enchant2 levels="30" name="Time">
+			<table name="#time">16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45</table>
+		</enchant2>
+		<for>
+			<effect name="Buff" time="#time">
+				<triggers>
+					<trigger id="5698" level="#level" type="RECEIVE_DAMAGE" chance="60">
+						<player damage="60;0"/>
+					</trigger>
+				</triggers>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1532" levels="1" name="Enlightenment" >
+		<!--
+			Done by:	Magister
+			Last modify:	24.06.2009, Diamond
+			Description:
+			User receives mystical enlightenment for 20 seconds,
+			increasing M. Atk. by 40%,
+			Casting Spd. by 50%
+			and magic critical attack rate by 50%,
+			and decreasing MP consumption by 90%.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="20" stackOrder="1" stackType="final_secret">
+				<mul order="0x30" stat="p_magical_attack" val="1.4"/>
+				<mul order="0x30" stat="p_magic_speed" val="1.5"/>
+				<mul order="0x30" stat="mCritRate" val="1.5"/>
+				<mul order="0x30" stat="mpConsum" val="0.10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1533" levels="1" name="Enlightenment" >
+		<!--
+			Done by:	Magister
+			Last modify:	08.05.2010, SYS
+			Description:
+			User receives mystical enlightenment for 20 seconds,
+			increasing M. Atk. by 10%,
+			Heal by 40%,
+			Casting Spd. by 50%
+			and magic critical attack rate by 50%,
+			and decreasing MP consumption by 90%.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="20" stackOrder="1" stackType="final_secret">
+				<mul order="0x30" stat="p_magical_attack" val="1.1"/>
+				<mul order="0x40" stat="hpEff" val="1.4"/>
+				<mul order="0x30" stat="p_magic_speed" val="1.5"/>
+				<mul order="0x30" stat="mCritRate" val="1.5"/>
+				<mul order="0x30" stat="mpConsum" val="0.10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1534" levels="1" name="Courage of Pa'agrio" >
+		<!--
+			Done by:	Magister
+			Last modify:	15.05.2009
+			Need Correct:	p_max_cp, time
+			Description: Temporarily increases party and clan members' Max CP. Effect 1.
+		-->
+		<set name="target" val="TARGET_CLAN"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="1200">
+				<mul order="0x30" stat="p_max_cp" val="1.25"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1535" levels="1" name="Chant of Movement" >
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="speed_up;100"/>
+			<effect name="i_dispel_by_slot" param="avoid_up;100"/>
+			<effect name="Buff">
+				<add order="0x40" stat="p_speed" val="33"/>
+				<add order="0x40" stat="p_avoid" val="4"/>
+			</effect>
+			<effect name="p_block_buff_slot" param="speed_up;avoid_up"/>
+		</for>
+	</skill>
+	<skill id="1536" levels="1" name="Combat of Pa'agrio" >
+		<set name="target" val="TARGET_CLAN"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="pa_up;100"/>
+			<effect name="i_dispel_by_slot" param="pd_up;100"/>
+			<effect name="Buff">
+				<mul order="0x30" stat="p_physical_attack" val="1.15"/>
+				<mul order="0x30" stat="p_physical_defence" val="1.15"/>
+			</effect>
+			<effect name="p_block_buff_slot" param="pa_up;pd_up"/>
+		</for>
+	</skill>
+	<skill id="1537" levels="1" name="Critical of Pa'agrio" >
+		<set name="target" val="TARGET_CLAN"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="critical_prob_up;100"/>
+			<effect name="i_dispel_by_slot" param="critical_dmg_up;100"/>
+			<effect name="Buff">
+				<add order="0x40" stat="p_critical_rate_per" val="30"/>
+				<mul order="0x30" stat="p_critical_damage_per" val="1.35"/>
+			</effect>
+			<effect name="p_block_buff_slot" param="critical_prob_up;critical_dmg_up"/>
+		</for>
+	</skill>
+	<skill id="1538" levels="1" name="Condition of Pa'agrio" >
+		<set name="target" val="TARGET_CLAN"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="max_hp_up;100"/>
+			<effect name="i_dispel_by_slot" param="max_mp_up;100"/>
+			<effect name="Buff">
+				<mul order="0x30" stat="p_max_hp" val="1.35"/>
+				<mul order="0x30" stat="p_max_mp" val="1.35"/>
+			</effect>
+			<effect name="p_block_buff_slot" param="max_hp_up;max_mp_up"/>
+		</for>
+	</skill>
+	<skill id="1539" levels="4" name="Stigma of Shilien" >
+		<table name="#Rcpt">-16 -24 -32 -40</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/> 
+		<enchant1 levels="30" name="Time"/>
+		<for>
+			<effect name="p_defence_trait" param="trait_sword;#Rcpt"/> 
+			<effect name="p_defence_trait" param="trait_blunt;#Rcpt"/> 
+			<effect name="p_defence_trait" param="trait_dagger;#Rcpt"/> 
+			<effect name="p_defence_trait" param="trait_dual;#Rcpt"/> 
+			<effect name="p_defence_trait" param="trait_dualfist;#Rcpt"/> 
+			<effect name="p_defence_trait" param="trait_pole;#Rcpt"/> 
+			<effect name="p_defence_trait" param="trait_ancientsword;#Rcpt"/> 
+			<effect name="p_defence_trait" param="trait_rapier;#Rcpt"/> 
+			<effect name="p_defence_trait" param="trait_dualdagger;#Rcpt"/> 
+		</for>
+	</skill>
+	<skill id="1540" levels="1" name="Turn to Stone" >
+		<!--
+			Done by Abaddon
+			Description: "For 8 seconds, causes flint on oneself to avoid incurring damage."
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Petrification" stackType="paralyze" time="8"/>
+		</for>
+	</skill>
+	<skill id="1541" levels="1" name="Curse of Desparion" >
+		<!--  Automatically generated from The Gracia Final client files.
+		      Description: "Inflicts the Curse of Desparion, temporarily decreasing enemy movement speed, accuracy, P. Atk. and Atk. Spd."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-4-2009  22:35
+		-->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="1542" levels="1" name="Counter Critical" >
+		<!-- Done by Drizzy -->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="1200">
+				<mul order="0x30" stat="critDamRcpt" val="0.7"/>
+				<triggers>
+					<trigger id="6059" level="1" type="RECEIVE_DAMAGE" chance="80">
+						<player damage="300;0"/>
+					</trigger>
+				</triggers>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1543" levels="1" name="Great Fury">
+		<!--
+			Description: Creates chance of activating Great Fury on a party member if Burning Chop is in use.
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="6060" level="1" type="OFFENSIVE_PHYSICAL_SKILL_USE" chance="30">
+				<using skill="927"/>
+			</trigger>
+		</triggers>
+	</skill>
+	<skill id="1544" levels="7" name="Death Beam" >
+		<table name="#power">138 139 141 142 144 145 146</table>
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="skillRadius" val="300"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for />
+	</skill>
+	<skill id="1545" levels="1" name="Soul Sucking" >
+		<!--
+			Done by:	Diamond
+			Last modify:	27.12.2009
+			Description:
+			Continuously absorbs an enemy's soul.
+		-->
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isUsingWhileCasting" val="true"/>
+		<for>
+			<effect count="15" name="DamOverTimeLethal" time="1" val="100"/>
+		</for>
+	</skill>
+	<skill id="1546" levels="1" name="Strider Fear" > 
+		<set name="target" val="TARGET_TUNNEL_SELF"/> 
+		<set name="skillType" val="NOTDONE"/> 
+		<set name="operateType" val="OP_ACTIVE"/> 
+	</skill> 
+	<skill id="1547" levels="3" name="Spirit Sharing" >  
+		<table name="#MagicLvl">44 62 70</table>  
+		<table name="#Count">1.03 1.04 1.05</table>  
+		<table name="#p_skill_power_per">1.05 1.07 1.1</table>
+		<table name="#p_attack_speed">1.02 1.05 1.07</table>
+		<table name="#p_magic_speed">1.01 1.03 1.05</table>
+		<table name="#p_critical_rate_diff">5 7 10</table>
+		<table name="#stackOrder">1 2 3</table>
+		<set name="magicLvl" val="#MagicLvl"/>  
+		<set name="target" val="TARGET_SELF"/>  
+		<set name="skillType" val="BUFF"/>  
+		<set name="operateType" val="OP_ACTIVE"/>  
+		<for>
+			<effect name="Buff" time="1200" stackType="spiritSharing" stackOrder="#stackOrder">
+				<mul order="0x40" stat="p_physical_attack" val="#Count"/>  
+				<mul order="0x40" stat="p_magical_attack" val="#Count"/>  
+				<mul order="0x40" stat="p_skill_power_per" val="#p_skill_power_per"/>
+				<mul order="0x40" stat="p_attack_speed" val="#p_attack_speed"/>
+				<mul order="0x40" stat="p_magic_speed" val="#p_magic_speed"/>
+				<add order="0x40" stat="p_critical_rate_per" val="#p_critical_rate_diff"/>
+			</effect>  
+		</for>  
+	</skill> 
+	<!-- add fo High Five --> 
+	<skill id="1548" levels="3" name="Resist Earth">
+		<table name="#res">10 15 20</table>
+		<table name="#effectPoint">285 379 418</table>
+		<table name="#magicLevel">30 40 44</table>
+		<table name="#abnormal_lv">1 2 3</table>
+		<table name="#abnormal_time">1200</table>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="30" name="Time">
+			<table name="#abnormal_time">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
+		</enchant1>
+		<enchant2 levels="30" name="Cost">
+			<table name="#res">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
+		</enchant2>
+		<enchant3 levels="30" name="Power">
+			<table name="#res">24 28 33 37 41 46 50 54 59 63 67 72 76 80 85 89 93 98 102 106 111 115 119 124 128 132 137 141 145 150</table>
+		</enchant3>
+		<for>
+			<effect name="Buff" stackOrder="#abnormal_lv" stackType="EarthAtr" time="#abnormal_time">
+				<sub order="0x40" stat="earthRcpt" val="#res"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1549" levels="1" name="Chant of Elements">
+		<set name="effectPoint" val="662"/>
+		<set name="magicLevel" val="76"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="1200">
+				<sub order="0x40" stat="earthRcpt" val="20"/>
+				<sub order="0x40" stat="fireRcpt" val="20"/>
+				<sub order="0x40" stat="waterRcpt" val="20"/>
+				<sub order="0x40" stat="windRcpt" val="20"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1550" levels="1" name="Mass Cure Poison">
+		<set name="effectPoint" val="566"/>
+		<set name="power" val="9"/>
+		<set name="magicLevel" val="58"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="900"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="poison;9"/>
+		</for>
+	</skill>
+	<skill id="1551" levels="1" name="Mass Purify">
+		<set name="effectPoint" val="418"/>
+		<set name="power" val="3"/>
+		<set name="magicLevel" val="76"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="900"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isCleanse" val="true" />
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="poison;3"/>
+			<effect name="i_dispel_by_slot" param="bleeding;3"/>
+			<effect name="i_dispel_by_slot" param="paralyze;3"/>
+			<effect name="i_dispel_by_slot" param="turn_stone;3"/>
+		</for>
+	</skill>
+	<skill id="1552" levels="1" name="Mass Vitalize">
+		<set name="effectPoint" val="936"/>
+		<set name="power" val="796"/>
+		<set name="magicLevel" val="76"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="900"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" param="poison;3"/>
+			<effect name="i_dispel_by_slot" param="bleeding;3"/>
+			<effect name="Heal" instantly="true" val="796"/>
+		</for>
+	</skill>
+	<skill id="1553" levels="1" name="Chain Heal">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="600"/>
+		<set name="skillType" val="CHAIN_HEAL"/>
+		<set name="itemConsumeId" val="3031"/>
+		<set name="itemConsumeCount" val="4"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="healPercents" val="30;27;24;21;18;15;12;10;10;10"/>
+		<set name="healRadius" val="350"/>
+	</skill>
+	<skill id="1554" levels="1" name="Aura Blast">
+		<set name="magicLevel" val="81"/>
+		<set name="power" val="141"/>
+		<set name="powerPvE" val="199"/>
+		<set name="element" val="none"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillRadius" val="300"/>
+		<for>
+			<!-- Сколько дает МП не известно, но примерно 27 -->
+			<effect name="ManaHeal" instantly="true" val="27" applyOnCaster="true"/>
+		</for>
+	</skill>
+	<skill id="1555" levels="1" name="Aura Canon">
+		<set name="magicLevel" val="82"/>
+		<set name="power" val="178"/>
+		<set name="powerPvE" val="302"/>
+		<set name="element" val="none"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillRadius" val="200"/>
+		<for>
+			<!-- Сколько дает МП не известно, но примерно 29 -->
+			<effect name="ManaHeal" instantly="true" val="29" applyOnCaster="true"/>
+		</for>
+	</skill>
+	<skill id="1556" levels="1" name="Arcane Shield">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect abnormal="fastRings" name="Buff" time="10">
+				<add order="0x40" stat="transferMpDam" val="0.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1557" levels="1" name="Servitor Share">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="p_transfer_stats"/>
+		</for>
+	</skill>
+	<skill id="1558" levels="24" name="Dimension Spiral">
+		<table name="#power">57 58 60 61 63 66 68 71 74 77 79 82 84 87 89 90 91 92 93 94 95 96 97 98</table>
+		<table name="#powerPvE">57 58 60 61 63 66 68 71 74 77 79 82 89 94 100 104 110 115 139 152 166 179 193 207</table>
+		<set name="power" val="#power"/>
+		<set name="powerPvE" val="#powerPvE"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="1559" levels="3" name="Potential Ability">
+		<table name="#p_critical_damage_diff">117 295 384</table>
+		<table name="#p_critical_rate_per">20 30 40</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="p_critical_damage_diff" val="#p_critical_damage_diff">
+				<and>
+					<using armor="Light"/>
+					<using kind="Dagger, Dual Dagger"/>
+				</and>
+			</add>
+			<add order="0x40" stat="p_critical_rate_per" val="#p_critical_rate_per">
+				<and>
+					<using armor="Light"/>
+					<using kind="Dagger, Dual Dagger"/>
+				</and>
+			</add>
+		</for>
+	</skill>
+	<skill id="1560" levels="1" name="Lucky Blow">
+		<set name="power" val="11256"/>
+		<set name="power2" val="400"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>
+		<set name="onCrit" val="true"/>
+		<set name="criticalRate" val="10"/>
+		<set name="skillType" val="SPOIL"/>
+		<set name="blow" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="lethal1" val="5"/>
+		<set name="lethal2" val="1"/>
+		<cond msgId="113" addName="True">
+			<using kind="Dual Dagger"/>
+		</cond>
+		<for/>
+	</skill>
+	<skill id="1561" levels="5" name="Battle Cry">
+		<table name="#Tab-p_max_hp">1.15 1.2 1.25 1.3 1.35</table>
+		<table name="#heal">15 20 25 30 35</table>
+		<table name="#effectPoint">379 467 549 597 635</table>
+		<table name="#magicLevel">40 49 58 64 70</table>
+		<table name="#abnormal_lv">1 2 3 4 5</table>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#abnormal_lv" stackType="hp_up" time="600">
+				<mul order="0x30" stat="p_max_hp" val="#Tab-p_max_hp"/>
+			</effect>
+			<effect name="HealPercent" instantly="true" val="#heal"/>
+		</for>
+	</skill>
+	<skill id="1562" levels="2" name="Chant of Berserker">
+		<table name="#Tab-p_magical_attack">1.1 1.16</table>
+		<table name="#Tab-rate">1.05 1.08</table>
+		<table name="#p_physical_defence">0.95 0.92</table>
+		<table name="#p_magical_defence">0.90 0.84</table>
+		<table name="#p_speed">5 8</table>
+		<table name="#p_avoid">2 4</table>
+		<table name="#effectPoint">331 495</table>
+		<table name="#magicLevel">44 52</table>
+		<table name="#abnormal_lv">1 2</table>
+		<table name="#abnormal_time">1200</table>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="magicLevel" val="#magicLevel"/>
+        <set name="skillRadius" val="1000"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#abnormal_lv" stackType="berserk" time="#abnormal_time">
+				<mul order="0x30" stat="p_magical_attack" val="#Tab-p_magical_attack"/>
+				<mul order="0x30" stat="p_physical_attack" val="#Tab-rate"/>
+				<mul order="0x30" stat="p_physical_defence" val="#p_physical_defence"/>
+				<mul order="0x30" stat="p_magical_defence" val="#p_magical_defence"/>
+				<mul order="0x30" stat="p_magic_speed" val="#Tab-rate"/>
+				<mul order="0x30" stat="p_attack_speed" val="#Tab-rate"/>
+				<add order="0x40" stat="p_speed" val="#p_speed"/>
+				<sub order="0x40" stat="p_avoid" val="#p_avoid"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1563" levels="2" name="Fury of Pa'agrio">
+		<table name="#Tab-p_attack_speed">1.15 1.33</table>
+		<table name="#effectPoint">418 495</table>
+		<table name="#magicLevel">48 56</table>
+		<table name="#abnormal_lv">1 2</table>
+		<table name="#abnormal_time">1200</table>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="target" val="TARGET_CLAN"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" stackOrder="#abnormal_lv" stackType="pAtkSpeedUp" time="#abnormal_time">
+				<mul order="0x30" stat="p_attack_speed" val="#Tab-p_attack_speed"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1564" levels="1" name="Piercing Attack">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="6921" level="1" type="ATTACK" chance="10">
+				<player damage="1;0"/>
+			</trigger>
+		</triggers>
+	</skill>
+	<skill id="1565" levels="6" name="Mana Pump">
+		<table name="#mp">70 100 140 152 180 200</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<enchant1 levels="30" name="Power">
+			<table name="#mp">203 206 210 213 216 220 223 226 230 233 236 240 243 246 250 253 256 260 263 266 270 273 276 280 283 286 290 293 296 300</table>
+		</enchant1>
+		<for>
+			<add order="0x40" stat="p_max_mp" val="#mp"/>
+		</for>
+	</skill>
+</list>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quests SYSTEM "quests.dtd">
+
+<!-- Author: L2CCCP, Date: 01.11.2015, Time: 18:10 -->
+<!-- Site: http://l2cccp.com/ -->
+<quests>
+	<quest id="605" type="PARTY_ONE">
+		<name lang="en" val="Alliance with Ketra Orcs"/>
+		<name lang="ru" val="Союз с Орками Кетра"/>
+		<setting>
+			<rate drop="1.0" reward="1.0" exp="1.0" sp="1.0"/>
+			<event type="MOBKILLED" val="21324"/>	<!-- Ketra Orc Footman -->
+			<event type="MOBKILLED" val="21325"/>	<!-- Ketras War Hound -->
+			<event type="MOBKILLED" val="21327"/>	<!-- Ketra Orc Raider -->
+			<event type="MOBKILLED" val="21328"/>	<!-- Ketra Orc Scout -->
+			<event type="MOBKILLED" val="21329"/>	<!-- Ketra Orc Shaman -->
+			<event type="MOBKILLED" val="21331"/>	<!-- Ketra Orc Warrior -->
+			<event type="MOBKILLED" val="21332"/>	<!-- Ketra Orc Lieutenant -->
+			<event type="MOBKILLED" val="21334"/>	<!-- Ketra Orc Medium -->
+			<event type="MOBKILLED" val="21335"/>	<!-- Ketra Orc Elite Soldier -->
+			<event type="MOBKILLED" val="21336"/>	<!-- Ketra Orc White Captain -->
+			<event type="MOBKILLED" val="21338"/>	<!-- Ketra Orc Seer -->
+			<event type="MOBKILLED" val="21339"/>	<!-- Ketra Orc General -->
+			<event type="MOBKILLED" val="21340"/>	<!-- Ketra Orc Battalion Commander -->
+			<event type="MOBKILLED" val="21342"/>	<!-- Ketra Orc Grand Seer -->
+			<event type="MOBKILLED" val="21343"/>	<!-- Ketra Commander -->
+			<event type="MOBKILLED" val="21344"/>	<!-- Ketra Elite Guard -->
+			<event type="MOBKILLED" val="21345"/>	<!-- Ketras Head Shaman -->
+			<event type="MOBKILLED" val="21346"/>	<!-- Ketras Head Guard -->
+			<event type="MOBKILLED" val="21347"/>	<!-- Ketra Prophet -->
+			<event type="MOBKILLED" val="21350"/>	<!-- Varka Silenos Recruit -->
+			<event type="MOBKILLED" val="21351"/>	<!-- Varka Silenos Footman -->
+			<event type="MOBKILLED" val="21353"/>	<!-- Varka Silenos Scout -->
+			<event type="MOBKILLED" val="21354"/>	<!-- Varka Silenos Hunter -->
+			<event type="MOBKILLED" val="21355"/>	<!-- Varka Silenos Shaman -->
+			<event type="MOBKILLED" val="21357"/>	<!-- Varka Silenos Priest -->
+			<event type="MOBKILLED" val="21358"/>	<!-- Varka Silenos Warrior -->
+			<event type="MOBKILLED" val="21360"/>	<!-- Varka Silenos Medium -->
+			<event type="MOBKILLED" val="21361"/>	<!-- Varka Silenos Magus -->
+			<event type="MOBKILLED" val="21362"/>	<!-- Varka Silenos Officer -->
+			<event type="MOBKILLED" val="21369"/>	<!-- Varkas Commander -->
+			<event type="MOBKILLED" val="21370"/>	<!-- Varkas Elite Guard -->
+			<event type="MOBKILLED" val="21365"/>	<!-- Varka Silenos Great Magus -->
+			<event type="MOBKILLED" val="21366"/>	<!-- Varka Silenos General -->
+			<event type="MOBKILLED" val="21368"/>	<!-- Varka Silenos Great Seer -->
+			<event type="MOBKILLED" val="21373"/>	<!-- Varkas Prophet -->
+			<event type="MOBKILLED" val="21375"/>	<!-- Disciple of Prophet -->
+			<event type="MOBKILLED" val="21374"/>	<!-- Prophet Guard -->
+			<event type="MOBKILLED" val="21371"/>	<!-- Varkas Head Magus -->
+			<event type="MOBKILLED" val="21372"/>	<!-- Varkas Head Guard -->
+			<event type="QUEST_START" val="31371"/>	<!-- Wahkan -->
+			<event type="QUEST_TALK" val="31371"/>	<!-- Wahkan -->
+			<item id="7216"/>	<!-- Varka's Badge - Soldier -->
+			<item id="7217"/>	<!-- Varka's Badge - Captain -->
+			<item id="7218"/>	<!-- Varka's Badge - General -->
+		</setting>
+	</quest>
+</quests>

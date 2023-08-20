@@ -1,0 +1,1 @@
+ALTER TABLE `character_skills_save` MODIFY COLUMN `skill_id` smallint NOT NULL default 0;

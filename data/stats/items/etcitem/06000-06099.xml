@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<etcitem id="6000" name="Blueprint: Tower of Insolence, 12th Floor" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="400" />
+	</etcitem>
+	<etcitem id="6001" name="Blueprint: Tower of Insolence, 13th Floor" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="400" />
+	</etcitem>
+	<etcitem id="6002" name="Ancient Porcelain" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_oil_pot_white_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="8000" />
+	</etcitem>
+	<etcitem id="6003" name="Ancient Porcelain: Excellent" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_oil_pot_white_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="80000" />
+	</etcitem>
+	<etcitem id="6004" name="Ancient Porcelain: High Quality" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_oil_pot_white_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="16000" />
+	</etcitem>
+	<etcitem id="6005" name="Ancient Porcelain: Low Quality" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_oil_pot_white_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="4000" />
+	</etcitem>
+	<etcitem id="6006" name="Ancient Porcelain: Lowest Quality" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_oil_pot_white_i00" />
+		<set name="weight" val="10" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2640" />
+	</etcitem>
+	<etcitem id="6007" name="Reagent Pouch" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="6008" name="Reagent Pouch" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="6009" name="Reagent Pouch" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="6010" name="Reagent Box" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="stackable" val="true" />
+	</etcitem>
+	<etcitem id="6011" name="Wyrm's Blood" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_reagent_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="200" />
+	</etcitem>
+	<etcitem id="6012" name="Lava Stone" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_inf_ore_high_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="200" />
+	</etcitem>
+	<etcitem id="6013" name="Moonstone Shard" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="200" />
+	</etcitem>
+	<etcitem id="6014" name="Rotten Bone Piece" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_piece_bone_black_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="200" />
+	</etcitem>
+	<etcitem id="6015" name="Demon's Blood" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_reagent_green_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="200" />
+	</etcitem>
+	<etcitem id="6016" name="Infernium Ore" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_inf_ore_least_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="200" />
+	</etcitem>
+	<etcitem id="6017" name="Blood Root" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_ginseng_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="200" />
+	</etcitem>
+	<etcitem id="6018" name="Volcanic Ash" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_powder_gray_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="100" />
+	</etcitem>
+	<etcitem id="6019" name="Quicksilver" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_reagent_silver_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="200" />
+	</etcitem>
+	<etcitem id="6020" name="Sulfur" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_powder_orange_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="200" />
+	</etcitem>
+	<etcitem id="6021" name="Dracoplasm" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragons_blood_i05" />
+		<set name="stackable" val="true" />
+		<set name="price" val="1200" />
+	</etcitem>
+	<etcitem id="6022" name="Magma Dust" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_powder_red_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2500" />
+	</etcitem>
+	<etcitem id="6023" name="Moon Dust" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_powder_white_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2500" />
+	</etcitem>
+	<etcitem id="6024" name="Necroplasm" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_potion_purpel_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2500" />
+	</etcitem>
+	<etcitem id="6025" name="Demonplasm" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_potion_green_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2500" />
+	</etcitem>
+	<etcitem id="6026" name="Inferno Dust" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_powder_black_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2500" />
+	</etcitem>
+	<etcitem id="6027" name="Draconic Essence" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragon_blood_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2500" />
+	</etcitem>
+	<etcitem id="6028" name="Fire Essence" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragons_blood_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2500" />
+	</etcitem>
+	<etcitem id="6029" name="Lunargent" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_mithril_ore_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2500" />
+	</etcitem>
+	<etcitem id="6030" name="Midnight Oil" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragons_blood_i02" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2500" />
+	</etcitem>
+	<etcitem id="6031" name="Demonic Essence" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragons_blood_i05" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2500" />
+	</etcitem>
+	<etcitem id="6032" name="Abyss Oil" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_dragons_blood_i04" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2500" />
+	</etcitem>
+	<etcitem id="6033" name="Hellfire Oil" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_luxury_wine_b_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5000" />
+	</etcitem>
+	<etcitem id="6034" name="Nightmare Oil" type="OTHER">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_luxury_wine_c_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="5000" />
+	</etcitem>
+	<etcitem id="6035" name="Magic Haste Potion" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_potion_of_acumen2_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="20" />
+		<set name="stackable" val="true" />
+		<set name="price" val="2400" />
+		<skills>
+			<skill id="2169" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="6036" name="Greater Magic Haste Potion" type="POTION">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_potion_of_acumen3_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="20" />
+		<set name="stackable" val="true" />
+		<set name="price" val="6000" />
+		<skills>
+			<skill id="2169" lvl="2" />
+		</skills>
+	</etcitem>
+	<etcitem id="6037" name="Waking Scroll" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="class" val="CONSUMABLE" />
+		<set name="weight" val="5" />
+		<set name="stackable" val="true" />
+		<set name="price" val="100" />
+		<skills>
+			<skill id="2170" lvl="1" />
+		</skills>
+	</etcitem>
+	<etcitem id="6038" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="80000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6039" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="100000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6040" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="120000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6041" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6042" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6043" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="80000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6044" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="100000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6045" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="120000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6046" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6047" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6048" name="Trash" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="additional_name" val="Trash" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="30000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6049" name="Trash" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="additional_name" val="Trash" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="30000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6050" name="Trash" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="additional_name" val="Trash" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="30000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6051" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="80000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6052" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="100000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6053" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="120000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6054" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6055" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6056" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="80000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6057" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="100000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6058" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="price" val="120000" />
+	</etcitem>
+	<etcitem id="6059" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6060" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6061" name="Trash" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="additional_name" val="Trash" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="30000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6062" name="Trash" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="additional_name" val="Trash" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="30000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6063" name="Trash" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="additional_name" val="Trash" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="30000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6064" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="80000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6065" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="100000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6066" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="120000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6067" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6068" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6069" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="80000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6070" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="100000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6071" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="120000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6072" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6073" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6074" name="Trash" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="additional_name" val="Trash" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="30000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6075" name="Trash" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="additional_name" val="Trash" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="30000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6076" name="Trash" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="additional_name" val="Trash" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="30000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6077" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="80000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6078" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="100000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6079" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="120000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6080" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6081" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6082" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="80000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6083" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="100000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6084" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="120000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6085" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6086" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6087" name="Trash" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="additional_name" val="Trash" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="30000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6088" name="Trash" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="additional_name" val="Trash" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="30000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6089" name="Trash" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="additional_name" val="Trash" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="30000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6090" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="80000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6091" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="100000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6092" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="120000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6093" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6094" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6095" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="80000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6096" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="100000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6097" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="120000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6098" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+	<etcitem id="6099" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="SCROLL">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 10.01.2011-23:26-->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="stackable" val="true" />
+		<set name="tradeable" val="false" />
+		<set name="price" val="250000" />
+		<set name="dropable" val="false" />
+	</etcitem>
+</list>

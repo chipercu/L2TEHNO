@@ -1,0 +1,1 @@
+UPDATE character_quests set `name` = '_455_WingsOfSand' WHERE name = '_455_WingsofSand';

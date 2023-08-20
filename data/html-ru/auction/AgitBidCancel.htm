@@ -1,0 +1,14 @@
+﻿<html>
+<body>
+Когда ставка отменяется, налог на участие в аукционе (<font color="LEVEL">10% от ставки</font>) не возвращается.<br> Ставка на этот кланхолл равна <font color="aaccff">%AGIT_BID%</font> аден. После удержания налога, Вы можете забрать оставшиеся <font color="aaccff">%AGIT_BID_REMAIN%</font> аден. Вы хотите отменить ставку?
+<img src="L2UI.SquareBlank" width=270 height=10> <img src="L2UI.SquareWhite" width=270 height=1> <img src="L2UI.SquareBlank" width=270 height=5>
+<table width=270 border=0>
+<tr>
+<td width=130></td>
+<td width=70 align=center><button action="bypass -h npc_%objectId%_selectedItems" value="Назад" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=70 align=center><button action="bypass -h npc_%objectId%_doCancelBid" value="Отменить!" width=70 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br>
+</body>
+</html>

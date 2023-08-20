@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+	<weapon id="9129" name="Shadow Item: Shield of Nightmare" type="NONE">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LHAND" />
+		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
+		<set name="weight" val="400" />
+		<set name="crystal_type" val="A" />
+		<set name="shield_def" val="256" />
+		<set name="shield_def_rate" val="20" />
+		<set name="durability" val="600" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<set name="avoid_modify" val="-8" />
+	</weapon>
+	<weapon id="9136" name="Sword of Valakas (1-Handed)" type="SWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="RHAND" />
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="weight" val="1380" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="crystal_type" val="C" />
+		<set name="p_dam" val="156" />
+		<set name="m_dam" val="83" />
+		<set name="atk_speed" val="379" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+	</weapon>
+	<weapon id="9137" name="Sword of Valakas (2-Handed)" type="BIGSWORD">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="weight" val="2180" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="crystal_type" val="D" />
+		<set name="p_dam" val="78" />
+		<set name="m_dam" val="39" />
+		<set name="atk_speed" val="325" />
+		<set name="rnd_dam" val="10" />
+		<set name="critical" val="8" />
+	</weapon>
+	<weapon id="9140" name="Salvation Bow" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_krono_bow_i00" />
+		<set name="weight" val="900" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="p_dam" val="1" />
+		<set name="m_dam" val="1" />
+		<set name="atk_speed" val="293" />
+		<set name="rnd_dam" val="1" />
+		<set name="critical" val="12" />
+		<set name="mp_consume" val="1" />
+		<skills>
+			<skill id="3261" lvl="1" />
+		</skills>
+	</weapon>
+	<weapon id="9141" name="Redemption Bow" type="BOW">
+		<!--Done By Ragnarok (c)L2Open-Team-->
+		<!--LastChange: 19.01.2011-21:47-->
+		<set name="bodypart" val="LRHAND" />
+		<set name="icon" val="icon.weapon_krono_bow_i00" />
+		<set name="weight" val="300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="p_dam" val="1" />
+		<set name="m_dam" val="1" />
+		<set name="atk_speed" val="293" />
+		<set name="rnd_dam" val="1" />
+		<set name="critical" val="12" />
+		<set name="mp_consume" val="1" />
+		<set name="reuseOnEquip" val="30000" />
+		<set name="durability" val="230" />
+		<set name="tradeable" val="false" />
+		<set name="dropable" val="false" />
+		<skills>
+			<skill id="3260" lvl="1" />
+			<skill id="3262" lvl="1" />
+		</skills>
+	</weapon>
+</list>
