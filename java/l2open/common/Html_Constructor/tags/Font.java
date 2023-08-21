@@ -4,17 +4,13 @@ import l2open.common.Html_Constructor.tags.parameters.Color;
 
 public class Font implements Build{
 
-    private Color color;
-    private String text;
-
-//    <font color=F2C202>Баффер</font>
+    private final Color color;
+    private final String text;
 
     public Font(Color color, String text){
         this.color = color;
         this.text = text;
     }
-
-
 
     @Override
     public String build() {

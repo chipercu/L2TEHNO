@@ -1,12 +1,11 @@
 package l2open.common.Html_Constructor.tags;
 
-import l2open.common.Html_Constructor.tags.parameters.Parameters;
-
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class Row implements Build, Parameters {
+import static l2open.common.Html_Constructor.tags.parameters.Parameters.*;
+
+public class Row implements Build {
     public static final String START_ROW = "    <tr>\n";
     public static final String END_ROW = "    </tr>\n";
     private final List<Col> columns = new ArrayList<>();

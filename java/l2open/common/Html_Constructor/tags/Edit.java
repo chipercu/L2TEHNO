@@ -1,8 +1,6 @@
 package l2open.common.Html_Constructor.tags;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import l2open.common.Html_Constructor.tags.parameters.EditType;
 
 /**
  * Created by a.kiperku
@@ -11,37 +9,26 @@ import java.util.List;
 
 public class Edit implements Build {
 
+    private final String var;
+    private final String type;
+    private final int width;
+    private final int height;
+    private final int length;
 
-    private static final String START_EDIT = "       <edit";
-    private static final String CLOSE_PARAM = ">";
-    private final List<String> params = new ArrayList<String>();
-    private String var;
-    private String type = "text";
-
-    public Edit(String var){
+    public Edit(String var, int width, int height, EditType type, int length){
         this.var = var;
+        this.width = width;
+        this.height = height;
+        this.length = length;
+        if (type == EditType.num){
+            this.type = "number";
+        }else {
+            this.type = "text";
+        }
     }
-
-    public Edit setParams(String... parameters){
-        params.addAll(Arrays.asList(parameters));
-        return this;
-    }
-
 
     public String build(){
-        StringBuilder sb = new StringBuilder();
-        sb.append(START_EDIT);
-        if (!params.isEmpty()){
-            for (String p: params){
-                sb.append(p);
-            }
-        }
-        sb.append(" var=\"").append(var).append("\"")
-                        .append(" type=\"text\"");
-
-
-        sb.append(CLOSE_PARAM);
-        return sb.toString();
+        return "<edit var=\"" + var + "\" type=\"" + type + "\"" + " width=" + width + " height=" + height + " length=" + length + ">";
     }
 
 }
