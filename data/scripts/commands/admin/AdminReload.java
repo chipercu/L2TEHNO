@@ -126,8 +126,8 @@ public class AdminReload implements IAdminCommandHandler, ScriptFile
 			case admin_reload_htm:
 			{
 				Files.cacheClean();
-				Files.loadPtsHtml(".data/html-ru.zip");
-				Files.loadPtsHtml(".data/html-en.zip");
+				Files.loadPtsHtml("./data/html-ru.zip");
+				Files.loadPtsHtml("./data/html-en.zip");
 				activeChar.sendMessage("HTML cache clearned.");
 				break;
 			}
