@@ -17,7 +17,6 @@ public class PartyMakerGroup {
     private int maxLevel;
     private int groupLeaderId;
     private L2Player leader;
-    private List<L2Player> acceptedPlayers;
     private List<L2Player> candidates;
 
     private String description;
@@ -25,7 +24,6 @@ public class PartyMakerGroup {
     private Integer instanceId = 1;
 
     public PartyMakerGroup(int minLevel, int maxLevel, L2Player leader, String description, String instance) {
-        this.acceptedPlayers = new ArrayList<>();
         this.candidates = new ArrayList<>();
         this.minLevel = Math.min(minLevel, maxLevel);
         this.maxLevel = Math.max(minLevel, maxLevel);
@@ -35,9 +33,17 @@ public class PartyMakerGroup {
         this.instance = instance;
     }
 
-    public int getPartyCount(){
-        return getAcceptedPlayers().size() + 1;
+    public L2Player getCandidateById(int id){
+        if (!candidates.isEmpty()){
+            for (L2Player player : candidates){
+                if (player != null && player.getObjectId() == id){
+                    return player;
+                }
+            }
+        }
+        return null;
     }
+
 
     public void setLeader(L2Player leader) {
         this.leader = leader;
@@ -54,14 +60,6 @@ public class PartyMakerGroup {
 
     public L2Player getLeader() {
         return leader;
-    }
-
-    public List<L2Player> getAcceptedPlayers() {
-        return acceptedPlayers;
-    }
-
-    public void setAcceptedPlayers(List<L2Player> acceptedPlayers) {
-        this.acceptedPlayers = acceptedPlayers;
     }
 
     public List<L2Player> getCandidates() {

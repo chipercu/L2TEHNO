@@ -102,7 +102,7 @@ public class EnterWorld extends L2GameClientPacket {
         boolean first = activeChar.entering;
         if (first) {
             if (activeChar.getPlayerAccess().GodMode && !ConfigValue.ShowGMLogin)
-                activeChar.setInvisible(true);
+                activeChar.setInvisible(false);
 
             activeChar.setNonAggroTime(Long.MAX_VALUE);
             if (activeChar.getClan() != null) {
