@@ -1065,7 +1065,7 @@ public class L2NpcInstance extends L2Character
 
 		if(count > 40)
 		{
-			showChatWindow(player, "/data/html/quest-limit.htm");
+			showChatWindow(player, "./data/html/quest-limit.htm");
 			return;
 		}
 
@@ -1102,7 +1102,7 @@ public class L2NpcInstance extends L2Character
 				}
 			}
 
-			showChatWindow(player, "/data/html/no-quest.htm");
+			showChatWindow(player, "./data/html/no-quest.htm");
 		}
 		catch(Exception e)
 		{
@@ -1492,7 +1492,7 @@ public class L2NpcInstance extends L2Character
 				{
 					String filename = command.substring(5).trim();
 					if(filename.length() == 0)
-						showChatWindow(player, "/data/html/npcdefault.htm");
+						showChatWindow(player, "./data/html/npcdefault.htm");
 					else
 						showChatWindow(player, filename);
 				}
@@ -1596,7 +1596,7 @@ public class L2NpcInstance extends L2Character
 					player.sendPacket(Msg.SELECT_THE_ITEM_FROM_WHICH_YOU_WISH_TO_REMOVE_AUGMENTATION, Msg.ExShowVariationCancelWindow);
 			}
 			else if(command.startsWith("Link"))
-				showChatWindow(player, "/data/html/" + command.substring(5));
+				showChatWindow(player, ConfigValue.DatapackRoot + "/data/html/" + command.substring(5));
 			else if(command.startsWith("Teleport"))
 			{
 				if(player.getTransformation() == 111 || player.getTransformation() == 112 || player.getTransformation() == 124) 
@@ -1905,28 +1905,28 @@ public class L2NpcInstance extends L2Character
 			pom = String.valueOf(npcId);
 		else
 			pom = npcId + "-" + val;
-		String temp = "/data/html/default/" + pom + ".htm";
+		String temp = "./data/html/default/" + pom + ".htm";
 		File mainText = new File(temp);
 		if(mainText.exists())
 			return temp;
 
-		temp = "/data/html/trainer/" + pom + ".htm";
+		temp = "./data/html/trainer/" + pom + ".htm";
 		mainText = new File(temp);
 		if(mainText.exists())
 			return temp;
 
-		temp = "/data/html/lottery/" + pom + ".htm";
+		temp = "./data/html/lottery/" + pom + ".htm";
 		mainText = new File(temp);
 		if(mainText.exists())
 			return temp;
 
-		temp = "/data/html/instance/kamaloka/" + pom + ".htm";
+		temp = "./data/html/instance/kamaloka/" + pom + ".htm";
 		mainText = new File(temp);
 		if(mainText.exists())
 			return temp;
 
 		// If the file is not found, the standard message "I have nothing to say to you" is returned
-		return "/data/html/npcdefault.htm";
+		return "./data/html/npcdefault.htm";
 	}
 
 	/** For Lottery Manager **/
@@ -2207,12 +2207,12 @@ public class L2NpcInstance extends L2Character
 
 		if(lvl < ConfigValue.BuffMinLevel)
 		{
-			player.sendPacket(new NpcHtmlMessage(player, this, "/data/html/default/newbie_nosupport6.htm", 0).replace("%minlevel%", String.valueOf(ConfigValue.BuffMinLevel)));
+			player.sendPacket(new NpcHtmlMessage(player, this, ConfigValue.DatapackRoot + "/data/html/default/newbie_nosupport6.htm", 0).replace("%minlevel%", String.valueOf(ConfigValue.BuffMinLevel)));
 			return;
 		}
 		if(lvl > ConfigValue.BuffMaxLevel)
 		{
-			player.sendPacket(new NpcHtmlMessage(player, this, "/data/html/default/newbie_nosupport62.htm", 0).replace("%maxlevel%", String.valueOf(ConfigValue.BuffMaxLevel)));
+			player.sendPacket(new NpcHtmlMessage(player, this, ConfigValue.DatapackRoot + "/data/html/default/newbie_nosupport62.htm", 0).replace("%maxlevel%", String.valueOf(ConfigValue.BuffMaxLevel)));
 			return;
 		}
 
@@ -2745,7 +2745,7 @@ public class L2NpcInstance extends L2Character
 		if(!ConfigValue.AllowLearnTransSkillsWOQuest)
 			if(!player.isQuestCompleted("_136_MoreThanMeetsTheEye"))
 			{
-				showChatWindow(player, "/data/html/trainer/" + getNpcId() + "-noquest.htm");
+				showChatWindow(player, ConfigValue.DatapackRoot + "/data/html/trainer/" + getNpcId() + "-noquest.htm");
 				return;
 			}
 
@@ -2802,7 +2802,7 @@ public class L2NpcInstance extends L2Character
 		if(!ConfigValue.AllowLearnTransSkillsWOQuest)
 			if(!player.isQuestCompleted("_136_MoreThanMeetsTheEye"))
 			{
-				showChatWindow(player, "/data/html/trainer/" + getNpcId() + "-noquest.htm");
+				showChatWindow(player, ConfigValue.DatapackRoot + "/data/html/trainer/" + getNpcId() + "-noquest.htm");
 				return;
 			}
 

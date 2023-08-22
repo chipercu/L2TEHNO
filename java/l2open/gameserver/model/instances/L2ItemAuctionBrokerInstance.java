@@ -1,5 +1,6 @@
 package l2open.gameserver.model.instances;
 
+import l2open.config.ConfigValue;
 import l2open.gameserver.cache.Msg;
 import l2open.gameserver.instancemanager.ItemAuctionManager;
 import l2open.gameserver.model.L2Player;
@@ -30,9 +31,9 @@ public final class L2ItemAuctionBrokerInstance extends L2NpcInstance
 	{
 		String filename;
 		if(player.getLang().equals("ru"))
-			filename = val == 0 ? "/data/html-ru/itemauction/itembroker.htm" : "/data/html-ru/itemauction/itembroker-" + val + ".htm";
+			filename = val == 0 ? ConfigValue.DatapackRoot + "/data/html-ru/itemauction/itembroker.htm" : ConfigValue.DatapackRoot + "/data/html-ru/itemauction/itembroker-" + val + ".htm";
 		else
-			filename = val == 0 ? "/data/html/itemauction/itembroker.htm" : "/data/html/itemauction/itembroker-" + val + ".htm";
+			filename = val == 0 ? ConfigValue.DatapackRoot + "/data/html/itemauction/itembroker.htm" : ConfigValue.DatapackRoot + "/data/html/itemauction/itembroker-" + val + ".htm";
 
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}

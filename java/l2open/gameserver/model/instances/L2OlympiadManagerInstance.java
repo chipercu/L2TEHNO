@@ -162,15 +162,15 @@ public class L2OlympiadManagerInstance extends L2NpcInstance
 
 	private void showChatWindow(L2Player player, int val, String suffix)
 	{
-		String filename = "/data/html/olympiad/";
+		String filename = "./data/html/olympiad/";
 		if(val == 2 && suffix.equals("a") && Olympiad.isRegistered(player))
-			filename = "/data/html/olympiad/noble_cancel.htm";
+			filename = "./data/html/olympiad/noble_cancel.htm";
 		else
 		{
 			filename = filename + "noble_desc" + val;
 			filename = filename + (suffix != null ? suffix + ".htm" : ".htm");
 			if(filename.equals("./data/html/olympiad/noble_desc0.htm"))
-				filename = "/data/html/olympiad/noble_main.htm";
+				filename = "./data/html/olympiad/noble_main.htm";
 		}
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		String file = Files.read(filename, player);

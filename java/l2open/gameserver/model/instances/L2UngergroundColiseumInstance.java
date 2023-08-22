@@ -54,7 +54,7 @@ public class L2UngergroundColiseumInstance extends L2NpcInstance
 	@Override
 	public void showChatWindow(L2Player player, int val)
 	{
-		String filename = "/data/html/Coliseum/" + val + ".htm";
+		String filename = "./data/html/Coliseum/" + val + ".htm";
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this, filename, val);
 		html.replace("%levelMin%", "" + getMinLevel());
 		html.replace("%levelMax%", "" + getMaxLevel());
@@ -132,7 +132,7 @@ public class L2UngergroundColiseumInstance extends L2NpcInstance
 		else if(actualCommand.startsWith("view"))
 		{
 			int count = 0;
-			String filename = "/data/html/Coliseum/" + 5 + ".htm";
+			String filename = "./data/html/Coliseum/" + 5 + ".htm";
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this, filename, 5);
 
 			Coliseum coliseum = UnderGroundColliseumManager.getInstance().getColiseumByLevelLimit(getMaxLevel());
@@ -177,13 +177,13 @@ public class L2UngergroundColiseumInstance extends L2NpcInstance
 
 			/*			if(UnderGroundColliseumManager.getInstance().getColiseumByLevelLimit(getMaxLevel()).getPreviusWinners() != null)
 						{
-							filename = "/data/html/Coliseum/"+ 7 + "htm";
+							filename = "./data/html/Coliseum/"+ 7 + "htm";
 							html = new NpcHtmlMessage(player, this, filename, 7);
 							html.replace("winner", UnderGroundColliseumManager.getInstance().getColiseumByLevelLimit(getMaxLevel()).getPreviusWinners().getPartyLeader().getName());
 						}
 						else
 						{*/
-			filename = "/data/html/Coliseum/" + 6 + ".htm";
+			filename = "./data/html/Coliseum/" + 6 + ".htm";
 			html = new NpcHtmlMessage(player, this, filename, 6);
 			//			}
 

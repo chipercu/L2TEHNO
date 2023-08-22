@@ -91,6 +91,6 @@ public class L2SymbolMakerInstance extends L2NpcInstance
 		else
 			pom = npcId + "-" + val;
 
-		return "/data/html/symbolmaker/" + pom + ".htm";
+		return "./data/html/symbolmaker/" + pom + ".htm";
 	}
 }

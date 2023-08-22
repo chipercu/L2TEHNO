@@ -455,7 +455,7 @@ public final class L2VillageMasterInstance extends L2NpcInstance
 		else
 			pom = npcId + "-" + val;
 
-		return "/data/html/villagemaster/" + pom + ".htm";
+		return "./data/html/villagemaster/" + pom + ".htm";
 	}
 
 	// Private stuff
@@ -545,7 +545,7 @@ public final class L2VillageMasterInstance extends L2NpcInstance
 		if(member == null)
 		{
 			leader.sendMessage(new CustomMessage("l2open.gameserver.model.instances.L2VillageMasterInstance.S1IsNotMemberOfTheClan", leader).addString(newLeader));
-			showChatWindow(leader, "/data/html/villagemaster/clan-20.htm");
+			showChatWindow(leader, "./data/html/villagemaster/clan-20.htm");
 			return;
 		}
 

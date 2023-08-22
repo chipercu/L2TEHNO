@@ -1,5 +1,6 @@
 package l2open.gameserver.model.instances;
 
+import l2open.config.ConfigValue;
 import l2open.extensions.scripts.Functions;
 import l2open.gameserver.model.L2ObjectsStorage;
 import l2open.gameserver.model.L2Player;
@@ -41,12 +42,12 @@ public class L2NewbieGuideInstance extends L2NpcInstance
 							Functions.addItem(player, 57, 11567);
 							player.addExpAndSp(Experience.LEVEL[6] - player.getExp(), 127, false, false);
 						}
-						player.sendPacket(new NpcHtmlMessage(player, this, "/data/html/newbiehelper/q1-2.htm", val));
+						player.sendPacket(new NpcHtmlMessage(player, this, ConfigValue.DatapackRoot + "/data/html/newbiehelper/q1-2.htm", val));
 						return;
 					}
 					else
 					{
-						player.sendPacket(new NpcHtmlMessage(player, this, "/data/html/newbiehelper/q1-1.htm", val).replace("%tonpc%", getQuestNpc(1, player)));
+						player.sendPacket(new NpcHtmlMessage(player, this, ConfigValue.DatapackRoot + "/data/html/newbiehelper/q1-1.htm", val).replace("%tonpc%", getQuestNpc(1, player)));
 						return;
 					}
 				if(player.getLevel() < 10)
@@ -60,12 +61,12 @@ public class L2NewbieGuideInstance extends L2NpcInstance
 							long addexp = Experience.LEVEL[10] - player.getExp();
 							player.addExpAndSp(addexp, addexp / 24, false, false);
 						}
-						player.sendPacket(new NpcHtmlMessage(player, this, "/data/html/newbiehelper/q3-1.htm", val).replace("%tonpc%", getQuestNpc(3, player)));
+						player.sendPacket(new NpcHtmlMessage(player, this, ConfigValue.DatapackRoot + "/data/html/newbiehelper/q3-1.htm", val).replace("%tonpc%", getQuestNpc(3, player)));
 						return;
 					}
 					else
 					{
-						player.sendPacket(new NpcHtmlMessage(player, this, "/data/html/newbiehelper/q2-1.htm", val).replace("%tonpc%", getQuestNpc(2, player)));
+						player.sendPacket(new NpcHtmlMessage(player, this, ConfigValue.DatapackRoot + "/data/html/newbiehelper/q2-1.htm", val).replace("%tonpc%", getQuestNpc(2, player)));
 						return;
 					}
 				if(player.getLevel() < 15)
@@ -79,12 +80,12 @@ public class L2NewbieGuideInstance extends L2NpcInstance
 							long addexp = Experience.LEVEL[15] - player.getExp();
 							player.addExpAndSp(addexp, addexp / 22, false, false);
 						}
-						player.sendPacket(new NpcHtmlMessage(player, this, "/data/html/newbiehelper/q4-1.htm", val).replace("%tonpc%", getQuestNpc(4, player)));
+						player.sendPacket(new NpcHtmlMessage(player, this, ConfigValue.DatapackRoot + "/data/html/newbiehelper/q4-1.htm", val).replace("%tonpc%", getQuestNpc(4, player)));
 						return;
 					}
 					else
 					{
-						player.sendPacket(new NpcHtmlMessage(player, this, "/data/html/newbiehelper/q3-1.htm", val).replace("%tonpc%", getQuestNpc(3, player)));
+						player.sendPacket(new NpcHtmlMessage(player, this, ConfigValue.DatapackRoot + "/data/html/newbiehelper/q3-1.htm", val).replace("%tonpc%", getQuestNpc(3, player)));
 						return;
 					}
 				if(player.getLevel() < 18)
@@ -98,21 +99,21 @@ public class L2NewbieGuideInstance extends L2NpcInstance
 							long addexp = Experience.LEVEL[18] - player.getExp();
 							player.addExpAndSp(addexp, addexp / 5, false, false);
 						}
-						player.sendPacket(new NpcHtmlMessage(player, this, "/data/html/newbiehelper/q4-2.htm", val));
+						player.sendPacket(new NpcHtmlMessage(player, this, ConfigValue.DatapackRoot + "/data/html/newbiehelper/q4-2.htm", val));
 						return;
 					}
 					else
 					{
-						player.sendPacket(new NpcHtmlMessage(player, this, "/data/html/newbiehelper/q4-1.htm", val).replace("%tonpc%", getQuestNpc(4, player)));
+						player.sendPacket(new NpcHtmlMessage(player, this, ConfigValue.DatapackRoot + "/data/html/newbiehelper/q4-1.htm", val).replace("%tonpc%", getQuestNpc(4, player)));
 						return;
 					}
 
-				player.sendPacket(new NpcHtmlMessage(player, this, "/data/html/newbiehelper/q-no.htm", val));
+				player.sendPacket(new NpcHtmlMessage(player, this, ConfigValue.DatapackRoot + "/data/html/newbiehelper/q-no.htm", val));
 				return;
 			}
 			else
 			{
-				player.sendPacket(new NpcHtmlMessage(player, this, "/data/html/newbiehelper/q-no.htm", val));
+				player.sendPacket(new NpcHtmlMessage(player, this, ConfigValue.DatapackRoot + "/data/html/newbiehelper/q-no.htm", val));
 				return;
 			}
 		super.showChatWindow(player, val);
@@ -249,7 +250,7 @@ public class L2NewbieGuideInstance extends L2NpcInstance
 		else
 			pom = npcId + "-" + val;
 
-		String temp = "/data/html/newbiehelper/" + pom + ".htm";
+		String temp = ConfigValue.DatapackRoot + "/data/html/newbiehelper/" + pom + ".htm";
 
 		File mainText = new File(temp);
 

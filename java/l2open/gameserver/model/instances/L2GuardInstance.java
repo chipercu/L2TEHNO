@@ -24,7 +24,7 @@ public final class L2GuardInstance extends L2NpcInstance
 			pom = String.valueOf(npcId);
 		else
 			pom = npcId + "-" + val;
-		return "/data/html/guard/" + pom + ".htm";
+		return "./data/html/guard/" + pom + ".htm";
 	}
 
 	@Override

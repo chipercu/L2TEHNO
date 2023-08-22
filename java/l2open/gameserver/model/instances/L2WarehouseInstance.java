@@ -29,7 +29,7 @@ public final class L2WarehouseInstance extends L2NpcInstance
 			pom = String.valueOf(npcId);
 		else
 			pom = npcId + "-" + val;
-		return "/data/html/warehouse/" + pom + ".htm";
+		return ConfigValue.DatapackRoot + "/data/html/warehouse/" + pom + ".htm";
 	}
 
 	private void showRetrieveWindow(L2Player player, int val)

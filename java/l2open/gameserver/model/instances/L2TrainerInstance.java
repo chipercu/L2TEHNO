@@ -1,5 +1,6 @@
 package l2open.gameserver.model.instances;
 
+import l2open.config.ConfigValue;
 import l2open.gameserver.model.L2Player;
 import l2open.gameserver.templates.L2NpcTemplate;
 
@@ -19,7 +20,7 @@ public final class L2TrainerInstance extends L2NpcInstance // deprecated?
 		else
 			pom = npcId + "-" + val;
 
-		return "/data/html/trainer/" + pom + ".htm";
+		return ConfigValue.DatapackRoot + "/data/html/trainer/" + pom + ".htm";
 	}
 
 	@Override

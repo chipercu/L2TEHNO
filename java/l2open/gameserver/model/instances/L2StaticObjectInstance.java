@@ -1,5 +1,6 @@
 package l2open.gameserver.model.instances;
 
+import l2open.config.ConfigValue;
 import l2open.extensions.scripts.Events;
 import l2open.gameserver.ai.CtrlIntention;
 import l2open.gameserver.model.L2Character;
@@ -80,7 +81,7 @@ public class L2StaticObjectInstance extends L2NpcInstance
 		}
 
 		if(_type == 0) // Arena Board
-			player.sendPacket(new NpcHtmlMessage(player, this, "/data/html/newspaper/arena.htm", 0));
+			player.sendPacket(new NpcHtmlMessage(player, this, ConfigValue.DatapackRoot + "/data/html/newspaper/arena.htm", 0));
 		else if(_type == 2) // Village map
 		{
 			player.sendPacket(new ShowTownMap(_filePath, _mapX, _mapY));

@@ -1,5 +1,6 @@
 package l2open.gameserver.model.instances;
 
+import l2open.config.ConfigValue;
 import l2open.extensions.multilang.CustomMessage;
 import l2open.extensions.scripts.Functions;
 import l2open.gameserver.instancemanager.ServerVariables;
@@ -37,12 +38,12 @@ public class L2LogisticsOfficerInstance extends L2NpcInstance
 			String filename;
 			if(getAvailableItemsCount(player) > 0)
 			{
-				filename = "/data/html/fortress/LogisticsOfficer-3.htm";
+				filename = ConfigValue.DatapackRoot + "/data/html/fortress/LogisticsOfficer-3.htm";
 				Functions.addItem(player, ITEM_ID, getAvailableItemsCount(player));
 				ServerVariables.set("ReciveBloodOath_" + player.getClan().getClanId(), (System.currentTimeMillis() / 1000));
 			}
 			else
-				filename = "/data/html/fortress/LogisticsOfficer-4.htm";
+				filename = ConfigValue.DatapackRoot + "/data/html/fortress/LogisticsOfficer-4.htm";
 
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile(filename);
@@ -62,13 +63,13 @@ public class L2LogisticsOfficerInstance extends L2NpcInstance
 
 		player.sendActionFailed();
 
-		String filename = "/data/html/fortress/LogisticsOfficer-no.htm";
+		String filename = ConfigValue.DatapackRoot + "/data/html/fortress/LogisticsOfficer-no.htm";
 
 		if(player.isClanLeader() && getFortress().getOwnerId() == player.getClanId())
 			if(val == 0)
-				filename = "/data/html/fortress/LogisticsOfficer.htm";
+				filename = ConfigValue.DatapackRoot + "/data/html/fortress/LogisticsOfficer.htm";
 			else
-				filename = "/data/html/fortress/LogisticsOfficer-" + val + ".htm";
+				filename = ConfigValue.DatapackRoot + "/data/html/fortress/LogisticsOfficer-" + val + ".htm";
 
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		html.setFile(filename);

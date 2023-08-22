@@ -13,15 +13,12 @@ import l2open.gameserver.listener.actor.player.OnPlayerPartyLeaveListener;
 import l2open.gameserver.model.L2ObjectsStorage;
 import l2open.gameserver.model.L2Party;
 import l2open.gameserver.model.L2Player;
-import l2open.gameserver.model.base.ClassType2;
 import l2open.gameserver.model.items.L2ItemInstance;
 import l2open.gameserver.network.L2GameClient;
 import l2open.gameserver.serverpackets.NpcHtmlMessage;
 import l2open.gameserver.serverpackets.Say2;
 import l2open.gameserver.serverpackets.TutorialShowHtml;
 import l2open.gameserver.tables.SkillTable;
-import l2open.gameserver.templates.L2Weapon;
-import l2open.gameserver.xml.ItemTemplates;
 import l2open.util.Files;
 import l2open.util.Strings;
 
@@ -116,6 +113,8 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerExitLis
             showCreateDialog(player);
         } else if (command.startsWith("showGroups")) {
             showGroups(player);
+        } else if (command.startsWith("deleteGroup")) {
+            deleteGroup(player);
         } else if (command.startsWith("createGroup")) {
             final String[] params = command.split(" ");
             try {
@@ -144,6 +143,9 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerExitLis
         } else if (command.startsWith("playerInfo")) {
             final String[] params = command.split(" ");
             playerInfo(player, params[1]);
+        }else if (command.startsWith("detailPlayerInfo")) {
+            final String[] params = command.split(" ");
+            playerInfoDetail(player, params[1]);
         } else if (command.startsWith("announce")) {
             groupAnons(player);
         } else if (command.startsWith("acceptToParty")) {
@@ -156,6 +158,17 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerExitLis
             myGroup(player);
         } else if (command.startsWith("deletePlayer")) {
             System.out.println("delete player");
+        }
+    }
+
+    public Map<Integer, PartyMakerGroup> getPartyMakerGroupMap() {
+        return partyMakerGroupMap;
+    }
+
+    private void deleteGroup(L2Player player) {
+        final PartyMakerGroup group = partyMakerGroupMap.get(player.getObjectId());
+        if (group != null && group.getLeader().getObjectId() == player.getObjectId()){
+            partyMakerGroupMap.remove(player.getObjectId());
         }
     }
 
@@ -180,7 +193,7 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerExitLis
             if (party != null) {
                 final L2Player candidate = L2ObjectsStorage.getPlayer(Integer.parseInt(playerId));
                 if (candidate != null) {
-                    party.addPartyMember(candidate);
+                    candidate.joinParty(party);
                     partyMakerGroup.getCandidates().remove(candidate);
                     myGroup(player);
                 }
@@ -189,7 +202,7 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerExitLis
                 player.setParty(l2Party);
                 final L2Player candidate = L2ObjectsStorage.getPlayer(Integer.parseInt(playerId));
                 if (candidate != null) {
-                    l2Party.addPartyMember(candidate);
+                    candidate.joinParty(l2Party);
                     partyMakerGroup.getCandidates().remove(candidate);
                     myGroup(player);
                 }
@@ -198,22 +211,19 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerExitLis
 
     }
 
-    private void playerInfo(L2Player player, String playerId) {
-
+    private void Info(L2Player player, String playerId, String file) {
         final L2Player playerInfo = L2ObjectsStorage.getPlayer(Integer.parseInt(playerId));
-
         if (playerInfo != null) {
             L2ItemInstance weapon = playerInfo.getActiveWeaponInstance();
             final L2ItemInstance armor = playerInfo.getInventory().getPaperdollItem(10);
-
-            final String page = Files.read("data/scripts/services/PartyMakerUtil/player-info.htm", player).
+            final String page = Files.read(file, player).
                     replace("<?playerName?>", playerInfo.getName()).
                     replace("<?playerClassIcon?>", getMemberIcon(playerInfo)).
                     replace("<?playerClass?>", playerInfo.getClassId().name().toUpperCase()).
                     replace("<?playerlevel?>", String.valueOf(playerInfo.getLevel())).
                     replace("<?WeaponIcon?>", weapon != null ? playerInfo.getActiveWeaponItem().getIcon() : "icon.NOICON").
                     replace("<?WeaponEnchant?>", weapon != null ? String.valueOf(weapon.getEnchantLevel()) : "0").
-                    replace("<?AttIcon?>", weapon != null ? "icon.NOICON" : "icon.NOICON").
+                    replace("<?AttIcon?>", "icon.skill11011").
                     replace("<?WeaponAtt?>", weapon != null ? String.valueOf(weapon.getAttackElementValue()) : "0").
                     replace("<?ArmorIcon?>", armor != null ? armor.getItem().getIcon() : "icon.NOICON").
                     replace("<?FreyaIcon?>", freya.icon).
@@ -227,12 +237,17 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerExitLis
                     replace("<?KamalokaIcon?>", Kamaloka.icon).
                     replace("<?Kamaloka?>", checkInstance(playerInfo, 57, 58, 60, 61, 63, 64, 66, 67, 69, 70, 72) ? new Font(Color.RED, "Откат").build() : new Font(Color.GOLD, "Доступно").build()).
                     replace("<?LabyrinthIcon?>", Labyrinth.icon).
-                    replace("<?Labyrinth?>", checkInstance(playerInfo, 73, 74, 75, 76, 77, 78, 79, 134) ? new Font(Color.RED, "Откат").build() : new Font(Color.GOLD, "Доступно").build());
+                    replace("<?Labyrinth?>", checkInstance(playerInfo, 73, 74, 75, 76, 77, 78, 79, 134) ? new Font(Color.RED, "Откат").build() : new Font(Color.GOLD, "Доступно").build()).
+                    replace("<?info?>", new Button("Больше", action(bypass + "detailPlayerInfo " + player.getObjectId()), 50, 32).build());
             myGroup(player);
             player.sendPacket(new TutorialShowHtml("<html><body>" + page + " </body></html>"));
-
-            //  sendDialog(player, page);
         }
+    }
+    public void playerInfoDetail(L2Player player, String playerId) {
+        Info(player, playerId, "data/scripts/services/PartyMakerUtil/player-info-detail.htm");
+    }
+    public void playerInfo(L2Player player, String playerId) {
+        Info(player, playerId, "data/scripts/services/PartyMakerUtil/player-info.htm");
     }
 
     public static boolean checkInstance(L2Player player, int... ids) {
@@ -251,7 +266,9 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerExitLis
             if (party != null) {
                 final L2Player playerByName = party.getPlayerByName(member);
                 if (playerByName != null) {
-                    party.oustPartyMember(playerByName);
+                    if (playerByName.getParty() != null){
+                        playerByName.leaveParty();
+                    }
                 }
             }
             myGroup(player);
@@ -401,7 +418,7 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerExitLis
                 .replace("<?description?>", description)
                 .replace("<?leader?>", group.getLeader().getName())
                 .replace("<?button?>", actions)
-                .replace("<?partyCount?>", player.getParty() == null ? "1/9" : player.getParty().getMemberCount() + "/9");
+                .replace("<?partyCount?>", player.getParty() == null ? "1/9" : group.getLeader().getParty().getMemberCount() + "/9");
     }
 
     public static boolean checkInstanceFromGroups(L2Player player, PartyMakerGroup group){
@@ -432,13 +449,13 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerExitLis
 
 
     public void showGroups(L2Player player) {
-        for (Map.Entry<Integer, PartyMakerGroup> group : partyMakerGroupMap.entrySet()) {
-            final L2Party party = group.getValue().getLeader().getParty();
-            if (party != null && party.getPartyMembers().contains(player)) {
-                myGroup(player);
-                return;
-            }
-        }
+//        for (Map.Entry<Integer, PartyMakerGroup> group : partyMakerGroupMap.entrySet()) {
+//            final L2Party party = group.getValue().getLeader().getParty();
+//            if (party != null && party.getPartyMembers().contains(player)) {
+//                myGroup(player);
+//                return;
+//            }
+//        }
 
         String groups = "";
         for (Map.Entry<Integer, PartyMakerGroup> group : partyMakerGroupMap.entrySet()) {

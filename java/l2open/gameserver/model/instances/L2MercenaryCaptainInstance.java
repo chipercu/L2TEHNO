@@ -21,8 +21,8 @@ public class L2MercenaryCaptainInstance extends L2NpcInstance
 	public String getHtmlPath(int npcId, int val)
 	{
 		if(val == 0)
-			return "/data/html/MercenaryCaptain/MercenaryCaptain.htm";
-		return "/data/html/MercenaryCaptain/MercenaryCaptain-" + val + ".htm";
+			return "./data/html/MercenaryCaptain/MercenaryCaptain.htm";
+		return "./data/html/MercenaryCaptain/MercenaryCaptain-" + val + ".htm";
 	}
 
 	@Override
@@ -115,9 +115,9 @@ public class L2MercenaryCaptainInstance extends L2NpcInstance
 			val = 10;
 		String str = "";
 		if(val == 0)
-			str = "/data/html/MercenaryCaptain/MercenaryCaptain.htm";
+			str = "./data/html/MercenaryCaptain/MercenaryCaptain.htm";
 		else
-			str = "/data/html/MercenaryCaptain/MercenaryCaptain-" + val + ".htm";
+			str = "./data/html/MercenaryCaptain/MercenaryCaptain-" + val + ".htm";
 		player.sendPacket(new NpcHtmlMessage(player, this, str, val));
 	}
 }

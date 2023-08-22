@@ -1,5 +1,6 @@
 package l2open.gameserver.model.instances;
 
+import l2open.config.ConfigValue;
 import l2open.extensions.multilang.CustomMessage;
 import l2open.gameserver.model.L2Clan;
 import l2open.gameserver.model.L2Player;
@@ -76,7 +77,7 @@ public class L2ClanHallDoormenInstance extends L2NpcInstance
 	@Override
 	public void showChatWindow(L2Player player, int val)
 	{
-		String filename = "/data/html/doormen/clanhall/doormen-no.htm";
+		String filename = ConfigValue.DatapackRoot + "/data/html/doormen/clanhall/doormen-no.htm";
 		int condition = validateCondition(player);
 		if(condition == Cond_Owner) // Clan owns CH
 			switch(getClanHall().getId())

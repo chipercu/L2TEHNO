@@ -1,5 +1,6 @@
 package l2open.gameserver.model.instances;
 
+import l2open.config.ConfigValue;
 import l2open.gameserver.TradeController.NpcTradeList;
 import l2open.gameserver.ai.CtrlIntention;
 import l2open.gameserver.cache.Msg;
@@ -154,13 +155,13 @@ public class L2ManorManagerInstance extends L2MerchantInstance
 
 	public String getHtmlPath()
 	{
-		return "/data/html/manormanager/";
+		return ConfigValue.DatapackRoot + "/data/html/manormanager/";
 	}
 
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		return "/data/html/manormanager/manager.htm"; // Used only in parent method
+		return ConfigValue.DatapackRoot + "/data/html/manormanager/manager.htm"; // Used only in parent method
 		// to return from "Territory status"
 		// to initial screen.
 	}

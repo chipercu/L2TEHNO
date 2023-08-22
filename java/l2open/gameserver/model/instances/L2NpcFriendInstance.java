@@ -80,7 +80,7 @@ public final class L2NpcFriendInstance extends L2MerchantInstance
 
 		if(getNpcId() >= 31370 && getNpcId() <= 31376 && player.getVarka() > 0 || getNpcId() >= 31377 && getNpcId() < 31384 && player.getKetra() > 0)
 		{
-			filename = "/data/html/npc_friend/" + getNpcId() + "-nofriend.htm";
+			filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-nofriend.htm";
 			showChatWindow(player, filename);
 			return;
 		}
@@ -95,77 +95,77 @@ public final class L2NpcFriendInstance extends L2MerchantInstance
 			case 31380:
 			case 31553:
 			case 31554:
-				filename = "/data/html/npc_friend/" + getNpcId() + ".htm";
+				filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + ".htm";
 				break;
 			case 31372:
 				if(player.getKetra() > 2)
-					filename = "/data/html/npc_friend/" + getNpcId() + "-bufflist.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-bufflist.htm";
 				else
-					filename = "/data/html/npc_friend/" + getNpcId() + ".htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + ".htm";
 				break;
 			case 31379:
 				if(player.getVarka() > 2)
-					filename = "/data/html/npc_friend/" + getNpcId() + "-bufflist.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-bufflist.htm";
 				else
-					filename = "/data/html/npc_friend/" + getNpcId() + ".htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + ".htm";
 				break;
 			case 31374:
 				if(player.getKetra() > 1)
-					filename = "/data/html/npc_friend/" + getNpcId() + "-warehouse.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-warehouse.htm";
 				else
-					filename = "/data/html/npc_friend/" + getNpcId() + ".htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + ".htm";
 				break;
 			case 31381:
 				if(player.getVarka() > 1)
-					filename = "/data/html/npc_friend/" + getNpcId() + "-warehouse.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-warehouse.htm";
 				else
-					filename = "/data/html/npc_friend/" + getNpcId() + ".htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + ".htm";
 				break;
 			case 31375:
 				if(player.getKetra() == 3 || player.getKetra() == 4)
-					filename = "/data/html/npc_friend/" + getNpcId() + "-special1.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-special1.htm";
 				else if(player.getKetra() == 5)
-					filename = "/data/html/npc_friend/" + getNpcId() + "-special2.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-special2.htm";
 				else
-					filename = "/data/html/npc_friend/" + getNpcId() + ".htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + ".htm";
 				break;
 			case 31382:
 				if(player.getVarka() == 3 || player.getVarka() == 4)
-					filename = "/data/html/npc_friend/" + getNpcId() + "-special1.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-special1.htm";
 				else if(player.getVarka() == 5)
-					filename = "/data/html/npc_friend/" + getNpcId() + "-special2.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-special2.htm";
 				else
-					filename = "/data/html/npc_friend/" + getNpcId() + ".htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + ".htm";
 				break;
 			case 31376:
 				if(player.getKetra() == 4)
-					filename = "/data/html/npc_friend/" + getNpcId() + "-normal.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-normal.htm";
 				else if(player.getKetra() == 5)
-					filename = "/data/html/npc_friend/" + getNpcId() + "-special.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-special.htm";
 				else
-					filename = "/data/html/npc_friend/" + getNpcId() + ".htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + ".htm";
 				break;
 			case 31383:
 				if(player.getVarka() == 4)
-					filename = "/data/html/npc_friend/" + getNpcId() + "-normal.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-normal.htm";
 				else if(player.getVarka() == 5)
-					filename = "/data/html/npc_friend/" + getNpcId() + "-special.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-special.htm";
 				else
-					filename = "/data/html/npc_friend/" + getNpcId() + ".htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + ".htm";
 				break;
 			case 31555:
 				if(player.getRam() == 1)
-					filename = "/data/html/npc_friend/" + getNpcId() + "-special1.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-special1.htm";
 				else if(player.getRam() == 2)
-					filename = "/data/html/npc_friend/" + getNpcId() + "-special2.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-special2.htm";
 				else
-					filename = "/data/html/npc_friend/" + getNpcId() + ".htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + ".htm";
 				break;
 			case 31556:
 				if(player.getRam() == 2)
-					filename = "/data/html/npc_friend/" + getNpcId() + "-bufflist.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-bufflist.htm";
 				else
-					filename = "/data/html/npc_friend/" + getNpcId() + ".htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + ".htm";
 		}
 
 		showChatWindow(player, filename);
@@ -255,13 +255,13 @@ public final class L2NpcFriendInstance extends L2MerchantInstance
 				player.doCast(SkillTable.getInstance().getInfo(skill, level), player, true);
 			}
 			else
-				showChatWindow(player, "/data/html/npc_friend/" + getNpcId() + "-havenotitems.htm");
+				showChatWindow(player, ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-havenotitems.htm");
 		}
 		else if(command.startsWith("Chat"))
 		{
 			int val = Integer.parseInt(command.substring(5));
 			String fname = "";
-			fname = "/data/html/npc_friend/" + getNpcId() + "-" + val + ".htm";
+			fname = ConfigValue.DatapackRoot + "/data/html/npc_friend/" + getNpcId() + "-" + val + ".htm";
 			if(!fname.equals(""))
 				showChatWindow(player, fname);
 		}

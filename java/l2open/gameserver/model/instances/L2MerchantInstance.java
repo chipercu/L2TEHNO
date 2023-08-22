@@ -41,27 +41,27 @@ public class L2MerchantInstance extends L2NpcInstance
 		else
 			pom = npcId + "-" + val;
 
-		String temp = "/data/html/merchant/" + pom + ".htm";
+		String temp = "./data/html/merchant/" + pom + ".htm";
 		File mainText = new File(temp);
 		if(mainText.exists())
 			return temp;
 
-		temp = "/data/html/teleporter/" + pom + ".htm";
+		temp = "./data/html/teleporter/" + pom + ".htm";
 		mainText = new File(temp);
 		if(mainText.exists())
 			return temp;
 
-		temp = "/data/html/petmanager/" + pom + ".htm";
+		temp = "./data/html/petmanager/" + pom + ".htm";
 		mainText = new File(temp);
 		if(mainText.exists())
 			return temp;
 
-		temp = "/data/html/default/" + pom + ".htm";
+		temp = "./data/html/default/" + pom + ".htm";
 		mainText = new File(temp);
 		if(mainText.exists())
 			return temp;
 
-		return "/data/html/teleporter/" + pom + ".htm";
+		return "./data/html/teleporter/" + pom + ".htm";
 	}
 
 	private void showWearWindow(L2Player player, int val)

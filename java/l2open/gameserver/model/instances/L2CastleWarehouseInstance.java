@@ -151,9 +151,9 @@ public class L2CastleWarehouseInstance extends L2NpcInstance
 		{
 			String filename;
 			if(!player.isClanLeader())
-				filename = "/data/html/castle/warehouse/castlewarehouse-notcl.htm";
+				filename = "./data/html/castle/warehouse/castlewarehouse-notcl.htm";
 			else
-				filename = "/data/html/castle/warehouse/castlewarehouse-5.htm";
+				filename = "./data/html/castle/warehouse/castlewarehouse-5.htm";
 
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile(filename);
@@ -166,7 +166,7 @@ public class L2CastleWarehouseInstance extends L2NpcInstance
 		{
 			if(!player.isClanLeader())
 			{
-				String filename = "/data/html/castle/warehouse/castlewarehouse-notcl.htm";
+				String filename = "./data/html/castle/warehouse/castlewarehouse-notcl.htm";
 				NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 				html.setFile(filename);
 				html.replace("%objectId%", String.valueOf(getObjectId()));
@@ -185,15 +185,15 @@ public class L2CastleWarehouseInstance extends L2NpcInstance
 		{
 			String filename;
 			if(!player.isClanLeader())
-				filename = "/data/html/castle/warehouse/castlewarehouse-notcl.htm";
+				filename = "./data/html/castle/warehouse/castlewarehouse-notcl.htm";
 			else if(getAvailableItemsCount(player) > 0)
 			{
-				filename = "/data/html/castle/warehouse/castlewarehouse-3.htm";
+				filename = "./data/html/castle/warehouse/castlewarehouse-3.htm";
 				Functions.addItem(player, ITEM_BLOOD_ALLI, getAvailableItemsCount(player));
 				ServerVariables.set("ReciveBloodAlli_" + player.getClan().getClanId(), (int) (System.currentTimeMillis() / 1000));
 			}
 			else
-				filename = "/data/html/castle/warehouse/castlewarehouse-4.htm";
+				filename = "./data/html/castle/warehouse/castlewarehouse-4.htm";
 
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile(filename);
@@ -222,17 +222,17 @@ public class L2CastleWarehouseInstance extends L2NpcInstance
 	public void showChatWindow(L2Player player, int val)
 	{
 		player.sendActionFailed();
-		String filename = "/data/html/castle/warehouse/castlewarehouse-no.htm";
+		String filename = "./data/html/castle/warehouse/castlewarehouse-no.htm";
 
 		int condition = validateCondition(player);
 		if(condition > COND_ALL_FALSE)
 			if(condition == COND_BUSY_BECAUSE_OF_SIEGE)
-				filename = "/data/html/castle/warehouse/castlewarehouse-busy.htm"; // Busy because of siege
+				filename = "./data/html/castle/warehouse/castlewarehouse-busy.htm"; // Busy because of siege
 			else if(condition == COND_OWNER)
 				if(val == 0)
-					filename = "/data/html/castle/warehouse/castlewarehouse.htm";
+					filename = "./data/html/castle/warehouse/castlewarehouse.htm";
 				else
-					filename = "/data/html/castle/warehouse/castlewarehouse-" + val + ".htm";
+					filename = "./data/html/castle/warehouse/castlewarehouse-" + val + ".htm";
 
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		html.setFile(filename);

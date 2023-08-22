@@ -3,6 +3,8 @@ package l2open.gameserver.model;
 import l2open.common.ThreadPoolManager;
 import l2open.config.ConfigValue;
 import l2open.gameserver.cache.Msg;
+import l2open.gameserver.communitybbs.PartyMaker.PartyMaker;
+import l2open.gameserver.communitybbs.PartyMaker.PartyMakerGroup;
 import l2open.gameserver.instancemanager.PartyRoomManager;
 import l2open.gameserver.model.L2ObjectTasks.SoulConsumeTask;
 import l2open.gameserver.model.base.Experience;
@@ -497,6 +499,14 @@ public class L2Party
 			int idx = _members.indexOf(new_leader);
 			_members.set(0, new_leader);
 			_members.set(idx, current_leader);
+			final Map<Integer, PartyMakerGroup> partyMakerGroupMap = PartyMaker.getInstance().getPartyMakerGroupMap();
+			if (partyMakerGroupMap.containsKey(current_leader.getObjectId())){
+				final PartyMakerGroup group = PartyMaker.getInstance().getPartyMakerGroupMap().get(current_leader.getObjectId());
+				PartyMaker.getInstance().getPartyMakerGroupMap()
+						.put(new_leader.getObjectId(), new PartyMakerGroup(group.getMinLevel(), group.getMaxLevel(), new_leader, group.getDescription(), group.getInstance()));
+				PartyMaker.getInstance().myGroup(new_leader);
+				PartyMaker.getInstance().getPartyMakerGroupMap().remove(current_leader.getObjectId());
+			}
 		}
 		updateLeaderInfo();
 
@@ -677,7 +687,7 @@ public class L2Party
 
 	/**
 	 * distribute adena to party members
-	 * @param adena инстанс адены для распределения
+	 * @param item инстанс адены для распределения
 	 */
 	public void distributeAdena(L2ItemInstance item, L2Player player)
 	{

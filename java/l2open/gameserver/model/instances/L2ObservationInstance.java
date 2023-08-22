@@ -1,5 +1,6 @@
 package l2open.gameserver.model.instances;
 
+import l2open.config.ConfigValue;
 import l2open.gameserver.cache.Msg;
 import l2open.gameserver.instancemanager.ZoneManager;
 import l2open.gameserver.model.L2Player;
@@ -52,7 +53,7 @@ public final class L2ObservationInstance extends L2NpcInstance
 		else
 			pom = npcId + "-" + val;
 
-		return "/data/html/observation/" + pom + ".htm";
+		return ConfigValue.DatapackRoot + "/data/html/observation/" + pom + ".htm";
 	}
 
 	private void doObserve(L2Player player, String val)

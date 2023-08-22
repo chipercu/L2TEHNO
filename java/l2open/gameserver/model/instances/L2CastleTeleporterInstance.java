@@ -1,6 +1,7 @@
 package l2open.gameserver.model.instances;
 
 import l2open.common.ThreadPoolManager;
+import l2open.config.ConfigValue;
 import l2open.extensions.scripts.Functions;
 import l2open.gameserver.geodata.GeoEngine;
 import l2open.gameserver.instancemanager.SiegeManager;
@@ -70,7 +71,7 @@ public final class L2CastleTeleporterInstance extends L2NpcInstance
 				_massGkTask = new MassGKTask(this, x, y, z, rnd, radius, text);
 				ThreadPoolManager.getInstance().schedule(_massGkTask, delay);
 			}
-			showChatWindow(player, "/data/html/teleporter/massGK-Teleported.htm"); // выдать html-ку с ответом
+			showChatWindow(player, ConfigValue.DatapackRoot + "/data/html/teleporter/massGK-Teleported.htm"); // выдать html-ку с ответом
 		}
 	}
 
@@ -83,7 +84,7 @@ public final class L2CastleTeleporterInstance extends L2NpcInstance
 		else
 			pom = npcId + "-" + val;
 
-		return "/data/html/teleporter/" + pom + ".htm";
+		return ConfigValue.DatapackRoot + "/data/html/teleporter/" + pom + ".htm";
 	}
 
 	@Override
@@ -93,18 +94,18 @@ public final class L2CastleTeleporterInstance extends L2NpcInstance
 		int cond = validateCondition(player);
 
 		if(_massGkTask != null)
-			filename = "/data/html/teleporter/massGK-Teleported.htm";
+			filename = ConfigValue.DatapackRoot + "/data/html/teleporter/massGK-Teleported.htm";
 		else if(cond == Cond_Castle_Owner || cond == Cond_Castle_Defender)
 		{
 			/*if(getNpcId() == 35502 || getNpcId() == 35547 || getNpcId() == 35095 || getNpcId() == 35137 || getNpcId() == 35179 || getNpcId() == 35221 || getNpcId() == 35266 || getNpcId() == 35311 || getNpcId() == 35355)
 			{
-				filename = "/data/html/teleporter/" + getNpcId() + ".htm"; // Teleport message window
+				filename = ConfigValue.DatapackRoot + "/data/html/teleporter/" + getNpcId() + ".htm"; // Teleport message window
 			}
 			else*/
-				filename = "/data/html/teleporter/" + getNpcId() + ".htm"; // Teleport message window
+				filename = ConfigValue.DatapackRoot + "/data/html/teleporter/" + getNpcId() + ".htm"; // Teleport message window
 		}
 		else
-			filename = "/data/html/teleporter/castleteleporter-no.htm"; // "Go out!"
+			filename = ConfigValue.DatapackRoot + "/data/html/teleporter/castleteleporter-no.htm"; // "Go out!"
 
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}

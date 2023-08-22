@@ -54,22 +54,22 @@ public final class L2MercManagerInstance extends L2MerchantInstance
 	@Override
 	public void showChatWindow(L2Player player, int val)
 	{
-		String filename = "/data/html/castle/mercmanager/mercmanager-no.htm";
+		String filename = "./data/html/castle/mercmanager/mercmanager-no.htm";
 		int condition = validateCondition(player);
 		if(condition == COND_BUSY_BECAUSE_OF_SIEGE)
-			filename = "/data/html/castle/mercmanager/mercmanager-busy.htm"; // Busy because of siege
+			filename = "./data/html/castle/mercmanager/mercmanager-busy.htm"; // Busy because of siege
 		else if(condition == COND_OWNER)
 			if(SevenSigns.getInstance().getCurrentPeriod() == SevenSigns.PERIOD_SEAL_VALIDATION)
 			{
 				if(SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE) == SevenSigns.CABAL_DAWN)
-					filename = "/data/html/castle/mercmanager/mercmanager_dawn.htm";
+					filename = "./data/html/castle/mercmanager/mercmanager_dawn.htm";
 				else if(SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE) == SevenSigns.CABAL_DUSK)
-					filename = "/data/html/castle/mercmanager/mercmanager_dusk.htm";
+					filename = "./data/html/castle/mercmanager/mercmanager_dusk.htm";
 				else
-					filename = "/data/html/castle/mercmanager/mercmanager.htm";
+					filename = "./data/html/castle/mercmanager/mercmanager.htm";
 			}
 			else
-				filename = "/data/html/castle/mercmanager/mercmanager_nohire.htm";
+				filename = "./data/html/castle/mercmanager/mercmanager_nohire.htm";
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 

@@ -51,13 +51,13 @@ public class L2ClanHallManagerInstance extends L2ResidenceManager
 	@Override
 	public void showChatWindow(L2Player player, int val)
 	{
-		String filename = "/data/html/residence/chamberlain-no.htm";
+		String filename = ConfigValue.DatapackRoot + "/data/html/residence/chamberlain-no.htm";
 		int condition = validateCondition(player);
 		if(condition > Cond_All_False)
 			if(condition == Cond_Busy_Because_Of_Siege)
-				filename = "/data/html/residence/chamberlain-busy.htm"; // Busy because of siege
+				filename = ConfigValue.DatapackRoot + "/data/html/residence/chamberlain-busy.htm"; // Busy because of siege
 			else if(condition == Cond_Owner) // Clan owns Residence
-				filename = "/data/html/residence/chamberlain.htm"; // Owner message window
+				filename = ConfigValue.DatapackRoot + "/data/html/residence/chamberlain.htm"; // Owner message window
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 

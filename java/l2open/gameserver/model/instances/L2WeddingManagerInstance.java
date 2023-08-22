@@ -24,7 +24,7 @@ public class L2WeddingManagerInstance extends L2NpcInstance
 	@Override
 	public void showChatWindow(L2Player player, int val)
 	{
-		String filename = "/data/html/wedding/start.htm";
+		String filename = ConfigValue.DatapackRoot + "/data/html/wedding/start.htm";
 		String replace = "";
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		html.setFile(filename);
@@ -40,13 +40,13 @@ public class L2WeddingManagerInstance extends L2NpcInstance
 			return;
 
 		// standard msg
-		String filename = "/data/html/wedding/start.htm";
+		String filename = ConfigValue.DatapackRoot + "/data/html/wedding/start.htm";
 		String replace = "";
 
 		// if player has no partner
 		if(player.getPartnerId() == 0)
 		{
-			filename = "/data/html/wedding/nopartner.htm";
+			filename = ConfigValue.DatapackRoot + "/data/html/wedding/nopartner.htm";
 			sendHtmlMessage(player, filename, replace);
 			return;
 		}
@@ -56,13 +56,13 @@ public class L2WeddingManagerInstance extends L2NpcInstance
 		// partner online ?
 		if(ptarget == null || !ptarget.isOnline())
 		{
-			filename = "/data/html/wedding/notfound.htm";
+			filename = ConfigValue.DatapackRoot + "/data/html/wedding/notfound.htm";
 			sendHtmlMessage(player, filename, replace);
 			return;
 		}
 		else if(player.isMaried()) // already married ?
 		{
-			filename = "/data/html/wedding/already.htm";
+			filename = ConfigValue.DatapackRoot + "/data/html/wedding/already.htm";
 			sendHtmlMessage(player, filename, replace);
 			return;
 		}
@@ -96,7 +96,7 @@ public class L2WeddingManagerInstance extends L2NpcInstance
 
 			Announcements.getInstance().announceToAll("Gratulations, " + player.getName() + " and " + ptarget.getName() + " has married.");
 
-			filename = "/data/html/wedding/accepted.htm";
+			filename = ConfigValue.DatapackRoot + "/data/html/wedding/accepted.htm";
 			replace = ptarget.getName();
 			sendHtmlMessage(ptarget, filename, replace);
 			return;
@@ -106,11 +106,11 @@ public class L2WeddingManagerInstance extends L2NpcInstance
 			// check for formalwear
 			if(ConfigValue.WeddingFormalWear && !isWearingFormalWear(player))
 			{
-				filename = "/data/html/wedding/noformal.htm";
+				filename = ConfigValue.DatapackRoot + "/data/html/wedding/noformal.htm";
 				sendHtmlMessage(player, filename, replace);
 				return;
 			}
-			filename = "/data/html/wedding/ask.htm";
+			filename = ConfigValue.DatapackRoot + "/data/html/wedding/ask.htm";
 			player.setMaryRequest(false);
 			ptarget.setMaryRequest(false);
 			replace = ptarget.getName();
@@ -122,7 +122,7 @@ public class L2WeddingManagerInstance extends L2NpcInstance
 			// check for formalwear
 			if(ConfigValue.WeddingFormalWear && !isWearingFormalWear(player))
 			{
-				filename = "/data/html/wedding/noformal.htm";
+				filename = ConfigValue.DatapackRoot + "/data/html/wedding/noformal.htm";
 				sendHtmlMessage(player, filename, replace);
 				return;
 			}
@@ -136,7 +136,7 @@ public class L2WeddingManagerInstance extends L2NpcInstance
 				player.setMaryAccepted(true);
 				ptarget.setMaryRequest(true);
 				replace = ptarget.getName();
-				filename = "/data/html/wedding/requested.htm";
+				filename = ConfigValue.DatapackRoot + "/data/html/wedding/requested.htm";
 				player.reduceAdena(ConfigValue.WeddingPrice, true);
                 Functions.addItem(player,9140,1); //Свадебный лук
 				sendHtmlMessage(player, filename, replace);
@@ -152,13 +152,13 @@ public class L2WeddingManagerInstance extends L2NpcInstance
 			player.sendMessage("You declined");
 			ptarget.sendMessage("Your partner declined");
 			replace = ptarget.getName();
-			filename = "/data/html/wedding/declined.htm";
+			filename = ConfigValue.DatapackRoot + "/data/html/wedding/declined.htm";
 			sendHtmlMessage(ptarget, filename, replace);
 			return;
 		}
 		else if(player.isMaryAccepted())
 		{
-			filename = "/data/html/wedding/waitforpartner.htm";
+			filename = ConfigValue.DatapackRoot + "/data/html/wedding/waitforpartner.htm";
 			sendHtmlMessage(player, filename, replace);
 			return;
 		}

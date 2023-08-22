@@ -206,7 +206,7 @@ public class DimensionalRiftManager
 	{
 		if(!player.isInParty())
 		{
-			showHtmlFile(player, "/data/html/rift/NoParty.htm", npc);
+			showHtmlFile(player, "./data/html/rift/NoParty.htm", npc);
 			return;
 		}
 
@@ -214,13 +214,13 @@ public class DimensionalRiftManager
 		{
 			if(!player.getParty().isLeader(player))
 			{
-				showHtmlFile(player, "/data/html/rift/NotPartyLeader.htm", npc);
+				showHtmlFile(player, "./data/html/rift/NotPartyLeader.htm", npc);
 				return;
 			}
 
 			if(player.getParty().isInDimensionalRift())
 			{
-				showHtmlFile(player, "/data/html/rift/Cheater.htm", npc);
+				showHtmlFile(player, "./data/html/rift/Cheater.htm", npc);
 
 				if(!player.isGM())
 					_log.warning("Player " + player.getName() + "(" + player.getObjectId() + ") was cheating in dimension rift area!");
@@ -230,14 +230,14 @@ public class DimensionalRiftManager
 
 			if(player.getParty().getMemberCount() < ConfigValue.RiftMinPartySize)
 			{
-				showHtmlFile(player, "/data/html/rift/SmallParty.htm", npc);
+				showHtmlFile(player, "./data/html/rift/SmallParty.htm", npc);
 				return;
 			}
 
 			for(L2Player p : player.getParty().getPartyMembers())
 				if(!checkIfInPeaceZone(p.getLoc()))
 				{
-					showHtmlFile(player, "/data/html/rift/NotInWaitingRoom.htm", npc);
+					showHtmlFile(player, "./data/html/rift/NotInWaitingRoom.htm", npc);
 					return;
 				}
 
@@ -247,7 +247,7 @@ public class DimensionalRiftManager
 				i = p.getInventory().getItemByItemId(DIMENSIONAL_FRAGMENT_ITEM_ID);
 				if(i == null || i.getCount() < getNeededItems(type))
 				{
-					showHtmlFile(player, "/data/html/rift/NoFragments.htm", npc);
+					showHtmlFile(player, "./data/html/rift/NoFragments.htm", npc);
 					return;
 				}
 			}

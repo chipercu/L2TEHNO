@@ -99,17 +99,17 @@ public class L2CastleBlacksmithInstance extends L2NpcInstance
 	private void showMessageWindow(L2Player player, int val)
 	{
 		player.sendActionFailed();
-		String filename = "/data/html/castle/blacksmith/castleblacksmith-no.htm";
+		String filename = "./data/html/castle/blacksmith/castleblacksmith-no.htm";
 
 		int condition = validateCondition(player);
 		if(condition > COND_ALL_FALSE)
 			if(condition == COND_BUSY_BECAUSE_OF_SIEGE)
-				filename = "/data/html/castle/blacksmith/castleblacksmith-busy.htm"; // Busy because of siege
+				filename = "./data/html/castle/blacksmith/castleblacksmith-busy.htm"; // Busy because of siege
 			else if(condition == COND_OWNER)
 				if(val == 0)
-					filename = "/data/html/castle/blacksmith/castleblacksmith.htm";
+					filename = "./data/html/castle/blacksmith/castleblacksmith.htm";
 				else
-					filename = "/data/html/castle/blacksmith/castleblacksmith-" + val + ".htm";
+					filename = "./data/html/castle/blacksmith/castleblacksmith-" + val + ".htm";
 
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		html.setFile(filename);

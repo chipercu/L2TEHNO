@@ -1,5 +1,6 @@
 package l2open.gameserver.model.instances;
 
+import l2open.config.ConfigValue;
 import l2open.gameserver.model.L2Clan;
 import l2open.gameserver.model.L2Player;
 import l2open.gameserver.model.entity.siege.territory.TerritorySiege;
@@ -73,17 +74,17 @@ public class L2CastleCourtInstance extends L2NpcInstance
 	public void showChatWindow(L2Player player, int val)
 	{
 		player.sendActionFailed();
-		String filename = "/data/html/castle/CourtMagician/CourtMagician-no.htm";
+		String filename = "./data/html/castle/CourtMagician/CourtMagician-no.htm";
 
 		int condition = validateCondition(player);
 		if(condition > COND_ALL_FALSE)
 			if(condition == COND_BUSY_BECAUSE_OF_SIEGE)
-				filename = "/data/html/castle/CourtMagician/CourtMagician-busy.htm"; // Busy because of siege
+				filename = "./data/html/castle/CourtMagician/CourtMagician-busy.htm"; // Busy because of siege
 			else if(condition == COND_OWNER)
 				if(val == 0)
-					filename = "/data/html/castle/CourtMagician/CourtMagician.htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/castle/CourtMagician/CourtMagician.htm";
 				else
-					filename = "/data/html/castle/CourtMagician/CourtMagician-" + val + ".htm";
+					filename = ConfigValue.DatapackRoot + "/data/html/castle/CourtMagician/CourtMagician-" + val + ".htm";
 
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		html.setFile(filename);

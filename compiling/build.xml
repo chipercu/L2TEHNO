@@ -246,9 +246,9 @@
 		<copy todir="${build.dist.game}/data" preservelastmodified="true">
 			<fileset dir="../data">
 				<include name="**/*.*"/>
-				<!--<exclude name="**/*.xml"/>-->
-				<!--<exclude name="**/*.htm"/>-->
-				<!--<exclude name="**/*.html"/>-->
+				<exclude name="**/*.xml"/>
+				<exclude name="**/*.htm"/>
+				<exclude name="**/*.html"/>
 				<exclude name="scripts/**/*.java"/>
 			</fileset>
 		</copy>

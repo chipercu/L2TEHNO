@@ -23,11 +23,11 @@ public class L2FortEnvoyInstance extends L2NpcInstance
 	@Override
 	public void showChatWindow(L2Player player, int val)
 	{
-		String filename = "/data/html/fortress/envoy-no.htm";
+		String filename = "./data/html/fortress/envoy-no.htm";
 		if(!player.isClanLeader() || player.getClan() == null || getFortress().getId() != player.getClan().getHasFortress())
-			filename = "/data/html/fortress/envoy-noclan.htm";
+			filename = "./data/html/fortress/envoy-noclan.htm";
 		else if(getFortress().getFortState() == 0)
-			filename = "/data/html/fortress/envoy.htm";
+			filename = "./data/html/fortress/envoy.htm";
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));

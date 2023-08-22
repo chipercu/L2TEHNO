@@ -97,7 +97,7 @@ public class L2PathfinderInstance extends L2NpcInstance
 			{
 				String filename = command.substring(5).trim();
 				if(filename.length() == 0)
-					showChatWindow(player, "/data/html/npcdefault.htm");
+					showChatWindow(player, "./data/html/npcdefault.htm");
 				else
 					showChatWindow(player, filename);
 			}

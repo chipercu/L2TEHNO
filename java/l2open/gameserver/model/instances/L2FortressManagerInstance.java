@@ -1,5 +1,6 @@
 package l2open.gameserver.model.instances;
 
+import l2open.config.ConfigValue;
 import l2open.gameserver.model.L2Clan;
 import l2open.gameserver.model.L2Player;
 import l2open.gameserver.model.entity.residence.Residence;
@@ -24,13 +25,13 @@ public class L2FortressManagerInstance extends L2ResidenceManager
 	@Override
 	public void showChatWindow(L2Player player, int val)
 	{
-		String filename = "/data/html/fortress/foreman-no.htm";
+		String filename = ConfigValue.DatapackRoot + "/data/html/fortress/foreman-no.htm";
 		int condition = validateCondition(player);
 		if(condition > Cond_All_False)
 			if(condition == Cond_Busy_Because_Of_Siege)
-				filename = "/data/html/fortress/foreman-busy.htm"; // Busy because of siege
+				filename = ConfigValue.DatapackRoot + "/data/html/fortress/foreman-busy.htm"; // Busy because of siege
 			else if(condition == Cond_Owner) // Clan owns Residence
-				filename = "/data/html/fortress/foreman.htm"; // Owner message window
+				filename = ConfigValue.DatapackRoot + "/data/html/fortress/foreman.htm"; // Owner message window
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 

@@ -45,7 +45,7 @@ public class L2FortressDoormenInstance extends L2NpcInstance
 						if(getFortress().getSiege().isInProgress() || TerritorySiege.isInProgress())
 							if(FortressSiegeManager.getGuardDoors(getFortress().getId()).containsKey(id) || FortressSiegeManager.getCommandCenterDoors(getFortress().getId()).contains(id))
 							{
-								player.sendPacket(new NpcHtmlMessage(player, this, "/data/html/doormen/fortress/busy.htm", 0));
+								player.sendPacket(new NpcHtmlMessage(player, this, "./data/html/doormen/fortress/busy.htm", 0));
 								break;
 							}
 						getFortress().openDoor(player, id);
@@ -63,7 +63,7 @@ public class L2FortressDoormenInstance extends L2NpcInstance
 						if(getFortress().getSiege().isInProgress() || TerritorySiege.isInProgress())
 							if(FortressSiegeManager.getGuardDoors(getFortress().getId()).containsKey(id) || FortressSiegeManager.getCommandCenterDoors(getFortress().getId()).contains(id))
 							{
-								player.sendPacket(new NpcHtmlMessage(player, this, "/data/html/doormen/fortress/busy.htm", 0));
+								player.sendPacket(new NpcHtmlMessage(player, this, "./data/html/doormen/fortress/busy.htm", 0));
 								break;
 							}
 						getFortress().closeDoor(player, id);
@@ -77,10 +77,10 @@ public class L2FortressDoormenInstance extends L2NpcInstance
 	@Override
 	public void showChatWindow(L2Player player, int val)
 	{
-		String filename = "/data/html/doormen/fortress/no.htm";
+		String filename = "./data/html/doormen/fortress/no.htm";
 		int condition = validateCondition(player);
 		if(condition == Cond_Fortress_Owner) // Clan owns fortress
-			filename = "/data/html/doormen/fortress/" + getTemplate().npcId + ".htm"; // Owner message window
+			filename = "./data/html/doormen/fortress/" + getTemplate().npcId + ".htm"; // Owner message window
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 

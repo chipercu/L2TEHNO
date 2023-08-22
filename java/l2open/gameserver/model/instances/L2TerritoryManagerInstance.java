@@ -1,5 +1,6 @@
 package l2open.gameserver.model.instances;
 
+import l2open.config.ConfigValue;
 import l2open.extensions.scripts.Functions;
 import l2open.gameserver.instancemanager.CastleManager;
 import l2open.gameserver.model.L2Multisell;
@@ -83,7 +84,7 @@ public class L2TerritoryManagerInstance extends L2NpcInstance
 	public String getHtmlPath(int npcId, int val)
 	{
 		if(val == 0)
-			return "/data/html/TerritoryManager/TerritoryManager.htm";
-		return "/data/html/TerritoryManager/TerritoryManager-" + val + ".htm";
+			return ConfigValue.DatapackRoot + "/data/html/TerritoryManager/TerritoryManager.htm";
+		return ConfigValue.DatapackRoot + "/data/html/TerritoryManager/TerritoryManager-" + val + ".htm";
 	}
 }

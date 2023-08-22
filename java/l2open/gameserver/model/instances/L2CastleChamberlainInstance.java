@@ -156,21 +156,21 @@ public class L2CastleChamberlainInstance extends L2ResidenceManager
 			}
 			String filename = "";
 			if(CastleManorManager.getInstance().isDisabled())
-				filename = "/data/html/npcdefault.htm";
+				filename = ConfigValue.DatapackRoot +  "/data/html/npcdefault.htm";
 			else
 			{
 				int cmd = Integer.parseInt(val);
 				switch(cmd)
 				{
 					case 0:
-						filename = "/data/html/castle/chamberlain/manor/manor.htm";
+						filename = ConfigValue.DatapackRoot + "/data/html/castle/chamberlain/manor/manor.htm";
 						break;
 					// TODO: correct in html's to 1
 					case 4:
-						filename = "/data/html/castle/chamberlain/manor/manor_help00" + st.nextToken() + ".htm";
+						filename = ConfigValue.DatapackRoot + "/data/html/castle/chamberlain/manor/manor_help00" + st.nextToken() + ".htm";
 						break;
 					default:
-						filename = "/data/html/castle/chamberlain/chamberlain-no.htm";
+						filename = ConfigValue.DatapackRoot + "/data/html/castle/chamberlain/chamberlain-no.htm";
 						break;
 				}
 			}
@@ -459,13 +459,13 @@ public class L2CastleChamberlainInstance extends L2ResidenceManager
 	@Override
 	public void showChatWindow(L2Player player, int val)
 	{
-		String filename = "/data/html/castle/chamberlain/chamberlain-notlord.htm";
+		String filename = ConfigValue.DatapackRoot + "/data/html/castle/chamberlain/chamberlain-notlord.htm";
 		int condition = validateCondition(player);
 		if(condition > Cond_All_False)
 			if(condition == Cond_Busy_Because_Of_Siege)
-				filename = "/data/html/castle/chamberlain/chamberlain-busy.htm";
+				filename = ConfigValue.DatapackRoot + "/data/html/castle/chamberlain/chamberlain-busy.htm";
 			else if(condition == Cond_Owner || condition == Cond_Clan_wPrivs) // Clan owns castle
-				filename = "/data/html/castle/chamberlain/chamberlain.htm";
+				filename = ConfigValue.DatapackRoot + "/data/html/castle/chamberlain/chamberlain.htm";
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 
