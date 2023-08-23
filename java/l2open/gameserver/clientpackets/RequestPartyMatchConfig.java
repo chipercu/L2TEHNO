@@ -26,10 +26,11 @@ public class RequestPartyMatchConfig extends L2GameClientPacket {
         L2Player activeChar = getClient().getActiveChar();
         if (activeChar == null)
             return;
-
+        //TODO [FUZZY]
         if (ConfigValue.AltPartyMaker) {
             PartyMaker.getInstance().showGroups(activeChar);
         } else {
+        //TODO [FUZZY]
             activeChar.setPartyMatchingLevels(_allLevels);
             activeChar.setPartyMatchingRegion(_region);
             PartyRoomManager.getInstance().addToWaitingList(activeChar);

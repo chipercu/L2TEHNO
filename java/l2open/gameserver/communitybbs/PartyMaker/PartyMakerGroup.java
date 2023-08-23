@@ -44,6 +44,9 @@ public class PartyMakerGroup {
         return null;
     }
 
+    public boolean containCandidate(L2Player player){
+       return candidates.contains(player);
+    }
 
     public void setLeader(L2Player leader) {
         this.leader = leader;

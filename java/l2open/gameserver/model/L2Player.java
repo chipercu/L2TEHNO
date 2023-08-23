@@ -1051,16 +1051,9 @@ public class L2Player extends L2Playable {
 
     public void processQuestEvent(String quest, String event, L2NpcInstance npc) {
 
-
-
         if (event == null)
             event = "";
         QuestState qs = getQuestState(quest);
-
-        if (event.startsWith("party_maker:detailPlayerInfo")){
-            PartyMaker.getInstance().playerInfoDetail(this, event.split(" ")[1]);
-            return;
-        }
         if (qs == null) {
             Quest q = QuestManager.getQuest(quest);
             if (q == null) {
@@ -6559,10 +6552,19 @@ public class L2Player extends L2Playable {
 
     public void scriptAnswer(int answer) {
         if (answer == 1 && !_scriptName.equals("")) {
-            if (_scriptName.equals("call_bbs"))
+            if (_scriptName.equals("call_bbs")){
                 CommunityBoard.getInstance().handleCommands(getNetConnection(), (String) _scriptArgs[0]);
-            else
+                //TODO [FUZZY]
+            } else if (_scriptName.startsWith("PartyMaker")) {
+                if (_scriptName.endsWith("deleteGroup")){
+                    PartyMaker.getInstance().deleteGroup(this);
+                } else if (_scriptName.contains("excludeFromParty")) {
+                    PartyMaker.getInstance().excludeFromParty(this, _scriptName.split(":")[2]);
+                }
+                //TODO [FUZZY]
+            } else{
                 callScripts(_scriptName.split(":")[0], _scriptName.split(":")[1], _scriptArgs);
+            }
         }
         _scriptName = "";
     }

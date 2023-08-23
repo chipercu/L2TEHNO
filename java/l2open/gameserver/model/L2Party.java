@@ -499,14 +499,16 @@ public class L2Party
 			int idx = _members.indexOf(new_leader);
 			_members.set(0, new_leader);
 			_members.set(idx, current_leader);
+			//TODO [FUZZY]
 			final Map<Integer, PartyMakerGroup> partyMakerGroupMap = PartyMaker.getInstance().getPartyMakerGroupMap();
 			if (partyMakerGroupMap.containsKey(current_leader.getObjectId())){
 				final PartyMakerGroup group = PartyMaker.getInstance().getPartyMakerGroupMap().get(current_leader.getObjectId());
 				PartyMaker.getInstance().getPartyMakerGroupMap()
 						.put(new_leader.getObjectId(), new PartyMakerGroup(group.getMinLevel(), group.getMaxLevel(), new_leader, group.getDescription(), group.getInstance()));
-				PartyMaker.getInstance().myGroup(new_leader);
+				PartyMaker.getInstance().showGroup(new_leader);
 				PartyMaker.getInstance().getPartyMakerGroupMap().remove(current_leader.getObjectId());
 			}
+			//TODO [FUZZY]
 		}
 		updateLeaderInfo();
 

@@ -148,11 +148,15 @@ public class RequestBypassToServer extends L2GameClientPacket {
                 CommunityBoard.getInstance().handleCommands(getClient(), bp.bypass.substring(4));
             else if (bp.bypass.equals("come_here") && activeChar.isGM())
                 comeHere(getClient());
-            else if (bp.bypass.startsWith("player_help ")){
+            else if (bp.bypass.startsWith("player_help ")) {
                 playerHelp(activeChar, bp.bypass.substring(12));
-            } else if (bp.bypass.startsWith("party_maker:")) {
+            }
+            //TODO [FUZZY]
+            else if (bp.bypass.startsWith("party_maker:")) {
                 PartyMaker.getInstance().handleCommands(getClient(), bp.bypass.substring(12));
-            } else if (bp.bypass.startsWith("script_")) {
+            }
+            //TODO [FUZZY]
+            else if (bp.bypass.startsWith("script_")) {
                 if (activeChar.getEventMaster() != null && activeChar.getEventMaster().blockNpcBypass())
                     return;
                 String command = bp.bypass.substring(7).trim();
@@ -246,10 +250,11 @@ public class RequestBypassToServer extends L2GameClientPacket {
             } else if (bp.bypass.startsWith("Quest ")) {
                 String p = bp.bypass2.substring(6).trim();
                 int idx = p.indexOf(' ');
-                if (idx < 0)
+                if (idx < 0) {
                     activeChar.processQuestEvent(p, "", npc);
-                else
+                } else {
                     activeChar.processQuestEvent(p.substring(0, idx), p.substring(idx).trim(), npc);
+                }
             } else if (bp.bypass.startsWith("manor_menu_select?")) // manor_menu_select?ask=1&state=-1&time=0
             {
                 L2Object object = activeChar.getTarget();
