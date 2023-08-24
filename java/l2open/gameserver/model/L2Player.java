@@ -6562,6 +6562,8 @@ public class L2Player extends L2Playable {
                     PartyMaker.getInstance().excludeFromParty(this, _scriptName.split(":")[2]);
                 }
                 //TODO [FUZZY]
+            } else if (_scriptName.startsWith("FludProtect")) {
+                this.unblock();
             } else{
                 callScripts(_scriptName.split(":")[0], _scriptName.split(":")[1], _scriptArgs);
             }
