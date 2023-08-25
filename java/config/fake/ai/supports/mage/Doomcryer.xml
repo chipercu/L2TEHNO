@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+	<ClassObject class_id="116" class_name="Doomcryer">
+		<ai_type type="disabler" spawn_type="mage_support" party_type="mage_support" buff_scheme="[mage_support]" />
+		<henna id1="180" id2="171" id3="175"/>
+		<items>
+			<underwear name="[pvp_defence_hp]" />
+			<jewels name="[aq_valakas]" />
+			<sets>
+				<set name="[vorpal_robe]" shield="1"/>
+			</sets>
+			<PhantomWeapons>
+				<weapon id="16012" enchant="10" is_random="false" augment_chance="50" attribute_min="300" attribute_max="300" attribute="fire" is_att_random="false"/>
+			</PhantomWeapons>
+			<PhantomInventoryItems>
+				<item id="5591" count="30"/> <!-- CP 50 -->
+				<item id="5592" count="30"/> <!-- CP 200 -->
+				<item id="8876" count="30"/> <!-- Magic Symbol -->
+				<item id="3031" count="30"/> <!-- Spirit Ore -->
+				<item id="1785" count="30"/> <!-- Soul Ore -->
+			</PhantomInventoryItems>
+		</items>
+		<nuke_skills>
+			<skill id="1245" level="14" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="1"/> <!-- Steal Essence -->
+		</nuke_skills>
+		<rare_nuke_skills>
+			<skill id="927" level="1" /> <!-- Burning Chop -->
+		</rare_nuke_skills>
+		<self_buff_skills>
+			<skill id="1517" level="1" /> <!-- Chant of Combat -->
+			<skill id="1518" level="1" /> <!-- Chant of Critical Attack -->
+			<skill id="1519" level="1" /> <!-- Chant of Blood Awakening -->
+			<skill id="1535" level="1" /> <!-- Chant of Movement -->
+			<skill id="1562" level="1" /> <!-- Chant of Berserker -->
+			<skill id="1362" level="1" is_enchantable="true" is_random="false" ench_max_value="15" ench_route="2"/> <!-- Chant of Spirit -->
+			<skill id="1363" level="1" is_enchantable="true" is_random="false" ench_max_value="15" ench_route="3"/> <!-- Chant of Victory -->
+			<skill id="1391" level="1" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="1"/> <!-- Earth Chant -->
+			<skill id="1461" level="1" is_enchantable="true" is_random="false" ench_max_value="15" ench_route="2"/> <!-- Chant of Protection -->
+		</self_buff_skills>
+		<ultimate_self_buff_skills>
+			<skill id="1540" level="1" /> <!-- Turn to Stone -->
+			<skill id="1532" level="1" /> <!-- Enlightenment -->
+		</ultimate_self_buff_skills>
+		<debuff_skills>
+			<skill id="1097" level="20" /> <!-- Dreaming Spirit -->
+		</debuff_skills>
+		<rare_debuff_skills>
+			<skill id="1092" level="19" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="1"/> <!-- Fear -->
+		</rare_debuff_skills>
+		<passive_skills>
+			<skill id="632" level="6" /> <!-- Emergent Ability - Defence -->
+			<skill id="652" level="1" /> <!-- Knight Ability - Defense -->
+			<skill id="655" level="1" /> <!-- Enchanter Ability - Barrier -->
+			<skill id="1491" level="1" /> <!-- Summoner Ability - Spirit -->
+			<skill id="234" level="41" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="3"/> <!-- Robe Mastery -->
+			<skill id="146" level="45" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="1"/> <!-- Anti Magic -->
+			<skill id="228" level="3" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="1"/> <!-- Fast Spell Casting -->
+			<skill id="328" level="1" is_enchantable="true" is_random="false" ench_max_value="15" ench_route="3"/> <!-- Wisdom -->
+			<skill id="436" level="1" is_enchantable="true" is_random="false" ench_max_value="15" ench_route="1"/> <!-- Divine Lore -->
+		</passive_skills>
+		<resurrect_skills>
+			<skill id="1016" level="2"/> <!-- Resurrection -->
+		</resurrect_skills>
+		<consumble_skills>
+			<skill id="6439" level="1" target="self" cond="MP;50;0"/> <!-- MP Potion, бот использует когда MP меньше 50% один раз -->
+		</consumble_skills>
+	</ClassObject>
+ </list>

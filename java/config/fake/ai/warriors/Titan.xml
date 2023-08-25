@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+	<ClassObject class_id="113" class_name="Titan">
+		<ai_type type="auto_attacker" spawn_type="warrior" party_type="nuker" buff_scheme="[titan]" />
+		<henna id1="169"/>
+		<items>
+			<underwear name="[pvp_defence_cp]" />
+			<jewels name="[aq_valakas]" />
+			<sets>
+				<set name="[elegia_heavy]" shield="-1"/>
+			</sets>
+			<PhantomWeapons>
+				<weapon id="15882" enchant="10" is_random="false" augment_chance="50" attribute_min="300" attribute_max="300" attribute="fire" is_att_random="false"/>
+				<weapon id="15883" enchant="10" is_random="false" augment_chance="50" attribute_min="300" attribute_max="300" attribute="fire" is_att_random="false"/>
+			</PhantomWeapons>
+			<PhantomInventoryItems>
+				<item id="5591" count="30"/> <!-- CP 50 -->
+				<item id="5592" count="30"/> <!-- CP 200 -->
+				<item id="8875" count="30"/> <!-- Battle Symbol -->
+				<item id="3031" count="30"/> <!-- Spirit Ore -->
+				<item id="1785" count="30"/> <!-- Soul Ore -->
+			</PhantomInventoryItems>
+		</items>
+		<nuke_skills>
+			<skill id="995" level="1" /> <!-- Rush Impact -->
+			<skill id="315" level="16" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="7"/>	<!-- Crush of Doom -->
+		</nuke_skills>
+		<rare_nuke_skills>
+			<skill id="362" level="1" is_enchantable="true" is_random="false" ench_max_value="15" ench_route="3"/> <!-- Armor Crush -->
+		</rare_nuke_skills>
+		<self_buff_skills>
+			<skill id="423" level="3" /> <!-- Dark Form -->
+			<skill id="94" level="2" is_enchantable="true" is_random="false" ench_max_value="30" ench_route="2"/> <!-- Rage -->
+		</self_buff_skills>
+		<situation_skills>
+			<skill id="176" level="1" target="self" cond="hp;60;0"/> <!-- Frenzy -->
+		</situation_skills>
+		<ultimate_self_buff_skills>
+			<skill id="917" level="1" /> <!-- Final Secret -->
+		</ultimate_self_buff_skills>
+		<debuff_skills>
+		<skill id="362" level="1" is_enchantable="true" is_random="false" ench_max_value="15" ench_route="3"/> <!-- Armor Crush -->
+		</debuff_skills>
+		<rare_debuff_skills>
+			<!-- Нету -->
+		</rare_debuff_skills>
+		<passive_skills>
+			<skill id="631" level="6" />	<!-- Emergent Ability - Attack -->
+			<skill id="652" level="1" />	<!-- Knight Ability - Defense -->
+			<skill id="655" level="1" />	<!-- Enchanter Ability - Barrier -->
+			<skill id="651" level="1" />	<!-- Warrior Ability - Haste -->
+		</passive_skills>
+		<consumble_skills>
+			<skill id="6439" level="1" cond="MP;50"/> <!-- MP Potion, бот использует когда MP меньше 50% один раз -->
+		</consumble_skills>
+	</ClassObject>
+ </list>
