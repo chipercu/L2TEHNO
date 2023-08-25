@@ -1,0 +1,41 @@
+<html noscrollbar>
+<title>Buff Store</title>
+<body>
+<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="l2ui_ct1.Windows_DF_TooltipBG">
+	<tr>
+		<td valign="top">
+			<table border=0 width=280 align="center" height="350">
+				<tr>
+					<td valign="top" width=10 height=150></td>
+					<td valign="top" width=270 height=150><br>
+						<center><font color="LEVEL">Buff Store</font><br>
+						<font color="00BFFF">Тут вчихляем какой-то унылый текст</font><br1>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width=10 height=40></td>
+					<td valign="top" align="center" width=270 height=40><br>
+						<font color="00BFFF">Title</font>
+						<multiedit var="title" height=15 width=220>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width=10 height=40></td>
+					<td valign="top" align="center" width=270 height=40><br>
+						<font color="00BFFF">Price</font>
+						<edit type=number var="price" height=15 width=160 type=number>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width=10 height=20></td>
+					<td valign="top" align="center" width=270 height=20>
+						<button value="Create Store" action="bypass -h user_buff_store $price : $title" width=150 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+					</td>
+				</tr>
+				
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

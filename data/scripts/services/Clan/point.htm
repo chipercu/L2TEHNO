@@ -1,0 +1,49 @@
+<html>
+<head>
+<body scroll="no">
+<title>Управление кланом</title>
+<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="l2ui_ct1.Windows_DF_TooltipBG">
+	<tr>
+		<td valign="top">
+			<table width=280>
+					<tr>
+						<td valign="top" align="center">
+							<br><font name="hs12">Покупка очков клана</font>
+							<img src="L2UI_CH3.herotower_deco" width=256 height=32><br>
+							<font color="LEVEL">Информация</font>
+						</td>
+					</tr>
+					<tr>
+						<td valign="top" align="left" width=280>
+							<table width=280>
+								<tr>
+									<td valign="top" width=10></td>
+									<td valign="top" align="left" width=270>
+										<font color="009900">Очки клана:</font> <?point?>
+									</td>
+								</tr>
+								<tr>
+									<td valign="top" width=10></td>
+									<td valign="top" align="left" width=270>
+										<font color="009900">Стоимость <?info?>:</font> <?count?> <?item?>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td valign="top">
+							<br><center><edit var="point" width=260 type=number length=7></center>
+						</td>
+					</tr>
+					<tr>
+						<td valign="top">
+							<br><center><button value="Повысить" action="bypass -h scripts_services.Clan.Clan:ask_point $point" width=80 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></center>
+						</td>
+					</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

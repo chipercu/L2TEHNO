@@ -1,0 +1,26 @@
+<html>
+	<body>
+		<br><br><br>
+		<center>Сами пишите сюда текст...</center>
+
+		<br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br>
+		<center>
+			<table border=0 width=225>
+				<tr>
+					<td>
+						<font color=8040FF>Введите пароль:</font>
+					</td>
+					<td>
+						<edit var="pass1" width=120 height=15 length=16/>
+					</td>
+				</tr>
+			</table>
+		</center><br>
+
+		<center>
+			<button width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" action="bypass -h script_services.Password:confirm_pass $pass1" value="Подтвердить">
+			<button width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" action="bypass -h script_services.Password:info_pass" value="Забыл пароль">
+		</center><br>
+	</body>
+</html>

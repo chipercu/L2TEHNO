@@ -1,0 +1,80 @@
+<html noscrollbar>
+<title>Изменение данных</title>
+<body>
+	<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="l2ui_ct1.Windows_DF_TooltipBG">
+		<tr>
+			<td valign="top">
+				<table border=0 width=290 height=230>
+						<tr>
+							<td align="center" valign="top">
+								<table border=0 width=270 height=90>
+									<tr>
+										<td align="center" valign="top">
+											<font color="ff0000">Для того, что бы воспользоватся привязкой персонажа, нужно полностью заполнить регистрационную анкету.<br1>
+											Обратите внимание, что в случае введения не верных данных, Администрация не сможет помочь вам, востановить ваш игровой аккаунт!</font>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td align="center" valign="top">
+								<table border=0 cellpadding=0 cellspacing=0 width=20>
+									<tr>
+										<td>
+											<center><font color="00ff00" name="hs9">Новый e-mail:</font></center>
+											<table border=0 cellpadding=0 cellspacing=0 width=200 height=20>
+												<tr>
+													<td align="center" valign="top" fixwidth=90>
+														<edit var="newmail11" width=100 height=10 />
+													</td>
+													<td>
+														<font color="ffd200" name="hs12">@</font>
+													</td>
+													<td align="center" valign="top" fixwidth=65>
+														<edit var="newmail12" width=75 height=10 />
+													</td>
+												</tr>
+											</table><br>
+											<center><font color="00ff00" name="hs9">Еще раз новый e-mail:</font></center>
+											<table border=0 cellpadding=0 cellspacing=0 width=200 height=20>
+												<tr>
+													<td align="center" valign="top" fixwidth=90>
+														<edit var="newmail21" width=100 height=10 />
+													</td>
+													<td>
+														<font color="ffd200" name="hs12">@</font>
+													</td>
+													<td align="center" valign="top" fixwidth=65>
+														<edit var="newmail22" width=75 height=10 />
+													</td>
+												</tr>
+											</table><br><br><br>
+											<table border=0 cellpadding=0 cellspacing=0 width=200 height=20>
+												<tr>
+													<td align="center" valign="top" fixwidth=90>
+														<center><font color="00ff00" name="hs9">Секретный вопрос:</font></center>
+														<edit var="l2question" width=200 height=10 />
+													</td>
+												</tr>
+											</table><br>
+											<table border=0 cellpadding=0 cellspacing=0 width=200 height=20>
+												<tr>
+													<td align="center" valign="top" fixwidth=90>
+														<center><font color="00ff00" name="hs9">Ответ на секретный вопрос:</font></center>
+														<edit var="l2answer" width=150 height=10 /><br><br><br>
+														<center><button width=130 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" action="bypass -h user_enter_mail $newmail11 : $newmail12 : $newmail21 : $newmail22 : $l2question : $l2answer" value="Сохранить"></center>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
