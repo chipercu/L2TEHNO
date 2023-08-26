@@ -1,5 +1,6 @@
 package l2open.gameserver;
 
+import emudev.KeyChecker;
 import javolution.util.FastMap;
 import l2open.Server;
 import l2open.common.*;
@@ -122,6 +123,10 @@ public class GameServer {
             _log.severe("Could not read object IDs from DB. Please Check Your Data.");
             throw new Exception("Could not initialize the ID factory");
         }
+
+        //TODO[DeadPool]: Emu-Dev Interface section begin
+        KeyChecker.getInstance();
+        //TODO[DeadPool]: Emu-Dev Interface section end
 
         SelectorThread.getStartAntiFlood();
 

@@ -680,8 +680,8 @@ public class CommunityBoardTeleport extends BaseBBSManager implements ICommunity
 		try
 		{
 			File file;
-
-			if (ConfigValue.develop) {
+			boolean develop = Boolean.parseBoolean(System.getenv("DEVELOP"));
+			if (develop) {
 				file = new File("data/xml/teleport_list.xml");
 			} else {
 				file = new File(ConfigValue.DatapackRoot + "/data/xml/teleport_list.xml");

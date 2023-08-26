@@ -11,7 +11,7 @@ import l2open.gameserver.model.L2Zone.ZoneType;
  */
 public class ConfigValue {
 
-	public static final boolean develop = Boolean.parseBoolean(System.getenv("DEVELOP"));
+	public static boolean develop = Boolean.parseBoolean(System.getenv("DEVELOP"));
     public static int GeoWaterZ_Diff = 0;
     public static int GeoTest = 1;
     public static int GeoTestDeltaZ = 512;
@@ -556,6 +556,14 @@ public class ConfigValue {
     public static int AddRndRespHourOfAntharas = 0;
     public static int AddRndRespHourOfBaium = 0;
     public static int AddRndRespHourOfValakas = 0;
+
+    public static int FreyaMinPlayers = 9;
+    public static int FreyaHardMinPlayers = 9;
+    public static int ZakenMinPlayers = 9;
+    public static int ZakenNightMinPlayers = 9;
+    public static int ZakenHardMinPlayers = 9;
+    public static int FrintezzaMinPlayers = 9;
+
 
     /*************************** MonsterAtack.properties ***************************/
     public static int TMWave1Count = 3;
@@ -4083,6 +4091,7 @@ public class ConfigValue {
 
     public static boolean FreyaNeedCommandChanel = true;
     public static boolean FrintezzaNeedCommandChanel = true;
+    public static boolean TiataNeedCommandChanel = true;
     public static boolean EnableRbBlockOverDamage = true;
 
     /************************************** HeadHunter **************************************/

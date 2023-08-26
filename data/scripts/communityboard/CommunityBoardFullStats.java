@@ -1251,13 +1251,13 @@ public class CommunityBoardFullStats extends BaseBBSManager implements ICommunit
 	public void selectOlyStat()
 	{
 		_top_pts = Collections.synchronizedMap(Olympiad._nobles);
-		_top_pts = (LinkedHashMap)ValueSortMap.sortMapByValue(_top_pts, comparator_pts);
+		_top_pts = ValueSortMap.sortMapByValue(_top_pts, comparator_pts);
 	}
 
 	public void selectOlyStat2()
 	{
 		_top_win_rate = Collections.synchronizedMap(Olympiad._nobles);
-		_top_win_rate = (LinkedHashMap)ValueSortMap.sortMapByValue(_top_win_rate, comparator_rate);
+		_top_win_rate = ValueSortMap.sortMapByValue(_top_win_rate, comparator_rate);
 	}
 
 	public void selectEpicBoss()

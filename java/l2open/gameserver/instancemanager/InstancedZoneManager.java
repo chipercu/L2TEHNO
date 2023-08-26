@@ -225,6 +225,34 @@ public class InstancedZoneManager {
                                     attrs = room.getAttributes();
                                     minParty = Integer.parseInt(attrs.getNamedItem("min").getNodeValue());
                                     maxParty = Integer.parseInt(attrs.getNamedItem("max").getNodeValue());
+
+                                    switch (instanceId){
+                                        case 139: {
+                                            minParty = ConfigValue.FreyaMinPlayers;
+                                            break;
+                                        }
+                                        case 144:{
+                                            minParty = ConfigValue.FreyaHardMinPlayers;
+                                            break;
+                                        }
+                                        case 136:{
+                                            minParty = ConfigValue.FrintezzaMinPlayers;
+                                            break;
+                                        }
+                                        case 114:{
+                                            minParty = ConfigValue.ZakenNightMinPlayers;
+                                            break;
+                                        }
+                                        case 133:{
+                                            minParty = ConfigValue.ZakenMinPlayers;
+                                            break;
+                                        }
+                                        case 135:{
+                                            minParty = ConfigValue.ZakenHardMinPlayers;
+                                            break;
+                                        }
+                                    }
+
                                 }
 
                             for (Node room = area.getFirstChild(); room != null; room = room.getNextSibling())

@@ -1,7 +1,5 @@
 package communityboard;
 
-import commands.voiced.Security;
-
 import l2open.config.ConfigValue;
 import l2open.extensions.multilang.CustomMessage;
 import l2open.gameserver.common.DifferentMethods;

@@ -4,6 +4,7 @@ import l2open.config.ConfigValue;
 import l2open.common.ThreadPoolManager;
 import l2open.extensions.network.*;
 import l2open.gameserver.clientpackets.*;
+import l2open.gameserver.clientpackets.Interface.RequestInterfacePackets;
 import l2open.gameserver.model.L2Player;
 import l2open.util.Log;
 import l2open.util.Util;
@@ -3088,6 +3089,9 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 										case 0x0A:
 											// RequestExProceedCancelAgitBid chdd 0x0A
 											break;*/
+										case 0x10:
+											msg = new RequestInterfacePackets();
+											break;
 										default:
 											_log.warning("Unknown Agit packets packet: " + id5);
 											break;

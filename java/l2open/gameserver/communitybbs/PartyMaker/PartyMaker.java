@@ -7,9 +7,11 @@ import l2open.common.Html_Constructor.tags.parameters.Color;
 import l2open.common.Html_Constructor.tags.parameters.Parameters;
 import l2open.extensions.scripts.Functions;
 import l2open.extensions.scripts.ScriptFile;
+import l2open.gameserver.cache.Msg;
 import l2open.gameserver.geodata.GeoEngine;
 import l2open.gameserver.listener.CharListenerList;
 import l2open.gameserver.listener.actor.player.OnPlayerPartyLeaveListener;
+import l2open.gameserver.model.L2Character;
 import l2open.gameserver.model.L2ObjectsStorage;
 import l2open.gameserver.model.L2Party;
 import l2open.gameserver.model.L2Player;
@@ -33,6 +35,7 @@ import java.util.StringTokenizer;
 
 import static l2open.common.Html_Constructor.tags.parameters.Parameters.*;
 import static l2open.gameserver.communitybbs.PartyMaker.PartyMaker.STATUS.*;
+import static l2open.gameserver.model.L2Zone.ZoneType.*;
 
 public class PartyMaker extends Functions implements ScriptFile, OnPlayerPartyLeaveListener {
 
@@ -175,6 +178,11 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerPartyLe
             if (party != null) {
                 final L2Player candidate = L2ObjectsStorage.getPlayer(Integer.parseInt(playerId));
                 if (candidate != null) {
+                    if (checkConditions(candidate)){
+                        sendPrivateMessage(player, candidate.getName() + " не может сейчас вступить в группу" );
+                        showGroups(player);
+                        return;
+                    }
                     partyMakerGroupMap.remove(candidate.getObjectId());
                     candidate.joinParty(party);
                     removeCandidateFromAllGroups(candidate);
@@ -186,6 +194,11 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerPartyLe
                 player.setParty(l2Party);
                 final L2Player candidate = L2ObjectsStorage.getPlayer(Integer.parseInt(playerId));
                 if (candidate != null) {
+                    if (checkConditions(candidate)){
+                        sendPrivateMessage(player, candidate.getName() + " не может сейчас вступить в группу" );
+                        showGroups(player);
+                        return;
+                    }
                     candidate.joinParty(l2Party);
                     partyMakerGroup.getCandidates().remove(candidate);
                     removeCandidateFromAllGroups(candidate);
@@ -284,13 +297,43 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerPartyLe
         showGroups(player);
     }
 
+    public static void sendPrivateMessage(L2Player player, String text){
+        player.sendPacket(new Say2(0, 2, "PARTY_MAKER", text));
+    }
+
+    public static boolean checkConditions(L2Player player)
+    {
+        // "Нельзя вызывать персонажей в/из зоны свободного PvP"
+        // "в зоны осад"
+        // "на Олимпийский стадион"
+        // "в зоны определенных рейд-боссов и эпик-боссов"
+        if(player.isInZone(epic) || player.isInZoneBattle() || player.isInZone(Siege) || player.isInZone(no_restart) || player.isInZone(OlympiadStadia) || player.isFlying() || player.getPlayer().getVar("jailed") != null || player.getPlayer().getDuel() != null)
+            return true;
+        else if((player.getReflection().getId() != 0 || player.getPlayer().getTeam() != 0) && (player.getEventMaster() == null || !player.getEventMaster().siege_event))
+            return true;
+        else if(player.getPrivateStoreType() != L2Player.STORE_PRIVATE_NONE )
+            return true;
+        return false;
+    }
+
+
     public void subscribe(L2Player player, int groupId) {
+
+
         if (player.getVarLong("subscribe", 0L) > System.currentTimeMillis()) {
             showGroups(player);
             return;
         }
-
         final PartyMakerGroup partyMakerGroup = partyMakerGroupMap.get(groupId);
+
+        if (checkConditions(player)){
+            sendPrivateMessage(player, "Вы не можете сейчас оставить заявку на вступление в группу");
+            showGroups(player);
+            return;
+        }
+
+
+
         final Map<Integer, Long> instanceReuses = player.getInstanceReuses();
         if (instanceReuses != null && !instanceReuses.isEmpty()) {
             if (player.getInstanceReuses().containsKey(partyMakerGroup.getInstanceId())) {
@@ -364,6 +407,7 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerPartyLe
     }
 
     public void createGroup(L2Player player, int minLevel, int maxLevel, String instance, String description) {
+
         if (!partyMakerGroupMap.containsKey(player.getObjectId())){
             if (player.getParty() != null){
                 if (player.getParty().isLeader(player)){
@@ -534,6 +578,13 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerPartyLe
     }
 
     public void showCreateDialog(L2Player player) {
+
+        if (checkConditions(player)){
+            sendPrivateMessage(player, "Вы не можете сейчас создать группу");
+            showGroups(player);
+            return;
+        }
+
         final String replace = Files.read("data/scripts/services/PartyMakerUtil/createGroup.htm", player)
                 .replace("<?groups?>", groupTypes);
         sendDialog(player, replace);
