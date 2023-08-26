@@ -158,6 +158,10 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerPartyLe
 
 
     private void groupAnons(L2Player player) {
+        if (player.getVarLong("partyMakerAnnounces", 0L) > System.currentTimeMillis()) {
+            showGroups(player);
+            return;
+        }
         final PartyMakerGroup group = partyMakerGroupMap.get(player.getObjectId());
         if (group != null) {
             for (L2Player p : L2ObjectsStorage.getPlayers()) {
@@ -165,6 +169,7 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerPartyLe
                     p.sendPacket(new Say2(0, 16, "PARTY_MAKER", "Идет сбор группы на "
                             + group.getInstance() + " , ур. " + group.getMinLevel() + "-" + group.getMaxLevel()
                             + ", лидер : " + group.getLeader().getName()));
+                    player.setVar("partyMakerAnnounces", String.valueOf(System.currentTimeMillis() + 30 * 1000));
                 }
             }
         }
@@ -173,6 +178,12 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerPartyLe
 
     private void acceptToParty(L2Player player, String playerId, String groupId) {
         final PartyMakerGroup partyMakerGroup = partyMakerGroupMap.get(Integer.parseInt(groupId));
+        if (checkConditions(player)){
+            sendPrivateMessage(player, "Вы сейчас не можете принимать игроков в группу" );
+            showGroups(player);
+            return;
+        }
+
         if (partyMakerGroup != null) {
             final L2Party party = partyMakerGroup.getLeader().getParty();
             if (party != null) {

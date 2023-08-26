@@ -49,6 +49,7 @@ public class ConfigValue {
     public static int MaxDriftRange = 100;
     public static boolean RndWalk = true;
     public static int MutatedElpyCount = 27;
+    public static boolean BelethNeedCommandChanel = true;
     public static int BelethManagerCount = 36;
     public static long MinAdenaLakfiEat = 10000;
     public static long TimeIfNotFeedDissapear = 10;
@@ -5095,8 +5096,9 @@ public class ConfigValue {
     public static double MCritBaseDamage = 3;
     public static boolean RequestToTeleportInRbSpawn = false;
 
-    public static boolean EnableCustomInterface = false;
+    public static boolean EnableCustomInterface = true;
     public static boolean TiatDisableCommandChanel = false;
+
     public static boolean BreakRealTarget = true;
     public static boolean CanMagicReflectOverDamage = true;
     public static int[] ItemsEnchantAsOlf = {21580, 21706};

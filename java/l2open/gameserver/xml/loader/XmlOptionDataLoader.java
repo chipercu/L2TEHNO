@@ -40,9 +40,11 @@ public class XmlOptionDataLoader
 
     private void load()
 	{
-		File file = new File(ConfigValue.DatapackRoot + "/data/stats/option");
+		File file;
 		if (ConfigValue.develop){
 			file = new File("data/stats/option");
+		}else {
+			file = new File(ConfigValue.DatapackRoot + "/data/stats/option");
 		}
 
         try

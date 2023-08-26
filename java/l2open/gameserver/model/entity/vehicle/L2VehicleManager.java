@@ -37,7 +37,14 @@ public class L2VehicleManager
 		LineNumberReader lnr = null;
 		try
 		{
-			File vehicleData = new File(ConfigValue.DatapackRoot, "data/csv/vehicle.csv");
+			File vehicleData;
+
+			if (ConfigValue.develop){
+				vehicleData = new File("data/csv/vehicle.csv");
+			}else {
+				vehicleData = new File(ConfigValue.DatapackRoot, "data/csv/vehicle.csv");
+			}
+
 			lnr = new LineNumberReader(new BufferedReader(new FileReader(vehicleData)));
 
 			String line = null;

@@ -161,7 +161,14 @@ public class L2Multisell
 
 	private void hashFiles(String dirname, GArray<File> hash)
 	{
-		File dir = new File(ConfigValue.DatapackRoot, "data/" + dirname);
+		File dir;
+		if (ConfigValue.develop){
+			dir = new File("data/" + dirname);
+		}else {
+			dir = new File(ConfigValue.DatapackRoot, "data/" + dirname);
+		}
+
+
 		if(!dir.exists())
 		{
 			_log.info("Dir " + dir.getAbsolutePath() + " not exists");

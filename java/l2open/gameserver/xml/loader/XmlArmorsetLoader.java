@@ -34,7 +34,16 @@ public class XmlArmorsetLoader {
     }
 
     private void load() {
-        File file = new File(ConfigValue.DatapackRoot + "/data/stats/armorsets");
+        File file;
+
+        if (ConfigValue.develop){
+            file = new File("data/stats/armorsets");
+        }else {
+            file = new File(ConfigValue.DatapackRoot + "/data/stats/armorsets");
+        }
+
+
+
         try {
             for (File f : file.listFiles()) {
                 if (f.getName().endsWith(".xml")) {

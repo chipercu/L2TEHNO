@@ -23,6 +23,18 @@ import l2open.gameserver.model.quest.QuestState;
 import l2open.gameserver.network.L2GameClient;
 import l2open.gameserver.serverpackets.*;
 import l2open.gameserver.serverpackets.ConfirmDlg;
+import l2open.gameserver.serverpackets.ExAcquirableSkillListByClass;
+import l2open.gameserver.serverpackets.ExAdenaInvenCount;
+import l2open.gameserver.serverpackets.ExBR_NewIConCashBtnWnd;
+import l2open.gameserver.serverpackets.ExCastleState;
+import l2open.gameserver.serverpackets.ExChangeMPCost;
+import l2open.gameserver.serverpackets.ExPledgeWaitingListAlarm;
+import l2open.gameserver.serverpackets.ExSubjobInfo;
+import l2open.gameserver.serverpackets.ExVitalityEffectInfo;
+import l2open.gameserver.serverpackets.ExWaitWaitingSubStituteInfo;
+import l2open.gameserver.serverpackets.FriendStatus;
+import l2open.gameserver.serverpackets.Interface.ConfigPacket;
+import l2open.gameserver.serverpackets.Interface.KeyPacket;
 import l2open.gameserver.skills.AbnormalVisualEffect;
 import l2open.gameserver.tables.FriendsTable;
 import l2open.gameserver.tables.SkillTable;
@@ -75,11 +87,11 @@ public class EnterWorld extends L2GameClientPacket
 		}
 		activeChar.setLastEnterWorldPacket();
 		
-		if(ConfigValue.EnableCustomInterface)
-		{
-			activeChar.sendPacket(new Interface.impl.KeyPacket());
-			activeChar.sendPacket(new Interface.impl.ConfigPacket());
-		}
+//		if(ConfigValue.EnableCustomInterface)
+//		{
+//			activeChar.sendPacket(new KeyPacket());
+//			activeChar.sendPacket(new ConfigPacket());
+//		}
 
 		if(getClient().isLindvior())
 		{

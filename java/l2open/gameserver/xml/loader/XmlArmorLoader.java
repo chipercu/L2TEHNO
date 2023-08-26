@@ -47,9 +47,9 @@ public final class XmlArmorLoader
 		armors.clear();
 
 		if (ConfigValue.develop){
-			for(File f : new File(ConfigValue.DatapackRoot + "data/stats/custom_items").listFiles())
+			for(File f : new File("data/stats/custom_items").listFiles())
 				parseFile(f, true);
-			for(File f : new File(ConfigValue.DatapackRoot + "data/stats/items/armor").listFiles())
+			for(File f : new File("data/stats/items/armor").listFiles())
 				parseFile(f, false);
 		}else {
 			for(File f : new File(ConfigValue.DatapackRoot + "/data/stats/custom_items").listFiles())
