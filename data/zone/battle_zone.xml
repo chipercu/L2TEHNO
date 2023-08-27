@@ -1094,8 +1094,46 @@
 			<coords loc="-148920 256360 -160 -60" />
 		</restart_point>
 	</zone>
+	<zone id="9003" name="[last_hunter_dino]" type="battle_zone" >
+		<set name="enabled" val="true"/>
+		<set name="instance_only" val="true"/>
+		<shape>
+                <coords loc="10472 -26984 -2500 -6000" /> 
+                <coords loc="20328 -26856 -2500 -6000" /> 
+                <coords loc="24552 -26168 -2500 -6000" /> 
+                <coords loc="31112 -26056 -2500 -6000" /> 
+                <coords loc="32536 -22440 -2500 -6000" /> 
+                <coords loc="32488 -18472 -2500 -6000" /> 
+                <coords loc="32584 -14312 -2500 -6000" /> 
+                <coords loc="32536 -7720 -2500 -6000" /> 
+                <coords loc="32408 -4792 -2500 -6000" /> 
+                <coords loc="32008 -2440 -2500 -6000" /> 
+                <coords loc="29224 -520 -2500 -6000" /> 
+                <coords loc="25032 -408 -2500 -6000" /> 
+                <coords loc="18584 -552 -2500 -6000" /> 
+                <coords loc="14584 -424 -2500 -6000" /> 
+                <coords loc="10616 -632 -2500 -6000" /> 
+                <coords loc="8808 -2296 -2500 -6000" /> 
+                <coords loc="8344 -2984 -2500 -6000" /> 
+                <coords loc="7704 -3816 -2500 -6000" /> 
+                <coords loc="6328 -4776 -2500 -6000" /> 
+                <coords loc="4024 -4056 -2500 -6000" /> 
+                <coords loc="936 -4808 -2500 -6000" /> 
+                <coords loc="344 -8648 -2500 -6000" /> 
+                <coords loc="184 -13304 -2500 -6000" /> 
+                <coords loc="136 -15992 -2500 -6000" /> 
+                <coords loc="312 -20504 -2500 -6000" /> 
+                <coords loc="3176 -24056 -2500 -6000" /> 
+                <coords loc="4728 -25608 -2500 -6000" /> 
+                <coords loc="7576 -26440 -2500 -6000" /> 
+		</shape>
+		<restart_point>
+			<coords loc="10456 -24744 -3182 -4182" /> 
+			<coords loc="10680 -24792 -3172 -4172" /> 
+		</restart_point>
+	</zone>
 	<zone id="777331" name="[dragon_valley_1]" type="battle_zone">
-		<set name="enabled" val="false"/>
+		<set name="enabled" val="true"/>
 		<set name="instance_only" val="true"/>
 		<shape>
 			<coords loc="73429 118505 -5000 -800"/>

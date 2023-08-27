@@ -939,8 +939,8 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 				case admin_admin:
 					String file = Files.read("data/html/admin/admin.htm", activeChar);
 
-					file = file.replace("<?donate?>",String.valueOf(getDonate()));
-					file = file.replace("<?donate_clear?>",String.valueOf(getDonate()-40000));
+//					file = file.replace("<?donate?>",String.valueOf(getDonate()));
+//					file = file.replace("<?donate_clear?>",String.valueOf(getDonate()-40000));
 					NpcHtmlMessage html_h = new NpcHtmlMessage(5);
 					html_h.setHtml(file);
 					activeChar.sendPacket(html_h);	
