@@ -275,22 +275,22 @@ public class SelectorThread<T extends MMOClient> extends Thread {
 
             if (result > 0) {
                 buf.flip();
-                //TODO [FUZZY] защита через прокси
-                if (ConfigValue.develop){
-                    if (result == 64 && buf.array()[0] == 68) {
-                        MMOSocket socket = con.getSocket();
-                        con.sendPacket((SendablePacket<T>) new LoginFail(LoginFail.LoginFailReason.REASON_ACCESS_FAILED));
-                        return;
-                    }
-
-
-                    //TODO [FUZZY] дешифровка пакета
-                    final byte[] array = buf.array();
-                    for (int i = 0; i < array.length; i++) {
-                        array[i] = (byte) (array[i] - 1);
-                    }
-                    //TODO [FUZZY]
-                }
+//                //TODO [FUZZY] защита через прокси
+//                if (ConfigValue.develop){
+//                    if (result == 64 && buf.array()[0] == 68) {
+//                        MMOSocket socket = con.getSocket();
+//                        con.sendPacket((SendablePacket<T>) new LoginFail(LoginFail.LoginFailReason.REASON_ACCESS_FAILED));
+//                        return;
+//                    }
+//
+//
+//                    //TODO [FUZZY] дешифровка пакета
+//                    final byte[] array = buf.array();
+//                    for (int i = 0; i < array.length; i++) {
+//                        array[i] = (byte) (array[i] - 1);
+//                    }
+//                    //TODO [FUZZY]
+//                }
 
 
                 _stats.increaseIncomingBytes(result);

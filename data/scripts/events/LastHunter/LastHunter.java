@@ -485,14 +485,14 @@ public class LastHunter extends Functions implements ScriptFile {
         if (_startTask != null)
             _startTask.cancel(true);
 
-
-        if (ConfigValue.develop){
-            _startTask = ThreadPoolManager.getInstance().schedule(new StartTask(), 10000);
-        }else {
-            if (delay - cur_time > 0){
-                _startTask = ThreadPoolManager.getInstance().schedule(new StartTask(), delay - cur_time);
-            }
-        }
+        _startTask = ThreadPoolManager.getInstance().schedule(new StartTask(), 10000);
+//        if (ConfigValue.develop){
+//            _startTask = ThreadPoolManager.getInstance().schedule(new StartTask(), 10000);
+//        }else {
+//            if (delay - cur_time > 0){
+//                _startTask = ThreadPoolManager.getInstance().schedule(new StartTask(), delay - cur_time);
+//            }
+//        }
 
 
     }
