@@ -1,724 +1,556 @@
-20:36:25.907  ConfigSystem(383): -> NoSuchFieldException(fake.properties): ?######
-20:36:26.159  Abuse: Loaded 18 abuse words.
-20:36:26.291  loading xml GMAccess
-20:36:26.522  MLog clients using java 1.4+ standard logging.
-20:36:26.879  Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
-20:36:27.014  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 0, acquireRetryDelay -> 100, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15wayfk1v65f7o140|60438a68, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15wayfk1v65f7o140|60438a68, idleConnectionTestPeriod -> 60, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost/l2tehno?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 1000, maxStatements -> 100, maxStatementsPerConnection -> 10, minPoolSize -> 1, numHelperThreads -> 5, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
-20:36:27.437  Clear characters online status and accesslevel.
-20:36:27.498  Total cleaned: 0, updated: 0 elements in database.
-20:36:27.549  IdFactory: Table characters contains 5 rows
-20:36:27.550  IdFactory: Table clan_data contains 0 rows
-20:36:27.551  IdFactory: Table items contains 56 rows
-20:36:27.554  IdFactory: Table ally_data contains 0 rows
-20:36:27.554  IdFactory: Table couples contains 0 rows
-20:36:27.558  IdFactory: Table pets contains 0 rows
-20:36:27.558  IdFactory: Extracting 61 used id's from data tables...
-20:36:27.563  IdFactory: Extracted 5 used id's from characters
-20:36:27.563  IdFactory: Extracted 56 used id's from items
-20:36:27.563  IdFactory: Extracted 0 used id's from clan_data
-20:36:27.567  IdFactory: Extracted 0 used id's from ally_data
-20:36:27.567  IdFactory: Extracted 0 used id's from pets
-20:36:27.569  IdFactory: Extracted 0 used id's from couples
-20:36:27.569  IdFactory: Successfully extracted 61 used id's from data tables.
-20:36:27.570  IDFactory: 102912 id's available.
-20:36:29.080  CrestCache: Loaded 0 crests
-20:36:29.095  Initializing AuctionManager
-20:36:29.540  Loaded: 38 active auction(s)
-20:36:35.124  PTS HTML: ./data/html-ru.zip loaded 7688ms...
-20:36:36.459  SkillsEngine: Loaded 61827 skill templates from XML files. Max id: 26077, max level: 259
-20:36:36.459  SkillsEngine: Loaded 1616 custom skill templates from XML files.
-20:36:37.926  L2Skill5: [2139][1][TARGET_ONE][range][not_friend]
-20:36:37.926  L2Skill5: [2260][1][TARGET_ONE][single][none]
-20:36:37.941  L2Skill5: [2353][1][TARGET_ONE][static_object_scope][hidden_place]
-20:36:37.941  L2Skill5: [2624][1][TARGET_ONE][single][none]
-20:36:37.988  L2Skill5: [4143][1][TARGET_ONE][point_blank][not_friend]
-20:36:37.988  L2Skill5: [4212][1][TARGET_ONE][range][friend]
-20:36:38.004  L2Skill5: [4483][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.004  L2Skill5: [4488][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.004  L2Skill5: [4524][1][TARGET_ONE][single][none]
-20:36:38.020  L2Skill5: [4697][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.035  L2Skill5: [5037][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.035  L2Skill5: [5039][1][TARGET_ONE][single][none]
-20:36:38.035  L2Skill5: [5051][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.035  L2Skill5: [5054][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.035  L2Skill5: [5104][1][TARGET_ONE][single][none]
-20:36:38.035  L2Skill5: [5105][1][TARGET_ONE][single][none]
-20:36:38.035  L2Skill5: [5114][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.035  L2Skill5: [5117][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.035  L2Skill5: [5123][1][TARGET_ONE][point_blank][friend]
-20:36:38.035  L2Skill5: [5124][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.035  L2Skill5: [5125][1][TARGET_ONE][point_blank][friend]
-20:36:38.035  L2Skill5: [5126][1][TARGET_ONE][point_blank][friend]
-20:36:38.035  L2Skill5: [5127][1][TARGET_ONE][point_blank][friend]
-20:36:38.035  L2Skill5: [5128][1][TARGET_ONE][point_blank][friend]
-20:36:38.051  L2Skill5: [5129][1][TARGET_ONE][point_blank][friend]
-20:36:38.051  L2Skill5: [5130][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.051  L2Skill5: [5131][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.051  L2Skill5: [5132][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.051  L2Skill5: [5133][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.051  L2Skill5: [5134][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.051  L2Skill5: [5145][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.051  L2Skill5: [5202][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.051  L2Skill5: [5203][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.051  L2Skill5: [5204][1][TARGET_ONE][single][none]
-20:36:38.051  L2Skill5: [5239][1][TARGET_ONE][single][none]
-20:36:38.051  L2Skill5: [5248][1][TARGET_ONE][single][none]
-20:36:38.051  L2Skill5: [5252][1][TARGET_ONE][single][none]
-20:36:38.051  L2Skill5: [5257][1][TARGET_ONE][single][none]
-20:36:38.051  L2Skill5: [5275][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.051  L2Skill5: [5279][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.051  L2Skill5: [5283][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.051  L2Skill5: [5287][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.051  L2Skill5: [5291][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.051  L2Skill5: [5295][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.051  L2Skill5: [5306][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.051  L2Skill5: [5340][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.066  L2Skill5: [5344][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.066  L2Skill5: [5348][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.066  L2Skill5: [5352][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.066  L2Skill5: [5356][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.066  L2Skill5: [5360][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.066  L2Skill5: [5366][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.066  L2Skill5: [5375][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.066  L2Skill5: [5379][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.066  L2Skill5: [5382][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.066  L2Skill5: [5385][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.066  L2Skill5: [5388][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.066  L2Skill5: [5391][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.066  L2Skill5: [5423][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.066  L2Skill5: [5424][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.066  L2Skill5: [5430][1][TARGET_ONE][range][clan]
-20:36:38.066  L2Skill5: [5447][1][TARGET_ONE][single][none]
-20:36:38.066  L2Skill5: [5494][1][TARGET_ONE][single][none]
-20:36:38.066  L2Skill5: [5591][1][TARGET_ONE][single][none]
-20:36:38.066  L2Skill5: [5619][1][TARGET_ONE][single][none]
-20:36:38.066  L2Skill5: [5660][1][TARGET_ONE][single][none]
-20:36:38.082  L2Skill5: [5689][1][TARGET_ONE][single][none]
-20:36:38.082  L2Skill5: [5697][1][TARGET_ONE][single][none]
-20:36:38.082  L2Skill5: [5699][1][TARGET_ONE][single][none]
-20:36:38.082  L2Skill5: [5713][1][TARGET_ONE][single][none]
-20:36:38.082  L2Skill5: [5751][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.082  L2Skill5: [5756][1][TARGET_ONE][single][none]
-20:36:38.082  L2Skill5: [5772][1][TARGET_ONE][single][none]
-20:36:38.082  L2Skill5: [5773][1][TARGET_ONE][single][none]
-20:36:38.082  L2Skill5: [5799][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.082  L2Skill5: [5836][1][TARGET_ONE][point_blank][clan]
-20:36:38.082  L2Skill5: [5847][1][TARGET_ONE][point_blank][none]
-20:36:38.082  L2Skill5: [5887][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.082  L2Skill5: [5923][1][TARGET_ONE][single][none]
-20:36:38.082  L2Skill5: [5937][1][TARGET_ONE][single][none]
-20:36:38.082  L2Skill5: [6020][1][TARGET_ONE][single][none]
-20:36:38.082  L2Skill5: [6021][1][TARGET_ONE][single][none]
-20:36:38.082  L2Skill5: [6022][1][TARGET_ONE][single][none]
-20:36:38.082  L2Skill5: [6023][1][TARGET_ONE][single][none]
-20:36:38.082  L2Skill5: [6034][1][TARGET_ONE][single][none]
-20:36:38.098  L2Skill5: [6090][1][TARGET_ONE][single][none]
-20:36:38.098  L2Skill5: [6092][1][TARGET_ONE][single][none]
-20:36:38.098  L2Skill5: [6270][1][TARGET_ONE][point_blank][none]
-20:36:38.098  L2Skill5: [6298][1][TARGET_ONE][single][none]
-20:36:38.098  L2Skill5: [6301][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.098  L2Skill5: [6305][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.098  L2Skill5: [6316][1][TARGET_ONE][single][none]
-20:36:38.098  L2Skill5: [6320][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.098  L2Skill5: [6372][1][TARGET_ONE][single][none]
-20:36:38.098  L2Skill5: [6374][1][TARGET_ONE][single][none]
-20:36:38.098  L2Skill5: [6375][1][TARGET_ONE][single][none]
-20:36:38.098  L2Skill5: [6398][1][TARGET_ONE][ring_range][not_friend]
-20:36:38.098  L2Skill5: [6415][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.113  L2Skill5: [6422][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.552  PTS HTML: ./data/html-en.zip loaded 3428ms...
-20:36:38.566  Loaded 418 translit entrys
-20:36:38.874  L2Skill5: [6754][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.874  L2Skill5: [6769][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.874  L2Skill5: [6777][1][TARGET_ONE][point_blank][not_friend]
-20:36:38.874  L2Skill5: [6779][1][TARGET_ONE][single][none]
-20:36:38.874  L2Skill5: [6835][1][TARGET_ONE][single][none]
-20:36:38.874  L2Skill5: [6841][1][TARGET_ONE][single][none]
-20:36:38.874  L2Skill5: [6858][1][TARGET_ONE][single][none]
-20:36:38.874  L2Skill5: [6864][1][TARGET_ONE][single][none]
-20:36:38.874  L2Skill5: [6868][1][TARGET_ONE][single][none]
-20:36:38.968  L2Skill5: [9011][1][TARGET_ONE][single][none]
-20:36:38.968  L2Skill5: [9011][1][TARGET_ONE][single][none]
-20:36:38.968  L2Skill5: [9011][1][TARGET_ONE][single][none]
-20:36:38.968  L2Skill5: [9012][1][TARGET_ONE][single][none]
-20:36:38.968  L2Skill5: [9012][1][TARGET_ONE][single][none]
-20:36:38.968  L2Skill5: [9012][1][TARGET_ONE][single][none]
-20:36:38.968  L2Skill5: [9012][1][TARGET_ONE][single][none]
-20:36:38.968  L2Skill5: [9012][1][TARGET_ONE][single][none]
-20:36:38.968  L2Skill5: [9012][1][TARGET_ONE][single][none]
-20:36:38.968  L2Skill5: [9013][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9013][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9013][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9013][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9013][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9013][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9013][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9014][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9014][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9014][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9014][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9014][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9014][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9014][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9014][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9014][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9014][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9014][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9014][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9014][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9014][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9014][1][TARGET_ONE][single][none]
-20:36:38.984  L2Skill5: [9060][1][TARGET_ONE][point_blank][friend]
-20:36:38.999  L2Skill5: [21005][1][TARGET_ONE][single][none]
-20:36:38.999  L2Skill5: [21052][1][TARGET_ONE][single][none]
-20:36:38.999  L2Skill5: [21055][1][TARGET_ONE][single][none]
-20:36:38.999  L2Skill5: [21056][1][TARGET_ONE][single][none]
-20:36:38.999  L2Skill5: [21061][1][TARGET_ONE][single][none]
-20:36:38.999  L2Skill5: [21063][1][TARGET_ONE][single][none]
-20:36:38.999  L2Skill5: [21071][1][TARGET_ONE][single][none]
-20:36:38.999  L2Skill5: [21086][1][TARGET_ONE][single][none]
-20:36:38.999  L2Skill5: [21153][1][TARGET_ONE][single][none]
-20:36:38.999  L2Skill5: [21154][1][TARGET_ONE][single][none]
-20:36:38.999  L2Skill5: [21170][1][TARGET_ONE][single][none]
-20:36:39.015  L2Skill5: [23165][1][TARGET_ONE][single][none]
-20:36:39.031  L2Skill5: [23298][1][TARGET_ONE][single][none]
-20:36:39.031  L2Skill5: [23308][1][TARGET_ONE][point_blank][friend]
-20:36:39.031  L2Skill5: [23309][1][TARGET_ONE][point_blank][friend]
-20:36:39.031  L2Skill5: [23310][1][TARGET_ONE][point_blank][friend]
-20:36:39.031  L2Skill5: [23311][1][TARGET_ONE][point_blank][friend]
-20:36:39.416  CubicManager: Loaded 145 cubics.
-20:36:39.644  PetSkillsTable: Loaded 2671 skills.
-20:36:42.517  WARNING: item 20711 action attached skill not done: Box of Dynasty Armor[id=9105,lvl=1]
-20:36:45.234  XmlOptionDataLoader: Loaded 24975 templates.
-20:36:45.313  XmlArmorLoader: Loaded 0 Custom Armors
-20:36:45.313  XmlArmorLoader: Loaded 3554 Armors
-20:36:45.313  XmlArmorLoader: Loaded 240 Rare Armors
-20:36:45.313  XmlArmorLoader: Loaded 58 PvP Armors
-20:36:48.777  XmlWeaponLoader: Loaded 0 Custom Weapons
-20:36:48.777  XmlWeaponLoader: Loaded 4001 Weapons
-20:36:48.792  XmlWeaponLoader: Loaded 794 Rare Weapons
-20:36:48.792  XmlWeaponLoader: Loaded 558 PvP Weapons
-20:36:48.792  XmlWeaponLoader: Loaded 1667 SA Weapons
-20:36:48.792  XmlWeaponLoader: Loaded 283 Trigger for Weapons
-20:36:48.792  XmlWeaponLoader: Loaded 262 Pole Weapons
-20:36:56.420  XmlEtcItemLoader: Loaded 0 Custom EtcItems
-20:36:56.420  XmlEtcItemLoader: Loaded 10855 EtcItems
-20:36:56.508  TradeController: Loaded 4 file(s).
-20:36:56.508  TradeController: Loaded 23181 Items.
-20:36:56.508  TradeController: Loaded 702 Buylists.
-20:36:56.683  RecipeController: Loaded 1000 Recipes.
-20:38:09.082  SkillTreeTable: Loaded 17098 skills.
-20:38:09.082  SkillTreeTable: Loaded 109 fishing skills.
-20:38:09.083  SkillTreeTable: Loaded 20 transformation skills.
-20:38:09.083  SkillTreeTable: Loaded 64 clan skills.
-20:38:09.083  SkillTreeTable: Loaded 526 enchanted skills.
-20:38:09.083  SkillTreeTable: Loaded 18 pledge skills.
-20:38:09.083  SkillTreeTable: Loaded 74 certification skills.
-20:38:09.083  SkillTreeTable: Loaded 0 other skills.
-20:38:09.084  SkillTreeTable: Loaded 21 Transfer skills for Bishop.
-20:38:09.084  SkillTreeTable: Loaded 24 Transfer skills for Elder.
-20:38:09.084  SkillTreeTable: Loaded 32 Transfer skills for Silen Elder.
-20:38:09.087  SkillSpellbookTable: Loaded 386 Spellbooks.
-20:38:09.089  PTS ArmorEnchantBonusData: Finish loading data fo 0 ms...
-20:38:09.100  CharTemplateTable: Loaded 206 Character Templates.
-20:38:09.104  NpcTable: Loaded 779 AI params for 666 NPCs.
-20:38:09.324  Scripts loading...
-20:38:09.324  Scripts start parse class...
-20:38:09.654  Scripts end parse class...
-20:38:24.331  Scripts end compile class...
-20:38:25.228  Scripts successfully loaded. Loaded 1292 classes.
-20:38:25.574  NpcTable: Loaded 10463 Npc Templates.
-20:38:25.919  Loaded 118801 npc skills.
-20:38:26.045  Players droplist load skipped
-20:38:26.048  NpcTable: Loaded 597 Minions.
-20:38:26.050  NpcTable: Loaded 1641 SkillLearn entrys.
-20:38:26.089  PTS NpcDataPch: Finish loading data size: 10195 fo 37 ms...
-20:38:26.092  HennaTable: Loaded 180 Templates.
-20:38:26.186  HennaTreeTable: Loaded 8134 Henna Tree Templates.
-20:38:26.190  LevelUpData: Loaded 103 Character Level Up Templates.
-20:38:26.205  L2World: [255][271][63] World Region Grid set up.
-20:38:26.206  GeoEngine: Loading Geodata...
-20:38:26.206  GeoEngine: Loaded 0 map(s), max layers: 1
-20:38:27.570  DoorTable: Loaded 1030 doors.
-20:38:27.747  TerritoryTable: Loaded 9976 locations
-20:38:27.875  ZoneManager: Loaded 1649 zones
-20:38:27.959  TerritoryTable: Added 1642 locations to L2World
-20:38:27.960  Loaded: 1 UnderGround Colliseums.
-20:38:28.067  Loaded: 9 castles.
-20:38:28.101  correctSiegeDateTime[START][1693157908096][1693157908096]: Siege of Gludio: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.102  correctSiegeDateTime[FINISH][1693157908101][1693157908101]: Siege of Gludio: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.103  Siege of Gludio: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.111  correctSiegeDateTime[START][1693157908110][1693157908111]: Siege of Dion: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.111  correctSiegeDateTime[FINISH][1693157908111][1693157908111]: Siege of Dion: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.113  Siege of Dion: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.116  correctSiegeDateTime[START][1693157908115][1693157908115]: Siege of Giran: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.116  correctSiegeDateTime[FINISH][1693157908116][1693157908116]: Siege of Giran: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.117  Siege of Giran: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.119  correctSiegeDateTime[START][1693157908119][1693157908119]: Siege of Oren: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.120  correctSiegeDateTime[FINISH][1693157908120][1693157908120]: Siege of Oren: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.121  Siege of Oren: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.142  correctSiegeDateTime[START][1693157908142][1693157908142]: Siege of Aden: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.142  correctSiegeDateTime[FINISH][1693157908142][1693157908142]: Siege of Aden: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.149  Siege of Aden: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.154  correctSiegeDateTime[START][1693157908154][1693157908154]: Siege of Innadril: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.155  correctSiegeDateTime[FINISH][1693157908154][1693157908154]: Siege of Innadril: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.162  Siege of Innadril: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.166  correctSiegeDateTime[START][1693157908166][1693157908166]: Siege of Goddard: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.166  correctSiegeDateTime[FINISH][1693157908166][1693157908166]: Siege of Goddard: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.174  Siege of Goddard: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.178  correctSiegeDateTime[START][1693157908178][1693157908178]: Siege of Rune: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.179  correctSiegeDateTime[FINISH][1693157908179][1693157908179]: Siege of Rune: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.179  Siege of Rune: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.184  correctSiegeDateTime[START][1693157908184][1693157908184]: Siege of Schuttgart: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.184  correctSiegeDateTime[FINISH][1693157908184][1693157908184]: Siege of Schuttgart: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.190  Siege of Schuttgart: Sun Sep 03 16:00:00 MSK 2023
-20:38:28.196  Initializing FortressManager
-20:38:28.440  Loaded: 21 fortresses.
-20:38:28.486  Initializing ClanHallManager.
-20:38:28.980  Loaded: 44 ClanHalls.
-20:38:29.017  110 doors attached to ClanHalls
-20:38:29.038  Siege of Bandit Stronghold : Fri Sep 01 21:00:00 MSK 2023
-20:38:29.043  Siege of Wild Beasts Farm : Fri Sep 01 21:00:00 MSK 2023
-20:38:29.049  Siege of Rainbow Springs Chateau : Fri Sep 01 22:00:00 MSK 2023
-20:38:29.069  TerritorySiege: load 9 town spawns.
-20:38:29.077  TerritorySiege: load 9 castle spawns.
-20:38:29.082  TerritorySiege: load 9 fortress spawns.
-20:38:29.084  Territory Siege: 02.09.2023 20:00:27
-20:38:29.088  Manor System: Initializing...
-20:38:29.102  SeedOfAnnihilationManager: Load Manager.
-20:38:29.442  RaidBossSpawnManager: Loaded 0 Statuses
-20:38:29.669  Naia Tower Manager: Loaded 12 rooms
-20:38:29.965  Spawned 4000 npc
-20:38:30.111  Spawned 7000 npc
-20:38:30.150  Spawned 8000 npc
-20:38:30.194  Spawned 9000 npc
-20:38:30.363  Spawned 13000 npc
-20:38:31.375  Spawned 20000 npc
-20:38:31.428  Spawned 21000 npc
-20:38:31.481  Spawned 22000 npc
-20:38:31.535  Spawned 23000 npc
-20:38:31.702  Spawned 26000 npc
-20:38:31.762  Spawned 27000 npc
-20:38:32.345  Spawned 30000 npc
-20:38:32.426  Hellbound Manager: Current Level is 1
-20:38:32.426  Hellbound Manager: Current Points is 0
-20:38:32.511  Spawned 31000 npc
-20:38:32.616  Spawned 32000 npc
-20:38:32.770  Spawned 34000 npc
-20:38:32.882  Spawned 35000 npc
-20:38:33.497  Spawned 36000 npc
-20:38:33.600  Spawned 37000 npc
-20:38:33.685  Spawned 38000 npc
-20:38:33.922  Spawned 39000 npc
-20:38:34.070  Spawned 40000 npc
-20:38:34.243  Spawned 41000 npc
-20:38:34.390  Spawned 42000 npc
-20:38:34.442  SevenSigns: Currently in the Competition (Quest Event) period!
-20:38:34.442  SevenSigns: The Seal of Avarice remains unclaimed.
-20:38:34.442  SevenSigns: The Seal of Gnosis remains unclaimed.
-20:38:34.442  SevenSigns: The Seal of Strife remains unclaimed.
-20:38:34.442  SevenSigns: The Competition this week, if the trend continue, will end with a tie.
-20:38:34.443  SevenSigns: Next period begins in 0 days, 21 hours and 21 mins.
-20:38:34.443  SpawnTable: Loaded 18203 Npc Spawn Locations. Total NPCs: 42166
-20:38:34.443  Monsters inventory loaded, items: 0
-20:38:34.505  Short statistics in the commynity board has been updated.
-20:38:34.509  Loaded Service: change sex services.
-20:38:34.509  Loaded Service: change name services.
-20:38:34.509  Loaded Service: change clan name services.
-20:38:34.509  Loaded Service: change base class services.
-20:38:34.509  Loaded Service: separate services.
-20:38:34.512  Loaded Event: L2 Rabbits To Riches Event [state: deactivated]
-20:38:34.537  Loaded Quest: 1001: Wake Up Baium
-20:38:34.555  CommunityBoard: Simple Lottery games loaded.
-20:38:34.556  CommunityBoard: Simple Lottery games played 0.
-20:38:34.558  CommunityBoard: Simple Lottery jackpot is 0 Adena.
-20:38:34.566  Loaded Event: GvG
-20:38:34.606  Loaded Service: NPCBuffer [state: deactivated]
-20:38:34.616  SailrenManager: State of Sailren is NOTSPAWN.
-20:38:34.616  SailrenManager: Next spawn date of Sailren is Thu Jan 01 03:00:00 MSK 1970.
-20:38:34.620  Loaded Service: Bash [disabled]
-20:38:34.637  Loaded Service: Pagan Doormans
-20:38:34.657  Beleth Manager: Loaded successfuly
-20:38:34.665  Loaded Quest: 1004: Ice Fairy Sirra
-20:38:34.674  Loaded Event: Fight Club
-20:38:34.678  Loaded Quest: 1202: Crystal Caverns
-20:38:34.685  Loaded Event: L2 Medal Collection Event [state: deactivated]
-20:38:34.737  Loaded Service: Roulette
-20:38:34.737  Loaded Service: Evolve Wolf
-20:38:34.753  Loaded Event: TvT Arena 3 [state: deactivated]
-20:38:34.756  Loaded Event: TvT Arena 2 [state: deactivated]
-20:38:34.757  Loaded Event: TvT Arena 1 [state: deactivated]
-20:38:34.791  Load 297 teleport points.
-20:38:34.791  Loaded Service: Teleport to Fantasy Isle
-20:38:34.793  AntharasManager: State of Antharas is NOTSPAWN.
-20:38:34.794  AntharasManager: Next spawn date of Antharas is 03:00 01.01.1970.
-20:38:34.801  Loaded Event: Victorina
-20:38:34.804  ManorManager: Loaded 270 seeds
-20:38:34.833  Loaded Service: Item Broker
-20:38:34.837  Loaded Service: Evolve Improved Baby Kookaburra
-20:38:34.839  Loaded Event: Gludin Arena
-20:38:34.840  Loaded Service: Summon a corpse
-20:38:34.848  Loaded Event: The Fall Harvest [state: deactivated]
-20:38:34.858  Loaded Quest: 1201: Dark Cloud Mansion
-20:38:34.872  Loaded Event: Underground Arena #1
-20:38:34.881  Loaded Event: MasterOfEnchanting [state: deactivated]
-20:38:34.891  Loaded Event: CtF active.
-20:38:34.900  MonasteryOfSilence: Loaded
-20:38:34.914  ZakenManager: Init Zaken Manager.
-20:38:34.919  CommunityBoard: Premium Lottery games loaded.
-20:38:34.920  CommunityBoard: Premium Lottery games played 0.
-20:38:34.920  CommunityBoard: Premium Lottery jackpot is 0 Gold Einhasad.
-20:38:34.925  OnActionShift Loaded
-20:38:34.931  Loaded Event: Coffer of Shadows [state: deactivated]
-20:38:34.940  Kamaloka Gate Loaded
-20:38:34.943  LastImperialTombSpawnlist: Loaded 180 Room1 1st Npc Spawn Locations.
-20:38:34.943  LastImperialTombSpawnlist: Loaded 4 Room2 Inside Npc Spawn Locations.
-20:38:34.943  LastImperialTombSpawnlist: Loaded 121 Room2 Outside Npc Spawn Locations.
-20:38:34.949  Unevenly distributed hash code - Degraded Preformance
-20:38:34.955  FishTable: Loaded 270 Fishes.
-20:38:34.959  FishRewardsTable: Loaded 919 FishRewards.
-20:38:34.976  Loaded Service: Isle of Player Race
-20:38:34.978  Loaded Service: Teleport to catacombs
-20:38:34.980  Loaded Service: Villagemasters [Clan Operations]
-20:38:34.988  Loaded Service: NPC RemoveDeathPenalty
-20:38:34.989  Loaded Service: VitaminManager...
-20:38:34.990  Loaded Event: Change of Heart[state: deactivated]
-20:38:34.991  Loaded Service: Clan function.
-20:38:35.007  Loaded Service: Villagemasters [Alliance Operations]
-20:38:35.015  Loaded Service: Evolve Improved Baby Cougar
-20:38:35.019  Loaded Service: Villagemasters [Changing occupations]
-20:38:35.026  Loaded Event: AutoAnnouncer [state: deactivated]
-20:38:35.037  Utilites Loaded
-20:38:35.039  Loaded Service: Nick color change
-20:38:35.042  MonasteryOfSilenceGame: Loaded
-20:38:35.052  Loaded Service: ClanHall Pet Evolution
-20:38:35.075  Loaded Event: Last Hunter
-20:38:35.095  npc_id=29068 time=0
-20:38:35.095  npc_id=29068 state=0
-20:38:35.095  npc_id=29020 time=0
-20:38:35.095  npc_id=29028 time=0
-20:38:35.095  npc_id=29062 time=0
-20:38:35.095  npc_id=29065 time=0
-20:38:35.095  npc_id=29065 state=0
-20:38:35.095  npc_id=29186 time=0
-20:38:35.097  Full statistics in the commynity board has been updated.
-20:38:35.098  Loaded Service: Expand Inventory
-20:38:35.100  Loaded Quest: 1003: Sailren
-20:38:35.106  Loaded Event: TvT
-20:38:35.108  Loaded Service: Obtain Talisman
-20:38:35.111  Loaded Event: SavingSnowman [state: deactivated]
-20:38:35.115  Loaded Service: Tower
-20:38:35.116  Loaded Event: Dion Arena
-20:38:35.129  Loaded Service: Window
-20:38:35.139  Loaded Event: The Flow Of The Horror [state: deactivated]
-20:38:35.142  Loaded Event: Tournament [state: deactivated]
-20:38:35.168  Loaded Service: Bonus [state: deactivated]
-20:38:35.176  Loaded Service: Evolve Improved Baby Buffalo
-20:38:35.187  Loaded Service: Evolve Fenrir
-20:38:35.190  Loaded Event: L2Coins [state: deactivated]
-20:38:35.194  Loaded Service: CWH Privileges
-20:38:35.204  Loaded Event: Bounty Hunters Guild
-20:38:35.214  Loaded Service: Hero Items
-20:38:35.216  Loaded Service: 1103: Oracle Teleport
-20:38:35.240  Loaded Event: Christmas [state: deactivated]
-20:38:35.255  Lindvior Manager Load.
-20:38:35.257  Loaded Service: Nobless sell
-20:38:35.265  Loaded Service: SubClass sell
-20:38:35.265  Loaded Service: Border Outpost Doormans
-20:38:35.268  Loaded Service: Pushkin
-20:38:35.275  MarcketLoad Loaded...
-20:38:35.293  Loaded Service: Rate bonus
-20:38:35.294  Unevenly distributed hash code - Degraded Preformance
-20:38:35.295  Loaded Successful
-20:38:35.314  FourSepulchersManager: Loaded 20 Mysterious-Box spawns.
-20:38:35.358  FourSepulchersManager: loaded 716 physical monsters spawns.
-20:38:35.374  FourSepulchersManager: loaded 716 magical monsters spawns.
-20:38:35.378  FourSepulchersManager: loaded 92 Church of duke monsters spawns.
-20:38:35.382  FourSepulchersManager: loaded 68 Emperor's grave NPC spawns.
-20:38:35.383  FourSepulchersManager: Spawned Conquerors Sepulcher Manager
-20:38:35.383  FourSepulchersManager: Spawned Emperors Sepulcher Manager
-20:38:35.383  FourSepulchersManager: Spawned Great Sages Sepulcher Manager
-20:38:35.383  FourSepulchersManager: Spawned Judges Sepulcher Manager
-20:38:35.384  FourSepulchersManager: Beginning in Attack time
-20:38:35.389  Loaded Event: Reward of Honor [state: deactivated]
-20:38:35.390  Sun Aug 27 20:38:35 MSK 2023 Atk announce scheduled to 40.0 minute of this hour.
-20:38:35.399  Loaded Event: l2day [state: deactivated]
-20:38:35.406  Loaded Service: Mana Regen
-20:38:35.416  Loaded Service: Grand Isle of Prayer Race
-20:38:35.418  Loaded Service: Teleport to Race Track
-20:38:35.465  Loaded Service: Expand CWH
-20:38:35.520  Loaded Service: Ride Hire
-20:38:35.541  [EnhanceYourWeapon] Loaded 54 Soul Crystal data.
-20:38:35.542  [EnhanceYourWeapon] Loaded 240 npc Leveling info data.
-20:38:35.547  Loaded Event: March 8 [state: deactivated]
-20:38:35.554  ValakasManager: State of Valakas is NOTSPAWN.
-20:38:35.554  ValakasManager: Next spawn date of Valakas is 03:00 01.01.1970.
-20:38:35.561  Loaded Event: Giran Arena
-20:38:35.569  CommunityBoard: Forge Enchant: false
-20:38:35.570  CommunityBoard: Forge Attribut: false
-20:38:35.570  CommunityBoard: Forge Augment: false
-20:38:35.576  MercTicketManager: Initializing
-20:38:35.585  MercTicketManager: Loaded 0 Mercenary Tickets
-20:38:35.590  Loaded Service: Rate bonus
-20:38:35.600  Loaded Event: Last Hero
-20:38:35.671  PetDataTable: Loaded 3834[50] pets.
-20:38:35.675  Seed Of Destruction closed.
-20:38:35.679  Loaded Service: Fantasy Isle
-20:38:35.682  Loaded Service: DropItem
-20:38:35.684  Loaded Event: Simple [state: deactivated]
-20:38:35.685  Loaded Service: Enter Hellbound Island
-20:38:35.688  Loaded Service: Level manipulation
-20:38:35.690  BaiumManager: State of Baium is NOTSPAWN.
-20:38:35.691  Loaded Boss: Baium. Next spawn date: Thu Jan 01 03:00:00 MSK 1970
-20:38:35.691  Loaded Service: Expand Warehouse
-20:38:35.706  Loaded Service: Fort Info
-20:38:35.714  DimensionalRiftManager: Loaded 13 room types with 112 rooms.
-20:38:35.714  DimensionalRiftManager: Loaded 300 dimensional rift spawns, 0 errors.
-20:38:35.755  InstancedZoneManager: Loaded 96 zones with 114 rooms.
-20:38:35.756  InstancedZoneManager: Loaded 740 instanced location spawns, 0 errors.
-20:38:35.757  config/announcements.txt doesn't exist
-20:38:35.841  Initializing AugmentationData.
-20:38:35.866  StaticObject: Loaded 29 StaticObject Templates.
-20:38:35.881  AutoSpawnHandler: Loaded 50 handlers in total.
-20:38:35.890  AutoChatHandler: Loaded 14 handlers in total.
-20:38:35.896  Olympiad System: Loading Olympiad System....
-20:38:35.896  Olympiad System: Currently in Olympiad Period
-20:38:35.896  Olympiad System: In 4 days, 3 hours and 21 mins.
-20:38:35.896  Olympiad System: Next Weekly Change is in....
-20:38:35.896  Olympiad System: In 0 days, 15 hours and 21 mins.
-20:38:35.896  Olympiad System: Loaded 0 Noblesses
-20:38:35.897  Olympiad System: Competition Period Starts in 0 days, 0 hours and 0 mins.
-20:38:35.897  Olympiad System: Event starts/started: Sun Aug 27 18:00:00 MSK 2023
-20:38:35.899  Olympiad System:[Disable] Start custom reward 22:45 27.08.2023.
-20:38:35.899  Olympiad System: End custom reward 00:00 28.08.2023.
-20:38:35.902  Hero System: Loaded 0 Heroes.
-20:38:35.902  Hero System: Loaded 0 all time Heroes.
-20:38:35.906  CursedWeaponsManager: Loaded 0 cursed weapon(s).
-20:38:35.907  PlayerRewardManager: set_noble[0] inc_pvp[0] inc_pc[0].
-20:38:35.909  Seed of Infinity Manager: Current Cycle is 1
-20:38:35.910  Naia Core Manager: Loaded
-20:38:35.911  Initializing CoupleManager
-20:38:35.911  Loaded: 0 couples(s)
-20:38:35.912  CoupleManager initialized
-20:38:35.912  ItemHandler: Loaded 2519 handlers.
-20:38:35.912  AdminCommandHandler: Loaded 495 handlers.
-20:38:35.912  UserCommandHandler: Loaded 17 handlers.
-20:38:35.912  VoicedCommandHandler: Loaded 69 handlers.
-20:38:35.923  Initializing L2VehicleManager
-20:38:35.923  Olympiad System: Olympiad Game Started
-20:38:35.929  L2VehicleManager: Loaded 6 vehicles.
-20:38:35.932  AirShipDocksTable: Loaded 5 docks.
-20:38:35.936  IdFactory: Free ObjectID's remaining: 1878997523
-20:38:35.941  TeleportController: Loaded 600 locations.
-20:38:35.951  ItemMall: loaded 556 item templates.
-20:38:35.956  ItemMall: loaded 184 items available for trading.
-20:38:35.958  AutoRestart scheduled through 8h 22m
-20:38:35.995  ItemAuctionManager: Missing item_auctions.xml!
-20:38:35.997  Blood Altar Manager: Initializing...
-20:38:36.003  GameServer Started
-20:38:36.004  Maximum Numbers of Connected Players: 3000
-20:38:36.654  GameServer: Connecting to LoginServer on 127.0.0.1:9014
-20:38:37.709  Restored 0 offline traders
-20:38:37.963  Registered on login as Server 1 : 
-20:38:42.924  Telnet server is currently disabled.
-20:38:42.924  =================================================
-20:38:42.927  AllowedMemory: ........... 8184192 KB
-20:38:42.927       Allocated: .......... 8184192 KB (100.0%)
-20:38:42.927       Non-Allocated: ...... 0 KB (0.0%)
-20:38:42.927  AllocatedMemory: ......... 8184192 KB
-20:38:42.927       Used: ............... 1248864 KB (15.2595%)
-20:38:42.927       Unused (cached): .... 6935327 KB (84.7405%)
-20:38:42.927  UseableMemory: ........... 6935327 KB (84.7405%)
-20:38:42.927  =================================================
-20:38:42.927  MinProtocolRevision: 267
-20:38:50.099  npc_id=29068 time=0
-20:38:50.099  npc_id=29068 state=0
-20:38:50.099  npc_id=29020 time=0
-20:38:50.099  npc_id=29020 state=0
-20:38:50.099  npc_id=29028 time=0
-20:38:50.099  npc_id=29028 state=0
-20:38:50.099  npc_id=29062 time=0
-20:38:50.099  npc_id=29065 time=0
-20:38:50.099  npc_id=29065 state=0
-20:38:50.099  npc_id=29186 time=0
-20:38:50.099  npc_id=29186 state=0
-20:39:03.163  max_p_size: 7
-20:39:03.788  max_p_size: 267
-20:39:03.807  RequestAuthLogin: 50
-20:39:03.807  RequestAuthLogin: 32
-20:39:05.119  XmlArmorsetLoader: Loaded 168 armor sets.
-20:39:05.210  XmlPcParameterLoader: Loaded 107 pc_parameters
-20:39:12.377  FriendsTable: Loaded 0 friends.
-20:50:35.389  FourSepulchersManager: Entry time: Sun Aug 27 20:55:35 MSK 2023
-20:56:15.325  SendBypassBuildCmd: admin
-20:56:18.152  SimpleLottery: Store Jackpot
-20:56:18.154  Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='simple_loss_count'
-20:56:18.163  Load 297 teleport points.
-20:56:18.166  premiumLottery: Store Jackpot
-20:56:18.168  Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='premium_loss_count'
-20:56:18.172  Seed Of Destruction closed.
-20:56:18.173  SpawnManager: despawned npc for event: Simple
-20:56:18.173  Scripts loading...
-20:56:18.173  Scripts start parse class...
-20:56:18.982  Scripts end parse class...
-20:56:23.896  Scripts end compile class...
-20:56:25.128  Scripts successfully loaded. Loaded 1292 classes.
-20:56:25.163  Short statistics in the commynity board has been updated.
-20:56:25.167  Loaded Service: change sex services.
-20:56:25.167  Loaded Service: change name services.
-20:56:25.167  Loaded Service: change clan name services.
-20:56:25.167  Loaded Service: change base class services.
-20:56:25.167  Loaded Service: separate services.
-20:56:25.169  Loaded Event: L2 Rabbits To Riches Event [state: deactivated]
-20:56:25.171  Loaded Quest: 1001: Wake Up Baium
-20:56:25.181  CommunityBoard: Simple Lottery games loaded.
-20:56:25.182  CommunityBoard: Simple Lottery games played 0.
-20:56:25.183  CommunityBoard: Simple Lottery jackpot is 0 Adena.
-20:56:25.189  Loaded Event: GvG
-20:56:25.222  Loaded Service: NPCBuffer [state: deactivated]
-20:56:25.233  SailrenManager: State of Sailren is NOTSPAWN.
-20:56:25.233  SailrenManager: Next spawn date of Sailren is Thu Jan 01 03:00:00 MSK 1970.
-20:56:25.237  Loaded Service: Bash [disabled]
-20:56:25.253  Loaded Service: Pagan Doormans
-20:56:25.268  Beleth Manager: Loaded successfuly
-20:56:25.274  Loaded Quest: 1004: Ice Fairy Sirra
-20:56:25.279  Loaded Event: Fight Club
-20:56:25.283  Loaded Quest: 1202: Crystal Caverns
-20:56:25.287  Loaded Event: L2 Medal Collection Event [state: deactivated]
-20:56:25.307  Loaded Service: Roulette
-20:56:25.308  Loaded Service: Evolve Wolf
-20:56:25.311  Loaded Event: TvT Arena 3 [state: deactivated]
-20:56:25.312  Loaded Event: TvT Arena 2 [state: deactivated]
-20:56:25.313  Loaded Event: TvT Arena 1 [state: deactivated]
-20:56:25.331  Load 297 teleport points.
-20:56:25.332  Loaded Service: Teleport to Fantasy Isle
-20:56:25.334  AntharasManager: State of Antharas is NOTSPAWN.
-20:56:25.335  AntharasManager: Next spawn date of Antharas is 03:00 01.01.1970.
-20:56:25.341  Loaded Event: Victorina
-20:56:25.369  Loaded Service: Item Broker
-20:56:25.373  Loaded Service: Evolve Improved Baby Kookaburra
-20:56:25.375  Loaded Event: Gludin Arena
-20:56:25.376  Loaded Service: Summon a corpse
-20:56:25.384  Loaded Event: The Fall Harvest [state: deactivated]
-20:56:25.391  Loaded Quest: 1201: Dark Cloud Mansion
-20:56:25.398  Loaded Event: Underground Arena #1
-20:56:25.403  Loaded Event: MasterOfEnchanting [state: deactivated]
-20:56:25.430  Loaded Event: CtF active.
-20:56:25.439  MonasteryOfSilence: Loaded
-20:56:25.449  ZakenManager: Init Zaken Manager.
-20:56:25.454  CommunityBoard: Premium Lottery games loaded.
-20:56:25.457  CommunityBoard: Premium Lottery games played 0.
-20:56:25.458  CommunityBoard: Premium Lottery jackpot is 0 Gold Einhasad.
-20:56:25.464  OnActionShift Loaded
-20:56:25.469  Loaded Event: Coffer of Shadows [state: deactivated]
-20:56:25.476  Kamaloka Gate Loaded
-20:56:25.480  LastImperialTombSpawnlist: Loaded 180 Room1 1st Npc Spawn Locations.
-20:56:25.480  LastImperialTombSpawnlist: Loaded 4 Room2 Inside Npc Spawn Locations.
-20:56:25.480  LastImperialTombSpawnlist: Loaded 121 Room2 Outside Npc Spawn Locations.
-20:56:25.480  Unevenly distributed hash code - Degraded Preformance
-20:56:25.503  Loaded Service: Isle of Player Race
-20:56:25.505  Loaded Service: Teleport to catacombs
-20:56:25.507  Loaded Service: Villagemasters [Clan Operations]
-20:56:25.515  Loaded Service: NPC RemoveDeathPenalty
-20:56:25.515  Loaded Service: VitaminManager...
-20:56:25.516  Loaded Event: Change of Heart[state: deactivated]
-20:56:25.517  Loaded Service: Clan function.
-20:56:25.533  Loaded Service: Villagemasters [Alliance Operations]
-20:56:25.538  Loaded Service: Evolve Improved Baby Cougar
-20:56:25.541  Loaded Service: Villagemasters [Changing occupations]
-20:56:25.549  Loaded Event: AutoAnnouncer [state: deactivated]
-20:56:25.558  Utilites Loaded
-20:56:25.558  Loaded Service: Nick color change
-20:56:25.560  MonasteryOfSilenceGame: Loaded
-20:56:25.576  Loaded Service: ClanHall Pet Evolution
-20:56:25.606  Loaded Event: Last Hunter
-20:56:25.618  npc_id=29068 time=0
-20:56:25.618  npc_id=29068 state=0
-20:56:25.618  npc_id=29020 time=0
-20:56:25.618  npc_id=29028 time=0
-20:56:25.618  npc_id=29062 time=0
-20:56:25.618  npc_id=29065 time=0
-20:56:25.618  npc_id=29065 state=0
-20:56:25.618  npc_id=29186 time=0
-20:56:25.619  Full statistics in the commynity board has been updated.
-20:56:25.620  Loaded Service: Expand Inventory
-20:56:25.621  Loaded Quest: 1003: Sailren
-20:56:25.625  Loaded Event: TvT
-20:56:25.628  Loaded Service: Obtain Talisman
-20:56:25.630  Loaded Event: SavingSnowman [state: deactivated]
-20:56:25.634  Loaded Service: Tower
-20:56:25.634  Loaded Event: Dion Arena
-20:56:25.646  Loaded Service: Window
-20:56:25.658  Loaded Event: The Flow Of The Horror [state: deactivated]
-20:56:25.661  Loaded Event: Tournament [state: deactivated]
-20:56:25.684  Loaded Service: Bonus [state: deactivated]
-20:56:25.693  Loaded Service: Evolve Improved Baby Buffalo
-20:56:25.700  Loaded Service: Evolve Fenrir
-20:56:25.703  Loaded Event: L2Coins [state: deactivated]
-20:56:25.708  Loaded Service: CWH Privileges
-20:56:25.715  Loaded Event: Bounty Hunters Guild
-20:56:25.726  Loaded Service: Hero Items
-20:56:25.727  Loaded Service: 1103: Oracle Teleport
-20:56:25.746  Loaded Event: Christmas [state: deactivated]
-20:56:25.752  Lindvior Manager Load.
-20:56:25.755  Loaded Service: Nobless sell
-20:56:25.764  Loaded Service: SubClass sell
-20:56:25.765  Loaded Service: Border Outpost Doormans
-20:56:25.767  Loaded Service: Pushkin
-20:56:25.777  MarcketLoad Loaded...
-20:56:25.788  Loaded Service: Rate bonus
-20:56:25.790  Unevenly distributed hash code - Degraded Preformance
-20:56:25.791  Loaded Successful
-20:56:25.814  FourSepulchersManager: Loaded 20 Mysterious-Box spawns.
-20:56:25.840  FourSepulchersManager: loaded 716 physical monsters spawns.
-20:56:25.866  FourSepulchersManager: loaded 716 magical monsters spawns.
-20:56:25.870  FourSepulchersManager: loaded 92 Church of duke monsters spawns.
-20:56:25.883  FourSepulchersManager: loaded 68 Emperor's grave NPC spawns.
-20:56:25.884  FourSepulchersManager: Spawned Conquerors Sepulcher Manager
-20:56:25.884  FourSepulchersManager: Spawned Emperors Sepulcher Manager
-20:56:25.884  FourSepulchersManager: Spawned Great Sages Sepulcher Manager
-20:56:25.884  FourSepulchersManager: Spawned Judges Sepulcher Manager
-20:56:25.885  FourSepulchersManager: Beginning in Entry time
-20:56:25.889  Loaded Event: Reward of Honor [state: deactivated]
-20:56:25.896  Loaded Event: l2day [state: deactivated]
-20:56:25.899  Loaded Service: Mana Regen
-20:56:25.906  Loaded Service: Grand Isle of Prayer Race
-20:56:25.907  Loaded Service: Teleport to Race Track
-20:56:25.915  Loaded Service: Expand CWH
-20:56:25.923  Loaded Service: Ride Hire
-20:56:25.937  [EnhanceYourWeapon] Loaded 54 Soul Crystal data.
-20:56:25.937  [EnhanceYourWeapon] Loaded 240 npc Leveling info data.
-20:56:25.940  Loaded Event: March 8 [state: deactivated]
-20:56:25.947  ValakasManager: State of Valakas is NOTSPAWN.
-20:56:25.947  ValakasManager: Next spawn date of Valakas is 03:00 01.01.1970.
-20:56:25.954  Loaded Event: Giran Arena
-20:56:25.959  CommunityBoard: Forge Enchant: false
-20:56:25.959  CommunityBoard: Forge Attribut: false
-20:56:25.959  CommunityBoard: Forge Augment: false
-20:56:25.965  Loaded Service: Rate bonus
-20:56:25.973  Loaded Event: Last Hero
-20:56:25.985  Seed Of Destruction closed.
-20:56:25.990  Loaded Service: Fantasy Isle
-20:56:25.993  Loaded Service: DropItem
-20:56:25.996  Loaded Event: Simple [state: deactivated]
-20:56:25.997  Loaded Service: Enter Hellbound Island
-20:56:25.999  Loaded Service: Level manipulation
-20:56:26.002  BaiumManager: State of Baium is NOTSPAWN.
-20:56:26.002  Loaded Boss: Baium. Next spawn date: Thu Jan 01 03:00:00 MSK 1970
-20:56:26.003  Loaded Service: Expand Warehouse
-20:56:26.022  Loaded Service: Fort Info
-20:56:27.229  SendBypassBuildCmd: save_loc zone
-20:56:40.621  npc_id=29068 time=0
-20:56:40.621  npc_id=29068 state=0
-20:56:40.621  npc_id=29020 time=0
-20:56:40.621  npc_id=29020 state=0
-20:56:40.621  npc_id=29028 time=0
-20:56:40.621  npc_id=29028 state=0
-20:56:40.621  npc_id=29062 time=0
-20:56:40.621  npc_id=29065 time=0
-20:56:40.621  npc_id=29065 state=0
-20:56:40.621  npc_id=29186 time=0
-20:56:40.621  npc_id=29186 state=0
-20:57:01.042  SendBypassBuildCmd: save_loc newT
-21:00:25.886  Sun Aug 27 21:00:25 MSK 2023 Atk announce scheduled to 0.0 minute of this hour.
-21:00:34.341  SendBypassBuildCmd: admin
+21:19:52.060  ConfigSystem(383): -> NoSuchFieldException(fake.properties): ?######
+21:19:52.111  Abuse: Loaded 18 abuse words.
+21:19:52.167  loading xml GMAccess
+21:19:52.220  MLog clients using java 1.4+ standard logging.
+21:19:52.379  Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+21:19:52.495  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 0, acquireRetryDelay -> 100, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15wayighf0ekmurto|60438a68, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15wayighf0ekmurto|60438a68, idleConnectionTestPeriod -> 60, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost/l2tehno?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 1000, maxStatements -> 100, maxStatementsPerConnection -> 10, minPoolSize -> 1, numHelperThreads -> 5, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+21:19:52.805  Clear characters online status and accesslevel.
+21:19:52.835  Total cleaned: 0, updated: 0 elements in database.
+21:19:52.858  IdFactory: Table items contains 74 rows
+21:19:52.858  IdFactory: Table clan_data contains 0 rows
+21:19:52.858  IdFactory: Table characters contains 6 rows
+21:19:52.860  IdFactory: Table ally_data contains 0 rows
+21:19:52.860  IdFactory: Table pets contains 0 rows
+21:19:52.861  IdFactory: Table couples contains 0 rows
+21:19:52.862  IdFactory: Extracting 80 used id's from data tables...
+21:19:52.863  IdFactory: Extracted 0 used id's from clan_data
+21:19:52.863  IdFactory: Extracted 6 used id's from characters
+21:19:52.864  IdFactory: Extracted 74 used id's from items
+21:19:52.865  IdFactory: Extracted 0 used id's from ally_data
+21:19:52.865  IdFactory: Extracted 0 used id's from couples
+21:19:52.866  IdFactory: Extracted 0 used id's from pets
+21:19:52.866  IdFactory: Successfully extracted 80 used id's from data tables.
+21:19:52.866  IDFactory: 102912 id's available.
+21:19:53.164  CrestCache: Loaded 0 crests
+21:19:53.176  Initializing AuctionManager
+21:19:53.268  Loaded: 38 active auction(s)
+21:19:56.967  PTS HTML: ./data/html-ru.zip loaded 4163ms...
+21:19:58.016  SkillsEngine: Loaded 61827 skill templates from XML files. Max id: 26077, max level: 259
+21:19:58.016  SkillsEngine: Loaded 1616 custom skill templates from XML files.
+21:19:59.384  L2Skill5: [2139][1][TARGET_ONE][range][not_friend]
+21:19:59.391  L2Skill5: [2260][1][TARGET_ONE][single][none]
+21:19:59.396  L2Skill5: [2353][1][TARGET_ONE][static_object_scope][hidden_place]
+21:19:59.400  L2Skill5: [2624][1][TARGET_ONE][single][none]
+21:19:59.444  L2Skill5: [4143][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.452  L2Skill5: [4212][1][TARGET_ONE][range][friend]
+21:19:59.466  L2Skill5: [4483][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.467  L2Skill5: [4488][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.468  L2Skill5: [4524][1][TARGET_ONE][single][none]
+21:19:59.480  L2Skill5: [4697][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.494  L2Skill5: [5037][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.494  L2Skill5: [5039][1][TARGET_ONE][single][none]
+21:19:59.495  L2Skill5: [5051][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.495  L2Skill5: [5054][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.498  L2Skill5: [5104][1][TARGET_ONE][single][none]
+21:19:59.499  L2Skill5: [5105][1][TARGET_ONE][single][none]
+21:19:59.499  L2Skill5: [5114][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.500  L2Skill5: [5117][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.500  L2Skill5: [5123][1][TARGET_ONE][point_blank][friend]
+21:19:59.501  L2Skill5: [5124][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.501  L2Skill5: [5125][1][TARGET_ONE][point_blank][friend]
+21:19:59.501  L2Skill5: [5126][1][TARGET_ONE][point_blank][friend]
+21:19:59.501  L2Skill5: [5127][1][TARGET_ONE][point_blank][friend]
+21:19:59.501  L2Skill5: [5128][1][TARGET_ONE][point_blank][friend]
+21:19:59.502  L2Skill5: [5129][1][TARGET_ONE][point_blank][friend]
+21:19:59.502  L2Skill5: [5130][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.502  L2Skill5: [5131][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.502  L2Skill5: [5132][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.502  L2Skill5: [5133][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.502  L2Skill5: [5134][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.502  L2Skill5: [5145][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.506  L2Skill5: [5202][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.506  L2Skill5: [5203][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.506  L2Skill5: [5204][1][TARGET_ONE][single][none]
+21:19:59.507  L2Skill5: [5239][1][TARGET_ONE][single][none]
+21:19:59.508  L2Skill5: [5248][1][TARGET_ONE][single][none]
+21:19:59.508  L2Skill5: [5252][1][TARGET_ONE][single][none]
+21:19:59.508  L2Skill5: [5257][1][TARGET_ONE][single][none]
+21:19:59.510  L2Skill5: [5275][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.511  L2Skill5: [5279][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.511  L2Skill5: [5283][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.512  L2Skill5: [5287][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.512  L2Skill5: [5291][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.513  L2Skill5: [5295][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.514  L2Skill5: [5306][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.517  L2Skill5: [5340][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.517  L2Skill5: [5344][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.518  L2Skill5: [5348][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.518  L2Skill5: [5352][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.519  L2Skill5: [5356][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.519  L2Skill5: [5360][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.521  L2Skill5: [5366][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.522  L2Skill5: [5375][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.524  L2Skill5: [5379][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.524  L2Skill5: [5382][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.525  L2Skill5: [5385][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.526  L2Skill5: [5388][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.527  L2Skill5: [5391][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.528  L2Skill5: [5423][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.528  L2Skill5: [5424][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.528  L2Skill5: [5430][1][TARGET_ONE][range][clan]
+21:19:59.530  L2Skill5: [5447][1][TARGET_ONE][single][none]
+21:19:59.533  L2Skill5: [5494][1][TARGET_ONE][single][none]
+21:19:59.535  L2Skill5: [5591][1][TARGET_ONE][single][none]
+21:19:59.536  L2Skill5: [5619][1][TARGET_ONE][single][none]
+21:19:59.540  L2Skill5: [5660][1][TARGET_ONE][single][none]
+21:19:59.540  L2Skill5: [5689][1][TARGET_ONE][single][none]
+21:19:59.540  L2Skill5: [5697][1][TARGET_ONE][single][none]
+21:19:59.541  L2Skill5: [5699][1][TARGET_ONE][single][none]
+21:19:59.542  L2Skill5: [5713][1][TARGET_ONE][single][none]
+21:19:59.544  L2Skill5: [5751][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.545  L2Skill5: [5756][1][TARGET_ONE][single][none]
+21:19:59.550  L2Skill5: [5772][1][TARGET_ONE][single][none]
+21:19:59.550  L2Skill5: [5773][1][TARGET_ONE][single][none]
+21:19:59.551  L2Skill5: [5799][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.552  L2Skill5: [5836][1][TARGET_ONE][point_blank][clan]
+21:19:59.552  L2Skill5: [5847][1][TARGET_ONE][point_blank][none]
+21:19:59.554  L2Skill5: [5887][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.555  L2Skill5: [5923][1][TARGET_ONE][single][none]
+21:19:59.555  L2Skill5: [5937][1][TARGET_ONE][single][none]
+21:19:59.557  L2Skill5: [6020][1][TARGET_ONE][single][none]
+21:19:59.558  L2Skill5: [6021][1][TARGET_ONE][single][none]
+21:19:59.558  L2Skill5: [6022][1][TARGET_ONE][single][none]
+21:19:59.558  L2Skill5: [6023][1][TARGET_ONE][single][none]
+21:19:59.558  L2Skill5: [6034][1][TARGET_ONE][single][none]
+21:19:59.560  L2Skill5: [6090][1][TARGET_ONE][single][none]
+21:19:59.560  L2Skill5: [6092][1][TARGET_ONE][single][none]
+21:19:59.565  L2Skill5: [6270][1][TARGET_ONE][point_blank][none]
+21:19:59.566  L2Skill5: [6298][1][TARGET_ONE][single][none]
+21:19:59.566  L2Skill5: [6301][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.566  L2Skill5: [6305][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.567  L2Skill5: [6316][1][TARGET_ONE][single][none]
+21:19:59.567  L2Skill5: [6320][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.570  L2Skill5: [6372][1][TARGET_ONE][single][none]
+21:19:59.571  L2Skill5: [6374][1][TARGET_ONE][single][none]
+21:19:59.572  L2Skill5: [6375][1][TARGET_ONE][single][none]
+21:19:59.576  L2Skill5: [6398][1][TARGET_ONE][ring_range][not_friend]
+21:19:59.580  L2Skill5: [6415][1][TARGET_ONE][point_blank][not_friend]
+21:19:59.615  L2Skill5: [6422][1][TARGET_ONE][point_blank][not_friend]
+21:20:00.096  L2Skill5: [6754][1][TARGET_ONE][point_blank][not_friend]
+21:20:00.098  L2Skill5: [6769][1][TARGET_ONE][point_blank][not_friend]
+21:20:00.099  L2Skill5: [6777][1][TARGET_ONE][point_blank][not_friend]
+21:20:00.099  L2Skill5: [6779][1][TARGET_ONE][single][none]
+21:20:00.103  L2Skill5: [6835][1][TARGET_ONE][single][none]
+21:20:00.104  L2Skill5: [6841][1][TARGET_ONE][single][none]
+21:20:00.104  L2Skill5: [6858][1][TARGET_ONE][single][none]
+21:20:00.104  L2Skill5: [6864][1][TARGET_ONE][single][none]
+21:20:00.104  L2Skill5: [6868][1][TARGET_ONE][single][none]
+21:20:00.203  PTS HTML: ./data/html-en.zip loaded 3236ms...
+21:20:00.206  Loaded 418 translit entrys
+21:20:00.216  L2Skill5: [9011][1][TARGET_ONE][single][none]
+21:20:00.216  L2Skill5: [9011][1][TARGET_ONE][single][none]
+21:20:00.217  L2Skill5: [9011][1][TARGET_ONE][single][none]
+21:20:00.217  L2Skill5: [9012][1][TARGET_ONE][single][none]
+21:20:00.217  L2Skill5: [9012][1][TARGET_ONE][single][none]
+21:20:00.217  L2Skill5: [9012][1][TARGET_ONE][single][none]
+21:20:00.218  L2Skill5: [9012][1][TARGET_ONE][single][none]
+21:20:00.218  L2Skill5: [9012][1][TARGET_ONE][single][none]
+21:20:00.218  L2Skill5: [9012][1][TARGET_ONE][single][none]
+21:20:00.218  L2Skill5: [9013][1][TARGET_ONE][single][none]
+21:20:00.218  L2Skill5: [9013][1][TARGET_ONE][single][none]
+21:20:00.218  L2Skill5: [9013][1][TARGET_ONE][single][none]
+21:20:00.218  L2Skill5: [9013][1][TARGET_ONE][single][none]
+21:20:00.219  L2Skill5: [9013][1][TARGET_ONE][single][none]
+21:20:00.219  L2Skill5: [9013][1][TARGET_ONE][single][none]
+21:20:00.219  L2Skill5: [9013][1][TARGET_ONE][single][none]
+21:20:00.219  L2Skill5: [9014][1][TARGET_ONE][single][none]
+21:20:00.219  L2Skill5: [9014][1][TARGET_ONE][single][none]
+21:20:00.220  L2Skill5: [9014][1][TARGET_ONE][single][none]
+21:20:00.221  L2Skill5: [9014][1][TARGET_ONE][single][none]
+21:20:00.221  L2Skill5: [9014][1][TARGET_ONE][single][none]
+21:20:00.222  L2Skill5: [9014][1][TARGET_ONE][single][none]
+21:20:00.222  L2Skill5: [9014][1][TARGET_ONE][single][none]
+21:20:00.222  L2Skill5: [9014][1][TARGET_ONE][single][none]
+21:20:00.222  L2Skill5: [9014][1][TARGET_ONE][single][none]
+21:20:00.223  L2Skill5: [9014][1][TARGET_ONE][single][none]
+21:20:00.223  L2Skill5: [9014][1][TARGET_ONE][single][none]
+21:20:00.223  L2Skill5: [9014][1][TARGET_ONE][single][none]
+21:20:00.223  L2Skill5: [9014][1][TARGET_ONE][single][none]
+21:20:00.224  L2Skill5: [9014][1][TARGET_ONE][single][none]
+21:20:00.224  L2Skill5: [9014][1][TARGET_ONE][single][none]
+21:20:00.225  L2Skill5: [9060][1][TARGET_ONE][point_blank][friend]
+21:20:00.231  L2Skill5: [21005][1][TARGET_ONE][single][none]
+21:20:00.231  L2Skill5: [21052][1][TARGET_ONE][single][none]
+21:20:00.232  L2Skill5: [21055][1][TARGET_ONE][single][none]
+21:20:00.232  L2Skill5: [21056][1][TARGET_ONE][single][none]
+21:20:00.232  L2Skill5: [21061][1][TARGET_ONE][single][none]
+21:20:00.232  L2Skill5: [21063][1][TARGET_ONE][single][none]
+21:20:00.232  L2Skill5: [21071][1][TARGET_ONE][single][none]
+21:20:00.232  L2Skill5: [21086][1][TARGET_ONE][single][none]
+21:20:00.233  L2Skill5: [21153][1][TARGET_ONE][single][none]
+21:20:00.233  L2Skill5: [21154][1][TARGET_ONE][single][none]
+21:20:00.234  L2Skill5: [21170][1][TARGET_ONE][single][none]
+21:20:00.241  L2Skill5: [23165][1][TARGET_ONE][single][none]
+21:20:00.244  L2Skill5: [23298][1][TARGET_ONE][single][none]
+21:20:00.245  L2Skill5: [23308][1][TARGET_ONE][point_blank][friend]
+21:20:00.245  L2Skill5: [23309][1][TARGET_ONE][point_blank][friend]
+21:20:00.245  L2Skill5: [23310][1][TARGET_ONE][point_blank][friend]
+21:20:00.245  L2Skill5: [23311][1][TARGET_ONE][point_blank][friend]
+21:20:00.518  CubicManager: Loaded 145 cubics.
+21:20:00.750  PetSkillsTable: Loaded 2671 skills.
+21:20:02.084  WARNING: item 20711 action attached skill not done: Box of Dynasty Armor[id=9105,lvl=1]
+21:20:03.198  XmlOptionDataLoader: Loaded 24975 templates.
+21:20:03.248  XmlArmorLoader: Loaded 0 Custom Armors
+21:20:03.248  XmlArmorLoader: Loaded 3554 Armors
+21:20:03.248  XmlArmorLoader: Loaded 240 Rare Armors
+21:20:03.248  XmlArmorLoader: Loaded 58 PvP Armors
+21:20:05.016  XmlWeaponLoader: Loaded 0 Custom Weapons
+21:20:05.017  XmlWeaponLoader: Loaded 4001 Weapons
+21:20:05.017  XmlWeaponLoader: Loaded 794 Rare Weapons
+21:20:05.017  XmlWeaponLoader: Loaded 558 PvP Weapons
+21:20:05.017  XmlWeaponLoader: Loaded 1667 SA Weapons
+21:20:05.017  XmlWeaponLoader: Loaded 283 Trigger for Weapons
+21:20:05.017  XmlWeaponLoader: Loaded 262 Pole Weapons
+21:20:07.271  XmlEtcItemLoader: Loaded 0 Custom EtcItems
+21:20:07.271  XmlEtcItemLoader: Loaded 10855 EtcItems
+21:20:07.360  TradeController: Loaded 4 file(s).
+21:20:07.360  TradeController: Loaded 23181 Items.
+21:20:07.360  TradeController: Loaded 702 Buylists.
+21:20:07.802  RecipeController: Loaded 1000 Recipes.
+21:21:12.481  SkillTreeTable: Loaded 17098 skills.
+21:21:12.481  SkillTreeTable: Loaded 109 fishing skills.
+21:21:12.481  SkillTreeTable: Loaded 20 transformation skills.
+21:21:12.481  SkillTreeTable: Loaded 64 clan skills.
+21:21:12.481  SkillTreeTable: Loaded 526 enchanted skills.
+21:21:12.481  SkillTreeTable: Loaded 18 pledge skills.
+21:21:12.481  SkillTreeTable: Loaded 74 certification skills.
+21:21:12.481  SkillTreeTable: Loaded 0 other skills.
+21:21:12.482  SkillTreeTable: Loaded 21 Transfer skills for Bishop.
+21:21:12.482  SkillTreeTable: Loaded 24 Transfer skills for Elder.
+21:21:12.482  SkillTreeTable: Loaded 32 Transfer skills for Silen Elder.
+21:21:12.485  SkillSpellbookTable: Loaded 386 Spellbooks.
+21:21:12.486  PTS ArmorEnchantBonusData: Finish loading data fo 0 ms...
+21:21:12.496  CharTemplateTable: Loaded 206 Character Templates.
+21:21:12.500  NpcTable: Loaded 779 AI params for 666 NPCs.
+21:21:12.661  Scripts loading...
+21:21:12.662  Scripts start parse class...
+21:21:13.096  Scripts end parse class...
+21:21:18.798  Scripts end compile class...
+21:21:19.711  Scripts successfully loaded. Loaded 1292 classes.
+21:21:20.244  NpcTable: Loaded 10463 Npc Templates.
+21:21:20.493  Loaded 118801 npc skills.
+21:21:20.636  Players droplist load skipped
+21:21:20.639  NpcTable: Loaded 597 Minions.
+21:21:20.641  NpcTable: Loaded 1641 SkillLearn entrys.
+21:21:20.674  PTS NpcDataPch: Finish loading data size: 10195 fo 32 ms...
+21:21:20.679  HennaTable: Loaded 180 Templates.
+21:21:20.762  HennaTreeTable: Loaded 8134 Henna Tree Templates.
+21:21:20.765  LevelUpData: Loaded 103 Character Level Up Templates.
+21:21:20.775  L2World: [255][271][63] World Region Grid set up.
+21:21:20.776  GeoEngine: Loading Geodata...
+21:21:20.776  GeoEngine: Loaded 0 map(s), max layers: 1
+21:21:22.097  DoorTable: Loaded 1030 doors.
+21:21:22.258  TerritoryTable: Loaded 9976 locations
+21:21:22.359  ZoneManager: Loaded 1649 zones
+21:21:22.442  TerritoryTable: Added 1642 locations to L2World
+21:21:22.443  Loaded: 1 UnderGround Colliseums.
+21:21:22.547  Loaded: 9 castles.
+21:21:22.595  correctSiegeDateTime[START][1693333282579][1693333282579]: Siege of Gludio: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.596  correctSiegeDateTime[FINISH][1693333282595][1693333282595]: Siege of Gludio: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.599  Siege of Gludio: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.604  correctSiegeDateTime[START][1693333282604][1693333282604]: Siege of Dion: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.604  correctSiegeDateTime[FINISH][1693333282604][1693333282604]: Siege of Dion: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.612  Siege of Dion: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.618  correctSiegeDateTime[START][1693333282618][1693333282618]: Siege of Giran: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.618  correctSiegeDateTime[FINISH][1693333282618][1693333282618]: Siege of Giran: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.619  Siege of Giran: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.624  correctSiegeDateTime[START][1693333282624][1693333282624]: Siege of Oren: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.624  correctSiegeDateTime[FINISH][1693333282624][1693333282624]: Siege of Oren: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.626  Siege of Oren: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.633  correctSiegeDateTime[START][1693333282633][1693333282633]: Siege of Aden: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.633  correctSiegeDateTime[FINISH][1693333282633][1693333282633]: Siege of Aden: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.636  Siege of Aden: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.638  correctSiegeDateTime[START][1693333282638][1693333282638]: Siege of Innadril: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.639  correctSiegeDateTime[FINISH][1693333282639][1693333282639]: Siege of Innadril: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.641  Siege of Innadril: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.645  correctSiegeDateTime[START][1693333282645][1693333282645]: Siege of Goddard: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.646  correctSiegeDateTime[FINISH][1693333282646][1693333282646]: Siege of Goddard: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.649  Siege of Goddard: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.652  correctSiegeDateTime[START][1693333282652][1693333282652]: Siege of Rune: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.652  correctSiegeDateTime[FINISH][1693333282652][1693333282652]: Siege of Rune: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.659  Siege of Rune: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.664  correctSiegeDateTime[START][1693333282664][1693333282664]: Siege of Schuttgart: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.664  correctSiegeDateTime[FINISH][1693333282664][1693333282664]: Siege of Schuttgart: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.665  Siege of Schuttgart: Sun Sep 03 16:00:00 MSK 2023
+21:21:22.666  Initializing FortressManager
+21:21:22.911  Loaded: 21 fortresses.
+21:21:22.960  Initializing ClanHallManager.
+21:21:23.309  Loaded: 44 ClanHalls.
+21:21:23.326  110 doors attached to ClanHalls
+21:21:23.332  Siege of Bandit Stronghold : Fri Sep 01 21:00:00 MSK 2023
+21:21:23.336  Siege of Wild Beasts Farm : Fri Sep 01 21:00:00 MSK 2023
+21:21:23.340  Siege of Rainbow Springs Chateau : Fri Sep 01 22:00:00 MSK 2023
+21:21:23.356  TerritorySiege: load 9 town spawns.
+21:21:23.363  TerritorySiege: load 9 castle spawns.
+21:21:23.367  TerritorySiege: load 9 fortress spawns.
+21:21:23.369  Territory Siege: 02.09.2023 20:00:27
+21:21:23.372  Manor System: Initializing...
+21:21:23.381  SeedOfAnnihilationManager: Load Manager.
+21:21:23.509  RaidBossSpawnManager: Loaded 0 Statuses
+21:21:23.816  Naia Tower Manager: Loaded 12 rooms
+21:21:24.129  Spawned 4000 npc
+21:21:24.267  Spawned 7000 npc
+21:21:24.313  Spawned 8000 npc
+21:21:24.360  Spawned 9000 npc
+21:21:24.524  Spawned 13000 npc
+21:21:25.496  Spawned 20000 npc
+21:21:25.556  Spawned 21000 npc
+21:21:25.616  Spawned 22000 npc
+21:21:25.672  Spawned 23000 npc
+21:21:25.865  Spawned 26000 npc
+21:21:25.938  Spawned 27000 npc
+21:21:26.561  Spawned 30000 npc
+21:21:26.621  Hellbound Manager: Current Level is 1
+21:21:26.621  Hellbound Manager: Current Points is 0
+21:21:26.670  Spawned 31000 npc
+21:21:26.748  Spawned 32000 npc
+21:21:26.910  Spawned 34000 npc
+21:21:26.983  Spawned 35000 npc
+21:21:27.473  Spawned 36000 npc
+21:21:27.554  Spawned 37000 npc
+21:21:27.634  Spawned 38000 npc
+21:21:27.767  Spawned 39000 npc
+21:21:27.851  Spawned 40000 npc
+21:21:27.939  Spawned 41000 npc
+21:21:28.134  Spawned 42000 npc
+21:21:28.204  SevenSigns: Currently in the Competition (Quest Event) period!
+21:21:28.204  SevenSigns: The Seal of Avarice remains unclaimed.
+21:21:28.204  SevenSigns: The Seal of Gnosis remains unclaimed.
+21:21:28.204  SevenSigns: The Seal of Strife remains unclaimed.
+21:21:28.204  SevenSigns: The Competition this week, if the trend continue, will end with a tie.
+21:21:28.205  SevenSigns: Next period begins in 5 days, 20 hours and 38 mins.
+21:21:28.205  SpawnTable: Loaded 18204 Npc Spawn Locations. Total NPCs: 42167
+21:21:28.206  Monsters inventory loaded, items: 0
+21:21:28.285  Short statistics in the commynity board has been updated.
+21:21:28.288  Loaded Service: change sex services.
+21:21:28.289  Loaded Service: change name services.
+21:21:28.289  Loaded Service: change clan name services.
+21:21:28.289  Loaded Service: change base class services.
+21:21:28.289  Loaded Service: separate services.
+21:21:28.291  Loaded Event: L2 Rabbits To Riches Event [state: deactivated]
+21:21:28.315  Loaded Quest: 1001: Wake Up Baium
+21:21:28.331  CommunityBoard: Simple Lottery games loaded.
+21:21:28.332  CommunityBoard: Simple Lottery games played 0.
+21:21:28.334  CommunityBoard: Simple Lottery jackpot is 0 Adena.
+21:21:28.341  Loaded Event: GvG
+21:21:28.381  Loaded Service: NPCBuffer [state: deactivated]
+21:21:28.390  SailrenManager: State of Sailren is NOTSPAWN.
+21:21:28.391  SailrenManager: Next spawn date of Sailren is Thu Jan 01 03:00:00 MSK 1970.
+21:21:28.394  Loaded Service: Bash [disabled]
+21:21:28.409  Loaded Service: Pagan Doormans
+21:21:28.426  Beleth Manager: Loaded successfuly
+21:21:28.432  Loaded Quest: 1004: Ice Fairy Sirra
+21:21:28.441  Loaded Event: Fight Club
+21:21:28.445  Loaded Quest: 1202: Crystal Caverns
+21:21:28.448  Loaded Event: L2 Medal Collection Event [state: deactivated]
+21:21:28.469  Loaded Service: Roulette
+21:21:28.470  Loaded Service: Evolve Wolf
+21:21:28.473  Loaded Event: TvT Arena 3 [state: deactivated]
+21:21:28.474  Loaded Event: TvT Arena 2 [state: deactivated]
+21:21:28.474  Loaded Event: TvT Arena 1 [state: deactivated]
+21:21:28.495  Load 297 teleport points.
+21:21:28.496  Loaded Service: Teleport to Fantasy Isle
+21:21:28.498  AntharasManager: State of Antharas is NOTSPAWN.
+21:21:28.498  AntharasManager: Next spawn date of Antharas is 03:00 01.01.1970.
+21:21:28.504  Loaded Event: Victorina
+21:21:28.508  ManorManager: Loaded 270 seeds
+21:21:28.535  Loaded Service: Item Broker
+21:21:28.537  Loaded Service: Evolve Improved Baby Kookaburra
+21:21:28.539  Loaded Event: Gludin Arena
+21:21:28.540  Loaded Service: Summon a corpse
+21:21:28.551  Loaded Event: The Fall Harvest [state: deactivated]
+21:21:28.561  Loaded Quest: 1201: Dark Cloud Mansion
+21:21:28.576  Loaded Event: Underground Arena #1
+21:21:28.586  Loaded Event: MasterOfEnchanting [state: deactivated]
+21:21:28.608  Loaded Event: CtF active.
+21:21:28.620  MonasteryOfSilence: Loaded
+21:21:28.638  ZakenManager: Init Zaken Manager.
+21:21:28.645  CommunityBoard: Premium Lottery games loaded.
+21:21:28.649  CommunityBoard: Premium Lottery games played 0.
+21:21:28.651  CommunityBoard: Premium Lottery jackpot is 0 Gold Einhasad.
+21:21:28.657  OnActionShift Loaded
+21:21:28.664  Loaded Event: Coffer of Shadows [state: deactivated]
+21:21:28.672  Kamaloka Gate Loaded
+21:21:28.675  LastImperialTombSpawnlist: Loaded 180 Room1 1st Npc Spawn Locations.
+21:21:28.675  LastImperialTombSpawnlist: Loaded 4 Room2 Inside Npc Spawn Locations.
+21:21:28.675  LastImperialTombSpawnlist: Loaded 121 Room2 Outside Npc Spawn Locations.
+21:21:28.681  Unevenly distributed hash code - Degraded Preformance
+21:21:28.687  FishTable: Loaded 270 Fishes.
+21:21:28.691  FishRewardsTable: Loaded 919 FishRewards.
+21:21:28.708  Loaded Service: Isle of Player Race
+21:21:28.710  Loaded Service: Teleport to catacombs
+21:21:28.712  Loaded Service: Villagemasters [Clan Operations]
+21:21:28.723  Loaded Service: NPC RemoveDeathPenalty
+21:21:28.723  Loaded Service: VitaminManager...
+21:21:28.724  Loaded Event: Change of Heart[state: deactivated]
+21:21:28.725  Loaded Service: Clan function.
+21:21:28.748  Loaded Service: Villagemasters [Alliance Operations]
+21:21:28.757  Loaded Service: Evolve Improved Baby Cougar
+21:21:28.761  Loaded Service: Villagemasters [Changing occupations]
+21:21:28.769  Loaded Event: AutoAnnouncer [state: deactivated]
+21:21:28.783  Utilites Loaded
+21:21:28.786  Loaded Service: Nick color change
+21:21:28.788  MonasteryOfSilenceGame: Loaded
+21:21:28.803  Loaded Service: ClanHall Pet Evolution
+21:21:28.836  Loaded Event: Last Hunter
+21:21:28.860  npc_id=29068 time=0
+21:21:28.860  npc_id=29068 state=0
+21:21:28.860  npc_id=29020 time=0
+21:21:28.860  npc_id=29028 time=0
+21:21:28.860  npc_id=29062 time=0
+21:21:28.860  npc_id=29065 time=0
+21:21:28.860  npc_id=29065 state=0
+21:21:28.860  npc_id=29186 time=0
+21:21:28.861  Full statistics in the commynity board has been updated.
+21:21:28.862  Loaded Service: Expand Inventory
+21:21:28.863  Loaded Quest: 1003: Sailren
+21:21:28.867  Loaded Event: TvT
+21:21:28.870  Loaded Service: Obtain Talisman
+21:21:28.872  Loaded Event: SavingSnowman [state: deactivated]
+21:21:28.876  Loaded Service: Tower
+21:21:28.876  Loaded Event: Dion Arena
+21:21:28.890  Loaded Service: Window
+21:21:28.901  Loaded Event: The Flow Of The Horror [state: deactivated]
+21:21:28.904  Loaded Event: Tournament [state: deactivated]
+21:21:28.924  Loaded Service: Bonus [state: deactivated]
+21:21:28.931  Loaded Service: Evolve Improved Baby Buffalo
+21:21:28.936  Loaded Service: Evolve Fenrir
+21:21:28.939  Loaded Event: L2Coins [state: deactivated]
+21:21:28.941  Loaded Service: CWH Privileges
+21:21:28.947  Loaded Event: Bounty Hunters Guild
+21:21:28.955  Loaded Service: Hero Items
+21:21:28.956  Loaded Service: 1103: Oracle Teleport
+21:21:28.975  Loaded Event: Christmas [state: deactivated]
+21:21:28.983  Lindvior Manager Load.
+21:21:28.987  Loaded Service: Nobless sell
+21:21:28.995  Loaded Service: SubClass sell
+21:21:28.995  Loaded Service: Border Outpost Doormans
+21:21:28.998  Loaded Service: Pushkin
+21:21:29.009  MarcketLoad Loaded...
+21:21:29.024  Loaded Service: Rate bonus
+21:21:29.026  Unevenly distributed hash code - Degraded Preformance
+21:21:29.029  Loaded Successful
+21:21:29.085  FourSepulchersManager: Loaded 20 Mysterious-Box spawns.
+21:21:29.107  FourSepulchersManager: loaded 716 physical monsters spawns.
+21:21:29.126  FourSepulchersManager: loaded 716 magical monsters spawns.
+21:21:29.131  FourSepulchersManager: loaded 92 Church of duke monsters spawns.
+21:21:29.135  FourSepulchersManager: loaded 68 Emperor's grave NPC spawns.
+21:21:29.135  FourSepulchersManager: Spawned Conquerors Sepulcher Manager
+21:21:29.135  FourSepulchersManager: Spawned Emperors Sepulcher Manager
+21:21:29.136  FourSepulchersManager: Spawned Great Sages Sepulcher Manager
+21:21:29.136  FourSepulchersManager: Spawned Judges Sepulcher Manager
+21:21:29.137  FourSepulchersManager: Beginning in Attack time
+21:21:29.139  Tue Aug 29 21:21:29 MSK 2023 Atk announce scheduled to 25.0 minute of this hour.
+21:21:29.140  Loaded Event: Reward of Honor [state: deactivated]
+21:21:29.145  Loaded Event: l2day [state: deactivated]
+21:21:29.149  Loaded Service: Mana Regen
+21:21:29.153  Loaded Service: Grand Isle of Prayer Race
+21:21:29.154  Loaded Service: Teleport to Race Track
+21:21:29.159  Loaded Service: Expand CWH
+21:21:29.165  Loaded Service: Ride Hire
+21:21:29.176  [EnhanceYourWeapon] Loaded 54 Soul Crystal data.
+21:21:29.176  [EnhanceYourWeapon] Loaded 240 npc Leveling info data.
+21:21:29.178  Loaded Event: March 8 [state: deactivated]
+21:21:29.184  ValakasManager: State of Valakas is NOTSPAWN.
+21:21:29.185  ValakasManager: Next spawn date of Valakas is 03:00 01.01.1970.
+21:21:29.190  Loaded Event: Giran Arena
+21:21:29.196  CommunityBoard: Forge Enchant: false
+21:21:29.196  CommunityBoard: Forge Attribut: false
+21:21:29.196  CommunityBoard: Forge Augment: false
+21:21:29.201  MercTicketManager: Initializing
+21:21:29.203  MercTicketManager: Loaded 0 Mercenary Tickets
+21:21:29.209  Loaded Service: Rate bonus
+21:21:29.218  Loaded Event: Last Hero
+21:21:29.311  PetDataTable: Loaded 3834[50] pets.
+21:21:29.315  Seed Of Destruction closed.
+21:21:29.319  Loaded Service: Fantasy Isle
+21:21:29.322  Loaded Service: DropItem
+21:21:29.324  Loaded Event: Simple [state: deactivated]
+21:21:29.325  Loaded Service: Enter Hellbound Island
+21:21:29.326  Loaded Service: Level manipulation
+21:21:29.329  BaiumManager: State of Baium is NOTSPAWN.
+21:21:29.330  Loaded Boss: Baium. Next spawn date: Thu Jan 01 03:00:00 MSK 1970
+21:21:29.330  Loaded Service: Expand Warehouse
+21:21:29.345  Loaded Service: Fort Info
+21:21:29.353  DimensionalRiftManager: Loaded 13 room types with 112 rooms.
+21:21:29.353  DimensionalRiftManager: Loaded 300 dimensional rift spawns, 0 errors.
+21:21:29.385  InstancedZoneManager: Loaded 96 zones with 114 rooms.
+21:21:29.389  InstancedZoneManager: Loaded 740 instanced location spawns, 0 errors.
+21:21:29.394  config/announcements.txt doesn't exist
+21:21:29.489  Initializing AugmentationData.
+21:21:29.511  StaticObject: Loaded 29 StaticObject Templates.
+21:21:29.524  AutoSpawnHandler: Loaded 50 handlers in total.
+21:21:29.530  AutoChatHandler: Loaded 14 handlers in total.
+21:21:29.536  Olympiad System: Loading Olympiad System....
+21:21:29.536  Olympiad System: Currently in Olympiad Period
+21:21:29.536  Olympiad System: In 2 days, 2 hours and 38 mins.
+21:21:29.536  Olympiad System: Next Weekly Change is in....
+21:21:29.536  Olympiad System: In 8 days, 14 hours and 38 mins.
+21:21:29.536  Olympiad System: Loaded 2 Noblesses
+21:21:29.537  Olympiad System: Competition Period Starts in 0 days, 0 hours and 0 mins.
+21:21:29.537  Olympiad System: Event starts/started: Tue Aug 29 18:00:00 MSK 2023
+21:21:29.538  Olympiad System:[Disable] Start custom reward 22:45 29.08.2023.
+21:21:29.538  Olympiad System: End custom reward 00:00 30.08.2023.
+21:21:29.540  Hero System: Loaded 0 Heroes.
+21:21:29.540  Hero System: Loaded 0 all time Heroes.
+21:21:29.543  CursedWeaponsManager: Loaded 0 cursed weapon(s).
+21:21:29.544  PlayerRewardManager: set_noble[0] inc_pvp[0] inc_pc[0].
+21:21:29.545  Seed of Infinity Manager: Current Cycle is 1
+21:21:29.546  Naia Core Manager: Loaded
+21:21:29.547  Initializing CoupleManager
+21:21:29.547  Loaded: 0 couples(s)
+21:21:29.548  CoupleManager initialized
+21:21:29.548  ItemHandler: Loaded 2519 handlers.
+21:21:29.548  AdminCommandHandler: Loaded 495 handlers.
+21:21:29.548  UserCommandHandler: Loaded 17 handlers.
+21:21:29.548  VoicedCommandHandler: Loaded 69 handlers.
+21:21:29.556  Initializing L2VehicleManager
+21:21:29.561  Olympiad System: Olympiad Game Started
+21:21:29.562  L2VehicleManager: Loaded 6 vehicles.
+21:21:29.565  AirShipDocksTable: Loaded 5 docks.
+21:21:29.567  IdFactory: Free ObjectID's remaining: 1878997534
+21:21:29.572  TeleportController: Loaded 600 locations.
+21:21:29.578  ItemMall: loaded 556 item templates.
+21:21:29.580  ItemMall: loaded 184 items available for trading.
+21:21:29.582  AutoRestart scheduled through 7h 39m
+21:21:29.598  ItemAuctionManager: Missing item_auctions.xml!
+21:21:29.600  Blood Altar Manager: Initializing...
+21:21:29.607  GameServer Started
+21:21:29.607  Maximum Numbers of Connected Players: 3000
+21:21:30.025  GameServer: Connecting to LoginServer on 192.168.1.100:9014
+21:21:31.048  Restored 0 offline traders
+21:21:31.070  Registered on login as Server 1 : 
+21:21:36.260  Telnet server is currently disabled.
+21:21:36.260  =================================================
+21:21:36.262  AllowedMemory: ........... 8184192 KB
+21:21:36.262       Allocated: .......... 8184192 KB (100.0%)
+21:21:36.262       Non-Allocated: ...... 0 KB (0.0%)
+21:21:36.262  AllocatedMemory: ......... 8184192 KB
+21:21:36.262       Used: ............... 1238163 KB (15.1287%)
+21:21:36.262       Unused (cached): .... 6946028 KB (84.8713%)
+21:21:36.262  UseableMemory: ........... 6946028 KB (84.8713%)
+21:21:36.262  =================================================
+21:21:36.262  MinProtocolRevision: 267
+21:21:43.863  npc_id=29068 time=0
+21:21:43.864  npc_id=29068 state=0
+21:21:43.864  npc_id=29020 time=0
+21:21:43.864  npc_id=29020 state=0
+21:21:43.864  npc_id=29028 time=0
+21:21:43.864  npc_id=29028 state=0
+21:21:43.864  npc_id=29062 time=0
+21:21:43.864  npc_id=29065 time=0
+21:21:43.864  npc_id=29065 state=0
+21:21:43.864  npc_id=29186 time=0
+21:21:43.864  npc_id=29186 state=0
+21:21:47.518  max_p_size: 7
+21:21:48.057  max_p_size: 267
+21:21:48.073  RequestAuthLogin: 50
+21:21:48.074  RequestAuthLogin: 32
+21:21:49.654  XmlArmorsetLoader: Loaded 168 armor sets.
+21:21:49.733  XmlPcParameterLoader: Loaded 107 pc_parameters
+21:21:52.838  RequestAuthLogin: 52
+21:21:52.838  RequestAuthLogin: 32
+21:21:56.862  FriendsTable: Loaded 0 friends.
+21:22:16.030  SendBypassBuildCmd: admin
+21:22:53.472  SendBypassBuildCmd: delete
+21:29:14.777  SimpleLottery: Store Jackpot

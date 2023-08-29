@@ -1,686 +1,572 @@
-1693147434338	WARNING	1	l2open.config.ConfigSystem	ConfigSystem(383): -> NoSuchFieldException(fake.properties): ﻿######
-1693147434438	INFO	1	l2open.config.ConfigSystem	Abuse: Loaded 18 abuse words.
-1693147434880	INFO	1	l2open.config.ConfigSystem	loading xml GMAccess
-1693147434984	INFO	1	com.mchange.v2.log.MLog	MLog clients using java 1.4+ standard logging.
-1693147435587	INFO	1	com.mchange.v2.c3p0.C3P0Registry	Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
-1693147435917	INFO	1	com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource	Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 0, acquireRetryDelay -> 100, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15wayfdvzw910r41ab|60438a68, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15wayfdvzw910r41ab|60438a68, idleConnectionTestPeriod -> 60, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost/l2tehno?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 1000, maxStatements -> 100, maxStatementsPerConnection -> 10, minPoolSize -> 1, numHelperThreads -> 5, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
-1693147436432	INFO	1	l2open.gameserver.idfactory.IdFactory	Clear characters online status and accesslevel.
-1693147436473	INFO	1	l2open.gameserver.idfactory.IdFactory	Total cleaned: 0, updated: 0 elements in database.
-1693147436510	INFO	26	l2open.gameserver.idfactory.IdFactory	IdFactory: Table clan_data contains 0 rows
-1693147436513	INFO	27	l2open.gameserver.idfactory.IdFactory	IdFactory: Table ally_data contains 0 rows
-1693147436516	INFO	24	l2open.gameserver.idfactory.IdFactory	IdFactory: Table characters contains 5 rows
-1693147436517	INFO	25	l2open.gameserver.idfactory.IdFactory	IdFactory: Table items contains 56 rows
-1693147436519	INFO	28	l2open.gameserver.idfactory.IdFactory	IdFactory: Table pets contains 0 rows
-1693147436519	INFO	29	l2open.gameserver.idfactory.IdFactory	IdFactory: Table couples contains 0 rows
-1693147436520	INFO	1	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracting 61 used id's from data tables...
-1693147436522	INFO	32	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from clan_data
-1693147436522	INFO	31	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 56 used id's from items
-1693147436522	INFO	30	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 5 used id's from characters
-1693147436524	INFO	33	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from ally_data
-1693147436524	INFO	34	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from pets
-1693147436524	INFO	35	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from couples
-1693147436524	INFO	1	l2open.gameserver.idfactory.IdFactory	IdFactory: Successfully extracted 61 used id's from data tables.
-1693147436525	INFO	1	l2open.gameserver.idfactory.BitSetIDFactory	IDFactory: 102912 id's available.
-1693147437223	INFO	1	l2open.gameserver.cache.CrestCache	CrestCache: Loaded 0 crests
-1693147437249	INFO	1	l2open.gameserver.instancemanager.AuctionManager	Initializing AuctionManager
-1693147437351	INFO	1	l2open.gameserver.instancemanager.AuctionManager	Loaded: 38 active auction(s)
-1693147440944	INFO	21	l2open.util.Strings	PTS HTML: ./data/html-ru.zip loaded 4514ms...
-1693147443901	WARNING	1	l2open.gameserver.skills.SkillsEngine	SkillsEngine: Loaded 61827 skill templates from XML files. Max id: 26077, max level: 259
-1693147443902	WARNING	1	l2open.gameserver.skills.SkillsEngine	SkillsEngine: Loaded 1616 custom skill templates from XML files.
-1693147444879	INFO	21	l2open.util.Strings	PTS HTML: ./data/html-en.zip loaded 3935ms...
-1693147444883	INFO	21	l2open.util.Strings	Loaded 418 translit entrys
-1693147448344	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2139][1][TARGET_ONE][range][not_friend]
-1693147448354	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2260][1][TARGET_ONE][single][none]
-1693147448359	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2353][1][TARGET_ONE][static_object_scope][hidden_place]
-1693147448363	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2624][1][TARGET_ONE][single][none]
-1693147448408	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4143][1][TARGET_ONE][point_blank][not_friend]
-1693147448434	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4212][1][TARGET_ONE][range][friend]
-1693147448485	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4483][1][TARGET_ONE][point_blank][not_friend]
-1693147448485	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4488][1][TARGET_ONE][point_blank][not_friend]
-1693147448487	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4524][1][TARGET_ONE][single][none]
-1693147448498	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4697][1][TARGET_ONE][point_blank][not_friend]
-1693147448533	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5037][1][TARGET_ONE][point_blank][not_friend]
-1693147448538	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5039][1][TARGET_ONE][single][none]
-1693147448555	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5051][1][TARGET_ONE][point_blank][not_friend]
-1693147448653	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5054][1][TARGET_ONE][point_blank][not_friend]
-1693147448673	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5104][1][TARGET_ONE][single][none]
-1693147448674	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5105][1][TARGET_ONE][single][none]
-1693147448676	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5114][1][TARGET_ONE][point_blank][not_friend]
-1693147448678	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5117][1][TARGET_ONE][point_blank][not_friend]
-1693147448680	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5123][1][TARGET_ONE][point_blank][friend]
-1693147448682	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5124][1][TARGET_ONE][point_blank][not_friend]
-1693147448682	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5125][1][TARGET_ONE][point_blank][friend]
-1693147448682	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5126][1][TARGET_ONE][point_blank][friend]
-1693147448705	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5127][1][TARGET_ONE][point_blank][friend]
-1693147448705	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5128][1][TARGET_ONE][point_blank][friend]
-1693147448705	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5129][1][TARGET_ONE][point_blank][friend]
-1693147448705	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5130][1][TARGET_ONE][point_blank][not_friend]
-1693147448750	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5131][1][TARGET_ONE][point_blank][not_friend]
-1693147448750	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5132][1][TARGET_ONE][point_blank][not_friend]
-1693147448750	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5133][1][TARGET_ONE][point_blank][not_friend]
-1693147448750	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5134][1][TARGET_ONE][point_blank][not_friend]
-1693147448750	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5145][1][TARGET_ONE][point_blank][not_friend]
-1693147448754	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5202][1][TARGET_ONE][point_blank][not_friend]
-1693147448756	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5203][1][TARGET_ONE][point_blank][not_friend]
-1693147448757	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5204][1][TARGET_ONE][single][none]
-1693147448757	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5239][1][TARGET_ONE][single][none]
-1693147448758	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5248][1][TARGET_ONE][single][none]
-1693147448758	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5252][1][TARGET_ONE][single][none]
-1693147448759	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5257][1][TARGET_ONE][single][none]
-1693147448762	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5275][1][TARGET_ONE][point_blank][not_friend]
-1693147448762	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5279][1][TARGET_ONE][point_blank][not_friend]
-1693147448786	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5283][1][TARGET_ONE][point_blank][not_friend]
-1693147448787	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5287][1][TARGET_ONE][point_blank][not_friend]
-1693147448787	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5291][1][TARGET_ONE][point_blank][not_friend]
-1693147448788	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5295][1][TARGET_ONE][point_blank][not_friend]
-1693147448792	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5306][1][TARGET_ONE][point_blank][not_friend]
-1693147448810	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5340][1][TARGET_ONE][point_blank][not_friend]
-1693147448811	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5344][1][TARGET_ONE][point_blank][not_friend]
-1693147448812	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5348][1][TARGET_ONE][point_blank][not_friend]
-1693147448813	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5352][1][TARGET_ONE][point_blank][not_friend]
-1693147448814	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5356][1][TARGET_ONE][point_blank][not_friend]
-1693147448814	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5360][1][TARGET_ONE][point_blank][not_friend]
-1693147448815	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5366][1][TARGET_ONE][point_blank][not_friend]
-1693147448816	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5375][1][TARGET_ONE][point_blank][not_friend]
-1693147448817	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5379][1][TARGET_ONE][point_blank][not_friend]
-1693147448817	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5382][1][TARGET_ONE][point_blank][not_friend]
-1693147448818	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5385][1][TARGET_ONE][point_blank][not_friend]
-1693147448819	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5388][1][TARGET_ONE][point_blank][not_friend]
-1693147448819	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5391][1][TARGET_ONE][point_blank][not_friend]
-1693147448820	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5423][1][TARGET_ONE][point_blank][not_friend]
-1693147448821	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5424][1][TARGET_ONE][point_blank][not_friend]
-1693147448821	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5430][1][TARGET_ONE][range][clan]
-1693147448828	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5447][1][TARGET_ONE][single][none]
-1693147448830	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5494][1][TARGET_ONE][single][none]
-1693147448833	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5591][1][TARGET_ONE][single][none]
-1693147448835	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5619][1][TARGET_ONE][single][none]
-1693147448893	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5660][1][TARGET_ONE][single][none]
-1693147448894	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5689][1][TARGET_ONE][single][none]
-1693147448894	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5697][1][TARGET_ONE][single][none]
-1693147448895	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5699][1][TARGET_ONE][single][none]
-1693147448958	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5713][1][TARGET_ONE][single][none]
-1693147448960	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5751][1][TARGET_ONE][point_blank][not_friend]
-1693147448962	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5756][1][TARGET_ONE][single][none]
-1693147448989	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5772][1][TARGET_ONE][single][none]
-1693147448989	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5773][1][TARGET_ONE][single][none]
-1693147448990	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5799][1][TARGET_ONE][point_blank][not_friend]
-1693147449009	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5836][1][TARGET_ONE][point_blank][clan]
-1693147449047	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5847][1][TARGET_ONE][point_blank][none]
-1693147449050	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5887][1][TARGET_ONE][point_blank][not_friend]
-1693147449052	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5923][1][TARGET_ONE][single][none]
-1693147449059	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5937][1][TARGET_ONE][single][none]
-1693147449140	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6020][1][TARGET_ONE][single][none]
-1693147449140	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6021][1][TARGET_ONE][single][none]
-1693147449141	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6022][1][TARGET_ONE][single][none]
-1693147449141	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6023][1][TARGET_ONE][single][none]
-1693147449141	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6034][1][TARGET_ONE][single][none]
-1693147449144	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6090][1][TARGET_ONE][single][none]
-1693147449144	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6092][1][TARGET_ONE][single][none]
-1693147449207	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6270][1][TARGET_ONE][point_blank][none]
-1693147449209	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6298][1][TARGET_ONE][single][none]
-1693147449209	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6301][1][TARGET_ONE][point_blank][not_friend]
-1693147449210	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6305][1][TARGET_ONE][point_blank][not_friend]
-1693147449211	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6316][1][TARGET_ONE][single][none]
-1693147449212	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6320][1][TARGET_ONE][point_blank][not_friend]
-1693147449214	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6372][1][TARGET_ONE][single][none]
-1693147449215	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6374][1][TARGET_ONE][single][none]
-1693147449216	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6375][1][TARGET_ONE][single][none]
-1693147449223	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6398][1][TARGET_ONE][ring_range][not_friend]
-1693147449230	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6415][1][TARGET_ONE][point_blank][not_friend]
-1693147449232	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6422][1][TARGET_ONE][point_blank][not_friend]
-1693147449940	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6754][1][TARGET_ONE][point_blank][not_friend]
-1693147449941	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6769][1][TARGET_ONE][point_blank][not_friend]
-1693147449942	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6777][1][TARGET_ONE][point_blank][not_friend]
-1693147449942	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6779][1][TARGET_ONE][single][none]
-1693147449947	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6835][1][TARGET_ONE][single][none]
-1693147449947	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6841][1][TARGET_ONE][single][none]
-1693147449948	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6858][1][TARGET_ONE][single][none]
-1693147449948	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6864][1][TARGET_ONE][single][none]
-1693147449948	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6868][1][TARGET_ONE][single][none]
-1693147450077	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9011][1][TARGET_ONE][single][none]
-1693147450077	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9011][1][TARGET_ONE][single][none]
-1693147450078	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9011][1][TARGET_ONE][single][none]
-1693147450078	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
-1693147450078	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
-1693147450078	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
-1693147450079	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
-1693147450079	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
-1693147450079	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
-1693147450080	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
-1693147450080	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
-1693147450080	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
-1693147450080	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
-1693147450080	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
-1693147450080	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
-1693147450081	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
-1693147450081	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
-1693147450081	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
-1693147450081	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
-1693147450082	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
-1693147450082	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
-1693147450082	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
-1693147450082	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
-1693147450083	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
-1693147450083	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
-1693147450083	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
-1693147450083	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
-1693147450083	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
-1693147450084	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
-1693147450084	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
-1693147450084	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
-1693147450085	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9060][1][TARGET_ONE][point_blank][friend]
-1693147450089	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21005][1][TARGET_ONE][single][none]
-1693147450090	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21052][1][TARGET_ONE][single][none]
-1693147450090	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21055][1][TARGET_ONE][single][none]
-1693147450090	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21056][1][TARGET_ONE][single][none]
-1693147450090	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21061][1][TARGET_ONE][single][none]
-1693147450090	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21063][1][TARGET_ONE][single][none]
-1693147450091	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21071][1][TARGET_ONE][single][none]
-1693147450091	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21086][1][TARGET_ONE][single][none]
-1693147450092	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21153][1][TARGET_ONE][single][none]
-1693147450092	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21154][1][TARGET_ONE][single][none]
-1693147450092	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21170][1][TARGET_ONE][single][none]
-1693147450100	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23165][1][TARGET_ONE][single][none]
-1693147450103	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23298][1][TARGET_ONE][single][none]
-1693147450103	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23308][1][TARGET_ONE][point_blank][friend]
-1693147450104	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23309][1][TARGET_ONE][point_blank][friend]
-1693147450104	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23310][1][TARGET_ONE][point_blank][friend]
-1693147450104	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23311][1][TARGET_ONE][point_blank][friend]
-1693147450642	INFO	1	l2open.gameserver.instancemanager.CubicManager	CubicManager: Loaded 145 cubics.
-1693147450944	INFO	1	l2open.gameserver.tables.PetSkillsTable	PetSkillsTable: Loaded 2671 skills.
-1693147452518	WARNING	1	l2open.gameserver.templates.L2Item	WARNING: item 20711 action attached skill not done: Box of Dynasty Armor[id=9105,lvl=1]
-1693147453638	INFO	1	l2open.gameserver.xml.loader.XmlOptionDataLoader	XmlOptionDataLoader: Loaded 24975 templates.
-1693147453782	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 0 Custom Armors
-1693147453782	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 3554 Armors
-1693147453782	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 240 Rare Armors
-1693147453782	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 58 PvP Armors
-1693147456072	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 0 Custom Weapons
-1693147456072	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 4001 Weapons
-1693147456072	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 794 Rare Weapons
-1693147456072	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 558 PvP Weapons
-1693147456072	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 1667 SA Weapons
-1693147456072	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 283 Trigger for Weapons
-1693147456072	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 262 Pole Weapons
-1693147459391	INFO	1	l2open.gameserver.xml.loader.XmlEtcItemLoader	XmlEtcItemLoader: Loaded 0 Custom EtcItems
-1693147459391	INFO	1	l2open.gameserver.xml.loader.XmlEtcItemLoader	XmlEtcItemLoader: Loaded 10855 EtcItems
-1693147459486	INFO	1	l2open.gameserver.TradeController	TradeController: Loaded 4 file(s).
-1693147459486	INFO	1	l2open.gameserver.TradeController	TradeController: Loaded 23181 Items.
-1693147459486	INFO	1	l2open.gameserver.TradeController	TradeController: Loaded 702 Buylists.
-1693147459664	INFO	1	l2open.gameserver.RecipeController	RecipeController: Loaded 1000 Recipes.
-1693147531032	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 17098 skills.
-1693147531033	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 109 fishing skills.
-1693147531033	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 20 transformation skills.
-1693147531033	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 64 clan skills.
-1693147531033	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 526 enchanted skills.
-1693147531033	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 18 pledge skills.
-1693147531033	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 74 certification skills.
-1693147531033	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 0 other skills.
-1693147531034	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 21 Transfer skills for Bishop.
-1693147531034	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 24 Transfer skills for Elder.
-1693147531035	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 32 Transfer skills for Silen Elder.
-1693147531038	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillSpellbookTable: Loaded 386 Spellbooks.
-1693147531044	INFO	1	l2open.pts.loader.LoadData	PTS ArmorEnchantBonusData: Finish loading data fo 2 ms...
-1693147531059	INFO	1	l2open.gameserver.tables.CharTemplateTable	CharTemplateTable: Loaded 206 Character Templates.
-1693147531064	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 779 AI params for 666 NPCs.
-1693147531290	INFO	1	l2open.extensions.scripts.Scripts	Scripts loading...
-1693147531291	INFO	1	l2open.extensions.scripts.Scripts	Scripts start parse class...
-1693147532697	INFO	1	l2open.extensions.scripts.Scripts	Scripts end parse class...
-1693147541700	INFO	1	l2open.extensions.scripts.Scripts	Scripts end compile class...
-1693147543199	INFO	1	l2open.extensions.scripts.Scripts	Scripts successfully loaded. Loaded 1292 classes.
-1693147543705	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 10463 Npc Templates.
-1693147543915	INFO	1	l2open.gameserver.tables.NpcTable	Loaded 118801 npc skills.
-1693147544073	INFO	1	l2open.gameserver.tables.NpcTable	Players droplist load skipped
-1693147544083	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 597 Minions.
-1693147544086	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 1641 SkillLearn entrys.
-1693147544127	INFO	1	l2open.pts.loader.LoadData	PTS NpcDataPch: Finish loading data size: 10195 fo 39 ms...
-1693147544142	INFO	1	l2open.gameserver.tables.HennaTable	HennaTable: Loaded 180 Templates.
-1693147544212	INFO	1	l2open.gameserver.tables.HennaTreeTable	HennaTreeTable: Loaded 8134 Henna Tree Templates.
-1693147544217	INFO	1	l2open.gameserver.tables.LevelUpTable	LevelUpData: Loaded 103 Character Level Up Templates.
-1693147544232	INFO	1	l2open.gameserver.model.L2World	L2World: [255][271][63] World Region Grid set up.
-1693147544233	INFO	1	l2open.gameserver.geodata.GeoEngine	GeoEngine: Loading Geodata...
-1693147544234	INFO	1	l2open.gameserver.geodata.GeoEngine	GeoEngine: Loaded 0 map(s), max layers: 1
-1693147545820	INFO	1	l2open.gameserver.tables.DoorTable	DoorTable: Loaded 1030 doors.
-1693147546007	INFO	1	l2open.gameserver.tables.TerritoryTable	TerritoryTable: Loaded 9976 locations
-1693147546129	INFO	1	l2open.gameserver.instancemanager.ZoneManager	ZoneManager: Loaded 1649 zones
-1693147546228	INFO	1	l2open.gameserver.tables.TerritoryTable	TerritoryTable: Added 1642 locations to L2World
-1693147546231	INFO	1	l2open.gameserver.instancemanager.UnderGroundColliseumManager	Loaded: 1 UnderGround Colliseums.
-1693147546361	INFO	1	l2open.gameserver.instancemanager.CastleManager	Loaded: 9 castles.
-1693147546412	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693147546404][1693147546404]: Siege of Gludio: Sun Sep 03 16:00:00 MSK 2023
-1693147546412	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693147546412][1693147546412]: Siege of Gludio: Sun Sep 03 16:00:00 MSK 2023
-1693147546414	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Gludio: Sun Sep 03 16:00:00 MSK 2023
-1693147546419	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693147546418][1693147546418]: Siege of Dion: Sun Sep 03 16:00:00 MSK 2023
-1693147546419	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693147546419][1693147546419]: Siege of Dion: Sun Sep 03 16:00:00 MSK 2023
-1693147546421	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Dion: Sun Sep 03 16:00:00 MSK 2023
-1693147546425	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693147546425][1693147546425]: Siege of Giran: Sun Sep 03 16:00:00 MSK 2023
-1693147546425	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693147546425][1693147546425]: Siege of Giran: Sun Sep 03 16:00:00 MSK 2023
-1693147546426	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Giran: Sun Sep 03 16:00:00 MSK 2023
-1693147546429	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693147546429][1693147546429]: Siege of Oren: Sun Sep 03 16:00:00 MSK 2023
-1693147546429	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693147546429][1693147546429]: Siege of Oren: Sun Sep 03 16:00:00 MSK 2023
-1693147546430	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Oren: Sun Sep 03 16:00:00 MSK 2023
-1693147546435	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693147546435][1693147546435]: Siege of Aden: Sun Sep 03 16:00:00 MSK 2023
-1693147546435	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693147546435][1693147546435]: Siege of Aden: Sun Sep 03 16:00:00 MSK 2023
-1693147546441	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Aden: Sun Sep 03 16:00:00 MSK 2023
-1693147546449	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693147546449][1693147546449]: Siege of Innadril: Sun Sep 03 16:00:00 MSK 2023
-1693147546449	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693147546449][1693147546449]: Siege of Innadril: Sun Sep 03 16:00:00 MSK 2023
-1693147546468	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Innadril: Sun Sep 03 16:00:00 MSK 2023
-1693147546470	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693147546470][1693147546470]: Siege of Goddard: Sun Sep 03 16:00:00 MSK 2023
-1693147546470	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693147546470][1693147546470]: Siege of Goddard: Sun Sep 03 16:00:00 MSK 2023
-1693147546475	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Goddard: Sun Sep 03 16:00:00 MSK 2023
-1693147546477	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693147546477][1693147546477]: Siege of Rune: Sun Sep 03 16:00:00 MSK 2023
-1693147546478	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693147546478][1693147546478]: Siege of Rune: Sun Sep 03 16:00:00 MSK 2023
-1693147546483	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Rune: Sun Sep 03 16:00:00 MSK 2023
-1693147546487	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693147546487][1693147546487]: Siege of Schuttgart: Sun Sep 03 16:00:00 MSK 2023
-1693147546487	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693147546487][1693147546487]: Siege of Schuttgart: Sun Sep 03 16:00:00 MSK 2023
-1693147546503	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Schuttgart: Sun Sep 03 16:00:00 MSK 2023
-1693147546504	INFO	1	l2open.gameserver.instancemanager.FortressManager	Initializing FortressManager
-1693147546776	INFO	1	l2open.gameserver.instancemanager.FortressManager	Loaded: 21 fortresses.
-1693147546821	INFO	1	l2open.gameserver.instancemanager.ClanHallManager	Initializing ClanHallManager.
-1693147547224	INFO	1	l2open.gameserver.instancemanager.ClanHallManager	Loaded: 44 ClanHalls.
-1693147547243	INFO	1	l2open.gameserver.instancemanager.ClanHallManager	110 doors attached to ClanHalls
-1693147547262	INFO	1	l2open.gameserver.model.entity.siege.clanhall.BanditStrongholdSiege	Siege of Bandit Stronghold : Fri Sep 01 21:00:00 MSK 2023
-1693147547267	INFO	1	l2open.gameserver.model.entity.siege.clanhall.WildBeastFarmSiege	Siege of Wild Beasts Farm : Fri Sep 01 21:00:00 MSK 2023
-1693147547272	INFO	1	l2open.gameserver.model.entity.siege.clanhall.RainbowSpringSiege	Siege of Rainbow Springs Chateau : Fri Sep 01 22:00:00 MSK 2023
-1693147547287	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiegeDatabase	TerritorySiege: load 9 town spawns.
-1693147547297	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiegeDatabase	TerritorySiege: load 9 castle spawns.
-1693147547302	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiegeDatabase	TerritorySiege: load 9 fortress spawns.
-1693147547304	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiege	Territory Siege: 02.09.2023 20:00:27
-1693147547308	INFO	1	l2open.gameserver.instancemanager.CastleManorManager	Manor System: Initializing...
-1693147547325	INFO	1	l2open.gameserver.instancemanager.SeedOfAnnihilationZone	SeedOfAnnihilationManager: Load Manager.
-1693147547648	INFO	1	l2open.gameserver.instancemanager.RaidBossSpawnManager	RaidBossSpawnManager: Loaded 0 Statuses
-1693147547779	INFO	1	l2open.gameserver.instancemanager.NaiaTowerManager	Naia Tower Manager: Loaded 12 rooms
-1693147548207	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 4000 npc
-1693147548392	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 7000 npc
-1693147548449	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 8000 npc
-1693147548501	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 9000 npc
-1693147548743	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 13000 npc
-1693147549918	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 20000 npc
-1693147550002	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 21000 npc
-1693147550088	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 22000 npc
-1693147550165	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 23000 npc
-1693147550344	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 26000 npc
-1693147550418	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 27000 npc
-1693147551095	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 30000 npc
-1693147551157	INFO	1	l2open.gameserver.instancemanager.HellboundManager	Hellbound Manager: Current Level is 1
-1693147551157	INFO	1	l2open.gameserver.instancemanager.HellboundManager	Hellbound Manager: Current Points is 0
-1693147551222	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 31000 npc
-1693147551313	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 32000 npc
-1693147551504	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 34000 npc
-1693147551592	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 35000 npc
-1693147551822	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 36000 npc
-1693147552215	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 37000 npc
-1693147552285	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 38000 npc
-1693147552448	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 39000 npc
-1693147552587	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 40000 npc
-1693147552779	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 41000 npc
-1693147552957	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 42000 npc
-1693147553022	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: Currently in the Competition (Quest Event) period!
-1693147553022	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Seal of Avarice remains unclaimed.
-1693147553022	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Seal of Gnosis remains unclaimed.
-1693147553022	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Seal of Strife remains unclaimed.
-1693147553023	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Competition this week, if the trend continue, will end with a tie.
-1693147553024	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: Next period begins in 1 days, 0 hours and 14 mins.
-1693147553024	INFO	1	l2open.gameserver.tables.SpawnTable	SpawnTable: Loaded 18203 Npc Spawn Locations. Total NPCs: 42166
-1693147553025	INFO	1	l2open.gameserver.tables.SpawnTable	Monsters inventory loaded, items: 0
-1693147553099	INFO	1	communityboard.CommunityBoardShortStats	Short statistics in the commynity board has been updated.
-1693147553102	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: change sex services.
-1693147553102	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: change name services.
-1693147553102	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: change clan name services.
-1693147553102	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: change base class services.
-1693147553102	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: separate services.
-1693147553105	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Rabbits To Riches Event [state: deactivated]
-1693147553135	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1001: Wake Up Baium
-1693147553151	INFO	1	communityboard.General	CommunityBoard: Simple Lottery games loaded.
-1693147553151	INFO	1	communityboard.General	CommunityBoard: Simple Lottery games played 0.
-1693147553153	INFO	1	communityboard.General	CommunityBoard: Simple Lottery jackpot is 0 Adena.
-1693147553161	INFO	1	events.GvG.GvG	Loaded Event: GvG
-1693147553193	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: NPCBuffer [state: deactivated]
-1693147553203	INFO	1	l2open.extensions.scripts.ScriptFile	SailrenManager: State of Sailren is NOTSPAWN.
-1693147553203	INFO	1	l2open.extensions.scripts.ScriptFile	SailrenManager: Next spawn date of Sailren is Thu Jan 01 03:00:00 MSK 1970.
-1693147553207	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Bash [disabled]
-1693147553223	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Pagan Doormans
-1693147553242	INFO	1	bosses.BelethManager	Beleth Manager: Loaded successfuly
-1693147553250	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1004: Ice Fairy Sirra
-1693147553261	INFO	1	events.FightClub.FightClubManager	Loaded Event: Fight Club
-1693147553266	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1202: Crystal Caverns
-1693147553271	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Medal Collection Event [state: deactivated]
-1693147553318	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Roulette
-1693147553319	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Wolf
-1693147553323	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 3 [state: deactivated]
-1693147553324	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 2 [state: deactivated]
-1693147553325	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 1 [state: deactivated]
-1693147553354	INFO	1	communityboard.CommunityBoardTeleport	Load 297 teleport points.
-1693147553355	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Fantasy Isle
-1693147553358	INFO	1	bosses.AntharasManager	AntharasManager: State of Antharas is NOTSPAWN.
-1693147553358	INFO	1	bosses.AntharasManager	AntharasManager: Next spawn date of Antharas is 03:00 01.01.1970.
-1693147553366	INFO	1	events.Viktorina.Viktorina	Loaded Event: Victorina
-1693147553370	INFO	1	l2open.gameserver.model.L2Manor	ManorManager: Loaded 270 seeds
-1693147553422	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Item Broker
-1693147553425	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Kookaburra
-1693147553428	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Gludin Arena
-1693147553429	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Summon a corpse
-1693147553441	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: The Fall Harvest [state: deactivated]
-1693147553452	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1201: Dark Cloud Mansion
-1693147553467	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Underground Arena #1
-1693147553476	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: MasterOfEnchanting [state: deactivated]
-1693147553493	INFO	1	events.CtF.CtF	Loaded Event: CtF active.
-1693147553507	INFO	1	l2open.extensions.scripts.ScriptFile	MonasteryOfSilence: Loaded
-1693147553523	INFO	1	l2open.extensions.scripts.ScriptFile	ZakenManager: Init Zaken Manager.
-1693147553533	INFO	1	communityboard.General	CommunityBoard: Premium Lottery games loaded.
-1693147553536	INFO	1	communityboard.General	CommunityBoard: Premium Lottery games played 0.
-1693147553545	INFO	1	communityboard.General	CommunityBoard: Premium Lottery jackpot is 0 Gold Einhasad.
-1693147553575	INFO	1	l2open.extensions.scripts.ScriptFile	OnActionShift Loaded
-1693147553582	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Coffer of Shadows [state: deactivated]
-1693147553591	INFO	1	l2open.extensions.scripts.ScriptFile	Kamaloka Gate Loaded
-1693147553595	INFO	1	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 180 Room1 1st Npc Spawn Locations.
-1693147553595	INFO	1	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 4 Room2 Inside Npc Spawn Locations.
-1693147553595	INFO	1	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 121 Room2 Outside Npc Spawn Locations.
-1693147553603	WARNING	1		Unevenly distributed hash code - Degraded Preformance
-1693147553610	INFO	1	l2open.gameserver.tables.SkillTreeTable	FishTable: Loaded 270 Fishes.
-1693147553613	INFO	1	l2open.gameserver.tables.SkillTreeTable	FishRewardsTable: Loaded 919 FishRewards.
-1693147553632	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Isle of Player Race
-1693147553634	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to catacombs
-1693147553636	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Clan Operations]
-1693147553645	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: NPC RemoveDeathPenalty
-1693147553647	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: VitaminManager...
-1693147553648	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Change of Heart[state: deactivated]
-1693147553649	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Clan function.
-1693147553666	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Alliance Operations]
-1693147553675	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Cougar
-1693147553678	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Changing occupations]
-1693147553685	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: AutoAnnouncer [state: deactivated]
-1693147553694	INFO	1	l2open.extensions.scripts.ScriptFile	Utilites Loaded
-1693147553695	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Nick color change
-1693147553700	INFO	1	l2open.extensions.scripts.ScriptFile	MonasteryOfSilenceGame: Loaded
-1693147553715	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: ClanHall Pet Evolution
-1693147553763	INFO	1	events.LastHunter.LastHunter	Loaded Event: Last Hunter
-1693147553774	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
-1693147553774	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29068 state=0
-1693147553774	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
-1693147553774	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
-1693147553774	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
-1693147553774	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
-1693147553774	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29065 state=0
-1693147553774	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
-1693147553774	INFO	1	communityboard.CommunityBoardFullStats	Full statistics in the commynity board has been updated.
-1693147553777	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Inventory
-1693147553778	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1003: Sailren
-1693147553783	INFO	1	events.TvT.TvT	Loaded Event: TvT
-1693147553786	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Obtain Talisman
-1693147553789	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: SavingSnowman [state: deactivated]
-1693147553792	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Tower
-1693147553793	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Dion Arena
-1693147553804	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Window
-1693147553814	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: The Flow Of The Horror [state: deactivated]
-1693147553817	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Tournament [state: deactivated]
-1693147553841	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Bonus [state: deactivated]
-1693147553849	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Buffalo
-1693147553856	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Fenrir
-1693147553858	INFO	1	events.coins.coins	Loaded Event: L2Coins [state: deactivated]
-1693147553862	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: CWH Privileges
-1693147553868	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Bounty Hunters Guild
-1693147553878	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Hero Items
-1693147553879	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: 1103: Oracle Teleport
-1693147553920	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Christmas [state: deactivated]
-1693147553927	INFO	1	l2open.extensions.scripts.ScriptFile	Lindvior Manager Load.
-1693147553929	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Nobless sell
-1693147553937	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: SubClass sell
-1693147553938	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Border Outpost Doormans
-1693147553940	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Pushkin
-1693147553951	INFO	1	l2open.extensions.scripts.ScriptFile	MarcketLoad Loaded...
-1693147553962	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
-1693147553964	WARNING	1		Unevenly distributed hash code - Degraded Preformance
-1693147553966	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Successful
-1693147553995	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: Loaded 20 Mysterious-Box spawns.
-1693147554032	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 physical monsters spawns.
-1693147554062	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 magical monsters spawns.
-1693147554071	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 92 Church of duke monsters spawns.
-1693147554078	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 68 Emperor's grave NPC spawns.
-1693147554079	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Conquerors Sepulcher Manager
-1693147554079	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Emperors Sepulcher Manager
-1693147554079	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Great Sages Sepulcher Manager
-1693147554079	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Judges Sepulcher Manager
-1693147554082	WARNING	1	bosses.FourSepulchersManager	FourSepulchersManager: Beginning in Attack time
-1693147554085	INFO	1	events.RewardofHonor.RewardofHonor	Loaded Event: Reward of Honor [state: deactivated]
-1693147554087	WARNING	60	l2open.common.RunnableImpl	Sun Aug 27 17:45:54 MSK 2023 Atk announce scheduled to 45.0 minute of this hour.
-1693147554089	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: l2day [state: deactivated]
-1693147554093	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Mana Regen
-1693147554098	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Grand Isle of Prayer Race
-1693147554099	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Race Track
-1693147554106	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand CWH
-1693147554112	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Ride Hire
-1693147554127	INFO	1	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 54 Soul Crystal data.
-1693147554127	INFO	1	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 240 npc Leveling info data.
-1693147554129	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: March 8 [state: deactivated]
-1693147554138	INFO	1	bosses.ValakasManager	ValakasManager: State of Valakas is NOTSPAWN.
-1693147554138	INFO	1	bosses.ValakasManager	ValakasManager: Next spawn date of Valakas is 03:00 01.01.1970.
-1693147554143	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Giran Arena
-1693147554148	INFO	1	communityboard.CommunityBoardForge	CommunityBoard: Forge Enchant: false
-1693147554149	INFO	1	communityboard.CommunityBoardForge	CommunityBoard: Forge Attribut: false
-1693147554149	INFO	1	communityboard.CommunityBoardForge	CommunityBoard: Forge Augment: false
-1693147554154	INFO	1	l2open.gameserver.instancemanager.CastleManager	MercTicketManager: Initializing
-1693147554159	INFO	1	l2open.gameserver.instancemanager.CastleManager	MercTicketManager: Loaded 0 Mercenary Tickets
-1693147554165	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
-1693147554174	INFO	1	events.lastHero.LastHero	Loaded Event: Last Hero
-1693147554239	INFO	1	l2open.gameserver.tables.PetDataTable	PetDataTable: Loaded 3834[50] pets.
-1693147554275	INFO	1	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
-1693147554280	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Fantasy Isle
-1693147554313	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: DropItem
-1693147554317	INFO	1	events.Simple.Simple	Loaded Event: Simple [state: deactivated]
-1693147554319	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Enter Hellbound Island
-1693147554320	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Level manipulation
-1693147554323	INFO	1	l2open.extensions.scripts.ScriptFile	BaiumManager: State of Baium is NOTSPAWN.
-1693147554323	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Boss: Baium. Next spawn date: Thu Jan 01 03:00:00 MSK 1970
-1693147554324	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Warehouse
-1693147554341	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Fort Info
-1693147554353	INFO	1	l2open.gameserver.instancemanager.DimensionalRiftManager	DimensionalRiftManager: Loaded 13 room types with 112 rooms.
-1693147554353	INFO	1	l2open.gameserver.instancemanager.DimensionalRiftManager	DimensionalRiftManager: Loaded 300 dimensional rift spawns, 0 errors.
-1693147554393	INFO	1	l2open.gameserver.instancemanager.InstancedZoneManager	InstancedZoneManager: Loaded 96 zones with 114 rooms.
-1693147554393	INFO	1	l2open.gameserver.instancemanager.InstancedZoneManager	InstancedZoneManager: Loaded 740 instanced location spawns, 0 errors.
-1693147554395	INFO	1	l2open.gameserver.Announcements	config/announcements.txt doesn't exist
-1693147554528	INFO	1	l2open.gameserver.tables.AugmentationData	Initializing AugmentationData.
-1693147554553	INFO	1	l2open.gameserver.tables.StaticObjectsTable	StaticObject: Loaded 29 StaticObject Templates.
-1693147554571	INFO	1	l2open.gameserver.GameServer	AutoSpawnHandler: Loaded 50 handlers in total.
-1693147554580	INFO	1	l2open.gameserver.GameServer	AutoChatHandler: Loaded 14 handlers in total.
-1693147554588	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Loading Olympiad System....
-1693147554588	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Currently in Olympiad Period
-1693147554588	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: In 4 days, 6 hours and 14 mins.
-1693147554588	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Next Weekly Change is in....
-1693147554588	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: In 0 days, 18 hours and 14 mins.
-1693147554588	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Loaded 0 Noblesses
-1693147554589	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Competition Period Starts in 0 days, 0 hours and 14 mins.
-1693147554589	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Event starts/started: Sun Aug 27 18:00:00 MSK 2023
-1693147554591	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System:[Disable] Start custom reward 22:45 27.08.2023.
-1693147554591	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: End custom reward 00:00 28.08.2023.
-1693147554594	INFO	1	l2open.gameserver.model.entity.Hero	Hero System: Loaded 0 Heroes.
-1693147554594	INFO	1	l2open.gameserver.model.entity.Hero	Hero System: Loaded 0 all time Heroes.
-1693147554598	INFO	1	l2open.gameserver.instancemanager.CursedWeaponsManager	CursedWeaponsManager: Loaded 0 cursed weapon(s).
-1693147554599	INFO	1	l2open.gameserver.instancemanager.PlayerRewardManager	PlayerRewardManager: set_noble[0] inc_pvp[0] inc_pc[0].
-1693147554600	INFO	1	l2open.gameserver.instancemanager.SeedOfInfinityManager	Seed of Infinity Manager: Current Cycle is 1
-1693147554601	INFO	1	l2open.gameserver.instancemanager.NaiaTowerManager	Naia Core Manager: Loaded
-1693147554602	INFO	1	l2open.gameserver.instancemanager.CoupleManager	Initializing CoupleManager
-1693147554602	INFO	1	l2open.gameserver.instancemanager.CoupleManager	Loaded: 0 couples(s)
-1693147554603	INFO	1	l2open.gameserver.GameServer	CoupleManager initialized
-1693147554603	INFO	1	l2open.gameserver.GameServer	ItemHandler: Loaded 2519 handlers.
-1693147554603	INFO	1	l2open.gameserver.GameServer	AdminCommandHandler: Loaded 495 handlers.
-1693147554603	INFO	1	l2open.gameserver.GameServer	UserCommandHandler: Loaded 17 handlers.
-1693147554603	INFO	1	l2open.gameserver.GameServer	VoicedCommandHandler: Loaded 69 handlers.
-1693147554616	INFO	1	l2open.gameserver.model.entity.vehicle.L2VehicleManager	Initializing L2VehicleManager
-1693147554625	INFO	1	l2open.gameserver.model.entity.vehicle.L2VehicleManager	L2VehicleManager: Loaded 6 vehicles.
-1693147554629	INFO	1	l2open.gameserver.tables.AirShipDocksTable	AirShipDocksTable: Loaded 5 docks.
-1693147554634	INFO	1	l2open.gameserver.GameServer	IdFactory: Free ObjectID's remaining: 1878997597
-1693147554639	INFO	1	l2open.gameserver.tables.TeleportTable	TeleportController: Loaded 600 locations.
-1693147554649	INFO	1	l2open.gameserver.itemmall.ItemMall	ItemMall: loaded 556 item templates.
-1693147554652	INFO	1	l2open.gameserver.itemmall.ItemMall	ItemMall: loaded 184 items available for trading.
-1693147554654	WARNING	1	l2open.gameserver.Shutdown	AutoRestart scheduled through 11h 15m
-1693147554675	WARNING	1	l2open.gameserver.instancemanager.ItemAuctionManager	ItemAuctionManager: Missing item_auctions.xml!
-1693147554677	INFO	1	l2open.gameserver.instancemanager.BloodAltarManager	Blood Altar Manager: Initializing...
-1693147554686	INFO	1	l2open.gameserver.GameServer	GameServer Started
-1693147554686	INFO	1	l2open.gameserver.GameServer	Maximum Numbers of Connected Players: 3000
-1693147554829	INFO	98	l2open.gameserver.loginservercon.LSConnection	GameServer: Connecting to LoginServer on 127.0.0.1:9014
-1693147555572	INFO	85	l2open.gameserver.loginservercon.lspackets.AuthResponse	Registered on login as Server 1 : 
-1693147556429	INFO	100	l2open.common.RunnableImpl	Restored 0 offline traders
-1693147561732	INFO	1	l2open.gameserver.GameStart	Telnet server is currently disabled.
-1693147561733	INFO	1	l2open.gameserver.GameStart	=================================================
-1693147561734	INFO	1	l2open.gameserver.GameStart	AllowedMemory: ........... 8184192 KB
-1693147561735	INFO	1	l2open.gameserver.GameStart	     Allocated: .......... 8184192 KB (100.0%)
-1693147561735	INFO	1	l2open.gameserver.GameStart	     Non-Allocated: ...... 0 KB (0.0%)
-1693147561735	INFO	1	l2open.gameserver.GameStart	AllocatedMemory: ......... 8184192 KB
-1693147561735	INFO	1	l2open.gameserver.GameStart	     Used: ............... 1204921 KB (14.7225%)
-1693147561735	INFO	1	l2open.gameserver.GameStart	     Unused (cached): .... 6979270 KB (85.2775%)
-1693147561735	INFO	1	l2open.gameserver.GameStart	UseableMemory: ........... 6979270 KB (85.2775%)
-1693147561735	INFO	1	l2open.gameserver.GameStart	=================================================
-1693147561735	INFO	1	l2open.gameserver.GameStart	MinProtocolRevision: 267
-1693147568777	INFO	58	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
-1693147568777	INFO	58	communityboard.CommunityBoardFullStats	npc_id=29068 state=0
-1693147568777	INFO	58	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
-1693147568777	INFO	58	communityboard.CommunityBoardFullStats	npc_id=29020 state=0
-1693147568777	INFO	58	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
-1693147568777	INFO	58	communityboard.CommunityBoardFullStats	npc_id=29028 state=0
-1693147568777	INFO	58	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
-1693147568777	INFO	58	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
-1693147568777	INFO	58	communityboard.CommunityBoardFullStats	npc_id=29065 state=0
-1693147568777	INFO	58	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
-1693147568777	INFO	58	communityboard.CommunityBoardFullStats	npc_id=29186 state=0
-1693147612021	INFO	99	l2open.extensions.network.SelectorThread	max_p_size: 7
-1693147612517	INFO	99	l2open.extensions.network.SelectorThread	max_p_size: 267
-1693147612558	INFO	99	l2open.gameserver.clientpackets.L2GameClientPacket	RequestAuthLogin: 50
-1693147612558	INFO	99	l2open.gameserver.clientpackets.L2GameClientPacket	RequestAuthLogin: 32
-1693147614181	INFO	87	l2open.gameserver.xml.loader.XmlArmorsetLoader	XmlArmorsetLoader: Loaded 168 armor sets.
-1693147614286	INFO	87	l2open.gameserver.xml.loader.XmlPcParameterLoader	XmlPcParameterLoader: Loaded 107 pc_parameters
-1693147617444	INFO	99	l2open.gameserver.clientpackets.L2GameClientPacket	RequestAuthLogin: 52
-1693147617444	INFO	99	l2open.gameserver.clientpackets.L2GameClientPacket	RequestAuthLogin: 32
-1693147621157	INFO	86	l2open.gameserver.tables.FriendsTable	FriendsTable: Loaded 0 friends.
-1693147630778	INFO	83	l2open.gameserver.clientpackets.L2GameClientPacket	SendBypassBuildCmd: admin
-1693147633961	INFO	82	bosses.AntharasManager	AntharasManager: State of Antharas is NOTSPAWN.
-1693147633961	INFO	82	bosses.AntharasManager	AntharasManager: Next spawn date of Antharas is 03:00 01.01.1970.
-1693147633981	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Service: VitaminManager...
-1693147634011	INFO	82	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 180 Room1 1st Npc Spawn Locations.
-1693147634011	INFO	82	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 4 Room2 Inside Npc Spawn Locations.
-1693147634011	INFO	82	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 121 Room2 Outside Npc Spawn Locations.
-1693147634018	INFO	82	bosses.ValakasManager	ValakasManager: State of Valakas is NOTSPAWN.
-1693147634019	INFO	82	bosses.ValakasManager	ValakasManager: Next spawn date of Valakas is 03:00 01.01.1970.
-1693147634025	INFO	82	l2open.extensions.scripts.ScriptFile	BaiumManager: State of Baium is NOTSPAWN.
-1693147634026	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Boss: Baium. Next spawn date: Thu Jan 01 03:00:00 MSK 1970
-1693147634049	INFO	82	l2open.extensions.scripts.ScriptFile	Lindvior Manager Load.
-1693147634049	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1202: Crystal Caverns
-1693147634055	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1004: Ice Fairy Sirra
-1693147634066	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1003: Sailren
-1693147634082	INFO	82	bosses.BelethManager	Beleth Manager: Loaded successfuly
-1693147634082	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Service: 1103: Oracle Teleport
-1693147634086	INFO	82	l2open.extensions.scripts.ScriptFile	MarcketLoad Loaded...
-1693147634099	WARNING	82	bosses.FourSepulchersSpawn	FourSepulchersManager: Loaded 20 Mysterious-Box spawns.
-1693147634133	WARNING	82	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 physical monsters spawns.
-1693147634162	WARNING	82	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 magical monsters spawns.
-1693147634169	WARNING	82	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 92 Church of duke monsters spawns.
-1693147634177	WARNING	82	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 68 Emperor's grave NPC spawns.
-1693147634177	WARNING	82	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Conquerors Sepulcher Manager
-1693147634178	WARNING	82	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Emperors Sepulcher Manager
-1693147634178	WARNING	82	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Great Sages Sepulcher Manager
-1693147634178	WARNING	82	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Judges Sepulcher Manager
-1693147634181	WARNING	82	bosses.FourSepulchersManager	FourSepulchersManager: Beginning in Attack time
-1693147634193	WARNING	62	l2open.common.RunnableImpl	Sun Aug 27 17:47:14 MSK 2023 Atk announce scheduled to 50.0 minute of this hour.
-1693147634195	INFO	82	l2open.extensions.scripts.ScriptFile	MonasteryOfSilence: Loaded
-1693147634211	INFO	82	l2open.extensions.scripts.ScriptFile	ZakenManager: Init Zaken Manager.
-1693147634215	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Successful
-1693147634228	INFO	82	communityboard.General	premiumLottery: Store Jackpot
-1693147634232	INFO	82	com.mchange.v2.c3p0.stmt.GooGooStatementCache	Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='premium_loss_count'
-1693147634235	INFO	82	communityboard.General	CommunityBoard: Premium Lottery games loaded.
-1693147634236	INFO	82	communityboard.General	CommunityBoard: Premium Lottery games played 0.
-1693147634238	INFO	82	communityboard.General	CommunityBoard: Premium Lottery jackpot is 0 Gold Einhasad.
-1693147634274	INFO	82	communityboard.CommunityBoardShortStats	Short statistics in the commynity board has been updated.
-1693147634305	INFO	82	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
-1693147634305	INFO	82	communityboard.CommunityBoardFullStats	npc_id=29068 state=0
-1693147634305	INFO	82	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
-1693147634305	INFO	82	communityboard.CommunityBoardFullStats	npc_id=29020 state=0
-1693147634305	INFO	82	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
-1693147634305	INFO	82	communityboard.CommunityBoardFullStats	npc_id=29028 state=0
-1693147634305	INFO	82	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
-1693147634305	INFO	82	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
-1693147634305	INFO	82	communityboard.CommunityBoardFullStats	npc_id=29065 state=0
-1693147634306	INFO	82	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
-1693147634306	INFO	82	communityboard.CommunityBoardFullStats	npc_id=29186 state=0
-1693147634306	INFO	82	communityboard.CommunityBoardFullStats	Full statistics in the commynity board has been updated.
-1693147634307	INFO	82	l2open.extensions.scripts.ScriptFile	Kamaloka Gate Loaded
-1693147634313	INFO	82	communityboard.CommunityBoardTeleport	Load 297 teleport points.
-1693147634318	INFO	82	communityboard.CommunityBoardTeleport	Load 297 teleport points.
-1693147634333	WARNING	82		Unevenly distributed hash code - Degraded Preformance
-1693147634335	INFO	82	l2open.extensions.scripts.ScriptFile	MonasteryOfSilenceGame: Loaded
-1693147634337	INFO	82	communityboard.General	SimpleLottery: Store Jackpot
-1693147634340	INFO	82	com.mchange.v2.c3p0.stmt.GooGooStatementCache	Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='simple_loss_count'
-1693147634342	INFO	82	communityboard.General	CommunityBoard: Simple Lottery games loaded.
-1693147634343	INFO	82	communityboard.General	CommunityBoard: Simple Lottery games played 0.
-1693147634344	INFO	82	communityboard.General	CommunityBoard: Simple Lottery jackpot is 0 Adena.
-1693147634356	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1201: Dark Cloud Mansion
-1693147634374	INFO	82	l2open.extensions.scripts.ScriptFile	SailrenManager: State of Sailren is NOTSPAWN.
-1693147634374	INFO	82	l2open.extensions.scripts.ScriptFile	SailrenManager: Next spawn date of Sailren is Thu Jan 01 03:00:00 MSK 1970.
-1693147634377	INFO	82	communityboard.CommunityBoardForge	CommunityBoard: Forge Enchant: false
-1693147634377	INFO	82	communityboard.CommunityBoardForge	CommunityBoard: Forge Attribut: false
-1693147634377	INFO	82	communityboard.CommunityBoardForge	CommunityBoard: Forge Augment: false
-1693147634379	INFO	82	l2open.extensions.scripts.ScriptFile	Utilites Loaded
-1693147634412	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1001: Wake Up Baium
-1693147635303	INFO	82	events.Viktorina.Viktorina	Loaded Event: Victorina
-1693147635304	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: Coffer of Shadows [state: deactivated]
-1693147635306	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: March 8 [state: deactivated]
-1693147635306	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: Gludin Arena
-1693147635307	INFO	82	events.LastHunter.LastHunter	Loaded Event: Last Hunter
-1693147635308	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Rabbits To Riches Event [state: deactivated]
-1693147635308	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: Giran Arena
-1693147635309	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: The Fall Harvest [state: deactivated]
-1693147635309	INFO	82	events.coins.coins	Loaded Event: L2Coins [state: deactivated]
-1693147635309	INFO	82	events.lastHero.LastHero	Loaded Event: Last Hero
-1693147635310	INFO	82	events.TvT.TvT	Loaded Event: TvT
-1693147635310	INFO	82	events.FightClub.FightClubManager	Loaded Event: Fight Club
-1693147635311	INFO	82	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
-1693147635311	INFO	82	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
-1693147635311	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: Bounty Hunters Guild
-1693147635311	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: Change of Heart[state: deactivated]
-1693147635311	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: Underground Arena #1
-1693147635311	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Medal Collection Event [state: deactivated]
-1693147635312	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: SavingSnowman [state: deactivated]
-1693147635312	INFO	82	events.GvG.GvG	Loaded Event: GvG
-1693147635312	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: MasterOfEnchanting [state: deactivated]
-1693147635312	INFO	82	events.Simple.Simple	SpawnManager: despawned npc for event: Simple
-1693147635312	INFO	82	events.Simple.Simple	Loaded Event: Simple [state: deactivated]
-1693147635313	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: Dion Arena
-1693147635313	INFO	82	events.CtF.CtF	Loaded Event: CtF active.
-1693147635314	INFO	82	events.RewardofHonor.RewardofHonor	Loaded Event: Reward of Honor [state: deactivated]
-1693147635314	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: l2day [state: deactivated]
-1693147635314	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: Christmas [state: deactivated]
-1693147635314	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 3 [state: deactivated]
-1693147635315	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 2 [state: deactivated]
-1693147635315	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 1 [state: deactivated]
-1693147635315	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: The Flow Of The Horror [state: deactivated]
-1693147635316	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: Tournament [state: deactivated]
-1693147635316	INFO	82	l2open.extensions.scripts.ScriptFile	Loaded Event: AutoAnnouncer [state: deactivated]
-1693147691931	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
-1693147691932	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29068 state=0
-1693147691932	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
-1693147691932	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29020 state=0
-1693147691932	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
-1693147691932	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29028 state=0
-1693147691932	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
-1693147691932	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
-1693147691932	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29065 state=0
-1693147691932	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
-1693147691932	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29186 state=0
-1693147798067	INFO	99	l2open.extensions.network.SelectorThread	max_p_size: 4523
-1693147814181	WARNING	60	l2open.common.RunnableImpl	FourSepulchersManager: Entry time: Sun Aug 27 17:55:14 MSK 2023
-1693148044230	INFO	81	l2open.gameserver.clientpackets.L2GameClientPacket	SendBypassBuildCmd: admin
-1693148400002	INFO	58	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Olympiad Game Started
-1693149355698	INFO	23	l2open.common.RunnableImpl	=================================================
-1693149355698	INFO	23	l2open.common.RunnableImpl	Garbage Collector start.
-1693149355698	INFO	23	l2open.common.RunnableImpl	Players full online = 2
-1693149355698	INFO	23	l2open.common.RunnableImpl	Players online = 2
-1693149355698	INFO	23	l2open.common.RunnableImpl	Players offline = 0
-1693149355698	INFO	23	l2open.common.RunnableImpl	Players fake = 0
-1693149355698	INFO	23	l2open.common.RunnableImpl	Used to: 3468022Kb
-1693149364830	INFO	23	l2open.common.RunnableImpl	Garbage Collector finish(9132ms).
-1693149364831	INFO	23	l2open.common.RunnableImpl	Used after: 2492370Kb
-1693149364832	INFO	23	l2open.common.RunnableImpl	AllowedMemory: ........... 8184192 KB
-1693149364832	INFO	23	l2open.common.RunnableImpl	     Allocated: .......... 8184192 KB (100.0%)
-1693149364832	INFO	23	l2open.common.RunnableImpl	     Non-Allocated: ...... 0 KB (0.0%)
-1693149364832	INFO	23	l2open.common.RunnableImpl	AllocatedMemory: ......... 8184192 KB
-1693149364832	INFO	23	l2open.common.RunnableImpl	     Used: ............... 2492370 KB (30.4535%)
-1693149364832	INFO	23	l2open.common.RunnableImpl	     Unused (cached): .... 5691821 KB (69.5465%)
-1693149364832	INFO	23	l2open.common.RunnableImpl	UseableMemory: ........... 5691821 KB (69.5465%)
-1693149364832	INFO	23	l2open.common.RunnableImpl	=================================================
+1693332217478	WARNING	1	l2open.config.ConfigSystem	ConfigSystem(383): -> NoSuchFieldException(fake.properties): ﻿######
+1693332217553	INFO	1	l2open.config.ConfigSystem	Abuse: Loaded 18 abuse words.
+1693332217639	INFO	1	l2open.config.ConfigSystem	loading xml GMAccess
+1693332217708	INFO	1	com.mchange.v2.log.MLog	MLog clients using java 1.4+ standard logging.
+1693332217968	INFO	1	com.mchange.v2.c3p0.C3P0Registry	Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+1693332218096	INFO	1	com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource	Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 0, acquireRetryDelay -> 100, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15wayifwj3r1cml0zm|60438a68, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15wayifwj3r1cml0zm|60438a68, idleConnectionTestPeriod -> 60, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost/l2tehno?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 1000, maxStatements -> 100, maxStatementsPerConnection -> 10, minPoolSize -> 1, numHelperThreads -> 5, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+1693332218472	INFO	1	l2open.gameserver.idfactory.IdFactory	Clear characters online status and accesslevel.
+1693332218529	INFO	1	l2open.gameserver.idfactory.IdFactory	Total cleaned: 0, updated: 0 elements in database.
+1693332218566	INFO	24	l2open.gameserver.idfactory.IdFactory	IdFactory: Table characters contains 6 rows
+1693332218566	INFO	25	l2open.gameserver.idfactory.IdFactory	IdFactory: Table items contains 70 rows
+1693332218567	INFO	26	l2open.gameserver.idfactory.IdFactory	IdFactory: Table clan_data contains 0 rows
+1693332218568	INFO	27	l2open.gameserver.idfactory.IdFactory	IdFactory: Table ally_data contains 0 rows
+1693332218568	INFO	28	l2open.gameserver.idfactory.IdFactory	IdFactory: Table pets contains 0 rows
+1693332218568	INFO	29	l2open.gameserver.idfactory.IdFactory	IdFactory: Table couples contains 0 rows
+1693332218568	INFO	1	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracting 76 used id's from data tables...
+1693332218572	INFO	30	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 6 used id's from characters
+1693332218572	INFO	31	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 70 used id's from items
+1693332218572	INFO	32	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from clan_data
+1693332218573	INFO	33	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from ally_data
+1693332218574	INFO	34	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from pets
+1693332218574	INFO	35	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from couples
+1693332218574	INFO	1	l2open.gameserver.idfactory.IdFactory	IdFactory: Successfully extracted 76 used id's from data tables.
+1693332218575	INFO	1	l2open.gameserver.idfactory.BitSetIDFactory	IDFactory: 102912 id's available.
+1693332219085	INFO	1	l2open.gameserver.cache.CrestCache	CrestCache: Loaded 0 crests
+1693332219107	INFO	1	l2open.gameserver.instancemanager.AuctionManager	Initializing AuctionManager
+1693332219243	INFO	1	l2open.gameserver.instancemanager.AuctionManager	Loaded: 38 active auction(s)
+1693332224507	INFO	21	l2open.util.Strings	PTS HTML: ./data/html-ru.zip loaded 6038ms...
+1693332226937	WARNING	1	l2open.gameserver.skills.SkillsEngine	SkillsEngine: Loaded 61827 skill templates from XML files. Max id: 26077, max level: 259
+1693332226937	WARNING	1	l2open.gameserver.skills.SkillsEngine	SkillsEngine: Loaded 1616 custom skill templates from XML files.
+1693332228254	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2139][1][TARGET_ONE][range][not_friend]
+1693332228261	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2260][1][TARGET_ONE][single][none]
+1693332228265	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2353][1][TARGET_ONE][static_object_scope][hidden_place]
+1693332228269	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2624][1][TARGET_ONE][single][none]
+1693332228313	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4143][1][TARGET_ONE][point_blank][not_friend]
+1693332228321	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4212][1][TARGET_ONE][range][friend]
+1693332228334	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4483][1][TARGET_ONE][point_blank][not_friend]
+1693332228334	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4488][1][TARGET_ONE][point_blank][not_friend]
+1693332228335	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4524][1][TARGET_ONE][single][none]
+1693332228347	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4697][1][TARGET_ONE][point_blank][not_friend]
+1693332228362	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5037][1][TARGET_ONE][point_blank][not_friend]
+1693332228362	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5039][1][TARGET_ONE][single][none]
+1693332228364	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5051][1][TARGET_ONE][point_blank][not_friend]
+1693332228365	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5054][1][TARGET_ONE][point_blank][not_friend]
+1693332228368	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5104][1][TARGET_ONE][single][none]
+1693332228369	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5105][1][TARGET_ONE][single][none]
+1693332228370	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5114][1][TARGET_ONE][point_blank][not_friend]
+1693332228370	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5117][1][TARGET_ONE][point_blank][not_friend]
+1693332228371	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5123][1][TARGET_ONE][point_blank][friend]
+1693332228371	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5124][1][TARGET_ONE][point_blank][not_friend]
+1693332228371	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5125][1][TARGET_ONE][point_blank][friend]
+1693332228371	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5126][1][TARGET_ONE][point_blank][friend]
+1693332228371	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5127][1][TARGET_ONE][point_blank][friend]
+1693332228372	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5128][1][TARGET_ONE][point_blank][friend]
+1693332228372	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5129][1][TARGET_ONE][point_blank][friend]
+1693332228372	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5130][1][TARGET_ONE][point_blank][not_friend]
+1693332228372	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5131][1][TARGET_ONE][point_blank][not_friend]
+1693332228372	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5132][1][TARGET_ONE][point_blank][not_friend]
+1693332228372	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5133][1][TARGET_ONE][point_blank][not_friend]
+1693332228372	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5134][1][TARGET_ONE][point_blank][not_friend]
+1693332228373	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5145][1][TARGET_ONE][point_blank][not_friend]
+1693332228377	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5202][1][TARGET_ONE][point_blank][not_friend]
+1693332228377	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5203][1][TARGET_ONE][point_blank][not_friend]
+1693332228378	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5204][1][TARGET_ONE][single][none]
+1693332228379	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5239][1][TARGET_ONE][single][none]
+1693332228380	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5248][1][TARGET_ONE][single][none]
+1693332228380	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5252][1][TARGET_ONE][single][none]
+1693332228381	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5257][1][TARGET_ONE][single][none]
+1693332228383	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5275][1][TARGET_ONE][point_blank][not_friend]
+1693332228384	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5279][1][TARGET_ONE][point_blank][not_friend]
+1693332228384	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5283][1][TARGET_ONE][point_blank][not_friend]
+1693332228385	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5287][1][TARGET_ONE][point_blank][not_friend]
+1693332228386	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5291][1][TARGET_ONE][point_blank][not_friend]
+1693332228387	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5295][1][TARGET_ONE][point_blank][not_friend]
+1693332228389	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5306][1][TARGET_ONE][point_blank][not_friend]
+1693332228392	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5340][1][TARGET_ONE][point_blank][not_friend]
+1693332228392	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5344][1][TARGET_ONE][point_blank][not_friend]
+1693332228393	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5348][1][TARGET_ONE][point_blank][not_friend]
+1693332228393	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5352][1][TARGET_ONE][point_blank][not_friend]
+1693332228393	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5356][1][TARGET_ONE][point_blank][not_friend]
+1693332228394	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5360][1][TARGET_ONE][point_blank][not_friend]
+1693332228394	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5366][1][TARGET_ONE][point_blank][not_friend]
+1693332228395	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5375][1][TARGET_ONE][point_blank][not_friend]
+1693332228396	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5379][1][TARGET_ONE][point_blank][not_friend]
+1693332228396	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5382][1][TARGET_ONE][point_blank][not_friend]
+1693332228396	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5385][1][TARGET_ONE][point_blank][not_friend]
+1693332228397	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5388][1][TARGET_ONE][point_blank][not_friend]
+1693332228397	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5391][1][TARGET_ONE][point_blank][not_friend]
+1693332228400	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5423][1][TARGET_ONE][point_blank][not_friend]
+1693332228401	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5424][1][TARGET_ONE][point_blank][not_friend]
+1693332228401	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5430][1][TARGET_ONE][range][clan]
+1693332228403	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5447][1][TARGET_ONE][single][none]
+1693332228405	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5494][1][TARGET_ONE][single][none]
+1693332228407	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5591][1][TARGET_ONE][single][none]
+1693332228409	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5619][1][TARGET_ONE][single][none]
+1693332228413	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5660][1][TARGET_ONE][single][none]
+1693332228413	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5689][1][TARGET_ONE][single][none]
+1693332228414	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5697][1][TARGET_ONE][single][none]
+1693332228414	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5699][1][TARGET_ONE][single][none]
+1693332228415	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5713][1][TARGET_ONE][single][none]
+1693332228418	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5751][1][TARGET_ONE][point_blank][not_friend]
+1693332228418	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5756][1][TARGET_ONE][single][none]
+1693332228423	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5772][1][TARGET_ONE][single][none]
+1693332228423	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5773][1][TARGET_ONE][single][none]
+1693332228424	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5799][1][TARGET_ONE][point_blank][not_friend]
+1693332228425	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5836][1][TARGET_ONE][point_blank][clan]
+1693332228425	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5847][1][TARGET_ONE][point_blank][none]
+1693332228426	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5887][1][TARGET_ONE][point_blank][not_friend]
+1693332228428	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5923][1][TARGET_ONE][single][none]
+1693332228428	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5937][1][TARGET_ONE][single][none]
+1693332228430	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6020][1][TARGET_ONE][single][none]
+1693332228430	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6021][1][TARGET_ONE][single][none]
+1693332228430	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6022][1][TARGET_ONE][single][none]
+1693332228430	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6023][1][TARGET_ONE][single][none]
+1693332228430	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6034][1][TARGET_ONE][single][none]
+1693332228432	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6090][1][TARGET_ONE][single][none]
+1693332228432	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6092][1][TARGET_ONE][single][none]
+1693332228437	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6270][1][TARGET_ONE][point_blank][none]
+1693332228438	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6298][1][TARGET_ONE][single][none]
+1693332228438	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6301][1][TARGET_ONE][point_blank][not_friend]
+1693332228438	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6305][1][TARGET_ONE][point_blank][not_friend]
+1693332228439	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6316][1][TARGET_ONE][single][none]
+1693332228439	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6320][1][TARGET_ONE][point_blank][not_friend]
+1693332228440	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6372][1][TARGET_ONE][single][none]
+1693332228441	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6374][1][TARGET_ONE][single][none]
+1693332228441	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6375][1][TARGET_ONE][single][none]
+1693332228443	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6398][1][TARGET_ONE][ring_range][not_friend]
+1693332228445	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6415][1][TARGET_ONE][point_blank][not_friend]
+1693332228446	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6422][1][TARGET_ONE][point_blank][not_friend]
+1693332228675	INFO	21	l2open.util.Strings	PTS HTML: ./data/html-en.zip loaded 4168ms...
+1693332228679	INFO	21	l2open.util.Strings	Loaded 418 translit entrys
+1693332228914	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6754][1][TARGET_ONE][point_blank][not_friend]
+1693332228915	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6769][1][TARGET_ONE][point_blank][not_friend]
+1693332228916	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6777][1][TARGET_ONE][point_blank][not_friend]
+1693332228916	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6779][1][TARGET_ONE][single][none]
+1693332228921	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6835][1][TARGET_ONE][single][none]
+1693332228921	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6841][1][TARGET_ONE][single][none]
+1693332228921	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6858][1][TARGET_ONE][single][none]
+1693332228921	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6864][1][TARGET_ONE][single][none]
+1693332228921	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6868][1][TARGET_ONE][single][none]
+1693332229014	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9011][1][TARGET_ONE][single][none]
+1693332229014	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9011][1][TARGET_ONE][single][none]
+1693332229015	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9011][1][TARGET_ONE][single][none]
+1693332229015	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1693332229015	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1693332229015	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1693332229015	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1693332229015	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1693332229016	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1693332229016	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1693332229016	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1693332229016	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1693332229016	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1693332229016	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1693332229017	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1693332229017	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1693332229017	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1693332229017	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1693332229017	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1693332229018	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1693332229018	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1693332229018	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1693332229018	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1693332229018	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1693332229018	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1693332229019	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1693332229019	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1693332229019	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1693332229019	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1693332229019	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1693332229019	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1693332229021	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9060][1][TARGET_ONE][point_blank][friend]
+1693332229024	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21005][1][TARGET_ONE][single][none]
+1693332229025	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21052][1][TARGET_ONE][single][none]
+1693332229025	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21055][1][TARGET_ONE][single][none]
+1693332229025	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21056][1][TARGET_ONE][single][none]
+1693332229025	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21061][1][TARGET_ONE][single][none]
+1693332229026	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21063][1][TARGET_ONE][single][none]
+1693332229026	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21071][1][TARGET_ONE][single][none]
+1693332229026	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21086][1][TARGET_ONE][single][none]
+1693332229027	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21153][1][TARGET_ONE][single][none]
+1693332229027	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21154][1][TARGET_ONE][single][none]
+1693332229027	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21170][1][TARGET_ONE][single][none]
+1693332229035	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23165][1][TARGET_ONE][single][none]
+1693332229038	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23298][1][TARGET_ONE][single][none]
+1693332229039	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23308][1][TARGET_ONE][point_blank][friend]
+1693332229039	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23309][1][TARGET_ONE][point_blank][friend]
+1693332229039	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23310][1][TARGET_ONE][point_blank][friend]
+1693332229039	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23311][1][TARGET_ONE][point_blank][friend]
+1693332229362	INFO	1	l2open.gameserver.instancemanager.CubicManager	CubicManager: Loaded 145 cubics.
+1693332229663	INFO	1	l2open.gameserver.tables.PetSkillsTable	PetSkillsTable: Loaded 2671 skills.
+1693332231339	WARNING	1	l2open.gameserver.templates.L2Item	WARNING: item 20711 action attached skill not done: Box of Dynasty Armor[id=9105,lvl=1]
+1693332232438	INFO	1	l2open.gameserver.xml.loader.XmlOptionDataLoader	XmlOptionDataLoader: Loaded 24975 templates.
+1693332232473	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 0 Custom Armors
+1693332232473	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 3554 Armors
+1693332232473	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 240 Rare Armors
+1693332232473	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 58 PvP Armors
+1693332234902	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 0 Custom Weapons
+1693332234902	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 4001 Weapons
+1693332234902	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 794 Rare Weapons
+1693332234902	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 558 PvP Weapons
+1693332234902	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 1667 SA Weapons
+1693332234902	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 283 Trigger for Weapons
+1693332234902	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 262 Pole Weapons
+1693332237366	INFO	1	l2open.gameserver.xml.loader.XmlEtcItemLoader	XmlEtcItemLoader: Loaded 0 Custom EtcItems
+1693332237366	INFO	1	l2open.gameserver.xml.loader.XmlEtcItemLoader	XmlEtcItemLoader: Loaded 10855 EtcItems
+1693332237613	INFO	1	l2open.gameserver.TradeController	TradeController: Loaded 4 file(s).
+1693332237613	INFO	1	l2open.gameserver.TradeController	TradeController: Loaded 23181 Items.
+1693332237613	INFO	1	l2open.gameserver.TradeController	TradeController: Loaded 702 Buylists.
+1693332237783	INFO	1	l2open.gameserver.RecipeController	RecipeController: Loaded 1000 Recipes.
+1693332302449	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 17098 skills.
+1693332302449	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 109 fishing skills.
+1693332302449	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 20 transformation skills.
+1693332302449	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 64 clan skills.
+1693332302449	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 526 enchanted skills.
+1693332302449	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 18 pledge skills.
+1693332302449	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 74 certification skills.
+1693332302449	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 0 other skills.
+1693332302450	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 21 Transfer skills for Bishop.
+1693332302450	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 24 Transfer skills for Elder.
+1693332302451	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 32 Transfer skills for Silen Elder.
+1693332302454	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillSpellbookTable: Loaded 386 Spellbooks.
+1693332302457	INFO	1	l2open.pts.loader.LoadData	PTS ArmorEnchantBonusData: Finish loading data fo 1 ms...
+1693332302467	INFO	1	l2open.gameserver.tables.CharTemplateTable	CharTemplateTable: Loaded 206 Character Templates.
+1693332302473	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 779 AI params for 666 NPCs.
+1693332302643	INFO	1	l2open.extensions.scripts.Scripts	Scripts loading...
+1693332302643	INFO	1	l2open.extensions.scripts.Scripts	Scripts start parse class...
+1693332303861	INFO	1	l2open.extensions.scripts.Scripts	Scripts end parse class...
+1693332309825	INFO	1	l2open.extensions.scripts.Scripts	Scripts end compile class...
+1693332310766	INFO	1	l2open.extensions.scripts.Scripts	Scripts successfully loaded. Loaded 1292 classes.
+1693332311158	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 10463 Npc Templates.
+1693332311312	INFO	1	l2open.gameserver.tables.NpcTable	Loaded 118801 npc skills.
+1693332311458	INFO	1	l2open.gameserver.tables.NpcTable	Players droplist load skipped
+1693332311462	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 597 Minions.
+1693332311465	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 1641 SkillLearn entrys.
+1693332311495	INFO	1	l2open.pts.loader.LoadData	PTS NpcDataPch: Finish loading data size: 10195 fo 29 ms...
+1693332311499	INFO	1	l2open.gameserver.tables.HennaTable	HennaTable: Loaded 180 Templates.
+1693332311532	INFO	1	l2open.gameserver.tables.HennaTreeTable	HennaTreeTable: Loaded 8134 Henna Tree Templates.
+1693332311535	INFO	1	l2open.gameserver.tables.LevelUpTable	LevelUpData: Loaded 103 Character Level Up Templates.
+1693332311550	INFO	1	l2open.gameserver.model.L2World	L2World: [255][271][63] World Region Grid set up.
+1693332311550	INFO	1	l2open.gameserver.geodata.GeoEngine	GeoEngine: Loading Geodata...
+1693332311551	INFO	1	l2open.gameserver.geodata.GeoEngine	GeoEngine: Loaded 0 map(s), max layers: 1
+1693332313247	INFO	1	l2open.gameserver.tables.DoorTable	DoorTable: Loaded 1030 doors.
+1693332313434	INFO	1	l2open.gameserver.tables.TerritoryTable	TerritoryTable: Loaded 9976 locations
+1693332313575	INFO	1	l2open.gameserver.instancemanager.ZoneManager	ZoneManager: Loaded 1649 zones
+1693332313655	INFO	1	l2open.gameserver.tables.TerritoryTable	TerritoryTable: Added 1642 locations to L2World
+1693332313657	INFO	1	l2open.gameserver.instancemanager.UnderGroundColliseumManager	Loaded: 1 UnderGround Colliseums.
+1693332313817	INFO	1	l2open.gameserver.instancemanager.CastleManager	Loaded: 9 castles.
+1693332313855	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693332313850][1693332313850]: Siege of Gludio: Sun Sep 03 16:00:00 MSK 2023
+1693332313855	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693332313855][1693332313855]: Siege of Gludio: Sun Sep 03 16:00:00 MSK 2023
+1693332313856	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Gludio: Sun Sep 03 16:00:00 MSK 2023
+1693332313862	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693332313862][1693332313862]: Siege of Dion: Sun Sep 03 16:00:00 MSK 2023
+1693332313862	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693332313862][1693332313862]: Siege of Dion: Sun Sep 03 16:00:00 MSK 2023
+1693332313863	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Dion: Sun Sep 03 16:00:00 MSK 2023
+1693332313866	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693332313866][1693332313866]: Siege of Giran: Sun Sep 03 16:00:00 MSK 2023
+1693332313866	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693332313866][1693332313866]: Siege of Giran: Sun Sep 03 16:00:00 MSK 2023
+1693332313867	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Giran: Sun Sep 03 16:00:00 MSK 2023
+1693332313869	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693332313869][1693332313869]: Siege of Oren: Sun Sep 03 16:00:00 MSK 2023
+1693332313869	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693332313869][1693332313869]: Siege of Oren: Sun Sep 03 16:00:00 MSK 2023
+1693332313870	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Oren: Sun Sep 03 16:00:00 MSK 2023
+1693332313874	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693332313874][1693332313874]: Siege of Aden: Sun Sep 03 16:00:00 MSK 2023
+1693332313874	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693332313874][1693332313874]: Siege of Aden: Sun Sep 03 16:00:00 MSK 2023
+1693332313874	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Aden: Sun Sep 03 16:00:00 MSK 2023
+1693332313876	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693332313876][1693332313876]: Siege of Innadril: Sun Sep 03 16:00:00 MSK 2023
+1693332313877	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693332313877][1693332313877]: Siege of Innadril: Sun Sep 03 16:00:00 MSK 2023
+1693332313877	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Innadril: Sun Sep 03 16:00:00 MSK 2023
+1693332313882	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693332313882][1693332313882]: Siege of Goddard: Sun Sep 03 16:00:00 MSK 2023
+1693332313882	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693332313882][1693332313882]: Siege of Goddard: Sun Sep 03 16:00:00 MSK 2023
+1693332313883	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Goddard: Sun Sep 03 16:00:00 MSK 2023
+1693332313886	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693332313886][1693332313886]: Siege of Rune: Sun Sep 03 16:00:00 MSK 2023
+1693332313886	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693332313886][1693332313886]: Siege of Rune: Sun Sep 03 16:00:00 MSK 2023
+1693332313887	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Rune: Sun Sep 03 16:00:00 MSK 2023
+1693332313891	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1693332313891][1693332313891]: Siege of Schuttgart: Sun Sep 03 16:00:00 MSK 2023
+1693332313891	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1693332313891][1693332313891]: Siege of Schuttgart: Sun Sep 03 16:00:00 MSK 2023
+1693332313892	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Schuttgart: Sun Sep 03 16:00:00 MSK 2023
+1693332313893	INFO	1	l2open.gameserver.instancemanager.FortressManager	Initializing FortressManager
+1693332314066	INFO	1	l2open.gameserver.instancemanager.FortressManager	Loaded: 21 fortresses.
+1693332314135	INFO	1	l2open.gameserver.instancemanager.ClanHallManager	Initializing ClanHallManager.
+1693332314472	INFO	1	l2open.gameserver.instancemanager.ClanHallManager	Loaded: 44 ClanHalls.
+1693332314492	INFO	1	l2open.gameserver.instancemanager.ClanHallManager	110 doors attached to ClanHalls
+1693332314502	INFO	1	l2open.gameserver.model.entity.siege.clanhall.BanditStrongholdSiege	Siege of Bandit Stronghold : Fri Sep 01 21:00:00 MSK 2023
+1693332314511	INFO	1	l2open.gameserver.model.entity.siege.clanhall.WildBeastFarmSiege	Siege of Wild Beasts Farm : Fri Sep 01 21:00:00 MSK 2023
+1693332314517	INFO	1	l2open.gameserver.model.entity.siege.clanhall.RainbowSpringSiege	Siege of Rainbow Springs Chateau : Fri Sep 01 22:00:00 MSK 2023
+1693332314533	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiegeDatabase	TerritorySiege: load 9 town spawns.
+1693332314699	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiegeDatabase	TerritorySiege: load 9 castle spawns.
+1693332314703	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiegeDatabase	TerritorySiege: load 9 fortress spawns.
+1693332314709	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiege	Territory Siege: 02.09.2023 20:00:27
+1693332314714	INFO	1	l2open.gameserver.instancemanager.CastleManorManager	Manor System: Initializing...
+1693332314732	INFO	1	l2open.gameserver.instancemanager.SeedOfAnnihilationZone	SeedOfAnnihilationManager: Load Manager.
+1693332314854	INFO	1	l2open.gameserver.instancemanager.RaidBossSpawnManager	RaidBossSpawnManager: Loaded 0 Statuses
+1693332315007	INFO	1	l2open.gameserver.instancemanager.NaiaTowerManager	Naia Tower Manager: Loaded 12 rooms
+1693332315332	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 4000 npc
+1693332315477	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 7000 npc
+1693332315523	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 8000 npc
+1693332315583	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 9000 npc
+1693332315776	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 13000 npc
+1693332316766	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 20000 npc
+1693332316818	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 21000 npc
+1693332316877	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 22000 npc
+1693332316949	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 23000 npc
+1693332317148	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 26000 npc
+1693332317212	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 27000 npc
+1693332317841	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 30000 npc
+1693332317908	INFO	1	l2open.gameserver.instancemanager.HellboundManager	Hellbound Manager: Current Level is 1
+1693332317908	INFO	1	l2open.gameserver.instancemanager.HellboundManager	Hellbound Manager: Current Points is 0
+1693332317970	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 31000 npc
+1693332318066	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 32000 npc
+1693332318226	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 34000 npc
+1693332318312	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 35000 npc
+1693332318870	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 36000 npc
+1693332318955	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 37000 npc
+1693332319029	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 38000 npc
+1693332319185	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 39000 npc
+1693332319368	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 40000 npc
+1693332319621	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 41000 npc
+1693332319927	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 42000 npc
+1693332320006	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: Currently in the Competition (Quest Event) period!
+1693332320006	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Seal of Avarice remains unclaimed.
+1693332320006	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Seal of Gnosis remains unclaimed.
+1693332320006	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Seal of Strife remains unclaimed.
+1693332320006	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Competition this week, if the trend continue, will end with a tie.
+1693332320008	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: Next period begins in 5 days, 20 hours and 54 mins.
+1693332320008	INFO	1	l2open.gameserver.tables.SpawnTable	SpawnTable: Loaded 18204 Npc Spawn Locations. Total NPCs: 42167
+1693332320010	INFO	1	l2open.gameserver.tables.SpawnTable	Monsters inventory loaded, items: 0
+1693332320080	INFO	1	communityboard.CommunityBoardShortStats	Short statistics in the commynity board has been updated.
+1693332320083	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: change sex services.
+1693332320083	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: change name services.
+1693332320083	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: change clan name services.
+1693332320083	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: change base class services.
+1693332320083	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: separate services.
+1693332320088	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Rabbits To Riches Event [state: deactivated]
+1693332320118	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1001: Wake Up Baium
+1693332320137	INFO	1	communityboard.General	CommunityBoard: Simple Lottery games loaded.
+1693332320138	INFO	1	communityboard.General	CommunityBoard: Simple Lottery games played 0.
+1693332320140	INFO	1	communityboard.General	CommunityBoard: Simple Lottery jackpot is 0 Adena.
+1693332320147	INFO	1	events.GvG.GvG	Loaded Event: GvG
+1693332320182	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: NPCBuffer [state: deactivated]
+1693332320190	INFO	1	l2open.extensions.scripts.ScriptFile	SailrenManager: State of Sailren is NOTSPAWN.
+1693332320191	INFO	1	l2open.extensions.scripts.ScriptFile	SailrenManager: Next spawn date of Sailren is Thu Jan 01 03:00:00 MSK 1970.
+1693332320194	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Bash [disabled]
+1693332320211	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Pagan Doormans
+1693332320227	INFO	1	bosses.BelethManager	Beleth Manager: Loaded successfuly
+1693332320233	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1004: Ice Fairy Sirra
+1693332320243	INFO	1	events.FightClub.FightClubManager	Loaded Event: Fight Club
+1693332320246	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1202: Crystal Caverns
+1693332320250	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Medal Collection Event [state: deactivated]
+1693332320277	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Roulette
+1693332320278	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Wolf
+1693332320281	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 3 [state: deactivated]
+1693332320283	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 2 [state: deactivated]
+1693332320284	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 1 [state: deactivated]
+1693332320314	INFO	1	communityboard.CommunityBoardTeleport	Load 297 teleport points.
+1693332320315	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Fantasy Isle
+1693332320317	INFO	1	bosses.AntharasManager	AntharasManager: State of Antharas is NOTSPAWN.
+1693332320318	INFO	1	bosses.AntharasManager	AntharasManager: Next spawn date of Antharas is 03:00 01.01.1970.
+1693332320325	INFO	1	events.Viktorina.Viktorina	Loaded Event: Victorina
+1693332320331	INFO	1	l2open.gameserver.model.L2Manor	ManorManager: Loaded 270 seeds
+1693332320370	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Item Broker
+1693332320374	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Kookaburra
+1693332320376	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Gludin Arena
+1693332320378	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Summon a corpse
+1693332320392	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: The Fall Harvest [state: deactivated]
+1693332320402	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1201: Dark Cloud Mansion
+1693332320414	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Underground Arena #1
+1693332320420	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: MasterOfEnchanting [state: deactivated]
+1693332320434	INFO	1	events.CtF.CtF	Loaded Event: CtF active.
+1693332320444	INFO	1	l2open.extensions.scripts.ScriptFile	MonasteryOfSilence: Loaded
+1693332320459	INFO	1	l2open.extensions.scripts.ScriptFile	ZakenManager: Init Zaken Manager.
+1693332320464	INFO	1	communityboard.General	CommunityBoard: Premium Lottery games loaded.
+1693332320465	INFO	1	communityboard.General	CommunityBoard: Premium Lottery games played 0.
+1693332320466	INFO	1	communityboard.General	CommunityBoard: Premium Lottery jackpot is 0 Gold Einhasad.
+1693332320478	INFO	1	l2open.extensions.scripts.ScriptFile	OnActionShift Loaded
+1693332320486	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Coffer of Shadows [state: deactivated]
+1693332320496	INFO	1	l2open.extensions.scripts.ScriptFile	Kamaloka Gate Loaded
+1693332320500	INFO	1	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 180 Room1 1st Npc Spawn Locations.
+1693332320500	INFO	1	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 4 Room2 Inside Npc Spawn Locations.
+1693332320500	INFO	1	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 121 Room2 Outside Npc Spawn Locations.
+1693332320508	WARNING	1		Unevenly distributed hash code - Degraded Preformance
+1693332320515	INFO	1	l2open.gameserver.tables.SkillTreeTable	FishTable: Loaded 270 Fishes.
+1693332320518	INFO	1	l2open.gameserver.tables.SkillTreeTable	FishRewardsTable: Loaded 919 FishRewards.
+1693332320537	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Isle of Player Race
+1693332320540	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to catacombs
+1693332320541	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Clan Operations]
+1693332320551	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: NPC RemoveDeathPenalty
+1693332320551	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: VitaminManager...
+1693332320553	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Change of Heart[state: deactivated]
+1693332320555	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Clan function.
+1693332320576	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Alliance Operations]
+1693332320581	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Cougar
+1693332320584	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Changing occupations]
+1693332320589	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: AutoAnnouncer [state: deactivated]
+1693332320597	INFO	1	l2open.extensions.scripts.ScriptFile	Utilites Loaded
+1693332320598	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Nick color change
+1693332320600	INFO	1	l2open.extensions.scripts.ScriptFile	MonasteryOfSilenceGame: Loaded
+1693332320609	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: ClanHall Pet Evolution
+1693332320631	INFO	1	events.LastHunter.LastHunter	Loaded Event: Last Hunter
+1693332320645	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
+1693332320645	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29068 state=0
+1693332320645	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
+1693332320645	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
+1693332320646	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
+1693332320646	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
+1693332320646	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29065 state=0
+1693332320646	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
+1693332320646	INFO	1	communityboard.CommunityBoardFullStats	Full statistics in the commynity board has been updated.
+1693332320648	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Inventory
+1693332320649	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1003: Sailren
+1693332320653	INFO	1	events.TvT.TvT	Loaded Event: TvT
+1693332320657	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Obtain Talisman
+1693332320660	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: SavingSnowman [state: deactivated]
+1693332320664	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Tower
+1693332320665	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Dion Arena
+1693332320680	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Window
+1693332320692	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: The Flow Of The Horror [state: deactivated]
+1693332320696	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Tournament [state: deactivated]
+1693332320722	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Bonus [state: deactivated]
+1693332320732	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Buffalo
+1693332320739	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Fenrir
+1693332320742	INFO	1	events.coins.coins	Loaded Event: L2Coins [state: deactivated]
+1693332320746	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: CWH Privileges
+1693332320752	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Bounty Hunters Guild
+1693332320766	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Hero Items
+1693332320767	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: 1103: Oracle Teleport
+1693332320805	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Christmas [state: deactivated]
+1693332320813	INFO	1	l2open.extensions.scripts.ScriptFile	Lindvior Manager Load.
+1693332320816	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Nobless sell
+1693332320840	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: SubClass sell
+1693332320840	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Border Outpost Doormans
+1693332320843	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Pushkin
+1693332320853	INFO	1	l2open.extensions.scripts.ScriptFile	MarcketLoad Loaded...
+1693332320875	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
+1693332320883	WARNING	1		Unevenly distributed hash code - Degraded Preformance
+1693332320887	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Successful
+1693332320943	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: Loaded 20 Mysterious-Box spawns.
+1693332321020	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 physical monsters spawns.
+1693332321057	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 magical monsters spawns.
+1693332321064	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 92 Church of duke monsters spawns.
+1693332321070	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 68 Emperor's grave NPC spawns.
+1693332321070	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Conquerors Sepulcher Manager
+1693332321070	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Emperors Sepulcher Manager
+1693332321070	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Great Sages Sepulcher Manager
+1693332321070	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Judges Sepulcher Manager
+1693332321072	WARNING	1	bosses.FourSepulchersManager	FourSepulchersManager: Beginning in Attack time
+1693332321074	WARNING	61	l2open.common.RunnableImpl	Tue Aug 29 21:05:21 MSK 2023 Atk announce scheduled to 5.0 minute of this hour.
+1693332321075	INFO	1	events.RewardofHonor.RewardofHonor	Loaded Event: Reward of Honor [state: deactivated]
+1693332321080	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: l2day [state: deactivated]
+1693332321086	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Mana Regen
+1693332321091	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Grand Isle of Prayer Race
+1693332321092	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Race Track
+1693332321099	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand CWH
+1693332321105	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Ride Hire
+1693332321124	INFO	1	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 54 Soul Crystal data.
+1693332321124	INFO	1	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 240 npc Leveling info data.
+1693332321130	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: March 8 [state: deactivated]
+1693332321139	INFO	1	bosses.ValakasManager	ValakasManager: State of Valakas is NOTSPAWN.
+1693332321139	INFO	1	bosses.ValakasManager	ValakasManager: Next spawn date of Valakas is 03:00 01.01.1970.
+1693332321145	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Giran Arena
+1693332321150	INFO	1	communityboard.CommunityBoardForge	CommunityBoard: Forge Enchant: false
+1693332321150	INFO	1	communityboard.CommunityBoardForge	CommunityBoard: Forge Attribut: false
+1693332321150	INFO	1	communityboard.CommunityBoardForge	CommunityBoard: Forge Augment: false
+1693332321154	INFO	1	l2open.gameserver.instancemanager.CastleManager	MercTicketManager: Initializing
+1693332321166	INFO	1	l2open.gameserver.instancemanager.CastleManager	MercTicketManager: Loaded 0 Mercenary Tickets
+1693332321173	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
+1693332321185	INFO	1	events.lastHero.LastHero	Loaded Event: Last Hero
+1693332321293	INFO	1	l2open.gameserver.tables.PetDataTable	PetDataTable: Loaded 3834[50] pets.
+1693332321300	INFO	1	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
+1693332321305	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Fantasy Isle
+1693332321309	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: DropItem
+1693332321313	INFO	1	events.Simple.Simple	Loaded Event: Simple [state: deactivated]
+1693332321315	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Enter Hellbound Island
+1693332321316	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Level manipulation
+1693332321319	INFO	1	l2open.extensions.scripts.ScriptFile	BaiumManager: State of Baium is NOTSPAWN.
+1693332321320	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Boss: Baium. Next spawn date: Thu Jan 01 03:00:00 MSK 1970
+1693332321320	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Warehouse
+1693332321338	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Fort Info
+1693332321348	INFO	1	l2open.gameserver.instancemanager.DimensionalRiftManager	DimensionalRiftManager: Loaded 13 room types with 112 rooms.
+1693332321348	INFO	1	l2open.gameserver.instancemanager.DimensionalRiftManager	DimensionalRiftManager: Loaded 300 dimensional rift spawns, 0 errors.
+1693332321386	INFO	1	l2open.gameserver.instancemanager.InstancedZoneManager	InstancedZoneManager: Loaded 96 zones with 114 rooms.
+1693332321386	INFO	1	l2open.gameserver.instancemanager.InstancedZoneManager	InstancedZoneManager: Loaded 740 instanced location spawns, 0 errors.
+1693332321388	INFO	1	l2open.gameserver.Announcements	config/announcements.txt doesn't exist
+1693332321550	INFO	1	l2open.gameserver.tables.AugmentationData	Initializing AugmentationData.
+1693332321648	INFO	1	l2open.gameserver.tables.StaticObjectsTable	StaticObject: Loaded 29 StaticObject Templates.
+1693332321707	INFO	1	l2open.gameserver.GameServer	AutoSpawnHandler: Loaded 50 handlers in total.
+1693332321760	INFO	1	l2open.gameserver.GameServer	AutoChatHandler: Loaded 14 handlers in total.
+1693332321790	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Loading Olympiad System....
+1693332321790	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Currently in Olympiad Period
+1693332321790	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: In 2 days, 2 hours and 54 mins.
+1693332321790	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Next Weekly Change is in....
+1693332321790	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: In 8 days, 14 hours and 54 mins.
+1693332321790	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Loaded 0 Noblesses
+1693332321791	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Competition Period Starts in 0 days, 0 hours and 0 mins.
+1693332321791	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Event starts/started: Tue Aug 29 18:00:00 MSK 2023
+1693332321792	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System:[Disable] Start custom reward 22:45 29.08.2023.
+1693332321793	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: End custom reward 00:00 30.08.2023.
+1693332321796	INFO	1	l2open.gameserver.model.entity.Hero	Hero System: Loaded 0 Heroes.
+1693332321796	INFO	1	l2open.gameserver.model.entity.Hero	Hero System: Loaded 0 all time Heroes.
+1693332321813	INFO	1	l2open.gameserver.instancemanager.CursedWeaponsManager	CursedWeaponsManager: Loaded 0 cursed weapon(s).
+1693332321815	INFO	1	l2open.gameserver.instancemanager.PlayerRewardManager	PlayerRewardManager: set_noble[0] inc_pvp[0] inc_pc[0].
+1693332321817	INFO	1	l2open.gameserver.instancemanager.SeedOfInfinityManager	Seed of Infinity Manager: Current Cycle is 1
+1693332321818	INFO	1	l2open.gameserver.instancemanager.NaiaTowerManager	Naia Core Manager: Loaded
+1693332321819	INFO	1	l2open.gameserver.instancemanager.CoupleManager	Initializing CoupleManager
+1693332321820	INFO	1	l2open.gameserver.instancemanager.CoupleManager	Loaded: 0 couples(s)
+1693332321821	INFO	1	l2open.gameserver.GameServer	CoupleManager initialized
+1693332321821	INFO	1	l2open.gameserver.GameServer	ItemHandler: Loaded 2519 handlers.
+1693332321821	INFO	1	l2open.gameserver.GameServer	AdminCommandHandler: Loaded 495 handlers.
+1693332321821	INFO	1	l2open.gameserver.GameServer	UserCommandHandler: Loaded 17 handlers.
+1693332321821	INFO	1	l2open.gameserver.GameServer	VoicedCommandHandler: Loaded 69 handlers.
+1693332321846	INFO	61	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Olympiad Game Started
+1693332321863	INFO	1	l2open.gameserver.model.entity.vehicle.L2VehicleManager	Initializing L2VehicleManager
+1693332321909	INFO	1	l2open.gameserver.model.entity.vehicle.L2VehicleManager	L2VehicleManager: Loaded 6 vehicles.
+1693332321931	INFO	1	l2open.gameserver.tables.AirShipDocksTable	AirShipDocksTable: Loaded 5 docks.
+1693332321936	INFO	1	l2open.gameserver.GameServer	IdFactory: Free ObjectID's remaining: 1878997508
+1693332321941	INFO	1	l2open.gameserver.tables.TeleportTable	TeleportController: Loaded 600 locations.
+1693332322255	INFO	1	l2open.gameserver.itemmall.ItemMall	ItemMall: loaded 556 item templates.
+1693332322270	INFO	1	l2open.gameserver.itemmall.ItemMall	ItemMall: loaded 184 items available for trading.
+1693332322272	WARNING	1	l2open.gameserver.Shutdown	AutoRestart scheduled through 7h 55m
+1693332322297	WARNING	1	l2open.gameserver.instancemanager.ItemAuctionManager	ItemAuctionManager: Missing item_auctions.xml!
+1693332322300	INFO	1	l2open.gameserver.instancemanager.BloodAltarManager	Blood Altar Manager: Initializing...
+1693332322325	INFO	1	l2open.gameserver.GameServer	GameServer Started
+1693332322325	INFO	1	l2open.gameserver.GameServer	Maximum Numbers of Connected Players: 3000
+1693332322422	INFO	99	l2open.gameserver.loginservercon.LSConnection	GameServer: Connecting to LoginServer on 192.168.1.100:9014
+1693332323533	INFO	99	l2open.gameserver.loginservercon.LSConnection	Disconnected from LoginServer:
+1693332324891	INFO	99	l2open.gameserver.loginservercon.LSConnection	GameServer: Connecting to LoginServer on 192.168.1.100:9014
+1693332324979	INFO	101	l2open.common.RunnableImpl	Restored 0 offline traders
+1693332325957	INFO	99	l2open.gameserver.loginservercon.LSConnection	Disconnected from LoginServer:
+1693332326957	INFO	99	l2open.gameserver.loginservercon.LSConnection	GameServer: Connecting to LoginServer on 192.168.1.100:9014
+1693332327963	INFO	99	l2open.gameserver.loginservercon.LSConnection	Disconnected from LoginServer:
+1693332328964	INFO	99	l2open.gameserver.loginservercon.LSConnection	GameServer: Connecting to LoginServer on 192.168.1.100:9014
+1693332329976	INFO	99	l2open.gameserver.loginservercon.LSConnection	Disconnected from LoginServer:
+1693332330228	INFO	1	l2open.gameserver.GameStart	Telnet server is currently disabled.
+1693332330228	INFO	1	l2open.gameserver.GameStart	=================================================
+1693332330230	INFO	1	l2open.gameserver.GameStart	AllowedMemory: ........... 8184192 KB
+1693332330230	INFO	1	l2open.gameserver.GameStart	     Allocated: .......... 8184192 KB (100.0%)
+1693332330230	INFO	1	l2open.gameserver.GameStart	     Non-Allocated: ...... 0 KB (0.0%)
+1693332330230	INFO	1	l2open.gameserver.GameStart	AllocatedMemory: ......... 8184192 KB
+1693332330230	INFO	1	l2open.gameserver.GameStart	     Used: ............... 1191399 KB (14.5573%)
+1693332330230	INFO	1	l2open.gameserver.GameStart	     Unused (cached): .... 6992792 KB (85.4427%)
+1693332330230	INFO	1	l2open.gameserver.GameStart	UseableMemory: ........... 6992792 KB (85.4427%)
+1693332330230	INFO	1	l2open.gameserver.GameStart	=================================================
+1693332330230	INFO	1	l2open.gameserver.GameStart	MinProtocolRevision: 267
+1693332330976	INFO	99	l2open.gameserver.loginservercon.LSConnection	GameServer: Connecting to LoginServer on 192.168.1.100:9014
+1693332332008	INFO	99	l2open.gameserver.loginservercon.LSConnection	Disconnected from LoginServer:
+1693332333008	INFO	99	l2open.gameserver.loginservercon.LSConnection	GameServer: Connecting to LoginServer on 192.168.1.100:9014
+1693332334012	INFO	99	l2open.gameserver.loginservercon.LSConnection	Disconnected from LoginServer:
+1693332335012	INFO	99	l2open.gameserver.loginservercon.LSConnection	GameServer: Connecting to LoginServer on 192.168.1.100:9014
+1693332335648	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
+1693332335649	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29068 state=0
+1693332335649	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
+1693332335649	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29020 state=0
+1693332335649	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
+1693332335649	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29028 state=0
+1693332335649	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
+1693332335649	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
+1693332335649	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29065 state=0
+1693332335649	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
+1693332335649	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29186 state=0
+1693332336021	INFO	99	l2open.gameserver.loginservercon.LSConnection	Disconnected from LoginServer:
+1693332337034	INFO	99	l2open.gameserver.loginservercon.LSConnection	GameServer: Connecting to LoginServer on 192.168.1.100:9014
+1693332338044	INFO	99	l2open.gameserver.loginservercon.LSConnection	Disconnected from LoginServer:
+1693332339045	INFO	99	l2open.gameserver.loginservercon.LSConnection	GameServer: Connecting to LoginServer on 192.168.1.100:9014
+1693332339319	INFO	86	l2open.gameserver.loginservercon.lspackets.AuthResponse	Registered on login as Server 1 : 
+1693332339532	INFO	100	l2open.extensions.network.SelectorThread	max_p_size: 7
+1693332340086	INFO	100	l2open.extensions.network.SelectorThread	max_p_size: 267
+1693332340121	INFO	100	l2open.gameserver.clientpackets.L2GameClientPacket	RequestAuthLogin: 50
+1693332340121	INFO	100	l2open.gameserver.clientpackets.L2GameClientPacket	RequestAuthLogin: 32
+1693332342077	INFO	82	l2open.gameserver.xml.loader.XmlArmorsetLoader	XmlArmorsetLoader: Loaded 168 armor sets.
+1693332342160	INFO	82	l2open.gameserver.xml.loader.XmlPcParameterLoader	XmlPcParameterLoader: Loaded 107 pc_parameters
+1693332345396	INFO	100	l2open.gameserver.clientpackets.L2GameClientPacket	RequestAuthLogin: 52
+1693332345396	INFO	100	l2open.gameserver.clientpackets.L2GameClientPacket	RequestAuthLogin: 32
+1693332350825	INFO	84	l2open.gameserver.tables.FriendsTable	FriendsTable: Loaded 0 friends.
+1693332355566	INFO	87	l2open.gameserver.clientpackets.L2GameClientPacket	SendBypassBuildCmd: admin
+1693332408969	INFO	83	l2open.gameserver.clientpackets.L2GameClientPacket	SendBypassBuildCmd: admin
+1693332476485	INFO	87	l2open.gameserver.clientpackets.L2GameClientPacket	SendBypassBuildCmd: admin

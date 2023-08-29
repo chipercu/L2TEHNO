@@ -934,6 +934,10 @@ public class ConfigValue {
     public static int OlympiadAltRewardChance = -1;
     public static boolean OlympiadTakePointForCrash = true;
 
+    public static boolean EnableRewardForLoser = false;
+    public static int RewardIdForLoser = 57;
+    public static int RewardCountForLoser = 1000;
+
     /*************************** Enchant.properties ***************************/
     public static int EnchantMaxMasterYogi = 23;
     public static int EnchantMaxWeapon = 20;

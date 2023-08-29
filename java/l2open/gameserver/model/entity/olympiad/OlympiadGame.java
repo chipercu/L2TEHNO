@@ -12,6 +12,7 @@ import l2open.gameserver.instancemanager.OlympiadHistoryManager;
 import l2open.gameserver.model.*;
 import l2open.gameserver.model.instances.L2DoorInstance;
 import l2open.gameserver.model.instances.L2OlympiadManagerInstance;
+import l2open.gameserver.model.items.L2ItemInstance;
 import l2open.gameserver.model.quest.QuestState;
 import l2open.gameserver.serverpackets.*;
 import l2open.gameserver.tables.NpcTable;
@@ -550,6 +551,16 @@ public class OlympiadGame
 			TeamMember member2 = valid(_team2 == winnerTeam ? winnerMembers : looserMembers, 0);
 			if(member1 != null && member2 != null)
 			{
+				//TODO: FUZZY награда для проигравших
+				if (ConfigValue.EnableRewardForLoser){
+					for (TeamMember l:looserMembers){
+						final L2ItemInstance item = l.getPlayer().getInventory().addItem(ConfigValue.RewardIdForLoser, ConfigValue.RewardCountForLoser);
+						l.getPlayer().sendMessage("Вы получили " + item.getName() + " " + ConfigValue.RewardCountForLoser + " шт.");
+
+					}
+				}
+				//TODO FUZZY
+
 				int diff = (int)((System.currentTimeMillis() - _startTime) / 1000);
 				OlympiadHistory h = new OlympiadHistory(member1.getObjId(), member2.getObjId(), member1.getClassId(), member2.getClassId(), member1.getName(), member2.getName(), _startTime, diff, team, _type.ordinal());
 
