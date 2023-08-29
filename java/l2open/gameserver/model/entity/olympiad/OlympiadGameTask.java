@@ -130,6 +130,7 @@ public class OlympiadGameTask extends l2open.common.RunnableImpl
 					_count -= 5;
 					task = new OlympiadGameTask(_game, BattleStatus.Started, _count, 5000);
 
+					//TODO FUZZY  инфо о противнике
 					try{
 						for (int i = 0; i < _game.getTeam(1).getPlayers().size(); i++) {
 							L2Player player1 = _game.getTeam(1).getPlayers().get(i);
@@ -150,6 +151,7 @@ public class OlympiadGameTask extends l2open.common.RunnableImpl
 					}catch (Exception e){
 						System.out.println("Ошибка при показе информации о противнике");
 					}
+					//TODO FUZZY
 
 
 					break;
