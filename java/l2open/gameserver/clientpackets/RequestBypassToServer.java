@@ -5,6 +5,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+//import ai.FakePlayersAI.PathManager.PathManager;
 import l2open.config.ConfigValue;
 import l2open.extensions.multilang.CustomMessage;
 import l2open.gameserver.cache.Msg;
@@ -155,7 +156,10 @@ public class RequestBypassToServer extends L2GameClientPacket {
             //TODO [FUZZY]
             else if (bp.bypass.startsWith("party_maker:")) {
                 PartyMaker.getInstance().handleCommands(getClient(), bp.bypass.substring(12));
+            }else if (bp.bypass.startsWith("path_manager:")){
+//                PathManager.getInstance().handleCommands(getClient(), bp.bypass.substring(13));
             }
+
             //TODO [FUZZY]
             else if (bp.bypass.startsWith("script_")) {
                 if (activeChar.getEventMaster() != null && activeChar.getEventMaster().blockNpcBypass())

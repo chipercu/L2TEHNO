@@ -1,5 +1,6 @@
 package l2open.gameserver.model;
 
+import com.google.gson.annotations.Expose;
 import l2open.gameserver.communitybbs.PartyMaker.PartyMaker;
 import l2open.gameserver.serverpackets.BlockList;
 import l2open.gameserver.serverpackets.ExBlockAddResult;
@@ -478,6 +479,7 @@ public class L2Player extends L2Playable {
     protected int _handysBlockCheckerEventArena = -1;
 
     public HashMap<Integer, CBBuffSch> _buffSchem = null;
+    public HashMap<Integer, CBBuffSchemePerform> _buffSchemePerform = null;
     public HashMap<Integer, CBTpSch> _tpSchem = null;
 
     public Future<?> _heroTask;

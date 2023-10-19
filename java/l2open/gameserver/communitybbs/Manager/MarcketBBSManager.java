@@ -529,7 +529,7 @@ public class MarcketBBSManager extends BaseBBSManager
 
 			int type = Integer.parseInt(st.nextToken());
 			int page = Integer.parseInt(st.nextToken());
-			String content = Files.read(ConfigValue.CommunityBoardHtmlRoot + "marcket/main.htm", player);
+			String content = Files.read(ConfigValue.CommunityBoardHtmlRoot + "marcket/admin-page.htm", player);
 			content = content.replace("%content%", getMarketPage(player, page, type));
 			content = content.replace("%totalbids%", "Всего товаров на рынке: "+AuctionRegistration.getInstance().getBidsCount(0));
 			content = content.replace("%totalbids2%", "Всего товаров на аукционе: "+AuctionRegistration.getInstance().getBidsCount(1));

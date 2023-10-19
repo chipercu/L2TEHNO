@@ -605,7 +605,6 @@ public class PartyMaker extends Functions implements ScriptFile, OnPlayerPartyLe
     public void sendDialog(L2Player player, String html) {
         final NpcHtmlMessage npcHtmlMessage = new NpcHtmlMessage(player, null);
         player.sendPacket(npcHtmlMessage.setHtml(html));
-
     }
 
     @Override

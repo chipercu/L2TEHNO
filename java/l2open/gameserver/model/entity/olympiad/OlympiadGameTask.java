@@ -59,6 +59,27 @@ public class OlympiadGameTask extends l2open.common.RunnableImpl
 		_time = time;
 	}
 
+	private void sendAnnons(L2Player player, L2Player opponent){
+		player.sendPacket(new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, "", "---------------------------"));
+		player.sendPacket(new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, "", "Ваш противник:"));
+		player.sendPacket(new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, "", "Имя: " + opponent.getName()));
+		player.sendPacket(new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, "", "Класс: " + opponent.getClassId().name().toUpperCase()));
+		player.sendPacket(new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, "", "---------------------------"));
+	}
+	private void annonsOpponents(){
+		try{
+			for (int i = 0; i < _game.getTeam(1).getPlayers().size(); i++) {
+				L2Player player1 = _game.getTeam(1).getPlayers().get(i);
+				L2Player player2 = _game.getTeam(2).getPlayers().get(i);
+				sendAnnons(player1, player2);
+				sendAnnons(player2, player1);
+			}
+		}catch (Exception e){
+			System.out.println("Ошибка при показе информации о противнике");
+		}
+	}
+
+
 	@Override
 	public void runImpl()
 	{
@@ -131,26 +152,7 @@ public class OlympiadGameTask extends l2open.common.RunnableImpl
 					task = new OlympiadGameTask(_game, BattleStatus.Started, _count, 5000);
 
 					//TODO FUZZY  инфо о противнике
-					try{
-						for (int i = 0; i < _game.getTeam(1).getPlayers().size(); i++) {
-							L2Player player1 = _game.getTeam(1).getPlayers().get(i);
-							L2Player player2 = _game.getTeam(2).getPlayers().get(i);
-							player1.sendPacket(new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, "", "---------------------------"));
-							player1.sendPacket(new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, "", "Ваш противник:"));
-							player1.sendPacket(new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, "", "Имя: " + player2.getName()));
-							player1.sendPacket(new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, "", "Класс: " + player2.getClassId().name().toUpperCase()));
-							player1.sendPacket(new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, "", "---------------------------"));
-
-							player2.sendPacket(new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, "", "---------------------------"));
-							player2.sendPacket(new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, "", "Ваш противник:"));
-							player2.sendPacket(new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, "", "Имя: " + player1.getName()));
-							player2.sendPacket(new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, "", "Класс: " + player1.getClassId().name().toUpperCase()));
-							player2.sendPacket(new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, "", "---------------------------"));
-
-						}
-					}catch (Exception e){
-						System.out.println("Ошибка при показе информации о противнике");
-					}
+					annonsOpponents();
 					//TODO FUZZY
 
 

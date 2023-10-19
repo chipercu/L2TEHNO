@@ -13,7 +13,7 @@ import org.apache.commons.logging.LogFactory;
 
 public class EpicBossState
 {
-	public static enum State
+	public enum State
 	{
 		NOTSPAWN,
 		ALIVE,

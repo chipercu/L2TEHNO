@@ -2528,6 +2528,7 @@ Za10=id;колличество (за каждые 10 рыл которые по�
 				AutoSaveManager.getInstance().addPlayerTask(player);
 
 				player._buffSchem = new HashMap<Integer, CBBuffSch>(ConfigValue.maxBuffSchem);
+				player._buffSchemePerform = new HashMap<Integer, CBBuffSchemePerform>(ConfigValue.maxBuffSchem);
 				player._tpSchem = new HashMap<Integer, CBTpSch>(ConfigValue.TeleportMaxPoint);
 				loadBuffSch(player);
 				loadTpSch(player);
@@ -2645,10 +2646,14 @@ Za10=id;колличество (за каждые 10 рыл которые по�
 				String name = rs.getString(3);
 				String allskills = rs.getString(4);
 				long[] sch = new long[0];
+				String[] scheme = new String[0];
 				StringTokenizer stBuff = new StringTokenizer(allskills, ";");
-				while(stBuff.hasMoreTokens())
-					sch = ArrayUtils.add(sch, Long.parseLong(stBuff.nextToken()));
-				player._buffSchem.put(id, new CBBuffSch(id, name, sch));
+				while(stBuff.hasMoreTokens()){
+					//sch = ArrayUtils.add(sch, Long.parseLong(stBuff.nextToken()));
+					ArrayUtils.add(scheme, stBuff.nextToken());
+				}
+				//player._buffSchem.put(id, new CBBuffSch(id, name, sch));
+				player._buffSchemePerform.put(id, new CBBuffSchemePerform(id, name, scheme));
 			}
 		}
 		catch(Exception e)

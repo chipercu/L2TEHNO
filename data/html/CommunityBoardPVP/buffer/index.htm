@@ -32,6 +32,7 @@
 											<td valign="top" align="center" width=150>
 												<button value="Вернуться на главную" action="bypass -h _bbshome" width=150 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
 											</td>
+
 											<td valign="top" align="center" width=60>
 												<combobox width=60 height=10 var="Who" list="Player;Pet">
 											</td>
@@ -39,7 +40,7 @@
 												<edit var="GrpNameAdd" type="text" width=450 length=25 height=12>
 											</td>
 											<td valign="top" align="left">
-												<button value="Создать" action="bypass -h _bbsbuffersave $GrpNameAdd $Who" width=80 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+												<button value="Создать" action="bypass -h bbs_save_set $GrpNameAdd" width=80 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
 											</td>
 										</tr>
 									</table>
@@ -49,7 +50,7 @@
 											<table border=0 cellspacing=0 cellpadding=2 width=550>
 												<tr>
 													<td FIXWIDTH=500 align=left valign=top>
-														<font color="FFFF00">Описание баффера:</font>&nbsp;›&nbsp; Цена за 1 баф:&nbsp;100&nbsp;&#57;.&nbsp;›&nbsp;Время:&nbsp;50&nbsp;мин.<br1>
+														<font color="FFFF00">Описание баффера:</font>&nbsp;›&nbsp; Цена за 1 баф:&nbsp;%price%&nbsp;&#57;.&nbsp;›&nbsp;Время:&nbsp;%time%&nbsp;мин.<br1>
 														<font color="AAAAAA">
 															<br1>Данный баффер уникален своей функциональностью, к примеру вы можете создавать шаблоны<br1>
 															бафов с нуля под своего персонажа и стиль игры. <br1>
@@ -84,7 +85,17 @@
 																	<font color="CCFF33">Стандартные баффы для персонажа.</font><br1>
 																	<font color="AAAAAA">Список скилов позволит вам создать персональные схемы.</font>
 																</td>
-																<td FIXWIDTH=90 align=center valign=top><button value="Открыть" action="bypass -h _bbsplayerbuffer:0" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+																<td FIXWIDTH=90 align=center valign=top><button value="Открыть" action="bypass -h bbs_show_simple_buffs" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+															</tr>
+															<tr>
+																<td FIXWIDTH=40 align=right valign=top>
+																	<img src="icon.skill6288" width=32 height=32>
+																</td>
+																<td FIXWIDTH=340 align=left valign=top>
+																	<font color="CCFF33">Премиум баффы для персонажа.</font><br1>
+																	<font color="AAAAAA">Список премиум бафов, не сохраняются.</font>
+																</td>
+																<td FIXWIDTH=90 align=center valign=top><button value="Открыть" action="bypass -h bbs_show_premium_buffs" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 															</tr>
 														</table>
 													</td>
@@ -94,24 +105,6 @@
 												<tr>
 													<td width=1>
 														<img src="l2ui.squaregray" width="500" height="1">
-													</td>
-												</tr>
-											</table>
-											<table width=500>
-												<tr>
-													<td WIDTH=500 align=center valign=top>
-														<table border=0 cellspacing=4 cellpadding=3>
-															<tr>
-																<td FIXWIDTH=40 align=right valign=top>
-																	<img src="icon.skill8364" width=32 height=32>
-																</td>
-																<td FIXWIDTH=340 align=left valign=top>
-																	<font color="339966">Стандартные баффы для питомца.</font><br1>
-																	<font color="AAAAAA">Список скилов позволит вам создать персональные схемы.</font>
-																</td>
-																<td FIXWIDTH=90 align=center valign=top><button value="Открыть" action="bypass -h _bbspetbuffer:0" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-															</tr>
-														</table>
 													</td>
 												</tr>
 											</table>

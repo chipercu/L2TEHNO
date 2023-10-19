@@ -33,7 +33,6 @@ public class BuffScheme
 		try
 		{
 			File file;
-
 			if (ConfigValue.develop) {
 				file = new File("data/BuffScheme.xml");
 			} else {

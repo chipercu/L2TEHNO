@@ -2169,6 +2169,7 @@ public class ConfigValue {
     public static int MaxCP = 150000;
     public static float AltPKDeathRate = 0f;
     public static int LethalRate = 600;
+    public static int HalfLethalRate = 600;
     public static int LimitFame = 100000;
     public static int DeathPenaltyC5RateKarma = 500;
     public static int LimitPDef = 15000;
