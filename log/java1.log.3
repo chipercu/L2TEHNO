@@ -1,31 +1,847 @@
-1697301911174	WARNING	1	l2open.config.ConfigSystem	ConfigSystem(383): -> NoSuchFieldException(fake.properties): ﻿######
-1697301911319	INFO	1	com.mchange.v2.log.MLog	MLog clients using java 1.4+ standard logging.
-1697301911518	INFO	1	com.mchange.v2.c3p0.C3P0Registry	Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
-1697301911648	INFO	1	com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource	Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 0, acquireRetryDelay -> 100, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15wazd28san1w8btuu|43bd930a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15wazd28san1w8btuu|43bd930a, idleConnectionTestPeriod -> 60, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost/l2tehno?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 1000, maxStatements -> 100, maxStatementsPerConnection -> 10, minPoolSize -> 1, numHelperThreads -> 5, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
-1697301911939	INFO	1	l2open.loginserver.LoginController	Loading LoginController...
-1697301911941	INFO	1	l2open.loginserver.LoginController	Loaded Whirlpool as default crypt.
-1697301912413	INFO	1	l2open.loginserver.LoginController	Cached 10 KeyPairs for RSA communication
-1697301912562	INFO	1	l2open.loginserver.LoginController	Stored 20 keys for Blowfish communication
-1697301912565	WARNING	1	l2open.loginserver.GameServerTable	servername.xml could not be loaded: file not found
-1697301912565	INFO	1	l2open.loginserver.GameServerTable	Loaded 0 server names
-1697301912565	INFO	1	l2open.loginserver.GameServerTable	Loaded 0 registered Game Servers
-1697301912720	INFO	1	l2open.loginserver.GameServerTable	Cached 10 RSA keys for Game Server communication.
-1697301912823	INFO	1	l2open.loginserver.L2LoginServer	Listening for GameServers on *:9014
-1697301912823	INFO	1	l2open.loginserver.L2LoginServer	LoginServer Telnet server is currently disabled.
-1697301912823	INFO	21	l2open.loginserver.gameservercon.GSConnection	LoginServer: GS listener started.
-1697301912824	INFO	1	l2open.loginserver.L2LoginServer	Login Server ready on port 2106
-1697301912857	INFO	1	l2open.loginserver.L2LoginServer	0 banned IPs defined
-1697301912858	INFO	1	l2open.loginserver.L2LoginServer	Free memory 11 Mb of 28 Mb
-1697301994769	INFO	21	l2open.loginserver.gameservercon.AttGS	Init connection crypt for gameserver 192.168.1.100: ConnectionCryptDummy
-1697301994780	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Trying to register server: 1, 192.168.1.100
-1697301994782	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Updated Gameserver null Hostname's:
-1697301994782	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	InternalHostname: 192.168.1.100
-1697301994783	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	ExternalHostname: 85.95.177.23
-1697301994786	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Server registration successful.
-1697302051016	INFO	20	l2open.extensions.network.SelectorThread	max_p_size: 42
-1697302051047	INFO	20	l2open.extensions.network.SelectorThread	max_p_size: 194
-1697302052105	INFO	28	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
-1697318847144	INFO	21	l2open.loginserver.gameservercon.GSConnection	Login conect close 1-1.
-1697318847158	INFO	21	l2open.loginserver.gameservercon.AttGS	LoginServer: Connection with gameserver 1 [null] lost.
-1697318847159	INFO	21	l2open.loginserver.gameservercon.GSConnection	Removing GameServer
-1697318847164	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Setting GameServer down
+1697966649537	WARNING	1	l2open.config.ConfigSystem	ConfigSystem(383): -> NoSuchFieldException(fake.properties): ﻿######
+1697966649594	INFO	1	l2open.config.ConfigSystem	Abuse: Loaded 18 abuse words.
+1697966649897	INFO	1	l2open.config.ConfigSystem	loading xml GMAccess
+1697966649952	INFO	1	com.mchange.v2.log.MLog	MLog clients using java 1.4+ standard logging.
+1697966650143	INFO	1	com.mchange.v2.c3p0.C3P0Registry	Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+1697966650270	INFO	1	com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource	Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 0, acquireRetryDelay -> 100, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15wazo20fwf161n8xr|1442d7b5, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15wazo20fwf161n8xr|1442d7b5, idleConnectionTestPeriod -> 60, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost/l2tehno?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 1000, maxStatements -> 100, maxStatementsPerConnection -> 10, minPoolSize -> 1, numHelperThreads -> 5, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+1697966650579	INFO	1	l2open.gameserver.idfactory.IdFactory	Clear characters online status and accesslevel.
+1697966650607	INFO	1	l2open.gameserver.idfactory.IdFactory	Total cleaned: 0, updated: 0 elements in database.
+1697966650628	INFO	26	l2open.gameserver.idfactory.IdFactory	IdFactory: Table clan_data contains 0 rows
+1697966650628	INFO	24	l2open.gameserver.idfactory.IdFactory	IdFactory: Table characters contains 7 rows
+1697966650628	INFO	25	l2open.gameserver.idfactory.IdFactory	IdFactory: Table items contains 97 rows
+1697966650629	INFO	27	l2open.gameserver.idfactory.IdFactory	IdFactory: Table ally_data contains 0 rows
+1697966650630	INFO	28	l2open.gameserver.idfactory.IdFactory	IdFactory: Table pets contains 0 rows
+1697966650631	INFO	29	l2open.gameserver.idfactory.IdFactory	IdFactory: Table couples contains 0 rows
+1697966650631	INFO	1	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracting 104 used id's from data tables...
+1697966650633	INFO	30	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 7 used id's from characters
+1697966650633	INFO	31	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 97 used id's from items
+1697966650634	INFO	32	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from clan_data
+1697966650636	INFO	34	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from pets
+1697966650636	INFO	33	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from ally_data
+1697966650637	INFO	35	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from couples
+1697966650637	INFO	1	l2open.gameserver.idfactory.IdFactory	IdFactory: Successfully extracted 104 used id's from data tables.
+1697966650637	INFO	1	l2open.gameserver.idfactory.BitSetIDFactory	IDFactory: 102912 id's available.
+1697966650978	INFO	1	l2open.gameserver.cache.CrestCache	CrestCache: Loaded 0 crests
+1697966650992	INFO	1	l2open.gameserver.instancemanager.AuctionManager	Initializing AuctionManager
+1697966651130	INFO	1	l2open.gameserver.instancemanager.AuctionManager	Loaded: 38 active auction(s)
+1697966654617	INFO	21	l2open.util.Strings	PTS HTML: ./data/html-ru.zip loaded 4041ms...
+1697966655468	WARNING	1	l2open.gameserver.skills.SkillsEngine	SkillsEngine: Loaded 61827 skill templates from XML files. Max id: 26077, max level: 259
+1697966655469	WARNING	1	l2open.gameserver.skills.SkillsEngine	SkillsEngine: Loaded 1616 custom skill templates from XML files.
+1697966656815	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2139][1][TARGET_ONE][range][not_friend]
+1697966656821	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2260][1][TARGET_ONE][single][none]
+1697966656825	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2353][1][TARGET_ONE][static_object_scope][hidden_place]
+1697966656828	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2624][1][TARGET_ONE][single][none]
+1697966656869	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4143][1][TARGET_ONE][point_blank][not_friend]
+1697966656877	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4212][1][TARGET_ONE][range][friend]
+1697966656889	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4483][1][TARGET_ONE][point_blank][not_friend]
+1697966656890	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4488][1][TARGET_ONE][point_blank][not_friend]
+1697966656891	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4524][1][TARGET_ONE][single][none]
+1697966656902	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4697][1][TARGET_ONE][point_blank][not_friend]
+1697966656915	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5037][1][TARGET_ONE][point_blank][not_friend]
+1697966656915	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5039][1][TARGET_ONE][single][none]
+1697966656916	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5051][1][TARGET_ONE][point_blank][not_friend]
+1697966656917	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5054][1][TARGET_ONE][point_blank][not_friend]
+1697966656920	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5104][1][TARGET_ONE][single][none]
+1697966656920	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5105][1][TARGET_ONE][single][none]
+1697966656921	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5114][1][TARGET_ONE][point_blank][not_friend]
+1697966656923	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5117][1][TARGET_ONE][point_blank][not_friend]
+1697966656923	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5123][1][TARGET_ONE][point_blank][friend]
+1697966656923	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5124][1][TARGET_ONE][point_blank][not_friend]
+1697966656923	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5125][1][TARGET_ONE][point_blank][friend]
+1697966656924	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5126][1][TARGET_ONE][point_blank][friend]
+1697966656924	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5127][1][TARGET_ONE][point_blank][friend]
+1697966656925	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5128][1][TARGET_ONE][point_blank][friend]
+1697966656925	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5129][1][TARGET_ONE][point_blank][friend]
+1697966656925	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5130][1][TARGET_ONE][point_blank][not_friend]
+1697966656925	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5131][1][TARGET_ONE][point_blank][not_friend]
+1697966656926	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5132][1][TARGET_ONE][point_blank][not_friend]
+1697966656926	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5133][1][TARGET_ONE][point_blank][not_friend]
+1697966656926	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5134][1][TARGET_ONE][point_blank][not_friend]
+1697966656926	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5145][1][TARGET_ONE][point_blank][not_friend]
+1697966656930	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5202][1][TARGET_ONE][point_blank][not_friend]
+1697966656930	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5203][1][TARGET_ONE][point_blank][not_friend]
+1697966656930	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5204][1][TARGET_ONE][single][none]
+1697966656931	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5239][1][TARGET_ONE][single][none]
+1697966656931	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5248][1][TARGET_ONE][single][none]
+1697966656932	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5252][1][TARGET_ONE][single][none]
+1697966656932	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5257][1][TARGET_ONE][single][none]
+1697966656934	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5275][1][TARGET_ONE][point_blank][not_friend]
+1697966656935	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5279][1][TARGET_ONE][point_blank][not_friend]
+1697966656936	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5283][1][TARGET_ONE][point_blank][not_friend]
+1697966656936	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5287][1][TARGET_ONE][point_blank][not_friend]
+1697966656937	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5291][1][TARGET_ONE][point_blank][not_friend]
+1697966656937	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5295][1][TARGET_ONE][point_blank][not_friend]
+1697966656938	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5306][1][TARGET_ONE][point_blank][not_friend]
+1697966656941	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5340][1][TARGET_ONE][point_blank][not_friend]
+1697966656942	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5344][1][TARGET_ONE][point_blank][not_friend]
+1697966656942	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5348][1][TARGET_ONE][point_blank][not_friend]
+1697966656942	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5352][1][TARGET_ONE][point_blank][not_friend]
+1697966656943	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5356][1][TARGET_ONE][point_blank][not_friend]
+1697966656943	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5360][1][TARGET_ONE][point_blank][not_friend]
+1697966656944	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5366][1][TARGET_ONE][point_blank][not_friend]
+1697966656945	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5375][1][TARGET_ONE][point_blank][not_friend]
+1697966656945	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5379][1][TARGET_ONE][point_blank][not_friend]
+1697966656945	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5382][1][TARGET_ONE][point_blank][not_friend]
+1697966656946	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5385][1][TARGET_ONE][point_blank][not_friend]
+1697966656946	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5388][1][TARGET_ONE][point_blank][not_friend]
+1697966656946	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5391][1][TARGET_ONE][point_blank][not_friend]
+1697966656947	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5423][1][TARGET_ONE][point_blank][not_friend]
+1697966656948	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5424][1][TARGET_ONE][point_blank][not_friend]
+1697966656948	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5430][1][TARGET_ONE][range][clan]
+1697966656949	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5447][1][TARGET_ONE][single][none]
+1697966656950	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5494][1][TARGET_ONE][single][none]
+1697966656953	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5591][1][TARGET_ONE][single][none]
+1697966656954	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5619][1][TARGET_ONE][single][none]
+1697966656957	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5660][1][TARGET_ONE][single][none]
+1697966656958	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5689][1][TARGET_ONE][single][none]
+1697966656958	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5697][1][TARGET_ONE][single][none]
+1697966656958	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5699][1][TARGET_ONE][single][none]
+1697966656959	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5713][1][TARGET_ONE][single][none]
+1697966656961	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5751][1][TARGET_ONE][point_blank][not_friend]
+1697966656961	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5756][1][TARGET_ONE][single][none]
+1697966656965	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5772][1][TARGET_ONE][single][none]
+1697966656965	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5773][1][TARGET_ONE][single][none]
+1697966656966	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5799][1][TARGET_ONE][point_blank][not_friend]
+1697966656967	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5836][1][TARGET_ONE][point_blank][clan]
+1697966656967	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5847][1][TARGET_ONE][point_blank][none]
+1697966656969	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5887][1][TARGET_ONE][point_blank][not_friend]
+1697966656970	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5923][1][TARGET_ONE][single][none]
+1697966656970	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5937][1][TARGET_ONE][single][none]
+1697966656972	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6020][1][TARGET_ONE][single][none]
+1697966656972	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6021][1][TARGET_ONE][single][none]
+1697966656972	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6022][1][TARGET_ONE][single][none]
+1697966656972	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6023][1][TARGET_ONE][single][none]
+1697966656972	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6034][1][TARGET_ONE][single][none]
+1697966656974	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6090][1][TARGET_ONE][single][none]
+1697966656974	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6092][1][TARGET_ONE][single][none]
+1697966656978	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6270][1][TARGET_ONE][point_blank][none]
+1697966656979	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6298][1][TARGET_ONE][single][none]
+1697966656979	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6301][1][TARGET_ONE][point_blank][not_friend]
+1697966656979	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6305][1][TARGET_ONE][point_blank][not_friend]
+1697966656980	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6316][1][TARGET_ONE][single][none]
+1697966656980	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6320][1][TARGET_ONE][point_blank][not_friend]
+1697966656981	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6372][1][TARGET_ONE][single][none]
+1697966656981	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6374][1][TARGET_ONE][single][none]
+1697966656981	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6375][1][TARGET_ONE][single][none]
+1697966656984	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6398][1][TARGET_ONE][ring_range][not_friend]
+1697966656985	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6415][1][TARGET_ONE][point_blank][not_friend]
+1697966656986	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6422][1][TARGET_ONE][point_blank][not_friend]
+1697966657523	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6754][1][TARGET_ONE][point_blank][not_friend]
+1697966657524	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6769][1][TARGET_ONE][point_blank][not_friend]
+1697966657525	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6777][1][TARGET_ONE][point_blank][not_friend]
+1697966657525	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6779][1][TARGET_ONE][single][none]
+1697966657529	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6835][1][TARGET_ONE][single][none]
+1697966657529	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6841][1][TARGET_ONE][single][none]
+1697966657529	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6858][1][TARGET_ONE][single][none]
+1697966657530	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6864][1][TARGET_ONE][single][none]
+1697966657530	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6868][1][TARGET_ONE][single][none]
+1697966657612	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9011][1][TARGET_ONE][single][none]
+1697966657612	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9011][1][TARGET_ONE][single][none]
+1697966657613	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9011][1][TARGET_ONE][single][none]
+1697966657613	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1697966657613	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1697966657613	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1697966657614	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1697966657614	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1697966657614	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1697966657614	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1697966657614	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1697966657614	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1697966657614	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1697966657615	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1697966657615	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1697966657615	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1697966657615	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1697966657615	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1697966657615	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1697966657616	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1697966657616	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1697966657616	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1697966657616	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1697966657617	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1697966657617	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1697966657617	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1697966657617	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1697966657617	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1697966657618	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1697966657618	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1697966657618	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1697966657619	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9060][1][TARGET_ONE][point_blank][friend]
+1697966657623	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21005][1][TARGET_ONE][single][none]
+1697966657624	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21052][1][TARGET_ONE][single][none]
+1697966657624	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21055][1][TARGET_ONE][single][none]
+1697966657624	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21056][1][TARGET_ONE][single][none]
+1697966657624	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21061][1][TARGET_ONE][single][none]
+1697966657624	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21063][1][TARGET_ONE][single][none]
+1697966657625	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21071][1][TARGET_ONE][single][none]
+1697966657625	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21086][1][TARGET_ONE][single][none]
+1697966657626	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21153][1][TARGET_ONE][single][none]
+1697966657626	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21154][1][TARGET_ONE][single][none]
+1697966657626	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21170][1][TARGET_ONE][single][none]
+1697966657634	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23165][1][TARGET_ONE][single][none]
+1697966657638	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23298][1][TARGET_ONE][single][none]
+1697966657638	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23308][1][TARGET_ONE][point_blank][friend]
+1697966657638	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23309][1][TARGET_ONE][point_blank][friend]
+1697966657638	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23310][1][TARGET_ONE][point_blank][friend]
+1697966657638	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23311][1][TARGET_ONE][point_blank][friend]
+1697966657770	INFO	21	l2open.util.Strings	PTS HTML: ./data/html-en.zip loaded 3152ms...
+1697966657826	INFO	21	l2open.util.Strings	Loaded 418 translit entrys
+1697966658055	INFO	1	l2open.gameserver.instancemanager.CubicManager	CubicManager: Loaded 145 cubics.
+1697966658274	INFO	1	l2open.gameserver.tables.PetSkillsTable	PetSkillsTable: Loaded 2671 skills.
+1697966659469	WARNING	1	l2open.gameserver.templates.L2Item	WARNING: item 20711 action attached skill not done: Box of Dynasty Armor[id=9105,lvl=1]
+1697966660624	INFO	1	l2open.gameserver.xml.loader.XmlOptionDataLoader	XmlOptionDataLoader: Loaded 24975 templates.
+1697966660654	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 0 Custom Armors
+1697966660654	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 3554 Armors
+1697966660654	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 240 Rare Armors
+1697966660654	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 58 PvP Armors
+1697966662457	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 0 Custom Weapons
+1697966662457	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 4001 Weapons
+1697966662457	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 794 Rare Weapons
+1697966662457	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 558 PvP Weapons
+1697966662457	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 1667 SA Weapons
+1697966662457	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 283 Trigger for Weapons
+1697966662457	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 262 Pole Weapons
+1697966664860	INFO	1	l2open.gameserver.xml.loader.XmlEtcItemLoader	XmlEtcItemLoader: Loaded 0 Custom EtcItems
+1697966664860	INFO	1	l2open.gameserver.xml.loader.XmlEtcItemLoader	XmlEtcItemLoader: Loaded 10855 EtcItems
+1697966664970	INFO	1	l2open.gameserver.TradeController	TradeController: Loaded 4 file(s).
+1697966664970	INFO	1	l2open.gameserver.TradeController	TradeController: Loaded 23181 Items.
+1697966664970	INFO	1	l2open.gameserver.TradeController	TradeController: Loaded 702 Buylists.
+1697966665168	INFO	1	l2open.gameserver.RecipeController	RecipeController: Loaded 1000 Recipes.
+1697966723313	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 17098 skills.
+1697966723314	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 109 fishing skills.
+1697966723314	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 20 transformation skills.
+1697966723314	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 64 clan skills.
+1697966723314	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 526 enchanted skills.
+1697966723314	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 18 pledge skills.
+1697966723314	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 74 certification skills.
+1697966723314	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 0 other skills.
+1697966723314	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 21 Transfer skills for Bishop.
+1697966723314	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 24 Transfer skills for Elder.
+1697966723314	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 32 Transfer skills for Silen Elder.
+1697966723317	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillSpellbookTable: Loaded 386 Spellbooks.
+1697966723320	INFO	1	l2open.pts.loader.LoadData	PTS ArmorEnchantBonusData: Finish loading data fo 1 ms...
+1697966723336	INFO	1	l2open.gameserver.tables.CharTemplateTable	CharTemplateTable: Loaded 206 Character Templates.
+1697966723341	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 779 AI params for 666 NPCs.
+1697966723495	INFO	1	l2open.extensions.scripts.Scripts	Scripts loading...
+1697966723496	INFO	1	l2open.extensions.scripts.Scripts	Scripts successfully loaded. Loaded 0 classes.
+1697966723496	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: PassagewayMobWithHerb
+1697966723496	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: PassagewayMobWithHerb
+1697966723498	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723498	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723498	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723499	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723499	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723499	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723499	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723500	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723500	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723500	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723500	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723500	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723501	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723501	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723501	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723501	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723502	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723502	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723502	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723502	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723502	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723502	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723503	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723503	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723503	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723503	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723504	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723504	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723504	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723504	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723505	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723505	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723505	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kanabion
+1697966723514	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2MoS
+1697966723515	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2MoS
+1697966723515	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2MoS
+1697966723516	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2MoS
+1697966723516	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2MoS
+1697966723516	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2MoS
+1697966723517	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2MoS
+1697966723517	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2MoS
+1697966723524	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherRaid
+1697966723524	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherRaid
+1697966723524	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherRaid
+1697966723525	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherRaid
+1697966723534	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: HoSBoss
+1697966723534	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: HoSBoss
+1697966723536	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: LostCaptain
+1697966723537	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Orfen
+1697966723542	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: SpecialMinion
+1697966723543	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: LostCaptain
+1697966723543	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: LostCaptain
+1697966723543	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: LostCaptain
+1697966723544	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: LostCaptain
+1697966723545	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: LostCaptain
+1697966723545	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: LostCaptain
+1697966723546	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: LostCaptain
+1697966723550	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: ImmuneMonster
+1697966723551	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: ImmuneMonster
+1697966723558	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723558	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723559	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723559	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723560	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723560	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723560	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723561	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723563	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723563	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723564	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723566	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723566	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723567	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723567	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723568	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723568	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723571	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723574	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723574	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723575	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723575	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723575	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723575	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723576	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723576	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723577	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723577	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723578	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723578	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723578	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723579	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723579	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723579	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723580	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723580	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723580	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723582	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723582	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723583	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723583	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723584	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723585	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723585	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723587	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723588	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723588	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723588	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723589	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723589	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723590	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723590	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723590	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723591	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723591	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723592	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723592	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723593	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723593	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723593	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723594	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723594	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723595	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723595	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723595	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723595	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723596	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723597	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723597	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723598	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723598	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723599	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723599	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723600	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723601	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723602	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723602	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723602	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723603	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723603	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723603	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723603	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723604	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723607	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723609	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723609	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723609	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723610	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723611	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723611	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723611	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723613	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723613	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723613	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723613	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723613	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723614	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723616	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723616	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723616	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723617	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723617	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723618	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723618	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723619	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723619	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723620	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723621	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723621	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723621	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723623	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723623	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723624	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723624	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723624	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723625	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723625	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723625	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723625	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723626	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723626	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723626	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723626	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723627	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723627	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723627	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723627	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723628	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723628	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723628	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723629	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723629	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723629	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723630	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723630	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723630	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723631	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherMonster
+1697966723631	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723631	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723632	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723632	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723632	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723633	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723633	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723633	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723634	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723634	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723634	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723635	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723635	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723635	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723635	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723636	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723636	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723636	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723637	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723638	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723638	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723638	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TreasureChest
+1697966723643	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723644	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723644	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723644	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723644	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723645	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723645	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723645	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723646	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723646	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723646	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723647	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723647	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723647	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723647	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723648	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723648	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: TullyDoor
+1697966723651	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: NaiaController
+1697966723651	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: NaiaRoomController
+1697966723651	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: NaiaRoomController
+1697966723652	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: NaiaRoomController
+1697966723652	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: NaiaRoomController
+1697966723652	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: NaiaRoomController
+1697966723652	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: NaiaRoomController
+1697966723652	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: NaiaRoomController
+1697966723653	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: NaiaRoomController
+1697966723653	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: NaiaRoomController
+1697966723653	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: NaiaRoomController
+1697966723653	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: NaiaRoomController
+1697966723654	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: NaiaRoomController
+1697966723655	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Kama26Boss
+1697966723659	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2EnergySeed
+1697966723659	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2EnergySeed
+1697966723659	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2EnergySeed
+1697966723659	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2EnergySeed
+1697966723660	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2EnergySeed
+1697966723660	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2EnergySeed
+1697966723660	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2StarStone
+1697966723661	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2StarStone
+1697966723661	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2StarStone
+1697966723661	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2StarStone
+1697966723661	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2StarStone
+1697966723662	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2StarStone
+1697966723662	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2StarStone
+1697966723662	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2StarStone
+1697966723662	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2StarStone
+1697966723663	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: ImmuneMonster
+1697966723663	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: DestroyedTumor
+1697966723664	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Obelisk
+1697966723665	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: ImmuneMonster
+1697966723665	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: ImmuneMonster
+1697966723666	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Maguen
+1697966723666	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Jinia
+1697966723667	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: ImmuneMonster
+1697966723698	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Keplon
+1697966723700	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: CofferOfTheDead
+1697966723713	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: ValakasGatekeeper
+1697966723714	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723714	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723714	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723714	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723714	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723715	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723715	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723715	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723715	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723715	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723715	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723716	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723717	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723717	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723718	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723718	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723718	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723751	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723751	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723756	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723756	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723764	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723764	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723764	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723772	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723772	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723772	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723773	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723773	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723773	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723785	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723785	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723785	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723791	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723794	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723794	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723807	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: ValakasGatekeeper
+1697966723845	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2ClassMaster
+1697966723847	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723847	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723848	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723848	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723848	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723848	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723849	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723849	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723849	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723849	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723849	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723850	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723850	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723850	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723850	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723850	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723850	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723851	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723851	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723851	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723851	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723851	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723851	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723851	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723852	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723852	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2SepulcherNpc
+1697966723853	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Rafforty
+1697966723855	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2TriolsMirror
+1697966723855	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2TriolsMirror
+1697966723864	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: MoonlightTombstone
+1697966723864	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: WorkshopServant
+1697966723864	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Sandstorm
+1697966723865	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Snow
+1697966723866	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: WorkshopServant
+1697966723866	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: WorkshopServant
+1697966723866	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: WorkshopServant
+1697966723868	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2TullyCube
+1697966723869	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: BelethCoffin
+1697966723871	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: HandysBlockChecker
+1697966723871	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: HandysBlockChecker
+1697966723871	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: HandysBlockChecker
+1697966723871	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: HandysBlockChecker
+1697966723871	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: DestroyedTumorEntrance
+1697966723871	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: MouthOfEkimus
+1697966723871	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: MouthOfEkimus
+1697966723871	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: GatekeeperOfAbyss
+1697966723871	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: GatekeeperOfAbyss
+1697966723871	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: SoulTrader
+1697966723871	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: birthday.Alegria
+1697966723871	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: ZakenKandle
+1697966723871	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: MaguenTrader
+1697966723871	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: UgorosKeeper
+1697966723883	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: MiniGameInstructor
+1697966723883	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Jinia
+1697966723884	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Aquilani
+1697966723884	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Jinia
+1697966723996	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724013	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724029	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724034	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724035	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724036	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724038	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724040	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724042	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724043	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724044	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724045	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724046	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724048	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724049	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724050	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724051	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724052	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724053	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724055	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724057	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: L2Ballista
+1697966724062	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724062	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724062	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724063	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724063	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724063	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724063	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724064	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724064	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724068	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724068	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724068	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724068	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724069	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724069	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724069	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724069	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724070	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Catapult
+1697966724087	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Squash
+1697966724087	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Squash
+1697966724088	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Squash
+1697966724088	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Squash
+1697966724088	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Squash
+1697966724088	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Squash
+1697966724088	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: HeartOfWarding
+1697966724090	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Squash
+1697966724090	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Squash
+1697966724095	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Thomas
+1697966724095	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: FakeObelisk
+1697966724098	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: birthday.BirthDayCake
+1697966724099	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: birthday.BirthDayCake
+1697966724099	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: SeparatedSoul
+1697966724100	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: OddGlobe
+1697966724101	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: SeparatedSoul
+1697966724101	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: ElcardiaAssistant
+1697966724102	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: ElcardiaAssistant
+1697966724102	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: SeparatedSoul
+1697966724102	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: SeparatedSoul
+1697966724103	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: GruffMan
+1697966724103	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: SeparatedSoul
+1697966724105	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: SeparatedSoul
+1697966724105	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: DragonVortex
+1697966724105	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: SeparatedSoul
+1697966724107	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: SeparatedSoul
+1697966724108	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Not found type: Aurik
+1697966724110	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 10463 Npc Templates.
+1697966724332	INFO	1	l2open.gameserver.tables.NpcTable	Loaded 118801 npc skills.
+1697966724532	INFO	1	l2open.gameserver.tables.NpcTable	Players droplist load skipped
+1697966724553	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 597 Minions.
+1697966724558	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 1641 SkillLearn entrys.
+1697966724598	INFO	1	l2open.pts.loader.LoadData	PTS NpcDataPch: Finish loading data size: 10195 fo 39 ms...
+1697966724642	INFO	1	l2open.gameserver.tables.HennaTable	HennaTable: Loaded 180 Templates.
+1697966724682	INFO	1	l2open.gameserver.tables.HennaTreeTable	HennaTreeTable: Loaded 8134 Henna Tree Templates.
+1697966724684	INFO	1	l2open.gameserver.tables.LevelUpTable	LevelUpData: Loaded 103 Character Level Up Templates.
+1697966724696	INFO	1	l2open.gameserver.model.L2World	L2World: [255][271][63] World Region Grid set up.
+1697966724696	INFO	1	l2open.gameserver.geodata.GeoEngine	GeoEngine: Loading Geodata...
+1697966724697	INFO	1	l2open.gameserver.geodata.GeoEngine	GeoEngine: Loaded 0 map(s), max layers: 1
+1697966725283	INFO	1	l2open.gameserver.tables.DoorTable	DoorTable: Loaded 1030 doors.
+1697966725440	INFO	1	l2open.gameserver.tables.TerritoryTable	TerritoryTable: Loaded 9976 locations
+1697966725557	INFO	1	l2open.gameserver.instancemanager.ZoneManager	ZoneManager: Loaded 1649 zones
+1697966725634	INFO	1	l2open.gameserver.tables.TerritoryTable	TerritoryTable: Added 1642 locations to L2World
+1697966725635	INFO	1	l2open.gameserver.instancemanager.UnderGroundColliseumManager	Loaded: 1 UnderGround Colliseums.
+1697966725727	INFO	1	l2open.gameserver.instancemanager.CastleManager	Loaded: 9 castles.
+1697966725756	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1697966725751][1697966725751]: Siege of Gludio: Sun Oct 22 16:00:00 MSK 2023
+1697966725757	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1697966725756][1697966725756]: Siege of Gludio: Sun Oct 22 16:00:00 MSK 2023
+1697966725757	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Gludio: Sun Oct 22 16:00:00 MSK 2023
+1697966725762	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1697966725762][1697966725762]: Siege of Dion: Sun Oct 22 16:00:00 MSK 2023
+1697966725762	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1697966725762][1697966725762]: Siege of Dion: Sun Oct 22 16:00:00 MSK 2023
+1697966725772	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Dion: Sun Oct 22 16:00:00 MSK 2023
+1697966725776	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1697966725776][1697966725776]: Siege of Giran: Sun Oct 22 16:00:00 MSK 2023
+1697966725776	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1697966725776][1697966725776]: Siege of Giran: Sun Oct 22 16:00:00 MSK 2023
+1697966725780	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Giran: Sun Oct 22 16:00:00 MSK 2023
+1697966725783	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1697966725783][1697966725783]: Siege of Oren: Sun Oct 22 16:00:00 MSK 2023
+1697966725783	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1697966725783][1697966725783]: Siege of Oren: Sun Oct 22 16:00:00 MSK 2023
+1697966725821	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Oren: Sun Oct 22 16:00:00 MSK 2023
+1697966725826	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1697966725826][1697966725826]: Siege of Aden: Sun Oct 22 16:00:00 MSK 2023
+1697966725826	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1697966725826][1697966725826]: Siege of Aden: Sun Oct 22 16:00:00 MSK 2023
+1697966725829	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Aden: Sun Oct 22 16:00:00 MSK 2023
+1697966725831	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1697966725831][1697966725831]: Siege of Innadril: Sun Oct 22 16:00:00 MSK 2023
+1697966725831	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1697966725831][1697966725831]: Siege of Innadril: Sun Oct 22 16:00:00 MSK 2023
+1697966725834	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Innadril: Sun Oct 22 16:00:00 MSK 2023
+1697966725836	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1697966725836][1697966725836]: Siege of Goddard: Sun Oct 22 16:00:00 MSK 2023
+1697966725836	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1697966725836][1697966725836]: Siege of Goddard: Sun Oct 22 16:00:00 MSK 2023
+1697966725837	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Goddard: Sun Oct 22 16:00:00 MSK 2023
+1697966725839	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1697966725839][1697966725839]: Siege of Rune: Sun Oct 22 16:00:00 MSK 2023
+1697966725840	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1697966725839][1697966725839]: Siege of Rune: Sun Oct 22 16:00:00 MSK 2023
+1697966725840	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Rune: Sun Oct 22 16:00:00 MSK 2023
+1697966725842	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1697966725842][1697966725842]: Siege of Schuttgart: Sun Oct 22 16:00:00 MSK 2023
+1697966725843	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1697966725843][1697966725843]: Siege of Schuttgart: Sun Oct 22 16:00:00 MSK 2023
+1697966725843	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Schuttgart: Sun Oct 22 16:00:00 MSK 2023
+1697966725844	INFO	1	l2open.gameserver.instancemanager.FortressManager	Initializing FortressManager
+1697966726009	INFO	1	l2open.gameserver.instancemanager.FortressManager	Loaded: 21 fortresses.
+1697966726064	INFO	1	l2open.gameserver.instancemanager.ClanHallManager	Initializing ClanHallManager.
+1697966727412	INFO	1	l2open.gameserver.instancemanager.ClanHallManager	Loaded: 44 ClanHalls.
+1697966727432	INFO	1	l2open.gameserver.instancemanager.ClanHallManager	110 doors attached to ClanHalls
+1697966727438	INFO	1	l2open.gameserver.model.entity.siege.clanhall.BanditStrongholdSiege	Siege of Bandit Stronghold : Fri Nov 03 21:00:00 MSK 2023
+1697966727442	INFO	1	l2open.gameserver.model.entity.siege.clanhall.WildBeastFarmSiege	Siege of Wild Beasts Farm : Fri Nov 03 21:00:00 MSK 2023
+1697966727446	INFO	1	l2open.gameserver.model.entity.siege.clanhall.RainbowSpringSiege	Siege of Rainbow Springs Chateau : Fri Nov 03 22:00:00 MSK 2023
+1697966727459	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiegeDatabase	TerritorySiege: load 9 town spawns.
+1697966727460	WARNING	1	l2open.gameserver.model.entity.siege.territory.TerritorySiegeDatabase	TerritorySiegeDatabase loadSiegeGuards: 
+1697966727464	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiegeDatabase	TerritorySiege: load 0 castle spawns.
+1697966727464	WARNING	1	l2open.gameserver.model.entity.siege.territory.TerritorySiegeDatabase	TerritorySiegeDatabase loadSiegeGuards: 
+1697966727465	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiegeDatabase	TerritorySiege: load 0 fortress spawns.
+1697966727468	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiege	Territory Siege: 28.10.2023 20:00:12
+1697966727470	INFO	1	l2open.gameserver.instancemanager.CastleManorManager	Manor System: Initializing...
+1697966727477	INFO	1	l2open.gameserver.instancemanager.SeedOfAnnihilationZone	SeedOfAnnihilationManager: Load Manager.
+1697966727584	INFO	1	l2open.gameserver.instancemanager.RaidBossSpawnManager	RaidBossSpawnManager: Loaded 0 Statuses
+1697966727592	WARNING	1	l2open.gameserver.model.instances.L2NpcInstance	AI type TotemSummon not found!
+1697966727593	WARNING	1	l2open.gameserver.model.instances.L2NpcInstance	AI type adept.AdeptGludio not found!
+1697966727594	WARNING	1	l2open.gameserver.model.instances.L2NpcInstance	AI type adept.AdeptGiran not found!
+1697966727595	WARNING	1	l2open.gameserver.model.instances.L2NpcInstance	AI type adept.AdeptAden not found!
+1697966727596	WARNING	1	l2open.gameserver.model.instances.L2NpcInstance	AI type adept.AdeptRune not found!
+1697966727597	WARNING	1	l2open.gameserver.tables.SpawnTable	NpcId: 13001 spawn couldnt be initialized:java.lang.ClassNotFoundException: Unable to instantiate npc 13001
+1697966727598	INFO	1	l2open.gameserver.tables.SpawnTable	SpawnTable: Loaded 12 Npc Spawn Locations. Total NPCs: 12
+1697966727598	INFO	1	l2open.gameserver.tables.SpawnTable	Monsters inventory loaded, items: 0
+1697966727606	INFO	1	l2open.gameserver.instancemanager.DimensionalRiftManager	DimensionalRiftManager: Loaded 13 room types with 112 rooms.
+1697966727606	INFO	1	l2open.gameserver.instancemanager.DimensionalRiftManager	DimensionalRiftManager: Loaded 300 dimensional rift spawns, 0 errors.
+1697966727672	WARNING	1	l2open.gameserver.instancemanager.InstancedZoneManager	Error on loading instanced spawns:
+1697966727674	INFO	1	l2open.gameserver.instancemanager.InstancedZoneManager	InstancedZoneManager: Loaded 6 zones with 6 rooms.
+1697966727674	INFO	1	l2open.gameserver.instancemanager.InstancedZoneManager	InstancedZoneManager: Loaded 68 instanced location spawns, 0 errors.
+1697966727676	INFO	1	l2open.gameserver.Announcements	config/announcements.txt doesn't exist
+1697966727804	INFO	1	l2open.gameserver.tables.AugmentationData	Initializing AugmentationData.
+1697966727827	INFO	1	l2open.gameserver.tables.StaticObjectsTable	StaticObject: Loaded 29 StaticObject Templates.
+1697966727831	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: Currently in the Seal Validation period!
+1697966727831	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Seal of Avarice remains unclaimed.
+1697966727831	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Seal of Gnosis remains unclaimed.
+1697966727831	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Seal of Strife remains unclaimed.
+1697966727831	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Competition last week ended with a tie.
+1697966727832	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: Next period begins in 1 days, 5 hours and 34 mins.
+1697966727845	INFO	1	l2open.gameserver.GameServer	AutoSpawnHandler: Loaded 50 handlers in total.
+1697966727849	INFO	1	l2open.gameserver.GameServer	AutoChatHandler: Loaded 14 handlers in total.
+1697966727859	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Loading Olympiad System....
+1697966727859	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Currently in Olympiad Period
+1697966727859	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: In 9 days, 11 hours and 34 mins.
+1697966727859	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Next Weekly Change is in....
+1697966727859	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: In 5 days, 23 hours and 34 mins.
+1697966727859	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Loaded 2 Noblesses
+1697966727859	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Competition Period Starts in 0 days, 5 hours and 34 mins.
+1697966727860	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Event starts/started: Sun Oct 22 18:00:00 MSK 2023
+1697966727861	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System:[Disable] Start custom reward 22:45 22.10.2023.
+1697966727861	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: End custom reward 00:00 23.10.2023.
+1697966727863	INFO	1	l2open.gameserver.model.entity.Hero	Hero System: Loaded 0 Heroes.
+1697966727863	INFO	1	l2open.gameserver.model.entity.Hero	Hero System: Loaded 0 all time Heroes.
+1697966727866	INFO	1	l2open.gameserver.instancemanager.CursedWeaponsManager	CursedWeaponsManager: Loaded 0 cursed weapon(s).
+1697966727871	INFO	1	l2open.gameserver.instancemanager.HellboundManager	Hellbound Manager: Current Level is 1
+1697966727871	INFO	1	l2open.gameserver.instancemanager.HellboundManager	Hellbound Manager: Current Points is 0
+1697966727872	INFO	1	l2open.gameserver.instancemanager.PlayerRewardManager	PlayerRewardManager: set_noble[0] inc_pvp[0] inc_pc[0].
+1697966727873	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Unable to create instance of NPC 32537
+1697966727880	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Unable to create instance of NPC 32537
+1697966727902	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Unable to create instance of NPC 32537
+1697966727903	WARNING	1	l2open.gameserver.templates.L2NpcTemplate	Unable to create instance of NPC 32537
+1697966727905	INFO	1	l2open.gameserver.instancemanager.SeedOfInfinityManager	Seed of Infinity Manager: Current Cycle is 1
+1697966727906	INFO	1	l2open.gameserver.instancemanager.NaiaTowerManager	Naia Tower Manager: Loaded 12 rooms
+1697966727908	INFO	1	l2open.gameserver.instancemanager.NaiaTowerManager	Naia Core Manager: Loaded
+1697966727910	INFO	1	l2open.gameserver.instancemanager.CoupleManager	Initializing CoupleManager
+1697966727910	INFO	1	l2open.gameserver.instancemanager.CoupleManager	Loaded: 0 couples(s)
+1697966727911	INFO	1	l2open.gameserver.GameServer	CoupleManager initialized
+1697966727912	INFO	1	l2open.gameserver.GameServer	ItemHandler: Loaded 0 handlers.
+1697966727912	INFO	1	l2open.gameserver.GameServer	AdminCommandHandler: Loaded 3 handlers.
+1697966727912	INFO	1	l2open.gameserver.GameServer	UserCommandHandler: Loaded 0 handlers.
+1697966727913	INFO	1	l2open.gameserver.GameServer	VoicedCommandHandler: Loaded 3 handlers.
+1697966727924	INFO	1	l2open.gameserver.instancemanager.CastleManager	MercTicketManager: Initializing
+1697966727929	INFO	1	l2open.gameserver.instancemanager.CastleManager	MercTicketManager: Loaded 0 Mercenary Tickets
+1697966727930	INFO	1	l2open.gameserver.model.entity.vehicle.L2VehicleManager	Initializing L2VehicleManager
+1697966727936	INFO	1	l2open.gameserver.model.entity.vehicle.L2VehicleManager	L2VehicleManager: Loaded 6 vehicles.
+1697966727938	INFO	1	l2open.gameserver.tables.AirShipDocksTable	AirShipDocksTable: Loaded 5 docks.
+1697966727947	INFO	1	l2open.gameserver.GameServer	IdFactory: Free ObjectID's remaining: 1879044667
+1697966727953	INFO	1	l2open.gameserver.tables.TeleportTable	TeleportController: Loaded 600 locations.
+1697966727961	INFO	1	l2open.gameserver.itemmall.ItemMall	ItemMall: loaded 556 item templates.
+1697966727967	INFO	1	l2open.gameserver.itemmall.ItemMall	ItemMall: loaded 184 items available for trading.
+1697966727978	WARNING	1	l2open.gameserver.Shutdown	AutoRestart scheduled through 16h 35m
+1697966727993	WARNING	1	l2open.gameserver.instancemanager.ItemAuctionManager	ItemAuctionManager: Missing item_auctions.xml!
+1697966727994	INFO	1	l2open.gameserver.instancemanager.BloodAltarManager	Blood Altar Manager: Initializing...
+1697966728013	INFO	1	l2open.gameserver.GameServer	GameServer Started
+1697966728013	INFO	1	l2open.gameserver.GameServer	Maximum Numbers of Connected Players: 3000
+1697966728200	INFO	68	l2open.gameserver.loginservercon.LSConnection	GameServer: Connecting to LoginServer on 192.168.1.100:9014
+1697966729018	INFO	71	l2open.common.RunnableImpl	Restored 0 offline traders
+1697966729129	INFO	72	l2open.gameserver.loginservercon.lspackets.AuthResponse	Registered on login as Server 1 : 
+1697966734149	INFO	1	l2open.gameserver.GameStart	Telnet server is currently disabled.
+1697966734149	INFO	1	l2open.gameserver.GameStart	=================================================
+1697966734150	INFO	1	l2open.gameserver.GameStart	AllowedMemory: ........... 6087040 KB
+1697966734150	INFO	1	l2open.gameserver.GameStart	     Allocated: .......... 6087040 KB (100.0%)
+1697966734150	INFO	1	l2open.gameserver.GameStart	     Non-Allocated: ...... 0 KB (0.0%)
+1697966734150	INFO	1	l2open.gameserver.GameStart	AllocatedMemory: ......... 6087040 KB
+1697966734150	INFO	1	l2open.gameserver.GameStart	     Used: ............... 816473 KB (13.4133%)
+1697966734150	INFO	1	l2open.gameserver.GameStart	     Unused (cached): .... 5270566 KB (86.5867%)
+1697966734150	INFO	1	l2open.gameserver.GameStart	UseableMemory: ........... 5270566 KB (86.5867%)
+1697966734150	INFO	1	l2open.gameserver.GameStart	=================================================
+1697966734150	INFO	1	l2open.gameserver.GameStart	MinProtocolRevision: 267
+1697966760008	INFO	61	l2open.common.RunnableImpl	Manor System: Next period approved
+1697966780594	INFO	70	l2open.extensions.network.SelectorThread	max_p_size: 7
+1697966781186	INFO	70	l2open.extensions.network.SelectorThread	max_p_size: 267
+1697966781212	INFO	70	l2open.gameserver.clientpackets.L2GameClientPacket	RequestAuthLogin: 50
+1697966781212	INFO	70	l2open.gameserver.clientpackets.L2GameClientPacket	RequestAuthLogin: 32
+1697966786028	WARNING	63	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantShanty not found!
+1697966786031	WARNING	57	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantSouthernGludio not found!
+1697966786036	WARNING	61	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantHive not found!
+1697966786038	WARNING	61	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantValley not found!
+1697966786041	WARNING	61	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantIvoryTower not found!
+1697966786042	WARNING	62	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantNarsell not found!
+1697966786043	WARNING	23	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantBayou not found!
+1697966786044	WARNING	22	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantWhiteSands not found!
+1697966786046	WARNING	61	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantBorderland not found!
+1697966786048	WARNING	22	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantMarshland not found!
+1697966786048	WARNING	61	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantArchaic not found!
+1697966786050	WARNING	23	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantFloran not found!
+1697966786051	WARNING	23	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantCloud not found!
+1697966786054	WARNING	63	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantTanor not found!
+1697966786056	WARNING	57	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantDragonspine not found!
+1697966786058	WARNING	60	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantAntharas not found!
+1697966786059	WARNING	61	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantWestern not found!
+1697966786061	WARNING	60	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantHunters not found!
+1697966786062	WARNING	60	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantAaru not found!
+1697966786064	WARNING	23	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantMonastic not found!
+1697966786064	WARNING	62	l2open.gameserver.model.instances.L2NpcInstance	AI type SuspiciousMerchantDemon not found!
+1697966788552	INFO	69	l2open.gameserver.xml.loader.XmlArmorsetLoader	XmlArmorsetLoader: Loaded 168 armor sets.
+1697966788598	WARNING	69	l2open.gameserver.model.quest.Quest	Unknown quest _1004_IceFairySirra for player fakeSB
+1697966788598	WARNING	69	l2open.gameserver.model.quest.Quest	Unknown quest _234_FatesWhisper for player fakeSB
+1697966788598	WARNING	69	l2open.gameserver.model.quest.Quest	Unknown quest _236_SeedsOfChaos for player fakeSB
+1697966788642	INFO	69	l2open.gameserver.xml.loader.XmlPcParameterLoader	XmlPcParameterLoader: Loaded 107 pc_parameters
+1697966798251	INFO	72	l2open.gameserver.tables.FriendsTable	FriendsTable: Loaded 0 friends.
+1697966798724	SEVERE	78	l2open.gameserver.clientpackets.L2GameClientPacket	Client: L2GameClient: player 'fakeSB'@192.168.1.100 from IP: 192.168.1.100 - Failed running: [C] RequestAutoSoulShot - L2Open Server Version: Unknown Version
+1697966798724	WARNING	78	l2open.gameserver.clientpackets.L2GameClientPacket	Packet not completed. Maybe cheater. IP:192.168.1.100, account:chipercu, character:fakeSB
+1697966798724	SEVERE	78	l2open.gameserver.clientpackets.L2GameClientPacket	Client: L2GameClient: player 'fakeSB'@192.168.1.100 from IP: 192.168.1.100 - Failed running: [C] RequestAutoSoulShot - L2Open Server Version: Unknown Version
+1697966798724	WARNING	78	l2open.gameserver.clientpackets.L2GameClientPacket	Packet not completed. Maybe cheater. IP:192.168.1.100, account:chipercu, character:fakeSB
+1697966834406	INFO	77	l2open.gameserver.clientpackets.L2GameClientPacket	SendBypassBuildCmd: admin
+1697966836452	INFO	73	l2open.gameserver.clientpackets.L2GameClientPacket	SendBypassBuildCmd: admin
+1697966836810	INFO	72	l2open.gameserver.clientpackets.L2GameClientPacket	SendBypassBuildCmd: admin
+1697966837047	INFO	75	l2open.gameserver.clientpackets.L2GameClientPacket	SendBypassBuildCmd: admin

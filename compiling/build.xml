@@ -1,347 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Весь сервер" default="dist" basedir=".">
-	<description> Boston, MA
-		02111-1307, USA.
+<project name="Скрипты" default="dist" basedir=".">
+    <description></description>
 
-		http://www.gnu.org/copyleft/gpl.html
+    <property name="src" location="../java"/>
+    <property name="scr" location="../data/scripts"/>
+    <property name="lib" location="../lib"/>
+    <property name="build" location="../build/scripts"/>
+    <property name="build.classes" location="${build}/classes"/>
+	 <property name="l2open" location="../build/scripts/classes/l2open"/>
+	 <property name="l2jgeoeditor" location="../build/scripts/classes/l2jgeoeditor"/>
+	 <property name="source" location="../build/scripts/classes/source"/>
 
-	</description>
 
-	<property name="src" location="../java"/>
-	<property name="lib" location="../lib"/>
-	<property name="build" location="../build"/>
-	<property name="scr" location="../data"/>
-	<property name="build.classes" location="${build}/classes"/>
-	<property name="build.scripts" location="${build}/scripts"/>
-	<property name="build.dist" location="${build}/dist"/>
-	<property name="build.dist.login" location="${build.dist}/login"/>
-	<property name="build.dist.game" location="${build.dist}/game"/>
-
-	<path id="classpath">
-		<fileset dir="${lib}">
-			<include name="*.jar"/>
-		</fileset>
-	</path>
+    <path id="classpath">
+        <fileset dir="${lib}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
 	<tstamp>
 		<format property="build.tstamp" pattern="yyyy.MM.dd HH:mm" />
 	</tstamp>
 
-	<target name="clean" description="Remove the output directories">
+    <target name="dir">
+        <delete dir="${build}"/>
+        <delete dir="${build.classes}"/>
+        <mkdir dir="${build}"/>
+        <mkdir dir="${build.classes}"/>
+    </target>
 
-		<delete dir="${build}" />
-	</target>
 
-	<target name="cc" description="Remove the classes directories">
+    <target name="compiles" depends="dir" description="Compile the source.">
+        <javac destdir="${build.classes}" optimize="on" debug="off" source="1.8" target="1.8" encoding="UTF-8" nowarn="on">
+            <compilerarg value="-Xlint:all"></compilerarg>
+            <src path="${src}"/>
+            <classpath refid="classpath"/>
+        </javac>
+    </target>
 
-		<delete dir="${build}/classes"/>
-	</target>
+    <target name="compile" depends="dir" description="Compile the source.">
+        <javac destdir="${build.classes}" optimize="on" debug="on" source="1.8" target="1.8" encoding="UTF-8" nowarn="on">
+            <compilerarg value="-Xlint:all"></compilerarg>
+            <src path="${scr}"/>
+        		<include name="**/**/*.java"/>
+        		<exclude name="communityboard/manager/*.java"/>
+        		<exclude name="commands/**/*.java"/>
+        		<exclude name="events/**/*.java"/>
+        		<exclude name="services/**/*.java"/>
+        		<exclude name="Hooks.java"/>
+        		<exclude name="actions/OnActionShift.java"/>
+        		<exclude name="npc/model/QueenAntInstance.java"/>
+        		<exclude name="npc/model/ThomasInstance.java"/>
+        		<exclude name="ai/Queen_Ant_Nurse.java"/>
+        		<exclude name="ItemHandlers.java"/>
+        		<exclude name="SendOnline.java"/>
+        		<exclude name="SendServerTitle.java"/>
+            <classpath refid="classpath"/>
+        </javac>
+    </target>
 
-	<target name="init" description="Create the output directories.">
 
-		<mkdir dir="${build}"/>
-		<mkdir dir="${build.classes}"/>
-		<mkdir dir="${build.dist}" />
-		<mkdir dir="${build.dist.login}" />
-		<mkdir dir="${build.dist.game}" />
-	</target>
-
-	<target name="compile" depends="init" description="Compile the source.">
-		<javac destdir="${build.classes}" optimize="off" debug="on" source="1.8" target="1.8" encoding="UTF-8" nowarn="on">
-			<src path="${src}"/>
-			<classpath refid="classpath"/>
-		</javac>
-	</target>
-
-	<target name="compile_scripts" depends="jar" description="Compile the source.">
-	
-        <copy todir="${lib}"> 
-			<fileset dir="${build}">
-				<include name="l2openserver.jar"/>
-			</fileset>
-        </copy>
-
-		<mkdir dir="${build.scripts}"/>
-		<javac destdir="${build.scripts}" optimize="off" debug="on" source="1.8" target="1.8" encoding="UTF-8" nowarn="on">
-			<compilerarg value="-Xlint:all"></compilerarg>
-			<src path="${scr}"/>
-				<include name="scripts/**/**/*.java"/>
-				<exclude name="scripts/communityboard/manager/*.java"/>
-				<exclude name="scripts/commands/**/*.java"/>
-				<exclude name="scripts/events/**/*.java"/>
-				<exclude name="scripts/items/**/*.java"/>
-				<exclude name="scripts/services/**/*.java"/>
-				<exclude name="scripts/Hooks.java"/>
-				<exclude name="scripts/actions/OnActionShift.java"/>
-				<exclude name="scripts/npc/model/QueenAntInstance.java"/>
-				<exclude name="scripts/npc/model/ThomasInstance.java"/>
-				<exclude name="scripts/ai/Queen_Ant_Nurse.java"/>
-				<exclude name="scripts/ItemHandlers.java"/>
-				<exclude name="scripts/SendOnline.java"/>
-				<exclude name="scripts/SendServerTitle.java"/>
-			<classpath refid="classpath"/>
-		</javac>
-
-		<delete file="${lib}/l2openserver.jar"/>
-	</target>
-
-	<target name="debug" depends="init" description="Compile the source with debug info.">
-
-		<javac destdir="${build.classes}" optimize="off" debug="on" source="1.8" target="1.8" encoding="UTF-8" nowarn="on">
-			<compilerarg value="-Xlint:all"></compilerarg>
-			<src path="${src}"/>
-			<classpath refid="classpath"/>
-		</javac>
-	</target>
-
-	<target name="jar" depends="clean,compile" description="Create the jar file">
-		<exec dir="${basedir}" executable="svnversion" outputproperty="build.revision" failifexecutionfails="false">
-			<arg line="-n ../java" />
+    <target name="dist" depends="compiles, compile" description="Create jar-file">
+        <exec dir="${basedir}" executable="svnversion" outputproperty="build.revision" failifexecutionfails="false">
+			<arg line="-n ../data/scripts" />
 		</exec>
+        <delete dir="${l2open}"/>
+    	<delete dir="${l2jgeoeditor}"/>
+    	<delete dir="${source}"/>
 
-		<concat destfile="${build.dist.game}/config/l2open-version.properties">
-			version=${build.revision}
-			builddate=${build.tstamp}: ${user.name}/${os.name}
-		</concat>
-		<jar destfile="${build}/l2openserver.jar" level="9">
+        <jar destfile="${build}/tsrsvp.jar" level="9">
 			<fileset dir="${build.classes}"/>
 			<manifest>
 				<attribute name="Build-By" value="${user.name}" />
 				<attribute name="Build-Date" value="${build.tstamp}" />
 				<attribute name="Implementation-Build" value="${build.revision}" />
 			</manifest>
-		</jar>
-
-		<copy todir="${build.dist.login}/lib" preservelastmodified="true">
-			<fileset dir="${build}">
-				<include name="l2openserver.jar"/>
-			</fileset>
-		</copy>
-
-		<copy todir="${build.dist.game}/lib" preservelastmodified="true">
-			<fileset dir="${build}">
-				<include name="l2openserver.jar"/>
-			</fileset>
-		</copy>
-
-	</target>
-
-	<target name="jar_scripts" depends="compile_scripts" description="Create the scripts jar file">
-		<exec dir="${basedir}" executable="svnversion" outputproperty="build.revision" failifexecutionfails="false">
-			<arg line="-n ../data/scripts" />
-		</exec>
-		<jar destfile="${build}/tsrsvp.jar" level="9">
-			<fileset dir="${build.scripts}"/>
-			<manifest>
-				<attribute name="Build-By" value="${user.name}" />
-				<attribute name="Build-Date" value="${build.tstamp}" />
-				<attribute name="Implementation-Build" value="${build.revision}" />
-			</manifest>
-		</jar>
-
-		<copy todir="${build.dist.game}/lib" preservelastmodified="true">
+        </jar>
+        <delete dir="${build.classes}"/>
+					<copy todir="${lib}" preservelastmodified="true">
 			<fileset dir="${build}">
 				<include name="tsrsvp.jar"/>
 			</fileset>
 		</copy>
-	</target>
-
-	<target name="compile.gcj" depends="jar" description="Build machine executable binary">
-
-		<exec dir="." executable="gcj" failifexecutionfails="false" os="linux:Linux:freebsd:FreeBSD" >
-			<arg line="-O3 ${build.dist}/l2openserver.jar -o ${build.dist}/l2openserver --main=l2open.Server jbforth.jar"/>
-		</exec>
-	</target>
-
-	<target name="dist_common" depends="jar,jar_scripts">
-		<copy todir="${build.dist.login}/lib" preservelastmodified="true">
-			<fileset dir="${src}/../lib">
-				<include name="tools-login.jar"/>
-				<include name="jsr167_6.jar"/>
-				<include name="jsr167_8.jar"/>
-			</fileset>
-		</copy>
-
-		<copy todir="${build.dist.login}" preservelastmodified="true">
-			<fileset dir="${src}">
-				<include name="startAccountManager.*"/>
-				<include name="startSQLAccountManager.*"/>
-				<include name="LoginServer_loop.sh"/>
-				<include name="StartLoginServer.*"/>
-				<include name="RegisterGameServer.*"/>
-				<include name="*.so"/>
-				<include name="*.dll"/>
-			</fileset>
-		</copy>
-
-		<copy todir="${build.dist.game}/lib" preservelastmodified="true">
-			<fileset dir="${src}/../lib">
-				<!--<include name="tools-game.jar"/>-->
-				<include name="tools.jar"/>
-				<include name="compiler-ecj-1.0.jar"/>
-				<include name="jsr167_8.jar"/>
-				<include name="trove-3.0.3.jar"/>
-				<include name="dom4j-2.0.0-alpha-2.jar"/>
-				<include name="org.napile.primitive.jar"/>
-				<include name="commons-lang3-3.1.jar"/>
-				
-				
-			</fileset>
-		</copy>
-
-		<copy todir="${build.dist.game}" preservelastmodified="true">
-			<fileset dir="${src}">
-				<include name="GameServer_loop.sh"/>
-				<include name="MmoTop.*"/>
-				<include name="MmoVote.*"/>
-				<include name="StartGameServer.*"/>
-				<include name="GeoEditor.*"/>
-				<include name="*.so"/>
-				<include name="*.dll*"/>
-			</fileset>
-		</copy>
-
-		<mkdir dir="${build.dist.game}/backup" />
-		<mkdir dir="${build.dist.login}/backup" />
-
-		<mkdir dir="${build.dist.game}/log" />
-		<mkdir dir="${build.dist.login}/log" />
-
-		<mkdir dir="${build.dist.game}/config" />
-		<copy todir="${build.dist.game}/config" preservelastmodified="true">
-			<fileset dir="${src}/config">
-				<include name="l2open-version.properties"/>
-			</fileset>
-		</copy>
-		<copy todir="${build.dist.game}/config" preservelastmodified="true">
-			<fileset dir="${src}/config">
-				<include name="*.properties"/>
-				<include name="**/*.properties"/>
-				<include name="*.xml"/>
-				<include name="*.cfg"/>
-				<include name="*.txt"/>
-				<include name="fake_players.list" />
-				<exclude name="loginserver.properties" />
-				<exclude name="login_telnet.properties" />
-				<exclude name="l2open-version.properties" />
-			</fileset>
-		</copy>
-
-		<mkdir dir="${build.dist.login}/config" />
-		<copy todir="${build.dist.login}/config" preservelastmodified="true">
-			<fileset dir="${src}/config">
-				<include name="loginserver.properties"/>
-				<include name="login_telnet.properties"/>
-				<include name="log.properties"/>
-				<include name="console.cfg"/>
-			</fileset>
-		</copy>
-
-		<copy todir="${build.dist.login}" preservelastmodified="true">
-			<fileset dir="../data">
-				<include name="servername.xml"/>
-			</fileset>
-		</copy>
-
-		<mkdir dir="${build.dist.game}/data" />
-		<copy todir="${build.dist.game}/data" preservelastmodified="true">
-			<fileset dir="../data">
-				<include name="**/*.*"/>
-				<exclude name="**/*.xml"/>
-				<exclude name="**/*.htm"/>
-				<exclude name="**/*.html"/>
-				<exclude name="scripts/**/*.java"/>
-			</fileset>
-		</copy>
-
-		<fixcrlf 	srcdir="${build.dist.game}"
-					 eol="lf"
-					 eof="remove"
-					 includes="**/*.sh">
-		</fixcrlf>
-
-		<fixcrlf 	srcdir="${build.dist.login}"
-					 eol="lf"
-					 eof="remove"
-					 includes="**/*.sh">
-		</fixcrlf>
-
-		<fixcrlf 	srcdir="${build.dist.game}"
-					 eol="crlf"
-					 eof="remove"
-					 includes="**/*.bat">
-		</fixcrlf>
-
-		<fixcrlf 	srcdir="${build.dist.login}"
-					 eol="crlf"
-					 eof="remove"
-					 includes="**/*.bat">
-		</fixcrlf>
-
-		<mkdir dir="${build.dist}/sql"/>
-		<copy todir="${build.dist}/sql" preservelastmodified="true">
-			<fileset dir="../sql">
-				<include name="**/*.*"/>
-			</fileset>
-		</copy>
-		<mkdir dir="${build.dist.game}/geodata"/>
-		<copy todir="${build.dist.game}/geodata/" preservelastmodified="true">
-			<fileset dir="../geodata">
-				<include name="**/*.*"/>
-			</fileset>
-		</copy>
-		<mkdir dir="${build.dist.game}/webserver"/>
-		<copy todir="${build.dist.game}/webserver" preservelastmodified="true">
-			<fileset dir="../webserver">
-				<include name="**/*.*"/>
-			</fileset>
-		</copy>
-		<mkdir dir="${build.dist.game}/ikony"/>
-		<copy todir="${build.dist.game}/ikony/" preservelastmodified="true">
-			<fileset dir="../ikony">
-				<include name="**/*.*"/>
-			</fileset>
-		</copy>
-		<mkdir dir="${build.dist.game}/img"/>
-		<copy todir="${build.dist.game}/img/" preservelastmodified="true">
-			<fileset dir="../img">
-				<include name="**/*.*"/>
-			</fileset>
-		</copy>
-	</target>
-
-	
-	<target name="dist" depends="dist_common">
-		<copy todir="${build.dist.game}/data" preservelastmodified="true">
-			<fileset dir="../data">
-				<include name="scripts/commands/**/*.java"/>
-				<include name="scripts/events/**/*.java"/>
-				<include name="scripts/items/**/*.java"/>
-				<include name="scripts/services/**/*.java"/>
-				<include name="scripts/Hooks.java"/>
-				<include name="scripts/actions/OnActionShift.java"/>
-				<include name="scripts/npc/model/QueenAntInstance.java"/>
-				<include name="scripts/npc/model/ThomasInstance.java"/>
-				<include name="scripts/ai/Queen_Ant_Nurse.java"/>
-				<include name="scripts/ItemHandlers.java"/>
-				<include name="scripts/communityboard/manager/*.java"/>
-			</fileset>
-		</copy>
-		
-       <!--<zip destfile="${build}/L2open-server.zip" basedir="${build.dist}" update="true"/>-->
-		
-		<!--Compress with 7-Zip:
-		<exec executable="C:/Program Files/7-Zip/7z.exe" failifexecutionfails="true" outputproperty="sevenzip_output">
-			<arg line="a -aoa -mx9 ${build}/l2open-server.7z ${build.dist}/*"/>
-		</exec>
-
-		Compress with WinRAR:
-		<exec executable="C:/Program Files/WinRAR/rar.exe" failifexecutionfails="true" outputproperty="rar_output">
-			<arg line="a -m5 -mt2 -s -ri1 -tl -r -ep1 ${build}/l2open-server.rar ${build.dist}/*"/>
-		</exec>
-		-->
-
-		<!--<zip destfile="${build}/l2open-server.zip"
-			 basedir="${build.dist}" />-->
-	</target>
+    </target>
 
 </project>

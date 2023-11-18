@@ -38,6 +38,7 @@ public class Button implements Build {
     public Button(String value){
         this.value = value;
     }
+
     public Button(){
     }
 

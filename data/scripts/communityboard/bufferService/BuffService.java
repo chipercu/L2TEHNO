@@ -1,142 +1,238 @@
 package communityboard.bufferService;
 
-import l2open.database.DatabaseUtils;
-import l2open.database.L2DatabaseFactory;
-
-import java.sql.ResultSet;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class BuffService {
 
     private final BuffRepository buffRepository;
-    private final Map<String, List<BuffModel>> BUFF_CASH;
+    private final SchemeRepository schemeRepository;
+    private final Map<Long, Map<String, Scheme>> BUFF_CASH;
+
+    private final Map<Long, Scheme> CASH;
+    private List<Scheme> SCHEME_CASH;
+
+    private static final String PREMIUM = "PREMIUM";
+    private static final String ORDINARY = "ORDINARY";
+    private static final long SYSTEM_LISTS = -1;
 
     public BuffService() {
         this.buffRepository = new BuffRepository();
+        this.schemeRepository = new SchemeRepository();
         this.BUFF_CASH = new HashMap<>();
-        updateBuffCash();
+        this.CASH = new HashMap<>();
+        this.SCHEME_CASH = schemeRepository.getAllScheme();
+        initSchemes();
+
+//        updateBuffCash();
+//        initLists();
+
     }
-
-    public List<BuffModel> getBuffsList(String list_type){
-        return BUFF_CASH.get(list_type);
-    }
-
-    public List<BuffModel> createEmptyBuffList(String list_type){
-        List<BuffModel> buffModels = BUFF_CASH.get(list_type);
-        if (buffModels != null){
-            return buffModels;
-        }
-        buffModels = new ArrayList<>();
-        BUFF_CASH.put(list_type, buffModels);
-        return buffModels;
-    }
-
-    private void updateBuffList(String list_type) {
-        BUFF_CASH.remove(list_type);
-        final ArrayList<BuffModel> buffModels = new ArrayList<>(buffRepository.getBuffsList(list_type));
-        BUFF_CASH.put(list_type, buffModels);
-    }
-
-    public void clearBuffList(String list_type){
-        final List<BuffModel> buffModels = BUFF_CASH.get(list_type);
-        if (buffModels == null){
-            return;
-        }
-        if (buffModels.isEmpty()){
-            return;
-        }
-        buffRepository.removeBuffList(list_type);
-        BUFF_CASH.get(list_type).clear();
-    }
-
-    public Optional<BuffModel> getBuff(int buff_id, int buff_level, String list_type) {
-
-        final List<BuffModel> buffModels = BUFF_CASH.get(list_type);
-        if (buffModels == null || buffModels.isEmpty()){
-            return Optional.empty();
-        }
-
-        return buffModels.stream()
-                .filter(buffModel -> buffModel.getBuff_id() == buff_id)
-                .filter(buffModel -> buffModel.getBuff_level() == buff_level)
-                .findFirst();
-    }
-
-    public Optional<BuffModel> createBuff(BuffModel buffModel) {
-        if (buffModel == null){
-            return Optional.empty();
-        }
-        final Optional<BuffModel> buff = buffRepository.createBuff(buffModel);
-        if (buff.isPresent()){
-            final BuffModel newBuffModel = buff.get();
-            final List<BuffModel> buffModels = BUFF_CASH.get(newBuffModel.getList_type());
-            if (buffModels == null){
-                return Optional.empty();
+    private void initSchemes(){
+        for (Scheme scheme: SCHEME_CASH){
+            final List<SchemeBuff> schemeBuffs = schemeRepository.getBuffsIdsBySchemeId(scheme.getId());
+            schemeBuffs.sort(Comparator.comparingInt(SchemeBuff::getIndex));
+            for (SchemeBuff schemeBuff : schemeBuffs){
+                final Optional<Buff> buff = buffRepository.getBuff(schemeBuff.getBuff_id());
+                buff.ifPresent(value -> scheme.getBuffs().add(value));
             }
-            buffModels.add(newBuffModel);
+        }
+    }
+
+    public void addScheme(Scheme scheme){
+        schemeRepository.createScheme(scheme);
+        SCHEME_CASH.add(scheme);
+    }
+    public void removeScheme(Scheme scheme){
+        SCHEME_CASH.remove(scheme);
+        schemeRepository.removeScheme(scheme);
+    }
+
+    public void addBuffInScheme(Scheme scheme, Buff buff){
+        schemeRepository.addBuffInScheme(scheme, buff);
+        scheme.getBuffs().add(buff);
+    }
+
+    public void removeBuffInScheme(Scheme scheme, Buff buff){
+        schemeRepository.removeBuffsInScheme(scheme, buff);
+    }
+
+
+
+    public void initLists() {
+        if (!BUFF_CASH.containsKey(SYSTEM_LISTS)) {
+            final HashMap<String, Scheme> map = new HashMap<>();
+            BUFF_CASH.put(SYSTEM_LISTS, map);
+        }
+        final Map<String, Scheme> systemBuffsMap = BUFF_CASH.get(SYSTEM_LISTS);
+
+        if (!systemBuffsMap.containsKey(ORDINARY)){
+            final Scheme buffListModel = new Scheme(SYSTEM_LISTS, ORDINARY, new ArrayList<>());
+            systemBuffsMap.put(ORDINARY, buffListModel);
+        }
+        if (!systemBuffsMap.containsKey(PREMIUM)){
+            final Scheme buffListModel = new Scheme(SYSTEM_LISTS, PREMIUM, new ArrayList<>());
+            systemBuffsMap.put(PREMIUM, buffListModel);
+        }
+    }
+
+    public Map<Long, Map<String, Scheme>> getBUFF_CASH() {
+        return BUFF_CASH;
+    }
+
+    public Scheme getBuffsList(String list_type, long owner) {
+        final Scheme buffListModel = BUFF_CASH.get(owner).get(list_type);
+        buffListModel.getBuffList().sort(Comparator.comparingInt(Buff::getList_index));
+        return buffListModel;
+    }
+
+    public List<Scheme> getReadyLists() {
+        return BUFF_CASH.get(SYSTEM_LISTS).values().stream()
+                .filter(buffListModel -> !buffListModel.getList_type().equals(ORDINARY))
+                .filter(buffListModel -> !buffListModel.getList_type().equals(PREMIUM))
+                .collect(Collectors.toList());
+    }
+
+    public List<Scheme> getReadyListsByOwner(long owner) {
+        final Map<String, Scheme> buffListModelMap = BUFF_CASH.get(owner);
+        if (buffListModelMap == null){
+            return null;
+        }
+        return new ArrayList<>(BUFF_CASH.get(owner).values());
+    }
+
+    public Scheme changeListIndex(Scheme buffListModel, int oldIndex, int newIndex){
+        final List<Buff> list = buffListModel.getBuffList();
+        Collections.swap(list, oldIndex, newIndex);
+        updateListIndex(list);
+        return buffListModel;
+    }
+
+
+
+    public Scheme getPremiumList() {
+        return BUFF_CASH.get(SYSTEM_LISTS).get(PREMIUM);
+    }
+
+    public Scheme getOrdinaryList() {
+        return BUFF_CASH.get(SYSTEM_LISTS).get(ORDINARY);
+    }
+
+
+    private void updateBuffList(String list_type, long owner) {
+        BUFF_CASH.get(owner).remove(list_type);
+        final Scheme buffList = buffRepository.getBuffList(list_type, owner);
+        Map<String, Scheme> buffListModelMap = new HashMap<>();
+        buffListModelMap.put(list_type, buffList);
+        BUFF_CASH.put(owner, buffListModelMap);
+    }
+
+    public void clearBuffList(String list_type, long owner) {
+        final Scheme buffListModel = BUFF_CASH.get(owner).get(list_type);
+        if (buffListModel == null) {
+            return;
+        }
+        if (buffListModel.getBuffList().isEmpty()) {
+            return;
+        }
+        buffRepository.removeBuffList(list_type, owner);
+        BUFF_CASH.get(owner).get(list_type).getBuffList().clear();
+    }
+
+    private boolean checkIfExistInList(Buff buffModel, Scheme buffListModel){
+        return buffListModel.getBuffList().stream()
+                .filter(buff -> buff.getSkill_id() == buffModel.getSkill_id())
+                .filter(buff -> buff.getSkill_level() == buffModel.getSkill_level())
+                .anyMatch(buff -> buff.getOwner() == buffModel.getOwner());
+    }
+
+
+    public Optional<Buff> createBuff(Buff buffModel, long owner) {
+        if (buffModel == null) {
+            return Optional.empty();
+        }
+
+        BUFF_CASH.computeIfAbsent(owner, k -> new HashMap<>());
+
+        BUFF_CASH.get(owner).computeIfAbsent(buffModel.getType(), k -> new Scheme(owner, buffModel.getType(), new ArrayList<>()));
+
+        final Scheme buffListModel = BUFF_CASH.get(owner).get(buffModel.getType());
+        final Optional<Buff> buff = buffRepository.createBuff(buffModel);
+        if (buff.isPresent()) {
+            final Buff newBuffModel = buff.get();
+            buffListModel.getBuffList().add(newBuffModel);
         }
         return buff;
     }
 
-    public Optional<BuffModel> updateBuff(int buff_id, int buff_level, String list_type, BuffModel buffModel) {
-
-        if (buffModel == null){
+    public Optional<Buff> updateBuff(Buff buffModel, Buff newBuffModel, long owner) {
+        if (buffModel == null) {
             return Optional.empty();
         }
-
-        final List<BuffModel> buffModels = BUFF_CASH.get(list_type);
-        if (buffModels == null || buffModels.isEmpty()){
+        final Scheme buffListModel = BUFF_CASH.get(owner).get(buffModel.getType());
+        if (buffListModel == null || buffListModel.getBuffList().isEmpty()) {
             return Optional.empty();
         }
-
-        final Optional<BuffModel> first = buffModels.stream()
-                .filter(buff -> buff.getBuff_id() == buff_id)
-                .filter(buff -> buff.getBuff_level() == buff_level)
-                .findFirst();
-        if (!first.isPresent()){
-            return Optional.empty();
-        }
-
-        final Optional<BuffModel> updateBuff = buffRepository.updateBuff(buff_id, buff_level, list_type, buffModel);
-        if (updateBuff.isPresent()){
-            int index = buffModels.indexOf(first.get());
-            buffModels.set(index ,updateBuff.get());
-        }
-        return updateBuff;
+        buffRepository.updateBuff(buffModel, newBuffModel);
+        return Optional.of(buffModel);
     }
 
-    public boolean removeBuff(int buff_id, int buff_level, String list_type) {
-        boolean result;
-        final List<BuffModel> buffModels = BUFF_CASH.get(list_type);
-        if (buffModels == null || buffModels.isEmpty()){
-            return false;
+    public void removeBuff(Buff buffModel) {
+        final Scheme buffListModel = BUFF_CASH.get(buffModel.getOwner()).get(buffModel.getType());
+        if (buffListModel == null || buffListModel.getBuffList().isEmpty()) {
+            return;
         }
-         result = buffRepository.removeBuff(buff_id, buff_level, list_type);
-        if (result){
-            final Optional<BuffModel> first = buffModels.stream()
-                    .filter(buffModel -> buffModel.getBuff_id() == buff_id)
-                    .filter(buffModel -> buffModel.getBuff_level() == buff_level)
-                    .findFirst();
-            first.ifPresent(buffModels::remove);
-        }
-        return result;
+        buffRepository.removeBuff(buffModel);
+
+        final List<Buff> buffModelList = buffListModel.getBuffList();
+        buffModelList.remove(buffModel);
+        updateListIndex(buffModelList);
     }
+
+    private void updateListIndex(List<Buff> buffModelList){
+        for (int i = 0; i < buffModelList.size(); i++) {
+            final Buff model = buffModelList.get(i);
+            final Buff clone = model.clone();
+            model.setList_index(i);
+            buffRepository.updateBuff(clone, model);
+        }
+    }
+
+
+
 
     private void updateBuffCash() {
         BUFF_CASH.clear();
-        buffRepository.getAllBuffs().forEach(buffModel -> {
-            final String list_type = buffModel.getList_type();
-            if (BUFF_CASH.get(list_type) == null){
-                final ArrayList<BuffModel> buffModels = new ArrayList<>();
-                buffModels.add(buffModel);
-                BUFF_CASH.put(list_type, buffModels);
-            }else {
-                BUFF_CASH.get(list_type).add(buffModel);
+        SCHEME_CASH.clear();
+
+        SCHEME_CASH = schemeRepository.getAllScheme();
+
+
+
+        final List<Buff> allBuffs = buffRepository.getAllBuffs();
+
+        for (Buff buffModel : allBuffs){
+            final String list_type = buffModel.getType();
+            final long owner = buffModel.getOwner();
+
+            if (BUFF_CASH.get(owner) == null) {
+                final Map<String, Scheme> buffListModelMap = new HashMap<>();
+                final Scheme buffListModel = new Scheme(owner, list_type, new ArrayList<>());
+                buffListModel.getBuffList().add(buffModel);
+                buffListModelMap.put(buffModel.getType(), buffListModel);
+                BUFF_CASH.put(owner, buffListModelMap);
+            } else {
+                if (BUFF_CASH.get(owner).get(list_type) == null){
+                    BUFF_CASH.get(owner).put(list_type, new Scheme(owner, list_type, new ArrayList<>()));
+                }
+                BUFF_CASH.get(owner).get(buffModel.getType()).getBuffList().add(buffModel);
             }
-        });
+        }
+        BUFF_CASH.values()
+                .forEach(e -> e.values()
+                        .forEach(s -> s.getBuffList()
+                                .sort(Comparator.comparingInt(Buff::getList_index))));
     }
-
-
 
 
 }
