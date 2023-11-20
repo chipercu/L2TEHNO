@@ -96,7 +96,7 @@ public class SchemeRepository {
         return Optional.empty();
     }
 
-    public List<SchemeBuff> getBuffsIdsBySchemeId(long scheme_id) {
+    public List<SchemeBuff> getSchemeBuffs(long scheme_id) {
         ResultSet rs = null;
         List<SchemeBuff> buffs_ids = new ArrayList<>();
         try {
@@ -166,8 +166,31 @@ public class SchemeRepository {
         }
     }
 
-    public void removeBuffsInScheme(Scheme scheme, Buff buff) {
+    public void clearSchemeBuffs(long schemeId){
+        try {
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement("DELETE FROM " + SCHEME_BUFF_TABLE + " WHERE scheme_id=?");
+            statement.setLong(1, schemeId);
+            statement.execute();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            DatabaseUtils.closeConnection(con);
+        }
+    }
 
+    public void removeBuffInScheme(long schemeId, int buffId) {
+        try {
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement("DELETE FROM " + SCHEME_BUFF_TABLE + " WHERE scheme_id=? AND buff_id=?");
+            statement.setLong(1, schemeId);
+            statement.setInt(2, buffId);
+            statement.execute();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            DatabaseUtils.closeConnection(con);
+        }
 
     }
 }

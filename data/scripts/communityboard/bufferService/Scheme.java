@@ -1,17 +1,14 @@
 package communityboard.bufferService;
 
-import java.awt.geom.Line2D;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Scheme {
 
     private long id;
     private long owner;
     private String name;
-    private List<Buff> buffs;
+    private List<SchemeBuff> buffs;
 
     public Scheme(long id, long owner, String name) {
         this.id = id;
@@ -44,11 +41,11 @@ public class Scheme {
         this.name = name;
     }
 
-    public List<Buff> getBuffs() {
+    public List<SchemeBuff> getBuffs() {
         return buffs;
     }
 
-    public void setBuffs(List<Buff> buffs) {
+    public void setBuffs(List<SchemeBuff> buffs) {
         this.buffs = buffs;
     }
 }

@@ -46,7 +46,7 @@ public class FiltredPreparedStatement implements FiltredStatementInterface
 		return myStatement.executeQuery(sql);
 	}
 
-	public void setInt(int index, int val) throws SQLException
+	public void setInt(int index, long val) throws SQLException
 	{
 		myStatement.setInt(index, val);
 	}

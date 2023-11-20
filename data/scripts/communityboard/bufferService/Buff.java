@@ -14,9 +14,9 @@ import l2open.util.GArray;
 
 public class Buff {
 
-    private int id;
-    private int skill_id;
-    private int skill_level;
+    private long id;
+    private long skill_id;
+    private long skill_level;
     private int display_level;
     private String name;
     private String enchant_name;
@@ -29,7 +29,7 @@ public class Buff {
     private String type;
     private final GArray<L2EnchantSkillLearn> skillEnchants;
 
-    public Buff(int id, int display_level, String name, long duration, int price, int price_item, int minLevel, int maxLevel, String icon, String type) {
+    public Buff(long id, int display_level, String name, long duration, int price, int price_item, int minLevel, int maxLevel, String icon, String type) {
         this.id = id;
         this.skill_id = id / 1000;
         this.skill_level = id % 1000;
@@ -78,19 +78,19 @@ public class Buff {
                 this.type);
     }
 
-    public int getSkill_id() {
+    public long getSkill_id() {
         return skill_id;
     }
 
-    public void setSkill_id(int skill_id) {
+    public void setSkill_id(long skill_id) {
         this.skill_id = skill_id;
     }
 
-    public int getSkill_level() {
+    public long getSkill_level() {
         return skill_level;
     }
 
-    public void setSkill_level(int skill_level) {
+    public void setSkill_level(long skill_level) {
         this.skill_level = skill_level;
     }
 
@@ -142,11 +142,11 @@ public class Buff {
         this.price_item = price_item;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -211,7 +211,7 @@ public class Buff {
         final int index = Math.max((display_level / 100) - 1 , 0);
         final L2EnchantSkillLearn skillLearn = skillEnchants.get(index);
         final int maxSkillLevel = skillLearn.getBaseLevel() + (skillLearn.getMaxLevel() * size);
-        int newLevel = skill_level + skillLearn.getMaxLevel();
+        long newLevel = skill_level + skillLearn.getMaxLevel();
 
         if (newLevel > maxSkillLevel){
             newLevel = skillLearn.getBaseLevel();

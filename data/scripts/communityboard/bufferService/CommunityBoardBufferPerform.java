@@ -111,7 +111,7 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
         } else if ("bbs_cast_premium_buff".equals(cmd)) {
             castBuff(player, args);
         } else if ("bbs_cast_ready_set".equals(cmd)) {
-            castReadySet(player, args);
+            castSystemSet(player, args);
         } else if ("bbs_cast_save_set".equals(cmd)) {
             castSaveSet(player, args);
         } else if ("bbs_save_set".equals(cmd)) {
@@ -119,7 +119,7 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
         } else if ("bbs_show_all_buffs".equals(cmd)) {
             showAllBuffs(player, args);
         } else if ("bbs_clear_buffs".equals(cmd)) {
-            clearBuffList(player, args);
+            clearScheme(player, args);
         } else if ("bbs_change_enchant_type".equals(cmd)) {
             changeEnchantType(args, player);
         } else if ("bbs_show_change_buff_params".equals(cmd)) {
@@ -277,24 +277,22 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
 
     }
 
-    private void castReadySet(L2Player player, String[] args) {
-        String list_type = args[0];
+    private void castSystemSet(L2Player player, String[] args) {
+        String schemeName = args[0];
         String target = args[1];
 
-        long owner = getOwner(list_type, player);
+        final Optional<Scheme> first = buffService.getSystemSchemes().stream().filter(scheme -> scheme.getName().equals(schemeName)).findFirst();
 
-        final Scheme buffsList = buffService.getBuffsList(list_type, owner);
-
-        if (buffsList.getBuffList().isEmpty()) {
-            showMainPage(player);
-            return;
-        }
-
-        for (Buff buff : buffsList.getBuffList()) {
-            if (player.getBonus().RATE_XP <= 1) {
+        if (first.isPresent()){
+            final Scheme scheme = first.get();
+            final List<SchemeBuff> buffs = scheme.getBuffs();
+            for (SchemeBuff schemeBuff : buffs) {
+                Buff buff = buffService.getBuff(schemeBuff.getBuff_id());
+                if (player.getBonus().RATE_XP <= 1) {
+                    applyBuff(player, buff.getSkill_id(), buff.getSkill_level(), target);
+                }
                 applyBuff(player, buff.getSkill_id(), buff.getSkill_level(), target);
             }
-            applyBuff(player, buff.getSkill_id(), buff.getSkill_level(), target);
         }
         showMainPage(player);
     }
@@ -313,14 +311,14 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
     }
 
     private String getSaveSets(L2Player player) {
-        final List<Scheme> readyListsByOwner = buffService.getReadyListsByOwner(player.getObjectId());
-        if (readyListsByOwner == null){
+        final List<Scheme> scheme = buffService.getSchemeByOwner(player.getObjectId());
+        if (scheme == null){
             return "";
         }
 
-        final Table table = new Table(readyListsByOwner.size(), 3);
-        for (int i = 0; i < readyListsByOwner.size(); i++) {
-            final String schName = readyListsByOwner.get(i).getList_type();
+        final Table table = new Table(scheme.size(), 3);
+        for (int i = 0; i < scheme.size(); i++) {
+            final String schName = scheme.get(i).getName();
             table.row(i).col(0).insert(new Button(schName, action("bypass -h bbs_cast_save_set " + schName + " $Who"), 100, 25).build());
             table.row(i).col(1).insert(new Button("-", action("bypass -h bbs_remove_set " + schName ), 25, 25).build());
             table.row(i).col(2).insert(new Button("@", action("bypass -h bbs_show_create_ready_set " + schName), 25, 25).build());
@@ -330,7 +328,7 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
 
     private String getReadySets(L2Player player) {
 
-        final List<Scheme> readyLists = buffService.getReadyLists();
+        final List<Scheme> readyLists = buffService.getSystemLists();
 
         final Table table = new Table(readyLists.size() + 1, 2);
         int index = 0;
@@ -347,15 +345,10 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
         return table.build();
     }
 
-    private void clearBuffList(L2Player player, String[] args) {
-        String list_type = args[0];
-        long owner = getOwner(list_type, player);
-
-        if (!player.isGM()) {
-            showBuffs(player, args);
-            return;
-        }
-        buffService.clearBuffList(list_type, owner);
+    private void clearScheme(L2Player player, String[] args) {
+        String schemeName = args[0];
+        long owner = Long.parseLong(args[1]);
+        buffService.clearScheme(owner, schemeName);
         showBuffs(player, args);
     }
 
@@ -483,7 +476,7 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
             return;
         }
         for (Buff buffModel: buffsList.getBuffList()) {
-            int buff_level = buffModel.getSkill_level();
+            long buff_level = buffModel.getSkill_level();
             if (player.getBonus().RATE_XP <= 1) {
                 buff_level = buffModel.getSkill_level();
             }
@@ -641,7 +634,7 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
         applyBuff(player, buffModel.getSkill_id(), buffModel.getSkill_level(), target);
     }
 
-    private static void applyBuff(L2Player player, int id, int level, String target) {
+    private static void applyBuff(L2Player player, long id, long level, String target) {
         L2Skill skill = SkillTable.getInstance().getInfo(id, level);
         L2Playable playable = null;
         if ("Player".equals(target)) {
