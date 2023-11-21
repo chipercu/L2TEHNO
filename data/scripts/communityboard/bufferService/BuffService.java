@@ -8,9 +8,6 @@ public class BuffService {
     private final BuffRepository buffRepository;
     private final SchemeRepository schemeRepository;
     private final BuffCash buffCash;
-
-    private static final String PREMIUM = "PREMIUM";
-    private static final String ORDINARY = "ORDINARY";
     private static final long SYSTEM_LISTS = -1;
 
     public BuffService() {
@@ -39,6 +36,12 @@ public class BuffService {
         return buffCash.getBuffs();
     }
 
+    public List<Buff> getBuffs(String type){
+        return buffCash.getBuffs().stream()
+                .filter(buff -> buff.getType().equals(type))
+                .collect(Collectors.toList());
+    }
+
     public Buff getBuff(long id){
         return buffCash.getBuff(id);
     }
@@ -57,17 +60,6 @@ public class BuffService {
 //        updateListIndex(list);
 //        return buffListModel;
 //    }
-    public List<Buff> getPremiumList() {
-        return buffCash.getBuffs().stream()
-                .filter(buff -> buff.getType().equals(PREMIUM))
-                .collect(Collectors.toList());
-    }
-
-    public List<Buff> getOrdinaryList() {
-        return buffCash.getBuffs().stream()
-                .filter(buff -> buff.getType().equals(ORDINARY))
-                .collect(Collectors.toList());
-    }
 
     public void clearScheme(long owner, String schemeName) {
         final Scheme scheme = buffCash.getScheme(owner, schemeName);
@@ -109,4 +101,20 @@ public class BuffService {
             scheme.setBuffs(buffs);
         }
     }
+
+    public Optional<Scheme> getScheme(Long owner, String schemeName) {
+        return schemeRepository.byOwnerName(owner, schemeName);
+    }
+
+    public Scheme createScheme(Scheme scheme){
+        schemeRepository.createScheme(scheme);
+        final Optional<Scheme> optionalScheme = schemeRepository.byOwnerName(scheme.getOwner(), scheme.getName());
+        if (optionalScheme.isPresent()){
+            buffCash.addScheme(scheme.getOwner(), scheme);
+            return optionalScheme.get();
+        }
+        return null;
+
+    }
+
 }

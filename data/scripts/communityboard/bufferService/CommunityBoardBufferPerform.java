@@ -99,23 +99,21 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
         } else if ("bbs_add_buff_ready_set".equals(cmd)) {
             addBuffToList(args, player);
         } else if ("bbs_remove_buff_from_set".equals(cmd)) {
-            removeBuffFromSet(args, player);
+            removeBuffFromScheme(args, player);
         } else if ("bbs_remove_buff_premium_set".equals(cmd)) {
-            removeBuffFromSet(args, player);
+            removeBuffFromScheme(args, player);
         } else if ("bbs_remove_buff_ready_set".equals(cmd)) {
-            removeBuffFromSet(args, player);
+            removeBuffFromScheme(args, player);
         } else if ("bbs_remove_set".equals(cmd)) {
             removeSet(player, args[0]);
         } else if ("bbs_cast_buff".equals(cmd)) {
             castBuff(player, args);
         } else if ("bbs_cast_premium_buff".equals(cmd)) {
             castBuff(player, args);
-        } else if ("bbs_cast_ready_set".equals(cmd)) {
-            castSystemSet(player, args);
-        } else if ("bbs_cast_save_set".equals(cmd)) {
-            castSaveSet(player, args);
+        } else if ("bbs_cast_scheme".equals(cmd)) {
+            castScheme(player, args);
         } else if ("bbs_save_set".equals(cmd)) {
-            saveSet(player, args);
+            saveScheme(player, args);
         } else if ("bbs_show_all_buffs".equals(cmd)) {
             showAllBuffs(player, args);
         } else if ("bbs_clear_buffs".equals(cmd)) {
@@ -136,17 +134,17 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
         if (!player.isGM()) {
             return;
         }
-        int index = Integer.parseInt(args[0]);
-        String list_type = args[1];
+        int buffId = Integer.parseInt(args[0]);
+        String type = args[1];
 
         String html = Files.read(ConfigValue.CommunityBoardHtmlRoot + "buffer/scheme.htm", player);
 
         final Table table = new Table(4, 4).setParams(width(400), border(1));
 
-        final Buff buffModel = buffService.getBuffsList(list_type, SYSTEM_LISTS).getBuffList().get(index);
+        final Buff buff = buffService.getBuff(buffId);
         table.row(0).col(0);
-        table.row(0).col(1).insert(new Img(buffModel.getIcon()).build());
-        table.row(0).col(2).insert(buffModel.getName());
+        table.row(0).col(1).insert(new Img(buff.getIcon()).build());
+        table.row(0).col(2).insert(buff.getName());
         table.row(0).col(3).insert(backButtonMain());
         ShowBoard.separateAndSend(addCustomReplace(html.replace("%content%", table.build())), player);
     }
@@ -171,9 +169,7 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
         } else if ("right".equals(direct)) {
             buffService.changeListIndex(buffsList, currentIndex, currentIndex + 1);
         }
-
         showCreateReadySet(player, args);
-
     }
 
     private Table controlButtons(String list_type, int currentIndex, boolean left, boolean delete, boolean right){
@@ -277,15 +273,15 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
 
     }
 
-    private void castSystemSet(L2Player player, String[] args) {
+    private void castScheme(L2Player player, String[] args) {
         String schemeName = args[0];
-        String target = args[1];
+        Long owner = Long.parseLong(args[1]);
+        String target = args[2];
 
-        final Optional<Scheme> first = buffService.getSystemSchemes().stream().filter(scheme -> scheme.getName().equals(schemeName)).findFirst();
+        final Optional<Scheme> scheme = buffService.getScheme(owner, schemeName);
 
-        if (first.isPresent()){
-            final Scheme scheme = first.get();
-            final List<SchemeBuff> buffs = scheme.getBuffs();
+        if (scheme.isPresent()){
+            final List<SchemeBuff> buffs = scheme.get().getBuffs();
             for (SchemeBuff schemeBuff : buffs) {
                 Buff buff = buffService.getBuff(schemeBuff.getBuff_id());
                 if (player.getBonus().RATE_XP <= 1) {
@@ -304,7 +300,7 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
             final int bufferTime = ConfigValue.BufferTime;
             html = html.replace("%price%", String.valueOf(bufferPriceOne));
             html = html.replace("%time%", String.valueOf(bufferTime));
-            html = html.replace("%scheme%", getReadySets(player));
+            html = html.replace("%scheme%", getSystemSchemes(player));
             html = html.replace("%buffgrps%", getSaveSets(player));
         }
         ShowBoard.separateAndSend(addCustomReplace(html), player);
@@ -326,21 +322,20 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
         return table.build();
     }
 
-    private String getReadySets(L2Player player) {
+    private String getSystemSchemes(L2Player player) {
 
-        final List<Scheme> readyLists = buffService.getSystemLists();
+        final List<Scheme> systemSchemes = buffService.getSystemSchemes();
 
-        final Table table = new Table(readyLists.size() + 1, 2);
+        final Table table = new Table(systemSchemes.size() + 1, 2);
         int index = 0;
-        for (Scheme readyList : readyLists) {
-            String list_type = readyList.getList_type();
-            table.row(index).col(0).insert(new Button("Набор для воина", action("bypass -h bbs_cast_ready_set " + list_type + " $Who"), 100, 25).build());
+        for (Scheme scheme : systemSchemes) {
+            table.row(index).col(0).insert(new Button("Набор для воина", action("bypass -h bbs_cast_scheme " + scheme.getName() + " " + scheme.getOwner() + " $Who"), 100, 25).build());
             if (player.isGM()) {
-                table.row(index).col(1).insert(new Button("@", action("bypass -h bbs_show_ready_set " + list_type), 25, 25).build());
+                table.row(index).col(1).insert(new Button("@", action("bypass -h bbs_show_ready_set " + scheme.getId()), 25, 25).build());
             }
         }
         if (player.isGM()) {
-            table.row(readyLists.size()).col(0).insert(new Button("добавить", action("bypass -h bbs_show_create_ready_set $GrpNameAdd"), 100, 25).build());
+            table.row(systemSchemes.size()).col(0).insert(new Button("добавить", action("bypass -h bbs_show_create_ready_set $GrpNameAdd"), 100, 25).build());
         }
         return table.build();
     }
@@ -446,7 +441,7 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
     }
 
 
-    private void removeBuffFromSet(String[] args, L2Player player) {
+    private void removeBuffFromScheme(String[] args, L2Player player) {
         if (args == null) {
             showMainPage(player);
             return;
@@ -466,67 +461,26 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
         showBuffs(player, new String[]{list_type});
     }
 
-    private void castSaveSet(L2Player player, String[] args) {
-        String setName = args[0];
-        String target = args[1];
-
-        final Scheme buffsList = buffService.getBuffsList(setName, player.getObjectId());
-
-        if (buffsList == null) {
+    private void saveScheme(L2Player player, String[] args) {
+        String schemeName = args[0];
+        if (schemeName == null || schemeName.isEmpty()) {
             return;
         }
-        for (Buff buffModel: buffsList.getBuffList()) {
-            long buff_level = buffModel.getSkill_level();
-            if (player.getBonus().RATE_XP <= 1) {
-                buff_level = buffModel.getSkill_level();
-            }
-            applyBuff(player, buffModel.getSkill_id(), buff_level, target);
-        }
-    }
-
-    private void saveSet(L2Player player, String[] args) {
-        String setName = args[0];
-        if (setName == null || setName.isEmpty()) {
-            return;
-        }
-        if (!Util.isMatchingRegexp(setName, "([0-9A-Za-z]{1,16})|([0-9\u0410-\u044f]{1,16})")) {
+        if (!Util.isMatchingRegexp(schemeName, "([0-9A-Za-z]{1,16})|([0-9\u0410-\u044f]{1,16})")) {
             player.sendMessage("Символы запрещены.");
             return;
         }
         L2Effect[] effects = player.getEffectList().getAllFirstEffects();
         Arrays.sort(effects, EffectsComparator.getInstance());
 
-
-        try {
-            final Scheme buffsList = buffService.getBuffsList(setName, player.getObjectId());
+        final Optional<Scheme> schemeOptional = buffService.getScheme((long) player.getObjectId(), schemeName);
+        if (schemeOptional.isPresent()){
             player.sendMessage("Это название уже занято.");
             return;
-        }catch (Exception e){
-            buffService.getBUFF_CASH().put((long) player.getObjectId(), new HashMap<>());
+        }else {
+            final Scheme scheme = new Scheme(player.getObjectId(), schemeName);
+            buffService.createScheme(scheme);
         }
-
-        final ArrayList<Buff> buffModels = new ArrayList<>(buffService.getOrdinaryList().getBuffList());
-        buffModels.addAll(buffService.getPremiumList().getBuffList());
-
-        final ArrayList<Buff> list = new ArrayList<>();
-
-        for (L2Effect effect : effects) {
-            final L2Skill skill = effect.getSkill();
-
-
-
-            final Optional<Buff> first = buffModels.stream()
-                    .filter(buffModel -> buffModel.getSkill_id() == skill.getId())
-                    .filter(buffModel -> buffModel.getSkill_level() == skill.getLevel())
-                    .findFirst();
-            first.ifPresent(list::add);
-        }
-
-
-        for (Buff buffModel: list){
-            buffService.createBuff(buffModel, player.getObjectId());
-        }
-
         showMainPage(player);
 
     }
@@ -557,26 +511,26 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
     }
 
     private void showBuffs(L2Player player, String[] args) {
-        String list_type = args[0];
-        long owner = getOwner(list_type, player);
+        String type = args[0];
 
         final Table header = new Table(1, 5);
         header.row(0).col(0).setParams(width(250));
-        header.row(0).col(1).setParams(width(100)).insert(player.isGM() ? new Button("Добавить", action("bypass -h bbs_show_all_buffs " + list_type), 100, 25).build() : "");
-        header.row(0).col(2).setParams(width(100)).insert(player.isGM() ? new Button("Удалить все!", action("bypass -h bbs_clear_buffs " + list_type), 100, 25).build() : "");
+        header.row(0).col(1).setParams(width(100)).insert(player.isGM() ? new Button("Добавить", action("bypass -h bbs_show_all_buffs " + type), 100, 25).build() : "");
+        header.row(0).col(2).setParams(width(100)).insert(player.isGM() ? new Button("Удалить все!", action("bypass -h bbs_clear_buffs " + type), 100, 25).build() : "");
         header.row(0).col(3).setParams(width(150)).insert("<combobox width=60 height=10 var=\"Who\" list=\"Player;Pet\">");
         header.row(0).col(4).setParams(width(100), align(Position.RIGHT)).insert(new Button("Назад!", action("bypass -h _bbsbuffer"), 100, 25, "L2UI_CT1.OlympiadWnd_DF_Back_Down", "L2UI_CT1.OlympiadWnd_DF_Back").build());
 
-        final List<Buff> buffsList = buffService.getBuffsList(list_type, owner).getBuffList();
+        final List<Buff> buffs = buffService.getBuffs(type);
         int cols = 6;
-        int rows = (int) Math.ceil((double) buffsList.size() / cols);
+        int rows = (int) Math.ceil((double) buffs.size() / cols);
         final Table table = new Table(rows, cols);
 
         int index = 0;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                if (index < buffsList.size()) {
-                    table.row(i).col(j).insert(buttonBuff(index, list_type, owner));
+                if (index < buffs.size()) {
+                    final Buff buff = buffs.get(index);
+                    table.row(i).col(j).insert(buttonBuff(buff.getId()));
                     index++;
                 } else {
                     break;  // Если значения в списке закончились, прерываем цикл
@@ -588,7 +542,7 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
         main.row(1).col(0).insert(table.build());
         main.row(2).col(0).insert("");
         String html = Files.read(ConfigValue.CommunityBoardHtmlRoot + "buffer/scheme.htm", player);
-        html = html.replace("%title%", list_type).replace("%content%", main.build());
+        html = html.replace("%title%", type).replace("%content%", main.build());
         ShowBoard.separateAndSend(addCustomReplace(html), player);
     }
 
@@ -597,22 +551,11 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
     }
 
     private void castBuff(L2Player player, String[] args) {
-        int index = Integer.parseInt(args[0]);
-        final String list_type = args[1];
-        String target = args[2];
-        long owner = getOwner(list_type, player);
+        int buffId = Integer.parseInt(args[0]);
+        String target = args[1];
 
-        final List<Buff> buffsList = buffService.getBuffsList(list_type, owner).getBuffList();
-
-        if (buffsList.isEmpty()) {
-            return;
-        }
-        if (index > buffsList.size()) {
-            return;
-        }
-
-        final Buff buffModel = buffsList.get(index);
-        if (buffModel == null) {
+        final Buff buff = buffService.getBuff(buffId);
+        if (buff == null) {
             return;
         }
 
@@ -631,7 +574,7 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
         if (playable == null) {
             return;
         }
-        applyBuff(player, buffModel.getSkill_id(), buffModel.getSkill_level(), target);
+        applyBuff(player, buff.getSkill_id(), buff.getSkill_level(), target);
     }
 
     private static void applyBuff(L2Player player, long id, long level, String target) {
@@ -676,27 +619,27 @@ public class CommunityBoardBufferPerform extends BaseBBSManager implements IComm
     }
 
 
-    private String buttonBuff(int index, String list_type, long owner) {
+    private String buttonBuff(long buffId) {
         final Table table = new Table(4, 1);
-        final Buff buffModel = buffService.getBuffsList(list_type, owner).getBuffList().get(index);
-        if (buffModel == null) {
+        final Buff buff = buffService.getBuff(buffId);
+        if (buff == null) {
             return null;
         }
-        table.row(0).col(0).setParams(align(Position.CENTER)).insert(new Img(buffModel.getIcon()).build());
-        table.row(1).col(0).setParams(align(Position.CENTER)).insert("<br><font color=F2C202>" + buffModel.getEnchant_name() + "</font>");
+        table.row(0).col(0).setParams(align(Position.CENTER)).insert(new Img(buff.getIcon()).build());
+        table.row(1).col(0).setParams(align(Position.CENTER)).insert("<br><font color=F2C202>" + buff.getEnchant_name() + "</font>");
         table.row(2).col(0).setParams(align(Position.CENTER))
-                .insert(new Button(formatSkillName(buffModel.getName()), action("bypass -h bbs_cast_buff " + index + " " + list_type + " $Who"), 100, 25).build());
+                .insert(new Button(formatSkillName(buff.getName()), action("bypass -h bbs_cast_buff " + buff.getId() + " $Who"), 100, 25).build());
 
         Table actionTable;
-        if (buffModel.getSkillEnchants().isEmpty()) {
+        if (buff.getSkillEnchants().isEmpty()) {
             actionTable = new Table(1, 2).setParams(cellpadding(0), cellspacing(0));
-            actionTable.row(0).col(0).setParams(height(25)).insert(new Button(action("bypass -h bbs_show_change_buff_params " + index + " " + list_type), 16, 16, "L2UI_CT1.Button_DF_PartyOption2_Down", "L2UI_CT1.Button_DF_PartyOption2").build());
-            actionTable.row(0).col(1).insert(new Button(action("bypass -h bbs_remove_buff_from_set " + index + " " + list_type), 16, 16, "L2UI_CT1.Button_DF_Delete_Down", "L2UI_CT1.Button_DF_Delete").build());
+            actionTable.row(0).col(0).setParams(height(25)).insert(new Button(action("bypass -h bbs_show_change_buff_params " + buff.getId()), 16, 16, "L2UI_CT1.Button_DF_PartyOption2_Down", "L2UI_CT1.Button_DF_PartyOption2").build());
+            actionTable.row(0).col(1).insert(new Button(action("bypass -h bbs_remove_buff_from_set " + buff.getId()), 16, 16, "L2UI_CT1.Button_DF_Delete_Down", "L2UI_CT1.Button_DF_Delete").build());
         } else {
             actionTable = new Table(1, 3).setParams(cellpadding(0), cellspacing(0));
-            actionTable.row(0).col(0).setParams(height(25)).insert(new Button(action("bypass -h bbs_show_change_buff_params " + index + " " + list_type), 16, 16, "L2UI_CT1.Button_DF_PartyOption2_Down", "L2UI_CT1.Button_DF_PartyOption2").build());
-            actionTable.row(0).col(1).insert(new Button(action("bypass -h bbs_remove_buff_from_set " + index + " " + list_type), 16, 16, "L2UI_CT1.Button_DF_Delete_Down", "L2UI_CT1.Button_DF_Delete").build());
-            actionTable.row(0).col(2).insert(new Button(action("bypass -h bbs_change_enchant_type " + index + " next " + list_type), 16, 16,"L2UI_CT1.Button_DF_Right_Down", "L2UI_CT1.Button_DF_Right").build());
+            actionTable.row(0).col(0).setParams(height(25)).insert(new Button(action("bypass -h bbs_show_change_buff_params " + buff.getId()), 16, 16, "L2UI_CT1.Button_DF_PartyOption2_Down", "L2UI_CT1.Button_DF_PartyOption2").build());
+            actionTable.row(0).col(1).insert(new Button(action("bypass -h bbs_remove_buff_from_set " + buff.getId()), 16, 16, "L2UI_CT1.Button_DF_Delete_Down", "L2UI_CT1.Button_DF_Delete").build());
+            actionTable.row(0).col(2).insert(new Button(action("bypass -h bbs_change_enchant_type " + buff.getId()), 16, 16,"L2UI_CT1.Button_DF_Right_Down", "L2UI_CT1.Button_DF_Right").build());
         }
         table.row(3).col(0).setParams(height(25)).insert(actionTable.build());
         return table.build();

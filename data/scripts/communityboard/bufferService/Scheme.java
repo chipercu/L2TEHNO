@@ -17,6 +17,12 @@ public class Scheme {
         this.buffs = new ArrayList<>();
     }
 
+    public Scheme(long owner, String name) {
+        this.owner = owner;
+        this.name = name;
+        this.buffs = new ArrayList<>();
+    }
+
     public long getId() {
         return id;
     }
