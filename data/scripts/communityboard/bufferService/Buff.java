@@ -47,7 +47,7 @@ public class Buff {
     }
 
     public Buff(L2Skill skill, String type) {
-        this.id = skill.getId() * 1000 + skill.getLevel();
+        this.id = skill.getId() * 1000L + skill.getLevel();
         this.skillEnchants = SkillTreeTable.getFirstEnchantsForSkill(skill.getId());
         this.skill_id = skill.getId();
         this.skill_level = skill.getLevel();
@@ -218,7 +218,7 @@ public class Buff {
         }
         skill_level = newLevel;
 
-        display_level = SkillTable.getInstance().getInfo(skill_id, skill_level).getDisplayLevel();
+        display_level = SkillTable.getInstance().getInfo((int) skill_id, (int) skill_level).getDisplayLevel();
         enchant_name = setEnchantName();
 
     }

@@ -85,7 +85,7 @@ public class BuffRepository {
             con = L2DatabaseFactory.getInstance().getConnection();
             String stmt = "INSERT INTO community_perform_buffs (id,display_level,name,duration,price,price_item,minLevel,maxLevel,icon,type_) VALUES(?,?,?,?,?,?,?,?,?,?)";
             statement = con.prepareStatement(stmt);
-            statement.setInt(1, buffModel.getId());
+            statement.setLong(1, buffModel.getId());
             statement.setInt(2, buffModel.getDisplay_level());
             statement.setString(3, buffModel.getName());
             statement.setLong(4, buffModel.getDuration());
@@ -118,7 +118,7 @@ public class BuffRepository {
             statement.setString(8, newBuffModel.getIcon());
             statement.setString(9, newBuffModel.getType());
 
-            statement.setInt(10, buffModel.getId());
+            statement.setLong(10, buffModel.getId());
             statement.setString(11, newBuffModel.getType());
             statement.executeUpdate();
         } catch (Exception e) {
@@ -132,7 +132,7 @@ public class BuffRepository {
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("DELETE FROM community_perform_buffs WHERE id=? AND type_=?");
-            statement.setInt(1, buffModel.getId());
+            statement.setLong(1, buffModel.getId());
             statement.setString(2, buffModel.getType());
             statement.execute();
         } catch (Exception e) {

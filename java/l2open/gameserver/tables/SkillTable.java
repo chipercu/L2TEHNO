@@ -54,7 +54,7 @@ public class SkillTable
 		_instance = new SkillTable();
 	}
 
-	public L2Skill getInfo(long magicId, long level)
+	public L2Skill getInfo(int magicId, int level)
 	{
 		magicId--;
 		level--;

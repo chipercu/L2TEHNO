@@ -127,7 +127,7 @@ public class SchemeRepository {
             String stmt = "INSERT INTO " + SCHEME_BUFF_TABLE + " (scheme_id,buff_id,index_) VALUES(?,?,?)";
             statement = con.prepareStatement(stmt);
             statement.setLong(1, scheme.getId());
-            statement.setInt(2, buff.getId());
+            statement.setLong(2, buff.getId());
             statement.setInt(3, scheme.getBuffs().size());
             statement.execute();
         } catch (Exception e) {

@@ -66,7 +66,7 @@ public class CommunityBoardBuffer extends BaseBBSManager implements ICommunityHa
     public static final String premium_buffs = "premium_buffs";
 
     private static enum Commands {
-        //_bbsbuffer,
+        _bbsbuffer,
         _bbsplayerbuffer,
         _bbsplayerprbuffer,
         _bbsplayer_pr_buffer,
