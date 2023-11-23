@@ -1,69 +1,1379 @@
-1700645153838	WARNING	1	l2open.config.ConfigSystem	ConfigSystem(383): -> NoSuchFieldException(fake.properties): ﻿######
-1700645154024	INFO	1	com.mchange.v2.log.MLog	MLog clients using java 1.4+ standard logging.
-1700645154276	INFO	1	com.mchange.v2.c3p0.C3P0Registry	Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
-1700645154424	INFO	1	com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource	Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 0, acquireRetryDelay -> 100, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15waz1wcq2vqazw1dy|43bd930a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15waz1wcq2vqazw1dy|43bd930a, idleConnectionTestPeriod -> 60, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost/l2tehno?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 1000, maxStatements -> 100, maxStatementsPerConnection -> 10, minPoolSize -> 1, numHelperThreads -> 5, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
-1700645154741	INFO	1	l2open.loginserver.LoginController	Loading LoginController...
-1700645154744	INFO	1	l2open.loginserver.LoginController	Loaded Whirlpool as default crypt.
-1700645155322	INFO	1	l2open.loginserver.LoginController	Cached 10 KeyPairs for RSA communication
-1700645155469	INFO	1	l2open.loginserver.LoginController	Stored 20 keys for Blowfish communication
-1700645155469	WARNING	1	l2open.loginserver.GameServerTable	servername.xml could not be loaded: file not found
-1700645155469	INFO	1	l2open.loginserver.GameServerTable	Loaded 0 server names
-1700645155469	INFO	1	l2open.loginserver.GameServerTable	Loaded 0 registered Game Servers
-1700645155569	INFO	1	l2open.loginserver.GameServerTable	Cached 10 RSA keys for Game Server communication.
-1700645155689	INFO	1	l2open.loginserver.L2LoginServer	Listening for GameServers on *:9014
-1700645155689	INFO	1	l2open.loginserver.L2LoginServer	LoginServer Telnet server is currently disabled.
-1700645155689	INFO	21	l2open.loginserver.gameservercon.GSConnection	LoginServer: GS listener started.
-1700645155689	INFO	1	l2open.loginserver.L2LoginServer	Login Server ready on port 2106
-1700645155732	INFO	1	l2open.loginserver.L2LoginServer	0 banned IPs defined
-1700645155733	INFO	1	l2open.loginserver.L2LoginServer	Free memory 11 Mb of 28 Mb
-1700646825786	INFO	20	l2open.extensions.network.SelectorThread	max_p_size: 42
-1700646825831	INFO	20	l2open.extensions.network.SelectorThread	max_p_size: 194
-1700646934024	INFO	21	l2open.loginserver.gameservercon.AttGS	Init connection crypt for gameserver 192.168.1.100: ConnectionCryptDummy
-1700646934038	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Trying to register server: 1, 192.168.1.100
-1700646934040	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Updated Gameserver null Hostname's:
-1700646934040	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	InternalHostname: 192.168.1.100
-1700646934040	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	ExternalHostname: 85.95.177.23
-1700646934099	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Server registration successful.
-1700647059535	INFO	31	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
-1700655654846	INFO	21	l2open.loginserver.gameservercon.GSConnection	Login conect close 1-1.
-1700655654847	INFO	21	l2open.loginserver.gameservercon.AttGS	LoginServer: Connection with gameserver 1 [null] lost.
-1700655654847	INFO	21	l2open.loginserver.gameservercon.GSConnection	Removing GameServer
-1700655654847	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Setting GameServer down
-1700655845365	INFO	21	l2open.loginserver.gameservercon.AttGS	Init connection crypt for gameserver 192.168.1.100: ConnectionCryptDummy
-1700655845369	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Trying to register server: 1, 192.168.1.100
-1700655845371	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Updated Gameserver null Hostname's:
-1700655845377	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	InternalHostname: 192.168.1.100
-1700655845378	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	ExternalHostname: 85.95.177.23
-1700655845383	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Server registration successful.
-1700655848580	INFO	31	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
-1700656610069	INFO	31	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
-1700661300602	INFO	21	l2open.loginserver.gameservercon.GSConnection	Login conect close 1-1.
-1700661300602	INFO	21	l2open.loginserver.gameservercon.AttGS	LoginServer: Connection with gameserver 1 [null] lost.
-1700661300603	INFO	21	l2open.loginserver.gameservercon.GSConnection	Removing GameServer
-1700661300603	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Setting GameServer down
-1700661434233	INFO	30	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=0
-1700661434904	INFO	21	l2open.loginserver.gameservercon.AttGS	Init connection crypt for gameserver 192.168.1.100: ConnectionCryptDummy
-1700661434905	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Trying to register server: 1, 192.168.1.100
-1700661434905	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Updated Gameserver null Hostname's:
-1700661434905	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	InternalHostname: 192.168.1.100
-1700661434905	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	ExternalHostname: 85.95.177.23
-1700661434907	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Server registration successful.
-1700661437572	INFO	27	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
-1700662122933	INFO	24	l2open.loginserver.LoginController	IN_USE[chipercu][68464846][true][false][null]
-1700662124901	INFO	26	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
-1700667484317	INFO	21	l2open.loginserver.gameservercon.GSConnection	Login conect close 1-1.
-1700667484317	INFO	21	l2open.loginserver.gameservercon.AttGS	LoginServer: Connection with gameserver 1 [null] lost.
-1700667484318	INFO	21	l2open.loginserver.gameservercon.GSConnection	Removing GameServer
-1700667484319	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Setting GameServer down
-1700667651560	INFO	21	l2open.loginserver.gameservercon.AttGS	Init connection crypt for gameserver 192.168.1.100: ConnectionCryptDummy
-1700667651560	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Trying to register server: 1, 192.168.1.100
-1700667651560	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Updated Gameserver null Hostname's:
-1700667651560	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	InternalHostname: 192.168.1.100
-1700667651560	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	ExternalHostname: 85.95.177.23
-1700667651566	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Server registration successful.
-1700667964079	INFO	26	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
-1700668263434	INFO	26	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
-1700675716362	INFO	21	l2open.loginserver.gameservercon.GSConnection	Login conect close 1-1.
-1700675716363	INFO	21	l2open.loginserver.gameservercon.AttGS	LoginServer: Connection with gameserver 1 [null] lost.
-1700675716363	INFO	21	l2open.loginserver.gameservercon.GSConnection	Removing GameServer
-1700675716363	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Setting GameServer down
+1700774501005	WARNING	1	l2open.config.ConfigSystem	ConfigSystem(383): -> NoSuchFieldException(fake.properties): ﻿######
+1700774501085	INFO	1	l2open.config.ConfigSystem	Abuse: Loaded 18 abuse words.
+1700774501418	INFO	1	l2open.config.ConfigSystem	loading xml GMAccess
+1700774501476	INFO	1	com.mchange.v2.log.MLog	MLog clients using java 1.4+ standard logging.
+1700774501694	INFO	1	com.mchange.v2.c3p0.C3P0Registry	Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+1700774501823	INFO	1	com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource	Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 0, acquireRetryDelay -> 100, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15waz1yhqg0ek7wlag|1442d7b5, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15waz1yhqg0ek7wlag|1442d7b5, idleConnectionTestPeriod -> 60, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost/l2tehno?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 1000, maxStatements -> 100, maxStatementsPerConnection -> 10, minPoolSize -> 1, numHelperThreads -> 5, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+1700774502146	INFO	1	l2open.gameserver.idfactory.IdFactory	Clear characters online status and accesslevel.
+1700774502212	INFO	1	l2open.gameserver.idfactory.IdFactory	Total cleaned: 0, updated: 0 elements in database.
+1700774502239	INFO	26	l2open.gameserver.idfactory.IdFactory	IdFactory: Table clan_data contains 0 rows
+1700774502240	INFO	24	l2open.gameserver.idfactory.IdFactory	IdFactory: Table characters contains 8 rows
+1700774502240	INFO	25	l2open.gameserver.idfactory.IdFactory	IdFactory: Table items contains 105 rows
+1700774502242	INFO	29	l2open.gameserver.idfactory.IdFactory	IdFactory: Table couples contains 0 rows
+1700774502243	INFO	27	l2open.gameserver.idfactory.IdFactory	IdFactory: Table ally_data contains 0 rows
+1700774502244	INFO	28	l2open.gameserver.idfactory.IdFactory	IdFactory: Table pets contains 0 rows
+1700774502244	INFO	1	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracting 113 used id's from data tables...
+1700774502248	INFO	30	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 8 used id's from characters
+1700774502252	INFO	31	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 105 used id's from items
+1700774502253	INFO	32	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from clan_data
+1700774502254	INFO	33	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from ally_data
+1700774502256	INFO	34	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from pets
+1700774502256	INFO	35	l2open.gameserver.idfactory.IdFactory	IdFactory: Extracted 0 used id's from couples
+1700774502257	INFO	1	l2open.gameserver.idfactory.IdFactory	IdFactory: Successfully extracted 113 used id's from data tables.
+1700774502257	INFO	1	l2open.gameserver.idfactory.BitSetIDFactory	IDFactory: 102912 id's available.
+1700774502701	INFO	1	l2open.gameserver.cache.CrestCache	CrestCache: Loaded 0 crests
+1700774502718	INFO	1	l2open.gameserver.instancemanager.AuctionManager	Initializing AuctionManager
+1700774502903	INFO	1	l2open.gameserver.instancemanager.AuctionManager	Loaded: 38 active auction(s)
+1700774507643	INFO	21	l2open.util.Strings	PTS HTML: ./data/html-ru.zip loaded 5498ms...
+1700774509164	WARNING	1	l2open.gameserver.skills.SkillsEngine	SkillsEngine: Loaded 61827 skill templates from XML files. Max id: 26077, max level: 259
+1700774509165	WARNING	1	l2open.gameserver.skills.SkillsEngine	SkillsEngine: Loaded 1616 custom skill templates from XML files.
+1700774510893	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2139][1][TARGET_ONE][range][not_friend]
+1700774510907	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2260][1][TARGET_ONE][single][none]
+1700774510911	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2353][1][TARGET_ONE][static_object_scope][hidden_place]
+1700774510915	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [2624][1][TARGET_ONE][single][none]
+1700774510956	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4143][1][TARGET_ONE][point_blank][not_friend]
+1700774510963	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4212][1][TARGET_ONE][range][friend]
+1700774510986	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4483][1][TARGET_ONE][point_blank][not_friend]
+1700774510987	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4488][1][TARGET_ONE][point_blank][not_friend]
+1700774510988	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4524][1][TARGET_ONE][single][none]
+1700774511001	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [4697][1][TARGET_ONE][point_blank][not_friend]
+1700774511019	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5037][1][TARGET_ONE][point_blank][not_friend]
+1700774511019	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5039][1][TARGET_ONE][single][none]
+1700774511021	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5051][1][TARGET_ONE][point_blank][not_friend]
+1700774511022	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5054][1][TARGET_ONE][point_blank][not_friend]
+1700774511027	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5104][1][TARGET_ONE][single][none]
+1700774511027	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5105][1][TARGET_ONE][single][none]
+1700774511028	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5114][1][TARGET_ONE][point_blank][not_friend]
+1700774511030	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5117][1][TARGET_ONE][point_blank][not_friend]
+1700774511030	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5123][1][TARGET_ONE][point_blank][friend]
+1700774511030	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5124][1][TARGET_ONE][point_blank][not_friend]
+1700774511030	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5125][1][TARGET_ONE][point_blank][friend]
+1700774511031	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5126][1][TARGET_ONE][point_blank][friend]
+1700774511031	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5127][1][TARGET_ONE][point_blank][friend]
+1700774511031	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5128][1][TARGET_ONE][point_blank][friend]
+1700774511031	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5129][1][TARGET_ONE][point_blank][friend]
+1700774511031	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5130][1][TARGET_ONE][point_blank][not_friend]
+1700774511032	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5131][1][TARGET_ONE][point_blank][not_friend]
+1700774511032	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5132][1][TARGET_ONE][point_blank][not_friend]
+1700774511032	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5133][1][TARGET_ONE][point_blank][not_friend]
+1700774511032	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5134][1][TARGET_ONE][point_blank][not_friend]
+1700774511032	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5145][1][TARGET_ONE][point_blank][not_friend]
+1700774511037	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5202][1][TARGET_ONE][point_blank][not_friend]
+1700774511037	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5203][1][TARGET_ONE][point_blank][not_friend]
+1700774511038	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5204][1][TARGET_ONE][single][none]
+1700774511040	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5239][1][TARGET_ONE][single][none]
+1700774511041	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5248][1][TARGET_ONE][single][none]
+1700774511041	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5252][1][TARGET_ONE][single][none]
+1700774511042	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5257][1][TARGET_ONE][single][none]
+1700774511045	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5275][1][TARGET_ONE][point_blank][not_friend]
+1700774511046	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5279][1][TARGET_ONE][point_blank][not_friend]
+1700774511046	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5283][1][TARGET_ONE][point_blank][not_friend]
+1700774511047	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5287][1][TARGET_ONE][point_blank][not_friend]
+1700774511048	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5291][1][TARGET_ONE][point_blank][not_friend]
+1700774511048	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5295][1][TARGET_ONE][point_blank][not_friend]
+1700774511049	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5306][1][TARGET_ONE][point_blank][not_friend]
+1700774511053	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5340][1][TARGET_ONE][point_blank][not_friend]
+1700774511054	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5344][1][TARGET_ONE][point_blank][not_friend]
+1700774511066	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5348][1][TARGET_ONE][point_blank][not_friend]
+1700774511067	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5352][1][TARGET_ONE][point_blank][not_friend]
+1700774511067	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5356][1][TARGET_ONE][point_blank][not_friend]
+1700774511068	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5360][1][TARGET_ONE][point_blank][not_friend]
+1700774511068	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5366][1][TARGET_ONE][point_blank][not_friend]
+1700774511070	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5375][1][TARGET_ONE][point_blank][not_friend]
+1700774511070	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5379][1][TARGET_ONE][point_blank][not_friend]
+1700774511071	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5382][1][TARGET_ONE][point_blank][not_friend]
+1700774511071	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5385][1][TARGET_ONE][point_blank][not_friend]
+1700774511087	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5388][1][TARGET_ONE][point_blank][not_friend]
+1700774511088	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5391][1][TARGET_ONE][point_blank][not_friend]
+1700774511088	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5423][1][TARGET_ONE][point_blank][not_friend]
+1700774511089	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5424][1][TARGET_ONE][point_blank][not_friend]
+1700774511089	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5430][1][TARGET_ONE][range][clan]
+1700774511090	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5447][1][TARGET_ONE][single][none]
+1700774511092	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5494][1][TARGET_ONE][single][none]
+1700774511101	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5591][1][TARGET_ONE][single][none]
+1700774511102	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5619][1][TARGET_ONE][single][none]
+1700774511114	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5660][1][TARGET_ONE][single][none]
+1700774511115	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5689][1][TARGET_ONE][single][none]
+1700774511115	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5697][1][TARGET_ONE][single][none]
+1700774511116	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5699][1][TARGET_ONE][single][none]
+1700774511123	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5713][1][TARGET_ONE][single][none]
+1700774511125	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5751][1][TARGET_ONE][point_blank][not_friend]
+1700774511126	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5756][1][TARGET_ONE][single][none]
+1700774511174	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5772][1][TARGET_ONE][single][none]
+1700774511174	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5773][1][TARGET_ONE][single][none]
+1700774511178	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5799][1][TARGET_ONE][point_blank][not_friend]
+1700774511179	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5836][1][TARGET_ONE][point_blank][clan]
+1700774511180	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5847][1][TARGET_ONE][point_blank][none]
+1700774511182	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5887][1][TARGET_ONE][point_blank][not_friend]
+1700774511186	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5923][1][TARGET_ONE][single][none]
+1700774511187	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [5937][1][TARGET_ONE][single][none]
+1700774511189	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6020][1][TARGET_ONE][single][none]
+1700774511189	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6021][1][TARGET_ONE][single][none]
+1700774511190	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6022][1][TARGET_ONE][single][none]
+1700774511190	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6023][1][TARGET_ONE][single][none]
+1700774511191	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6034][1][TARGET_ONE][single][none]
+1700774511193	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6090][1][TARGET_ONE][single][none]
+1700774511193	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6092][1][TARGET_ONE][single][none]
+1700774511202	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6270][1][TARGET_ONE][point_blank][none]
+1700774511205	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6298][1][TARGET_ONE][single][none]
+1700774511205	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6301][1][TARGET_ONE][point_blank][not_friend]
+1700774511205	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6305][1][TARGET_ONE][point_blank][not_friend]
+1700774511206	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6316][1][TARGET_ONE][single][none]
+1700774511206	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6320][1][TARGET_ONE][point_blank][not_friend]
+1700774511207	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6372][1][TARGET_ONE][single][none]
+1700774511208	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6374][1][TARGET_ONE][single][none]
+1700774511208	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6375][1][TARGET_ONE][single][none]
+1700774511212	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6398][1][TARGET_ONE][ring_range][not_friend]
+1700774511214	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6415][1][TARGET_ONE][point_blank][not_friend]
+1700774511217	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6422][1][TARGET_ONE][point_blank][not_friend]
+1700774511589	INFO	21	l2open.util.Strings	PTS HTML: ./data/html-en.zip loaded 3946ms...
+1700774511605	INFO	21	l2open.util.Strings	Loaded 418 translit entrys
+1700774512273	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6754][1][TARGET_ONE][point_blank][not_friend]
+1700774512276	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6769][1][TARGET_ONE][point_blank][not_friend]
+1700774512280	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6777][1][TARGET_ONE][point_blank][not_friend]
+1700774512280	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6779][1][TARGET_ONE][single][none]
+1700774512291	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6835][1][TARGET_ONE][single][none]
+1700774512291	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6841][1][TARGET_ONE][single][none]
+1700774512292	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6858][1][TARGET_ONE][single][none]
+1700774512292	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6864][1][TARGET_ONE][single][none]
+1700774512292	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [6868][1][TARGET_ONE][single][none]
+1700774512458	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9011][1][TARGET_ONE][single][none]
+1700774512458	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9011][1][TARGET_ONE][single][none]
+1700774512459	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9011][1][TARGET_ONE][single][none]
+1700774512459	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1700774512460	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1700774512460	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1700774512460	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1700774512460	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1700774512460	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9012][1][TARGET_ONE][single][none]
+1700774512461	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1700774512461	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1700774512462	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1700774512462	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1700774512462	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1700774512462	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1700774512463	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9013][1][TARGET_ONE][single][none]
+1700774512463	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1700774512463	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1700774512463	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1700774512463	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1700774512464	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1700774512464	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1700774512464	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1700774512465	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1700774512466	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1700774512466	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1700774512466	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1700774512466	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1700774512467	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1700774512469	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1700774512470	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9014][1][TARGET_ONE][single][none]
+1700774512481	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [9060][1][TARGET_ONE][point_blank][friend]
+1700774512505	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21005][1][TARGET_ONE][single][none]
+1700774512534	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21052][1][TARGET_ONE][single][none]
+1700774512535	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21055][1][TARGET_ONE][single][none]
+1700774512535	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21056][1][TARGET_ONE][single][none]
+1700774512536	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21061][1][TARGET_ONE][single][none]
+1700774512536	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21063][1][TARGET_ONE][single][none]
+1700774512536	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21071][1][TARGET_ONE][single][none]
+1700774512536	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21086][1][TARGET_ONE][single][none]
+1700774512537	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21153][1][TARGET_ONE][single][none]
+1700774512538	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21154][1][TARGET_ONE][single][none]
+1700774512538	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [21170][1][TARGET_ONE][single][none]
+1700774512603	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23165][1][TARGET_ONE][single][none]
+1700774512607	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23298][1][TARGET_ONE][single][none]
+1700774512607	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23308][1][TARGET_ONE][point_blank][friend]
+1700774512607	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23309][1][TARGET_ONE][point_blank][friend]
+1700774512607	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23310][1][TARGET_ONE][point_blank][friend]
+1700774512607	INFO	1	l2open.gameserver.tables.SkillTable	L2Skill5: [23311][1][TARGET_ONE][point_blank][friend]
+1700774513187	INFO	1	l2open.gameserver.instancemanager.CubicManager	CubicManager: Loaded 145 cubics.
+1700774513960	INFO	1	l2open.gameserver.tables.PetSkillsTable	PetSkillsTable: Loaded 2671 skills.
+1700774519433	WARNING	1	l2open.gameserver.templates.L2Item	WARNING: item 20711 action attached skill not done: Box of Dynasty Armor[id=9105,lvl=1]
+1700774521664	INFO	1	l2open.gameserver.xml.loader.XmlOptionDataLoader	XmlOptionDataLoader: Loaded 24975 templates.
+1700774521806	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 0 Custom Armors
+1700774521807	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 3554 Armors
+1700774521807	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 240 Rare Armors
+1700774521807	INFO	1	l2open.gameserver.xml.loader.XmlArmorLoader	XmlArmorLoader: Loaded 58 PvP Armors
+1700774525607	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 0 Custom Weapons
+1700774525607	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 4001 Weapons
+1700774525607	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 794 Rare Weapons
+1700774525607	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 558 PvP Weapons
+1700774525607	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 1667 SA Weapons
+1700774525607	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 283 Trigger for Weapons
+1700774525607	INFO	1	l2open.gameserver.xml.loader.XmlWeaponLoader	XmlWeaponLoader: Loaded 262 Pole Weapons
+1700774530563	INFO	1	l2open.gameserver.xml.loader.XmlEtcItemLoader	XmlEtcItemLoader: Loaded 0 Custom EtcItems
+1700774530563	INFO	1	l2open.gameserver.xml.loader.XmlEtcItemLoader	XmlEtcItemLoader: Loaded 10855 EtcItems
+1700774530656	INFO	1	l2open.gameserver.TradeController	TradeController: Loaded 4 file(s).
+1700774530656	INFO	1	l2open.gameserver.TradeController	TradeController: Loaded 23181 Items.
+1700774530656	INFO	1	l2open.gameserver.TradeController	TradeController: Loaded 702 Buylists.
+1700774530979	INFO	1	l2open.gameserver.RecipeController	RecipeController: Loaded 1000 Recipes.
+1700774628726	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 17098 skills.
+1700774628727	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 109 fishing skills.
+1700774628727	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 20 transformation skills.
+1700774628727	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 64 clan skills.
+1700774628727	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 526 enchanted skills.
+1700774628727	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 18 pledge skills.
+1700774628727	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 74 certification skills.
+1700774628727	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 0 other skills.
+1700774628728	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 21 Transfer skills for Bishop.
+1700774628728	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 24 Transfer skills for Elder.
+1700774628729	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillTreeTable: Loaded 32 Transfer skills for Silen Elder.
+1700774628733	INFO	1	l2open.gameserver.tables.SkillTreeTable	SkillSpellbookTable: Loaded 386 Spellbooks.
+1700774628736	INFO	1	l2open.pts.loader.LoadData	PTS ArmorEnchantBonusData: Finish loading data fo 1 ms...
+1700774628747	INFO	1	l2open.gameserver.tables.CharTemplateTable	CharTemplateTable: Loaded 206 Character Templates.
+1700774628752	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 779 AI params for 666 NPCs.
+1700774628931	INFO	1	l2open.extensions.scripts.Scripts	Scripts loading...
+1700774628931	INFO	1	l2open.extensions.scripts.Scripts	Scripts start parse class...
+1700774629415	INFO	1	l2open.extensions.scripts.Scripts	Scripts end parse class...
+1700774644116	INFO	1	l2open.extensions.scripts.Scripts	Scripts end compile class...
+1700774645319	INFO	1	l2open.extensions.scripts.Scripts	Scripts successfully loaded. Loaded 1323 classes.
+1700774646151	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 10463 Npc Templates.
+1700774646386	INFO	1	l2open.gameserver.tables.NpcTable	Loaded 118801 npc skills.
+1700774646599	INFO	1	l2open.gameserver.tables.NpcTable	Players droplist load skipped
+1700774646654	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 597 Minions.
+1700774646667	INFO	1	l2open.gameserver.tables.NpcTable	NpcTable: Loaded 1641 SkillLearn entrys.
+1700774646710	INFO	1	l2open.pts.loader.LoadData	PTS NpcDataPch: Finish loading data size: 10195 fo 40 ms...
+1700774646786	INFO	1	l2open.gameserver.tables.HennaTable	HennaTable: Loaded 180 Templates.
+1700774646965	INFO	1	l2open.gameserver.tables.HennaTreeTable	HennaTreeTable: Loaded 8134 Henna Tree Templates.
+1700774646969	INFO	1	l2open.gameserver.tables.LevelUpTable	LevelUpData: Loaded 103 Character Level Up Templates.
+1700774646985	INFO	1	l2open.gameserver.model.L2World	L2World: [255][271][63] World Region Grid set up.
+1700774648785	INFO	1	l2open.gameserver.tables.DoorTable	DoorTable: Loaded 1030 doors.
+1700774648979	INFO	1	l2open.gameserver.tables.TerritoryTable	TerritoryTable: Loaded 9976 locations
+1700774649108	INFO	1	l2open.gameserver.instancemanager.ZoneManager	ZoneManager: Loaded 1649 zones
+1700774649228	INFO	1	l2open.gameserver.tables.TerritoryTable	TerritoryTable: Added 1642 locations to L2World
+1700774649230	INFO	1	l2open.gameserver.instancemanager.UnderGroundColliseumManager	Loaded: 1 UnderGround Colliseums.
+1700774649421	INFO	1	l2open.gameserver.instancemanager.CastleManager	Loaded: 9 castles.
+1700774649467	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1700774649457][1700774649457]: Siege of Gludio: Sun Dec 10 16:00:00 MSK 2023
+1700774649469	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1700774649467][1700774649467]: Siege of Gludio: Sun Dec 10 16:00:00 MSK 2023
+1700774649470	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Gludio: Sun Dec 10 16:00:00 MSK 2023
+1700774649475	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1700774649475][1700774649475]: Siege of Dion: Sun Dec 10 16:00:00 MSK 2023
+1700774649475	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1700774649475][1700774649475]: Siege of Dion: Sun Dec 10 16:00:00 MSK 2023
+1700774649478	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Dion: Sun Dec 10 16:00:00 MSK 2023
+1700774649482	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1700774649482][1700774649482]: Siege of Giran: Sun Dec 10 16:00:00 MSK 2023
+1700774649482	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1700774649482][1700774649482]: Siege of Giran: Sun Dec 10 16:00:00 MSK 2023
+1700774649484	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Giran: Sun Dec 10 16:00:00 MSK 2023
+1700774649487	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1700774649487][1700774649487]: Siege of Oren: Sun Dec 10 16:00:00 MSK 2023
+1700774649487	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1700774649487][1700774649487]: Siege of Oren: Sun Dec 10 16:00:00 MSK 2023
+1700774649491	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Oren: Sun Dec 10 16:00:00 MSK 2023
+1700774649504	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1700774649504][1700774649504]: Siege of Aden: Sun Dec 10 16:00:00 MSK 2023
+1700774649505	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1700774649504][1700774649504]: Siege of Aden: Sun Dec 10 16:00:00 MSK 2023
+1700774649507	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Aden: Sun Dec 10 16:00:00 MSK 2023
+1700774649511	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1700774649511][1700774649511]: Siege of Innadril: Sun Dec 10 16:00:00 MSK 2023
+1700774649511	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1700774649511][1700774649511]: Siege of Innadril: Sun Dec 10 16:00:00 MSK 2023
+1700774649514	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Innadril: Sun Dec 10 16:00:00 MSK 2023
+1700774649518	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1700774649518][1700774649518]: Siege of Goddard: Sun Dec 10 16:00:00 MSK 2023
+1700774649518	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1700774649518][1700774649518]: Siege of Goddard: Sun Dec 10 16:00:00 MSK 2023
+1700774649526	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Goddard: Sun Dec 10 16:00:00 MSK 2023
+1700774649528	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1700774649528][1700774649528]: Siege of Rune: Sun Dec 10 16:00:00 MSK 2023
+1700774649529	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1700774649529][1700774649529]: Siege of Rune: Sun Dec 10 16:00:00 MSK 2023
+1700774649588	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Rune: Sun Dec 10 16:00:00 MSK 2023
+1700774649591	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[START][1700774649591][1700774649591]: Siege of Schuttgart: Sun Dec 10 16:00:00 MSK 2023
+1700774649591	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	correctSiegeDateTime[FINISH][1700774649591][1700774649591]: Siege of Schuttgart: Sun Dec 10 16:00:00 MSK 2023
+1700774649593	INFO	1	l2open.gameserver.model.entity.siege.castle.CastleSiege	Siege of Schuttgart: Sun Dec 10 16:00:00 MSK 2023
+1700774649595	INFO	1	l2open.gameserver.instancemanager.FortressManager	Initializing FortressManager
+1700774650166	INFO	1	l2open.gameserver.instancemanager.FortressManager	Loaded: 21 fortresses.
+1700774650243	INFO	1	l2open.gameserver.instancemanager.ClanHallManager	Initializing ClanHallManager.
+1700774650859	INFO	1	l2open.gameserver.instancemanager.ClanHallManager	Loaded: 44 ClanHalls.
+1700774650881	INFO	1	l2open.gameserver.instancemanager.ClanHallManager	110 doors attached to ClanHalls
+1700774650900	INFO	1	l2open.gameserver.model.entity.siege.clanhall.BanditStrongholdSiege	Siege of Bandit Stronghold : Fri Nov 24 21:00:00 MSK 2023
+1700774650906	INFO	1	l2open.gameserver.model.entity.siege.clanhall.WildBeastFarmSiege	Siege of Wild Beasts Farm : Fri Nov 24 21:00:00 MSK 2023
+1700774650912	INFO	1	l2open.gameserver.model.entity.siege.clanhall.RainbowSpringSiege	Siege of Rainbow Springs Chateau : Fri Nov 24 22:00:00 MSK 2023
+1700774650927	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiegeDatabase	TerritorySiege: load 9 town spawns.
+1700774650935	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiegeDatabase	TerritorySiege: load 9 castle spawns.
+1700774650941	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiegeDatabase	TerritorySiege: load 9 fortress spawns.
+1700774650943	INFO	1	l2open.gameserver.model.entity.siege.territory.TerritorySiege	Territory Siege: 25.11.2023 20:00:49
+1700774650946	INFO	1	l2open.gameserver.instancemanager.CastleManorManager	Manor System: Initializing...
+1700774650961	INFO	1	l2open.gameserver.instancemanager.SeedOfAnnihilationZone	SeedOfAnnihilationManager: Load Manager.
+1700774651077	INFO	1	l2open.gameserver.instancemanager.RaidBossSpawnManager	RaidBossSpawnManager: Loaded 0 Statuses
+1700774651226	INFO	1	l2open.gameserver.instancemanager.NaiaTowerManager	Naia Tower Manager: Loaded 12 rooms
+1700774651822	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 5000 npc
+1700774651871	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 6000 npc
+1700774652136	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 10000 npc
+1700774652480	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 14000 npc
+1700774653164	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 15000 npc
+1700774653500	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 18000 npc
+1700774653766	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 22000 npc
+1700774653843	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 23000 npc
+1700774653905	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 24000 npc
+1700774653974	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 25000 npc
+1700774654142	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 27000 npc
+1700774654784	INFO	1	l2open.gameserver.instancemanager.HellboundManager	Hellbound Manager: Current Level is 1
+1700774654784	INFO	1	l2open.gameserver.instancemanager.HellboundManager	Hellbound Manager: Current Points is 0
+1700774654847	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 31000 npc
+1700774655213	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 34000 npc
+1700774655323	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 35000 npc
+1700774655612	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 36000 npc
+1700774655982	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 37000 npc
+1700774656200	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 39000 npc
+1700774656294	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 40000 npc
+1700774656455	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 41000 npc
+1700774656689	INFO	1	l2open.gameserver.tables.SpawnTable	Spawned 42000 npc
+1700774656782	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: Currently in the Competition (Quest Event) period!
+1700774656783	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Seal of Avarice remains unclaimed.
+1700774656783	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Seal of Gnosis remains unclaimed.
+1700774656783	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Seal of Strife remains unclaimed.
+1700774656783	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: The Competition this week, if the trend continue, will end with a tie.
+1700774656785	INFO	1	l2open.gameserver.model.entity.SevenSigns	SevenSigns: Next period begins in 3 days, 17 hours and 35 mins.
+1700774656785	INFO	1	l2open.gameserver.tables.SpawnTable	SpawnTable: Loaded 18202 Npc Spawn Locations. Total NPCs: 42165
+1700774656790	INFO	1	l2open.gameserver.tables.SpawnTable	Monsters inventory loaded, items: 0
+1700774656936	INFO	1	communityboard.CommunityBoardShortStats	Short statistics in the commynity board has been updated.
+1700774656940	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: change sex services.
+1700774656941	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: change name services.
+1700774656941	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: change clan name services.
+1700774656941	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: change base class services.
+1700774656941	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: separate services.
+1700774656944	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Rabbits To Riches Event [state: deactivated]
+1700774656977	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1001: Wake Up Baium
+1700774656992	INFO	1	communityboard.General	CommunityBoard: Simple Lottery games loaded.
+1700774656995	INFO	1	communityboard.General	CommunityBoard: Simple Lottery games played 0.
+1700774656998	INFO	1	communityboard.General	CommunityBoard: Simple Lottery jackpot is 0 Adena.
+1700774657004	INFO	1	events.GvG.GvG	Loaded Event: GvG
+1700774657038	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: NPCBuffer [state: deactivated]
+1700774657046	INFO	1	l2open.extensions.scripts.ScriptFile	SailrenManager: State of Sailren is NOTSPAWN.
+1700774657046	INFO	1	l2open.extensions.scripts.ScriptFile	SailrenManager: Next spawn date of Sailren is Thu Jan 01 03:00:00 MSK 1970.
+1700774657050	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Bash [disabled]
+1700774657066	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Pagan Doormans
+1700774657082	INFO	1	bosses.BelethManager	Beleth Manager: Loaded successfuly
+1700774657088	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1004: Ice Fairy Sirra
+1700774657098	INFO	1	events.FightClub.FightClubManager	Loaded Event: Fight Club
+1700774657103	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1202: Crystal Caverns
+1700774657107	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Medal Collection Event [state: deactivated]
+1700774657142	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Roulette
+1700774657142	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Wolf
+1700774657147	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 3 [state: deactivated]
+1700774657148	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 2 [state: deactivated]
+1700774657149	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 1 [state: deactivated]
+1700774657181	INFO	1	communityboard.CommunityBoardTeleport	Load 297 teleport points.
+1700774657183	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Fantasy Isle
+1700774657186	INFO	1	bosses.AntharasManager	AntharasManager: State of Antharas is NOTSPAWN.
+1700774657187	INFO	1	bosses.AntharasManager	AntharasManager: Next spawn date of Antharas is 03:00 01.01.1970.
+1700774657194	INFO	1	events.Viktorina.Viktorina	Loaded Event: Victorina
+1700774657199	INFO	1	l2open.gameserver.model.L2Manor	ManorManager: Loaded 270 seeds
+1700774657249	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Item Broker
+1700774657252	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Kookaburra
+1700774657255	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Gludin Arena
+1700774657256	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Summon a corpse
+1700774657281	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: The Fall Harvest [state: deactivated]
+1700774657290	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1201: Dark Cloud Mansion
+1700774657302	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Underground Arena #1
+1700774657312	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: MasterOfEnchanting [state: deactivated]
+1700774657333	INFO	1	events.CtF.CtF	Loaded Event: CtF active.
+1700774657343	INFO	1	l2open.extensions.scripts.ScriptFile	MonasteryOfSilence: Loaded
+1700774657359	INFO	1	l2open.extensions.scripts.ScriptFile	ZakenManager: Init Zaken Manager.
+1700774657375	INFO	1	communityboard.General	CommunityBoard: Premium Lottery games loaded.
+1700774657378	INFO	1	communityboard.General	CommunityBoard: Premium Lottery games played 0.
+1700774657382	INFO	1	communityboard.General	CommunityBoard: Premium Lottery jackpot is 0 Gold Einhasad.
+1700774657390	INFO	1	l2open.extensions.scripts.ScriptFile	OnActionShift Loaded
+1700774657396	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Coffer of Shadows [state: deactivated]
+1700774657406	WARNING	1		Unevenly distributed hash code - Degraded Preformance
+1700774657414	INFO	1	l2open.extensions.scripts.ScriptFile	Kamaloka Gate Loaded
+1700774657422	INFO	1	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 180 Room1 1st Npc Spawn Locations.
+1700774657422	INFO	1	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 4 Room2 Inside Npc Spawn Locations.
+1700774657422	INFO	1	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 121 Room2 Outside Npc Spawn Locations.
+1700774657429	INFO	1	l2open.gameserver.tables.SkillTreeTable	FishTable: Loaded 270 Fishes.
+1700774657434	INFO	1	l2open.gameserver.tables.SkillTreeTable	FishRewardsTable: Loaded 919 FishRewards.
+1700774657458	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Isle of Player Race
+1700774657460	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to catacombs
+1700774657461	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Clan Operations]
+1700774657472	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: NPC RemoveDeathPenalty
+1700774657472	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: VitaminManager...
+1700774657474	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Change of Heart[state: deactivated]
+1700774657475	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Clan function.
+1700774657498	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Alliance Operations]
+1700774657505	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Cougar
+1700774657507	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Changing occupations]
+1700774657513	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: AutoAnnouncer [state: deactivated]
+1700774657522	INFO	1	l2open.extensions.scripts.ScriptFile	Utilites Loaded
+1700774657523	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Nick color change
+1700774657525	INFO	1	l2open.extensions.scripts.ScriptFile	MonasteryOfSilenceGame: Loaded
+1700774657536	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: ClanHall Pet Evolution
+1700774657565	INFO	1	events.LastHunter.LastHunter	Loaded Event: Last Hunter
+1700774657614	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
+1700774657620	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
+1700774657620	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
+1700774657620	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
+1700774657620	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
+1700774657620	INFO	1	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
+1700774657620	INFO	1	communityboard.CommunityBoardFullStats	Full statistics in the commynity board has been updated.
+1700774657622	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Inventory
+1700774657623	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1003: Sailren
+1700774657627	INFO	1	events.TvT.TvT	Loaded Event: TvT
+1700774657630	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Obtain Talisman
+1700774657633	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: SavingSnowman [state: deactivated]
+1700774657638	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Tower
+1700774657639	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Dion Arena
+1700774657655	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Window
+1700774657671	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: The Flow Of The Horror [state: deactivated]
+1700774657673	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Tournament [state: deactivated]
+1700774657704	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Bonus [state: deactivated]
+1700774657712	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Buffalo
+1700774657720	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Fenrir
+1700774657723	INFO	1	events.coins.coins	Loaded Event: L2Coins [state: deactivated]
+1700774657731	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: CWH Privileges
+1700774657737	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Bounty Hunters Guild
+1700774657750	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Hero Items
+1700774657752	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: 1103: Oracle Teleport
+1700774657811	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Christmas [state: deactivated]
+1700774657820	INFO	1	l2open.extensions.scripts.ScriptFile	Lindvior Manager Load.
+1700774657822	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Nobless sell
+1700774657858	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: SubClass sell
+1700774657858	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Border Outpost Doormans
+1700774657862	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Pushkin
+1700774657874	WARNING	1		Unevenly distributed hash code - Degraded Preformance
+1700774657875	INFO	1	l2open.extensions.scripts.ScriptFile	MarcketLoad Loaded...
+1700774657895	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
+1700774657897	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Successful
+1700774657920	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: Loaded 20 Mysterious-Box spawns.
+1700774657957	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 physical monsters spawns.
+1700774657991	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 magical monsters spawns.
+1700774657996	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 92 Church of duke monsters spawns.
+1700774658001	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 68 Emperor's grave NPC spawns.
+1700774658002	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Conquerors Sepulcher Manager
+1700774658002	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Emperors Sepulcher Manager
+1700774658002	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Great Sages Sepulcher Manager
+1700774658002	WARNING	1	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Judges Sepulcher Manager
+1700774658003	WARNING	1	bosses.FourSepulchersManager	FourSepulchersManager: Beginning in Attack time
+1700774658006	INFO	1	events.RewardofHonor.RewardofHonor	Loaded Event: Reward of Honor [state: deactivated]
+1700774658008	WARNING	23	l2open.common.RunnableImpl	Fri Nov 24 00:24:18 MSK 2023 Atk announce scheduled to 25.0 minute of this hour.
+1700774658013	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: l2day [state: deactivated]
+1700774658020	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Mana Regen
+1700774658027	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Grand Isle of Prayer Race
+1700774658029	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Race Track
+1700774658039	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand CWH
+1700774658048	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Ride Hire
+1700774658067	INFO	1	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 54 Soul Crystal data.
+1700774658067	INFO	1	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 240 npc Leveling info data.
+1700774658071	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: March 8 [state: deactivated]
+1700774658083	INFO	1	bosses.ValakasManager	ValakasManager: State of Valakas is NOTSPAWN.
+1700774658083	INFO	1	bosses.ValakasManager	ValakasManager: Next spawn date of Valakas is 03:00 01.01.1970.
+1700774658090	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Event: Giran Arena
+1700774658095	INFO	1	communityboard.CommunityBoardForge	CommunityBoard: Forge Enchant: false
+1700774658096	INFO	1	communityboard.CommunityBoardForge	CommunityBoard: Forge Attribut: false
+1700774658096	INFO	1	communityboard.CommunityBoardForge	CommunityBoard: Forge Augment: false
+1700774658099	INFO	1	l2open.gameserver.instancemanager.CastleManager	MercTicketManager: Initializing
+1700774658103	INFO	1	l2open.gameserver.instancemanager.CastleManager	MercTicketManager: Loaded 0 Mercenary Tickets
+1700774658108	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
+1700774658116	INFO	1	events.lastHero.LastHero	Loaded Event: Last Hero
+1700774658181	INFO	1	l2open.gameserver.tables.PetDataTable	PetDataTable: Loaded 3834[50] pets.
+1700774658189	INFO	1	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
+1700774658193	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Fantasy Isle
+1700774658196	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: DropItem
+1700774658198	INFO	1	events.Simple.Simple	Loaded Event: Simple [state: deactivated]
+1700774658200	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Enter Hellbound Island
+1700774658201	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Level manipulation
+1700774658206	INFO	1	l2open.extensions.scripts.ScriptFile	BaiumManager: State of Baium is NOTSPAWN.
+1700774658206	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Boss: Baium. Next spawn date: Thu Jan 01 03:00:00 MSK 1970
+1700774658207	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Warehouse
+1700774658233	INFO	1	l2open.extensions.scripts.ScriptFile	Loaded Service: Fort Info
+1700774658244	INFO	1	l2open.gameserver.instancemanager.DimensionalRiftManager	DimensionalRiftManager: Loaded 13 room types with 112 rooms.
+1700774658244	INFO	1	l2open.gameserver.instancemanager.DimensionalRiftManager	DimensionalRiftManager: Loaded 300 dimensional rift spawns, 0 errors.
+1700774658285	INFO	1	l2open.gameserver.instancemanager.InstancedZoneManager	InstancedZoneManager: Loaded 96 zones with 114 rooms.
+1700774658285	INFO	1	l2open.gameserver.instancemanager.InstancedZoneManager	InstancedZoneManager: Loaded 740 instanced location spawns, 0 errors.
+1700774658287	INFO	1	l2open.gameserver.Announcements	config/announcements.txt doesn't exist
+1700774658399	INFO	1	l2open.gameserver.tables.AugmentationData	Initializing AugmentationData.
+1700774658426	INFO	1	l2open.gameserver.tables.StaticObjectsTable	StaticObject: Loaded 29 StaticObject Templates.
+1700774658468	INFO	1	l2open.gameserver.GameServer	AutoSpawnHandler: Loaded 50 handlers in total.
+1700774658481	INFO	1	l2open.gameserver.GameServer	AutoChatHandler: Loaded 14 handlers in total.
+1700774658492	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Loading Olympiad System....
+1700774658492	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Currently in Olympiad Period
+1700774658492	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: In 6 days, 23 hours and 35 mins.
+1700774658492	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Next Weekly Change is in....
+1700774658492	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: In 4 days, 11 hours and 35 mins.
+1700774658492	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Loaded 2 Noblesses
+1700774658493	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Competition Period Starts in 0 days, 17 hours and 35 mins.
+1700774658493	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: Event starts/started: Fri Nov 24 18:00:00 MSK 2023
+1700774658496	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System:[Disable] Start custom reward 22:45 24.11.2023.
+1700774658496	INFO	1	l2open.gameserver.model.entity.olympiad.Olympiad	Olympiad System: End custom reward 00:00 25.11.2023.
+1700774658504	INFO	1	l2open.gameserver.model.entity.Hero	Hero System: Loaded 0 Heroes.
+1700774658504	INFO	1	l2open.gameserver.model.entity.Hero	Hero System: Loaded 0 all time Heroes.
+1700774658508	INFO	1	l2open.gameserver.instancemanager.CursedWeaponsManager	CursedWeaponsManager: Loaded 0 cursed weapon(s).
+1700774658510	INFO	1	l2open.gameserver.instancemanager.PlayerRewardManager	PlayerRewardManager: set_noble[0] inc_pvp[0] inc_pc[0].
+1700774658512	INFO	1	l2open.gameserver.instancemanager.SeedOfInfinityManager	Seed of Infinity Manager: Current Cycle is 1
+1700774658513	INFO	1	l2open.gameserver.instancemanager.NaiaTowerManager	Naia Core Manager: Loaded
+1700774658514	INFO	1	l2open.gameserver.instancemanager.CoupleManager	Initializing CoupleManager
+1700774658516	INFO	1	l2open.gameserver.instancemanager.CoupleManager	Loaded: 0 couples(s)
+1700774658517	INFO	1	l2open.gameserver.GameServer	CoupleManager initialized
+1700774658517	INFO	1	l2open.gameserver.GameServer	ItemHandler: Loaded 2519 handlers.
+1700774658517	INFO	1	l2open.gameserver.GameServer	AdminCommandHandler: Loaded 498 handlers.
+1700774658517	INFO	1	l2open.gameserver.GameServer	UserCommandHandler: Loaded 17 handlers.
+1700774658517	INFO	1	l2open.gameserver.GameServer	VoicedCommandHandler: Loaded 70 handlers.
+1700774658533	INFO	1	l2open.gameserver.model.entity.vehicle.L2VehicleManager	Initializing L2VehicleManager
+1700774658541	INFO	1	l2open.gameserver.model.entity.vehicle.L2VehicleManager	L2VehicleManager: Loaded 6 vehicles.
+1700774658545	INFO	1	l2open.gameserver.tables.AirShipDocksTable	AirShipDocksTable: Loaded 5 docks.
+1700774658549	INFO	1	l2open.gameserver.GameServer	IdFactory: Free ObjectID's remaining: 1878997539
+1700774658555	INFO	1	l2open.gameserver.tables.TeleportTable	TeleportController: Loaded 600 locations.
+1700774658565	INFO	1	l2open.gameserver.itemmall.ItemMall	ItemMall: loaded 556 item templates.
+1700774658571	INFO	1	l2open.gameserver.itemmall.ItemMall	ItemMall: loaded 184 items available for trading.
+1700774658572	WARNING	1	l2open.gameserver.Shutdown	AutoRestart scheduled through 4h 36m
+1700774658594	WARNING	1	l2open.gameserver.instancemanager.ItemAuctionManager	ItemAuctionManager: Missing item_auctions.xml!
+1700774658595	INFO	1	l2open.gameserver.instancemanager.BloodAltarManager	Blood Altar Manager: Initializing...
+1700774658606	INFO	1	l2open.gameserver.GameServer	GameServer Started
+1700774658606	INFO	1	l2open.gameserver.GameServer	Maximum Numbers of Connected Players: 3000
+1700774658805	INFO	98	l2open.gameserver.loginservercon.LSConnection	GameServer: Connecting to LoginServer on 192.168.1.100:9014
+1700774659422	INFO	82	l2open.gameserver.loginservercon.lspackets.AuthResponse	Registered on login as Server 1 : 
+1700774660230	INFO	100	l2open.common.RunnableImpl	Restored 0 offline traders
+1700774665488	INFO	1	l2open.gameserver.GameStart	Telnet server is currently disabled.
+1700774665488	INFO	1	l2open.gameserver.GameStart	=================================================
+1700774665489	INFO	1	l2open.gameserver.GameStart	AllowedMemory: ........... 6087040 KB
+1700774665489	INFO	1	l2open.gameserver.GameStart	     Allocated: .......... 6087040 KB (100.0%)
+1700774665489	INFO	1	l2open.gameserver.GameStart	     Non-Allocated: ...... 0 KB (0.0%)
+1700774665489	INFO	1	l2open.gameserver.GameStart	AllocatedMemory: ......... 6087040 KB
+1700774665489	INFO	1	l2open.gameserver.GameStart	     Used: ............... 1191934 KB (19.5815%)
+1700774665489	INFO	1	l2open.gameserver.GameStart	     Unused (cached): .... 4895105 KB (80.4185%)
+1700774665489	INFO	1	l2open.gameserver.GameStart	UseableMemory: ........... 4895105 KB (80.4185%)
+1700774665489	INFO	1	l2open.gameserver.GameStart	=================================================
+1700774665489	INFO	1	l2open.gameserver.GameStart	MinProtocolRevision: 267
+1700774672622	INFO	61	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
+1700774672622	INFO	61	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
+1700774672622	INFO	61	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
+1700774672622	INFO	61	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
+1700774672622	INFO	61	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
+1700774672622	INFO	61	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
+1700774685861	INFO	99	l2open.extensions.network.SelectorThread	max_p_size: 7
+1700774686516	INFO	99	l2open.extensions.network.SelectorThread	max_p_size: 267
+1700774686632	INFO	99	l2open.gameserver.clientpackets.L2GameClientPacket	RequestAuthLogin: 50
+1700774686632	INFO	99	l2open.gameserver.clientpackets.L2GameClientPacket	RequestAuthLogin: 32
+1700774688760	INFO	86	l2open.gameserver.xml.loader.XmlArmorsetLoader	XmlArmorsetLoader: Loaded 168 armor sets.
+1700774688877	INFO	86	l2open.gameserver.xml.loader.XmlPcParameterLoader	XmlPcParameterLoader: Loaded 107 pc_parameters
+1700774695072	INFO	87	l2open.gameserver.tables.FriendsTable	FriendsTable: Loaded 0 friends.
+1700774772068	INFO	99	l2open.gameserver.clientpackets.L2GameClientPacket	RequestAuthLogin: 50
+1700774772068	INFO	99	l2open.gameserver.clientpackets.L2GameClientPacket	RequestAuthLogin: 32
+1700775319103	INFO	85	l2open.gameserver.clientpackets.L2GameClientPacket	SendBypassBuildCmd: admin
+1700775321505	INFO	87	communityboard.General	SimpleLottery: Store Jackpot
+1700775321508	INFO	87	com.mchange.v2.c3p0.stmt.GooGooStatementCache	Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='simple_loss_count'
+1700775321513	INFO	87	communityboard.CommunityBoardTeleport	Load 297 teleport points.
+1700775321515	INFO	87	communityboard.General	premiumLottery: Store Jackpot
+1700775321526	INFO	87	com.mchange.v2.c3p0.stmt.GooGooStatementCache	Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='premium_loss_count'
+1700775321531	INFO	87	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
+1700775321531	INFO	87	events.Simple.Simple	SpawnManager: despawned npc for event: Simple
+1700775321532	INFO	87	l2open.extensions.scripts.Scripts	Scripts loading...
+1700775321532	INFO	87	l2open.extensions.scripts.Scripts	Scripts start parse class...
+1700775322015	INFO	87	l2open.extensions.scripts.Scripts	Scripts end parse class...
+1700775331339	INFO	87	l2open.extensions.scripts.Scripts	Scripts end compile class...
+1700775332978	INFO	87	l2open.extensions.scripts.Scripts	Scripts successfully loaded. Loaded 1323 classes.
+1700775333014	INFO	87	communityboard.CommunityBoardShortStats	Short statistics in the commynity board has been updated.
+1700775333018	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: change sex services.
+1700775333018	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: change name services.
+1700775333018	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: change clan name services.
+1700775333018	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: change base class services.
+1700775333018	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: separate services.
+1700775333020	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Rabbits To Riches Event [state: deactivated]
+1700775333024	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1001: Wake Up Baium
+1700775333040	INFO	87	communityboard.General	CommunityBoard: Simple Lottery games loaded.
+1700775333042	INFO	87	communityboard.General	CommunityBoard: Simple Lottery games played 0.
+1700775333044	INFO	87	communityboard.General	CommunityBoard: Simple Lottery jackpot is 0 Adena.
+1700775333051	INFO	87	events.GvG.GvG	Loaded Event: GvG
+1700775333079	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: NPCBuffer [state: deactivated]
+1700775333087	INFO	87	l2open.extensions.scripts.ScriptFile	SailrenManager: State of Sailren is NOTSPAWN.
+1700775333088	INFO	87	l2open.extensions.scripts.ScriptFile	SailrenManager: Next spawn date of Sailren is Thu Jan 01 03:00:00 MSK 1970.
+1700775333091	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Bash [disabled]
+1700775333111	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Pagan Doormans
+1700775333126	INFO	87	bosses.BelethManager	Beleth Manager: Loaded successfuly
+1700775333132	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1004: Ice Fairy Sirra
+1700775333139	INFO	87	events.FightClub.FightClubManager	Loaded Event: Fight Club
+1700775333144	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1202: Crystal Caverns
+1700775333147	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Medal Collection Event [state: deactivated]
+1700775333173	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Roulette
+1700775333174	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Wolf
+1700775333177	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 3 [state: deactivated]
+1700775333179	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 2 [state: deactivated]
+1700775333180	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 1 [state: deactivated]
+1700775333237	INFO	87	communityboard.CommunityBoardTeleport	Load 297 teleport points.
+1700775333239	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Fantasy Isle
+1700775333269	INFO	87	bosses.AntharasManager	AntharasManager: State of Antharas is NOTSPAWN.
+1700775333269	INFO	87	bosses.AntharasManager	AntharasManager: Next spawn date of Antharas is 03:00 01.01.1970.
+1700775333276	INFO	87	events.Viktorina.Viktorina	Loaded Event: Victorina
+1700775333320	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Item Broker
+1700775333323	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Kookaburra
+1700775333326	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Gludin Arena
+1700775333329	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Summon a corpse
+1700775333351	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: The Fall Harvest [state: deactivated]
+1700775333359	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1201: Dark Cloud Mansion
+1700775333377	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Underground Arena #1
+1700775333383	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: MasterOfEnchanting [state: deactivated]
+1700775333399	INFO	87	events.CtF.CtF	Loaded Event: CtF active.
+1700775333412	INFO	87	l2open.extensions.scripts.ScriptFile	MonasteryOfSilence: Loaded
+1700775333424	INFO	87	l2open.extensions.scripts.ScriptFile	ZakenManager: Init Zaken Manager.
+1700775333430	INFO	87	communityboard.General	CommunityBoard: Premium Lottery games loaded.
+1700775333432	INFO	87	communityboard.General	CommunityBoard: Premium Lottery games played 0.
+1700775333433	INFO	87	communityboard.General	CommunityBoard: Premium Lottery jackpot is 0 Gold Einhasad.
+1700775333439	INFO	87	l2open.extensions.scripts.ScriptFile	OnActionShift Loaded
+1700775333445	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Coffer of Shadows [state: deactivated]
+1700775333448	WARNING	87		Unevenly distributed hash code - Degraded Preformance
+1700775333454	INFO	87	l2open.extensions.scripts.ScriptFile	Kamaloka Gate Loaded
+1700775333457	INFO	87	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 180 Room1 1st Npc Spawn Locations.
+1700775333458	INFO	87	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 4 Room2 Inside Npc Spawn Locations.
+1700775333458	INFO	87	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 121 Room2 Outside Npc Spawn Locations.
+1700775333477	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Isle of Player Race
+1700775333479	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to catacombs
+1700775333480	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Clan Operations]
+1700775333490	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: NPC RemoveDeathPenalty
+1700775333490	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: VitaminManager...
+1700775333491	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Change of Heart[state: deactivated]
+1700775333492	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Clan function.
+1700775333515	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Alliance Operations]
+1700775333520	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Cougar
+1700775333522	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Changing occupations]
+1700775333528	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: AutoAnnouncer [state: deactivated]
+1700775333537	INFO	87	l2open.extensions.scripts.ScriptFile	Utilites Loaded
+1700775333538	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Nick color change
+1700775333540	INFO	87	l2open.extensions.scripts.ScriptFile	MonasteryOfSilenceGame: Loaded
+1700775333551	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: ClanHall Pet Evolution
+1700775333571	INFO	87	events.LastHunter.LastHunter	Loaded Event: Last Hunter
+1700775333577	INFO	87	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
+1700775333581	INFO	87	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
+1700775333581	INFO	87	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
+1700775333581	INFO	87	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
+1700775333581	INFO	87	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
+1700775333581	INFO	87	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
+1700775333581	INFO	87	communityboard.CommunityBoardFullStats	Full statistics in the commynity board has been updated.
+1700775333583	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Inventory
+1700775333584	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1003: Sailren
+1700775333587	INFO	87	events.TvT.TvT	Loaded Event: TvT
+1700775333590	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Obtain Talisman
+1700775333593	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: SavingSnowman [state: deactivated]
+1700775333596	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Tower
+1700775333596	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Dion Arena
+1700775333609	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Window
+1700775333619	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: The Flow Of The Horror [state: deactivated]
+1700775333621	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Tournament [state: deactivated]
+1700775333644	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Bonus [state: deactivated]
+1700775333650	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Buffalo
+1700775333656	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Fenrir
+1700775333659	INFO	87	events.coins.coins	Loaded Event: L2Coins [state: deactivated]
+1700775333663	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: CWH Privileges
+1700775333670	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Bounty Hunters Guild
+1700775333681	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Hero Items
+1700775333682	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: 1103: Oracle Teleport
+1700775333700	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Christmas [state: deactivated]
+1700775333709	INFO	87	l2open.extensions.scripts.ScriptFile	Lindvior Manager Load.
+1700775333712	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Nobless sell
+1700775333720	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: SubClass sell
+1700775333720	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Border Outpost Doormans
+1700775333723	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Pushkin
+1700775333737	WARNING	87		Unevenly distributed hash code - Degraded Preformance
+1700775333737	INFO	87	l2open.extensions.scripts.ScriptFile	MarcketLoad Loaded...
+1700775333765	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
+1700775333769	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Successful
+1700775333791	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: Loaded 20 Mysterious-Box spawns.
+1700775333813	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 physical monsters spawns.
+1700775333843	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 magical monsters spawns.
+1700775333848	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 92 Church of duke monsters spawns.
+1700775333855	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 68 Emperor's grave NPC spawns.
+1700775333855	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Conquerors Sepulcher Manager
+1700775333856	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Emperors Sepulcher Manager
+1700775333856	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Great Sages Sepulcher Manager
+1700775333856	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Judges Sepulcher Manager
+1700775333857	WARNING	87	bosses.FourSepulchersManager	FourSepulchersManager: Beginning in Attack time
+1700775333861	INFO	87	events.RewardofHonor.RewardofHonor	Loaded Event: Reward of Honor [state: deactivated]
+1700775333861	WARNING	61	l2open.common.RunnableImpl	Fri Nov 24 00:35:33 MSK 2023 Atk announce scheduled to 35.0 minute of this hour.
+1700775333870	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: l2day [state: deactivated]
+1700775333873	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Mana Regen
+1700775333881	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Grand Isle of Prayer Race
+1700775333883	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Race Track
+1700775333892	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand CWH
+1700775333901	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Ride Hire
+1700775333916	INFO	87	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 54 Soul Crystal data.
+1700775333916	INFO	87	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 240 npc Leveling info data.
+1700775333921	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: March 8 [state: deactivated]
+1700775333930	INFO	87	bosses.ValakasManager	ValakasManager: State of Valakas is NOTSPAWN.
+1700775333930	INFO	87	bosses.ValakasManager	ValakasManager: Next spawn date of Valakas is 03:00 01.01.1970.
+1700775333938	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Giran Arena
+1700775333943	INFO	87	communityboard.CommunityBoardForge	CommunityBoard: Forge Enchant: false
+1700775333944	INFO	87	communityboard.CommunityBoardForge	CommunityBoard: Forge Attribut: false
+1700775333944	INFO	87	communityboard.CommunityBoardForge	CommunityBoard: Forge Augment: false
+1700775333951	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
+1700775333963	INFO	87	events.lastHero.LastHero	Loaded Event: Last Hero
+1700775333974	INFO	87	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
+1700775333978	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Fantasy Isle
+1700775333983	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: DropItem
+1700775333986	INFO	87	events.Simple.Simple	Loaded Event: Simple [state: deactivated]
+1700775333988	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Enter Hellbound Island
+1700775333991	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Level manipulation
+1700775333995	INFO	87	l2open.extensions.scripts.ScriptFile	BaiumManager: State of Baium is NOTSPAWN.
+1700775333995	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Boss: Baium. Next spawn date: Thu Jan 01 03:00:00 MSK 1970
+1700775333996	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Warehouse
+1700775334014	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Fort Info
+1700775348584	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
+1700775348584	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
+1700775348584	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
+1700775348584	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
+1700775348584	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
+1700775348584	INFO	60	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
+1700775515554	INFO	88	l2open.gameserver.clientpackets.L2GameClientPacket	SendBypassBuildCmd: admin
+1700775517871	INFO	85	communityboard.General	SimpleLottery: Store Jackpot
+1700775517875	INFO	85	com.mchange.v2.c3p0.stmt.GooGooStatementCache	Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='simple_loss_count'
+1700775517890	INFO	85	communityboard.CommunityBoardTeleport	Load 297 teleport points.
+1700775517900	INFO	85	communityboard.General	premiumLottery: Store Jackpot
+1700775517902	INFO	85	com.mchange.v2.c3p0.stmt.GooGooStatementCache	Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='premium_loss_count'
+1700775517907	INFO	85	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
+1700775517907	INFO	85	events.Simple.Simple	SpawnManager: despawned npc for event: Simple
+1700775517907	INFO	85	l2open.extensions.scripts.Scripts	Scripts loading...
+1700775517907	INFO	85	l2open.extensions.scripts.Scripts	Scripts start parse class...
+1700775518329	INFO	85	l2open.extensions.scripts.Scripts	Scripts end parse class...
+1700775522331	INFO	85	l2open.extensions.scripts.Scripts	Scripts end compile class...
+1700775523568	INFO	85	l2open.extensions.scripts.Scripts	Scripts successfully loaded. Loaded 1323 classes.
+1700775523594	INFO	85	communityboard.CommunityBoardShortStats	Short statistics in the commynity board has been updated.
+1700775523597	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: change sex services.
+1700775523597	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: change name services.
+1700775523597	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: change clan name services.
+1700775523597	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: change base class services.
+1700775523597	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: separate services.
+1700775523599	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Rabbits To Riches Event [state: deactivated]
+1700775523602	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1001: Wake Up Baium
+1700775523613	INFO	85	communityboard.General	CommunityBoard: Simple Lottery games loaded.
+1700775523615	INFO	85	communityboard.General	CommunityBoard: Simple Lottery games played 0.
+1700775523616	INFO	85	communityboard.General	CommunityBoard: Simple Lottery jackpot is 0 Adena.
+1700775523622	INFO	85	events.GvG.GvG	Loaded Event: GvG
+1700775523648	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: NPCBuffer [state: deactivated]
+1700775523657	INFO	85	l2open.extensions.scripts.ScriptFile	SailrenManager: State of Sailren is NOTSPAWN.
+1700775523657	INFO	85	l2open.extensions.scripts.ScriptFile	SailrenManager: Next spawn date of Sailren is Thu Jan 01 03:00:00 MSK 1970.
+1700775523660	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Bash [disabled]
+1700775523674	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Pagan Doormans
+1700775523689	INFO	85	bosses.BelethManager	Beleth Manager: Loaded successfuly
+1700775523695	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1004: Ice Fairy Sirra
+1700775523700	INFO	85	events.FightClub.FightClubManager	Loaded Event: Fight Club
+1700775523703	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1202: Crystal Caverns
+1700775523707	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Medal Collection Event [state: deactivated]
+1700775523726	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Roulette
+1700775523727	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Wolf
+1700775523730	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 3 [state: deactivated]
+1700775523732	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 2 [state: deactivated]
+1700775523732	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 1 [state: deactivated]
+1700775523751	INFO	85	communityboard.CommunityBoardTeleport	Load 297 teleport points.
+1700775523752	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Fantasy Isle
+1700775523754	INFO	85	bosses.AntharasManager	AntharasManager: State of Antharas is NOTSPAWN.
+1700775523755	INFO	85	bosses.AntharasManager	AntharasManager: Next spawn date of Antharas is 03:00 01.01.1970.
+1700775523760	INFO	85	events.Viktorina.Viktorina	Loaded Event: Victorina
+1700775523788	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Item Broker
+1700775523791	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Kookaburra
+1700775523793	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: Gludin Arena
+1700775523795	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Summon a corpse
+1700775523805	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: The Fall Harvest [state: deactivated]
+1700775523815	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1201: Dark Cloud Mansion
+1700775523823	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: Underground Arena #1
+1700775523827	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: MasterOfEnchanting [state: deactivated]
+1700775523837	INFO	85	events.CtF.CtF	Loaded Event: CtF active.
+1700775523846	INFO	85	l2open.extensions.scripts.ScriptFile	MonasteryOfSilence: Loaded
+1700775523855	INFO	85	l2open.extensions.scripts.ScriptFile	ZakenManager: Init Zaken Manager.
+1700775523859	INFO	85	communityboard.General	CommunityBoard: Premium Lottery games loaded.
+1700775523860	INFO	85	communityboard.General	CommunityBoard: Premium Lottery games played 0.
+1700775523862	INFO	85	communityboard.General	CommunityBoard: Premium Lottery jackpot is 0 Gold Einhasad.
+1700775523866	INFO	85	l2open.extensions.scripts.ScriptFile	OnActionShift Loaded
+1700775523870	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: Coffer of Shadows [state: deactivated]
+1700775523872	WARNING	85		Unevenly distributed hash code - Degraded Preformance
+1700775523878	INFO	85	l2open.extensions.scripts.ScriptFile	Kamaloka Gate Loaded
+1700775523881	INFO	85	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 180 Room1 1st Npc Spawn Locations.
+1700775523881	INFO	85	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 4 Room2 Inside Npc Spawn Locations.
+1700775523881	INFO	85	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 121 Room2 Outside Npc Spawn Locations.
+1700775523900	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Isle of Player Race
+1700775523902	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to catacombs
+1700775523903	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Clan Operations]
+1700775523912	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: NPC RemoveDeathPenalty
+1700775523913	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: VitaminManager...
+1700775523913	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: Change of Heart[state: deactivated]
+1700775523914	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Clan function.
+1700775523940	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Alliance Operations]
+1700775523946	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Cougar
+1700775523948	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Changing occupations]
+1700775523954	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: AutoAnnouncer [state: deactivated]
+1700775523963	INFO	85	l2open.extensions.scripts.ScriptFile	Utilites Loaded
+1700775523963	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Nick color change
+1700775523966	INFO	85	l2open.extensions.scripts.ScriptFile	MonasteryOfSilenceGame: Loaded
+1700775523977	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: ClanHall Pet Evolution
+1700775523999	INFO	85	events.LastHunter.LastHunter	Loaded Event: Last Hunter
+1700775524007	INFO	85	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
+1700775524012	INFO	85	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
+1700775524012	INFO	85	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
+1700775524012	INFO	85	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
+1700775524012	INFO	85	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
+1700775524012	INFO	85	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
+1700775524012	INFO	85	communityboard.CommunityBoardFullStats	Full statistics in the commynity board has been updated.
+1700775524014	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Inventory
+1700775524014	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1003: Sailren
+1700775524018	INFO	85	events.TvT.TvT	Loaded Event: TvT
+1700775524021	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Obtain Talisman
+1700775524023	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: SavingSnowman [state: deactivated]
+1700775524027	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Tower
+1700775524028	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: Dion Arena
+1700775524038	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Window
+1700775524057	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: The Flow Of The Horror [state: deactivated]
+1700775524059	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: Tournament [state: deactivated]
+1700775524082	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Bonus [state: deactivated]
+1700775524089	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Buffalo
+1700775524095	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Fenrir
+1700775524098	INFO	85	events.coins.coins	Loaded Event: L2Coins [state: deactivated]
+1700775524101	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: CWH Privileges
+1700775524107	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: Bounty Hunters Guild
+1700775524116	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Hero Items
+1700775524116	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: 1103: Oracle Teleport
+1700775524133	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: Christmas [state: deactivated]
+1700775524139	INFO	85	l2open.extensions.scripts.ScriptFile	Lindvior Manager Load.
+1700775524141	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Nobless sell
+1700775524148	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: SubClass sell
+1700775524149	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Border Outpost Doormans
+1700775524151	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Pushkin
+1700775524161	WARNING	85		Unevenly distributed hash code - Degraded Preformance
+1700775524161	INFO	85	l2open.extensions.scripts.ScriptFile	MarcketLoad Loaded...
+1700775524181	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
+1700775524184	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Successful
+1700775524211	WARNING	85	bosses.FourSepulchersSpawn	FourSepulchersManager: Loaded 20 Mysterious-Box spawns.
+1700775524227	WARNING	85	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 physical monsters spawns.
+1700775524241	WARNING	85	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 magical monsters spawns.
+1700775524245	WARNING	85	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 92 Church of duke monsters spawns.
+1700775524248	WARNING	85	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 68 Emperor's grave NPC spawns.
+1700775524249	WARNING	85	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Conquerors Sepulcher Manager
+1700775524249	WARNING	85	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Emperors Sepulcher Manager
+1700775524249	WARNING	85	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Great Sages Sepulcher Manager
+1700775524249	WARNING	85	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Judges Sepulcher Manager
+1700775524250	WARNING	85	bosses.FourSepulchersManager	FourSepulchersManager: Beginning in Attack time
+1700775524252	WARNING	63	l2open.common.RunnableImpl	Fri Nov 24 00:38:44 MSK 2023 Atk announce scheduled to 40.0 minute of this hour.
+1700775524254	INFO	85	events.RewardofHonor.RewardofHonor	Loaded Event: Reward of Honor [state: deactivated]
+1700775524260	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: l2day [state: deactivated]
+1700775524262	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Mana Regen
+1700775524269	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Grand Isle of Prayer Race
+1700775524270	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Race Track
+1700775524276	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand CWH
+1700775524284	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Ride Hire
+1700775524295	INFO	85	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 54 Soul Crystal data.
+1700775524296	INFO	85	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 240 npc Leveling info data.
+1700775524298	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: March 8 [state: deactivated]
+1700775524305	INFO	85	bosses.ValakasManager	ValakasManager: State of Valakas is NOTSPAWN.
+1700775524305	INFO	85	bosses.ValakasManager	ValakasManager: Next spawn date of Valakas is 03:00 01.01.1970.
+1700775524311	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Event: Giran Arena
+1700775524315	INFO	85	communityboard.CommunityBoardForge	CommunityBoard: Forge Enchant: false
+1700775524316	INFO	85	communityboard.CommunityBoardForge	CommunityBoard: Forge Attribut: false
+1700775524316	INFO	85	communityboard.CommunityBoardForge	CommunityBoard: Forge Augment: false
+1700775524321	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
+1700775524330	INFO	85	events.lastHero.LastHero	Loaded Event: Last Hero
+1700775524337	INFO	85	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
+1700775524341	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Fantasy Isle
+1700775524345	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: DropItem
+1700775524347	INFO	85	events.Simple.Simple	Loaded Event: Simple [state: deactivated]
+1700775524348	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Enter Hellbound Island
+1700775524350	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Level manipulation
+1700775524352	INFO	85	l2open.extensions.scripts.ScriptFile	BaiumManager: State of Baium is NOTSPAWN.
+1700775524352	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Boss: Baium. Next spawn date: Thu Jan 01 03:00:00 MSK 1970
+1700775524353	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Warehouse
+1700775524379	INFO	85	l2open.extensions.scripts.ScriptFile	Loaded Service: Fort Info
+1700775539015	INFO	63	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
+1700775539015	INFO	63	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
+1700775539015	INFO	63	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
+1700775539015	INFO	63	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
+1700775539015	INFO	63	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
+1700775539015	INFO	63	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
+1700776044034	INFO	85	l2open.gameserver.clientpackets.L2GameClientPacket	SendBypassBuildCmd: admin
+1700776046117	INFO	87	communityboard.General	SimpleLottery: Store Jackpot
+1700776046120	INFO	87	com.mchange.v2.c3p0.stmt.GooGooStatementCache	Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='simple_loss_count'
+1700776046126	INFO	87	communityboard.CommunityBoardTeleport	Load 297 teleport points.
+1700776046128	INFO	87	communityboard.General	premiumLottery: Store Jackpot
+1700776046131	INFO	87	com.mchange.v2.c3p0.stmt.GooGooStatementCache	Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='premium_loss_count'
+1700776046135	INFO	87	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
+1700776046136	INFO	87	events.Simple.Simple	SpawnManager: despawned npc for event: Simple
+1700776046136	INFO	87	l2open.extensions.scripts.Scripts	Scripts loading...
+1700776046136	INFO	87	l2open.extensions.scripts.Scripts	Scripts start parse class...
+1700776046634	INFO	87	l2open.extensions.scripts.Scripts	Scripts end parse class...
+1700776052362	INFO	87	l2open.extensions.scripts.Scripts	Scripts end compile class...
+1700776054493	INFO	87	l2open.extensions.scripts.Scripts	Scripts successfully loaded. Loaded 1323 classes.
+1700776054524	INFO	87	communityboard.CommunityBoardShortStats	Short statistics in the commynity board has been updated.
+1700776054527	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: change sex services.
+1700776054527	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: change name services.
+1700776054527	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: change clan name services.
+1700776054527	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: change base class services.
+1700776054527	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: separate services.
+1700776054529	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Rabbits To Riches Event [state: deactivated]
+1700776054531	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1001: Wake Up Baium
+1700776054542	INFO	87	communityboard.General	CommunityBoard: Simple Lottery games loaded.
+1700776054543	INFO	87	communityboard.General	CommunityBoard: Simple Lottery games played 0.
+1700776054544	INFO	87	communityboard.General	CommunityBoard: Simple Lottery jackpot is 0 Adena.
+1700776054550	INFO	87	events.GvG.GvG	Loaded Event: GvG
+1700776054574	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: NPCBuffer [state: deactivated]
+1700776054582	INFO	87	l2open.extensions.scripts.ScriptFile	SailrenManager: State of Sailren is NOTSPAWN.
+1700776054582	INFO	87	l2open.extensions.scripts.ScriptFile	SailrenManager: Next spawn date of Sailren is Thu Jan 01 03:00:00 MSK 1970.
+1700776054585	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Bash [disabled]
+1700776054600	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Pagan Doormans
+1700776054614	INFO	87	bosses.BelethManager	Beleth Manager: Loaded successfuly
+1700776054620	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1004: Ice Fairy Sirra
+1700776054625	INFO	87	events.FightClub.FightClubManager	Loaded Event: Fight Club
+1700776054628	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1202: Crystal Caverns
+1700776054632	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Medal Collection Event [state: deactivated]
+1700776054652	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Roulette
+1700776054652	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Wolf
+1700776054656	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 3 [state: deactivated]
+1700776054657	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 2 [state: deactivated]
+1700776054657	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 1 [state: deactivated]
+1700776054676	INFO	87	communityboard.CommunityBoardTeleport	Load 297 teleport points.
+1700776054676	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Fantasy Isle
+1700776054679	INFO	87	bosses.AntharasManager	AntharasManager: State of Antharas is NOTSPAWN.
+1700776054679	INFO	87	bosses.AntharasManager	AntharasManager: Next spawn date of Antharas is 03:00 01.01.1970.
+1700776054684	INFO	87	events.Viktorina.Viktorina	Loaded Event: Victorina
+1700776054712	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Item Broker
+1700776054715	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Kookaburra
+1700776054717	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Gludin Arena
+1700776054718	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Summon a corpse
+1700776054731	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: The Fall Harvest [state: deactivated]
+1700776054738	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1201: Dark Cloud Mansion
+1700776054746	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Underground Arena #1
+1700776054751	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: MasterOfEnchanting [state: deactivated]
+1700776054761	INFO	87	events.CtF.CtF	Loaded Event: CtF active.
+1700776054771	INFO	87	l2open.extensions.scripts.ScriptFile	MonasteryOfSilence: Loaded
+1700776054781	INFO	87	l2open.extensions.scripts.ScriptFile	ZakenManager: Init Zaken Manager.
+1700776054785	INFO	87	communityboard.General	CommunityBoard: Premium Lottery games loaded.
+1700776054786	INFO	87	communityboard.General	CommunityBoard: Premium Lottery games played 0.
+1700776054786	INFO	87	communityboard.General	CommunityBoard: Premium Lottery jackpot is 0 Gold Einhasad.
+1700776054813	INFO	87	l2open.extensions.scripts.ScriptFile	OnActionShift Loaded
+1700776054818	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Coffer of Shadows [state: deactivated]
+1700776054820	WARNING	87		Unevenly distributed hash code - Degraded Preformance
+1700776054826	INFO	87	l2open.extensions.scripts.ScriptFile	Kamaloka Gate Loaded
+1700776054829	INFO	87	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 180 Room1 1st Npc Spawn Locations.
+1700776054829	INFO	87	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 4 Room2 Inside Npc Spawn Locations.
+1700776054829	INFO	87	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 121 Room2 Outside Npc Spawn Locations.
+1700776054848	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Isle of Player Race
+1700776054850	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to catacombs
+1700776054851	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Clan Operations]
+1700776054861	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: NPC RemoveDeathPenalty
+1700776054861	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: VitaminManager...
+1700776054862	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Change of Heart[state: deactivated]
+1700776054863	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Clan function.
+1700776054903	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Alliance Operations]
+1700776054910	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Cougar
+1700776054913	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Changing occupations]
+1700776054918	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: AutoAnnouncer [state: deactivated]
+1700776054928	INFO	87	l2open.extensions.scripts.ScriptFile	Utilites Loaded
+1700776054929	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Nick color change
+1700776054931	INFO	87	l2open.extensions.scripts.ScriptFile	MonasteryOfSilenceGame: Loaded
+1700776054942	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: ClanHall Pet Evolution
+1700776054966	INFO	87	events.LastHunter.LastHunter	Loaded Event: Last Hunter
+1700776054977	INFO	87	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
+1700776054980	INFO	87	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
+1700776054981	INFO	87	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
+1700776054981	INFO	87	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
+1700776054981	INFO	87	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
+1700776054981	INFO	87	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
+1700776054981	INFO	87	communityboard.CommunityBoardFullStats	Full statistics in the commynity board has been updated.
+1700776054982	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Inventory
+1700776054983	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1003: Sailren
+1700776054987	INFO	87	events.TvT.TvT	Loaded Event: TvT
+1700776054990	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Obtain Talisman
+1700776054992	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: SavingSnowman [state: deactivated]
+1700776054996	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Tower
+1700776054997	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Dion Arena
+1700776055008	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Window
+1700776055018	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: The Flow Of The Horror [state: deactivated]
+1700776055021	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Tournament [state: deactivated]
+1700776055045	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Bonus [state: deactivated]
+1700776055051	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Buffalo
+1700776055058	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Fenrir
+1700776055061	INFO	87	events.coins.coins	Loaded Event: L2Coins [state: deactivated]
+1700776055064	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: CWH Privileges
+1700776055070	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Bounty Hunters Guild
+1700776055078	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Hero Items
+1700776055079	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: 1103: Oracle Teleport
+1700776055097	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Christmas [state: deactivated]
+1700776055102	INFO	87	l2open.extensions.scripts.ScriptFile	Lindvior Manager Load.
+1700776055105	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Nobless sell
+1700776055112	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: SubClass sell
+1700776055112	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Border Outpost Doormans
+1700776055115	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Pushkin
+1700776055125	WARNING	87		Unevenly distributed hash code - Degraded Preformance
+1700776055125	INFO	87	l2open.extensions.scripts.ScriptFile	MarcketLoad Loaded...
+1700776055148	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
+1700776055151	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Successful
+1700776055169	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: Loaded 20 Mysterious-Box spawns.
+1700776055186	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 physical monsters spawns.
+1700776055201	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 magical monsters spawns.
+1700776055206	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 92 Church of duke monsters spawns.
+1700776055210	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 68 Emperor's grave NPC spawns.
+1700776055210	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Conquerors Sepulcher Manager
+1700776055210	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Emperors Sepulcher Manager
+1700776055210	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Great Sages Sepulcher Manager
+1700776055210	WARNING	87	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Judges Sepulcher Manager
+1700776055213	WARNING	87	bosses.FourSepulchersManager	FourSepulchersManager: Beginning in Attack time
+1700776055216	INFO	87	events.RewardofHonor.RewardofHonor	Loaded Event: Reward of Honor [state: deactivated]
+1700776055216	WARNING	57	l2open.common.RunnableImpl	Fri Nov 24 00:47:35 MSK 2023 Atk announce scheduled to 50.0 minute of this hour.
+1700776055222	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: l2day [state: deactivated]
+1700776055225	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Mana Regen
+1700776055231	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Grand Isle of Prayer Race
+1700776055232	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Race Track
+1700776055239	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand CWH
+1700776055246	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Ride Hire
+1700776055259	INFO	87	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 54 Soul Crystal data.
+1700776055259	INFO	87	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 240 npc Leveling info data.
+1700776055261	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: March 8 [state: deactivated]
+1700776055268	INFO	87	bosses.ValakasManager	ValakasManager: State of Valakas is NOTSPAWN.
+1700776055268	INFO	87	bosses.ValakasManager	ValakasManager: Next spawn date of Valakas is 03:00 01.01.1970.
+1700776055576	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Event: Giran Arena
+1700776055661	INFO	87	communityboard.CommunityBoardForge	CommunityBoard: Forge Enchant: false
+1700776055661	INFO	87	communityboard.CommunityBoardForge	CommunityBoard: Forge Attribut: false
+1700776055661	INFO	87	communityboard.CommunityBoardForge	CommunityBoard: Forge Augment: false
+1700776055674	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
+1700776055683	INFO	87	events.lastHero.LastHero	Loaded Event: Last Hero
+1700776055690	INFO	87	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
+1700776055695	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Fantasy Isle
+1700776055700	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: DropItem
+1700776055702	INFO	87	events.Simple.Simple	Loaded Event: Simple [state: deactivated]
+1700776055703	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Enter Hellbound Island
+1700776055705	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Level manipulation
+1700776055707	INFO	87	l2open.extensions.scripts.ScriptFile	BaiumManager: State of Baium is NOTSPAWN.
+1700776055708	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Boss: Baium. Next spawn date: Thu Jan 01 03:00:00 MSK 1970
+1700776055708	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Warehouse
+1700776055725	INFO	87	l2open.extensions.scripts.ScriptFile	Loaded Service: Fort Info
+1700776081146	INFO	57	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
+1700776081147	INFO	57	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
+1700776081147	INFO	57	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
+1700776081147	INFO	57	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
+1700776081147	INFO	57	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
+1700776081147	INFO	57	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
+1700776170338	WARNING	88	l2open.gameserver.communitybbs.CommunityBoard	Error community: command='bbs_remove_buff 78 SIMPLE' Player='fakeSB':
+1700776174376	WARNING	84	l2open.gameserver.communitybbs.CommunityBoard	Error community: command='bbs_remove_buff 78 SIMPLE' Player='fakeSB':
+1700776226137	WARNING	86	l2open.gameserver.communitybbs.CommunityBoard	Error community: command='bbs_remove_buff 78 SIMPLE' Player='fakeSB':
+1700776226196	WARNING	61	l2open.common.RunnableImpl	FourSepulchersManager: Entry time: Fri Nov 24 00:55:26 MSK 2023
+1700776233859	WARNING	23	l2open.common.RunnableImpl	FourSepulchersManager: Entry time: Fri Nov 24 00:55:33 MSK 2023
+1700776235211	WARNING	62	l2open.common.RunnableImpl	FourSepulchersManager: Entry time: Fri Nov 24 00:55:35 MSK 2023
+1700776244251	WARNING	23	l2open.common.RunnableImpl	FourSepulchersManager: Entry time: Fri Nov 24 00:55:44 MSK 2023
+1700776297850	WARNING	88	l2open.gameserver.communitybbs.CommunityBoard	Error community: command='bbs_remove_buff 77 SIMPLE' Player='fakeSB':
+1700776352171	WARNING	83	l2open.gameserver.communitybbs.CommunityBoard	Error community: command='bbs_remove_buff 67 SIMPLE' Player='fakeSB':
+1700776363535	INFO	85	l2open.gameserver.clientpackets.L2GameClientPacket	SendBypassBuildCmd: admin
+1700776365872	INFO	83	communityboard.General	SimpleLottery: Store Jackpot
+1700776365874	INFO	83	com.mchange.v2.c3p0.stmt.GooGooStatementCache	Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='simple_loss_count'
+1700776365881	INFO	83	communityboard.CommunityBoardTeleport	Load 297 teleport points.
+1700776365882	INFO	83	communityboard.General	premiumLottery: Store Jackpot
+1700776365885	INFO	83	com.mchange.v2.c3p0.stmt.GooGooStatementCache	Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='premium_loss_count'
+1700776365914	INFO	83	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
+1700776365915	INFO	83	events.Simple.Simple	SpawnManager: despawned npc for event: Simple
+1700776365915	INFO	83	l2open.extensions.scripts.Scripts	Scripts loading...
+1700776365915	INFO	83	l2open.extensions.scripts.Scripts	Scripts start parse class...
+1700776366374	INFO	83	l2open.extensions.scripts.Scripts	Scripts end parse class...
+1700776369782	INFO	83	l2open.extensions.scripts.Scripts	Scripts end compile class...
+1700776371061	INFO	83	l2open.extensions.scripts.Scripts	Scripts successfully loaded. Loaded 1323 classes.
+1700776371086	INFO	83	communityboard.CommunityBoardShortStats	Short statistics in the commynity board has been updated.
+1700776371089	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: change sex services.
+1700776371089	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: change name services.
+1700776371089	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: change clan name services.
+1700776371089	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: change base class services.
+1700776371089	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: separate services.
+1700776371091	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Rabbits To Riches Event [state: deactivated]
+1700776371093	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1001: Wake Up Baium
+1700776371104	INFO	83	communityboard.General	CommunityBoard: Simple Lottery games loaded.
+1700776371104	INFO	83	communityboard.General	CommunityBoard: Simple Lottery games played 0.
+1700776371105	INFO	83	communityboard.General	CommunityBoard: Simple Lottery jackpot is 0 Adena.
+1700776371111	INFO	83	events.GvG.GvG	Loaded Event: GvG
+1700776371135	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: NPCBuffer [state: deactivated]
+1700776371143	INFO	83	l2open.extensions.scripts.ScriptFile	SailrenManager: State of Sailren is NOTSPAWN.
+1700776371143	INFO	83	l2open.extensions.scripts.ScriptFile	SailrenManager: Next spawn date of Sailren is Thu Jan 01 03:00:00 MSK 1970.
+1700776371146	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Bash [disabled]
+1700776371161	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Pagan Doormans
+1700776371175	INFO	83	bosses.BelethManager	Beleth Manager: Loaded successfuly
+1700776371180	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1004: Ice Fairy Sirra
+1700776371185	INFO	83	events.FightClub.FightClubManager	Loaded Event: Fight Club
+1700776371189	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1202: Crystal Caverns
+1700776371193	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Medal Collection Event [state: deactivated]
+1700776371212	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Roulette
+1700776371212	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Wolf
+1700776371216	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 3 [state: deactivated]
+1700776371217	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 2 [state: deactivated]
+1700776371217	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 1 [state: deactivated]
+1700776371236	INFO	83	communityboard.CommunityBoardTeleport	Load 297 teleport points.
+1700776371237	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Fantasy Isle
+1700776371239	INFO	83	bosses.AntharasManager	AntharasManager: State of Antharas is NOTSPAWN.
+1700776371239	INFO	83	bosses.AntharasManager	AntharasManager: Next spawn date of Antharas is 03:00 01.01.1970.
+1700776371245	INFO	83	events.Viktorina.Viktorina	Loaded Event: Victorina
+1700776371274	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Item Broker
+1700776371277	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Kookaburra
+1700776371279	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Gludin Arena
+1700776371281	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Summon a corpse
+1700776371291	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: The Fall Harvest [state: deactivated]
+1700776371298	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1201: Dark Cloud Mansion
+1700776371305	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Underground Arena #1
+1700776371310	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: MasterOfEnchanting [state: deactivated]
+1700776371321	INFO	83	events.CtF.CtF	Loaded Event: CtF active.
+1700776371330	INFO	83	l2open.extensions.scripts.ScriptFile	MonasteryOfSilence: Loaded
+1700776371338	INFO	83	l2open.extensions.scripts.ScriptFile	ZakenManager: Init Zaken Manager.
+1700776371342	INFO	83	communityboard.General	CommunityBoard: Premium Lottery games loaded.
+1700776371343	INFO	83	communityboard.General	CommunityBoard: Premium Lottery games played 0.
+1700776371344	INFO	83	communityboard.General	CommunityBoard: Premium Lottery jackpot is 0 Gold Einhasad.
+1700776371348	INFO	83	l2open.extensions.scripts.ScriptFile	OnActionShift Loaded
+1700776371352	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Coffer of Shadows [state: deactivated]
+1700776371354	WARNING	83		Unevenly distributed hash code - Degraded Preformance
+1700776371360	INFO	83	l2open.extensions.scripts.ScriptFile	Kamaloka Gate Loaded
+1700776371363	INFO	83	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 180 Room1 1st Npc Spawn Locations.
+1700776371363	INFO	83	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 4 Room2 Inside Npc Spawn Locations.
+1700776371363	INFO	83	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 121 Room2 Outside Npc Spawn Locations.
+1700776371381	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Isle of Player Race
+1700776371382	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to catacombs
+1700776371383	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Clan Operations]
+1700776371392	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: NPC RemoveDeathPenalty
+1700776371393	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: VitaminManager...
+1700776371393	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Change of Heart[state: deactivated]
+1700776371394	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Clan function.
+1700776371424	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Alliance Operations]
+1700776371429	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Cougar
+1700776371431	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Changing occupations]
+1700776371437	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: AutoAnnouncer [state: deactivated]
+1700776371445	INFO	83	l2open.extensions.scripts.ScriptFile	Utilites Loaded
+1700776371446	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Nick color change
+1700776371448	INFO	83	l2open.extensions.scripts.ScriptFile	MonasteryOfSilenceGame: Loaded
+1700776371459	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: ClanHall Pet Evolution
+1700776371481	INFO	83	events.LastHunter.LastHunter	Loaded Event: Last Hunter
+1700776371488	INFO	83	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
+1700776371493	INFO	83	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
+1700776371493	INFO	83	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
+1700776371493	INFO	83	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
+1700776371493	INFO	83	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
+1700776371493	INFO	83	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
+1700776371493	INFO	83	communityboard.CommunityBoardFullStats	Full statistics in the commynity board has been updated.
+1700776371495	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Inventory
+1700776371495	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1003: Sailren
+1700776371499	INFO	83	events.TvT.TvT	Loaded Event: TvT
+1700776371502	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Obtain Talisman
+1700776371504	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: SavingSnowman [state: deactivated]
+1700776371507	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Tower
+1700776371508	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Dion Arena
+1700776371519	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Window
+1700776371528	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: The Flow Of The Horror [state: deactivated]
+1700776371531	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Tournament [state: deactivated]
+1700776371553	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Bonus [state: deactivated]
+1700776371560	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Buffalo
+1700776371567	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Fenrir
+1700776371570	INFO	83	events.coins.coins	Loaded Event: L2Coins [state: deactivated]
+1700776371573	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: CWH Privileges
+1700776371580	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Bounty Hunters Guild
+1700776371588	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Hero Items
+1700776371588	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: 1103: Oracle Teleport
+1700776371605	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Christmas [state: deactivated]
+1700776371612	INFO	83	l2open.extensions.scripts.ScriptFile	Lindvior Manager Load.
+1700776371615	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Nobless sell
+1700776371621	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: SubClass sell
+1700776371622	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Border Outpost Doormans
+1700776371624	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Pushkin
+1700776371634	WARNING	83		Unevenly distributed hash code - Degraded Preformance
+1700776371634	INFO	83	l2open.extensions.scripts.ScriptFile	MarcketLoad Loaded...
+1700776371655	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
+1700776371657	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Successful
+1700776371675	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: Loaded 20 Mysterious-Box spawns.
+1700776371696	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 physical monsters spawns.
+1700776371716	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 magical monsters spawns.
+1700776371726	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 92 Church of duke monsters spawns.
+1700776371732	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 68 Emperor's grave NPC spawns.
+1700776371733	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Conquerors Sepulcher Manager
+1700776371733	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Emperors Sepulcher Manager
+1700776371733	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Great Sages Sepulcher Manager
+1700776371733	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Judges Sepulcher Manager
+1700776371734	WARNING	83	bosses.FourSepulchersManager	FourSepulchersManager: Beginning in Cooldown time
+1700776371734	WARNING	63	l2open.common.RunnableImpl	FourSepulchersManager: Entry time: Fri Nov 24 00:55:51 MSK 2023
+1700776371736	INFO	83	events.RewardofHonor.RewardofHonor	Loaded Event: Reward of Honor [state: deactivated]
+1700776371743	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: l2day [state: deactivated]
+1700776371745	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Mana Regen
+1700776371752	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Grand Isle of Prayer Race
+1700776371752	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Race Track
+1700776371758	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand CWH
+1700776371765	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Ride Hire
+1700776371776	INFO	83	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 54 Soul Crystal data.
+1700776371776	INFO	83	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 240 npc Leveling info data.
+1700776371779	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: March 8 [state: deactivated]
+1700776371785	INFO	83	bosses.ValakasManager	ValakasManager: State of Valakas is NOTSPAWN.
+1700776371786	INFO	83	bosses.ValakasManager	ValakasManager: Next spawn date of Valakas is 03:00 01.01.1970.
+1700776371793	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Giran Arena
+1700776371797	INFO	83	communityboard.CommunityBoardForge	CommunityBoard: Forge Enchant: false
+1700776371797	INFO	83	communityboard.CommunityBoardForge	CommunityBoard: Forge Attribut: false
+1700776371797	INFO	83	communityboard.CommunityBoardForge	CommunityBoard: Forge Augment: false
+1700776371803	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
+1700776371811	INFO	83	events.lastHero.LastHero	Loaded Event: Last Hero
+1700776371818	INFO	83	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
+1700776371822	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Fantasy Isle
+1700776371827	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: DropItem
+1700776371829	INFO	83	events.Simple.Simple	Loaded Event: Simple [state: deactivated]
+1700776371831	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Enter Hellbound Island
+1700776371832	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Level manipulation
+1700776371835	INFO	83	l2open.extensions.scripts.ScriptFile	BaiumManager: State of Baium is NOTSPAWN.
+1700776371836	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Boss: Baium. Next spawn date: Thu Jan 01 03:00:00 MSK 1970
+1700776371836	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Warehouse
+1700776371853	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Fort Info
+1700776377280	WARNING	84	l2open.gameserver.communitybbs.CommunityBoard	Error community: command='bbs_show_redact_scheme 38' Player='fakeSB':
+1700776386494	INFO	63	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
+1700776386494	INFO	63	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
+1700776386494	INFO	63	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
+1700776386494	INFO	63	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
+1700776386494	INFO	63	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
+1700776386494	INFO	63	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
+1700776409167	INFO	81	l2open.gameserver.clientpackets.L2GameClientPacket	SendBypassBuildCmd: admin
+1700776411397	INFO	83	communityboard.General	SimpleLottery: Store Jackpot
+1700776411399	INFO	83	com.mchange.v2.c3p0.stmt.GooGooStatementCache	Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='simple_loss_count'
+1700776411403	INFO	83	communityboard.CommunityBoardTeleport	Load 297 teleport points.
+1700776411420	INFO	83	communityboard.General	premiumLottery: Store Jackpot
+1700776411422	INFO	83	com.mchange.v2.c3p0.stmt.GooGooStatementCache	Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='premium_loss_count'
+1700776411425	INFO	83	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
+1700776411425	INFO	83	events.Simple.Simple	SpawnManager: despawned npc for event: Simple
+1700776411425	INFO	83	l2open.extensions.scripts.Scripts	Scripts loading...
+1700776411425	INFO	83	l2open.extensions.scripts.Scripts	Scripts start parse class...
+1700776411867	INFO	83	l2open.extensions.scripts.Scripts	Scripts end parse class...
+1700776414859	INFO	83	l2open.extensions.scripts.Scripts	Scripts end compile class...
+1700776416104	INFO	83	l2open.extensions.scripts.Scripts	Scripts successfully loaded. Loaded 1323 classes.
+1700776416129	INFO	83	communityboard.CommunityBoardShortStats	Short statistics in the commynity board has been updated.
+1700776416132	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: change sex services.
+1700776416132	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: change name services.
+1700776416133	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: change clan name services.
+1700776416133	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: change base class services.
+1700776416133	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: separate services.
+1700776416134	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Rabbits To Riches Event [state: deactivated]
+1700776416136	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1001: Wake Up Baium
+1700776416147	INFO	83	communityboard.General	CommunityBoard: Simple Lottery games loaded.
+1700776416147	INFO	83	communityboard.General	CommunityBoard: Simple Lottery games played 0.
+1700776416148	INFO	83	communityboard.General	CommunityBoard: Simple Lottery jackpot is 0 Adena.
+1700776416154	INFO	83	events.GvG.GvG	Loaded Event: GvG
+1700776416178	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: NPCBuffer [state: deactivated]
+1700776416186	INFO	83	l2open.extensions.scripts.ScriptFile	SailrenManager: State of Sailren is NOTSPAWN.
+1700776416186	INFO	83	l2open.extensions.scripts.ScriptFile	SailrenManager: Next spawn date of Sailren is Thu Jan 01 03:00:00 MSK 1970.
+1700776416189	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Bash [disabled]
+1700776416204	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Pagan Doormans
+1700776416219	INFO	83	bosses.BelethManager	Beleth Manager: Loaded successfuly
+1700776416224	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1004: Ice Fairy Sirra
+1700776416230	INFO	83	events.FightClub.FightClubManager	Loaded Event: Fight Club
+1700776416234	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1202: Crystal Caverns
+1700776416238	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: L2 Medal Collection Event [state: deactivated]
+1700776416259	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Roulette
+1700776416260	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Wolf
+1700776416263	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 3 [state: deactivated]
+1700776416264	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 2 [state: deactivated]
+1700776416265	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: TvT Arena 1 [state: deactivated]
+1700776416285	INFO	83	communityboard.CommunityBoardTeleport	Load 297 teleport points.
+1700776416286	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Fantasy Isle
+1700776416288	INFO	83	bosses.AntharasManager	AntharasManager: State of Antharas is NOTSPAWN.
+1700776416288	INFO	83	bosses.AntharasManager	AntharasManager: Next spawn date of Antharas is 03:00 01.01.1970.
+1700776416293	INFO	83	events.Viktorina.Viktorina	Loaded Event: Victorina
+1700776416322	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Item Broker
+1700776416325	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Kookaburra
+1700776416327	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Gludin Arena
+1700776416329	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Summon a corpse
+1700776416340	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: The Fall Harvest [state: deactivated]
+1700776416347	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1201: Dark Cloud Mansion
+1700776416355	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Underground Arena #1
+1700776416359	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: MasterOfEnchanting [state: deactivated]
+1700776416369	INFO	83	events.CtF.CtF	Loaded Event: CtF active.
+1700776416378	INFO	83	l2open.extensions.scripts.ScriptFile	MonasteryOfSilence: Loaded
+1700776416387	INFO	83	l2open.extensions.scripts.ScriptFile	ZakenManager: Init Zaken Manager.
+1700776416392	INFO	83	communityboard.General	CommunityBoard: Premium Lottery games loaded.
+1700776416393	INFO	83	communityboard.General	CommunityBoard: Premium Lottery games played 0.
+1700776416396	INFO	83	communityboard.General	CommunityBoard: Premium Lottery jackpot is 0 Gold Einhasad.
+1700776416402	INFO	83	l2open.extensions.scripts.ScriptFile	OnActionShift Loaded
+1700776416407	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Coffer of Shadows [state: deactivated]
+1700776416409	WARNING	83		Unevenly distributed hash code - Degraded Preformance
+1700776416415	INFO	83	l2open.extensions.scripts.ScriptFile	Kamaloka Gate Loaded
+1700776416418	INFO	83	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 180 Room1 1st Npc Spawn Locations.
+1700776416418	INFO	83	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 4 Room2 Inside Npc Spawn Locations.
+1700776416418	INFO	83	l2open.extensions.scripts.ScriptFile	LastImperialTombSpawnlist: Loaded 121 Room2 Outside Npc Spawn Locations.
+1700776416435	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Isle of Player Race
+1700776416437	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to catacombs
+1700776416438	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Clan Operations]
+1700776416448	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: NPC RemoveDeathPenalty
+1700776416448	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: VitaminManager...
+1700776416449	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Change of Heart[state: deactivated]
+1700776416450	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Clan function.
+1700776416479	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Alliance Operations]
+1700776416485	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Cougar
+1700776416487	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Villagemasters [Changing occupations]
+1700776416492	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: AutoAnnouncer [state: deactivated]
+1700776416501	INFO	83	l2open.extensions.scripts.ScriptFile	Utilites Loaded
+1700776416502	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Nick color change
+1700776416503	INFO	83	l2open.extensions.scripts.ScriptFile	MonasteryOfSilenceGame: Loaded
+1700776416515	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: ClanHall Pet Evolution
+1700776416540	INFO	83	events.LastHunter.LastHunter	Loaded Event: Last Hunter
+1700776416546	INFO	83	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
+1700776416551	INFO	83	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
+1700776416551	INFO	83	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
+1700776416551	INFO	83	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
+1700776416551	INFO	83	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
+1700776416551	INFO	83	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
+1700776416551	INFO	83	communityboard.CommunityBoardFullStats	Full statistics in the commynity board has been updated.
+1700776416553	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Inventory
+1700776416553	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Quest: 1003: Sailren
+1700776416558	INFO	83	events.TvT.TvT	Loaded Event: TvT
+1700776416561	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Obtain Talisman
+1700776416563	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: SavingSnowman [state: deactivated]
+1700776416566	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Tower
+1700776416567	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Dion Arena
+1700776416578	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Window
+1700776416587	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: The Flow Of The Horror [state: deactivated]
+1700776416591	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Tournament [state: deactivated]
+1700776416613	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Bonus [state: deactivated]
+1700776416620	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Improved Baby Buffalo
+1700776416626	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Evolve Fenrir
+1700776416629	INFO	83	events.coins.coins	Loaded Event: L2Coins [state: deactivated]
+1700776416632	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: CWH Privileges
+1700776416639	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Bounty Hunters Guild
+1700776416648	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Hero Items
+1700776416648	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: 1103: Oracle Teleport
+1700776416665	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Christmas [state: deactivated]
+1700776416672	INFO	83	l2open.extensions.scripts.ScriptFile	Lindvior Manager Load.
+1700776416674	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Nobless sell
+1700776416682	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: SubClass sell
+1700776416682	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Border Outpost Doormans
+1700776416685	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Pushkin
+1700776416695	WARNING	83		Unevenly distributed hash code - Degraded Preformance
+1700776416695	INFO	83	l2open.extensions.scripts.ScriptFile	MarcketLoad Loaded...
+1700776416717	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
+1700776416720	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Successful
+1700776416737	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: Loaded 20 Mysterious-Box spawns.
+1700776416757	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 physical monsters spawns.
+1700776416772	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 716 magical monsters spawns.
+1700776416776	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 92 Church of duke monsters spawns.
+1700776416782	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: loaded 68 Emperor's grave NPC spawns.
+1700776416782	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Conquerors Sepulcher Manager
+1700776416783	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Emperors Sepulcher Manager
+1700776416783	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Great Sages Sepulcher Manager
+1700776416783	WARNING	83	bosses.FourSepulchersSpawn	FourSepulchersManager: Spawned Judges Sepulcher Manager
+1700776416783	WARNING	83	bosses.FourSepulchersManager	FourSepulchersManager: Beginning in Cooldown time
+1700776416786	INFO	83	events.RewardofHonor.RewardofHonor	Loaded Event: Reward of Honor [state: deactivated]
+1700776416792	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: l2day [state: deactivated]
+1700776416799	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Mana Regen
+1700776416810	WARNING	23	l2open.common.RunnableImpl	FourSepulchersManager: Entry time: Fri Nov 24 00:55:36 MSK 2023
+1700776416810	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Grand Isle of Prayer Race
+1700776416811	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Teleport to Race Track
+1700776416817	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand CWH
+1700776416825	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Ride Hire
+1700776416838	INFO	83	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 54 Soul Crystal data.
+1700776416838	INFO	83	quests._350_EnhanceYourWeapon._350_EnhanceYourWeapon	[EnhanceYourWeapon] Loaded 240 npc Leveling info data.
+1700776416841	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: March 8 [state: deactivated]
+1700776416847	INFO	83	bosses.ValakasManager	ValakasManager: State of Valakas is NOTSPAWN.
+1700776416847	INFO	83	bosses.ValakasManager	ValakasManager: Next spawn date of Valakas is 03:00 01.01.1970.
+1700776416854	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Event: Giran Arena
+1700776416858	INFO	83	communityboard.CommunityBoardForge	CommunityBoard: Forge Enchant: false
+1700776416859	INFO	83	communityboard.CommunityBoardForge	CommunityBoard: Forge Attribut: false
+1700776416859	INFO	83	communityboard.CommunityBoardForge	CommunityBoard: Forge Augment: false
+1700776416864	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Rate bonus
+1700776416872	INFO	83	events.lastHero.LastHero	Loaded Event: Last Hero
+1700776416881	INFO	83	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
+1700776416885	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Fantasy Isle
+1700776416888	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: DropItem
+1700776416890	INFO	83	events.Simple.Simple	Loaded Event: Simple [state: deactivated]
+1700776416891	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Enter Hellbound Island
+1700776416893	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Level manipulation
+1700776416896	INFO	83	l2open.extensions.scripts.ScriptFile	BaiumManager: State of Baium is NOTSPAWN.
+1700776416896	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Boss: Baium. Next spawn date: Thu Jan 01 03:00:00 MSK 1970
+1700776416897	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Expand Warehouse
+1700776416914	INFO	83	l2open.extensions.scripts.ScriptFile	Loaded Service: Fort Info
+1700776429541	WARNING	82	l2open.gameserver.communitybbs.CommunityBoard	Error community: command='bbs_show_redact_scheme 38' Player='fakeSB':
+1700776431689	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29068 time=0
+1700776431689	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29020 time=0
+1700776431689	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29028 time=0
+1700776431689	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29062 time=0
+1700776431689	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29065 time=0
+1700776431689	INFO	62	communityboard.CommunityBoardFullStats	npc_id=29186 time=0
+1700776459488	INFO	57	l2open.common.RunnableImpl	=================================================
+1700776459488	INFO	57	l2open.common.RunnableImpl	Garbage Collector start.
+1700776459489	INFO	57	l2open.common.RunnableImpl	Players full online = 1
+1700776459489	INFO	57	l2open.common.RunnableImpl	Players online = 1
+1700776459489	INFO	57	l2open.common.RunnableImpl	Players offline = 0
+1700776459489	INFO	57	l2open.common.RunnableImpl	Players fake = 0
+1700776459489	INFO	57	l2open.common.RunnableImpl	Used to: 3107358Kb
+1700776466391	INFO	57	l2open.common.RunnableImpl	Garbage Collector finish(6902ms).
+1700776466391	INFO	57	l2open.common.RunnableImpl	Used after: 1819576Kb
+1700776466391	INFO	57	l2open.common.RunnableImpl	AllowedMemory: ........... 6087040 KB
+1700776466392	INFO	57	l2open.common.RunnableImpl	     Allocated: .......... 6087040 KB (100.0%)
+1700776466392	INFO	57	l2open.common.RunnableImpl	     Non-Allocated: ...... 0 KB (0.0%)
+1700776466392	INFO	57	l2open.common.RunnableImpl	AllocatedMemory: ......... 6087040 KB
+1700776466392	INFO	57	l2open.common.RunnableImpl	     Used: ............... 1819576 KB (29.8926%)
+1700776466392	INFO	57	l2open.common.RunnableImpl	     Unused (cached): .... 4267463 KB (70.1074%)
+1700776466392	INFO	57	l2open.common.RunnableImpl	UseableMemory: ........... 4267463 KB (70.1074%)
+1700776466392	INFO	57	l2open.common.RunnableImpl	=================================================
+1700776474905	WARNING	86	l2open.gameserver.communitybbs.CommunityBoard	Error community: command='bbs_show_redact_scheme 38' Player='fakeSB':

@@ -12,6 +12,9 @@ import l2open.gameserver.skills.*;
 import l2open.gameserver.skills.enums.*;
 import l2open.util.GArray;
 import l2open.util.Log;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 import java.io.File;
 import java.sql.ResultSet;
@@ -404,6 +407,21 @@ public class SkillTable
 			DatabaseUtils.closeDatabaseCSR(con, statement, rset);
 		}
 	}
+
+	public List<L2Skill> getSkills(L2Skill.SkillType skillType){
+		List<L2Skill> l2Skills = new ArrayList<>();
+		for (L2Skill[] sl : skills){
+			if(sl != null){
+				for (L2Skill skill: sl){
+					if (skill.getSkillType() == skillType){
+						l2Skills.add(skill);
+					}
+				}
+			}
+		}
+		return l2Skills;
+	}
+
 
 	/*
 	operate_type

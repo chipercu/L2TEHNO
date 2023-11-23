@@ -37,7 +37,10 @@ public class BuffCash {
         final List<Scheme> allScheme = schemeRepository.getAllScheme();
         for (Scheme scheme: allScheme){
             final List<SchemeBuff> schemeBuffs = schemeRepository.getSchemeBuffs(scheme.getId());
-            scheme.getBuffs().addAll(schemeBuffs);
+
+            for (SchemeBuff schemeBuff: schemeBuffs){
+                scheme.getBuffs().put(schemeBuff.getIndex(), schemeBuff);
+            }
 
             Map<Integer, Scheme> schemeMap = new HashMap<>();
             schemeMap.put(scheme.getId(), scheme);

@@ -6,6 +6,13 @@ import communityboard.models.buffer.Scheme;
 import communityboard.models.buffer.SchemeBuff;
 import communityboard.repository.buffer.BuffRepository;
 import communityboard.repository.buffer.SchemeRepository;
+import l2open.config.ConfigValue;
+import l2open.extensions.multilang.CustomMessage;
+import l2open.gameserver.model.*;
+import l2open.gameserver.skills.Env;
+import l2open.gameserver.skills.effects.EffectTemplate;
+import l2open.gameserver.tables.ReflectionTable;
+import l2open.gameserver.tables.SkillTable;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -15,7 +22,6 @@ public class BuffService {
     private final BuffRepository buffRepository;
     private final SchemeRepository schemeRepository;
     private final BuffCash buffCash;
-    private static final int SYSTEM_LISTS = -1;
 
     public BuffService() {
         this.buffRepository = new BuffRepository();
@@ -48,7 +54,10 @@ public class BuffService {
         buffCash.removeBuff(buff.getId());
         final List<Scheme> allSchemes = buffCash.getAllSchemes();
         for (Scheme scheme : allSchemes){
-            scheme.getBuffs().
+            scheme.getBuffs().values().stream()
+                    .filter(schemeBuff -> schemeBuff.getBuff_id() == buff.getId())
+                    .filter(schemeBuff -> schemeBuff.getScheme_id() == scheme.getId())
+                    .forEach(schemeBuff -> scheme.getBuffs().remove(schemeBuff.getIndex()));
         }
     }
 
@@ -114,6 +123,25 @@ public class BuffService {
             return;
         }
 
+        final List<Buff> buffList = scheme.getBuffs().values().stream()
+                .map(schemeBuff -> getBuff(schemeBuff.getBuff_id())).collect(Collectors.toList());
+
+
+
+
+        if (buff.isSong()){
+            final long songCount = buffList.stream().filter(Buff::isSong).count();
+            if (songCount >= ConfigValue.SongLimit){
+                return;
+            }
+        }else {
+            final long buffCount = buffList.stream().filter(b -> !b.isSong()).count();
+            if (buffCount >= ConfigValue.BuffLimit){
+                return;
+            }
+        }
+
+
         SchemeBuff schemeBuff;
         if (schemeRepository.getSchemeBuff(schemeId, index).isPresent()){
             schemeBuff = schemeRepository.updateSchemeBuff(scheme, buff, index);
@@ -122,19 +150,90 @@ public class BuffService {
         }
 
         if (schemeBuff != null){
-            buffCash.getScheme(scheme.getOwner(), scheme.getId()).getBuffs().add(schemeBuff);
+            buffCash.getScheme(scheme.getOwner(), scheme.getId()).getBuffs().put(schemeBuff.getIndex(), schemeBuff);
         }
     }
 
-    public void removeBuffFromScheme(Scheme scheme, int buffId) {
-        schemeRepository.removeSchemeBuff(scheme.getId(), buffId);
-
-        final Optional<SchemeBuff> first = scheme.getBuffs().stream()
-                .filter(schemeBuff -> schemeBuff.getBuff_id() == buffId)
-                .findFirst();
-
-        first.ifPresent(schemeBuff -> scheme.getBuffs().remove(schemeBuff));
+    public void removeBuffFromScheme(Scheme scheme, int index) {
+        schemeRepository.removeSchemeBuff(scheme.getId(), index);
+        buffCash.getScheme(scheme.getOwner(), scheme.getId()).getBuffs().remove(index);
     }
+
+
+
+    public void castBuff(L2Player player, String[] args) {
+        int buffId = Integer.parseInt(args[0]);
+        String target = args[1];
+        final Buff buff = getBuff(buffId);
+        if (buff == null) {
+            return;
+        }
+
+
+        if (checkPlayerLevel(player)) {
+            player.sendMessage("Баффер доступен для игроков с уровней не ниже " + ConfigValue.BufferMinLevel + " и не выше " + ConfigValue.BufferMaxLevel + ".");
+            return;
+        }
+        L2Playable playable = null;
+        if ("Player".equals(target)) {
+            playable = player;
+        } else if ("Pet".equals(target)) {
+            playable = player.getPet();
+        }
+
+        if (playable == null) {
+            return;
+        }
+        applyBuff(player, buff.getSkill_id(), buff.getSkill_level(), target);
+    }
+
+    public void applyBuff(L2Player player, long id, long level, String target) {
+        L2Skill skill = SkillTable.getInstance().getInfo((int) id, (int) level);
+        L2Playable playable = null;
+        if ("Player".equals(target)) {
+            playable = player;
+        } else if ("Pet".equals(target)) {
+            playable = player.getPet();
+        }
+        if (playable == null) {
+            return;
+        }
+        final double hp = playable.getCurrentHp();
+        final double mp = playable.getCurrentMp();
+        final double cp = playable.getCurrentCp();
+
+        if (!skill.checkSkillAbnormal(playable) && !skill.isBlockedByChar(playable, skill)) {
+            for (EffectTemplate et : skill.getEffectTemplates()) {
+                int result;
+                Env env = new Env(playable, playable, skill);
+                L2Effect effect = et.getEffect(env);
+                if (effect != null && effect.getCount() == 1 && effect.getTemplate()._instantly && !effect.getSkill().isToggle()) {
+                    effect.onStart();
+                    effect.onActionTime();
+                    effect.onExit();
+                } else if (effect != null && !effect.getEffected().p_block_buff.get()) {
+                    if (ConfigValue.BufferTime > 0)
+                        effect.setPeriod(ConfigValue.BufferTime * 60000L);
+                    if ((result = playable.getEffectList().addEffect(effect)) > 0) {
+                        if ((result & 2) == 2)
+                            playable.setCurrentHp(hp, false);
+                        if ((result & 4) == 4)
+                            playable.setCurrentMp(mp);
+                        if ((result & 8) == 8)
+                            playable.setCurrentCp(cp);
+                    }
+                }
+            }
+        }
+        playable.updateEffectIcons();
+    }
+
+    private static boolean checkPlayerLevel(L2Playable playable) {
+        return playable.isPlayer() && (playable.getLevel() < ConfigValue.BufferMinLevel || playable.getLevel() > ConfigValue.BufferMaxLevel);
+    }
+
+
+
 
 
 }

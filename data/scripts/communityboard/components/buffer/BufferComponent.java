@@ -20,22 +20,22 @@ import l2open.gameserver.model.L2Player;
 import l2open.gameserver.model.L2Skill;
 import l2open.gameserver.model.L2Zone.ZoneType;
 import l2open.gameserver.serverpackets.ShowBoard;
+import l2open.gameserver.serverpackets.TutorialShowHtml;
 import l2open.gameserver.skills.Env;
 import l2open.gameserver.skills.effects.EffectTemplate;
 import l2open.gameserver.tables.ReflectionTable;
 import l2open.gameserver.tables.SkillTable;
-import l2open.util.EffectsComparator;
 import l2open.util.Files;
-import l2open.util.Util;
+import l2open.util.Rnd;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static communityboard.html.buffer.Elements.*;
 import static l2open.common.Html_Constructor.tags.parameters.Parameters.*;
 import static l2open.gameserver.communitybbs.Manager.BaseBBSManager.addCustomReplace;
+import static l2open.gameserver.model.L2Skill.SkillTargetType.*;
 
 public class BufferComponent {
 
@@ -98,103 +98,20 @@ public class BufferComponent {
         return controlButtons;
     }
 
-//    public void showCreateReadySet(L2Player player, String[] args) {
-//        String schemeName = args[0];
-//        Long owner = Long.parseLong(args[1]);
-//
-//        if (!player.isGM()) {
-//            showMainPage(player);
-//            return;
-//        }
-//
-//        final Scheme scheme = buffService.getScheme(owner, schemeName).get();
-//
-//        final List<SchemeBuff> buffModelList = scheme.getBuffs();
-//        int rows = (int) Math.ceil((ConfigValue.BuffLimit + 10) / 12.0);
-//        final Table buffsTable = new Table(rows, 12).setParams(cellpadding(0), cellspacing(0));
-//
-//        final List<Buff> buffs = buffModelList.stream()
-//                .filter(buffModel -> !SkillTable.getInstance().getInfo((int) buffModel.getSkill_id(), (int) buffModel.getSkill_level()).isMusic())
-//                .collect(Collectors.toList());
-//        int index = 0;
-//        for (int i = 0; i< buffsTable.getRows().size() ; i++){
-//            Row row = buffsTable.row(i);
-//            for (int j = 0; j <  row.getColumns().size(); j++){
-//                Col col = row.getColumns().get(j);
-//                String icon = "L2UI_CT1.Windows_DF_Drawer_Bg";
-//                int currentIndex = 9999;
-//                try {
-//                    icon = buffs.get(index).getIcon();
-//                    currentIndex = buffs.get(index).getList_index();
-//                }catch (Exception ignore){}
-//
-//                final Table table = new Table(4, 1).setParams(cellpadding(0), cellspacing(0));
-//                col.setParams(align(Position.CENTER)).insert(new Img(icon).build());
-//                col.setParams(height(10));
-//                col.insert(controlButtons(scheme.getList_type(), currentIndex,  index != 0 && index < buffs.size(), index < buffs.size(), index < buffs.size() - 1).build());
-//                col.setParams(height(10));
-//                col.insert(table.build());
-//                index++;
-//            }
-//        }
-//
-//        final List<Buff> songs = buffModelList.stream()
-//                .filter(buffModel -> SkillTable.getInstance().getInfo(buffModel.getSkill_id(), buffModel.getSkill_level()).isMusic())
-//                .collect(Collectors.toList());
-//
-//        index = 0;
-//        final Table songsTable = new Table(2, ConfigValue.SongLimit).setParams(cellpadding(1), cellspacing(1));
-//        for (int i = 0; i < ConfigValue.SongLimit; i++){
-//            String icon = "L2UI_CT1.Windows_DF_Drawer_Bg";
-//            int currentIndex = 9999;
-//            try {
-//                icon = songs.get(index).getIcon();
-//                currentIndex = songs.get(index).getList_index();
-//            }catch (Exception ignore){}
-//
-//            songsTable.row(0).col(i).setParams(align(Position.CENTER)).insert(new Img(icon).build());
-//            songsTable.row(1).col(i).insert(controlButtons(scheme.getList_type(), currentIndex, index != 0 && index < songs.size(), index < songs.size(), index < songs.size() - 1).build());
-//            index++;
-//        }
-//
-//        final Table table = new Table(5, 1);
-//        table.row(0).col(0).insert(buffsTable.build());
-//        table.row(1).col(0).setParams(height(10));
-//        table.row(2).col(0).insert(songsTable.build());
-//        table.row(3).col(0);
-//
-//
-//        final Table readyListButtons = new Table(1, 4);
-//        readyListButtons.row(0).col(0).setParams(width(100));
-//        readyListButtons.row(0).col(1).setParams(width(200)).insert(new Button("simpleList", action(""), 100, 20).build());
-//        readyListButtons.row(0).col(2).setParams(width(200)).insert(new Button("simpleList", action(""), 100, 20).build());
-//        readyListButtons.row(0).col(3);
-////        table.row(4).col(0).insert(readyListButtons.build());
-//
-//        final String editPage = Files.read("data/scripts/services/PremiumBuffer/editSchemaTable.htm")
-//                .replace("%title%", "Конструктор набора баффов")
-//                .replace("%readySet%", table.build())
-//                .replace("%buttons%", readyListButtons.build());
-//
-//        ShowBoard.separateAndSend(addCustomReplace(editPage), player);
-//
-//    }
-
     public void castScheme(L2Player player, String[] args) {
-        String schemeName = args[0];
-        int owner = Integer.parseInt(args[1]);
-        String target = args[2];
+        int schemeId = Integer.parseInt(args[0]);
+        String target = args[1];
 
-        final Optional<Scheme> scheme = buffService.getScheme(owner, schemeName);
+        final Scheme scheme = buffService.getScheme(schemeId);
 
-        if (scheme.isPresent()){
-            final List<SchemeBuff> buffs = scheme.get().getBuffs();
-            for (SchemeBuff schemeBuff : buffs) {
+        if (scheme != null){
+            final List<SchemeBuff> schemeBuffs = scheme.getBuffs().values().stream().sorted(Comparator.comparingInt(SchemeBuff::getIndex)).collect(Collectors.toList());
+            for (SchemeBuff schemeBuff : schemeBuffs) {
                 Buff buff = buffService.getBuff(schemeBuff.getBuff_id());
                 if (player.getBonus().RATE_XP <= 1) {
-                    applyBuff(player, buff.getSkill_id(), buff.getSkill_level(), target);
+                    buffService.applyBuff(player, buff.getSkill_id(), buff.getSkill_level(), target);
                 }
-                applyBuff(player, buff.getSkill_id(), buff.getSkill_level(), target);
+                buffService.applyBuff(player, buff.getSkill_id(), buff.getSkill_level(), target);
             }
         }
         showMainPage(player);
@@ -208,12 +125,12 @@ public class BufferComponent {
             html = html.replace("%price%", String.valueOf(bufferPriceOne));
             html = html.replace("%time%", String.valueOf(bufferTime));
             html = html.replace("%scheme%", getSystemSchemes(player));
-            html = html.replace("%buffgrps%", getSaveSchemes(player));
+            html = html.replace("%buffgrps%", getPersonalSchemes(player));
         }
         ShowBoard.separateAndSend(addCustomReplace(html), player);
     }
 
-    private String getSaveSchemes(L2Player player) {
+    private String getPersonalSchemes(L2Player player) {
         final List<Scheme> schemes = buffService.getSchemes(player.getObjectId());
         if (schemes == null){
             return "";
@@ -222,8 +139,8 @@ public class BufferComponent {
         final Table table = new Table(schemes.size() + 1 , 3);
         for (int i = 0; i < schemes.size(); i++) {
             final Scheme scheme = schemes.get(i);
-            table.row(i).col(0).insert(new Button(scheme.getName(), action("bypass -h bbs_cast_save_set " + + scheme.getOwner() + " " + scheme.getId() + " $Who"), 130, 32).build());
-            table.row(i).col(1).insert(new Button("@", action("bypass -h bbs_show_redact_scheme " + scheme.getOwner() + " " + scheme.getId()), 32, 32).build());
+            table.row(i).col(0).insert(new Button(scheme.getName(), action("bypass -h bbs_cast_save_set " + scheme.getId() + " $Who"), 130, 32).build());
+            table.row(i).col(1).insert(new Button("@", action("bypass -h bbs_show_redact_scheme " + scheme.getId()), 32, 32).build());
             table.row(i).col(2).insert(new Button("-", action("bypass -h bbs_remove_scheme " + scheme.getOwner() + " " + scheme.getId()), 32, 32).build());
         }
         table.row(schemes.size()).col(0).insert(new Edit("addScheme", 130, 20, EditType.text, 20).build());
@@ -237,9 +154,9 @@ public class BufferComponent {
         final Table table = new Table(systemSchemes.size() + 1, 3);
         int index = 0;
         for (Scheme scheme : systemSchemes) {
-            table.row(index).col(0).insert(new Button(scheme.getName(), action("bypass -h bbs_cast_scheme " + scheme.getId() + " " + scheme.getOwner() + " $Who"), 130, 32).build());
+            table.row(index).col(0).insert(new Button(scheme.getName(), action("bypass -h bbs_cast_scheme " + scheme.getId() + " $Who"), 130, 32).build());
             if (player.isGM()) {
-                table.row(index).col(1).insert(new Button("@", action("bypass -h bbs_show_ready_set " + scheme.getId()), 32, 32).build());
+                table.row(index).col(1).insert(new Button("@", action("bypass -h bbs_show_redact_scheme " + scheme.getId()), 32, 32).build());
                 table.row(index).col(2).insert(new Button("-", action("bypass -h bbs_remove_scheme " + scheme.getOwner() + " " + scheme.getId()), 32, 32).build());
             }
         }
@@ -258,6 +175,10 @@ public class BufferComponent {
     }
 
     public void showAllBuffs(L2Player player, String[] args) {
+        if (!player.isGM()){
+            return;
+        }
+
         String list_type = args[0];
         final Table main = new Table(3, 1);
         final Table header = new Table(1, 5);
@@ -312,39 +233,12 @@ public class BufferComponent {
         if (!player.isGM()) {
             return;
         }
-        int buff_id = Integer.parseInt(args[0]);
-        int buff_level = Integer.parseInt(args[1]);
-        String type = args[2];
+        int schemeId = Integer.parseInt(args[0]);
+        int buffId = Integer.parseInt(args[1]);
+        int index = Integer.parseInt(args[2]);
 
-        final L2Skill skill = SkillTable.getInstance().getInfo(buff_id, buff_level);
-        if (skill != null){
-            new Buff(skill, type);
-        }
-
-
-
-//        if (list_type.equals("ORDINARY") || list_type.equals("PREMIUM")){
-//            owner = SYSTEM_LISTS;
-//        }
-//
-//        final L2Skill skill = SkillTable.getInstance().getInfo(buff_id, buff_level);
-//        if (skill == null) {
-//            return;
-//        }
-//        final int index = buffService.getBuffsList(list_type, owner).getBuffList().size();
-//
-//
-//
-//        final Buff buffModel = new Buff(skill, list_type, owner, index);
-//        buffService.createBuff(buffModel, owner);
-        showBuffs(player, new String[]{type});
-    }
-
-    private long getOwner(String list_type, L2Player player){
-        if (list_type.equals("ORDINARY") || list_type.equals("PREMIUM")){
-            return  SYSTEM_LISTS;
-        }
-        return player.getObjectId();
+        buffService.addBuffInScheme(schemeId, buffId, index);
+        showRedactScheme(player, args);
     }
 
     public void removeBuffFromScheme(String[] args, L2Player player) {
@@ -352,7 +246,7 @@ public class BufferComponent {
             showMainPage(player);
             return;
         }
-        int buffId = Integer.parseInt(args[0]);
+        int index = Integer.parseInt(args[0]);
         String schemeName = args[1];
         int owner = Integer.parseInt(args[2]);
 
@@ -360,36 +254,42 @@ public class BufferComponent {
 
         if (optionalScheme.isPresent()) {
             final Scheme scheme = optionalScheme.get();
-            buffService.removeBuffFromScheme(scheme, buffId);
-            showBuffs(player, new String[]{schemeName});
-        }else {
-            showBuffs(player, new String[]{schemeName});
+            buffService.removeBuffFromScheme(scheme, index);
+            showRedactScheme(player, new String[]{String.valueOf(scheme.getId())});
         }
-
     }
 
-    public void saveScheme(L2Player player, String[] args) {
-        String schemeName = args[0];
-        if (schemeName == null || schemeName.isEmpty()) {
+    public void createScheme(L2Player player, String[] args, int owner) {
+        if (args == null || args.length < 1){
             return;
         }
-        if (!Util.isMatchingRegexp(schemeName, "([0-9A-Za-z]{1,16})|([0-9\u0410-\u044f]{1,16})")) {
-            player.sendMessage("Символы запрещены.");
-            return;
+        StringBuilder schemeName = new StringBuilder();
+        for (String s: args){
+            if (s == null){
+                continue;
+            }
+            schemeName.append(s).append(" ");
         }
-        L2Effect[] effects = player.getEffectList().getAllFirstEffects();
-        Arrays.sort(effects, EffectsComparator.getInstance());
-
-        final Optional<Scheme> schemeOptional = buffService.getScheme(player.getObjectId(), schemeName);
+        final Optional<Scheme> schemeOptional = buffService.getScheme(owner, schemeName.toString());
         if (schemeOptional.isPresent()){
             player.sendMessage("Это название уже занято.");
             return;
         }else {
-            final Scheme scheme = new Scheme(player.getObjectId(), schemeName);
+            final Scheme scheme = new Scheme(owner, schemeName.toString());
             buffService.createScheme(scheme);
         }
         showMainPage(player);
+    }
 
+    public void createPersonalScheme(L2Player player, String[] args){
+        createScheme(player, args, player.getObjectId());
+    }
+
+    public void createSystemScheme(L2Player player, String[] args) {
+        if (!player.isGM()){
+            return;
+        }
+        createScheme(player, args, SYSTEM_LISTS);
     }
 
     public void showBuffs(L2Player player, String[] args) {
@@ -428,77 +328,9 @@ public class BufferComponent {
         ShowBoard.separateAndSend(addCustomReplace(html), player);
     }
 
-    private static boolean checkPlayerLevel(L2Playable playable) {
-        return playable.isPlayer() && (playable.getLevel() < ConfigValue.BufferMinLevel || playable.getLevel() > ConfigValue.BufferMaxLevel);
-    }
-
-    public void castBuff(L2Player player, String[] args) {
-        int buffId = Integer.parseInt(args[0]);
-        String target = args[1];
-
-        final Buff buff = buffService.getBuff(buffId);
-        if (buff == null) {
-            return;
-        }
 
 
-        if (checkPlayerLevel(player)) {
-            player.sendMessage("Баффер доступен для игроков с уровней не ниже " + ConfigValue.BufferMinLevel + " и не выше " + ConfigValue.BufferMaxLevel + ".");
-            return;
-        }
-        L2Playable playable = null;
-        if ("Player".equals(target)) {
-            playable = player;
-        } else if ("Pet".equals(target)) {
-            playable = player.getPet();
-        }
 
-        if (playable == null) {
-            return;
-        }
-        applyBuff(player, buff.getSkill_id(), buff.getSkill_level(), target);
-    }
-
-    private static void applyBuff(L2Player player, long id, long level, String target) {
-        L2Skill skill = SkillTable.getInstance().getInfo((int) id, (int) level);
-        L2Playable playable = null;
-        if ("Player".equals(target)) {
-            playable = player;
-        } else if ("Pet".equals(target)) {
-            playable = player.getPet();
-        }
-        if (playable == null) {
-            return;
-        }
-        final double hp = playable.getCurrentHp();
-        final double mp = playable.getCurrentMp();
-        final double cp = playable.getCurrentCp();
-
-        if (!skill.checkSkillAbnormal(playable) && !skill.isBlockedByChar(playable, skill)) {
-            for (EffectTemplate et : skill.getEffectTemplates()) {
-                int result;
-                Env env = new Env(playable, playable, skill);
-                L2Effect effect = et.getEffect(env);
-                if (effect != null && effect.getCount() == 1 && effect.getTemplate()._instantly && !effect.getSkill().isToggle()) {
-                    effect.onStart();
-                    effect.onActionTime();
-                    effect.onExit();
-                } else if (effect != null && !effect.getEffected().p_block_buff.get()) {
-                    if (ConfigValue.BufferTime > 0)
-                        effect.setPeriod(ConfigValue.BufferTime * 60000L);
-                    if ((result = playable.getEffectList().addEffect(effect)) > 0) {
-                        if ((result & 2) == 2)
-                            playable.setCurrentHp(hp, false);
-                        if ((result & 4) == 4)
-                            playable.setCurrentMp(mp);
-                        if ((result & 8) == 8)
-                            playable.setCurrentCp(cp);
-                    }
-                }
-            }
-        }
-        playable.updateEffectIcons();
-    }
 
     private List<Integer> loadAllBuffs(L2Player player) {
         ArrayList<Integer> list = new ArrayList<>();
@@ -508,69 +340,29 @@ public class BufferComponent {
         }
         return list;
     }
+    private List<Integer> getAllBuffs(){
+        final List<L2Skill> skills = SkillTable.getInstance().getSkills(L2Skill.SkillType.BUFF);
 
-    private boolean check_event(L2Player player) {
-        switch (player.isInEvent()) {
-            case 1:
-                return ConfigValue.FightClubBattleUseBuffer;
-            case 2:
-                return ConfigValue.LastHeroBattleUseBuffer;
-            case 3:
-                return ConfigValue.CaptureTheFlagBattleUseBuffer;
-            case 4:
-                return ConfigValue.TeamvsTeamBattleUseBuffer;
-            case 5:
-                return ConfigValue.TournamentBattleUseBuffer;
-            case 6:
-                return ConfigValue.EventBoxUseBuffer;
-            case 11:
-                return player.getEventMaster().state == 1;
-            case 12:
-                return ConfigValue.Tournament_UseBuffer;
-            case 13:
-                return ConfigValue.DeathMatchUseBuffer;
+        HashSet<Integer> set = new HashSet<>();
+
+        for (L2Skill skill: skills){
+            final L2Skill.SkillTargetType targetType = skill.getTargetType();
+            if (targetType == TARGET_ONE
+                    || targetType == TARGET_PARTY
+                    || targetType == TARGET_PARTY_ONE
+                    || targetType == TARGET_CLAN
+                    || targetType == TARGET_CLAN_ONLY
+                    || targetType == TARGET_COMMAND_CHANEL
+            ){
+                set.add(skill.getId());
+            }
         }
-        return false;
+        return new ArrayList<>(set);
     }
 
-    public boolean check(L2Player player) {
-        if (player == null)
-            return false;
-        else if (player.isGM())
-            return true;
-        else if (player.isInOlympiadMode()) {
-            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
-            return false;
-        } else if (player.getReflection().getId() != ReflectionTable.DEFAULT && !ConfigValue.BufferInInstance && !check_event(player)) {
-            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
-            return false;
-        } else if (player.isInDuel()) {
-            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
-            return false;
-        } else if (player.isInCombat() && !ConfigValue.BufferInCombat) {
-            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
-            return false;
-        } else if ((player.isOnSiegeField() || player.isInZoneBattle()) && !ConfigValue.BufferOnSiege && player.isInEvent() != 5 && !check_event(player)) {
-            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
-            return false;
-        } else if (player.isInEvent() > 0 && !check_event(player)) {
-            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
-            return false;
-        } else if (player.isFlying()) {
-            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
-            return false;
-        } else if (player.isInWater() && !ConfigValue.BufferInWater) {
-            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
-            return false;
-        } else if (player.isDead() || player.isMovementDisabled() || player.isAlikeDead() || player.isCastingNow() || player.isAttackingNow() || player.getVar("jailed") != null || player.isCombatFlagEquipped() || player.isTerritoryFlagEquipped()) {
-            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
-            return false;
-        } else if (ConfigValue.BufferOnlyPeace && !player.isInZone(ZoneType.peace_zone) && !player.isInZone(ZoneType.epic) && player.getReflection().getId() == ReflectionTable.DEFAULT) {
-            player.sendMessage("Функция доступна только в мирной зоне, эпик зоне, а так же в инстансах.");
-            return false;
-        } else
-            return true;
-    }
+
+
+
 
     private boolean canBuff(L2Player player) {
         return ConfigValue.PremiumBufferEnable ? player.getBonus().PremiumBuffer : ConfigValue.BufferUsePremiumItem <= 0 && player.hasBonus() || ConfigValue.BufferUsePremiumItem > 0 && player.getInventory().getCountOf(ConfigValue.BufferUsePremiumItem) > 0;
@@ -584,26 +376,11 @@ public class BufferComponent {
         showMainPage(player);
     }
 
-    public void createReadyScheme(L2Player player, String[] args) {
-        if (!player.isGM()){
-            return;
-        }
-
-        if (args == null || args.length < 1){
-            return;
-        }
-        StringBuilder schemeName = new StringBuilder();
-        for (String s: args){
-            if (s == null){
-                continue;
-            }
-            schemeName.append(s).append(" ");
-        }
-
-        final Scheme scheme = new Scheme(SYSTEM_LISTS, schemeName.toString());
-        buffService.createScheme(scheme);
-        showMainPage(player);
+    public void castBuff(L2Player player, String[] args){
+        buffService.castBuff(player, args);
     }
+
+
 
     public void addBuff(L2Player player, String[] args) {
 
@@ -644,5 +421,125 @@ public class BufferComponent {
             buffService.removeBuff(buff);
         }
         showBuffs(player, new String[]{type});
+    }
+
+    public void showRedactScheme(L2Player player, String[] args) {
+
+        int schemeId = Integer.parseInt(args[0]);
+        final Scheme scheme = buffService.getScheme(schemeId);
+        if (scheme == null){
+            return;
+        }
+        ShowBoard.separateAndSend(addCustomReplace(showEditSchemePage(scheme)), player);
+    }
+
+    public String showEditSchemePage(Scheme scheme){
+
+        String page = getFile( "editSchemaPage.htm");
+        String schemeButton = getFile( "schemeButton.htm");
+
+        String simpleBackground = "L2UI_CH3.calculate1_back";
+        String premiumBackground = "L2UI_CH3.br_partyon_back2";
+
+        final List<Buff> buffList = scheme.getBuffs().values().stream()
+                .map(schemeBuff -> buffService.getBuff(schemeBuff.getBuff_id())).collect(Collectors.toList());
+
+
+        final List<Buff> _buffs = buffList.stream().filter(buff -> !buff.isSong()).collect(Collectors.toList());
+        final List<Buff> _songs = buffList.stream().filter(Buff::isSong).collect(Collectors.toList());
+
+        final long buffs_count = _buffs.size();
+        final long songs_count = _songs.size();
+
+
+        page = page.replace("<?maxCountBuff?>", String.valueOf(ConfigValue.BuffLimit))
+                .replace("<?currentCountBuff?>", String.valueOf(buffs_count))
+                .replace("<?maxCountSong?>", String.valueOf(ConfigValue.SongLimit))
+                .replace("<?currentCountSong?>", String.valueOf(songs_count));
+
+        int index_counter;
+        for (int i = 1; i <= 52 ; i++){
+
+            final SchemeBuff schemeBuff = scheme.getBuffs().get(i);
+            String button;
+
+            if (schemeBuff != null){
+                final Buff buff = buffService.getBuff(schemeBuff.getBuff_id());
+
+                button = schemeButton
+                        .replace("<?icon?>", new Img(buff.getIcon()).build())
+                        .replace("<?index?>", String.valueOf(schemeBuff.getIndex()))
+                        .replace("<?schemeName?>", scheme.getName())
+                        .replace("<?owner?>", String.valueOf(scheme.getOwner()))
+                        .replace("<?schemeId?>", String.valueOf(scheme.getId()))
+                        .replace("<?background?>", buff.getType().equals("PREMIUM") ? premiumBackground : simpleBackground);
+
+                page = page.replace("<?buffIndex" + schemeBuff.getIndex() + "?>" , button);
+
+            }else {
+                button = schemeButton
+                        .replace("<?icon?>", "")
+                        .replace("<?background?>", simpleBackground)
+                        .replace("<?index?>", String.valueOf(i))
+                        .replace("<?schemeName?>", scheme.getName())
+                        .replace("<?owner?>", String.valueOf(-100))
+                        .replace("<?schemeId?>", String.valueOf(scheme.getId()));
+
+                page = page.replace("<?buffIndex" + i + "?>" , button);
+            }
+
+        }
+        return page;
+    }
+
+    public boolean checkSchemeContainBuff(Scheme scheme, int buffId){
+        for (SchemeBuff schemeBuff : scheme.getBuffs().values()){
+            if (schemeBuff.getBuff_id() == buffId){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void showAddBuffToScheme(String[] args, L2Player player) {
+        int schemeId = Integer.parseInt(args[0]);
+        int index = Integer.parseInt(args[1]);
+        String type = args[2];
+
+        final Scheme scheme = buffService.getScheme(schemeId);
+
+        List<Buff> buffs;
+
+        if (index <= 36){
+            buffs = buffService.getBuffs(type).stream()
+                    .filter(buff -> !buff.isSong())
+                    .filter(buff -> !checkSchemeContainBuff(scheme, buff.getId()))
+                    .collect(Collectors.toList());
+        }else {
+            buffs = buffService.getBuffs(type).stream()
+                    .filter(Buff::isSong)
+                    .filter(buff -> !checkSchemeContainBuff(scheme, buff.getId()))
+                    .collect(Collectors.toList());
+        }
+
+        final Table main = new Table(2, 1);
+
+        final Table header = new Table(1, 3);
+        header.row(0).col(0).setParams(width(100)).insert(new Button("Обычные", action("bypass -h bbs_show_add_buff_to_scheme_page " + scheme.getId() + " " + index + " SIMPLE"), 80, 32).build());
+        header.row(0).col(1).setParams(width(100)).insert(new Button("Премиум", action("bypass -h bbs_show_add_buff_to_scheme_page " + scheme.getId() + " " + index + " PREMIUM"), 80, 32).build());
+        header.row(0).col(2).setParams(width(80)).insert(new Button(action("bypass -h TE00"), 32, 32, "L2UI_CT1.Button_DF_Delete_Down", "L2UI_CT1.Button_DF_Delete").build());
+
+        final Table buffsTable = new Table(buffs.size(), 3);
+
+        for (int i = 0; i < buffs.size(); i++){
+            buffsTable.row(i).col(0).insert(new Img(buffs.get(i).getIcon()).build());
+            buffsTable.row(i).col(1).insert(buffs.get(i).getName());
+            buffsTable.row(i).col(2).insert(new Button("+", action("bypass -h bbs_add_buff_to_scheme " + scheme.getId() + " " + buffs.get(i).getId() + " " + index)).build());
+        }
+
+        main.row(0).col(0).insert(header.build());
+        main.row(1).col(0).insert(buffsTable.build());
+
+        player.sendPacket(new TutorialShowHtml("<html><body><title>Доступные баффы</title>" + main.build() + " </body></html>"));
     }
 }

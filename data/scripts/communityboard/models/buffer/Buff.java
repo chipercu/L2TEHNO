@@ -28,6 +28,7 @@ public class Buff {
     private String icon;
     private String type;
     private final GArray<L2EnchantSkillLearn> skillEnchants;
+    private boolean isSong;
 
     public Buff(int id,int skill_id, int skill_level, int display_level, String name, long duration, int price, int price_item, int minLevel, int maxLevel, String icon, String type) {
         this.id = id;
@@ -44,6 +45,7 @@ public class Buff {
         this.maxLevel = maxLevel;
         this.icon = icon;
         this.type = type;
+        this.isSong = SkillTable.getInstance().getInfo(skill_id, skill_level).isMusic();
     }
 
     public Buff(L2Skill skill, String type) {
@@ -60,6 +62,7 @@ public class Buff {
         this.maxLevel = ConfigValue.BufferMaxLevel;
         this.icon = skill.getIcon();
         this.type = type;
+        this.isSong = SkillTable.getInstance().getInfo(skill_id, skill_level).isMusic();
 
     }
 
@@ -181,6 +184,14 @@ public class Buff {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public boolean isSong() {
+        return isSong;
+    }
+
+    public void setSong(boolean song) {
+        isSong = song;
     }
 
     public GArray<L2EnchantSkillLearn> getSkillEnchants() {

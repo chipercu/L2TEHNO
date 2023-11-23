@@ -10,7 +10,9 @@ import l2open.gameserver.communitybbs.Manager.BaseBBSManager;
 import l2open.gameserver.handler.CommunityHandler;
 import l2open.gameserver.handler.ICommunityHandler;
 import l2open.gameserver.model.L2Player;
+import l2open.gameserver.model.L2Zone;
 import l2open.gameserver.serverpackets.ShowBoard;
+import l2open.gameserver.tables.ReflectionTable;
 import l2open.util.*;
 
 import java.util.*;
@@ -25,6 +27,11 @@ public class BufferController extends BaseBBSManager implements ICommunityHandle
         bbs_show_buffs,
         bbs_add_buff,
         bbs_create_scheme,
+        bbs_create_ready_scheme,
+        bbs_show_redact_scheme,
+        bbs_add_buff_to_scheme,
+        bbs_show_add_buff_to_scheme_page,
+        bbs_remove_buff_from_scheme,
         bbs_remove_buff,
         bbs_remove_scheme,
         bbs_cast_buff,
@@ -34,7 +41,6 @@ public class BufferController extends BaseBBSManager implements ICommunityHandle
         bbs_clear_scheme,
         bbs_change_enchant_type,
         bbs_show_change_buff_params,
-        bbs_show_redact_scheme,
         bbs_change_list_index
     }
 
@@ -44,7 +50,7 @@ public class BufferController extends BaseBBSManager implements ICommunityHandle
             return;
         if (player.is_block)
             return;
-        if (!bufferComponent.check(player))
+        if (!check(player))
             return;
 
         if (ConfigValue.BufferAffterRes) {
@@ -68,15 +74,21 @@ public class BufferController extends BaseBBSManager implements ICommunityHandle
             bufferComponent.showMainPage(player);
         } else if ("bbs_show_buffs".equals(cmd)) {
             bufferComponent.showBuffs(player, args);
+        } else if ("bbs_create_scheme".equals(cmd)) {
+            bufferComponent.createPersonalScheme(player, args);
+        } else if ("bbs_create_ready_scheme".equals(cmd)) {
+            bufferComponent.createSystemScheme(player, args);
         } else if ("bbs_show_redact_scheme".equals(cmd)) {
-            bufferComponent.createReadyScheme(player, args);
+            bufferComponent.showRedactScheme(player, args);
         } else if ("bbs_add_buff".equals(cmd)) {
             bufferComponent.addBuff(player, args);
-        } else if ("bbs_add_buff_ready_set".equals(cmd)) {
+        } else if ("bbs_add_buff_to_scheme".equals(cmd)) {
             bufferComponent.addBuffToScheme(args, player);
+        } else if ("bbs_show_add_buff_to_scheme_page".equals(cmd)) {
+            bufferComponent.showAddBuffToScheme(args, player);
         } else if ("bbs_remove_buff".equals(cmd)) {
             bufferComponent.removeBuff(args, player);
-        } else if ("bbs_remove_buff_premium_set".equals(cmd)) {
+        } else if ("bbs_remove_buff_from_scheme".equals(cmd)) {
             bufferComponent.removeBuffFromScheme(args, player);
         } else if ("bbs_remove_buff_ready_set".equals(cmd)) {
             bufferComponent.removeBuffFromScheme(args, player);
@@ -86,8 +98,6 @@ public class BufferController extends BaseBBSManager implements ICommunityHandle
             bufferComponent.castBuff(player, args);
         } else if ("bbs_cast_scheme".equals(cmd)) {
             bufferComponent.castScheme(player, args);
-        } else if ("bbs_create_scheme".equals(cmd)) {
-            bufferComponent.saveScheme(player, args);
         } else if ("bbs_show_all_buffs".equals(cmd)) {
             bufferComponent.showAllBuffs(player, args);
         } else if ("bbs_clear_buffs".equals(cmd)) {
@@ -123,6 +133,70 @@ public class BufferController extends BaseBBSManager implements ICommunityHandle
     @SuppressWarnings("rawtypes")
     public Enum[] getCommunityCommandEnum() {
         return Commands.values();
+    }
+
+
+    public boolean check(L2Player player) {
+        if (player == null)
+            return false;
+        else if (player.isGM())
+            return true;
+        else if (player.isInOlympiadMode()) {
+            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
+            return false;
+        } else if (player.getReflection().getId() != ReflectionTable.DEFAULT && !ConfigValue.BufferInInstance && !check_event(player)) {
+            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
+            return false;
+        } else if (player.isInDuel()) {
+            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
+            return false;
+        } else if (player.isInCombat() && !ConfigValue.BufferInCombat) {
+            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
+            return false;
+        } else if ((player.isOnSiegeField() || player.isInZoneBattle()) && !ConfigValue.BufferOnSiege && player.isInEvent() != 5 && !check_event(player)) {
+            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
+            return false;
+        } else if (player.isInEvent() > 0 && !check_event(player)) {
+            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
+            return false;
+        } else if (player.isFlying()) {
+            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
+            return false;
+        } else if (player.isInWater() && !ConfigValue.BufferInWater) {
+            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
+            return false;
+        } else if (player.isDead() || player.isMovementDisabled() || player.isAlikeDead() || player.isCastingNow() || player.isAttackingNow() || player.getVar("jailed") != null || player.isCombatFlagEquipped() || player.isTerritoryFlagEquipped()) {
+            player.sendMessage(new CustomMessage("communityboard.buffer.terms.incorrect", player));
+            return false;
+        } else if (ConfigValue.BufferOnlyPeace && !player.isInZone(L2Zone.ZoneType.peace_zone) && !player.isInZone(L2Zone.ZoneType.epic) && player.getReflection().getId() == ReflectionTable.DEFAULT) {
+            player.sendMessage("Функция доступна только в мирной зоне, эпик зоне, а так же в инстансах.");
+            return false;
+        } else
+            return true;
+    }
+
+    public boolean check_event(L2Player player) {
+        switch (player.isInEvent()) {
+            case 1:
+                return ConfigValue.FightClubBattleUseBuffer;
+            case 2:
+                return ConfigValue.LastHeroBattleUseBuffer;
+            case 3:
+                return ConfigValue.CaptureTheFlagBattleUseBuffer;
+            case 4:
+                return ConfigValue.TeamvsTeamBattleUseBuffer;
+            case 5:
+                return ConfigValue.TournamentBattleUseBuffer;
+            case 6:
+                return ConfigValue.EventBoxUseBuffer;
+            case 11:
+                return player.getEventMaster().state == 1;
+            case 12:
+                return ConfigValue.Tournament_UseBuffer;
+            case 13:
+                return ConfigValue.DeathMatchUseBuffer;
+        }
+        return false;
     }
 
 
