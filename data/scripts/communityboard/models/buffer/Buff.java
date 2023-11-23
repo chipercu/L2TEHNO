@@ -1,4 +1,4 @@
-package communityboard.bufferService;
+package communityboard.models.buffer;
 
 import l2open.config.ConfigValue;
 import l2open.gameserver.model.L2Skill;
@@ -14,9 +14,9 @@ import l2open.util.GArray;
 
 public class Buff {
 
-    private long id;
-    private long skill_id;
-    private long skill_level;
+    private int id;
+    private int skill_id;
+    private int skill_level;
     private int display_level;
     private String name;
     private String enchant_name;
@@ -29,12 +29,12 @@ public class Buff {
     private String type;
     private final GArray<L2EnchantSkillLearn> skillEnchants;
 
-    public Buff(long id, int display_level, String name, long duration, int price, int price_item, int minLevel, int maxLevel, String icon, String type) {
+    public Buff(int id,int skill_id, int skill_level, int display_level, String name, long duration, int price, int price_item, int minLevel, int maxLevel, String icon, String type) {
         this.id = id;
-        this.skill_id = id / 1000;
-        this.skill_level = id % 1000;
+        this.skill_id = skill_id;
+        this.skill_level = skill_level;
         this.display_level = display_level;
-        this.skillEnchants = SkillTreeTable.getFirstEnchantsForSkill(skill_id);
+        this.skillEnchants = SkillTreeTable.getEnchantsForChange(skill_id,1);
         this.name = name;
         this.enchant_name = setEnchantName();
         this.duration = duration;
@@ -47,8 +47,7 @@ public class Buff {
     }
 
     public Buff(L2Skill skill, String type) {
-        this.id = skill.getId() * 1000L + skill.getLevel();
-        this.skillEnchants = SkillTreeTable.getFirstEnchantsForSkill(skill.getId());
+        this.skillEnchants = SkillTreeTable.getEnchantsForChange(skill_id, 1);
         this.skill_id = skill.getId();
         this.skill_level = skill.getLevel();
         this.display_level = skill.getDisplayLevel();
@@ -67,6 +66,8 @@ public class Buff {
     public Buff clone(){
         return new Buff(
                 this.id,
+                this.skill_id,
+                this.skill_level,
                 this.display_level,
                 this.name,
                 this.duration,
@@ -78,19 +79,19 @@ public class Buff {
                 this.type);
     }
 
-    public long getSkill_id() {
+    public int getSkill_id() {
         return skill_id;
     }
 
-    public void setSkill_id(long skill_id) {
+    public void setSkill_id(int skill_id) {
         this.skill_id = skill_id;
     }
 
-    public long getSkill_level() {
+    public int getSkill_level() {
         return skill_level;
     }
 
-    public void setSkill_level(long skill_level) {
+    public void setSkill_level(int skill_level) {
         this.skill_level = skill_level;
     }
 
@@ -142,11 +143,11 @@ public class Buff {
         this.price_item = price_item;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -211,15 +212,14 @@ public class Buff {
         final int index = Math.max((display_level / 100) - 1 , 0);
         final L2EnchantSkillLearn skillLearn = skillEnchants.get(index);
         final int maxSkillLevel = skillLearn.getBaseLevel() + (skillLearn.getMaxLevel() * size);
-        long newLevel = skill_level + skillLearn.getMaxLevel();
+        int newLevel = skill_level + skillLearn.getMaxLevel();
 
         if (newLevel > maxSkillLevel){
             newLevel = skillLearn.getBaseLevel();
         }
         skill_level = newLevel;
 
-        display_level = SkillTable.getInstance().getInfo((int) skill_id, (int) skill_level).getDisplayLevel();
+        display_level = SkillTable.getInstance().getInfo(skill_id, skill_level).getDisplayLevel();
         enchant_name = setEnchantName();
-
     }
 }

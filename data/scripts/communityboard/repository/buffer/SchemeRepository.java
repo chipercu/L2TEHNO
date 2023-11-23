@@ -1,5 +1,8 @@
-package communityboard.bufferService;
+package communityboard.repository.buffer;
 
+import communityboard.models.buffer.Buff;
+import communityboard.models.buffer.Scheme;
+import communityboard.models.buffer.SchemeBuff;
 import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
@@ -32,8 +35,8 @@ public class SchemeRepository {
             rs = con.prepareStatement(stmt).executeQuery();
             while (rs.next()) {
                 final Scheme scheme = new Scheme(
-                        rs.getLong("id"),
-                        rs.getLong("owner"),
+                        rs.getInt("id"),
+                        rs.getInt("owner"),
                         rs.getString("name")
                 );
 
@@ -47,18 +50,35 @@ public class SchemeRepository {
         return schemes;
     }
 
-    public Optional<Scheme> byId(int id) {
+    public Optional<Scheme> createScheme(Scheme scheme) {
+        try {
+            con = L2DatabaseFactory.getInstance().getConnection();
+            String stmt = "INSERT INTO " + SCHEME_TABLE + " (owner,name) VALUES(?,?)";
+            statement = con.prepareStatement(stmt);
+            statement.setInt(1, scheme.getOwner());
+            statement.setString(2, scheme.getName());
+            statement.execute();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            DatabaseUtils.closeDatabaseCS(con, statement);
+        }
+        return getScheme(scheme.getOwner(), scheme.getName());
+    }
+
+    public Optional<Scheme> getScheme(int owner, String name) {
         ResultSet rs = null;
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
-            String stmt = "SELECT * FROM " + SCHEME_TABLE +" WHERE id=?";
+            String stmt = "SELECT * FROM " + SCHEME_TABLE +" WHERE owner=? AND name=?";
             statement = con.prepareStatement(stmt);
-            statement.setInt(1, id);
+            statement.setInt(1, owner);
+            statement.setString(2, name);
             rs = statement.executeQuery();
             if (rs.next()) {
                 Scheme scheme = new Scheme(
-                        rs.getLong("id"),
-                        rs.getLong("owner"),
+                        rs.getInt("id"),
+                        rs.getInt("owner"),
                         rs.getString("name")
                 );
                 return Optional.of(scheme);
@@ -71,22 +91,35 @@ public class SchemeRepository {
         return Optional.empty();
     }
 
-    public Optional<Scheme> byOwnerName(long owner, String name) {
+    public void removeScheme(int id) {
+        try {
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement("DELETE FROM " + SCHEME_TABLE + " WHERE id=?");
+            statement.setInt(1, id);
+            statement.execute();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            DatabaseUtils.closeConnection(con);
+        }
+    }
+
+    public Optional<SchemeBuff> getSchemeBuff(int schemeId, int index){
         ResultSet rs = null;
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
-            String stmt = "SELECT * FROM " + SCHEME_TABLE +" WHERE owner=? AND name=?";
+            String stmt = "SELECT * FROM " + SCHEME_BUFF_TABLE + " WHERE scheme_id=? AND index_=?";
             statement = con.prepareStatement(stmt);
-            statement.setLong(1, owner);
-            statement.setString(2, name);
+            statement.setInt(1, schemeId);
+            statement.setInt(2, index);
             rs = statement.executeQuery();
             if (rs.next()) {
-                Scheme scheme = new Scheme(
-                        rs.getLong("id"),
-                        rs.getLong("owner"),
-                        rs.getString("name")
+                SchemeBuff schemeBuff = new SchemeBuff(
+                        rs.getInt("scheme_id"),
+                        rs.getInt("buff_id"),
+                        rs.getInt("index_")
                 );
-                return Optional.of(scheme);
+                return Optional.of(schemeBuff);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -95,6 +128,7 @@ public class SchemeRepository {
         }
         return Optional.empty();
     }
+
 
     public List<SchemeBuff> getSchemeBuffs(long scheme_id) {
         ResultSet rs = null;
@@ -107,8 +141,8 @@ public class SchemeRepository {
             rs = statement.executeQuery();
             while (rs.next()) {
                 final SchemeBuff schemeBuff = new SchemeBuff(
-                        rs.getLong("scheme_id"),
-                        rs.getLong("buff_id"),
+                        rs.getInt("scheme_id"),
+                        rs.getInt("buff_id"),
                         rs.getInt("index_")
                 );
                 buffs_ids.add(schemeBuff);
@@ -121,56 +155,51 @@ public class SchemeRepository {
         return buffs_ids;
     }
 
-    public void addBuffInScheme(Scheme scheme, Buff buff){
+
+    public SchemeBuff createSchemeBuff(Scheme scheme, Buff buff, int index){
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
             String stmt = "INSERT INTO " + SCHEME_BUFF_TABLE + " (scheme_id,buff_id,index_) VALUES(?,?,?)";
             statement = con.prepareStatement(stmt);
-            statement.setLong(1, scheme.getId());
-            statement.setLong(2, buff.getId());
-            statement.setInt(3, scheme.getBuffs().size());
+            statement.setInt(1, scheme.getId());
+            statement.setInt(2, buff.getId());
+            statement.setInt(3, index);
             statement.execute();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             DatabaseUtils.closeDatabaseCS(con, statement);
         }
+        return getSchemeBuff(scheme.getId(), index).orElse(null);
     }
 
-    public Optional<Scheme> createScheme(Scheme scheme) {
+    public SchemeBuff updateSchemeBuff(Scheme scheme, Buff buff, int index){
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
-            String stmt = "INSERT INTO " + SCHEME_TABLE + " (owner,name) VALUES(?,?)";
+            String stmt = "UPDATE " + SCHEME_BUFF_TABLE + " SET scheme_id=?, buff_id=?, index_=? WHERE scheme_id=? AND index_=?";
             statement = con.prepareStatement(stmt);
-            statement.setLong(1, scheme.getOwner());
-            statement.setString(2, scheme.getName());
-            statement.execute();
+            statement.setInt(1, scheme.getId());
+            statement.setInt(2, buff.getId());
+            statement.setInt(3, index);
+
+            statement.setInt(4, scheme.getId());
+            statement.setInt(5, index);
+            statement.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             DatabaseUtils.closeDatabaseCS(con, statement);
         }
-        return Optional.of(scheme);
+        return getSchemeBuff(scheme.getId(), index).orElse(null);
     }
 
-    public void removeScheme(Scheme scheme) {
-        try {
-            con = L2DatabaseFactory.getInstance().getConnection();
-            statement = con.prepareStatement("DELETE FROM " + SCHEME_TABLE + " WHERE id=?");
-            statement.setLong(1, scheme.getId());
-            statement.execute();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            DatabaseUtils.closeConnection(con);
-        }
-    }
 
-    public void clearSchemeBuffs(long schemeId){
+
+    public void clearSchemeBuffs(int schemeId){
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("DELETE FROM " + SCHEME_BUFF_TABLE + " WHERE scheme_id=?");
-            statement.setLong(1, schemeId);
+            statement.setInt(1, schemeId);
             statement.execute();
         } catch (Exception e) {
             e.printStackTrace();
@@ -179,18 +208,17 @@ public class SchemeRepository {
         }
     }
 
-    public void removeBuffInScheme(long schemeId, int buffId) {
+    public void removeSchemeBuff(int schemeId, int index) {
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
-            statement = con.prepareStatement("DELETE FROM " + SCHEME_BUFF_TABLE + " WHERE scheme_id=? AND buff_id=?");
-            statement.setLong(1, schemeId);
-            statement.setInt(2, buffId);
+            statement = con.prepareStatement("DELETE FROM " + SCHEME_BUFF_TABLE + " WHERE scheme_id=? AND index_=?");
+            statement.setInt(1, schemeId);
+            statement.setInt(2, index);
             statement.execute();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             DatabaseUtils.closeConnection(con);
         }
-
     }
 }

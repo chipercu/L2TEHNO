@@ -12,7 +12,7 @@ import java.util.List;
 import l2open.gameserver.serverpackets.L2GameServerPacket;
 
 public class ConfigPacket extends L2GameServerPacket {
-	private List<InterfaceSetting> settings = InterfaceSettingManager.getInstance().getSettings();
+	private final List<InterfaceSetting> settings = InterfaceSettingManager.getInstance().getSettings();
 
 	public ConfigPacket() {
 	}
@@ -20,12 +20,12 @@ public class ConfigPacket extends L2GameServerPacket {
 	protected final void writeImpl() {
 		this.writeEx(246);
 		this.writeH(this.settings.size());
-		Iterator var1 = this.settings.iterator();
+		Iterator<InterfaceSetting> var1 = this.settings.iterator();
 
 		while(true) {
 			label66:
 			while(var1.hasNext()) {
-				InterfaceSetting s = (InterfaceSetting)var1.next();
+				InterfaceSetting s = var1.next();
 				this.writeS(s.Name);
 				this.writeC(s.Type.ordinal());
 				int i;

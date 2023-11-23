@@ -1,5 +1,6 @@
-package communityboard.bufferService;
+package communityboard.repository.buffer;
 
+import communityboard.models.buffer.Buff;
 import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
@@ -26,8 +27,10 @@ public class BuffRepository {
             String stmt = "SELECT * FROM community_perform_buffs";
             rs = con.prepareStatement(stmt).executeQuery();
             while (rs.next()) {
-                final Buff buffModel = new Buff(
+                final Buff buff = new Buff(
                         rs.getInt("id"),
+                        rs.getInt("skill_id"),
+                        rs.getInt("skill_level"),
                         rs.getInt("display_level"),
                         rs.getString("name"),
                         rs.getLong("duration"),
@@ -37,9 +40,8 @@ public class BuffRepository {
                         rs.getInt("maxLevel"),
                         rs.getString("icon"),
                         rs.getString("type_")
-
                 );
-                buffModels.add(buffModel);
+                buffModels.add(buff);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -49,17 +51,21 @@ public class BuffRepository {
         return buffModels;
     }
 
-    public Optional<Buff> getBuff(long id) {
+    public Optional<Buff> getBuff(int skill_id, int skill_level, String type) {
         ResultSet rs = null;
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
-            String stmt = "SELECT * FROM community_perform_buffs WHERE id=?";
+            String stmt = "SELECT * FROM community_perform_buffs WHERE skill_id=? AND skill_level=? AND type_=?";
             statement = con.prepareStatement(stmt);
-            statement.setLong(1, id);
+            statement.setInt(1, skill_id);
+            statement.setInt(2, skill_level);
+            statement.setString(3, type);
             rs = statement.executeQuery();
             if (rs.next()) {
                 Buff buffModel = new Buff(
                         rs.getInt("id"),
+                        rs.getInt("skill_id"),
+                        rs.getInt("skill_level"),
                         rs.getInt("display_level"),
                         rs.getString("name"),
                         rs.getLong("duration"),
@@ -80,60 +86,67 @@ public class BuffRepository {
         return Optional.empty();
     }
 
-    public Optional<Buff> createBuff(Buff buffModel) {
+
+    public Buff createBuff(Buff buff) {
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
-            String stmt = "INSERT INTO community_perform_buffs (id,display_level,name,duration,price,price_item,minLevel,maxLevel,icon,type_) VALUES(?,?,?,?,?,?,?,?,?,?)";
+            String stmt = "INSERT INTO community_perform_buffs (skill_id,skill_level,display_level,name,duration,price,price_item,minLevel,maxLevel,icon,type_) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
             statement = con.prepareStatement(stmt);
-            statement.setLong(1, buffModel.getId());
-            statement.setInt(2, buffModel.getDisplay_level());
-            statement.setString(3, buffModel.getName());
-            statement.setLong(4, buffModel.getDuration());
-            statement.setInt(5, buffModel.getPrice());
-            statement.setInt(6, buffModel.getPrice_item());
-            statement.setInt(7, buffModel.getMinLevel());
-            statement.setInt(8, buffModel.getMaxLevel());
-            statement.setString(9, buffModel.getIcon());
-            statement.setString(10, buffModel.getType());
+            statement.setInt(1, buff.getSkill_id());
+            statement.setInt(2, buff.getSkill_level());
+            statement.setInt(3, buff.getDisplay_level());
+            statement.setString(4, buff.getName());
+            statement.setLong(5, buff.getDuration());
+            statement.setInt(6, buff.getPrice());
+            statement.setInt(7, buff.getPrice_item());
+            statement.setInt(8, buff.getMinLevel());
+            statement.setInt(9, buff.getMaxLevel());
+            statement.setString(10, buff.getIcon());
+            statement.setString(11, buff.getType());
             statement.execute();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             DatabaseUtils.closeDatabaseCS(con, statement);
         }
-        return Optional.of(buffModel);
+        return getBuff(buff.getSkill_id(), buff.getSkill_level(), buff.getType()).orElse(null);
     }
-    public void updateBuff(Buff buffModel, Buff newBuffModel) {
+
+    public Buff updateBuff(Buff buffModel) {
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
-            String stmt = "UPDATE community_perform_buffs SET display_level = ?,name = ?, duration = ?, price = ?, price_item = ?, minLevel = ?,maxLevel = ?,icon = ?,type_ = ? WHERE id=? AND type_=?";
+            String stmt = "UPDATE community_perform_buffs SET skill_id = ?, skill_level = ?, display_level = ?,name = ?, duration = ?, price = ?, price_item = ?, minLevel = ?,maxLevel = ?,icon = ?,type_ = ? WHERE id=? AND type_=?";
             statement = con.prepareStatement(stmt);
-            statement.setInt(1, newBuffModel.getDisplay_level());
-            statement.setString(2, newBuffModel.getName());
-            statement.setLong(3, newBuffModel.getDuration());
-            statement.setInt(4, newBuffModel.getPrice());
-            statement.setInt(5, newBuffModel.getPrice_item());
-            statement.setInt(6, newBuffModel.getMinLevel());
-            statement.setInt(7, newBuffModel.getMaxLevel());
-            statement.setString(8, newBuffModel.getIcon());
-            statement.setString(9, newBuffModel.getType());
+            statement.setInt(1, buffModel.getSkill_id());
+            statement.setInt(2, buffModel.getSkill_level());
+            statement.setInt(3, buffModel.getDisplay_level());
+            statement.setString(4, buffModel.getName());
+            statement.setLong(5, buffModel.getDuration());
+            statement.setInt(6, buffModel.getPrice());
+            statement.setInt(7, buffModel.getPrice_item());
+            statement.setInt(8, buffModel.getMinLevel());
+            statement.setInt(9, buffModel.getMaxLevel());
+            statement.setString(10, buffModel.getIcon());
+            statement.setString(11, buffModel.getType());
 
-            statement.setLong(10, buffModel.getId());
-            statement.setString(11, newBuffModel.getType());
+            statement.setLong(12, buffModel.getId());
+            statement.setString(13, buffModel.getType());
             statement.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             DatabaseUtils.closeDatabaseCS(con, statement);
         }
+        return getBuff(buffModel.getSkill_id(), buffModel.getSkill_level(), buffModel.getType()).orElse(null);
+
     }
 
-    public void removeBuff(Buff buffModel) {
+    public void removeBuff(int buffId, String type) {
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement("DELETE FROM community_perform_buffs WHERE id=? AND type_=?");
-            statement.setLong(1, buffModel.getId());
-            statement.setString(2, buffModel.getType());
+            statement.setInt(1, buffId);
+            statement.setString(2, type);
             statement.execute();
         } catch (Exception e) {
             e.printStackTrace();

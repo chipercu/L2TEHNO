@@ -339,7 +339,7 @@ public class ConfigValue {
     public static String BBSMail = "_maillist_0_1_0_";
     public static String BBSFriendList = "_friendlist_0_";
     public static String CommunityBoardHtmlRoot = "data/html/CommunityBoard/";
-    public static String Copyright = "Powered by L2CCCP && Open-Team.ru";
+    public static String Copyright = "Powered by @FuzzY";
     public static boolean FunnyError = false;
     public static String[] CommunityBoardReplaceHtm = {};
 

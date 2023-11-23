@@ -1,18 +1,15 @@
-package communityboard.bufferService;
+package communityboard.html.buffer;
 
+import communityboard.config.BufferConfig;
+import communityboard.models.buffer.Buff;
 import l2open.common.Html_Constructor.tags.Button;
-import l2open.config.ConfigValue;
-import l2open.gameserver.model.L2Player;
 import l2open.gameserver.model.L2Skill;
-import l2open.gameserver.serverpackets.ShowBoard;
 import l2open.gameserver.tables.SkillTable;
 import l2open.util.Files;
 
 import static l2open.common.Html_Constructor.tags.parameters.Parameters.action;
 
-public class HTML_Elements {
-
-    public static final String html_path = "data/scripts/services/PremiumBuffer/";
+public class Elements {
 
     public static String formatSkillName(String name) {
         name = name.replace("Dance of the", "D.");
@@ -32,10 +29,10 @@ public class HTML_Elements {
     }
 
     public static String getFile(String name){
-        return Files.read(html_path + name);
+        return Files.read(BufferConfig.HTML_PATCH + name);
     }
 
-    public static String selectBuffButton(int id, String list_type, long owner) {
+    public static String selectBuffButton(int id, String list_type) {
         L2Skill skill = SkillTable.getInstance().getInfo(id, 1);
         final int baseLevel = SkillTable.getInstance().getBaseLevel(id);
 
@@ -43,8 +40,19 @@ public class HTML_Elements {
         final String html = getFile( "selectBuffButton.htm");
         return html.replace("<?icon?>", skill.getIcon())
                 .replace("<?name?>", name)
-                .replace("<?action?>", "bypass -h bbs_add_buff_set " + skill.getId() + " " + baseLevel + " " + list_type + " " + owner);
+                .replace("<?action?>", "bypass -h bbs_add_buff " + skill.getId() + " " + baseLevel + " " + list_type);
     }
+
+    public static String showBuffsButton(Buff buff){
+        final String html = getFile( "showBuffsButton.htm");
+        return html
+                .replace("<?icon?>", buff.getIcon())
+                .replace("<?enchantName?>", buff.getEnchant_name())
+                .replace("<?buffName?>", buff.getName())
+                .replace("<?buffId?>", String.valueOf(buff.getId()))
+                .replace("<?buffType?>", buff.getType());
+    }
+
 
 
 
