@@ -6,17 +6,11 @@
         <td align="center" align="center" valign="top"><br><font color=F2C202><?enchantName?></font></td>
     </tr>
     <tr>
-        <td align="center" align="center" valign="top"><button value="<?buffName?>" action="bypass -h bbs_cast_buff <?buffId?> $Who" width=100 height=25 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+        <td align="center" align="center" valign="top"><button value="<?buffName?>" action="bypass -h bbs_cast_buff <?buffId?> <?page?> $Who" width=100 height=25 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
     </tr>
     <tr>
         <td height=25 align="center" valign="top">
-            <table cellpadding=0 cellspacing=0>
-                <tr>
-                    <td height=25 align="center" valign="top"><button value="" action="bypass -h bbs_show_change_buff_params <?buffId?>" width=16 height=16 back="L2UI_CT1.Button_DF_PartyOption2_Down" fore="L2UI_CT1.Button_DF_PartyOption2"></td>
-                    <td><button value="" action="bypass -h bbs_remove_buff <?buffId?> <?buffType?>" width=16 height=16 back="L2UI_CT1.Button_DF_Delete_Down" fore="L2UI_CT1.Button_DF_Delete"></td>
-                    <td><button value="" action="bypass -h bbs_change_enchant_type <?buffId?> <?buffType?>" width=16 height=16 back="L2UI_CT1.Button_DF_Right_Down" fore="L2UI_CT1.Button_DF_Right"></td>
-                </tr>
-            </table>
+            <?redactBuffButtons?>
         </td>
     </tr>
 </table>

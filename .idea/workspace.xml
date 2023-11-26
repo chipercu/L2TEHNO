@@ -4,26 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="refactoring: CommunityBoardBuffer">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/schemeButton.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/test.htm" afterDir="false" />
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="refactoring: CommunityBoardBuffer редактирования схем">
+      <change afterPath="$PROJECT_DIR$/compiling/builds.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/redactBuffButtons.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/communityboard/repository/buffer/BufferConfigRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compiling/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/compiling/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compiling/buildf.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/cash/buffer/BuffCash.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/cash/buffer/BuffCash.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/components/buffer/BufferComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/components/buffer/BufferComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/config/BufferConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/config/BufferConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/config/buff_type.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/controller/BufferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/controller/BufferController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/Elements.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/Elements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/editSchemaTable.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/editSchemaPage.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/editSchemaPage.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/editSchemaPage.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/index.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/index.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/scheme.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/scheme.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/schemeButton.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/schemeButton.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/selectBuffButton.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/selectBuffButton.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/showBuffsButton.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/showBuffsButton.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/test.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/test.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/models/buffer/Buff.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/models/buffer/Buff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/models/buffer/Scheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/models/buffer/Scheme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/models/buffer/SchemeBuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/models/buffer/SchemeBuff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/repository/buffer/BuffRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/repository/buffer/BuffRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/service/buffer/BuffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/service/buffer/BuffService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/clientpackets/RequestTutorialPassCmdToServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/clientpackets/RequestTutorialPassCmdToServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/tables/SkillTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/tables/SkillTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/commands.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/commands.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/consol.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/consol.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/consol.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/log/consol.log.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/debug/RunnableImpl/RunnableImpl.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/debug/RunnableImpl/RunnableImpl.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/debug/network/log_connect.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/debug/network/log_connect.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error0.log.2" beforeDir="false" afterPath="$PROJECT_DIR$/log/error0.log.2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/error0.log.3" beforeDir="false" afterPath="$PROJECT_DIR$/log/error0.log.3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/error1.log.4" beforeDir="false" afterPath="$PROJECT_DIR$/log/error1.log.4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/game/auth.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/auth.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/game/bosses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/bosses.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/game/geo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/geo.txt" afterDir="false" />
@@ -45,6 +58,7 @@
       <change beforePath="$PROJECT_DIR$/log/java1.log.2" beforeDir="false" afterPath="$PROJECT_DIR$/log/java1.log.2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/java1.log.3" beforeDir="false" afterPath="$PROJECT_DIR$/log/java1.log.3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/java1.log.4" beforeDir="false" afterPath="$PROJECT_DIR$/log/java1.log.4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/install/community_perform_buffs.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/install/community_perform_buffs.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,14 +132,14 @@
       <recent name="D:\High Five\L2TEHNO" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="communityboard.repository.buffer" />
       <recent name="communityboard.components.buffer" />
       <recent name="communityboard.bufferService" />
       <recent name="l2open.gameserver.model.barahlo" />
       <recent name="communityboard" />
-      <recent name="commands.voiced" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GameStart">
+  <component name="RunManager" selected="Application.L2LoginStart">
     <configuration name="GameStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="db" value="jdbc:mysql://localhost/l2tehno?useUnicode=true&amp;characterEncoding=UTF-8" />
@@ -198,8 +212,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GameStart" />
         <item itemvalue="Application.L2LoginStart" />
+        <item itemvalue="Application.GameStart" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.Server" />
       </list>
@@ -290,7 +304,10 @@
       <workItem from="1700716991895" duration="1129000" />
       <workItem from="1700719935915" duration="112000" />
       <workItem from="1700720140792" duration="27607000" />
-      <workItem from="1700758723412" duration="13623000" />
+      <workItem from="1700758723412" duration="13850000" />
+      <workItem from="1700820520367" duration="32494000" />
+      <workItem from="1700906590715" duration="10992000" />
+      <workItem from="1701004412876" duration="14825000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1692529102326</created>
@@ -404,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700637539937</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="refactoring: CommunityBoardBuffer редактирования схем">
+      <created>1700776562074</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1700776562074</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +460,8 @@
     <MESSAGE value="feat: BuffService BuffCash" />
     <MESSAGE value="refactoring: CommunityBoardBufferPerform" />
     <MESSAGE value="refactoring: CommunityBoardBuffer" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring: CommunityBoardBuffer" />
+    <MESSAGE value="refactoring: CommunityBoardBuffer редактирования схем" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring: CommunityBoardBuffer редактирования схем" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -455,11 +480,6 @@
           <url>file://$PROJECT_DIR$/java/l2open/Test.java</url>
           <line>45</line>
           <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/data/scripts/communityboard/controller/BufferController.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="90" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

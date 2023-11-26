@@ -35,7 +35,11 @@ public class RequestTutorialPassCmdToServer extends L2GameClientPacket
 		if (_bypass.startsWith("party_maker:detailPlayerInfo")) {
 			PartyMaker.getInstance().playerInfoDetail(player, _bypass.split(" ")[1]);
 			return;
-		}else if (_bypass.startsWith("bbs_show_add_buff_to_scheme_page") || _bypass.startsWith("bbs_add_buff_to_scheme")){
+		}else if (_bypass.startsWith("bbs_show_add_buff_to_scheme_page")
+				|| _bypass.startsWith("bbs_add_buff_to_scheme")
+				|| _bypass.startsWith("bbs_add_buff")
+				|| _bypass.startsWith("bbs_buffer_save_config")
+				|| _bypass.startsWith("bbs_show_all_buffs")){
 			CommunityBoard.getInstance().handleCommands(getClient(), _bypass);
 		}
 

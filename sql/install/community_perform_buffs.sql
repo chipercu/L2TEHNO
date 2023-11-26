@@ -5,7 +5,6 @@ CREATE TABLE `community_perform_buffs` (
   `skill_id` int(10) DEFAULT NULL,
   `skill_level` int(10) DEFAULT NULL,
   `name` varchar(100) DEFAULT '',
-  `duration` int(10) DEFAULT NULL,
   `price` int(10) DEFAULT '1',
   `price_item` int(10) DEFAULT '57',
   `minLevel` int(10) DEFAULT NULL,

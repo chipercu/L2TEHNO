@@ -7,6 +7,7 @@ import communityboard.models.buffer.SchemeBuff;
 import l2open.common.Html_Constructor.tags.Button;
 import l2open.common.Html_Constructor.tags.Img;
 import l2open.config.ConfigValue;
+import l2open.gameserver.model.L2Player;
 import l2open.gameserver.model.L2Skill;
 import l2open.gameserver.tables.SkillTable;
 import l2open.util.Files;
@@ -52,14 +53,21 @@ public class Elements {
                 .replace("<?action?>", "bypass -h bbs_add_buff " + skill.getId() + " " + baseLevel + " " + list_type);
     }
 
-    public static String showBuffsButton(Buff buff){
+    public static String showBuffsButton(L2Player player, Buff buff, int page){
         final String html = getFile( "showBuffsButton.htm");
+        final String redactButtons = getFile( "redactBuffButtons.htm")
+                .replace("<?buffId?>", String.valueOf(buff.getId()))
+                .replace("<?buffType?>", buff.getType())
+                .replace("<?page?>", String.valueOf(page));
+
         return html
                 .replace("<?icon?>", buff.getIcon())
                 .replace("<?enchantName?>", buff.getEnchant_name())
-                .replace("<?buffName?>", buff.getName())
+                .replace("<?buffName?>", formatSkillName(buff.getName()))
                 .replace("<?buffId?>", String.valueOf(buff.getId()))
-                .replace("<?buffType?>", buff.getType());
+                .replace("<?buffType?>", buff.getType())
+                .replace("<?redactBuffButtons?>", player.isGM() ? redactButtons : "")
+                .replace("<?page?>", String.valueOf(page));
     }
 
 

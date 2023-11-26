@@ -33,7 +33,6 @@ public class BuffRepository {
                         rs.getInt("skill_level"),
                         rs.getInt("display_level"),
                         rs.getString("name"),
-                        rs.getLong("duration"),
                         rs.getInt("price"),
                         rs.getInt("price_item"),
                         rs.getInt("minLevel"),
@@ -68,7 +67,6 @@ public class BuffRepository {
                         rs.getInt("skill_level"),
                         rs.getInt("display_level"),
                         rs.getString("name"),
-                        rs.getLong("duration"),
                         rs.getInt("price"),
                         rs.getInt("price_item"),
                         rs.getInt("minLevel"),
@@ -90,19 +88,18 @@ public class BuffRepository {
     public Buff createBuff(Buff buff) {
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
-            String stmt = "INSERT INTO community_perform_buffs (skill_id,skill_level,display_level,name,duration,price,price_item,minLevel,maxLevel,icon,type_) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+            String stmt = "INSERT INTO community_perform_buffs (skill_id,skill_level,display_level,name,price,price_item,minLevel,maxLevel,icon,type_) VALUES(?,?,?,?,?,?,?,?,?,?)";
             statement = con.prepareStatement(stmt);
             statement.setInt(1, buff.getSkill_id());
             statement.setInt(2, buff.getSkill_level());
             statement.setInt(3, buff.getDisplay_level());
             statement.setString(4, buff.getName());
-            statement.setLong(5, buff.getDuration());
-            statement.setInt(6, buff.getPrice());
-            statement.setInt(7, buff.getPrice_item());
-            statement.setInt(8, buff.getMinLevel());
-            statement.setInt(9, buff.getMaxLevel());
-            statement.setString(10, buff.getIcon());
-            statement.setString(11, buff.getType());
+            statement.setInt(5, buff.getPrice());
+            statement.setInt(6, buff.getPrice_item());
+            statement.setInt(7, buff.getMinLevel());
+            statement.setInt(8, buff.getMaxLevel());
+            statement.setString(9, buff.getIcon());
+            statement.setString(10, buff.getType());
             statement.execute();
         } catch (Exception e) {
             e.printStackTrace();
@@ -115,22 +112,21 @@ public class BuffRepository {
     public Buff updateBuff(Buff buffModel) {
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
-            String stmt = "UPDATE community_perform_buffs SET skill_id = ?, skill_level = ?, display_level = ?,name = ?, duration = ?, price = ?, price_item = ?, minLevel = ?,maxLevel = ?,icon = ?,type_ = ? WHERE id=? AND type_=?";
+            String stmt = "UPDATE community_perform_buffs SET skill_id = ?, skill_level = ?, display_level = ?,name = ?, price = ?, price_item = ?, minLevel = ?,maxLevel = ?,icon = ?,type_ = ? WHERE id=? AND type_=?";
             statement = con.prepareStatement(stmt);
             statement.setInt(1, buffModel.getSkill_id());
             statement.setInt(2, buffModel.getSkill_level());
             statement.setInt(3, buffModel.getDisplay_level());
             statement.setString(4, buffModel.getName());
-            statement.setLong(5, buffModel.getDuration());
-            statement.setInt(6, buffModel.getPrice());
-            statement.setInt(7, buffModel.getPrice_item());
-            statement.setInt(8, buffModel.getMinLevel());
-            statement.setInt(9, buffModel.getMaxLevel());
-            statement.setString(10, buffModel.getIcon());
-            statement.setString(11, buffModel.getType());
+            statement.setInt(5, buffModel.getPrice());
+            statement.setInt(6, buffModel.getPrice_item());
+            statement.setInt(7, buffModel.getMinLevel());
+            statement.setInt(8, buffModel.getMaxLevel());
+            statement.setString(9, buffModel.getIcon());
+            statement.setString(10, buffModel.getType());
 
-            statement.setLong(12, buffModel.getId());
-            statement.setString(13, buffModel.getType());
+            statement.setLong(11, buffModel.getId());
+            statement.setString(12, buffModel.getType());
             statement.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();

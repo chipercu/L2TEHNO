@@ -1,33 +1,76 @@
-1700758892915	WARNING	1	l2open.config.ConfigSystem	ConfigSystem(383): -> NoSuchFieldException(fake.properties): ﻿######
-1700758893032	INFO	1	com.mchange.v2.log.MLog	MLog clients using java 1.4+ standard logging.
-1700758893230	INFO	1	com.mchange.v2.c3p0.C3P0Registry	Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
-1700758893368	INFO	1	com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource	Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 0, acquireRetryDelay -> 100, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15waz1y8fwghnq4d85|43bd930a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15waz1y8fwghnq4d85|43bd930a, idleConnectionTestPeriod -> 60, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost/l2tehno?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 1000, maxStatements -> 100, maxStatementsPerConnection -> 10, minPoolSize -> 1, numHelperThreads -> 5, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
-1700758893705	INFO	1	l2open.loginserver.LoginController	Loading LoginController...
-1700758893708	INFO	1	l2open.loginserver.LoginController	Loaded Whirlpool as default crypt.
-1700758894250	INFO	1	l2open.loginserver.LoginController	Cached 10 KeyPairs for RSA communication
-1700758894442	INFO	1	l2open.loginserver.LoginController	Stored 20 keys for Blowfish communication
-1700758894444	WARNING	1	l2open.loginserver.GameServerTable	servername.xml could not be loaded: file not found
-1700758894444	INFO	1	l2open.loginserver.GameServerTable	Loaded 0 server names
-1700758894444	INFO	1	l2open.loginserver.GameServerTable	Loaded 0 registered Game Servers
-1700758894580	INFO	1	l2open.loginserver.GameServerTable	Cached 10 RSA keys for Game Server communication.
-1700758894688	INFO	1	l2open.loginserver.L2LoginServer	Listening for GameServers on *:9014
-1700758894688	INFO	1	l2open.loginserver.L2LoginServer	LoginServer Telnet server is currently disabled.
-1700758894689	INFO	21	l2open.loginserver.gameservercon.GSConnection	LoginServer: GS listener started.
-1700758894689	INFO	1	l2open.loginserver.L2LoginServer	Login Server ready on port 2106
-1700758894721	INFO	1	l2open.loginserver.L2LoginServer	0 banned IPs defined
-1700758894722	INFO	1	l2open.loginserver.L2LoginServer	Free memory 11 Mb of 29 Mb
-1700758916593	INFO	21	l2open.loginserver.gameservercon.AttGS	Init connection crypt for gameserver 192.168.1.100: ConnectionCryptDummy
-1700758916703	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Trying to register server: 1, 192.168.1.100
-1700758916712	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Updated Gameserver null Hostname's:
-1700758916713	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	InternalHostname: 192.168.1.100
-1700758916713	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	ExternalHostname: 85.95.177.23
-1700758916734	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Server registration successful.
-1700758961871	INFO	20	l2open.extensions.network.SelectorThread	max_p_size: 42
-1700758961890	INFO	20	l2open.extensions.network.SelectorThread	max_p_size: 194
-1700758962733	INFO	28	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
-1700762497043	INFO	25	l2open.loginserver.LoginController	IN_USE[chipercu][68464846][true][false][null]
-1700762497958	INFO	27	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
-1700767440788	INFO	21	l2open.loginserver.gameservercon.GSConnection	Login conect close 1-1.
-1700767440789	INFO	21	l2open.loginserver.gameservercon.AttGS	LoginServer: Connection with gameserver 1 [null] lost.
-1700767440789	INFO	21	l2open.loginserver.gameservercon.GSConnection	Removing GameServer
-1700767440789	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Setting GameServer down
+1700821010036	WARNING	1	l2open.config.ConfigSystem	ConfigSystem(383): -> NoSuchFieldException(fake.properties): ﻿######
+1700821010178	INFO	1	com.mchange.v2.log.MLog	MLog clients using java 1.4+ standard logging.
+1700821010386	INFO	1	com.mchange.v2.c3p0.C3P0Registry	Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+1700821010527	INFO	1	com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource	Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 0, acquireRetryDelay -> 100, autoCommitOnClose -> true, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge15wb08b8dm98zujf|43bd930a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge15wb08b8dm98zujf|43bd930a, idleConnectionTestPeriod -> 60, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost/l2tehno?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 1000, maxStatements -> 100, maxStatementsPerConnection -> 10, minPoolSize -> 1, numHelperThreads -> 5, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+1700821010820	INFO	1	l2open.loginserver.LoginController	Loading LoginController...
+1700821010820	INFO	1	l2open.loginserver.LoginController	Loaded Whirlpool as default crypt.
+1700821011279	INFO	1	l2open.loginserver.LoginController	Cached 10 KeyPairs for RSA communication
+1700821011465	INFO	1	l2open.loginserver.LoginController	Stored 20 keys for Blowfish communication
+1700821011465	WARNING	1	l2open.loginserver.GameServerTable	servername.xml could not be loaded: file not found
+1700821011465	INFO	1	l2open.loginserver.GameServerTable	Loaded 0 server names
+1700821011465	INFO	1	l2open.loginserver.GameServerTable	Loaded 0 registered Game Servers
+1700821011590	INFO	1	l2open.loginserver.GameServerTable	Cached 10 RSA keys for Game Server communication.
+1700821011713	INFO	1	l2open.loginserver.L2LoginServer	Listening for GameServers on *:9014
+1700821011713	INFO	1	l2open.loginserver.L2LoginServer	LoginServer Telnet server is currently disabled.
+1700821011713	INFO	21	l2open.loginserver.gameservercon.GSConnection	LoginServer: GS listener started.
+1700821011713	INFO	1	l2open.loginserver.L2LoginServer	Login Server ready on port 2106
+1700821011751	INFO	1	l2open.loginserver.L2LoginServer	0 banned IPs defined
+1700821011752	INFO	1	l2open.loginserver.L2LoginServer	Free memory 11 Mb of 28 Mb
+1700821087990	INFO	21	l2open.loginserver.gameservercon.AttGS	Init connection crypt for gameserver 192.168.1.100: ConnectionCryptDummy
+1700821087993	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Trying to register server: 1, 192.168.1.100
+1700821088005	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Updated Gameserver null Hostname's:
+1700821088006	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	InternalHostname: 192.168.1.100
+1700821088006	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	ExternalHostname: 85.95.177.23
+1700821088009	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Server registration successful.
+1700821161362	INFO	20	l2open.extensions.network.SelectorThread	max_p_size: 42
+1700821161389	INFO	20	l2open.extensions.network.SelectorThread	max_p_size: 194
+1700821162277	INFO	28	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
+1700827453249	INFO	25	l2open.loginserver.LoginController	IN_USE[chipercu][68464846][true][false][null]
+1700827453985	INFO	27	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
+1700827776036	INFO	24	l2open.loginserver.LoginController	IN_USE[chipercu][68464846][true][false][null]
+1700827778038	INFO	26	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
+1700827829529	INFO	31	l2open.loginserver.LoginController	IN_USE[chipercu][68464846][true][false][null]
+1700827830267	INFO	25	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
+1700827887576	INFO	30	l2open.loginserver.LoginController	IN_USE[chipercu][68464846][true][false][null]
+1700827963090	INFO	25	l2open.loginserver.LoginController	IN_USE[chipercu][68464846][true][false][null]
+1700827963310	INFO	27	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
+1700828099107	INFO	24	l2open.loginserver.LoginController	IN_USE[chipercu][68464846][true][false][null]
+1700828099319	INFO	26	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
+1700830296296	INFO	26	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
+1700830551573	INFO	26	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
+1700832011182	INFO	31	l2open.loginserver.LoginController	IN_USE[chipercu][68464846][true][false][null]
+1700832011394	INFO	25	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
+1700832238002	INFO	30	l2open.loginserver.LoginController	IN_USE[chipercu][68464846][true][false][null]
+1700832238214	INFO	24	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
+1700832364350	INFO	29	l2open.loginserver.LoginController	IN_USE[chipercu][68464846][true][false][null]
+1700832364570	INFO	31	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
+1700834224842	INFO	21	l2open.loginserver.gameservercon.GSConnection	Login conect close 1-1.
+1700834224842	INFO	21	l2open.loginserver.gameservercon.AttGS	LoginServer: Connection with gameserver 1 [null] lost.
+1700834224842	INFO	21	l2open.loginserver.gameservercon.GSConnection	Removing GameServer
+1700834224843	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Setting GameServer down
+1700834347614	INFO	21	l2open.loginserver.gameservercon.AttGS	Init connection crypt for gameserver 192.168.1.100: ConnectionCryptDummy
+1700834347625	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Trying to register server: 1, 192.168.1.100
+1700834347625	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Updated Gameserver null Hostname's:
+1700834347625	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	InternalHostname: 192.168.1.100
+1700834347625	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	ExternalHostname: 85.95.177.23
+1700834347632	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Server registration successful.
+1700834373933	INFO	31	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
+1700859549245	INFO	21	l2open.loginserver.gameservercon.GSConnection	Login conect close 1-1.
+1700859549245	INFO	21	l2open.loginserver.gameservercon.AttGS	LoginServer: Connection with gameserver 1 [null] lost.
+1700859549248	INFO	21	l2open.loginserver.gameservercon.GSConnection	Removing GameServer
+1700859549248	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Setting GameServer down
+1700859677647	INFO	21	l2open.loginserver.gameservercon.AttGS	Init connection crypt for gameserver 192.168.1.100: ConnectionCryptDummy
+1700859677647	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Trying to register server: 1, 192.168.1.100
+1700859677648	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Updated Gameserver null Hostname's:
+1700859677648	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	InternalHostname: 192.168.1.100
+1700859677648	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	ExternalHostname: 85.95.177.23
+1700859677658	INFO	21	l2open.loginserver.gameservercon.gspackets.AuthRequest	Server registration successful.
+1700859679544	INFO	31	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
+1700859844460	INFO	28	l2open.loginserver.LoginController	IN_USE[chipercu][68464846][true][false][null]
+1700859844674	INFO	30	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
+1700859920581	INFO	27	l2open.loginserver.LoginController	IN_USE[chipercu][68464846][true][false][null]
+1700859920792	INFO	29	l2open.loginserver.serverpackets.L2LoginServerPacket	addServer: ip=192.168.1.100[/192.168.1.100] port=7777
+1700861371714	INFO	21	l2open.loginserver.gameservercon.GSConnection	Login conect close 1-1.
+1700861371714	INFO	21	l2open.loginserver.gameservercon.AttGS	LoginServer: Connection with gameserver 1 [null] lost.
+1700861371714	INFO	21	l2open.loginserver.gameservercon.GSConnection	Removing GameServer
+1700861371714	INFO	21	l2open.loginserver.gameservercon.GameServerInfo	Setting GameServer down

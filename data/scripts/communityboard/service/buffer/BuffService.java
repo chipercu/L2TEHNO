@@ -1,33 +1,55 @@
 package communityboard.service.buffer;
 
 import communityboard.cash.buffer.BuffCash;
+import communityboard.config.BufferConfig;
 import communityboard.models.buffer.Buff;
 import communityboard.models.buffer.Scheme;
 import communityboard.models.buffer.SchemeBuff;
 import communityboard.repository.buffer.BuffRepository;
+import communityboard.repository.buffer.BufferConfigRepository;
 import communityboard.repository.buffer.SchemeRepository;
 import l2open.config.ConfigValue;
-import l2open.extensions.multilang.CustomMessage;
-import l2open.gameserver.model.*;
+import l2open.gameserver.common.DifferentMethods;
+import l2open.gameserver.model.L2Effect;
+import l2open.gameserver.model.L2Playable;
+import l2open.gameserver.model.L2Player;
+import l2open.gameserver.model.L2Skill;
 import l2open.gameserver.skills.Env;
 import l2open.gameserver.skills.effects.EffectTemplate;
-import l2open.gameserver.tables.ReflectionTable;
 import l2open.gameserver.tables.SkillTable;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class BuffService {
 
+    private final BufferConfigRepository bufferConfigRepository;
     private final BuffRepository buffRepository;
     private final SchemeRepository schemeRepository;
+    private final BufferConfig bufferConfig;
     private final BuffCash buffCash;
 
     public BuffService() {
+        this.bufferConfigRepository = new BufferConfigRepository();
+        this.bufferConfig = this.bufferConfigRepository.getConfig();
         this.buffRepository = new BuffRepository();
         this.schemeRepository = new SchemeRepository();
         this.buffCash = BuffCash.getInstance();
+        loadBufferConfig();
     }
+
+    public void loadBufferConfig(){
+        ConfigValue.BufferPriceOne = BufferConfig.getInstance().getDefaultSimpleBuffPrice();
+        ConfigValue.BufferItem = BufferConfig.getInstance().getDefaultSimpleBuffItem();
+        ConfigValue.BuffLimit = BufferConfig.getInstance().getBuffLimit();
+        ConfigValue.SongLimit = BufferConfig.getInstance().getSongLimit();
+        ConfigValue.BufferMinLevel = BufferConfig.getInstance().getMinLevel();
+        ConfigValue.BufferMaxLevel = BufferConfig.getInstance().getMaxLevel();
+        ConfigValue.BufferTime = (int) (BufferConfig.getInstance().getBuffTime() * 60000L);
+    }
+
 
     public void createBuff(Buff buff) {
         if (buff == null) {
@@ -54,11 +76,18 @@ public class BuffService {
         buffCash.removeBuff(buff.getId());
         final List<Scheme> allSchemes = buffCash.getAllSchemes();
         for (Scheme scheme : allSchemes){
-            scheme.getBuffs().values().stream()
-                    .filter(schemeBuff -> schemeBuff.getBuff_id() == buff.getId())
-                    .filter(schemeBuff -> schemeBuff.getScheme_id() == scheme.getId())
-                    .forEach(schemeBuff -> scheme.getBuffs().remove(schemeBuff.getIndex()));
+
+            final SchemeBuff schemeBuff = scheme.getBuffs().values().stream()
+                    .filter(s -> s.getBuff_id() == buff.getId())
+                    .findFirst().orElse(null);
+
+            if (schemeBuff != null){
+                scheme.getBuffs().remove(schemeBuff.getIndex());
+                schemeRepository.removeSchemeBuff(scheme.getId(), schemeBuff.getIndex());
+            }
         }
+
+
     }
 
     public List<Buff> getBuffs(){
@@ -66,19 +95,25 @@ public class BuffService {
     }
 
     public List<Buff> getBuffs(String type){
-        return getBuffs().stream()
-                .filter(buff -> buff.getType().equals(type))
-                .collect(Collectors.toList());
+        final List<Buff> buffs = getBuffs();
+
+        List<Buff> buffListByType = new ArrayList<>();
+        for (Buff buff: buffs){
+            if (buff.getType().equals(type)){
+                buffListByType.add(buff);
+            }
+        }
+        return buffListByType;
     }
 
     public Buff getBuff(int id){
-        return buffCash.getBuff(id).get();
+        return buffCash.getBuff(id);
     }
-
 
     public Optional<Scheme> getScheme(int owner, String schemeName) {
         return schemeRepository.getScheme(owner, schemeName);
     }
+
     public Scheme getScheme(int schemeId){
         return buffCash.getAllSchemes().stream()
                 .filter(scheme -> scheme.getId() == schemeId)
@@ -86,14 +121,19 @@ public class BuffService {
                 .orElse(null);
     }
 
-
     public List<Scheme> getSchemes(int owner) {
        return buffCash.getSchemes(owner);
     }
 
-    public void createScheme(Scheme scheme){
-        schemeRepository.createScheme(scheme)
-                .ifPresent(s -> buffCash.addScheme(s.getOwner(), s));
+    public Scheme createScheme(Scheme scheme){
+        final Optional<Scheme> optionalScheme = schemeRepository.createScheme(scheme);
+
+        if (optionalScheme.isPresent()){
+            final Scheme scheme1 = optionalScheme.get();
+            buffCash.addScheme(scheme1.getOwner(), scheme1);
+            return scheme1;
+        }
+        return null;
     }
 
     public void removeScheme(int owner, int schemeId) {
@@ -125,22 +165,17 @@ public class BuffService {
 
         final List<Buff> buffList = scheme.getBuffs().values().stream()
                 .map(schemeBuff -> getBuff(schemeBuff.getBuff_id())).collect(Collectors.toList());
-
-
-
-
         if (buff.isSong()){
             final long songCount = buffList.stream().filter(Buff::isSong).count();
-            if (songCount >= ConfigValue.SongLimit){
+            if (songCount >= bufferConfig.getSongLimit()){
                 return;
             }
         }else {
             final long buffCount = buffList.stream().filter(b -> !b.isSong()).count();
-            if (buffCount >= ConfigValue.BuffLimit){
+            if (buffCount >= bufferConfig.getBuffLimit()){
                 return;
             }
         }
-
 
         SchemeBuff schemeBuff;
         if (schemeRepository.getSchemeBuff(schemeId, index).isPresent()){
@@ -159,19 +194,17 @@ public class BuffService {
         buffCash.getScheme(scheme.getOwner(), scheme.getId()).getBuffs().remove(index);
     }
 
-
-
     public void castBuff(L2Player player, String[] args) {
         int buffId = Integer.parseInt(args[0]);
-        String target = args[1];
+        String page = args[1];
+        String target = args[2];
         final Buff buff = getBuff(buffId);
         if (buff == null) {
             return;
         }
 
-
         if (checkPlayerLevel(player)) {
-            player.sendMessage("Баффер доступен для игроков с уровней не ниже " + ConfigValue.BufferMinLevel + " и не выше " + ConfigValue.BufferMaxLevel + ".");
+            player.sendMessage("Баффер доступен для игроков с уровней не ниже " + bufferConfig.getMinLevel() + " и не выше " + bufferConfig.getMaxLevel() + ".");
             return;
         }
         L2Playable playable = null;
@@ -184,7 +217,19 @@ public class BuffService {
         if (playable == null) {
             return;
         }
-        applyBuff(player, buff.getSkill_id(), buff.getSkill_level(), target);
+
+        if (player.getBonus().RATE_XP <= 1 && buff.getType().equals("PREMIUM")) {
+            player.sendMessage("У вас нет активирован премиум-статус!");
+            return;
+        }
+        final boolean pay = DifferentMethods.getPay(player,
+                buff.getType().equals("PREMIUM") ? BufferConfig.getInstance().getDefaultPremiumBuffItem() : BufferConfig.getInstance().getDefaultSimpleBuffItem(),
+                buff.getType().equals("PREMIUM") ? BufferConfig.getInstance().getDefaultPremiumBuffPrice() : BufferConfig.getInstance().getDefaultSimpleBuffPrice(),
+                true);
+
+        if (pay){
+            applyBuff(player, buff.getSkill_id(), buff.getSkill_level(), target);
+        }
     }
 
     public void applyBuff(L2Player player, long id, long level, String target) {
@@ -212,8 +257,8 @@ public class BuffService {
                     effect.onActionTime();
                     effect.onExit();
                 } else if (effect != null && !effect.getEffected().p_block_buff.get()) {
-                    if (ConfigValue.BufferTime > 0)
-                        effect.setPeriod(ConfigValue.BufferTime * 60000L);
+                    if (bufferConfig.getBuffTime() > 0)
+                        effect.setPeriod(bufferConfig.getBuffTime() * 60000L);
                     if ((result = playable.getEffectList().addEffect(effect)) > 0) {
                         if ((result & 2) == 2)
                             playable.setCurrentHp(hp, false);
@@ -228,12 +273,11 @@ public class BuffService {
         playable.updateEffectIcons();
     }
 
-    private static boolean checkPlayerLevel(L2Playable playable) {
-        return playable.isPlayer() && (playable.getLevel() < ConfigValue.BufferMinLevel || playable.getLevel() > ConfigValue.BufferMaxLevel);
+    private boolean checkPlayerLevel(L2Playable playable) {
+        return playable.isPlayer() && (playable.getLevel() < bufferConfig.getMinLevel() || playable.getLevel() > bufferConfig.getMaxLevel());
     }
 
-
-
-
-
+    public BufferConfig setConfig(String configName, int value) {
+        return bufferConfigRepository.updateConfig(configName, value);
+    }
 }

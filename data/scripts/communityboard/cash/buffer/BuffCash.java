@@ -60,8 +60,8 @@ public class BuffCash {
     }
 
 
-    public Optional<Buff> getBuff(int id){
-        return this.buffs.stream().filter(buff -> buff.getId() == id).findFirst();
+    public Buff getBuff(int id){
+        return this.buffs.stream().filter(buff -> buff.getId() == id).findFirst().orElse(null);
     }
 
     public List<Buff> getBuffs() {

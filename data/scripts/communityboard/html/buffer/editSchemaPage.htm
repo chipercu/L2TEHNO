@@ -15,6 +15,9 @@
                     <td valign="top" align="center">
                         <table border=0 width=730 cellpadding=0 cellspacing=0>
                             <tr>
+                                <td align="center" valign="top" height=32><br>Имя набора : <font color="32cd32"><?schemeName?></font></td>
+                            </tr>
+                            <tr>
                                 <td align="center" valign="top" height=32><br><font color="32cd32">Бафы  : </font><font color="FF0000"><?maxCountBuff?></font>\<font color="AAAAAA"><?currentCountBuff?></font> </td>
                             </tr>
                             <tr>
@@ -33,6 +36,8 @@
                                             <td><?buffIndex10?></td>
                                             <td><?buffIndex11?></td>
                                             <td><?buffIndex12?></td>
+                                            <td width=75></td>
+                                            <td><button value="Назад!" action="bypass -h _bbsbuffer" width=90 height=25 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"</td>
                                         </tr>
                                     </table>
                                 </td>
@@ -56,7 +61,7 @@
                                             <td><?buffIndex22?></td>
                                             <td><?buffIndex23?></td>
                                             <td><?buffIndex24?></td>
-                                        </tr>
+                                         </tr>
                                     </table>
                                 </td>
                             </tr>
@@ -79,6 +84,9 @@
                                             <td><?buffIndex34?></td>
                                             <td><?buffIndex35?></td>
                                             <td><?buffIndex36?></td>
+                                            <td width=75></td>
+                                            <td><button value="Очистить!" action="bypass -h bbs_clear_scheme <?schemeId?> <?owner?>" width=90 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"</td>
+
                                         </tr>
                                     </table>
                                 </td>
@@ -114,7 +122,6 @@
                                 </td>
 
                             </tr>
-
                         </table>
                     </td>
                 </tr>

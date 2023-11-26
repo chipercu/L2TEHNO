@@ -1,6 +1,7 @@
 package communityboard.controller;
 
 import communityboard.components.buffer.BufferComponent;
+import communityboard.config.BufferConfig;
 import communityboard.service.buffer.BuffService;
 import l2open.config.ConfigValue;
 import l2open.extensions.multilang.CustomMessage;
@@ -20,10 +21,11 @@ import java.util.*;
 public class BufferController extends BaseBBSManager implements ICommunityHandler, ScriptFile {
 
     private BufferComponent bufferComponent;
-    private static final long SYSTEM_LISTS = -1;
 
     private static enum Commands {
         _bbsbuffer,
+        bbs_buffer_global_settings,
+        bbs_buffer_save_config,
         bbs_show_buffs,
         bbs_add_buff,
         bbs_create_scheme,
@@ -72,6 +74,10 @@ public class BufferController extends BaseBBSManager implements ICommunityHandle
         }
         if ("_bbsbuffer".equals(cmd)) {
             bufferComponent.showMainPage(player);
+        } else if ("bbs_buffer_global_settings".equals(cmd)) {
+            bufferComponent.showBufferConfigPage(player);
+        }else if ("bbs_buffer_save_config".equals(cmd)) {
+            bufferComponent.setConfig(player, args);
         } else if ("bbs_show_buffs".equals(cmd)) {
             bufferComponent.showBuffs(player, args);
         } else if ("bbs_create_scheme".equals(cmd)) {
@@ -99,7 +105,7 @@ public class BufferController extends BaseBBSManager implements ICommunityHandle
         } else if ("bbs_cast_scheme".equals(cmd)) {
             bufferComponent.castScheme(player, args);
         } else if ("bbs_show_all_buffs".equals(cmd)) {
-            bufferComponent.showAllBuffs(player, args);
+            bufferComponent.showAllBuffsWindow(player, args);
         } else if ("bbs_clear_buffs".equals(cmd)) {
             bufferComponent.clearBuffs(player, args);
         } else if ("bbs_clear_scheme".equals(cmd)) {
@@ -108,8 +114,6 @@ public class BufferController extends BaseBBSManager implements ICommunityHandle
             bufferComponent.changeEnchantType(args, player);
         } else if ("bbs_show_change_buff_params".equals(cmd)) {
             bufferComponent.showChangeBuffParams(args, player);
-        } else if ("bbs_change_list_index".equals(cmd)) {
-            bufferComponent.changeListIndex(player, args);
         } else if ("bbs_test_buffer".equals(cmd)) {
             String html = Files.read(ConfigValue.CommunityBoardHtmlRoot + "buffer/test.htm", player);
             ShowBoard.separateAndSend(addCustomReplace(html), player);
