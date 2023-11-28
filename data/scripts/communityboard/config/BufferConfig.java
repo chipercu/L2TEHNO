@@ -20,7 +20,7 @@ public class BufferConfig {
     private int maxLevel;
     private int buffTime;
 
-    private BufferConfig(){
+    public BufferConfig(){
     }
 
     public static BufferConfig getInstance(){

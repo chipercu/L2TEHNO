@@ -30,6 +30,10 @@ public class Col implements Build {
         this.body += html;
         return this;
     }
+    public Col insert(String html, boolean center){
+        this.body += "<center>" + html + "</center>";
+        return this;
+    }
 
     public Col setCenter() {
         this.center = true;
