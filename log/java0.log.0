@@ -4693,21 +4693,24 @@
 1701280807983	WARNING	59	l2open.common.RunnableImpl	Wed Nov 29 21:00:07 MSK 2023 Atk announce scheduled to 0.0 minute of this hour.
 1701280820195	WARNING	59	l2open.common.RunnableImpl	Wed Nov 29 21:00:20 MSK 2023 Atk announce scheduled to 0.0 minute of this hour.
 1701280837612	WARNING	59	l2open.common.RunnableImpl	Wed Nov 29 21:00:37 MSK 2023 Atk announce scheduled to 0.0 minute of this hour.
-1701276628969	WARNING	57	l2open.common.RunnableImpl	FourSepulchersManager: Entry time: Wed Nov 29 19:55:28 MSK 2023
-1701277200005	INFO	22	l2open.common.RunnableImpl	Manor System: Under maintenance mode started
-1701277270595	INFO	100	l2open.extensions.network.SelectorThread	max_p_size: 517
-1701277288425	INFO	85	l2open.gameserver.clientpackets.L2GameClientPacket	SendBypassBuildCmd: admin
-1701277291147	INFO	86	communityboard.General	SimpleLottery: Store Jackpot
-1701277291150	INFO	86	com.mchange.v2.c3p0.stmt.GooGooStatementCache	Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='simple_loss_count'
-1701277291155	INFO	86	communityboard.CommunityBoardTeleport	Load 297 teleport points.
-1701277291158	INFO	86	communityboard.General	premiumLottery: Store Jackpot
-1701277291160	INFO	86	com.mchange.v2.c3p0.stmt.GooGooStatementCache	Multiply prepared statement! UPDATE `bbs_lottery` SET `count`=0 WHERE `type`='premium_loss_count'
-1701277291165	INFO	86	l2open.extensions.scripts.ScriptFile	Seed Of Destruction closed.
-1701277291165	INFO	86	events.Simple.Simple	SpawnManager: despawned npc for event: Simple
-1701277291166	INFO	86	l2open.extensions.scripts.Scripts	Scripts loading...
-1701277291166	INFO	86	l2open.extensions.scripts.Scripts	Scripts start parse class...
-1701277291621	INFO	86	l2open.extensions.scripts.Scripts	Scripts end parse class...
-1701277297423	INFO	86	l2open.extensions.scripts.Scripts	Scripts end compile class...
+1701281865936	INFO	61	l2open.common.RunnableImpl	=================================================
+1701281865936	INFO	61	l2open.common.RunnableImpl	Garbage Collector start.
+1701281865936	INFO	61	l2open.common.RunnableImpl	Players full online = 1
+1701281865937	INFO	61	l2open.common.RunnableImpl	Players online = 1
+1701281865937	INFO	61	l2open.common.RunnableImpl	Players offline = 0
+1701281865937	INFO	61	l2open.common.RunnableImpl	Players fake = 0
+1701281865937	INFO	61	l2open.common.RunnableImpl	Used to: 4360816Kb
+1701281874969	INFO	61	l2open.common.RunnableImpl	Garbage Collector finish(9032ms).
+1701281874970	INFO	61	l2open.common.RunnableImpl	Used after: 2431636Kb
+1701281874970	INFO	61	l2open.common.RunnableImpl	AllowedMemory: ........... 6087040 KB
+1701281874970	INFO	61	l2open.common.RunnableImpl	     Allocated: .......... 6087040 KB (100.0%)
+1701281874970	INFO	61	l2open.common.RunnableImpl	     Non-Allocated: ...... 0 KB (0.0%)
+1701281874970	INFO	61	l2open.common.RunnableImpl	AllocatedMemory: ......... 6087040 KB
+1701281874970	INFO	61	l2open.common.RunnableImpl	     Used: ............... 2431636 KB (39.9478%)
+1701281874970	INFO	61	l2open.common.RunnableImpl	     Unused (cached): .... 3655403 KB (60.0522%)
+1701281874970	INFO	61	l2open.common.RunnableImpl	UseableMemory: ........... 3655403 KB (60.0522%)
+1701281874970	INFO	61	l2open.common.RunnableImpl	=================================================
+ipts	Scripts end compile class...
 1701277299438	INFO	86	l2open.extensions.scripts.Scripts	Scripts successfully loaded. Loaded 1328 classes.
 1701277299496	INFO	86	communityboard.CommunityBoardShortStats	Short statistics in the commynity board has been updated.
 1701277299499	INFO	86	l2open.extensions.scripts.ScriptFile	Loaded Service: change sex services.

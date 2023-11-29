@@ -492,7 +492,7 @@ public class SkillTreeTable {
         return result;
     }
 
-    public static GArray<L2EnchantSkillLearn> getFirstEnchantsForSkill(long skillid)
+    public static GArray<L2EnchantSkillLearn> getFirstEnchantsForSkill(int skillid)
 	{
         GArray<L2EnchantSkillLearn> result = new GArray<L2EnchantSkillLearn>();
 
