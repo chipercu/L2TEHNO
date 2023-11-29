@@ -98,6 +98,7 @@ public class BufferComponent {
         }
         showMainPage(player);
     }
+
     public void castScheme(L2Player player, String schemeName, String target){
         final Scheme scheme = buffService.getScheme(player.getObjectId(), schemeName);
         if (scheme != null) {
@@ -119,8 +120,6 @@ public class BufferComponent {
             }
         }
     }
-
-
 
     public void showMainPage(L2Player player) {
         String html = Files.read(BufferConfig.HTML_PATCH + "index.htm", player);

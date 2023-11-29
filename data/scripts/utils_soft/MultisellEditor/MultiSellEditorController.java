@@ -1,6 +1,5 @@
 package utils_soft.MultisellEditor;
 
-import commands.admin.AdminAdmin;
 import l2open.extensions.scripts.ScriptFile;
 import l2open.gameserver.handler.AdminCommandHandler;
 import l2open.gameserver.handler.IAdminCommandHandler;
@@ -32,7 +31,7 @@ public class MultiSellEditorController implements IAdminCommandHandler, ScriptFi
                     break;
                 }
                 case admin_multisell_editor_show_multisell:{
-                    component.showMultiSell(player, args);
+                    component.openMultiSell(player, args);
                 }
 
 
