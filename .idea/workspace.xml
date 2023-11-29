@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="feat: MultiSellEditorService- main-page">
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="fix: SkillTreeTable">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/components/buffer/BufferComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/components/buffer/BufferComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L2TEHNO1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/L2TEHNO1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/consol.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/consol.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/consol.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/log/consol.log.1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/debug/network/log_connect.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/debug/network/log_connect.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/game/auth.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/auth.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/game/bosses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/bosses.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/game/geo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/geo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/game/hwids.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/hwids.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/game/item_count.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/item_count.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/game/logins_ip.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/logins_ip.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/game/siege_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/siege_info.txt" afterDir="false" />
@@ -425,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701199732463</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fix: SkillTreeTable">
+      <created>1701282214368</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1701282214368</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +465,8 @@
     <MESSAGE value="refactoring: CommunityBoardBuffer редактирования схем" />
     <MESSAGE value="feat: Buffer - settings" />
     <MESSAGE value="feat: MultiSellEditorService- main-page" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: MultiSellEditorService- main-page" />
+    <MESSAGE value="fix: SkillTreeTable" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: SkillTreeTable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
