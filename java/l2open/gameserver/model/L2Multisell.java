@@ -70,7 +70,7 @@ public class L2Multisell {
         private boolean is_dutyfree = false;
         private boolean nokey = false;
         private boolean _isnew = false;
-        GArray<MultiSellEntry> entries = new GArray<MultiSellEntry>();
+        List<MultiSellEntry> entries = new ArrayList<>();
 
         public void setListId(int listId) {
             _listId = listId;
@@ -128,7 +128,7 @@ public class L2Multisell {
             entries.add(e);
         }
 
-        public GArray<MultiSellEntry> getEntries() {
+        public List<MultiSellEntry> getEntries() {
             return entries;
         }
 

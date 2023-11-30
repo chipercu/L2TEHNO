@@ -62,6 +62,15 @@ public class Component {
         return pages.build();
     }
 
+    public static String formatItemName(String itemName){
+        itemName = itemName.replace("Scroll", "S.");
+        itemName = itemName.replace("Recipe", "R.");
+        itemName = itemName.replace("Greater", "G.");
+        itemName = itemName.replace("<", "(");
+        itemName = itemName.replace(">", ")");
+        return itemName;
+    }
+
 
     public static String separator(int width){
         return new Img("l2ui.squaregray", width, 1).build();
