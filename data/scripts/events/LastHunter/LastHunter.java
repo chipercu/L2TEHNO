@@ -48,6 +48,7 @@ import l2open.util.reference.*;
 public class LastHunter extends Functions implements ScriptFile {
     private static final Logger _log = Logger.getLogger(LastHunter.class.getName());
     private static Reflection reflection = null;
+    private static boolean _active = false;
 
     private static final String EVENT_NAME = "Last Hunter";
 
@@ -682,7 +683,7 @@ public class LastHunter extends Functions implements ScriptFile {
         onReload();
     }
 
-    private static boolean _active = true;
+
 
     public static boolean isActive() {
         return _active;
