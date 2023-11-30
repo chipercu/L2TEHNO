@@ -6,6 +6,7 @@ import l2open.common.Html_Constructor.tags.Table;
 import l2open.common.Html_Constructor.tags.parameters.Position;
 import l2open.gameserver.model.L2Player;
 import l2open.gameserver.serverpackets.TutorialShowHtml;
+import l2open.util.GArray;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +43,25 @@ public class Component {
 
         return partitions;
     }
+
+    public static <T> List<List<T>> partitionList(GArray<T> list, int batchSize) {
+        final ArrayList<T> arrayList = new ArrayList<>(list);
+        List<List<T>> partitions = new ArrayList<>();
+        for (int i = 0; i < arrayList.size(); i += batchSize) {
+            int end = Math.min(arrayList.size(), i + batchSize);
+            partitions.add(arrayList.subList(i, end));
+        }
+        return partitions;
+    }
+
+    public static String pageTable(int page, int totalPages, String bypass){
+        final Table pages = new Table(1, 3);
+        pages.row(0).col(0).setParams(width(100), height(20)).insert(new Button("<<", action("bypass -h admin_multisell_editor " + (page == 1? page: page -1)), 80, 20).build());
+        pages.row(0).col(1).setParams(width(80)).insert(String.valueOf(page));
+        pages.row(0).col(2).setParams(width(100)).insert(new Button(">>", action("bypass -h admin_multisell_editor " + (page > totalPages ? page: page + 1)), 80, 20).build());
+        return pages.build();
+    }
+
 
     public static String separator(int width){
         return new Img("l2ui.squaregray", width, 1).build();

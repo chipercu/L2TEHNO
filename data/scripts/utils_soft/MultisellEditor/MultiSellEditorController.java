@@ -18,6 +18,14 @@ public class MultiSellEditorController implements IAdminCommandHandler, ScriptFi
     private static enum Commands {
         admin_multisell_editor,
         admin_multisell_editor_show_multisell,
+        admin_multisell_editor_redact,
+        admin_multisell_editor_set_showall,
+        admin_multisell_editor_set_notax,
+        admin_multisell_editor_set_keepenchant,
+        admin_multisell_editor_set_nokey,
+        admin_multisell_editor_remove_product,
+        admin_multisell_editor_show_entry_page,
+        admin_multisell_editor_change_entry_index,
     }
 
     @Override
@@ -32,6 +40,39 @@ public class MultiSellEditorController implements IAdminCommandHandler, ScriptFi
                 }
                 case admin_multisell_editor_show_multisell:{
                     component.openMultiSell(player, args);
+                    break;
+                }
+                case admin_multisell_editor_redact:{
+                    component.redactMultiSell(player, args);
+                    break;
+                }
+                case admin_multisell_editor_set_showall:{
+                    component.setShowAll(player, args);
+                    break;
+                }
+                case admin_multisell_editor_set_notax:{
+                    component.setNoTax(player, args);
+                    break;
+                }
+                case admin_multisell_editor_set_keepenchant:{
+                    component.setKeepEnchant(player, args);
+                    break;
+                }
+                case admin_multisell_editor_set_nokey:{
+                    component.setNoKey(player, args);
+                    break;
+                }
+                case admin_multisell_editor_remove_product:{
+                    component.removeProduct(player, args);
+                    break;
+                }
+                case admin_multisell_editor_show_entry_page:{
+                    component.showEntryPage(player, args);
+                    break;
+                }
+                case admin_multisell_editor_change_entry_index:{
+                    component.changeEntryIndex(player, args);
+                    break;
                 }
 
 
