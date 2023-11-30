@@ -88,7 +88,7 @@ public class MultiSellEditorComponent extends Component {
         main.row(0).col(0).insert(configTable.build());
 
         final int size = multisell.getEntries().size();
-        final List<List<MultiSellEntry>> partitionList = partitionList(multisell.getEntries(), 10);
+        final List<List<MultiSellEntry>> partitionList = partitionList(multisell.getEntries(), 16);
 
         if (!partitionList.isEmpty()){
             final List<MultiSellEntry> multiSellEntries = partitionList.get(page - 1);
@@ -112,7 +112,7 @@ public class MultiSellEditorComponent extends Component {
                 final Table productInfo = new Table(2, 1);
                 productInfo.row(0).col(0).setParams(height(16)).insert(product.getName().length() > 15 ? product.getName().substring(0, 15) : product.getName());
                 productInfo.row(1).col(0).setParams(height(16)).insert("count: " + productCount);
-                final String productName = product.getName();
+                final String productName = formatItemName(product.getName());
                 final Table itemTable = new Table(1, 5).setParams(cellpadding(0), cellspacing(0));
 //            itemTable.row(0).col(0).setParams(height(32), width(32)).insert(moveTable.build());
                 itemTable.row(0).col(0).setParams(height(32), width(1)).insert("");

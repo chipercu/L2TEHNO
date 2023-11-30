@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="1212">
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="MultiSellEditorComponent fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/html/admin/admin.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/html/admin/admin.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/events/LastHunter/LastHunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/events/LastHunter/LastHunter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Multisell.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Multisell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/serverpackets/MultiSellList.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/serverpackets/MultiSellList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ReLife" />
+        <entry key="$PROJECT_DIR$" value="L2TEHNO" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -168,11 +168,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Server" />
         <item itemvalue="Application.GameStart" />
         <item itemvalue="Application.L2LoginStart" />
-        <item itemvalue="Application.Server" />
         <item itemvalue="Application.Test" />
-        <item itemvalue="Application.Server" />
+        <item itemvalue="Application.GameStart" />
       </list>
     </recent_temporary>
   </component>
@@ -417,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701286531649</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="MultiSellEditorComponent fix">
+      <created>1701369633115</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1701369633115</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +461,8 @@
     <MESSAGE value="feat: MultiSellEditorService- main-page" />
     <MESSAGE value="fix: SkillTreeTable" />
     <MESSAGE value="fix: gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: gitignore" />
+    <MESSAGE value="MultiSellEditorComponent fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="MultiSellEditorComponent fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
