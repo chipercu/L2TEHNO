@@ -36,16 +36,12 @@ public class MultiSellEditorComponent extends Component{
     }
 
     public static void showMainPage(L2Player player, String[] args) {
-
         if (args.length < 4){
             return;
         }
-
         String filter = args[1];
         String filterValue = args[2];
         int page = Integer.parseInt(args[3]);
-
-
 
         List<MultiSellListContainer> containers = new ArrayList<>();
         if ("id".equals(filter)){
@@ -78,17 +74,13 @@ public class MultiSellEditorComponent extends Component{
         }
 
         containers.sort(Comparator.comparingInt(MultiSellListContainer::getListId));
-
         List<MultiSellListContainer> containerList = new ArrayList<>();
 
         if (!containers.isEmpty()){
             containerList = partitionList(containers, 20).get(page - 1);
         }
 
-//        final List<MultiSellListContainer> containerList = partitionList(containers, 20).get(page - 1);
-
         final Table main = new Table(3, 1).setParams(width(DEFAULT_TWINDOW_WIDTH));
-
         final Table filterTable = new Table(1, 4);
         filterTable.row(0).col(0).setParams(width(80)).insert(new Edit("find", 80, 12, EditType.text, 12).build());
         filterTable.row(0).col(1).setParams(width(50)).insert(new Button("Id", actionCom(admin_multisell_editor,"id $find 1"), 50, 20).build());
@@ -132,18 +124,9 @@ public class MultiSellEditorComponent extends Component{
         configTable.row(1).col(1).setParams(align(CENTER), valign(LEFT)).insert(new Font(multisell.isNoTax()? Color.GOLD: Color.RED, String.valueOf(multisell.isNoTax())).build());
         configTable.row(1).col(2).setParams(align(CENTER), valign(LEFT)).insert(new Font(multisell.isKeepEnchant()? Color.GOLD: Color.RED, String.valueOf(multisell.isKeepEnchant())).build());
         configTable.row(1).col(3).setParams(align(CENTER), valign(LEFT)).insert(new Font(multisell.isNoKey()? Color.GOLD: Color.RED, String.valueOf(multisell.isNoKey())).build());
-
         main.row(0).col(0).insert(configTable.build());
 
-
-
-
-        final int size = multisell.getEntries().size();
         final List<List<MultiSellEntry>> partitionList = partitionList(multisell.getEntries(), 10);
-
-
-
-
 
         if (!partitionList.isEmpty()){
             final List<MultiSellEntry> multiSellEntries = partitionList.get(page - 1);
@@ -170,7 +153,6 @@ public class MultiSellEditorComponent extends Component{
                 productInfo.row(1).col(0).setParams(height(16)).insert("count: " + productCount);
                 final String productName = " " + formatItemName(product.getName());
                 final Table itemTable = new Table(1, 5).setParams(cellpadding(0));
-//            itemTable.row(0).col(0).setParams(height(32), width(32)).insert(moveTable.build());
                 itemTable.row(0).col(0).setParams(height(40), width(1)).insert("");
                 itemTable.row(0).col(1).setParams(width(32)).insert(new Img(product.getIcon()).build());
                 itemTable.row(0).col(2).setParams(width(170)).setParams(align(LEFT), valign(CENTER)).insert(productName.length() > 25 ? productName.substring(0, 25) : productName);
@@ -191,7 +173,6 @@ public class MultiSellEditorComponent extends Component{
         addEntryTable.row(0).col(2).setParams(width(35), valign(CENTER), align(LEFT)).insert("count");
         addEntryTable.row(0).col(3).insert(new Edit("itemCount", 85, 12, EditType.num, 12).build());
         addEntryTable.row(0).col(4).insert(new Button("Добавить", actionCom(admin_multisell_editor_add_entry, multisell.getListId() + " $itemId $itemCount " + page), 80, 20).build(),true);
-
 
         main.row(3).col(0).setParams(height(10));
         main.row(4).col(0).insert(addEntryTable.build(),true);
