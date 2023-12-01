@@ -18,7 +18,9 @@ public class Component {
     protected static int DEFAULT_TWINDOW_WIDTH = 350;
 
     protected static void showTWindow(L2Player player, String html, String title, String backBypass){
-        player.sendPacket(new TutorialShowHtml("<html><body><title>" + title + "</title>" + TWindowCloseButton(backBypass) + html + " </body></html>"));
+        String s = "<html><body><title>" + title + "</title>" + TWindowCloseButton(backBypass) + html + " </body></html>";
+        System.out.println(s.length());
+        player.sendPacket(new TutorialShowHtml(s));
     }
 
     protected static void showTWindow(L2Player player, String html, String backBypass){
@@ -66,6 +68,8 @@ public class Component {
         itemName = itemName.replace("Scroll", "S.");
         itemName = itemName.replace("Recipe", "R.");
         itemName = itemName.replace("Greater", "G.");
+        itemName = itemName.replace("Escape", "Esc.");
+        itemName = itemName.replace("Escape", "Esc.");
         itemName = itemName.replace("<", "(");
         itemName = itemName.replace(">", ")");
         return itemName;
