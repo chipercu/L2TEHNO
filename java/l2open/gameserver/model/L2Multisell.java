@@ -34,6 +34,8 @@ public class L2Multisell {
     private FastMap<Integer, MultiSellListContainer> entries = new FastMap<Integer, MultiSellListContainer>();
     private static L2Multisell _instance = new L2Multisell();
 
+
+
     public static final String NODE_PRODUCTION = "production";
     public static final String NODE_INGRIDIENT = "ingredient";
 
@@ -53,6 +55,8 @@ public class L2Multisell {
         parseData();
     }
 
+
+
     public static L2Multisell getInstance() {
         return _instance;
     }
@@ -71,6 +75,25 @@ public class L2Multisell {
         private boolean nokey = false;
         private boolean _isnew = false;
         List<MultiSellEntry> entries = new ArrayList<>();
+
+        private String filePath;
+        private File file;
+
+        public File getFile() {
+            return file;
+        }
+
+        public void setFile(File file) {
+            this.file = file;
+        }
+
+        public String getFilePath() {
+            return filePath;
+        }
+
+        public void setFilePath(String filePath) {
+            this.filePath = filePath;
+        }
 
         public void setListId(int listId) {
             _listId = listId;
@@ -201,7 +224,7 @@ public class L2Multisell {
             return;
         }
         try {
-            addMultiSellListContainer(id, parseDocument(doc, id));
+            addMultiSellListContainer(id, parseDocument(doc, id, f));
         } catch (Exception e) {
             _log.log(Level.SEVERE, "Error in file " + f, e);
         }
@@ -215,8 +238,13 @@ public class L2Multisell {
             parseFile(f);
     }
 
-    protected MultiSellListContainer parseDocument(Document doc, int id) {
+    protected MultiSellListContainer parseDocument(Document doc, int id, File file) {
         MultiSellListContainer list = new MultiSellListContainer();
+
+        list.setFile(file);
+        list.setFilePath(file.getPath());
+
+
         int entId = 1;
 
         for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())

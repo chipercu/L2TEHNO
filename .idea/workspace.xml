@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="MultiSellEditorComponent fix">
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="feat: MultiSellEditorComponent - добавлена фильтрация">
+      <change afterPath="$PROJECT_DIR$/1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/103.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/multisell/001.xml_backup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/multisell/002.xml_backup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/multisell/003.xml_backup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/multisell/004.xml_backup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcCommands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcCommandsManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/html/admin/admin.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/html/admin/admin.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/multisell/001.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/multisell/001.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/ai/AntQueen/ai_boss01_royal_guard_ant.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/ai/AntQueen/ai_boss01_royal_guard_ant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/common/Html_Constructor/tags/Font.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/Html_Constructor/tags/Font.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/common/Html_Constructor/tags/parameters/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/Html_Constructor/tags/parameters/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/database/FiltredPreparedStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/database/FiltredPreparedStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Multisell.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Multisell.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,11 +101,11 @@
       <recent name="D:\High Five\L2TEHNO" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="utils_soft.NpcEditor" />
       <recent name="communityboard.repository.buffer" />
       <recent name="communityboard.components.buffer" />
       <recent name="communityboard.bufferService" />
       <recent name="l2open.gameserver.model.barahlo" />
-      <recent name="communityboard" />
     </key>
   </component>
   <component name="RunManager" selected="Application.GameStart">
@@ -270,7 +282,11 @@
       <workItem from="1701075329487" duration="661000" />
       <workItem from="1701107327945" duration="4667000" />
       <workItem from="1701275912802" duration="4262000" />
-      <workItem from="1701443448554" duration="19855000" />
+      <workItem from="1701443448554" duration="20471000" />
+      <workItem from="1701505963117" duration="7678000" />
+      <workItem from="1701543389809" duration="3496000" />
+      <workItem from="1701597260065" duration="6372000" />
+      <workItem from="1701714202091" duration="3911000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1692529102326</created>
@@ -426,7 +442,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701369633115</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="feat: MultiSellEditorComponent - добавлена фильтрация">
+      <created>1701468413759</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1701468413759</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat: MultiSellEditorComponent - добавлена фильтрация">
+      <created>1701468508892</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1701468508892</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +494,8 @@
     <MESSAGE value="fix: SkillTreeTable" />
     <MESSAGE value="fix: gitignore" />
     <MESSAGE value="MultiSellEditorComponent fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="MultiSellEditorComponent fix" />
+    <MESSAGE value="feat: MultiSellEditorComponent - добавлена фильтрация" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: MultiSellEditorComponent - добавлена фильтрация" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

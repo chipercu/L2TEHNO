@@ -24,7 +24,8 @@ public enum MultiSellCommands {
     admin_multisell_editor_add_ingredient(MultiSellEditorComponent::addIngredient),
     admin_multisell_editor_change_ingredient_count(MultiSellEditorComponent::changeIngredientCount),
     admin_multisell_editor_remove_ingredient(MultiSellEditorComponent::removeIngredient),
-    admin_multisell_editor_add_entry(MultiSellEditorComponent::addEntry);
+    admin_multisell_editor_add_entry(MultiSellEditorComponent::addEntry),
+    admin_multisell_editor_restore(MultiSellEditorComponent::restoreMultisell);
 
     private final CommandsFunction component;
 
