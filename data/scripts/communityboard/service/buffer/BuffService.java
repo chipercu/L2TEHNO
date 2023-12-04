@@ -110,8 +110,15 @@ public class BuffService {
         return buffCash.getBuff(id);
     }
 
-    public Optional<Scheme> getScheme(int owner, String schemeName) {
-        return schemeRepository.getScheme(owner, schemeName);
+    public Scheme getScheme(int owner, String schemeName) {
+        final List<Scheme> schemes = buffCash.getSchemes(owner);
+        for (Scheme scheme: schemes){
+            final String name = scheme.getName().trim();
+            if (name.equals(schemeName.trim())){
+                return scheme;
+            }
+        }
+        return null;
     }
 
     public Scheme getScheme(int schemeId){

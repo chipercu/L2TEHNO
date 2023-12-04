@@ -8,6 +8,9 @@ import l2open.gameserver.templates.L2Item;
 import l2open.gameserver.xml.ItemTemplates;
 import l2open.util.GArray;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MultiSellList extends L2GameServerPacket
 {
 	protected int _page;
@@ -15,7 +18,7 @@ public class MultiSellList extends L2GameServerPacket
 	private final boolean _isnew;
 
 	private int _listId;
-	private GArray<MultiSellEntry> _possiblelist = new GArray<MultiSellEntry>();
+	private List<MultiSellEntry> _possiblelist = new ArrayList<>();
 
 	public MultiSellList(MultiSellListContainer list, int page, int finished)
 	{

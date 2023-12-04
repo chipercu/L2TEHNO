@@ -3,7 +3,11 @@ package l2open.common.Html_Constructor.tags.parameters;
 public enum Color {
 
     GOLD("F2C202"),
-    RED("D70000");
+    RED("FF0000"),
+    GREN("32cd32"),
+    BLUE("0099FF"),
+    GRAY("AAAAAA"),
+    BROWN("FF6600");
 
     final String value;
     Color(String value) {

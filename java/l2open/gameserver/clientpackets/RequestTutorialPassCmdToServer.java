@@ -3,6 +3,7 @@ package l2open.gameserver.clientpackets;
 import l2open.config.ConfigValue;
 import l2open.gameserver.communitybbs.CommunityBoard;
 import l2open.gameserver.communitybbs.PartyMaker.PartyMaker;
+import l2open.gameserver.handler.AdminCommandHandler;
 import l2open.gameserver.instancemanager.QuestManager;
 import l2open.gameserver.model.L2Player;
 import l2open.gameserver.model.BypassManager.DecodedBypass;
@@ -41,6 +42,8 @@ public class RequestTutorialPassCmdToServer extends L2GameClientPacket
 				|| _bypass.startsWith("bbs_buffer_save_config")
 				|| _bypass.startsWith("bbs_show_all_buffs")){
 			CommunityBoard.getInstance().handleCommands(getClient(), _bypass);
+		} else if (_bypass.startsWith("admin_multisell_editor")) {
+			AdminCommandHandler.getInstance().useAdminCommandHandler(player, _bypass);
 		}
 
 

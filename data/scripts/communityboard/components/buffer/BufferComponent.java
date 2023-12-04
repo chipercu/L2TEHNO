@@ -86,12 +86,39 @@ public class BufferComponent {
                     player.sendMessage("У вас нет активирован премиум-статус!");
                     continue;
                 }
-                if (DifferentMethods.getPay(player, buff.getPrice_item(), buff.getPrice(), true)){
+                final boolean pay = DifferentMethods.getPay(player,
+                        buff.getType().equals("PREMIUM") ? BufferConfig.getInstance().getDefaultPremiumBuffItem() : BufferConfig.getInstance().getDefaultSimpleBuffItem(),
+                        buff.getType().equals("PREMIUM") ? BufferConfig.getInstance().getDefaultPremiumBuffPrice() : BufferConfig.getInstance().getDefaultSimpleBuffPrice(),
+                        true);
+
+                if (pay){
                     buffService.applyBuff(player, buff.getSkill_id(), buff.getSkill_level(), target);
                 }
             }
         }
         showMainPage(player);
+    }
+
+    public void castScheme(L2Player player, String schemeName, String target){
+        final Scheme scheme = buffService.getScheme(player.getObjectId(), schemeName);
+        if (scheme != null) {
+            final List<SchemeBuff> schemeBuffs = scheme.getBuffs().values().stream().sorted(Comparator.comparingInt(SchemeBuff::getIndex)).collect(Collectors.toList());
+            for (SchemeBuff schemeBuff : schemeBuffs) {
+                Buff buff = buffService.getBuff(schemeBuff.getBuff_id());
+                if (player.getBonus().RATE_XP <= 1 && buff.getType().equals("PREMIUM")) {
+                    player.sendMessage("У вас нет активирован премиум-статус!");
+                    continue;
+                }
+                final boolean pay = DifferentMethods.getPay(player,
+                        buff.getType().equals("PREMIUM") ? BufferConfig.getInstance().getDefaultPremiumBuffItem() : BufferConfig.getInstance().getDefaultSimpleBuffItem(),
+                        buff.getType().equals("PREMIUM") ? BufferConfig.getInstance().getDefaultPremiumBuffPrice() : BufferConfig.getInstance().getDefaultSimpleBuffPrice(),
+                        true);
+
+                if (pay){
+                    buffService.applyBuff(player, buff.getSkill_id(), buff.getSkill_level(), target);
+                }
+            }
+        }
     }
 
     public void showMainPage(L2Player player) {
@@ -246,11 +273,8 @@ public class BufferComponent {
         int index = Integer.parseInt(args[0]);
         String schemeName = args[1];
         int owner = Integer.parseInt(args[2]);
-
-        final Optional<Scheme> optionalScheme = buffService.getScheme(owner, schemeName);
-
-        if (optionalScheme.isPresent()) {
-            final Scheme scheme = optionalScheme.get();
+        final Scheme scheme = buffService.getScheme(owner, schemeName);
+        if (scheme != null) {
             buffService.removeBuffFromScheme(scheme, index);
             showRedactScheme(player, new String[]{String.valueOf(scheme.getId())});
         }
@@ -273,8 +297,8 @@ public class BufferComponent {
             return;
         }
 
-        final Optional<Scheme> schemeOptional = buffService.getScheme(owner, schemeName.toString());
-        if (schemeOptional.isPresent()) {
+        final Scheme temp = buffService.getScheme(owner, schemeName.toString());
+        if (temp != null) {
             player.sendMessage("Это название уже занято.");
             return;
         } else {

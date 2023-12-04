@@ -38,6 +38,7 @@ public class BufferController extends BaseBBSManager implements ICommunityHandle
         bbs_remove_scheme,
         bbs_cast_buff,
         bbs_cast_scheme,
+        bbs_cast_scheme_command,
         bbs_show_all_buffs,
         bbs_clear_buffs,
         bbs_clear_scheme,
@@ -104,6 +105,8 @@ public class BufferController extends BaseBBSManager implements ICommunityHandle
             bufferComponent.castBuff(player, args);
         } else if ("bbs_cast_scheme".equals(cmd)) {
             bufferComponent.castScheme(player, args);
+        } else if ("bbs_cast_scheme_command".equals(cmd)) {
+            bufferComponent.castScheme(player, args[0], args[1]);
         } else if ("bbs_show_all_buffs".equals(cmd)) {
             bufferComponent.showAllBuffsWindow(player, args);
         } else if ("bbs_clear_buffs".equals(cmd)) {

@@ -11,6 +11,14 @@ public class Font implements Build{
         this.color = color;
         this.text = text;
     }
+    public Font(Color color, int text){
+        this.color = color;
+        this.text = String.valueOf(text);
+    }
+    public Font(Color color, long text){
+        this.color = color;
+        this.text = String.valueOf(text);
+    }
 
     @Override
     public String build() {
