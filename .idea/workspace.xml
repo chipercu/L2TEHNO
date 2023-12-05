@@ -4,25 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="feat: MultiSellEditorComponent - добавлена фильтрация">
-      <change afterPath="$PROJECT_DIR$/1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/103.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/multisell/001.xml_backup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/multisell/002.xml_backup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/multisell/003.xml_backup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/multisell/004.xml_backup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcCommands.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcCommandsManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcRepository.java" afterDir="false" />
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="refactoring: CommunityBoardBuffer редактирования схем">
+      <change afterPath="$PROJECT_DIR$/compiling/builds.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/redactBuffButtons.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/communityboard/repository/buffer/BufferConfigRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/multisell/001.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/multisell/001.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/ai/AntQueen/ai_boss01_royal_guard_ant.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/ai/AntQueen/ai_boss01_royal_guard_ant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/database/FiltredPreparedStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/database/FiltredPreparedStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Multisell.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Multisell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compiling/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/compiling/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compiling/buildf.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/cash/buffer/BuffCash.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/cash/buffer/BuffCash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/components/buffer/BufferComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/components/buffer/BufferComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/config/BufferConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/config/BufferConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/config/buff_type.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/controller/BufferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/controller/BufferController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/Elements.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/Elements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/editSchemaPage.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/editSchemaPage.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/index.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/index.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/scheme.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/scheme.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/schemeButton.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/schemeButton.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/selectBuffButton.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/selectBuffButton.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/showBuffsButton.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/showBuffsButton.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/test.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/html/buffer/test.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/models/buffer/Buff.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/models/buffer/Buff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/models/buffer/Scheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/models/buffer/Scheme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/models/buffer/SchemeBuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/models/buffer/SchemeBuff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/repository/buffer/BuffRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/repository/buffer/BuffRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/service/buffer/BuffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/service/buffer/BuffService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/clientpackets/RequestTutorialPassCmdToServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/clientpackets/RequestTutorialPassCmdToServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/commands.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/commands.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/consol.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/consol.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/consol.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/log/consol.log.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/debug/RunnableImpl/RunnableImpl.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/debug/RunnableImpl/RunnableImpl.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/debug/network/log_connect.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/debug/network/log_connect.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error0.log.2" beforeDir="false" afterPath="$PROJECT_DIR$/log/error0.log.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error0.log.3" beforeDir="false" afterPath="$PROJECT_DIR$/log/error0.log.3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/game/auth.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/auth.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/game/bosses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/bosses.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/game/geo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/geo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/game/hwids.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/hwids.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/game/item_count.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/item_count.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/game/logins_ip.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/logins_ip.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/game/siege_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/siege_info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/game/sql_skill_power.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/sql_skill_power.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/game/unimplemented_sa.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/unimplemented_sa.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/game/viktorina.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/game/viktorina.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/gm_actions.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/gm_actions.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/java0.log.0" beforeDir="false" afterPath="$PROJECT_DIR$/log/java0.log.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/java0.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/log/java0.log.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/java0.log.2" beforeDir="false" afterPath="$PROJECT_DIR$/log/java0.log.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/java0.log.3" beforeDir="false" afterPath="$PROJECT_DIR$/log/java0.log.3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/java0.log.4" beforeDir="false" afterPath="$PROJECT_DIR$/log/java0.log.4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/java1.log.0" beforeDir="false" afterPath="$PROJECT_DIR$/log/java1.log.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/java1.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/log/java1.log.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/java1.log.2" beforeDir="false" afterPath="$PROJECT_DIR$/log/java1.log.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/java1.log.3" beforeDir="false" afterPath="$PROJECT_DIR$/log/java1.log.3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/java1.log.4" beforeDir="false" afterPath="$PROJECT_DIR$/log/java1.log.4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/install/community_perform_buffs.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/install/community_perform_buffs.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +74,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="L2TEHNO" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -101,14 +132,14 @@
       <recent name="D:\High Five\L2TEHNO" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="utils_soft.NpcEditor" />
       <recent name="communityboard.repository.buffer" />
       <recent name="communityboard.components.buffer" />
       <recent name="communityboard.bufferService" />
       <recent name="l2open.gameserver.model.barahlo" />
+      <recent name="communityboard" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GameStart">
+  <component name="RunManager" selected="Application.L2LoginStart">
     <configuration name="GameStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="db" value="jdbc:mysql://localhost/l2tehno?useUnicode=true&amp;characterEncoding=UTF-8" />
@@ -181,11 +212,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GameStart" />
         <item itemvalue="Application.L2LoginStart" />
-        <item itemvalue="Application.Server" />
-        <item itemvalue="Application.Test" />
         <item itemvalue="Application.GameStart" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Server" />
       </list>
     </recent_temporary>
   </component>
@@ -277,16 +307,7 @@
       <workItem from="1700758723412" duration="13850000" />
       <workItem from="1700820520367" duration="32494000" />
       <workItem from="1700906590715" duration="10992000" />
-      <workItem from="1701004412876" duration="15073000" />
-      <workItem from="1701067968959" duration="57000" />
-      <workItem from="1701075329487" duration="661000" />
-      <workItem from="1701107327945" duration="4667000" />
-      <workItem from="1701275912802" duration="4262000" />
-      <workItem from="1701443448554" duration="20471000" />
-      <workItem from="1701505963117" duration="7678000" />
-      <workItem from="1701543389809" duration="3496000" />
-      <workItem from="1701597260065" duration="6372000" />
-      <workItem from="1701714202091" duration="3911000" />
+      <workItem from="1701004412876" duration="14825000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1692529102326</created>
@@ -407,56 +428,7 @@
       <option name="project" value="LOCAL" />
       <updated>1700776562074</updated>
     </task>
-    <task id="LOCAL-00018" summary="feat: Buffer - settings">
-      <created>1701031156044</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1701031156044</updated>
-    </task>
-    <task id="LOCAL-00019" summary="feat: MultiSellEditorService- main-page">
-      <created>1701199732463</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1701199732463</updated>
-    </task>
-    <task id="LOCAL-00020" summary="fix: SkillTreeTable">
-      <created>1701282214368</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1701282214368</updated>
-    </task>
-    <task id="LOCAL-00021" summary="fix: gitignore">
-      <created>1701286531649</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1701286531649</updated>
-    </task>
-    <task id="LOCAL-00022" summary="MultiSellEditorComponent fix">
-      <created>1701369633115</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1701369633115</updated>
-    </task>
-    <task id="LOCAL-00023" summary="feat: MultiSellEditorComponent - добавлена фильтрация">
-      <created>1701468413759</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1701468413759</updated>
-    </task>
-    <task id="LOCAL-00024" summary="feat: MultiSellEditorComponent - добавлена фильтрация">
-      <created>1701468508892</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1701468508892</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,13 +461,7 @@
     <MESSAGE value="refactoring: CommunityBoardBufferPerform" />
     <MESSAGE value="refactoring: CommunityBoardBuffer" />
     <MESSAGE value="refactoring: CommunityBoardBuffer редактирования схем" />
-    <MESSAGE value="feat: Buffer - settings" />
-    <MESSAGE value="feat: MultiSellEditorService- main-page" />
-    <MESSAGE value="fix: SkillTreeTable" />
-    <MESSAGE value="fix: gitignore" />
-    <MESSAGE value="MultiSellEditorComponent fix" />
-    <MESSAGE value="feat: MultiSellEditorComponent - добавлена фильтрация" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: MultiSellEditorComponent - добавлена фильтрация" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring: CommunityBoardBuffer редактирования схем" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -512,17 +478,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/java/l2open/Test.java</url>
-          <line>140</line>
+          <line>45</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo parentTag="java.util.HashMap$Node" memberName="key" />
         <PinnedItemInfo parentTag="communityboard.CommunityBoardBufferPerform$SkillInfo" memberName="enchantType" />
         <PinnedItemInfo parentTag="communityboard.CommunityBoardBufferPerform$SkillInfo" memberName="enchantsForChange" />
-        <PinnedItemInfo parentTag="java.util.HashMap$Node" memberName="value" />
         <PinnedItemInfo parentTag="communityboard.bufferService.BuffListModel" memberName="buffModelList" />
         <PinnedItemInfo parentTag="communityboard.CommunityBoardBufferPerform$SkillInfo" memberName="enchants" />
       </pinned-members>
