@@ -36,31 +36,6 @@ public class NpcEditorComponent extends Component{
         showTWindow(player, main.build(), window_titel, backMainBypass);
     }
 
-
-    public static void changeBaseParameter(L2NpcInstance npc, String parameter, String value){
-        ThreadConnection con = null;
-        FiltredPreparedStatement statement = null;
-        String query = "";
-        try
-        {
-            con = L2DatabaseFactory.getInstance().getConnection();
-            query = "UPDATE npc SET " + parameter + " WHERE id = ?";
-            statement = con.prepareStatement(query);
-            statement.setInt(1, npc.getNpcId());
-            statement.execute();
-        }
-        catch(Exception e1)
-        {
-            // problem with storing spawn
-            _log.warning("npc data couldnt be stored in db, query is :" + query + " : " + e1);
-        }
-        finally
-        {
-            DatabaseUtils.closeDatabaseCS(con, statement);
-        }
-    }
-
-
     public static void basePage(L2Player player,int npcId, Table table, Button saveButton) {
         final Table main = new Table(3, 1);
         main.row(0).col(0).insert(headerTable(npcId).build());
@@ -136,7 +111,6 @@ public class NpcEditorComponent extends Component{
         int npcId = Integer.parseInt(args[1]);
 
         L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
-
 
 
         NpcRepository.updateMainStats(npc);

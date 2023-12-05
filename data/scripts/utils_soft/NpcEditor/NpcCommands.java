@@ -1,8 +1,6 @@
 package utils_soft.NpcEditor;
 
 import l2open.gameserver.model.L2Player;
-import utils_soft.MultisellEditor.MultiSellEditorComponent;
-
 import utils_soft.common.CommandsFunction;
 
 /**
