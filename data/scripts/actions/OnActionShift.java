@@ -72,7 +72,7 @@ public class OnActionShift extends Functions implements ScriptFile
 			{
 				dialog = Files.read("data/scripts/actions/player.L2NpcInstance.onActionShift.full.htm", player);
 				dialog = dialog.replaceFirst("%class%", String.valueOf(npc.getClass().getSimpleName().replaceFirst("Instance", "")));
-				dialog = dialog.replaceFirst("%id%", String.valueOf(npc.getNpcId()));
+				dialog = dialog.replace("%id%", String.valueOf(npc.getNpcId()));
 				dialog = dialog.replaceFirst("%respawn%", String.valueOf(npc.getSpawn() != null ? Util.formatTime(npc.getSpawn().getRespawnDelay()) : "0"));
 				dialog = dialog.replaceFirst("%walkSpeed%", String.valueOf(npc.getWalkSpeed()));
 				dialog = dialog.replaceFirst("%evs%", String.valueOf(npc.getEvasionRate(null)));

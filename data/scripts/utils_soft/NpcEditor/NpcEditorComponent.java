@@ -15,7 +15,7 @@ import utils_soft.common.Component;
 
 import java.util.logging.Logger;
 
-import static l2open.common.Html_Constructor.tags.parameters.Parameters.actionCom;
+import static l2open.common.Html_Constructor.tags.parameters.Parameters.*;
 import static utils_soft.NpcEditor.NpcCommands.*;
 
 
@@ -46,14 +46,14 @@ public class NpcEditorComponent extends Component{
 
     public static Table headerTable(int npcId){
         final Table headerTable = new Table(2, 4);
-        headerTable.row(0).col(0).insert(new Button("MainStats", actionCom(admin_npc_editor_main_stats, npcId)).build());
-        headerTable.row(0).col(1).insert(new Button("BaseStats", actionCom(admin_npc_editor_base_stats, npcId)).build());
-        headerTable.row(0).col(2).insert(new Button("Skills", actionCom(admin_npc_editor_skills, npcId)).build());
-        headerTable.row(0).col(3).insert(new Button("Drop", actionCom(admin_npc_editor_drop, npcId)).build());
-        headerTable.row(1).col(0).insert(new Button("Visual", actionCom(admin_npc_editor_visual, npcId)).build());
-        headerTable.row(1).col(1).insert(new Button("Elements", actionCom(admin_npc_editor_elements, npcId)).build());
-        headerTable.row(1).col(2).insert(new Button("Location", actionCom(admin_npc_editor_location, npcId)).build());
-        headerTable.row(1).col(4).insert(new Button("Other", actionCom(admin_npc_editor_other, npcId)).build());
+        headerTable.row(0).col(0).setParams(width(80), height(20)).insert(new Button("MainStats", actionCom(admin_npc_editor_main_stats, npcId), 80, 20).build());
+        headerTable.row(0).col(1).setParams(width(80)).insert(new Button("BaseStats", actionCom(admin_npc_editor_base_stats, npcId), 80, 20).build());
+        headerTable.row(0).col(2).setParams(width(80)).insert(new Button("Skills", actionCom(admin_npc_editor_skills, npcId), 80, 20).build());
+        headerTable.row(0).col(3).setParams(width(80)).insert(new Button("Drop", actionCom(admin_npc_editor_drop, npcId), 80, 20).build());
+        headerTable.row(1).col(0).setParams(width(80), height(20)).insert(new Button("Visual", actionCom(admin_npc_editor_visual, npcId), 80, 20).build());
+        headerTable.row(1).col(1).setParams(width(80)).insert(new Button("Elements", actionCom(admin_npc_editor_elements, npcId), 80, 20).build());
+        headerTable.row(1).col(2).setParams(width(80)).insert(new Button("Location", actionCom(admin_npc_editor_location, npcId), 80, 20).build());
+        headerTable.row(1).col(3).setParams(width(80)).insert(new Button("Other", actionCom(admin_npc_editor_other, npcId), 80, 20).build());
         return headerTable;
     }
 
