@@ -191,4 +191,13 @@ public class NpcRepository {
     }
 
 
+    public static void updateLocation(L2NpcInstance npc) {
+
+
+    }
+
+    public static void updateOtherStats(L2NpcInstance npc) {
+
+
+    }
 }
