@@ -129,7 +129,7 @@ public class NpcEditorComponent extends Component{
         int npcId = Integer.parseInt(args[1]);
         L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
 
-        NpcRepository.addSkill(npc);
+//        NpcRepository.addSkill(npc);
         reload();
         showSkills(player, args);
     }
@@ -137,7 +137,7 @@ public class NpcEditorComponent extends Component{
         int npcId = Integer.parseInt(args[1]);
         L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
 
-        NpcRepository.addDrop(npc);
+//        NpcRepository.addDrop(npc);
         reload();
         showDrop(player, args);
     }
