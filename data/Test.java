@@ -12,7 +12,7 @@ public class Test extends Functions implements ScriptFile
 	private static int item_count = 1; // сколько забирать
 	
 	private static int item_id_add = 4037; // Какой итем выдать.
-	private static int item_count_add = 1; // сколько выдать
+	private static int item_count_add = 1; // сколько выдать sdfsdfgsdfg
 
 	public Test()
 	{}
