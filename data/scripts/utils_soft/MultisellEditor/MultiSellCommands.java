@@ -32,10 +32,7 @@ public enum MultiSellCommands {
     MultiSellCommands(CommandsFunction component) {
         this.component = component;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/L2TEHNO
     public void exec(L2Player player, String[] args) {
         component.execute(player, args);
     }

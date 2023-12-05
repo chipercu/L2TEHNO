@@ -191,8 +191,7 @@ public class NpcRepository {
     }
 
 
-<<<<<<< HEAD
-=======
+
     public static void updateLocation(L2NpcInstance npc) {
 
 
@@ -202,5 +201,4 @@ public class NpcRepository {
 
 
     }
->>>>>>> origin/L2TEHNO
 }

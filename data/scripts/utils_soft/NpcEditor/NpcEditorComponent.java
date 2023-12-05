@@ -1,33 +1,24 @@
 package utils_soft.NpcEditor;
 
-<<<<<<< HEAD
+
+import l2open.common.Html_Constructor.tags.Button;
 import l2open.common.Html_Constructor.tags.Table;
 import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
-=======
-import l2open.common.Html_Constructor.tags.Button;
-import l2open.common.Html_Constructor.tags.Table;
 import l2open.gameserver.model.L2ObjectsStorage;
->>>>>>> origin/L2TEHNO
 import l2open.gameserver.model.L2Player;
 import l2open.gameserver.model.instances.L2NpcInstance;
 import l2open.gameserver.tables.NpcTable;
-import l2open.gameserver.templates.L2NpcTemplate;
 import utils_soft.common.Component;
 
-<<<<<<< HEAD
 import java.util.logging.Logger;
 
-=======
-import java.util.Objects;
-import java.util.logging.Logger;
-
-import static l2open.common.Html_Constructor.tags.parameters.Parameters.*;
+import static l2open.common.Html_Constructor.tags.parameters.Parameters.actionCom;
 import static utils_soft.NpcEditor.NpcCommands.*;
 
->>>>>>> origin/L2TEHNO
+
 public class NpcEditorComponent extends Component{
 
     private static final String backMainBypass = "admin_npc_editor null 0 1";
@@ -37,16 +28,13 @@ public class NpcEditorComponent extends Component{
     public NpcEditorComponent() {
     }
 
-<<<<<<< HEAD
+
     public static void showMainPage(L2Player player, String[] args) {
 
         final Table main = new Table(1, 1);
 
         showTWindow(player, main.build(), window_titel, backMainBypass);
     }
-
-
-
 
 
     public static void changeBaseParameter(L2NpcInstance npc, String parameter, String value){
@@ -72,7 +60,7 @@ public class NpcEditorComponent extends Component{
         }
     }
 
-=======
+
     public static void basePage(L2Player player,int npcId, Table table, Button saveButton) {
         final Table main = new Table(3, 1);
         main.row(0).col(0).insert(headerTable(npcId).build());
@@ -216,6 +204,4 @@ public class NpcEditorComponent extends Component{
         NpcTable.getInstance().reloadAllNpc();
     }
 
-
->>>>>>> origin/L2TEHNO
 }

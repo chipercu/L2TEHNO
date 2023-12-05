@@ -1,10 +1,8 @@
 package utils_soft.NpcEditor;
 
 import l2open.gameserver.model.L2Player;
-<<<<<<< HEAD
 import utils_soft.MultisellEditor.MultiSellEditorComponent;
-=======
->>>>>>> origin/L2TEHNO
+
 import utils_soft.common.CommandsFunction;
 
 /**
@@ -13,9 +11,8 @@ import utils_soft.common.CommandsFunction;
  */
 public enum NpcCommands {
 
-<<<<<<< HEAD
-    admin_npc_editor(NpcEditorComponent::showMainPage);
-=======
+
+    admin_npc_editor(NpcEditorComponent::showMainPage),
     admin_npc_editor_main_stats(NpcEditorComponent::showMainStats),
     admin_npc_editor_base_stats(NpcEditorComponent::showBaseStats),
     admin_npc_editor_skills(NpcEditorComponent::showSkills),
@@ -32,7 +29,6 @@ public enum NpcCommands {
     admin_npc_editor_save_base_elements(NpcEditorComponent::saveElements),
     admin_npc_editor_save_location(NpcEditorComponent::saveLocation),
     admin_npc_editor_save_other(NpcEditorComponent::saveOther);
->>>>>>> origin/L2TEHNO
 
     private final CommandsFunction component;
 
