@@ -1,6 +1,6 @@
 package l2open.common.Html_Constructor.tags;
 
-public class Img implements Build{
+public class Img implements HtmlBuildInterface {
 
     private String src = "icon.NOICON";
     private int width = 32;

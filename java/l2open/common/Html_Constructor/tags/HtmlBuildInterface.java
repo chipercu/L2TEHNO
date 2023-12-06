@@ -1,5 +1,5 @@
 package l2open.common.Html_Constructor.tags;
 
-public interface Build {
+public interface HtmlBuildInterface {
     String build();
 }

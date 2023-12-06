@@ -7,7 +7,7 @@ import l2open.common.Html_Constructor.tags.parameters.EditType;
  * Date: 15.08.2023
  */
 
-public class Edit implements Build {
+public class Edit implements HtmlBuildInterface {
 
     private final String var;
     private final String type;

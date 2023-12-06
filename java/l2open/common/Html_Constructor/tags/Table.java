@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Table implements Build{
+public class Table implements HtmlBuildInterface {
 
     private int row;
     private int col;

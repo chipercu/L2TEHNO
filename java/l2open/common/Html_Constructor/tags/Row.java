@@ -5,7 +5,7 @@ import java.util.List;
 
 import static l2open.common.Html_Constructor.tags.parameters.Parameters.*;
 
-public class Row implements Build {
+public class Row implements HtmlBuildInterface {
     public static final String START_ROW = "    <tr>\n";
     public static final String END_ROW = "    </tr>\n";
     private final List<Col> columns = new ArrayList<>();

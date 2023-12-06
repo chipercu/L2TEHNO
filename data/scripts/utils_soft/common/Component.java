@@ -1,10 +1,9 @@
 package utils_soft.common;
 
-import l2open.common.Html_Constructor.tags.Build;
+import l2open.common.Html_Constructor.tags.HtmlBuildInterface;
 import l2open.common.Html_Constructor.tags.Button;
 import l2open.common.Html_Constructor.tags.Img;
 import l2open.common.Html_Constructor.tags.Table;
-import l2open.common.Html_Constructor.tags.parameters.Position;
 import l2open.gameserver.model.L2Player;
 import l2open.gameserver.serverpackets.TutorialShowHtml;
 import l2open.util.GArray;
@@ -23,7 +22,7 @@ public class Component {
         System.out.println(s.length());
         player.sendPacket(new TutorialShowHtml(s));
     }
-    protected static void showTWindow(L2Player player, Build html, String title, String backBypass){
+    protected static void showTWindow(L2Player player, HtmlBuildInterface html, String title, String backBypass){
         String s = "<html><body><title>" + title + "</title>" + TWindowCloseButton(backBypass) + html.build() + " </body></html>";
         System.out.println(s.length());
         player.sendPacket(new TutorialShowHtml(s));

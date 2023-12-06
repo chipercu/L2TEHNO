@@ -1,6 +1,6 @@
 package l2open.common.Html_Constructor.tags;
 
-public class Button implements Build {
+public class Button implements HtmlBuildInterface {
    // <button value="MP" action="bypass -h _bbsbufferheal MP $Who" width=40 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
     private String value = "";
     private String action = "";

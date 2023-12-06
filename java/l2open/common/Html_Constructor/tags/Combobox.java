@@ -9,7 +9,7 @@ import java.util.List;
  * Date: 15.08.2023
  */
 
-public class Combobox implements Build {
+public class Combobox implements HtmlBuildInterface {
 
 
     private static final String START_EDIT = "       <combobox";

@@ -5,7 +5,7 @@ package l2open.common.Html_Constructor.tags;
  * Date: 15.08.2023
  */
 
-public class MultiEdit implements Build {
+public class MultiEdit implements HtmlBuildInterface {
 
     private final int width;
     private final int height;

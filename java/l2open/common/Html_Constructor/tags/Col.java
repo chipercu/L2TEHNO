@@ -7,7 +7,7 @@ import java.util.List;
 import static l2open.common.Html_Constructor.tags.parameters.Parameters.*;
 import static l2open.common.Html_Constructor.tags.parameters.Position.*;
 
-public class Col implements Build {
+public class Col implements HtmlBuildInterface {
     private static final String START_COL = "       <td";
     private static final String END_COL = "</td>\n";
     private static final String CLOSE_PARAM = ">";
@@ -17,10 +17,7 @@ public class Col implements Build {
     private boolean center = false;
 
     public Col(){
-
     }
-
-
 
     public Col setParams(String... parameters){
         params.addAll(Arrays.asList(parameters));
@@ -36,13 +33,8 @@ public class Col implements Build {
         return this;
     }
 
-    public Col insert(Build build){
+    public Col insert(HtmlBuildInterface build){
         this.body += build.build();
-        return this;
-    }
-
-    public Col insert(String html, boolean center){
-        this.body += "<center>" + html + "</center>";
         return this;
     }
 
