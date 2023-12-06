@@ -61,12 +61,6 @@ public interface Parameters extends ButtonAction{
     static String actionNpc(String value) {
         return new ParametrValue(" action=\"bypass -h npc_%objectId%_", value).toString();
     }
-    static String actionCom(Enum comm, String value) {
-        return new ParametrValue(" action=\"bypass -h " + comm.name(), value).toString();
-    }
-    static String actionCom(Enum comm, int value) {
-        return new ParametrValue(" action=\"bypass -h " + comm.name(), value).toString();
-    }
 
     static String back(String value) {
         return new ParametrValue(" back=\"", value).toString();
