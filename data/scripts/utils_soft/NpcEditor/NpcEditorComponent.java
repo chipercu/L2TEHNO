@@ -57,7 +57,7 @@ public class NpcEditorComponent extends Component{
         for (int i = 0; i < skills.size(); i++){
             L2Skill skill = skills.get(i);
             skillsTable.row(i).col(0).setParams(width(40)).insert(new Img(skill.getIcon()));
-            skillsTable.row(i).col(1).setParams(width(80)).setParams(valign(CENTER), align(LEFT)).insert(skill.getName());
+            skillsTable.row(i).col(1).setParams(width(80)).setParams(valign(CENTER), align(LEFT)).insert(formatSkillName(skill.getName()));
             skillsTable.row(i).col(2).setParams(width(40)).setParams(valign(CENTER), align(CENTER)).insert(skill.getId());
             skillsTable.row(i).col(3).setParams(width(40)).setParams(valign(CENTER), align(CENTER)).insert(skill.getLevel());
             skillsTable.row(i).col(4).setParams(width(40)).insert(new Button("X", actionCom(admin_npc_editor_remove_skill, npcId + " " + skill.getId())));

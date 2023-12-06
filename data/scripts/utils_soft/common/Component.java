@@ -68,6 +68,18 @@ public class Component {
         pages.row(0).col(2).setParams(width(100)).insert(new Button(">>", action("bypass -h admin_multisell_editor " + (page > totalPages ? page: page + 1)), 80, 20).build());
         return pages.build();
     }
+    public static String formatSkillName(String name) {
+        name = name.replace("Dance of the", "D.");
+        name = name.replace("Dance of", "D.");
+        name = name.replace("Song of", "S.");
+        name = name.replace("Improved", "I.");
+        name = name.replace("Awakening", "A.");
+        name = name.replace("Blessing", "Bless.");
+        name = name.replace("Protection", "Protect.");
+        name = name.replace("Critical", "C.");
+        name = name.replace("Condition", "Con.");
+        return name;
+    }
 
     public static String formatItemName(String itemName){
         itemName = itemName.replace("Scroll", "S.");
