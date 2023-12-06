@@ -4,13 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="refactoring: CommunityBoardBuffer редактирования схем">
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/OnEventEnumeration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/TheBegginingOfTheWayComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/TheBegginingOfTheWayConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/quests/common/CommonComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/quests/common/OnEventInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/common/Html_Constructor/tags/Col.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/Html_Constructor/tags/Col.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/common/Html_Constructor/tags/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/Html_Constructor/tags/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/_10603_TheBegginingOfTheWay.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/_10603_TheBegginingOfTheWay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_armor_merchant_01.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_armor_merchant_01.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_fighter_school_grand_master_01.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_fighter_school_grand_master_01.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_fighter_school_grand_master_02.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_fighter_school_grand_master_02.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_fiz_school_instructor_01.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_fiz_school_instructor_01.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_fiz_school_instructor_02.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_fiz_school_instructor_02.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_fiz_school_instructor_03.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_fiz_school_instructor_03.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_grandmaster_01.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_grandmaster_01.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_grandmaster_02.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_grandmaster_02.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_grandmaster_03.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_grandmaster_03.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_grocer_merchant_01.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_grocer_merchant_01.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_guard_01.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_guard_01.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_guard_02.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_guard_02.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_jewel_merchant_01.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_jewel_merchant_01.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_newbie_guide_01.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_newbie_guide_01.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_00.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_00.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_01.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_01.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_02.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_02.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_03.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_03.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_04.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_04.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_05.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_05.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_06.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_06.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_07.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_07.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_08.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_08.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_09.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_09.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_10.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_10.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_11.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_11.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_12.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_12.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_13.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_13.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_14.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_14.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_nextNPC_15.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_nextNPC_15.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_weapon_merchant_01.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_weapon_merchant_01.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/talking_weapon_merchant_02.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/quests/_10603_TheBegginingOfTheWay/html/talking_weapon_merchant_02.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +54,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -79,6 +113,7 @@
       <recent name="D:\High Five\L2TEHNO\data\scripts\events" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\a.kiperku\IdeaProjects\L2TEHNO\data\scripts\quests\_10603_TheBegginingOfTheWay\html" />
       <recent name="D:\High Five\L2TEHNO\data\scripts\communityboard\config" />
       <recent name="D:\High Five\L2TEHNO\java\l2open\common" />
       <recent name="D:\High Five\L2TEHNO" />
@@ -387,7 +422,28 @@
       <option name="project" value="LOCAL" />
       <updated>1701865220356</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="refactoring: insert Build">
+      <created>1701866365494</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1701866365494</updated>
+    </task>
+    <task id="LOCAL-00020" summary="refactoring: Build rename to HtmlBuildInterface">
+      <created>1701866522618</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1701866522618</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat: add Component.formatSkillName">
+      <created>1701866672276</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1701866672276</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,7 +488,10 @@
     <MESSAGE value="refactoring: CommunityBoardBuffer" />
     <MESSAGE value="refactoring: CommunityBoardBuffer редактирования схем" />
     <MESSAGE value="refactoring: Parameters" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring: Parameters" />
+    <MESSAGE value="refactoring: insert Build" />
+    <MESSAGE value="refactoring: Build rename to HtmlBuildInterface" />
+    <MESSAGE value="feat: add Component.formatSkillName" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add Component.formatSkillName" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
