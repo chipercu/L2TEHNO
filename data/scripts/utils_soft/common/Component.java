@@ -1,5 +1,6 @@
 package utils_soft.common;
 
+import l2open.common.Html_Constructor.tags.Build;
 import l2open.common.Html_Constructor.tags.Button;
 import l2open.common.Html_Constructor.tags.Img;
 import l2open.common.Html_Constructor.tags.Table;
@@ -19,6 +20,11 @@ public class Component {
 
     protected static void showTWindow(L2Player player, String html, String title, String backBypass){
         String s = "<html><body><title>" + title + "</title>" + TWindowCloseButton(backBypass) + html + " </body></html>";
+        System.out.println(s.length());
+        player.sendPacket(new TutorialShowHtml(s));
+    }
+    protected static void showTWindow(L2Player player, Build html, String title, String backBypass){
+        String s = "<html><body><title>" + title + "</title>" + TWindowCloseButton(backBypass) + html.build() + " </body></html>";
         System.out.println(s.length());
         player.sendPacket(new TutorialShowHtml(s));
     }

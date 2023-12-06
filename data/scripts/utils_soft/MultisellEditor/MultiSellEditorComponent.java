@@ -102,7 +102,7 @@ public class MultiSellEditorComponent extends Component{
             final Table containerTable = new Table(2, 1);
             final Table multiSellTable = new Table(1, 3);
             final MultiSellListContainer container = containerList.get(i);
-            multiSellTable.row(0).col(0).insert(new Button(String.valueOf(container.getListId()), actionCom(admin_multisell_editor_show_multisell, "" + container.getListId()), 80, 20).build(), true);
+            multiSellTable.row(0).col(0).insert(new Button(String.valueOf(container.getListId()), actionCom(admin_multisell_editor_show_multisell, "" + container.getListId()), 80, 20).build());
             multiSellTable.row(0).col(1).insert(new Button("redact", actionCom(admin_multisell_editor_redact, container.getListId() + " 1"), 60, 20).build());
             multiSellTable.row(0).col(2).insert(new Button("restore", actionCom(admin_multisell_editor_restore,container.getListId() + ""), 60, 20).build());
             containerTable.row(0).col(0).insert(multiSellTable.build());
@@ -181,10 +181,10 @@ public class MultiSellEditorComponent extends Component{
         addEntryTable.row(0).col(1).insert(new Edit("itemId", 50, 12, EditType.num, 12).build());
         addEntryTable.row(0).col(2).setParams(width(35), valign(CENTER), align(LEFT)).insert("count");
         addEntryTable.row(0).col(3).insert(new Edit("itemCount", 85, 12, EditType.num, 12).build());
-        addEntryTable.row(0).col(4).insert(new Button("Добавить", actionCom(admin_multisell_editor_add_entry, multisell.getListId() + " $itemId $itemCount " + page), 80, 20).build(),true);
+        addEntryTable.row(0).col(4).insert(new Button("Добавить", actionCom(admin_multisell_editor_add_entry, multisell.getListId() + " $itemId $itemCount " + page), 80, 20).build());
 
         main.row(3).col(0).setParams(height(10));
-        main.row(4).col(0).insert(addEntryTable.build(),true);
+        main.row(4).col(0).insert(addEntryTable.build());
         main.row(5).col(0).setParams(height(20)).insert("<br> ");
 
         showTWindow(player, main.build(), window_titel, backMainBypass);
@@ -273,7 +273,7 @@ public class MultiSellEditorComponent extends Component{
         addIngredientTable.row(0).col(1).insert(new Edit("itemId", 50, 12, EditType.num, 12).build());
         addIngredientTable.row(0).col(2).setParams(width(35), valign(CENTER), align(LEFT)).insert("count");
         addIngredientTable.row(0).col(3).insert(new Edit("itemCount", 85, 12, EditType.num, 12).build());
-        addIngredientTable.row(0).col(4).insert(new Button("Добавить", actionCom(admin_multisell_editor_add_ingredient, multisellId + " " + entryId + " $itemId $itemCount"), 80, 20).build(),true);
+        addIngredientTable.row(0).col(4).insert(new Button("Добавить", actionCom(admin_multisell_editor_add_ingredient, multisellId + " " + entryId + " $itemId $itemCount"), 80, 20).build());
 
         main.row(0).col(0).insert(productTable.build());
         main.row(1).col(0).setParams(height(40),valign(BOTTOM), align(CENTER)).insert("<br>" + new Font(Color.BROWN, "Ingredients").build());

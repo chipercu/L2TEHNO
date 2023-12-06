@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Table {
+public class Table implements Build{
 
     private int row;
     private int col;

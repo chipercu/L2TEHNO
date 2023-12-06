@@ -36,6 +36,11 @@ public class Col implements Build {
         return this;
     }
 
+    public Col insert(Build build){
+        this.body += build.build();
+        return this;
+    }
+
     public Col insert(String html, boolean center){
         this.body += "<center>" + html + "</center>";
         return this;

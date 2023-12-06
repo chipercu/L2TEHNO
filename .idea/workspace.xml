@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="refactoring: CommunityBoardBuffer редактирования схем">
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/DropItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/Component.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/l2open/common/Html_Constructor/tags/Col.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/Html_Constructor/tags/Col.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/common/Html_Constructor/tags/parameters/Parameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/Html_Constructor/tags/parameters/Parameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/common/Html_Constructor/tags/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/Html_Constructor/tags/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -382,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700776562074</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="refactoring: Parameters">
+      <created>1701865220356</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1701865220356</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +431,8 @@
     <MESSAGE value="refactoring: CommunityBoardBufferPerform" />
     <MESSAGE value="refactoring: CommunityBoardBuffer" />
     <MESSAGE value="refactoring: CommunityBoardBuffer редактирования схем" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring: CommunityBoardBuffer редактирования схем" />
+    <MESSAGE value="refactoring: Parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring: Parameters" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
