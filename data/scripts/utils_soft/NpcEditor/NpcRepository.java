@@ -85,14 +85,14 @@ public class NpcRepository {
         return list;
     }
 
-    public static void addDrop(L2NpcInstance npc, int itemId, int min, int max, int chance, int category, boolean isSpoil){
+    public static void addDrop(int npcId, int itemId, int min, int max, int chance, int category, boolean isSpoil){
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
         String query = "INSERT INTO droplist (mobId,itemId,min,max,sweep,chance,category) VALUES(?,?,?,?,?,?,?)";
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
-            statement.setInt(1, npc.getNpcId());
+            statement.setInt(1, npcId);
             statement.setInt(2, itemId);
             statement.setInt(3, min);
             statement.setInt(4, max);
@@ -107,14 +107,14 @@ public class NpcRepository {
         }
     }
 
-    public static void removeDrop(L2NpcInstance npc, int itemId, boolean isSpoil){
+    public static void removeDrop(int npcId, int itemId, boolean isSpoil){
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
         String query = "DELETE FROM droplist WHERE mobId=? AND itemId=? AND sweep=?";
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
-            statement.setInt(1, npc.getNpcId());
+            statement.setInt(1, npcId);
             statement.setInt(2, itemId);
             statement.setInt(2, isSpoil? 1 : 0);
             statement.execute();

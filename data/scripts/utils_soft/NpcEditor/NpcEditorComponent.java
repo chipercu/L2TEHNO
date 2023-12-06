@@ -76,7 +76,7 @@ public class NpcEditorComponent extends Component{
             dropTable.row(i).col(3).setParams(width(40)).setParams(valign(CENTER), align(CENTER)).insert(dropItem.getMax());
             dropTable.row(i).col(4).setParams(width(40)).setParams(valign(CENTER), align(CENTER)).insert(dropItem.getGroup());
             dropTable.row(i).col(5).setParams(width(40)).setParams(valign(CENTER), align(CENTER)).insert(dropItem.getChance());
-            dropTable.row(i).col(6).setParams(width(40)).insert(new Button("X", actionCom(admin_npc_editor_remove_drop, npcId + " " + dropItem.getId())).build());
+            dropTable.row(i).col(6).setParams(width(40)).insert(new Button("X", actionCom(admin_npc_editor_remove_drop, npcId + " " + dropItem.getId() + " " + dropItem.getIsSpoil())).build());
         }
         final Table addDropTable = new Table(1, 5);
         addDropTable.row(0).col(0).setParams(width(20), valign(CENTER), align(LEFT)).insert("id");
@@ -200,17 +200,17 @@ public class NpcEditorComponent extends Component{
     }
     public static void addDrop(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
-        L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
+        int itemId = Integer.parseInt(args[2]);
 
-//        NpcRepository.addDrop(npc);
+//        NpcRepository.addDrop(npcId, itemId);
         reload();
         showDrop(player, args);
     }
     public static void removeDrop(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
-        L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
-
-//        NpcRepository.addDrop(npc);
+        int itemId = Integer.parseInt(args[2]);
+        boolean isSpoil = Boolean.parseBoolean(args[3]);
+        NpcRepository.removeDrop(npcId, itemId, isSpoil);
         reload();
         showDrop(player, args);
     }
