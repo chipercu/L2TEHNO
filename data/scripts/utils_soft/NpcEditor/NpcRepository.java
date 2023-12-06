@@ -1,5 +1,6 @@
 package utils_soft.NpcEditor;
 
+import communityboard.models.buffer.Scheme;
 import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
@@ -8,6 +9,10 @@ import l2open.gameserver.model.L2Skill;
 import l2open.gameserver.model.instances.L2NpcInstance;
 import l2open.gameserver.templates.L2NpcTemplate;
 
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 import java.util.logging.Logger;
 
 public class NpcRepository {
@@ -49,14 +54,45 @@ public class NpcRepository {
         }
     }
 
-    public static void addDrop(L2NpcInstance npc, int itemId, int min, int max, int chance, int category, boolean isSpoil){
+    public static List<DropItem> getDropList(int npcId){
+        ResultSet rs = null;
+        ThreadConnection con = null;
+        FiltredPreparedStatement statement = null;
+        String query = "SELECT * FROM  WHERE owner=?";
+        List<DropItem> list = new ArrayList<>();
+        try {
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement(query);
+            statement.setInt(1, npcId);
+            rs = statement.executeQuery();
+            while (rs.next()) {
+                final boolean sweep = rs.getInt("sweep") == 1;
+                DropItem dropItem = new DropItem(
+                        rs.getInt("itemId"),
+                        rs.getInt("min"),
+                        rs.getInt("max"),
+                        rs.getInt("category"),
+                        rs.getInt("chance"),
+                        rs.getInt("sweep") == 1
+                );
+                list.add(dropItem);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            DatabaseUtils.closeDatabaseCSR(con, statement, rs);
+        }
+        return list;
+    }
+
+    public static void addDrop(int npcId, int itemId, int min, int max, int chance, int category, boolean isSpoil){
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
         String query = "INSERT INTO droplist (mobId,itemId,min,max,sweep,chance,category) VALUES(?,?,?,?,?,?,?)";
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
-            statement.setInt(1, npc.getNpcId());
+            statement.setInt(1, npcId);
             statement.setInt(2, itemId);
             statement.setInt(3, min);
             statement.setInt(4, max);
@@ -71,14 +107,14 @@ public class NpcRepository {
         }
     }
 
-    public static void removeDrop(L2NpcInstance npc, int itemId, boolean isSpoil){
+    public static void removeDrop(int npcId, int itemId, boolean isSpoil){
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
         String query = "DELETE FROM droplist WHERE mobId=? AND itemId=? AND sweep=?";
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
-            statement.setInt(1, npc.getNpcId());
+            statement.setInt(1, npcId);
             statement.setInt(2, itemId);
             statement.setInt(2, isSpoil? 1 : 0);
             statement.execute();
@@ -110,7 +146,6 @@ public class NpcRepository {
             DatabaseUtils.closeDatabaseCS(con, statement);
         }
     }
-
 
     public static void updateElements(L2NpcInstance npc) {
         ThreadConnection con = null;
@@ -189,8 +224,6 @@ public class NpcRepository {
             DatabaseUtils.closeDatabaseCS(con, statement);
         }
     }
-
-
 
     public static void updateLocation(L2NpcInstance npc) {
 
