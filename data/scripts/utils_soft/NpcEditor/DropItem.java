@@ -13,14 +13,18 @@ public class DropItem {
     private int group;
     private int chance;
     private boolean isSpoil;
+    private String icon;
+    private String name;
 
-    public DropItem(int id, int min, int max, int group, int chance, boolean isSpoil) {
+    public DropItem(int id, int min, int max, int group, int chance, boolean isSpoil, String icon, String name) {
         this.id = id;
         this.min = min;
         this.max = max;
         this.group = group;
         this.chance = chance;
         this.isSpoil = isSpoil;
+        this.icon = icon;
+        this.name = name;
     }
 
     public int getId() {
@@ -69,5 +73,29 @@ public class DropItem {
 
     public void setIsSpoil(boolean isSpoil) {
         this.isSpoil = isSpoil;
+    }
+
+    public boolean isSpoil() {
+        return isSpoil;
+    }
+
+    public void setSpoil(boolean spoil) {
+        isSpoil = spoil;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

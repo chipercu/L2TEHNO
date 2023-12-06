@@ -42,7 +42,8 @@ public class RequestTutorialPassCmdToServer extends L2GameClientPacket
 				|| _bypass.startsWith("bbs_buffer_save_config")
 				|| _bypass.startsWith("bbs_show_all_buffs")){
 			CommunityBoard.getInstance().handleCommands(getClient(), _bypass);
-		} else if (_bypass.startsWith("admin_multisell_editor")) {
+		} else if (_bypass.startsWith("admin_multisell_editor")
+				|| _bypass.startsWith("admin_npc_editor")) {
 			AdminCommandHandler.getInstance().useAdminCommandHandler(player, _bypass);
 		}
 

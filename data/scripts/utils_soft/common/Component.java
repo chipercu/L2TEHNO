@@ -27,6 +27,10 @@ public class Component {
         System.out.println(s.length());
         player.sendPacket(new TutorialShowHtml(s));
     }
+    protected static void TWindow(L2Player player, HtmlBuildInterface html, String title){
+        String s = "<html><body><title>" + title + "</title>" + html.build() + " </body></html>";
+        player.sendPacket(new TutorialShowHtml(s));
+    }
 
     protected static void showTWindow(L2Player player, String html, String backBypass){
         player.sendPacket(new TutorialShowHtml("<html><body>" + TWindowCloseButton(backBypass) + html + " </body></html>"));

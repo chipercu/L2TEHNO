@@ -46,7 +46,7 @@ public class AdminReload implements IAdminCommandHandler, ScriptFile
 		admin_reload_gmaccess,
 		admin_reload_htm,
 		admin_reload_qs,
-		admin_reload_qs_help,
+		admin_reload_qs_help, // команды
 		admin_reload_loc,
 		admin_reload_skills,
 		admin_reload_npc,

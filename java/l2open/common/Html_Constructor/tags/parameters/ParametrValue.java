@@ -17,6 +17,6 @@ public class ParametrValue {
 
     @Override
     public String toString() {
-        return value + (_string != null ? _string + "\"" :_int);
+        return value + (_string != null ? _string + "\"" : _int+ "\"");
     }
 }

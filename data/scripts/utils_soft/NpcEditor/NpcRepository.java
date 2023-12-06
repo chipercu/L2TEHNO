@@ -1,18 +1,18 @@
 package utils_soft.NpcEditor;
 
-import communityboard.models.buffer.Scheme;
 import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
 import l2open.gameserver.model.L2Skill;
 import l2open.gameserver.model.instances.L2NpcInstance;
+import l2open.gameserver.templates.L2Item;
 import l2open.gameserver.templates.L2NpcTemplate;
+import l2open.gameserver.xml.ItemTemplates;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.logging.Logger;
 
 public class NpcRepository {
@@ -58,7 +58,7 @@ public class NpcRepository {
         ResultSet rs = null;
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
-        String query = "SELECT * FROM  WHERE owner=?";
+        String query = "SELECT * FROM droplist WHERE mobid=?";
         List<DropItem> list = new ArrayList<>();
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
@@ -66,15 +66,20 @@ public class NpcRepository {
             statement.setInt(1, npcId);
             rs = statement.executeQuery();
             while (rs.next()) {
-                final boolean sweep = rs.getInt("sweep") == 1;
+                final int itemId = rs.getInt("itemId");
+                final L2Item l2Item = ItemTemplates.getInstance().getTemplate(itemId);
+                if (l2Item.isHerb()){
+                    continue;
+                }
                 DropItem dropItem = new DropItem(
-                        rs.getInt("itemId"),
+                        itemId,
                         rs.getInt("min"),
                         rs.getInt("max"),
                         rs.getInt("category"),
                         rs.getInt("chance"),
-                        rs.getInt("sweep") == 1
-                );
+                        rs.getInt("sweep") == 1,
+                        l2Item.getIcon(),
+                        l2Item.getName());
                 list.add(dropItem);
             }
         } catch (Exception e) {
