@@ -7,7 +7,7 @@ import utils_soft.common.CommandsFunction;
  * Created by a.kiperku
  * Date: 01.12.2023
  */
-public enum NpcCommands {
+public enum NpcEditorCommands {
 
     admin_npc_editor_main_stats(NpcEditorComponent::showMainStats),
     admin_npc_editor_base_stats(NpcEditorComponent::showBaseStats),
@@ -30,7 +30,7 @@ public enum NpcCommands {
 
     private final CommandsFunction component;
 
-    NpcCommands(CommandsFunction component) {
+    NpcEditorCommands(CommandsFunction component) {
         this.component = component;
     }
     public void exec(L2Player player, String[] args) {
