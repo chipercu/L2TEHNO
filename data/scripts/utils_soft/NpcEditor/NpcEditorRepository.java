@@ -246,30 +246,65 @@ public class NpcEditorRepository {
         }
     }
 
-    public static void updateLocation(L2NpcInstance npc, Location location) {
-
-        `location`,`count`,`npc_templateid`,`locx`,`locy`,`locz`,`heading`,`respawn_delay`,`respawn_delay_rnd`,`loc_id`,`periodOfDay`,`reflection`,`statParam`,`aiParam`
+    public static SpawnModel getLocation(L2NpcInstance npc){
+        ResultSet rs = null;
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
-        String query = "UPDATE npc SET level = ?, hp = ?, mp = ?, patk = ?, pdef = ?, matk = ?, mdef = ?, atkspd = ?, matkspd = ?, walkspd = ?, runspd = ?, exp = ?, sp = ? WHERE id = ?";
-        final L2NpcTemplate template = npc.getTemplate();
+        SpawnModel spawnModel = null;
+        String query = "SELECT * FROM spawnlist WHERE npc_templateid=? AND locx=? AND locy=? AND locz=?";
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
-            statement.setInt(1, template.level);
-            statement.setFloat(2, template.baseHpMax);
-            statement.setFloat(3, template.baseMpMax);
-            statement.setInt(4, template.basePAtk);
-            statement.setInt(5, template.basePDef);
-            statement.setInt(6, template.baseMAtk);
-            statement.setInt(7, template.baseMDef);
-            statement.setInt(8, template.basePAtkSpd);
-            statement.setFloat(9, template.baseMAtkSpd);
-            statement.setInt(10, template.baseWalkSpd);
-            statement.setInt(11, template.baseRunSpd);
-            statement.setInt(12, template.revardExp);
-            statement.setInt(13, template.revardSp);
-            statement.setInt(14, template.getNpcId());
+            statement.setInt(1, npc.getNpcId());
+            statement.setInt(2, npc.getSpawnedLoc().x);
+            statement.setInt(3, npc.getSpawnedLoc().y);
+            statement.setInt(4, npc.getSpawnedLoc().z);
+            rs = statement.executeQuery();
+            if (rs.next()){
+                spawnModel = new SpawnModel(
+                        rs.getString("location"),
+                        rs.getInt("count"),
+                        rs.getInt("npc_templateid"),
+                        rs.getInt("locx"),
+                        rs.getInt("locy"),
+                        rs.getInt("locz"),
+                        rs.getInt("heading"),
+                        rs.getInt("respawn_delay"),
+                        rs.getInt("respawn_delay_rnd"),
+                        rs.getInt("loc_id"),
+                        rs.getInt("baned_loc_id"),
+                        rs.getInt("periodOfDay"),
+                        rs.getInt("reflection"),
+                        rs.getInt("statParam"),
+                        rs.getString("aiParam")
+                );
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            DatabaseUtils.closeDatabaseCS(con, statement);
+        }
+        return spawnModel;
+    }
+
+    public static void updateLocation(SpawnModel spawnModel, SpawnModel newSpawnModel) {
+        ThreadConnection con = null;
+        FiltredPreparedStatement statement = null;
+        String query = "UPDATE npc SET locx = ?, locy = ?, locz = ?, heading = ?, respawn_delay = ?, respawn_delay_rnd = ?, periodOfDay = ? WHERE npc_templateid=? AND locx=? AND locy=? AND locz=?";
+        try {
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement(query);
+            statement.setInt(1, newSpawnModel.getLocx());
+            statement.setInt(2, newSpawnModel.getLocy());
+            statement.setInt(3, newSpawnModel.getLocz());
+            statement.setInt(4, newSpawnModel.getHeading());
+            statement.setInt(5, newSpawnModel.getRespawn_delay());
+            statement.setInt(6, newSpawnModel.getRespawn_delay_rnd());
+            statement.setInt(7, newSpawnModel.getPeriodOfDay());
+            statement.setInt(8, spawnModel.getNpc_templateid());
+            statement.setFloat(9, spawnModel.getLocx());
+            statement.setInt(10, spawnModel.getLocy());
+            statement.setInt(11, spawnModel.getLocz());
             statement.execute();
         } catch (Exception e1) {
             _log.warning("npc data couldnt be stored in db, query is :" + query + " : " + e1);
@@ -301,7 +336,7 @@ public class NpcEditorRepository {
                 }
 
                 try {
-                    statement = con.prepareStatement("SELECT * FROM npc AS c LEFT JOIN npc_element AS cs ON (c.id=cs.id) WHERE ai_type IS NOT NULL AND id=?");
+                    statement = con.prepareStatement("SELECT * FROM npc AS c LEFT JOIN npc_element AS cs ON (c.id=cs.id) WHERE ai_type IS NOT NULL AND c.id=?");
                     statement.setInt(1, npcId);
                     rs = statement.executeQuery();
                     fillNpcTable(rs);
@@ -371,7 +406,7 @@ public class NpcEditorRepository {
                 }
 
                 try {
-                    statement = con.prepareStatement("SELECT * FROM droplist ORDER BY mobId, category, chance DESC WHERE mobId = ?");
+                    statement = con.prepareStatement("SELECT * FROM droplist WHERE mobId = ? ORDER BY mobId, category, chance DESC");
                     statement.setInt(1, npcId);
                     rs = statement.executeQuery();
                     L2DropData dropDat = null;
@@ -419,7 +454,7 @@ public class NpcEditorRepository {
                         _log.info("Players droplist load skipped");
                     }
 
-                    NpcTable.getInstance().loadKillCount();
+//                    NpcTable.getInstance().loadKillCount();
                 } catch(Exception e) {
                     _log.log(Level.SEVERE, "error reading npc drops ", e);
                 } finally {

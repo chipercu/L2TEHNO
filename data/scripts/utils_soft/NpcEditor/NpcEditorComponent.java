@@ -108,8 +108,8 @@ public class NpcEditorComponent extends Component{
         final List<L2Skill> passiveSkills = npc.getAllSkills().stream().filter(L2Skill::isPassive).collect(Collectors.toList());
 
         final Table header = new Table(1, 2);
-        header.row(0).col(0).setParams(align(CENTER), valign(CENTER), width(150)).insert(new Button("Active Skills", actionCom(admin_npc_editor_skills, npcId + " active"), 65, 20));
-        header.row(0).col(1).setParams(align(CENTER), valign(CENTER), width(150)).insert(new Button("Passive Skills", actionCom(admin_npc_editor_skills, npcId + " passive"), 65, 20));
+        header.row(0).col(0).setParams(align(CENTER), valign(CENTER), width(150)).insert(new Button("Active Skills", actionCom(admin_npc_editor_skills, npcId + " active"), 90, 20));
+        header.row(0).col(1).setParams(align(CENTER), valign(CENTER), width(150)).insert(new Button("Passive Skills", actionCom(admin_npc_editor_skills, npcId + " passive"), 90, 20));
 
         final Table skillsTable = new Table(2, 1);
         if ("active".equals(skillType)){
@@ -133,7 +133,7 @@ public class NpcEditorComponent extends Component{
         table.row(2).col(0).insert(addSkillTable);
         table.row(3).col(0).setParams(height(20));
 
-        basePage(player, npcId, skillsTable,"");
+        basePage(player, npcId, table,"");
     }
     public static void showDrop(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
@@ -195,7 +195,7 @@ public class NpcEditorComponent extends Component{
         if (skill != null){
             NpcEditorRepository.addSkill(npc, skill);
             reload(npcId);
-            showSkills(player, new String[]{args[1], skill.isActive() ? "active" : "passive"});
+            showSkills(player, new String[]{args[0], args[1], skill.isActive() ? "active" : "passive"});
         }
     }
     public static void removeSkill(L2Player player, String[] args) {
@@ -243,8 +243,10 @@ public class NpcEditorComponent extends Component{
     public static void saveLocation(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
         L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
+        SpawnModel oldSpawn = NpcEditorRepository.getLocation(npc);
+        SpawnModel newSpawn = NpcEditorRepository.getLocation(npc);
 
-        NpcEditorRepository.updateLocation(npc);
+        NpcEditorRepository.updateLocation(oldSpawn, newSpawn);
         reload(npcId);
         showLocation(player, args);
     }

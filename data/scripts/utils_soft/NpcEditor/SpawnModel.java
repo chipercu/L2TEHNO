@@ -15,14 +15,14 @@ public class SpawnModel {
     private int heading;
     private int respawn_delay;
     private int respawn_delay_rnd;
-    private String loc_id;
-    private String baned_loc_id;
+    private int loc_id;
+    private int baned_loc_id;
     private int periodOfDay;
     private int reflection;
-    private String statParam;
+    private int statParam;
     private String aiParam;
 
-    public SpawnModel(String location, int count, int npc_templateid, int locx, int locy, int locz, int heading, int respawn_delay, int respawn_delay_rnd, String loc_id, String baned_loc_id, int periodOfDay, int reflection, String statParam, String aiParam) {
+    public SpawnModel(String location, int count, int npc_templateid, int locx, int locy, int locz, int heading, int respawn_delay, int respawn_delay_rnd, int loc_id, int baned_loc_id, int periodOfDay, int reflection, int statParam, String aiParam) {
         this.location = location;
         this.count = count;
         this.npc_templateid = npc_templateid;
@@ -112,19 +112,19 @@ public class SpawnModel {
         this.respawn_delay_rnd = respawn_delay_rnd;
     }
 
-    public String getLoc_id() {
+    public int getLoc_id() {
         return loc_id;
     }
 
-    public void setLoc_id(String loc_id) {
+    public void setLoc_id(int loc_id) {
         this.loc_id = loc_id;
     }
 
-    public String getBaned_loc_id() {
+    public int getBaned_loc_id() {
         return baned_loc_id;
     }
 
-    public void setBaned_loc_id(String baned_loc_id) {
+    public void setBaned_loc_id(int baned_loc_id) {
         this.baned_loc_id = baned_loc_id;
     }
 
@@ -144,11 +144,11 @@ public class SpawnModel {
         this.reflection = reflection;
     }
 
-    public String getStatParam() {
+    public int getStatParam() {
         return statParam;
     }
 
-    public void setStatParam(String statParam) {
+    public void setStatParam(int statParam) {
         this.statParam = statParam;
     }
 

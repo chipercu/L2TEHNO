@@ -852,7 +852,8 @@ public class NpcTable {
             statement = con.prepareStatement("SELECT * FROM `killcount` WHERE `char_id`=-1");
             list = statement.executeQuery();
             while (list.next()) {
-                L2NpcTemplate t = NpcTable.getTemplate(list.getInt("npc_id"));
+                final int npc_id = list.getInt("npc_id");
+                L2NpcTemplate t = NpcTable.getTemplate(npc_id);
                 if (t != null)
                     t.killscount = list.getInt("count");
             }
