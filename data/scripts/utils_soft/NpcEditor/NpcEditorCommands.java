@@ -8,7 +8,7 @@ import utils_soft.common.CommandsFunction;
  * Date: 01.12.2023
  */
 public enum NpcEditorCommands {
-
+    admin_npc_editor(NpcEditorComponent::showMainPage),
     admin_npc_editor_main_stats(NpcEditorComponent::showMainStats),
     admin_npc_editor_base_stats(NpcEditorComponent::showBaseStats),
     admin_npc_editor_skills(NpcEditorComponent::showSkills),
@@ -26,7 +26,8 @@ public enum NpcEditorCommands {
     admin_npc_editor_save_visual(NpcEditorComponent::saveVisual),
     admin_npc_editor_save_base_elements(NpcEditorComponent::saveElements),
     admin_npc_editor_save_location(NpcEditorComponent::saveLocation),
-    admin_npc_editor_save_other(NpcEditorComponent::saveOther);
+    admin_npc_editor_save_other(NpcEditorComponent::saveOther),
+    admin_npc_editor_create(NpcEditorComponent::showMainPage);
 
     private final CommandsFunction component;
 

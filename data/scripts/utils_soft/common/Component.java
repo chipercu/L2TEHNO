@@ -5,6 +5,7 @@ import l2open.common.Html_Constructor.tags.Button;
 import l2open.common.Html_Constructor.tags.Img;
 import l2open.common.Html_Constructor.tags.Table;
 import l2open.gameserver.model.L2Player;
+import l2open.gameserver.serverpackets.ShowBoard;
 import l2open.gameserver.serverpackets.TutorialShowHtml;
 import l2open.util.GArray;
 
@@ -30,6 +31,11 @@ public class Component {
     protected static void TWindow(L2Player player, HtmlBuildInterface html, String title){
         String s = "<html><body><title>" + title + "</title>" + html.build() + " </body></html>";
         player.sendPacket(new TutorialShowHtml(s));
+    }
+
+    protected static void CBWindow(L2Player player, HtmlBuildInterface html, String title){
+        String s = "<html><body><title>" + title + "</title>" + html.build() + " </body></html>";
+        ShowBoard.separateAndSend(s, player);
     }
 
     protected static void showTWindow(L2Player player, String html, String backBypass){
@@ -91,6 +97,10 @@ public class Component {
         itemName = itemName.replace("Greater", "G.");
         itemName = itemName.replace("Escape", "Esc.");
         itemName = itemName.replace("Escape", "Esc.");
+        itemName = itemName.replace("Common", "Com.");
+        itemName = itemName.replace("Package", "Pack.");
+        itemName = itemName.replace("Package", "Pack.");
+        itemName = itemName.replace("Sealed", "S.");
         itemName = itemName.replace("<", "(");
         itemName = itemName.replace(">", ")");
         return itemName;

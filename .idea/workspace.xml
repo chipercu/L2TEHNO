@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="refactoring quest 10603">
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="NpcEditorComponent - ref.2">
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/DropItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/DropItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/SpawnModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/SpawnModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/tables/NpcTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/tables/NpcTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/serverpackets/ShowBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/serverpackets/ShowBoard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,6 +265,8 @@
       <workItem from="1700820520367" duration="32494000" />
       <workItem from="1700906590715" duration="10992000" />
       <workItem from="1701004412876" duration="14825000" />
+      <workItem from="1702110022640" duration="6622000" />
+      <workItem from="1702195493753" duration="12567000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1692529102326</created>
@@ -409,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701866672276</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="NpcEditorComponent - ref.2">
+      <created>1701980367129</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1701980367129</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +470,8 @@
     <MESSAGE value="refactoring: insert Build" />
     <MESSAGE value="refactoring: Build rename to HtmlBuildInterface" />
     <MESSAGE value="feat: add Component.formatSkillName" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add Component.formatSkillName" />
+    <MESSAGE value="NpcEditorComponent - ref.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="NpcEditorComponent - ref.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

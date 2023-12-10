@@ -128,6 +128,10 @@ import static l2open.gameserver.model.L2Zone.ZoneType.*;
 public class L2Player extends L2Playable {
     protected static final Logger _log = Logger.getLogger(L2Player.class.getName());
 
+    private String currentEncryptKey;
+    private String lastEncryptKey;
+
+
     public HashMap<Integer, L2SubClass> _classlist = new HashMap<Integer, L2SubClass>(4);
 
     public static final short STORE_PRIVATE_NONE = 0;
@@ -555,6 +559,22 @@ public class L2Player extends L2Playable {
         if (_connection == null)
             return NOT_CONNECTED;
         return _connection.getIpAddr();
+    }
+
+    public String getCurrentEncryptKey() {
+        return currentEncryptKey;
+    }
+
+    public void setCurrentEncryptKey(String currentEncryptKey) {
+        this.currentEncryptKey = currentEncryptKey;
+    }
+
+    public String getLastEncryptKey() {
+        return lastEncryptKey;
+    }
+
+    public void setLastEncryptKey(String lastEncryptKey) {
+        this.lastEncryptKey = lastEncryptKey;
     }
 
     public int getQuestInventoryLimit() {

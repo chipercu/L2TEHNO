@@ -34,6 +34,61 @@ import static l2open.gameserver.tables.NpcTable.*;
 public class NpcEditorRepository {
     protected static Logger _log = Logger.getLogger(NpcEditorRepository.class.getName());
 
+    public static List<NpcModel> getNpcList(int page){
+        ResultSet rs = null;
+        ThreadConnection con = null;
+        FiltredPreparedStatement statement = null;
+        String query = "SELECT * FROM npc ORDER BY ordinal LIMIT 17 OFFSET ?";
+        List<NpcModel> list = new ArrayList<>();
+        try {
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement(query);
+            statement.setInt(1, page);
+            rs = statement.executeQuery();
+            while (rs.next()) {
+                NpcModel npcModel = new NpcModel(
+                        rs.getInt("id"),
+                        rs.getString("name"),
+                        rs.getString("title"),
+                        rs.getInt("displayId"),
+                        rs.getString("type"));
+                list.add(npcModel);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            DatabaseUtils.closeDatabaseCSR(con, statement, rs);
+        }
+        return list;
+    }
+    public static List<NpcModel> getNpcListByLikeName(String name){
+        ResultSet rs = null;
+        ThreadConnection con = null;
+        FiltredPreparedStatement statement = null;
+        String query = "SELECT * FROM npc WHERE `name` LIKE '%" + name +"%'";
+        List<NpcModel> list = new ArrayList<>();
+        try {
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement(query);
+            rs = statement.executeQuery();
+            while (rs.next()) {
+                NpcModel npcModel = new NpcModel(
+                        rs.getInt("id"),
+                        rs.getString("name"),
+                        rs.getString("title"),
+                        rs.getInt("displayId"),
+                        rs.getString("type"));
+                list.add(npcModel);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            DatabaseUtils.closeDatabaseCSR(con, statement, rs);
+        }
+        return list;
+    }
+
+
 
     public static void addSkill(L2NpcInstance npc, L2Skill skill) {
         ThreadConnection con = null;
@@ -84,9 +139,9 @@ public class NpcEditorRepository {
             while (rs.next()) {
                 final int itemId = rs.getInt("itemId");
                 final L2Item l2Item = ItemTemplates.getInstance().getTemplate(itemId);
-                if (l2Item.isHerb()){
-                    continue;
-                }
+//                if (l2Item.isHerb()){
+//                    continue;
+//                }
                 DropItem dropItem = new DropItem(
                         itemId,
                         rs.getInt("min"),
@@ -94,6 +149,7 @@ public class NpcEditorRepository {
                         rs.getInt("category"),
                         rs.getInt("chance"),
                         rs.getInt("sweep") == 1,
+                        l2Item.isHerb(),
                         l2Item.getIcon(),
                         l2Item.getName());
                 list.add(dropItem);
@@ -149,7 +205,7 @@ public class NpcEditorRepository {
     public static void updateVisualStats(L2NpcInstance npc){
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
-        String query = "UPDATE npc_element SET name = ?, title = ?, rhand = ?, lhand = ?, displayId = ? WHERE id = ?";
+        String query = "UPDATE npc SET name = ?, title = ?, rhand = ?, lhand = ?, displayId = ? WHERE id = ?";
         final L2NpcTemplate template = npc.getTemplate();
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
@@ -311,7 +367,6 @@ public class NpcEditorRepository {
         } finally {
             DatabaseUtils.closeDatabaseCS(con, statement);
         }
-
     }
 
     public static void updateOtherStats(L2NpcInstance npc) {
