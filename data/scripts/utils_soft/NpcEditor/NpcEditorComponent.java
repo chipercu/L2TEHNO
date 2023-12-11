@@ -41,7 +41,7 @@ public class NpcEditorComponent extends Component{
     }
     public static Table headerTable(int npcId){
         final Table headerTable = new Table(9, 1);
-        headerTable.row(0).col(0).insert(new Button("HOME", actionCom(admin_npc_editor, "npcid 0 0"), 150, 36));
+        headerTable.row(0).col(0).insert(new Button("HOME", actionCom(admin_npc_editor, "none 0 0"), 150, 36));
         headerTable.row(1).col(0).setParams(width(150)).insert(new Button("MainStats", actionCom(admin_npc_editor_main_stats, npcId), 150, 36));
         headerTable.row(2).col(0).insert(new Button("BaseStats", actionCom(admin_npc_editor_base_stats, npcId), 150, 36));
         headerTable.row(3).col(0).insert(new Button("Skills", actionCom(admin_npc_editor_skills, npcId + " active"), 150, 36));
@@ -91,6 +91,15 @@ public class NpcEditorComponent extends Component{
         return main;
     }
 
+    public static Table parametersTable(String name, String value, Enum command, int npcId){
+        final Table table = new Table(1, 4);
+        table.row(0).col(0).setParams(align(RIGHT), valign(CENTER)).insert(new Font(Color.BROWN, name));
+        table.row(0).col(0).setParams(align(LEFT), valign(CENTER)).insert(new Font(Color.BLUE, value));
+        table.row(0).col(0).setParams(align(RIGHT), valign(CENTER)).insert(new Edit(name, 50, 12, EditType.num, 2));
+        table.row(0).col(0).setParams(align(RIGHT), valign(CENTER)).insert(new Button("OK", actionCom(command, npcId + " " + name +  " $" + name)));
+        return table;
+    }
+
     public static void showMainPage(L2Player player, String[] args) {
         String filter = args[1];
         String filterValue = args[2];
@@ -98,10 +107,14 @@ public class NpcEditorComponent extends Component{
 
         List<NpcModel> npcList;
 
+        int offset = page * 17;
+
         if (filter.equals("npcname")){
-            npcList = NpcEditorRepository.getNpcListByLikeName(filterValue);
+            npcList = NpcEditorRepository.getNpcListByLikeName(filterValue, offset);
+        }else if (filter.equals("npcid")){
+            npcList = NpcEditorRepository.getNpcListByLikeId(filterValue, offset);
         }else {
-            npcList = NpcEditorRepository.getNpcList(page * 17);
+            npcList = NpcEditorRepository.getNpcList(offset);
         }
 
         final Table mainTable = new Table(2, 1);
@@ -119,9 +132,9 @@ public class NpcEditorComponent extends Component{
         final Table npcTable = new Table(2, 1);
 
         final Table pages = new Table(1, 3);
-        pages.row(0).col(0).insert(new Button("<<<", actionCom(admin_npc_editor, filter + " 0 " +(page == 0 ? 0 : page - 1)), 60, 20));
+        pages.row(0).col(0).insert(new Button("<<<", actionCom(admin_npc_editor, filter + " " + filterValue + " " +(page == 0 ? 0 : page - 1)), 60, 20));
         pages.row(0).col(1).setParams(width(100), align(CENTER)).insert(new Font(Color.GOLD, "page:" + page));
-        pages.row(0).col(2).insert(new Button(">>>", actionCom(admin_npc_editor, filter + " 0 " +( page + 1)), 60, 20));
+        pages.row(0).col(2).insert(new Button(">>>", actionCom(admin_npc_editor, filter + " " + filterValue + " " +( page + 1)), 60, 20));
 
         final Table table = new Table(npcList.size(), 5).setParams(border(1));
         for (int i = 0; i <npcList.size(); i++) {
@@ -143,16 +156,50 @@ public class NpcEditorComponent extends Component{
 
     public static void showMainStats(L2Player player, String[] args){
         int npcId = Integer.parseInt(args[1]);
+        final L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
+        final L2NpcTemplate template = npc.getTemplate();
 
-        final Table table = new Table(7, 2);
-        table.row(0).col(0).insert("<edit var=\"name\" text=\"asdfasd\" type=\"text\" width=400 length=100>");
-        basePage(player, npcId, table, new Button("Сохранить", actionCom(admin_npc_editor_save_main_stats, ""), 100, 20).build());
+        final Table table = new Table(14, 1);
+        table.row(0).col(0).insert(parametersTable("level", String.valueOf(template.level), admin_npc_editor_save_main_stats, npcId));
+        table.row(1).col(0).insert(parametersTable("hp", String.valueOf(template.baseHpMax), admin_npc_editor_save_main_stats, npcId));
+        table.row(2).col(0).insert(parametersTable("mp", String.valueOf(template.baseMpMax), admin_npc_editor_save_main_stats, npcId));
+        table.row(3).col(0).insert(parametersTable("patk", String.valueOf(template.basePAtk), admin_npc_editor_save_main_stats, npcId));
+        table.row(4).col(0).insert(parametersTable("pdef", String.valueOf(template.basePDef), admin_npc_editor_save_main_stats, npcId));
+        table.row(5).col(0).insert(parametersTable("matk", String.valueOf(template.baseMAtk), admin_npc_editor_save_main_stats, npcId));
+        table.row(6).col(0).insert(parametersTable("mdef", String.valueOf(template.baseMDef), admin_npc_editor_save_main_stats, npcId));
+        table.row(7).col(0).insert(parametersTable("atkspd", String.valueOf(template.basePAtkSpd), admin_npc_editor_save_main_stats, npcId));
+        table.row(8).col(0).insert(parametersTable("matkspd", String.valueOf(template.baseMAtkSpd), admin_npc_editor_save_main_stats, npcId));
+        table.row(9).col(0).insert(parametersTable("walkspd", String.valueOf(template.baseWalkSpd), admin_npc_editor_save_main_stats, npcId));
+        table.row(10).col(0).insert(parametersTable("runspd", String.valueOf(template.baseRunSpd), admin_npc_editor_save_main_stats, npcId));
+        table.row(11).col(0).insert(parametersTable("exp", String.valueOf(template.revardExp), admin_npc_editor_save_main_stats, npcId));
+        table.row(12).col(0).insert(parametersTable("sp", String.valueOf(template.revardSp), admin_npc_editor_save_main_stats, npcId));
+
+        final Table main = new Table(2, 1);
+        main.row(0).col(0).insert(" ID: " + new Font(Color.GOLD, npcId).build() + " | " + new Font(Color.GREN, npc.getName()).build());
+        main.row(1).col(0).insert(table);
+
+        basePage(player, npcId, main, "");
     }
     public static void showBaseStats(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
 
-        final Table table = new Table(7, 2);
-        basePage(player, npcId, table, new Button("Сохранить", actionCom(admin_npc_editor_save_base_stats, ""), 100, 20).build());
+        final L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
+        final L2NpcTemplate template = npc.getTemplate();
+
+        final Table table = new Table(14, 1);
+        table.row(0).col(0).insert(parametersTable("str", String.valueOf(template.level), admin_npc_editor_save_main_stats, npcId));
+        table.row(1).col(0).insert(parametersTable("con", String.valueOf(template.baseHpMax), admin_npc_editor_save_main_stats, npcId));
+        table.row(2).col(0).insert(parametersTable("dex", String.valueOf(template.baseMpMax), admin_npc_editor_save_main_stats, npcId));
+        table.row(3).col(0).insert(parametersTable("int", String.valueOf(template.basePAtk), admin_npc_editor_save_main_stats, npcId));
+        table.row(4).col(0).insert(parametersTable("wit", String.valueOf(template.basePDef), admin_npc_editor_save_main_stats, npcId));
+        table.row(5).col(0).insert(parametersTable("men", String.valueOf(template.baseMAtk), admin_npc_editor_save_main_stats, npcId));
+
+        final Table main = new Table(2, 1);
+        main.row(0).col(0).insert(" ID: " + new Font(Color.GOLD, npcId).build() + " | " + new Font(Color.GREN, npc.getName()).build());
+        main.row(1).col(0).insert(table);
+
+
+        basePage(player, npcId, table, "");
     }
     public static void showSkills(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
@@ -243,6 +290,8 @@ public class NpcEditorComponent extends Component{
 
     public static void saveMainStats(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
+        String stat = args[2];
+        String statValue = args[3];
         L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
 
         NpcEditorRepository.updateMainStats(npc);

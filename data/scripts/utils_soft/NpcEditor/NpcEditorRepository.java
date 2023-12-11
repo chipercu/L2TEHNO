@@ -34,7 +34,7 @@ import static l2open.gameserver.tables.NpcTable.*;
 public class NpcEditorRepository {
     protected static Logger _log = Logger.getLogger(NpcEditorRepository.class.getName());
 
-    public static List<NpcModel> getNpcList(int page){
+    public static List<NpcModel> getNpcList(int offset){
         ResultSet rs = null;
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
@@ -43,7 +43,7 @@ public class NpcEditorRepository {
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
-            statement.setInt(1, page);
+            statement.setInt(1, offset);
             rs = statement.executeQuery();
             while (rs.next()) {
                 NpcModel npcModel = new NpcModel(
@@ -61,15 +61,19 @@ public class NpcEditorRepository {
         }
         return list;
     }
-    public static List<NpcModel> getNpcListByLikeName(String name){
+
+    public static List<NpcModel> getNpcListByLike(String column, String value, int offset){
         ResultSet rs = null;
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
-        String query = "SELECT * FROM npc WHERE `name` LIKE '%" + name +"%'";
+        String query = "SELECT * FROM npc WHERE ? LIKE ? ORDER BY ordinal LIMIT 17 OFFSET ?";
         List<NpcModel> list = new ArrayList<>();
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
+            statement.setString(1, column);
+            statement.setString(2, "%" + value + "%");
+            statement.setInt(3, offset);
             rs = statement.executeQuery();
             while (rs.next()) {
                 NpcModel npcModel = new NpcModel(
@@ -88,7 +92,13 @@ public class NpcEditorRepository {
         return list;
     }
 
+    public static List<NpcModel> getNpcListByLikeName(String name, int offset){
+        return getNpcListByLike("name", name, offset);
+    }
 
+    public static List<NpcModel> getNpcListByLikeId(String npcId, int offset){
+        return getNpcListByLike("name", String.valueOf(npcId), offset);
+    }
 
     public static void addSkill(L2NpcInstance npc, L2Skill skill) {
         ThreadConnection con = null;

@@ -57,7 +57,6 @@ public class Component {
             int end = Math.min(list.size(), i + batchSize);
             partitions.add(list.subList(i, end));
         }
-
         return partitions;
     }
 
