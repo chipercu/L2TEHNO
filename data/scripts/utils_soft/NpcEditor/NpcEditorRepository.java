@@ -66,14 +66,14 @@ public class NpcEditorRepository {
         ResultSet rs = null;
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
-        String query = "SELECT * FROM npc WHERE ? LIKE ? ORDER BY ordinal LIMIT 17 OFFSET ?";
+        String query = "SELECT * FROM npc WHERE `" + column +"` LIKE '%" + value + "%' ORDER BY ordinal LIMIT 17 OFFSET " + offset;
         List<NpcModel> list = new ArrayList<>();
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
-            statement.setString(1, column);
-            statement.setString(2, "%" + value + "%");
-            statement.setInt(3, offset);
+//            statement.setString(1, column);
+//            statement.setString(2, "%" + value + "%");
+//            statement.setInt(3, offset);
             rs = statement.executeQuery();
             while (rs.next()) {
                 NpcModel npcModel = new NpcModel(
@@ -97,7 +97,7 @@ public class NpcEditorRepository {
     }
 
     public static List<NpcModel> getNpcListByLikeId(String npcId, int offset){
-        return getNpcListByLike("name", String.valueOf(npcId), offset);
+        return getNpcListByLike("id", String.valueOf(npcId), offset);
     }
 
     public static void addSkill(L2NpcInstance npc, L2Skill skill) {
