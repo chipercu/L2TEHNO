@@ -9,9 +9,12 @@ import l2open.gameserver.tables.NpcTable;
 import l2open.gameserver.tables.SkillTable;
 import l2open.gameserver.templates.L2NpcTemplate;
 import l2open.util.GArray;
+import utils_soft.NpcEditor.enums.AI_TYPE;
+import utils_soft.NpcEditor.enums.INSTANCE_TYPE;
 import utils_soft.common.Component;
 
 import java.text.DecimalFormat;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -113,20 +116,23 @@ public class NpcEditorComponent extends Component{
             npcList = NpcEditorRepository.getNpcListByLikeName(filterValue, offset);
         }else if (filter.equals("npcid")){
             npcList = NpcEditorRepository.getNpcListByLikeId(filterValue, offset);
+        }else if (filter.equals("npctype")){
+            npcList = NpcEditorRepository.getNpcListByLikeType(filterValue, offset);
         }else {
             npcList = NpcEditorRepository.getNpcList(offset);
         }
 
         final Table mainTable = new Table(2, 1);
 
-        final Table filterTable = new Table(2, 6);
+        final Table filterTable = new Table(2, 7);
         filterTable.row(0).col(0).setParams(height(10));
         filterTable.row(1).col(0).setParams(width(50)).setParams(align(RIGHT), valign(CENTER)).insert(new Font(Color.GREN, "Поиск:"));
         filterTable.row(1).col(1).setParams(width(100)).setParams(align(LEFT), valign(BOTTOM)).insert("<br>" + new Edit("find", 100, 12, EditType.text, 12).build());
-        filterTable.row(1).col(2).setParams(width(100)).setParams(valign(CENTER)).insert(new Button("Npc Id", actionCom(admin_npc_editor,"npcid $find 0"), 100, 32));
-        filterTable.row(1).col(3).setParams(width(100)).setParams(valign(CENTER)).insert(new Button("Npc Name", actionCom(admin_npc_editor,"npcname $find 0"), 100, 32));
-        filterTable.row(1).col(4).setParams(width(250), valign(CENTER), align(LEFT)).insert(new Font(Color.GRAY, "filter by: ").build()  + new Font(Color.BROWN, filter).build() + " | " + new Font(Color.BLUE, filterValue).build());
-        filterTable.row(1).col(5).setParams(width(100)).insert(new Button("Create New NPC", actionCom(admin_npc_editor_create,"npcid 0 1"), 100, 32));
+        filterTable.row(1).col(2).setParams(width(60)).setParams(valign(CENTER)).insert(new Button("Id", actionCom(admin_npc_editor,"npcid $find 0"), 50, 32));
+        filterTable.row(1).col(3).setParams(width(60)).setParams(valign(CENTER)).insert(new Button("Name", actionCom(admin_npc_editor,"npcname $find 0"), 50, 32));
+        filterTable.row(1).col(4).setParams(width(60)).setParams(valign(CENTER)).insert(new Button("Type", actionCom(admin_npc_editor,"npctype $find 0"), 50, 32));
+        filterTable.row(1).col(5).setParams(width(250), valign(CENTER), align(LEFT)).insert(new Font(Color.GRAY, "filter by: ").build()  + new Font(Color.BROWN, filter).build() + " | " + new Font(Color.BLUE, filterValue).build());
+        filterTable.row(1).col(6).setParams(width(100)).insert(new Button("Create New NPC", actionCom(admin_npc_editor_create,""), 100, 32));
 
 
         final Table npcTable = new Table(2, 1);
@@ -149,7 +155,7 @@ public class NpcEditorComponent extends Component{
             }
             table.row(i).col(0).setParams(width(100)).insert(new Font(Color.BROWN, npcModel.getId()));
             table.row(i).col(1).setParams(width(250)).insert(new Font(Color.GREN, npcModel.getName()));
-            table.row(i).col(2).setParams(width(100)).insert(new Font(Color.BROWN, npcModel.getDisplayId()));
+            table.row(i).col(2).setParams(width(100)).insert(new Font(Color.BROWN, npcModel.getLevel()));
             table.row(i).col(3).setParams(width(150)).insert(type);
             table.row(i).col(4).insert(new Button("redact", actionCom(admin_npc_editor_main_stats, npcModel.getId()), 80, 20));
         }
@@ -301,6 +307,28 @@ public class NpcEditorComponent extends Component{
         int npcId = Integer.parseInt(args[1]);
         final Table table = new Table(7, 2);
         basePage(player, npcId, table, new Button("Сохранить", actionCom(admin_npc_editor_save_other, ""), 100, 20).build());
+    }
+
+    public static void showNpcCreatePage(L2Player player, String[] args) {
+        final Table table = new Table(1, 10);
+        table.row(0).col(0).setParams(width(50), valign(CENTER), align(RIGHT)).insert("Name: ");
+        table.row(0).col(1).setParams(width(100)).insert(new Edit("name", 100, 12, EditType.text, 20));
+        table.row(0).col(2).setParams(width(50),valign(CENTER), align(RIGHT)).insert("Title: ");
+        table.row(0).col(3).insert(new Edit("title", 100, 12, EditType.text, 20));
+        table.row(0).col(4).setParams(width(50),valign(CENTER), align(RIGHT)).insert("Level: ");
+        table.row(0).col(5).insert(new Edit("level", 40, 12, EditType.num, 2));
+        table.row(0).col(6).setParams(width(80),valign(CENTER), align(RIGHT)).insert("Inst.Type: ");
+        table.row(0).col(7).insert(new Combobox("instance_type", Arrays.stream(INSTANCE_TYPE.values()).map(Enum::name).collect(Collectors.toList())).setParams(width(100)));
+        table.row(0).col(8).setParams(width(50),valign(CENTER), align(RIGHT)).insert("AI Type: ");
+        table.row(0).col(9).insert(new Combobox("ai_type", Arrays.stream(AI_TYPE.values()).map(Enum::name).collect(Collectors.toList())).setParams(width(100)));
+
+        Table main = new Table(3, 1);
+        main.row(0).col(0).setParams(align(CENTER)).insert("<br>" + new Font(Color.RED, "ВНИМАНИЕ!!! Все поля обязательны").build());
+        main.row(1).col(0).setParams(align(CENTER)).insert(table);
+        main.row(2).col(0).setParams(align(CENTER)).insert(NpcEditorRepository.maxValue("npc", "level"));
+
+
+        CBWindow(player, main, window_titel);
     }
 
     public static void saveMainStats(L2Player player, String[] args) {

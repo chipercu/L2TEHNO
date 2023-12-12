@@ -27,7 +27,7 @@ public enum NpcEditorCommands {
     admin_npc_editor_save_base_elements(NpcEditorComponent::saveElements),
     admin_npc_editor_save_location(NpcEditorComponent::saveLocation),
     admin_npc_editor_save_other(NpcEditorComponent::saveOther),
-    admin_npc_editor_create(NpcEditorComponent::showMainPage);
+    admin_npc_editor_create(NpcEditorComponent::showNpcCreatePage);
 
     private final CommandsFunction component;
 

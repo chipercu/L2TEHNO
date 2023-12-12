@@ -6,13 +6,15 @@ public class NpcModel {
     private String title;
     private int displayId;
     private String type;
+    private int level;
 
-    public NpcModel(int id, String name, String title, int displayId, String type) {
+    public NpcModel(int id, String name, String title, int displayId, String type, int level) {
         this.id = id;
         this.name = name;
         this.title = title;
         this.displayId = displayId;
         this.type = type;
+        this.level = level;
     }
 
     public int getId() {
@@ -53,5 +55,13 @@ public class NpcModel {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 }

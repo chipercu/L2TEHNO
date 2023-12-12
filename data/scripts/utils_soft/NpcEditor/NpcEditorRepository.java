@@ -34,7 +34,7 @@ import static l2open.gameserver.tables.NpcTable.*;
 public class NpcEditorRepository {
     protected static Logger _log = Logger.getLogger(NpcEditorRepository.class.getName());
 
-    public static List<NpcModel> getNpcList(int offset){
+    public static List<NpcModel> getNpcList(int offset) {
         ResultSet rs = null;
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
@@ -51,7 +51,8 @@ public class NpcEditorRepository {
                         rs.getString("name"),
                         rs.getString("title"),
                         rs.getInt("displayId"),
-                        rs.getString("type"));
+                        rs.getString("type"),
+                        rs.getInt("level"));
                 list.add(npcModel);
             }
         } catch (Exception e) {
@@ -62,11 +63,33 @@ public class NpcEditorRepository {
         return list;
     }
 
-    public static List<NpcModel> getNpcListByLike(String column, String value, int offset){
+    public static int maxValue(String table, String column){
         ResultSet rs = null;
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
-        String query = "SELECT * FROM npc WHERE `" + column +"` LIKE '%" + value + "%' ORDER BY ordinal LIMIT 17 OFFSET " + offset;
+        String query = "SELECT MAX(`"+column+"`) AS max_value FROM " + table;
+        int value = 0;
+
+        try {
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement(query);
+            rs = statement.executeQuery();
+            if (rs.next()) {
+                value = rs.getInt("max_value");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            DatabaseUtils.closeDatabaseCSR(con, statement, rs);
+        }
+        return value;
+    }
+
+    public static List<NpcModel> getNpcListByLike(String column, String value, int offset) {
+        ResultSet rs = null;
+        ThreadConnection con = null;
+        FiltredPreparedStatement statement = null;
+        String query = "SELECT * FROM npc WHERE `" + column + "` LIKE '%" + value + "%' ORDER BY ordinal LIMIT 17 OFFSET " + offset;
         List<NpcModel> list = new ArrayList<>();
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
@@ -81,7 +104,8 @@ public class NpcEditorRepository {
                         rs.getString("name"),
                         rs.getString("title"),
                         rs.getInt("displayId"),
-                        rs.getString("type"));
+                        rs.getString("type"),
+                        rs.getInt("level"));
                 list.add(npcModel);
             }
         } catch (Exception e) {
@@ -92,12 +116,16 @@ public class NpcEditorRepository {
         return list;
     }
 
-    public static List<NpcModel> getNpcListByLikeName(String name, int offset){
+    public static List<NpcModel> getNpcListByLikeName(String name, int offset) {
         return getNpcListByLike("name", name, offset);
     }
 
-    public static List<NpcModel> getNpcListByLikeId(String npcId, int offset){
+    public static List<NpcModel> getNpcListByLikeId(String npcId, int offset) {
         return getNpcListByLike("id", String.valueOf(npcId), offset);
+    }
+
+    public static List<NpcModel> getNpcListByLikeType(String type, int offset) {
+        return getNpcListByLike("type", String.valueOf(type), offset);
     }
 
     public static void addSkill(L2NpcInstance npc, L2Skill skill) {
@@ -118,7 +146,7 @@ public class NpcEditorRepository {
         }
     }
 
-    public static void removeSkill(L2NpcInstance npc, int skillId){
+    public static void removeSkill(L2NpcInstance npc, int skillId) {
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
         String query = "DELETE FROM npcskills WHERE npcid=? AND skillid=?";
@@ -135,7 +163,7 @@ public class NpcEditorRepository {
         }
     }
 
-    public static List<DropItem> getDropList(int npcId){
+    public static List<DropItem> getDropList(int npcId) {
         ResultSet rs = null;
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
@@ -172,7 +200,7 @@ public class NpcEditorRepository {
         return list;
     }
 
-    public static void addDrop(int npcId, int itemId, int min, int max, int chance, int category, boolean isSpoil){
+    public static void addDrop(int npcId, int itemId, int min, int max, int chance, int category, boolean isSpoil) {
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
         String query = "INSERT INTO droplist (mobId,itemId,min,max,sweep,chance,category) VALUES(?,?,?,?,?,?,?)";
@@ -194,7 +222,7 @@ public class NpcEditorRepository {
         }
     }
 
-    public static void removeDrop(int npcId, int itemId, boolean isSpoil){
+    public static void removeDrop(int npcId, int itemId, boolean isSpoil) {
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
         String query = "DELETE FROM droplist WHERE mobId=? AND itemId=? AND sweep=?";
@@ -203,7 +231,7 @@ public class NpcEditorRepository {
             statement = con.prepareStatement(query);
             statement.setInt(1, npcId);
             statement.setInt(2, itemId);
-            statement.setInt(2, isSpoil? 1 : 0);
+            statement.setInt(2, isSpoil ? 1 : 0);
             statement.execute();
         } catch (Exception e) {
             e.printStackTrace();
@@ -212,7 +240,7 @@ public class NpcEditorRepository {
         }
     }
 
-    public static void updateVisualStats(L2NpcInstance npc){
+    public static void updateVisualStats(L2NpcInstance npc) {
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
         String query = "UPDATE npc SET name = ?, title = ?, rhand = ?, lhand = ?, displayId = ? WHERE id = ?";
@@ -312,7 +340,7 @@ public class NpcEditorRepository {
         }
     }
 
-    public static SpawnModel getLocation(L2NpcInstance npc){
+    public static SpawnModel getLocation(L2NpcInstance npc) {
         ResultSet rs = null;
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
@@ -326,7 +354,7 @@ public class NpcEditorRepository {
             statement.setInt(3, npc.getSpawnedLoc().y);
             statement.setInt(4, npc.getSpawnedLoc().z);
             rs = statement.executeQuery();
-            if (rs.next()){
+            if (rs.next()) {
                 spawnModel = new SpawnModel(
                         rs.getString("location"),
                         rs.getInt("count"),
@@ -385,200 +413,198 @@ public class NpcEditorRepository {
     }
 
     public static void restoreNpc(int npcId) {
-            ThreadConnection con = null;
-            FiltredPreparedStatement statement = null;
-            ResultSet rs = null;
+        ThreadConnection con = null;
+        FiltredPreparedStatement statement = null;
+        ResultSet rs = null;
+        try {
+            con = L2DatabaseFactory.getInstance().getConnection();
             try {
-                con = L2DatabaseFactory.getInstance().getConnection();
-                try {
-                    statement = con.prepareStatement("SELECT * FROM ai_params WHERE npc_id = ?");
-                    statement.setInt(1, npcId);
-                    rs = statement.executeQuery();
-                    LoadAIParams(rs);
-                } catch(Exception ignored) {}
-                finally {
-                    DatabaseUtils.closeDatabaseSR(statement, rs);
+                statement = con.prepareStatement("SELECT * FROM ai_params WHERE npc_id = ?");
+                statement.setInt(1, npcId);
+                rs = statement.executeQuery();
+                LoadAIParams(rs);
+            } catch (Exception ignored) {
+            } finally {
+                DatabaseUtils.closeDatabaseSR(statement, rs);
+            }
+
+            try {
+                statement = con.prepareStatement("SELECT * FROM npc AS c LEFT JOIN npc_element AS cs ON (c.id=cs.id) WHERE ai_type IS NOT NULL AND c.id=?");
+                statement.setInt(1, npcId);
+                rs = statement.executeQuery();
+                fillNpcTable(rs);
+            } catch (Exception e) {
+                _log.log(Level.SEVERE, "error while creating npc table ", e);
+            } finally {
+                DatabaseUtils.closeDatabaseSR(statement, rs);
+            }
+
+            try {
+                statement = con.prepareStatement("SELECT npcid, skillid, level FROM npcskills WHERE npcid = ?");
+                statement.setInt(1, npcId);
+                rs = statement.executeQuery();
+                L2NpcTemplate npcDat;
+                L2Skill npcSkill;
+
+                List<Integer> unimpl = new ArrayList<Integer>();
+                int counter = 0;
+                while (rs.next()) {
+                    int mobId = rs.getInt("npcid");
+                    npcDat = getNpcs()[mobId];
+                    if (npcDat == null) {
+                        continue;
+                    }
+                    short skillId = rs.getShort("skillid");
+                    int level = rs.getByte("level");
+
+                    // Для определения расы используется скилл 4416
+                    if (skillId == 4416)
+                        npcDat.setRace(level);
+
+                    if (skillId >= 4290 && skillId <= 4302) {
+                        _log.info("Warning! Skill " + skillId + " not used, use 4416 instead.");
+                        continue;
+                    }
+
+                    if (skillId == 4408) {
+                        if (CatacombSpawnManager._monsters.contains(mobId)) {
+                            level = ConfigValue.AltCatacombMonstersMultHP + 8;
+                            npcDat.setRateHp(NpcTable.getInstance().getHprateskill()[level]);
+                        } else {
+                            npcDat.setRateHp(NpcTable.getInstance().getHprateskill()[level]);
+                        }
+                    }
+
+
+                    npcSkill = SkillTable.getInstance().getInfo(skillId, level);
+
+                    if (!unimpl.contains(Integer.valueOf(skillId)) && (npcSkill == null || npcSkill.getSkillType() == L2Skill.SkillType.NOTDONE || npcSkill.getSkillType() == L2Skill.SkillType.NOTUSED) && npcDat.type.equals("L2Pet")) {
+                        unimpl.add(Integer.valueOf(skillId));
+                    }
+                    if (npcSkill == null) {
+                        continue;
+                    }
+                    npcDat.addSkill(npcSkill);
+                    counter++;
+                }
+                new File("log/game/unimplemented_npc_skills.txt").delete();
+                for (Integer i : unimpl) {
+                    Log.add("[" + i + "] " + SkillTable.getInstance().getInfo(i, 1), "unimplemented_npc_skills", "");
+                }
+                _log.info("Loaded " + counter + " npc skills.");
+            } catch (Exception e) {
+                _log.log(Level.SEVERE, "error while reading npcskills table ", e);
+            } finally {
+                DatabaseUtils.closeDatabaseSR(statement, rs);
+            }
+
+            try {
+                statement = con.prepareStatement("SELECT * FROM droplist WHERE mobId = ? ORDER BY mobId, category, chance DESC");
+                statement.setInt(1, npcId);
+                rs = statement.executeQuery();
+                L2DropData dropDat = null;
+                L2NpcTemplate npcDat = null;
+
+                while (rs.next()) {
+                    int mobId = rs.getInt("mobId");
+                    npcDat = getNpcs()[mobId];
+                    if (npcDat != null) {
+                        dropDat = new L2DropData();
+                        int id = rs.getInt("itemId");
+                        if (ItemTemplates.getInstance().getTemplate(id).isCommonItem()) {
+                            dropDat.setItemId(id);
+                            dropDat.setChance(rs.getInt("chance") * ConfigValue.RateDropCommonItems);
+                        } else {
+                            dropDat.setItemId(id);
+                            dropDat.setChance(rs.getInt("chance"));
+                        }
+
+                        dropDat.setMinDrop(rs.getLong("min"));
+                        dropDat.setMaxDrop(rs.getLong("max"));
+                        dropDat.setSweep(rs.getInt("sweep") == 1);
+
+                        if (dropDat.getItem().isArrow() || dropDat.getItemId() == 1419) {
+                            dropDat.setGroupId(Byte.MAX_VALUE); // группа для нерейтуемых предметов, сюда же надо всякую фигню
+                        } else {
+                            dropDat.setGroupId(rs.getInt("category"));
+                        }
+
+                        if (ConfigValue.EnableModDrop) {
+                            dropDat.setIsRate(rs.getBoolean("is_rate"));
+                            dropDat.setIsPremium(rs.getBoolean("is_premium"));
+                        }
+                        npcDat.addDropData(dropDat);
+                    }
                 }
 
-                try {
-                    statement = con.prepareStatement("SELECT * FROM npc AS c LEFT JOIN npc_element AS cs ON (c.id=cs.id) WHERE ai_type IS NOT NULL AND c.id=?");
-                    statement.setInt(1, npcId);
-                    rs = statement.executeQuery();
-                    fillNpcTable(rs);
-                } catch(Exception e) {
-                    _log.log(Level.SEVERE, "error while creating npc table ", e);
-                } finally {
-                    DatabaseUtils.closeDatabaseSR(statement, rs);
+
+                if (ConfigValue.AltShowDroplist && !ConfigValue.AltGenerateDroplistOnDemand) {
+                    final L2NpcTemplate npc = getNpcs()[npcId];
+                    if (npc != null) {
+                        InfoCache.addToDroplistCache(npc.npcId, DropList.generateDroplist(npc, null, 1, 1, null));
+                    }
+                } else {
+                    _log.info("Players droplist load skipped");
                 }
-
-                try {
-                    statement = con.prepareStatement("SELECT npcid, skillid, level FROM npcskills WHERE npcid = ?");
-                    statement.setInt(1, npcId);
-                    rs = statement.executeQuery();
-                    L2NpcTemplate npcDat;
-                    L2Skill npcSkill;
-
-                    List<Integer> unimpl = new ArrayList<Integer>();
-                    int counter = 0;
-                    while(rs.next()) {
-                        int mobId = rs.getInt("npcid");
-                        npcDat = getNpcs()[mobId];
-                        if(npcDat == null){
-                            continue;
-                        }
-                        short skillId = rs.getShort("skillid");
-                        int level = rs.getByte("level");
-
-                        // Для определения расы используется скилл 4416
-                        if(skillId == 4416)
-                            npcDat.setRace(level);
-
-                        if(skillId >= 4290 && skillId <= 4302) {
-                            _log.info("Warning! Skill " + skillId + " not used, use 4416 instead.");
-                            continue;
-                        }
-
-                        if(skillId == 4408){
-                            if(CatacombSpawnManager._monsters.contains(mobId)) {
-                                level = ConfigValue.AltCatacombMonstersMultHP + 8;
-                                npcDat.setRateHp(NpcTable.getInstance().getHprateskill()[level]);
-                            } else{
-                                npcDat.setRateHp(NpcTable.getInstance().getHprateskill()[level]);
-                            }
-                        }
-
-
-                        npcSkill = SkillTable.getInstance().getInfo(skillId, level);
-
-                        if(!unimpl.contains(Integer.valueOf(skillId)) && (npcSkill == null || npcSkill.getSkillType() == L2Skill.SkillType.NOTDONE || npcSkill.getSkillType() == L2Skill.SkillType.NOTUSED) && npcDat.type.equals("L2Pet")){
-                            unimpl.add(Integer.valueOf(skillId));
-                        }
-                        if(npcSkill == null){
-                            continue;
-                        }
-                        npcDat.addSkill(npcSkill);
-                        counter++;
-                    }
-                    new File("log/game/unimplemented_npc_skills.txt").delete();
-                    for(Integer i : unimpl){
-                        Log.add("[" + i + "] " + SkillTable.getInstance().getInfo(i, 1), "unimplemented_npc_skills", "");
-                    }
-                    _log.info("Loaded " + counter + " npc skills.");
-                } catch(Exception e) {
-                    _log.log(Level.SEVERE, "error while reading npcskills table ", e);
-                } finally {
-                    DatabaseUtils.closeDatabaseSR(statement, rs);
-                }
-
-                try {
-                    statement = con.prepareStatement("SELECT * FROM droplist WHERE mobId = ? ORDER BY mobId, category, chance DESC");
-                    statement.setInt(1, npcId);
-                    rs = statement.executeQuery();
-                    L2DropData dropDat = null;
-                    L2NpcTemplate npcDat = null;
-
-                    while(rs.next()) {
-                        int mobId = rs.getInt("mobId");
-                        npcDat = getNpcs()[mobId];
-                        if(npcDat != null) {
-                            dropDat = new L2DropData();
-                            int id = rs.getInt("itemId");
-                            if(ItemTemplates.getInstance().getTemplate(id).isCommonItem()) {
-                                dropDat.setItemId(id);
-                                dropDat.setChance(rs.getInt("chance") * ConfigValue.RateDropCommonItems);
-                            } else {
-                                dropDat.setItemId(id);
-                                dropDat.setChance(rs.getInt("chance"));
-                            }
-
-                            dropDat.setMinDrop(rs.getLong("min"));
-                            dropDat.setMaxDrop(rs.getLong("max"));
-                            dropDat.setSweep(rs.getInt("sweep") == 1);
-
-                            if(dropDat.getItem().isArrow() || dropDat.getItemId() == 1419){
-                                dropDat.setGroupId(Byte.MAX_VALUE); // группа для нерейтуемых предметов, сюда же надо всякую фигню
-                            } else{
-                                dropDat.setGroupId(rs.getInt("category"));
-                            }
-
-                            if(ConfigValue.EnableModDrop) {
-                                dropDat.setIsRate(rs.getBoolean("is_rate"));
-                                dropDat.setIsPremium(rs.getBoolean("is_premium"));
-                            }
-                            npcDat.addDropData(dropDat);
-                        }
-                    }
-
-
-                    if(ConfigValue.AltShowDroplist && !ConfigValue.AltGenerateDroplistOnDemand){
-                        final L2NpcTemplate npc = getNpcs()[npcId];
-                        if(npc != null){
-                            InfoCache.addToDroplistCache(npc.npcId, DropList.generateDroplist(npc, null, 1, 1, null));
-                        }
-                    } else{
-                        _log.info("Players droplist load skipped");
-                    }
 
 //                    NpcTable.getInstance().loadKillCount();
-                } catch(Exception e) {
-                    _log.log(Level.SEVERE, "error reading npc drops ", e);
-                } finally {
-                    DatabaseUtils.closeDatabaseSR(statement, rs);
-                }
-
-                try {
-                    statement = con.prepareStatement("SELECT boss_id, minion_id, amount FROM minions WHERE boss_id = ?");
-                    statement.setInt(1, npcId);
-                    rs = statement.executeQuery();
-                    L2MinionData minionDat = null;
-                    L2NpcTemplate npcDat = null;
-                    int cnt = 0;
-
-                    while(rs.next()) {
-                        int raidId = rs.getInt("boss_id");
-                        npcDat = getNpcs()[raidId];
-                        minionDat = new L2MinionData();
-                        minionDat.setMinionId(rs.getInt("minion_id"));
-                        minionDat.setAmount(rs.getByte("amount"));
-                        npcDat.addRaidData(minionDat);
-                        cnt++;
-                    }
-
-                    _log.info("NpcTable: Loaded " + cnt + " Minions.");
-                }
-                catch(Exception e) {
-                    _log.log(Level.SEVERE, "error loading minions", e);
-                } finally {
-                    DatabaseUtils.closeDatabaseSR(statement, rs);
-                }
-
-                try {
-                    statement = con.prepareStatement("SELECT npc_id, class_id FROM skill_learn WHERE npc_id = ?");
-                    statement.setInt(1, npcId);
-                    rs = statement.executeQuery();
-                    L2NpcTemplate npcDat = null;
-                    int cnt = 0;
-
-                    while(rs.next()) {
-                        npcDat = getNpcs()[rs.getInt(1)];
-                        npcDat.addTeachInfo(ClassId.values()[rs.getInt(2)]);
-                        cnt++;
-                    }
-
-                    _log.info("NpcTable: Loaded " + cnt + " SkillLearn entrys.");
-                } catch(Exception e) {
-                    _log.log(Level.SEVERE, "error loading minions", e);
-                } finally {
-                    DatabaseUtils.closeDatabaseSR(statement, rs);
-                }
-            }
-            catch(Exception e) {
-                _log.log(Level.SEVERE, "Cannot find connection to database");
+            } catch (Exception e) {
+                _log.log(Level.SEVERE, "error reading npc drops ", e);
             } finally {
-                DatabaseUtils.closeConnection(con);
+                DatabaseUtils.closeDatabaseSR(statement, rs);
             }
-            Scripts.getInstance();
+
+            try {
+                statement = con.prepareStatement("SELECT boss_id, minion_id, amount FROM minions WHERE boss_id = ?");
+                statement.setInt(1, npcId);
+                rs = statement.executeQuery();
+                L2MinionData minionDat = null;
+                L2NpcTemplate npcDat = null;
+                int cnt = 0;
+
+                while (rs.next()) {
+                    int raidId = rs.getInt("boss_id");
+                    npcDat = getNpcs()[raidId];
+                    minionDat = new L2MinionData();
+                    minionDat.setMinionId(rs.getInt("minion_id"));
+                    minionDat.setAmount(rs.getByte("amount"));
+                    npcDat.addRaidData(minionDat);
+                    cnt++;
+                }
+
+                _log.info("NpcTable: Loaded " + cnt + " Minions.");
+            } catch (Exception e) {
+                _log.log(Level.SEVERE, "error loading minions", e);
+            } finally {
+                DatabaseUtils.closeDatabaseSR(statement, rs);
+            }
+
+            try {
+                statement = con.prepareStatement("SELECT npc_id, class_id FROM skill_learn WHERE npc_id = ?");
+                statement.setInt(1, npcId);
+                rs = statement.executeQuery();
+                L2NpcTemplate npcDat = null;
+                int cnt = 0;
+
+                while (rs.next()) {
+                    npcDat = getNpcs()[rs.getInt(1)];
+                    npcDat.addTeachInfo(ClassId.values()[rs.getInt(2)]);
+                    cnt++;
+                }
+
+                _log.info("NpcTable: Loaded " + cnt + " SkillLearn entrys.");
+            } catch (Exception e) {
+                _log.log(Level.SEVERE, "error loading minions", e);
+            } finally {
+                DatabaseUtils.closeDatabaseSR(statement, rs);
+            }
+        } catch (Exception e) {
+            _log.log(Level.SEVERE, "Cannot find connection to database");
+        } finally {
+            DatabaseUtils.closeConnection(con);
         }
+        Scripts.getInstance();
+    }
 
 
 }
