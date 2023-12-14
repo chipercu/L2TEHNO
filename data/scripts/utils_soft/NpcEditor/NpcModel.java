@@ -8,6 +8,9 @@ public class NpcModel {
     private String type;
     private int level;
 
+
+
+
     public NpcModel(int id, String name, String title, int displayId, String type, int level) {
         this.id = id;
         this.name = name;

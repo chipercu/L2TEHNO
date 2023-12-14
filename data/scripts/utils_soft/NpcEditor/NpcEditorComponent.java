@@ -132,7 +132,7 @@ public class NpcEditorComponent extends Component{
         filterTable.row(1).col(3).setParams(width(60)).setParams(valign(CENTER)).insert(new Button("Name", actionCom(admin_npc_editor,"npcname $find 0"), 50, 32));
         filterTable.row(1).col(4).setParams(width(60)).setParams(valign(CENTER)).insert(new Button("Type", actionCom(admin_npc_editor,"npctype $find 0"), 50, 32));
         filterTable.row(1).col(5).setParams(width(250), valign(CENTER), align(LEFT)).insert(new Font(Color.GRAY, "filter by: ").build()  + new Font(Color.BROWN, filter).build() + " | " + new Font(Color.BLUE, filterValue).build());
-        filterTable.row(1).col(6).setParams(width(100)).insert(new Button("Create New NPC", actionCom(admin_npc_editor_create,""), 100, 32));
+        filterTable.row(1).col(6).setParams(width(100)).insert(new Button("Create New NPC", actionCom(admin_npc_editor_create,"Empty 1 NPC FIGHTER"), 100, 32));
 
 
         final Table npcTable = new Table(2, 1);
@@ -310,17 +310,26 @@ public class NpcEditorComponent extends Component{
     }
 
     public static void showNpcCreatePage(L2Player player, String[] args) {
-        final Table table = new Table(1, 10);
+        String name = args[1];
+        int level = Integer.parseInt(args[2]);
+        INSTANCE_TYPE instanceType = INSTANCE_TYPE.valueOf(args[3]);
+        AI_TYPE ai_type = AI_TYPE.valueOf(args[4]);
+
+
+
+        final Table table = new Table(1, 9);
         table.row(0).col(0).setParams(width(50), valign(CENTER), align(RIGHT)).insert("Name: ");
         table.row(0).col(1).setParams(width(100)).insert(new Edit("name", 100, 12, EditType.text, 20));
-        table.row(0).col(2).setParams(width(50),valign(CENTER), align(RIGHT)).insert("Title: ");
-        table.row(0).col(3).insert(new Edit("title", 100, 12, EditType.text, 20));
-        table.row(0).col(4).setParams(width(50),valign(CENTER), align(RIGHT)).insert("Level: ");
-        table.row(0).col(5).insert(new Edit("level", 40, 12, EditType.num, 2));
-        table.row(0).col(6).setParams(width(80),valign(CENTER), align(RIGHT)).insert("Inst.Type: ");
-        table.row(0).col(7).insert(new Combobox("instance_type", Arrays.stream(INSTANCE_TYPE.values()).map(Enum::name).collect(Collectors.toList())).setParams(width(100)));
-        table.row(0).col(8).setParams(width(50),valign(CENTER), align(RIGHT)).insert("AI Type: ");
-        table.row(0).col(9).insert(new Combobox("ai_type", Arrays.stream(AI_TYPE.values()).map(Enum::name).collect(Collectors.toList())).setParams(width(100)));
+        table.row(0).col(2).setParams(width(50),valign(CENTER), align(RIGHT)).insert("Level: ");
+        table.row(0).col(3).insert(new Edit("level", 40, 12, EditType.num, 2));
+        table.row(0).col(4).setParams(width(80),valign(CENTER), align(RIGHT)).insert("Inst.Type: ");
+        table.row(0).col(5).insert(new Combobox("instance_type", Arrays.stream(INSTANCE_TYPE.values()).map(Enum::name).collect(Collectors.toList())).setParams(width(100)));
+        table.row(0).col(6).setParams(width(50),valign(CENTER), align(RIGHT)).insert("AI Type: ");
+        table.row(0).col(7).insert(new Combobox("ai_type", Arrays.stream(AI_TYPE.values()).map(Enum::name).collect(Collectors.toList())).setParams(width(100)));
+        table.row(0).col(8).insert(new Button("Reload", actionCom(admin_npc_editor_create,"$name $level $instance_type $ai_type"), 100, 32));
+
+        final NpcModel build = new NpcBuilder(name, level, instanceType, ai_type).build();
+
 
         Table main = new Table(3, 1);
         main.row(0).col(0).setParams(align(CENTER)).insert("<br>" + new Font(Color.RED, "ВНИМАНИЕ!!! Все поля обязательны").build());
