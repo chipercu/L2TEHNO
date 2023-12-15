@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="MultiSellEditorComponent fix">
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/Temp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/models/DropItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/models/NpcElementModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/models/NpcModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/DropItem.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/enums/INSTANCE_TYPE.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/enums/INSTANCE_TYPE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/SpawnModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/models/SpawnModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,6 +278,7 @@
       <workItem from="1701275912802" duration="4262000" />
       <workItem from="1701443448554" duration="19855000" />
       <workItem from="1702364928020" duration="8754000" />
+      <workItem from="1702621270365" duration="22350000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1692529102326</created>
@@ -426,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701369633115</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="NpcBuilder ref.1">
+      <created>1702563930242</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1702563930242</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +479,8 @@
     <MESSAGE value="fix: SkillTreeTable" />
     <MESSAGE value="fix: gitignore" />
     <MESSAGE value="MultiSellEditorComponent fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="MultiSellEditorComponent fix" />
+    <MESSAGE value="NpcBuilder ref.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="NpcBuilder ref.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

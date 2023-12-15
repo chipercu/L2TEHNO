@@ -2,11 +2,11 @@ package utils_soft.NpcEditor;
 
 import utils_soft.NpcEditor.enums.AI_TYPE;
 import utils_soft.NpcEditor.enums.INSTANCE_TYPE;
+import utils_soft.NpcEditor.models.NpcModel;
 
 public class NpcBuilder {
 
     private String name;
-    private String title = "";
     private int level;
     private INSTANCE_TYPE instance_type;
     private AI_TYPE ai_type;
@@ -21,7 +21,7 @@ public class NpcBuilder {
 
     public NpcModel build(){
         final int id = NpcEditorRepository.maxValue("npc", "id") + 1;
-        final NpcModel npcModel = new NpcModel(id, name, title, DEFAULT_DISPLAY_ID, instance_type.getType(), level);
+        final NpcModel npcModel = new NpcModel(id, name, DEFAULT_DISPLAY_ID, instance_type.getType(), level);
 
 
 
