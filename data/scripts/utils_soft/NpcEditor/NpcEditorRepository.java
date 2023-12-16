@@ -1,37 +1,21 @@
 package utils_soft.NpcEditor;
 
-import l2open.config.ConfigValue;
 import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
-import l2open.extensions.scripts.Scripts;
-import l2open.gameserver.cache.InfoCache;
-import l2open.gameserver.instancemanager.CatacombSpawnManager;
-import l2open.gameserver.model.L2DropData;
-import l2open.gameserver.model.L2MinionData;
 import l2open.gameserver.model.L2Skill;
-import l2open.gameserver.model.base.ClassId;
 import l2open.gameserver.model.instances.L2NpcInstance;
-import l2open.gameserver.tables.NpcTable;
-import l2open.gameserver.tables.SkillTable;
 import l2open.gameserver.templates.L2NpcTemplate;
-import l2open.gameserver.xml.ItemTemplates;
-import l2open.util.DropList;
-import l2open.util.Log;
-import utils_soft.NpcEditor.models.DropItem;
-import utils_soft.NpcEditor.models.NpcElementModel;
-import utils_soft.NpcEditor.models.NpcModel;
-import utils_soft.NpcEditor.models.SpawnModel;
+import utils_soft.common.DatabaseResurce.schemes.DropListTable;
+import utils_soft.common.DatabaseResurce.schemes.NpcElementTable;
+import utils_soft.common.DatabaseResurce.schemes.NpcModel;
+import utils_soft.common.DatabaseResurce.schemes.SpawnListTable;
 
-import java.io.File;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import static l2open.gameserver.tables.NpcTable.*;
 
 public class NpcEditorRepository {
     protected static Logger _log = Logger.getLogger(NpcEditorRepository.class.getName());
@@ -41,7 +25,7 @@ public class NpcEditorRepository {
     public static void updateNpcStat(NpcModel npcModel, String stat){
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
-        String query = "UPDATE npc SET " + stat + " = " + npcModel.getStatsSet().getString(stat) + " WHERE id = ?";
+        String query = "UPDATE npc SET " + stat + " = " + npcModel.getRace() + " WHERE id = ?";
 
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
@@ -56,19 +40,19 @@ public class NpcEditorRepository {
     }
 
 
-    public static NpcElementModel getNpcElement(int npcId){
+    public static NpcElementTable getNpcElement(int npcId){
         ResultSet rs = null;
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
         String query = "SELECT * FROM npc_element WHERE id = ?";
-        NpcElementModel npcElementModel = null;
+        NpcElementTable npcElementModel = null;
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
             statement.setInt(1, npcId);
             rs = statement.executeQuery();
             if (rs.next()) {
-                npcElementModel = new NpcElementModel(rs);
+                npcElementModel = new NpcElementTable();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -90,7 +74,7 @@ public class NpcEditorRepository {
             statement.setInt(1, npcId);
             rs = statement.executeQuery();
             if (rs.next()) {
-                npcModel = new NpcModel(rs);
+                npcModel = new NpcModel();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -113,7 +97,7 @@ public class NpcEditorRepository {
             statement.setInt(1, offset);
             rs = statement.executeQuery();
             while (rs.next()) {
-                NpcModel npcModel = new NpcModel(rs);
+                NpcModel npcModel = new NpcModel();
                 list.add(npcModel);
             }
         } catch (Exception e) {
@@ -157,7 +141,7 @@ public class NpcEditorRepository {
             statement = con.prepareStatement(query);
             rs = statement.executeQuery();
             while (rs.next()) {
-                NpcModel npcModel = new NpcModel(rs);
+                NpcModel npcModel = new NpcModel();
                 list.add(npcModel);
             }
         } catch (Exception e) {
@@ -215,19 +199,19 @@ public class NpcEditorRepository {
         }
     }
 
-    public static List<DropItem> getDropList(int npcId) {
+    public static List<DropListTable> getDropList(int npcId) {
         ResultSet rs = null;
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
         String query = "SELECT * FROM droplist WHERE mobid=?";
-        List<DropItem> list = new ArrayList<>();
+        List<DropListTable> list = new ArrayList<>();
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
             statement.setInt(1, npcId);
             rs = statement.executeQuery();
             while (rs.next()) {
-                DropItem dropItem = new DropItem(rs);
+                DropListTable dropItem = new DropListTable();
                 list.add(dropItem);
             }
         } catch (Exception e) {
@@ -300,10 +284,10 @@ public class NpcEditorRepository {
         }
     }
 
-    public static void updateElements(NpcElementModel model, String stat) {
+    public static void updateElements(NpcElementTable model, String stat) {
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
-        String query = "UPDATE npc_element SET " + stat + " = " + model.getStatsSet().getString(stat) + " WHERE id = ?";
+        String query = "UPDATE npc_element SET " + stat + " = " + model.getDarkRes() + " WHERE id = ?";
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
@@ -369,11 +353,11 @@ public class NpcEditorRepository {
         }
     }
 
-    public static SpawnModel getSpawn(L2NpcInstance npc) {
+    public static SpawnListTable getSpawn(L2NpcInstance npc) {
         ResultSet rs = null;
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
-        SpawnModel spawnModel = null;
+        SpawnListTable spawnModel = null;
         String query = "SELECT * FROM spawnlist WHERE npc_templateid=? AND locx=? AND locy=? AND locz=?";
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
@@ -384,7 +368,7 @@ public class NpcEditorRepository {
             statement.setInt(4, npc.getSpawnedLoc().z);
             rs = statement.executeQuery();
             if (rs.next()) {
-                spawnModel = new SpawnModel(rs);
+                spawnModel = new SpawnListTable();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -394,7 +378,7 @@ public class NpcEditorRepository {
         return spawnModel;
     }
 
-    public static void updateLocation(SpawnModel spawnModel, SpawnModel newSpawnModel) {
+    public static void updateLocation(SpawnListTable spawnModel, SpawnListTable newSpawnModel) {
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
         String query = "UPDATE npc SET locx = ?, locy = ?, locz = ?, heading = ?, respawn_delay = ?, respawn_delay_rnd = ?, periodOfDay = ? WHERE npc_templateid=? AND locx=? AND locy=? AND locz=?";

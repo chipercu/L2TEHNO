@@ -10,7 +10,7 @@ public class DropItem extends Functions implements ScriptFile
 {
 	public void onLoad()
 	{
-		_log.info("Loaded Service: DropItem");
+		_log.info("Loaded Service: DropListTable");
 	}
 
 	public void onReload()

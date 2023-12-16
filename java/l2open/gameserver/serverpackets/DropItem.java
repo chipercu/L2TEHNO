@@ -26,7 +26,7 @@ public class DropItem extends L2GameServerPacket
 	private long long_count;
 
 	/**
-	 * Constructor<?> of the DropItem server packet
+	 * Constructor<?> of the DropListTable server packet
 	 * @param item : L2ItemInstance designating the item
 	 * @param playerId : int designating the player ID who dropped the item
 	 */

@@ -2,7 +2,7 @@ package utils_soft.NpcEditor;
 
 import utils_soft.NpcEditor.enums.AI_TYPE;
 import utils_soft.NpcEditor.enums.INSTANCE_TYPE;
-import utils_soft.NpcEditor.models.NpcModel;
+import utils_soft.common.DatabaseResurce.schemes.NpcModel;
 
 public class NpcBuilder {
 

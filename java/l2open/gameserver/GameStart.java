@@ -136,10 +136,10 @@ public class GameStart extends GameServer {
                         _skills.put(name.substring(7), sch);
                         _player.put(obj_id, _skills);
                     } catch (NullPointerException npe) {
-                        _log.info("Remove (" + name + ") Scheme in Community Buffer because is null");
+                        _log.info("Remove (" + name + ") Table in Community Buffer because is null");
                         npe.printStackTrace();
                     } catch (NumberFormatException nfe) {
-                        _log.info("Remove (" + name + ") Scheme in Community Buffer because is null");
+                        _log.info("Remove (" + name + ") Table in Community Buffer because is null");
                         nfe.printStackTrace();
                     }
                 }

@@ -1222,7 +1222,7 @@ public abstract class Inventory
 		L2ItemInstance item = getItemByObjectId(objectId);
 		if(item == null)
 		{
-			_log.warning("DropItem: item objectId: " + objectId + " does not exist in inventory");
+			_log.warning("DropListTable: item objectId: " + objectId + " does not exist in inventory");
 			//Thread.dumpStack();
 			return null;
 		}
@@ -1234,7 +1234,7 @@ public abstract class Inventory
 		L2ItemInstance item = getItemByObjectId(objectId);
 		if(item == null)
 		{
-			_log.warning("DropItem: item objectId: " + objectId + " does not exist in inventory");
+			_log.warning("DropListTable: item objectId: " + objectId + " does not exist in inventory");
 			//Thread.dumpStack();
 			return null;
 		}
@@ -1275,13 +1275,13 @@ public abstract class Inventory
 
 		if(count <= 0)
 		{
-			_log.warning("DropItem: count <= 0 owner:" + getOwner().getName());
+			_log.warning("DropListTable: count <= 0 owner:" + getOwner().getName());
 			return null;
 		}
 
 		if(oldItem == null)
 		{
-			_log.warning("DropItem: item id does not exist in inventory");
+			_log.warning("DropListTable: item id does not exist in inventory");
 			return null;
 		}
 

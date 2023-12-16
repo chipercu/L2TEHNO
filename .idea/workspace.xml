@@ -4,19 +4,256 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/Temp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/models/DropItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/models/NpcElementModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/models/NpcModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/Model.java" afterDir="false" />
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="NpcEditorComponent - ref.4">
+      <change afterPath="$PROJECT_DIR$/AccountsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ai_paramsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/DataBaseTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/Filter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/Resource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/ResourceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/SchemesGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/anotations/DefValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/anotations/Field.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/anotations/Table.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/NpcModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AccountsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AiParamsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AllyDataTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AuctionBidTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AuctionTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AutoChatTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AutoChatTextTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BannedIpsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BansTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BbsLotteryTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BbsNewsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BonusTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CastleManorProcureTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CastleManorProductionTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CastleTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharTemplatesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterBlocklistTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterBookmarksTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterEffectsSaveTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterFriendsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterHennasTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterMacrosesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterMailTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterPassTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterPostFriendsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterPremiumItemsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterQuestsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterRecipebookTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSecondaryPasswordTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterShortcutsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSkillsSaveTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSkillsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSubclassesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterVariablesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterVoteTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharactersTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanhallTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunitybuffTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ComteleportTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CouplesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CraftcountTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DoorsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DropcountTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DroplistTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FishTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FishrewardTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FortsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ForumsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/GamesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HellboundTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HennaTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HeroesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemallTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/KillcountTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LocationsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LockTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LvlupgainTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MailTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MapregionTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MinionsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcskillsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetitionsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PostsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RangTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RecipesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RecitemsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ReferralsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SpawnlistTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TopicTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/VoteTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/AccountsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Ai_paramsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Ally_dataTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/AuctionTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Auction_bidTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Auto_chatTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Auto_chat_textTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Banned_ipsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/BansTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Bbs_lotteryTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Bbs_newsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/BonusTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/CastleTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Castle_manor_procureTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Castle_manor_productionTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Char_templatesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_blocklistTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_bookmarksTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_effects_saveTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_friendsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_hennasTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_macrosesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_mailTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_passTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_post_friendsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_premium_itemsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_questsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_recipebookTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_secondary_passwordTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_shortcutsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_skillsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_skills_saveTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_subclassesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_variablesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Character_voteTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/CharactersTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Clan_dataTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Clan_noticesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Clan_privsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Clan_skillsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Clan_subpledgesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Clan_warsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/ClanhallTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Class_listTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Community_perform_buffsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Community_perform_buffs_configTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Community_perform_buffs_schemeTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Community_perform_buffs_schemebuffTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Community_skillsaveTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/CommunitybuffTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/ComteleportTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/CouplesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/CraftcountTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Cursed_weaponsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Ddos_ipsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Dominion_rewardsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/DoorsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/DropcountTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/DroplistTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Epic_boss_spawnTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/FishTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/FishrewardTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/FortsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/ForumsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Four_sepulchers_spawnlistTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/GamesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Global_tasksTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/HellboundTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/HennaTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Henna_treesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/HeroesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Heroes_diaryTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Hwid_lockTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Item_attributesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Item_auctionTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Item_auction_bidTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Item_mallTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/ItemallTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/ItemsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Items_delayedTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/KillcountTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Lastimperialtomb_spawnlistTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Level_rewardsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/LocationsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/LockTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/LvlupgainTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/MailTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Mail_attachmentsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/MapregionTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Merchant_areas_listTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/MinionsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Multisell_logTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/NpcTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Npc_bossTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Npc_elementTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/NpcskillsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Olympiad_historyTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Olympiad_noblesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Pet_dataTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/PetitionsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/PetsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Pets_skillsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/PostsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Raidboss_pointsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Raidboss_statusTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Random_spawnTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Random_spawn_locTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/RangTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/RecipesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/RecitemsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/ReferralsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Residence_functionsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Server_variablesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Seven_signsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Seven_signs_festivalTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Seven_signs_statusTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Siege_clansTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Siege_doorTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Siege_doorupgradeTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Siege_guardsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Siege_territory_membersTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Skill_learnTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Skill_spellbooksTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Skill_treesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/SkillsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/SpawnlistTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Summon_effects_saveTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Summon_saveTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Territory_spawnlistTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/TopicTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Tournament_class_listTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Tournament_tableTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Tournament_teamsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/Tournament_variablesTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatedTables/VoteTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/antlr-2.7.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/dom4j-1.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/geronimo-jta_1.1_spec-1.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hibernate-commons-annotations-5.0.1.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hibernate-core-5.0.12.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hibernate-entitymanager-5.0.12.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hibernate-envers-5.0.12.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hibernate-java8-5.0.12.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hibernate-jpamodelgen-5.0.12.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jandex-2.0.0.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javassist-3.18.1-GA.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jboss-logging-3.3.0.Final.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/DropItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/services/DropItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/services/DropItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/SpawnModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/models/SpawnModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/models/DropItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/DropListTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/models/NpcElementModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/NpcElementTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/models/NpcModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/models/SpawnModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/SpawnListTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/Model.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/GameStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/GameStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/model/items/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/model/items/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/serverpackets/DropItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/serverpackets/DropItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +264,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -38,6 +277,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -63,13 +305,13 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;aspect.path.notification.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/High Five/L2TEHNO/data/scripts/communityboard/html/buffer&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/High Five/L2TEHNO/lib/hibernate-jpamodelgen-5.0.12.Final.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
@@ -102,7 +344,7 @@
       <recent name="communityboard" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.L2LoginStart">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="GameStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="db" value="jdbc:mysql://localhost/l2tehno?useUnicode=true&amp;characterEncoding=UTF-8" />
@@ -155,6 +397,11 @@
       </method>
     </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="db" value="jdbc:mysql://localhost/l2tehno?useUnicode=true&amp;characterEncoding=UTF-8" />
+        <env name="DEVELOP" value="true" />
+        <env name="PASSWORD" value="68464846l2" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="l2open.Test" />
       <module name="L2TEHNO1" />
       <extension name="coverage">
@@ -175,10 +422,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.L2LoginStart" />
-        <item itemvalue="Application.GameStart" />
-        <item itemvalue="Application.Server" />
         <item itemvalue="Application.Test" />
+        <item itemvalue="Application.GameStart" />
+        <item itemvalue="Application.L2LoginStart" />
+        <item itemvalue="Application.Server" />
         <item itemvalue="Application.GameStart" />
       </list>
     </recent_temporary>
@@ -279,6 +526,7 @@
       <workItem from="1701443448554" duration="19855000" />
       <workItem from="1702364928020" duration="8754000" />
       <workItem from="1702621270365" duration="22350000" />
+      <workItem from="1702713731612" duration="33495000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1692529102326</created>
@@ -495,15 +743,11 @@
           <line>39</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/java/l2open/Test.java</url>
-          <line>140</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="utils_soft.common.DatabaseResurce.schemes.NpcElementTable" memberName="STAT_SET" />
         <PinnedItemInfo parentTag="java.util.HashMap$Node" memberName="key" />
         <PinnedItemInfo parentTag="communityboard.CommunityBoardBufferPerform$SkillInfo" memberName="enchantType" />
         <PinnedItemInfo parentTag="communityboard.CommunityBoardBufferPerform$SkillInfo" memberName="enchantsForChange" />

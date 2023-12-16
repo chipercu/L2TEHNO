@@ -1,6 +1,18 @@
 package l2open;
 
+import l2open.config.ConfigSystem;
 import l2open.config.ConfigValue;
+import l2open.database.DatabaseUtils;
+import l2open.database.FiltredPreparedStatement;
+import l2open.database.L2DatabaseFactory;
+import l2open.database.ThreadConnection;
+import l2open.gameserver.templates.StatsSet;
+import utils_soft.common.DatabaseResurce.Filter;
+import utils_soft.common.DatabaseResurce.Resource;
+import utils_soft.common.DatabaseResurce.ResourceProvider;
+import utils_soft.common.DatabaseResurce.SchemesGenerator;
+import utils_soft.common.DatabaseResurce.schemes.NpcElementTable;
+import utils_soft.common.DatabaseResurce.schemes.generate.CharactersTable;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
@@ -9,6 +21,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Base64;
@@ -18,8 +31,48 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Test {
-    public static void main(String[] args) throws Exception {
 
+
+    public static void main(String[] args) throws Exception {
+        ConfigSystem.load();
+        testDatabaseResource();
+//        DATABASE();
+//        SchemesGenerator.generate();
+    }
+
+
+    public static void DATABASE(){
+        ThreadConnection con = null;
+        FiltredPreparedStatement statement = null;
+        ResultSet rs = null;
+        try {
+            final String query = "SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'l2tehno'";
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement(query);
+            rs = statement.executeQuery();
+            while (rs.next()){
+                System.out.println(rs.getString("TABLE_NAME"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            DatabaseUtils.closeDatabaseCSR(con, statement, rs);
+        }
+    }
+
+    public static void testDatabaseResource(){
+        Resource<CharactersTable> npcElementTableResource = new ResourceProvider<>(CharactersTable.class);
+
+        final Filter filter = new Filter().WHERE(CharactersTable.ACCOUNT_NAME, "chipercu").AND(CharactersTable.SEX, 1);
+
+        final List<CharactersTable> all = npcElementTableResource.findList(filter);
+        for (CharactersTable character : all){
+            System.out.println(character.getCharName());
+        }
+
+    }
+
+    public static void testEncrypt() throws Exception {
         File file = new File("file.txt");
         StringBuilder stringBuilder = new StringBuilder();
 

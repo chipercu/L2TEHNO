@@ -7,12 +7,17 @@ import l2open.gameserver.model.*;
 import l2open.gameserver.model.instances.L2NpcInstance;
 import l2open.gameserver.tables.NpcTable;
 import l2open.gameserver.tables.SkillTable;
+import l2open.util.Rnd;
 import utils_soft.NpcEditor.enums.AI_TYPE;
 import utils_soft.NpcEditor.enums.INSTANCE_TYPE;
-import utils_soft.NpcEditor.models.DropItem;
-import utils_soft.NpcEditor.models.NpcModel;
-import utils_soft.NpcEditor.models.SpawnModel;
+import utils_soft.common.DatabaseResurce.Filter;
+import utils_soft.common.DatabaseResurce.Resource;
+import utils_soft.common.DatabaseResurce.schemes.DropListTable;
+import utils_soft.common.DatabaseResurce.schemes.NpcElementTable;
+import utils_soft.common.DatabaseResurce.schemes.NpcModel;
+import utils_soft.common.DatabaseResurce.schemes.SpawnListTable;
 import utils_soft.common.Component;
+import utils_soft.common.DatabaseResurce.ResourceProvider;
 
 import java.text.DecimalFormat;
 import java.util.Arrays;
@@ -30,7 +35,14 @@ public class NpcEditorComponent extends Component{
     private static final String window_titel = "Npc Editor";
     protected static Logger _log = Logger.getLogger(NpcEditorComponent.class.getName());
 
+    private final Resource<NpcElementTable> npcElementResource;
+
+
     public NpcEditorComponent() {
+        npcElementResource = new ResourceProvider<>(NpcElementTable.class);
+        final Filter filter = new Filter().WHERE(NpcElementTable.Id_COLUMN, "100");
+
+        final NpcElementTable npcElementTable = npcElementResource.find(filter);
     }
 
     public static void basePage(L2Player player,int npcId, Table table, String saveButton) {
@@ -65,11 +77,11 @@ public class NpcEditorComponent extends Component{
         }
         return skillsTable;
     }
-    public static Table dropTable(int npcId, List<DropItem> dropItems){
+    public static Table dropTable(int npcId, List<DropListTable> dropItems){
         final Table main = new Table(3, 1);
         final Table dropTable = new Table(dropItems.size(), 7).setParams(cellpadding(0));
         for (int i = 0; i < dropItems.size(); i++){
-            final DropItem dropItem = dropItems.get(i);
+            final DropListTable dropItem = dropItems.get(i);
             final float chance = dropItem.getChance() / 10000f;
             dropTable.row(i).col(0).setParams(width(40)).insert(new Img(dropItem.getIcon()));
             dropTable.row(i).col(1).setParams(width(80)).setParams(valign(CENTER), align(LEFT)).insert(formatItemName(dropItem.getName()));
@@ -109,14 +121,19 @@ public class NpcEditorComponent extends Component{
 
         int offset = page * 17;
 
-        if (filter.equals("npcname")){
-            npcList = NpcEditorRepository.getNpcListByLikeName(filterValue, offset);
-        }else if (filter.equals("npcid")){
-            npcList = NpcEditorRepository.getNpcListByLikeId(filterValue, offset);
-        }else if (filter.equals("npctype")){
-            npcList = NpcEditorRepository.getNpcListByLikeType(filterValue, offset);
-        }else {
-            npcList = NpcEditorRepository.getNpcList(offset);
+        switch (filter) {
+            case "npcname":
+                npcList = NpcEditorRepository.getNpcListByLikeName(filterValue, offset);
+                break;
+            case "npcid":
+                npcList = NpcEditorRepository.getNpcListByLikeId(filterValue, offset);
+                break;
+            case "npctype":
+                npcList = NpcEditorRepository.getNpcListByLikeType(filterValue, offset);
+                break;
+            default:
+                npcList = NpcEditorRepository.getNpcList(offset);
+                break;
         }
 
         final Table mainTable = new Table(2, 1);
@@ -253,10 +270,10 @@ public class NpcEditorComponent extends Component{
     public static void showDrop(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
         String DROPLIST = args[2];
-        final List<DropItem> dropItems = NpcEditorRepository.getDropList(npcId);
-        final List<DropItem> dropList = dropItems.stream().filter(dropItem -> !dropItem.isSpoil()).filter(dropItem -> !dropItem.isHerb()).collect(Collectors.toList());
-        final List<DropItem> spoilList = dropItems.stream().filter(DropItem::isSpoil).filter(dropItem -> !dropItem.isHerb()).collect(Collectors.toList());
-        final List<DropItem> herbs = dropItems.stream().filter(DropItem::isHerb).collect(Collectors.toList());
+        final List<DropListTable> dropItems = NpcEditorRepository.getDropList(npcId);
+        final List<DropListTable> dropList = dropItems.stream().filter(dropItem -> !dropItem.isSpoil()).filter(dropItem -> !dropItem.isHerb()).collect(Collectors.toList());
+        final List<DropListTable> spoilList = dropItems.stream().filter(DropListTable::isSpoil).filter(dropItem -> !dropItem.isHerb()).collect(Collectors.toList());
+        final List<DropListTable> herbs = dropItems.stream().filter(DropListTable::isHerb).collect(Collectors.toList());
 
         final Table buttons = new Table(1, 3);
         buttons.row(0).col(0).setParams(width(150), align(CENTER), valign(CENTER)).insert(new Button("DROP", actionCom(admin_npc_editor_drop, npcId + " DROP"), 100, 32));
@@ -287,6 +304,8 @@ public class NpcEditorComponent extends Component{
     }
     public static void showElements(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
+        final NpcElementTable npcElementModel = new NpcElementTable();
+        npcElementModel.setFireRes(Rnd.get(1, 100));
         final Table table = new Table(7, 2);
         basePage(player, npcId, table, new Button("Сохранить", actionCom(admin_npc_editor_save_base_elements, ""), 100, 20).build());
     }
@@ -336,7 +355,6 @@ public class NpcEditorComponent extends Component{
         String stat = args[2];
         String statValue = args[3];
         final NpcModel npcModel = NpcEditorRepository.getNpc(npcId);
-        npcModel.getStatsSet().set(stat, statValue);
         NpcEditorRepository.updateNpcStat(npcModel, stat);
         L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
 //        reload(npc);
@@ -347,7 +365,6 @@ public class NpcEditorComponent extends Component{
         String stat = args[2];
         String statValue = args[3];
         final NpcModel npcModel = NpcEditorRepository.getNpc(npcId);
-        npcModel.getStatsSet().set(stat, statValue);
         NpcEditorRepository.updateNpcStat(npcModel, stat);
         L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
 //        reload(npc);
@@ -406,19 +423,20 @@ public class NpcEditorComponent extends Component{
     }
     public static void saveElements(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
+        String stat = args[2];
         L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
 
-        NpcEditorRepository.updateElements(npc);
+        NpcElementTable npcElementModel = new NpcElementTable();
+
+        NpcEditorRepository.updateElements(npcElementModel, stat);
 //        reload(npc);
         showElements(player, args);
     }
     public static void saveLocation(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
         L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
-        SpawnModel oldSpawn = NpcEditorRepository.getSpawn(npc);
-        SpawnModel newSpawn = NpcEditorRepository.getSpawn(npc);
-
-        newSpawn.setStat("asd", 1);
+        SpawnListTable oldSpawn = NpcEditorRepository.getSpawn(npc);
+        SpawnListTable newSpawn = NpcEditorRepository.getSpawn(npc);
 
         NpcEditorRepository.updateLocation(oldSpawn, newSpawn);
 //        reload(npc);
