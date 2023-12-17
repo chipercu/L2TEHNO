@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class SchemesGenerator {
 
@@ -22,7 +23,7 @@ public class SchemesGenerator {
     public static void generate(){
         final List<String> schemesNames = getSchemesNames();
         for (String scheme: schemesNames){
-            String className = convertToCamelCase(scheme) + "Table";
+            String className = convertToCamelCase(scheme) + "Resource";
             final List<Column> columns = getColumns(scheme);
             StringBuilder classBuilder = new StringBuilder("package utils_soft.common.DatabaseResurce.schemes.generate;\n\n");
             classBuilder.append("import utils_soft.common.DatabaseResurce.anotations.DefValue;\n");
@@ -32,11 +33,21 @@ public class SchemesGenerator {
             classBuilder.append("import static utils_soft.common.DatabaseResurce.schemes.generate.").append(className).append(".*;\n\n");
             classBuilder.append("@Table(\n");
             classBuilder.append("        name = \"").append(scheme).append("\",\n");
+
+            final List<String> collect = columns.stream().filter(column -> column.isPrimaryKey).map(column -> convertToSnakeCase(column.name)).collect(Collectors.toList());
+            final String join = String.join(",", collect);
+            classBuilder.append("        primary_key = {").append(join).append("},\n");
             classBuilder.append("        fields = {\n");
 
             for (Column column: columns){
                 String name = convertToSnakeCase(column.name);
-                classBuilder.append("                @Field(name = ").append(name).append("),\n");
+                String type = getType(column.columnType);
+                classBuilder.append("                @Field(name = ").append(name)
+                        .append(" , data_type = \"").append(column.dataType).append("\"");
+                if (column.defaultValue != null){
+                    classBuilder.append(" , defValue = @DefValue(").append(type).append(" = ").append(column.defaultValue).append(")");
+                }
+                classBuilder.append("),\n");
             }
             classBuilder.append("        }\n");
             classBuilder.append(")\n");
@@ -97,8 +108,10 @@ public class SchemesGenerator {
             type = "Double";
         } else if (lowerCase.startsWith("bigint")) {
             type = "Long";
-        } else if (lowerCase.startsWith("enum") && lowerCase.contains("true") && lowerCase.contains("false")) {
+        } else if (lowerCase.startsWith("enum") && lowerCase.contains("true") || lowerCase.contains("false")) {
             type = "Boolean";
+        }else {
+            type = "String";
         }
         return type;
     }
@@ -117,8 +130,9 @@ public class SchemesGenerator {
                 final String name = rs.getString("COLUMN_NAME");
                 final String data_type = rs.getString("DATA_TYPE");
                 final String column_type = rs.getString("COLUMN_TYPE");
-                final String aDefault = rs.getString("COLUMN_DEFAULT");
-                names.add(new Column(name, data_type, aDefault, column_type));
+                final Object aDefault = rs.getString("COLUMN_DEFAULT");
+                final boolean isPrimaryKey = rs.getString("COLUMN_KEY") != null && rs.getString("COLUMN_KEY").equalsIgnoreCase("PRI");
+                names.add(new Column(name, data_type, aDefault, column_type, isPrimaryKey));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -192,15 +206,39 @@ public class SchemesGenerator {
     public static class Column{
         String name;
         String dataType;
-        String defaultValue;
+        Object defaultValue;
         String columnType;
+        boolean isPrimaryKey;
 
-        public Column(String name, String dataType, String defaultValue, String columnType) {
+        public Column(String name, String dataType, Object defaultValue, String columnType, boolean isPrimaryKey) {
             this.name = name;
-            this.dataType = dataType;
-            this.defaultValue = defaultValue;
             this.columnType = columnType;
+            this.dataType = dataType;
+            this.defaultValue = getDefaultValue(defaultValue);
+            this.isPrimaryKey = isPrimaryKey;
+
         }
+
+        private Object getDefaultValue(Object defaultValue){
+            if (defaultValue == null){
+                return null;
+            }
+            if (defaultValue.toString().equalsIgnoreCase("null")) {
+                return null;
+            }
+
+            final String type = getType(columnType);
+            if (type.equals("String")){
+                defaultValue = defaultValue.toString().replaceAll("'", "\"");
+                if (defaultValue.toString().isEmpty()){
+                    defaultValue = "";
+                }
+            } else if (type.equals("Boolean")) {
+                return Boolean.parseBoolean(defaultValue.toString());
+            }
+            return defaultValue;
+        }
+
     }
 
 

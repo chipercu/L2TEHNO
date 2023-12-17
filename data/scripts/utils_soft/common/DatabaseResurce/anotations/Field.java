@@ -11,5 +11,6 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Retention(RUNTIME)
 public @interface Field {
     String name();
+    String data_type();
     DefValue defValue() default @DefValue;
 }

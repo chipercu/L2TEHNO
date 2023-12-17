@@ -9,6 +9,7 @@ public class Filter {
     private String WHERE = "";
     private final List<String> AND = new ArrayList<>();
     private String ORDER_BY = "";
+    private String LIKE = "";
     private String LIMIT = "";
     private String OFFSET = "";
 
@@ -25,9 +26,13 @@ public class Filter {
         return this;
     }
 
-    public Filter ORDER_BY(Field column){
-        final String name = column.getName();
-        ORDER_BY = " ORDER BY " + name;
+    public Filter LIKE(String column, Object findValue){
+        LIKE = " WHERE `" + column + "` LIKE '%" + findValue + "%'";
+        return this;
+    }
+
+    public Filter ORDER_BY(String column){
+        ORDER_BY = " ORDER BY " + column;
         return this;
     }
 
@@ -44,6 +49,7 @@ public class Filter {
     public String build(){
         StringBuilder result = new StringBuilder();
         result.append(WHERE);
+        result.append(LIKE);
         for (String and: AND){
             result.append(and);
         }

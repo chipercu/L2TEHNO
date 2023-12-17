@@ -6,13 +6,6 @@ import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
-import l2open.gameserver.templates.StatsSet;
-import utils_soft.common.DatabaseResurce.Filter;
-import utils_soft.common.DatabaseResurce.Resource;
-import utils_soft.common.DatabaseResurce.ResourceProvider;
-import utils_soft.common.DatabaseResurce.SchemesGenerator;
-import utils_soft.common.DatabaseResurce.schemes.NpcElementTable;
-import utils_soft.common.DatabaseResurce.schemes.generate.CharactersTable;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
@@ -60,15 +53,9 @@ public class Test {
         }
     }
 
-    public static void testDatabaseResource(){
-        Resource<CharactersTable> npcElementTableResource = new ResourceProvider<>(CharactersTable.class);
+    public static void testDatabaseResource() {
 
-        final Filter filter = new Filter().WHERE(CharactersTable.ACCOUNT_NAME, "chipercu").AND(CharactersTable.SEX, 1);
 
-        final List<CharactersTable> all = npcElementTableResource.findList(filter);
-        for (CharactersTable character : all){
-            System.out.println(character.getCharName());
-        }
 
     }
 
