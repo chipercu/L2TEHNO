@@ -5,15 +5,16 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CommunitySkillsaveResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "community_skillsave",
         primary_key = {SCHAMEID},
         fields = {
-                @Field(name = CHAR_ID , data_type = "int"),
-                @Field(name = SCHAMEID , data_type = "int"),
-                @Field(name = NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = SKILLS , data_type = "varchar" , defValue = @DefValue(String = "")),
+                @Field(name = CHAR_ID , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = SCHAMEID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = NAME , type = VARCHAR , type_size = 250 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = SKILLS , type = VARCHAR , type_size = 1000 , nullable = true , defValue = @DefValue(String = "")),
         }
 )
 public class CommunitySkillsaveResource extends DataBaseTable<CommunitySkillsaveResource> {
@@ -26,6 +27,12 @@ public class CommunitySkillsaveResource extends DataBaseTable<CommunitySkillsave
     public CommunitySkillsaveResource() {
 super(CommunitySkillsaveResource.class);
 }
+
+
+    public CommunitySkillsaveResource(String schameid){
+        super(CommunitySkillsaveResource.class);
+        getSTAT_SET().set(SCHAMEID, schameid);
+    }
 
     public Integer getCharId() {
         return get(CHAR_ID, Integer.class);

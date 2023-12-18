@@ -5,19 +5,20 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.RandomSpawnResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "random_spawn",
         primary_key = {GROUP_ID},
         fields = {
-                @Field(name = GROUP_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NPC_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = COUNT , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = INITIAL_DELAY , data_type = "bigint" , defValue = @DefValue(Long = -1)),
-                @Field(name = RESPAWN_DELAY , data_type = "bigint" , defValue = @DefValue(Long = -1)),
-                @Field(name = DESPAWN_DELAY , data_type = "bigint" , defValue = @DefValue(Long = -1)),
-                @Field(name = BROADCAST_SPAWN , data_type = "enum" , defValue = @DefValue(Boolean = false)),
-                @Field(name = RANDOM_SPAWN , data_type = "enum" , defValue = @DefValue(Boolean = false)),
+                @Field(name = GROUP_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NPC_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = COUNT , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = INITIAL_DELAY , type = BIGINT , nullable = false , defValue = @DefValue(Long = -1)),
+                @Field(name = RESPAWN_DELAY , type = BIGINT , nullable = false , defValue = @DefValue(Long = -1)),
+                @Field(name = DESPAWN_DELAY , type = BIGINT , nullable = false , defValue = @DefValue(Long = -1)),
+                @Field(name = BROADCAST_SPAWN , type = ENUM , type_size = 5 , nullable = false , defValue = @DefValue(Boolean = false)),
+                @Field(name = RANDOM_SPAWN , type = ENUM , type_size = 5 , nullable = false , defValue = @DefValue(Boolean = false)),
         }
 )
 public class RandomSpawnResource extends DataBaseTable<RandomSpawnResource> {
@@ -34,6 +35,12 @@ public class RandomSpawnResource extends DataBaseTable<RandomSpawnResource> {
     public RandomSpawnResource() {
 super(RandomSpawnResource.class);
 }
+
+
+    public RandomSpawnResource(String groupId){
+        super(RandomSpawnResource.class);
+        getSTAT_SET().set(GROUP_ID, groupId);
+    }
 
     public Integer getGroupId() {
         return get(GROUP_ID, Integer.class);

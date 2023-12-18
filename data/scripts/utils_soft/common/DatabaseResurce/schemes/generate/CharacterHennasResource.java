@@ -5,15 +5,16 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CharacterHennasResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "character_hennas",
         primary_key = {},
         fields = {
-                @Field(name = CHAR_OBJ_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SYMBOL_ID , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SLOT , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CLASS_INDEX , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
+                @Field(name = CHAR_OBJ_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SYMBOL_ID , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SLOT , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLASS_INDEX , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class CharacterHennasResource extends DataBaseTable<CharacterHennasResource> {

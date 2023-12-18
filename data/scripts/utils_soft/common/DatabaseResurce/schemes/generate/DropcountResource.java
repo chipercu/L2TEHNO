@@ -5,14 +5,15 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.DropcountResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "dropcount",
         primary_key = {CHAR_ID,ITEM_ID},
         fields = {
-                @Field(name = CHAR_ID , data_type = "int"),
-                @Field(name = ITEM_ID , data_type = "smallint"),
-                @Field(name = COUNT , data_type = "bigint" , defValue = @DefValue(Long = 0)),
+                @Field(name = CHAR_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = ITEM_ID , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = COUNT , type = BIGINT , nullable = true , defValue = @DefValue(Long = 0)),
         }
 )
 public class DropcountResource extends DataBaseTable<DropcountResource> {
@@ -24,6 +25,13 @@ public class DropcountResource extends DataBaseTable<DropcountResource> {
     public DropcountResource() {
 super(DropcountResource.class);
 }
+
+
+    public DropcountResource(String char_id,String item_id){
+        super(DropcountResource.class);
+        getSTAT_SET().set(CHAR_ID, char_id);
+        getSTAT_SET().set(ITEM_ID, item_id);
+    }
 
     public Integer getCharId() {
         return get(CHAR_ID, Integer.class);

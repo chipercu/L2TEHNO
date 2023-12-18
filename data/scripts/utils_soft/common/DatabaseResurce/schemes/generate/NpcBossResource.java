@@ -5,21 +5,22 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.NpcBossResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "npc_boss",
         primary_key = {NPC_DB_NAME},
         fields = {
-                @Field(name = NPC_DB_NAME , data_type = "varchar"),
-                @Field(name = ALIVE , data_type = "smallint" , defValue = @DefValue(Integer = 1)),
-                @Field(name = HP , data_type = "int"),
-                @Field(name = MP , data_type = "int"),
-                @Field(name = POS_X , data_type = "int"),
-                @Field(name = POS_Y , data_type = "int"),
-                @Field(name = POS_Z , data_type = "int"),
-                @Field(name = TIME_LOW , data_type = "bigint"),
-                @Field(name = TIME_HIGH , data_type = "bigint"),
-                @Field(name = I0 , data_type = "int"),
+                @Field(name = NPC_DB_NAME , type = VARCHAR , type_size = 50 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = ALIVE , type = SMALLINT , nullable = true , defValue = @DefValue(Integer = 1)),
+                @Field(name = HP , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = MP , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = POS_X , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = POS_Y , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = POS_Z , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = TIME_LOW , type = BIGINT , nullable = false , defValue = @DefValue(Long = null)),
+                @Field(name = TIME_HIGH , type = BIGINT , nullable = false , defValue = @DefValue(Long = null)),
+                @Field(name = I0 , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
         }
 )
 public class NpcBossResource extends DataBaseTable<NpcBossResource> {
@@ -38,6 +39,12 @@ public class NpcBossResource extends DataBaseTable<NpcBossResource> {
     public NpcBossResource() {
 super(NpcBossResource.class);
 }
+
+
+    public NpcBossResource(String npc_db_name){
+        super(NpcBossResource.class);
+        getSTAT_SET().set(NPC_DB_NAME, npc_db_name);
+    }
 
     public String getNpcDbName() {
         return get(NPC_DB_NAME, String.class);

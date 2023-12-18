@@ -5,14 +5,15 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.MinionsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "minions",
         primary_key = {BOSS_ID,MINION_ID},
         fields = {
-                @Field(name = BOSS_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MINION_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = AMOUNT , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = BOSS_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MINION_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = AMOUNT , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class MinionsResource extends DataBaseTable<MinionsResource> {
@@ -24,6 +25,13 @@ public class MinionsResource extends DataBaseTable<MinionsResource> {
     public MinionsResource() {
 super(MinionsResource.class);
 }
+
+
+    public MinionsResource(String boss_id,String minion_id){
+        super(MinionsResource.class);
+        getSTAT_SET().set(BOSS_ID, boss_id);
+        getSTAT_SET().set(MINION_ID, minion_id);
+    }
 
     public Integer getBossId() {
         return get(BOSS_ID, Integer.class);

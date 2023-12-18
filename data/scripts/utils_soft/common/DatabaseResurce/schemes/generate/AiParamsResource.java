@@ -5,15 +5,16 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.AiParamsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "ai_params",
         primary_key = {NPC_ID,PARAM},
         fields = {
-                @Field(name = NPC_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NAME , data_type = "varchar"),
-                @Field(name = PARAM , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = VALUE , data_type = "varchar" , defValue = @DefValue(String = "")),
+                @Field(name = NPC_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NAME , type = VARCHAR , type_size = 45 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = PARAM , type = VARCHAR , type_size = 25 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = VALUE , type = VARCHAR , type_size = 255 , nullable = false , defValue = @DefValue(String = "")),
         }
 )
 public class AiParamsResource extends DataBaseTable<AiParamsResource> {
@@ -26,6 +27,13 @@ public class AiParamsResource extends DataBaseTable<AiParamsResource> {
     public AiParamsResource() {
 super(AiParamsResource.class);
 }
+
+
+    public AiParamsResource(String npc_id,String param){
+        super(AiParamsResource.class);
+        getSTAT_SET().set(NPC_ID, npc_id);
+        getSTAT_SET().set(PARAM, param);
+    }
 
     public Integer getNpcId() {
         return get(NPC_ID, Integer.class);

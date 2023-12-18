@@ -5,18 +5,19 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CastleManorProcureResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "castle_manor_procure",
         primary_key = {CASTLE_ID,CROP_ID,PERIOD},
         fields = {
-                @Field(name = CASTLE_ID , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CROP_ID , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CAN_BUY , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = START_BUY , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = PRICE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = REWARD_TYPE , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PERIOD , data_type = "int" , defValue = @DefValue(Integer = 1)),
+                @Field(name = CASTLE_ID , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CROP_ID , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CAN_BUY , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = START_BUY , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = PRICE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = REWARD_TYPE , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PERIOD , type = INT , nullable = false , defValue = @DefValue(Integer = 1)),
         }
 )
 public class CastleManorProcureResource extends DataBaseTable<CastleManorProcureResource> {
@@ -32,6 +33,14 @@ public class CastleManorProcureResource extends DataBaseTable<CastleManorProcure
     public CastleManorProcureResource() {
 super(CastleManorProcureResource.class);
 }
+
+
+    public CastleManorProcureResource(String castle_id,String crop_id,String period){
+        super(CastleManorProcureResource.class);
+        getSTAT_SET().set(CASTLE_ID, castle_id);
+        getSTAT_SET().set(CROP_ID, crop_id);
+        getSTAT_SET().set(PERIOD, period);
+    }
 
     public Integer getCastleId() {
         return get(CASTLE_ID, Integer.class);

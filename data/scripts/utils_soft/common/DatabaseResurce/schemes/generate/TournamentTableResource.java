@@ -5,16 +5,17 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.TournamentTableResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "tournament_table",
         primary_key = {},
         fields = {
-                @Field(name = CATEGORY , data_type = "int"),
-                @Field(name = TEAM1ID , data_type = "int"),
-                @Field(name = TEAM1NAME , data_type = "varchar"),
-                @Field(name = TEAM2ID , data_type = "int"),
-                @Field(name = TEAM2NAME , data_type = "varchar"),
+                @Field(name = CATEGORY , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = TEAM1ID , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = TEAM1NAME , type = VARCHAR , type_size = 255 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = TEAM2ID , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = TEAM2NAME , type = VARCHAR , type_size = 255 , nullable = true , defValue = @DefValue(String = "")),
         }
 )
 public class TournamentTableResource extends DataBaseTable<TournamentTableResource> {

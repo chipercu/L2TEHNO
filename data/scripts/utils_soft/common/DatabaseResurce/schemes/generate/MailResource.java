@@ -5,23 +5,24 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.MailResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "mail",
         primary_key = {MESSAGE_ID},
         fields = {
-                @Field(name = MESSAGE_ID , data_type = "int"),
-                @Field(name = SENDER , data_type = "int"),
-                @Field(name = RECEIVER , data_type = "int"),
-                @Field(name = EXPIRE , data_type = "timestamp" , defValue = @DefValue(String = "1980-01-01 00:00:00")),
-                @Field(name = TOPIC , data_type = "varchar"),
-                @Field(name = BODY , data_type = "text"),
-                @Field(name = ATTACHMENTS , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NEEDS_PAYMENT , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PRICE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = SYSTEM , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = UNREAD , data_type = "tinyint" , defValue = @DefValue(Integer = 1)),
-                @Field(name = HIDE_SENDER , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
+                @Field(name = MESSAGE_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = SENDER , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = RECEIVER , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = EXPIRE , type = TIMESTAMP , nullable = false , defValue = @DefValue(String = "1980-01-01 00:00:00")),
+                @Field(name = TOPIC , type = VARCHAR , type_size = 30 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = BODY , type = TEXT , type_size = 65535 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = ATTACHMENTS , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NEEDS_PAYMENT , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PRICE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = SYSTEM , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = UNREAD , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = HIDE_SENDER , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class MailResource extends DataBaseTable<MailResource> {
@@ -42,6 +43,12 @@ public class MailResource extends DataBaseTable<MailResource> {
     public MailResource() {
 super(MailResource.class);
 }
+
+
+    public MailResource(String messageId){
+        super(MailResource.class);
+        getSTAT_SET().set(MESSAGE_ID, messageId);
+    }
 
     public Integer getMessageId() {
         return get(MESSAGE_ID, Integer.class);

@@ -5,17 +5,18 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ComteleportResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "comteleport",
         primary_key = {TP_ID},
         fields = {
-                @Field(name = TP_ID , data_type = "int"),
-                @Field(name = NAME , data_type = "varchar"),
-                @Field(name = CHAR_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X_POS , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = Y_POS , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = Z_POS , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = TP_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = NAME , type = VARCHAR , type_size = 45 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = CHAR_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X_POS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = Y_POS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = Z_POS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class ComteleportResource extends DataBaseTable<ComteleportResource> {
@@ -30,6 +31,12 @@ public class ComteleportResource extends DataBaseTable<ComteleportResource> {
     public ComteleportResource() {
 super(ComteleportResource.class);
 }
+
+
+    public ComteleportResource(String TpId){
+        super(ComteleportResource.class);
+        getSTAT_SET().set(TP_ID, TpId);
+    }
 
     public Integer getTpId() {
         return get(TP_ID, Integer.class);

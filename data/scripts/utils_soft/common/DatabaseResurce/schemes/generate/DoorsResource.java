@@ -5,36 +5,37 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.DoorsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "doors",
         primary_key = {ID},
         fields = {
-                @Field(name = ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = PTS_NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = HP , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PDEF , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MDEF , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = UNLOCKABLE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = KEY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LEVEL , data_type = "int" , defValue = @DefValue(Integer = 1)),
-                @Field(name = SHOW_HP , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = POSX , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = POSY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = POSZ , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = AX , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = AY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = BX , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = BY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CX , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DX , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MINZ , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MAXZ , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SIEGE_WEAPON , data_type = "enum" , defValue = @DefValue(Boolean = false)),
-                @Field(name = GEODATA , data_type = "enum" , defValue = @DefValue(Boolean = false)),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NAME , type = VARCHAR , type_size = 128 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = PTS_NAME , type = VARCHAR , type_size = 28 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = HP , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PDEF , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MDEF , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = UNLOCKABLE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = KEY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LEVEL , type = INT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = SHOW_HP , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = POSX , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = POSY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = POSZ , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = AX , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = AY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = BX , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = BY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CX , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DX , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MINZ , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MAXZ , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SIEGE_WEAPON , type = ENUM , type_size = 5 , nullable = false , defValue = @DefValue(Boolean = false)),
+                @Field(name = GEODATA , type = ENUM , type_size = 5 , nullable = false , defValue = @DefValue(Boolean = false)),
         }
 )
 public class DoorsResource extends DataBaseTable<DoorsResource> {
@@ -68,6 +69,12 @@ public class DoorsResource extends DataBaseTable<DoorsResource> {
     public DoorsResource() {
 super(DoorsResource.class);
 }
+
+
+    public DoorsResource(String id){
+        super(DoorsResource.class);
+        getSTAT_SET().set(ID, id);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

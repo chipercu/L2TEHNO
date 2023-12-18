@@ -5,17 +5,18 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CastleManorProductionResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "castle_manor_production",
         primary_key = {CASTLE_ID,SEED_ID,PERIOD},
         fields = {
-                @Field(name = CASTLE_ID , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SEED_ID , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CAN_PRODUCE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = START_PRODUCE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = SEED_PRICE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = PERIOD , data_type = "int" , defValue = @DefValue(Integer = 1)),
+                @Field(name = CASTLE_ID , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SEED_ID , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CAN_PRODUCE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = START_PRODUCE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = SEED_PRICE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = PERIOD , type = INT , nullable = false , defValue = @DefValue(Integer = 1)),
         }
 )
 public class CastleManorProductionResource extends DataBaseTable<CastleManorProductionResource> {
@@ -30,6 +31,14 @@ public class CastleManorProductionResource extends DataBaseTable<CastleManorProd
     public CastleManorProductionResource() {
 super(CastleManorProductionResource.class);
 }
+
+
+    public CastleManorProductionResource(String castle_id,String seed_id,String period){
+        super(CastleManorProductionResource.class);
+        getSTAT_SET().set(CASTLE_ID, castle_id);
+        getSTAT_SET().set(SEED_ID, seed_id);
+        getSTAT_SET().set(PERIOD, period);
+    }
 
     public Integer getCastleId() {
         return get(CASTLE_ID, Integer.class);

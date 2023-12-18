@@ -5,26 +5,27 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ClanhallResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "clanhall",
         primary_key = {ID,NAME},
         fields = {
-                @Field(name = ID , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = OWNER_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LEASE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DESC , data_type = "text"),
-                @Field(name = LOCATION , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = PAID_UNTIL , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = GRADE , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PRICE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = DEPOSIT , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = IN_DEBT , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SKILLS , data_type = "varchar" , defValue = @DefValue(String = "0;0")),
-                @Field(name = SIEGE_DATE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SIEGE_DAY_OF_WEEK , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SIEGE_HOUR_OF_DAY , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
+                @Field(name = ID , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NAME , type = VARCHAR , type_size = 40 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = OWNER_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LEASE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DESC , type = TEXT , type_size = 65535 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = LOCATION , type = VARCHAR , type_size = 15 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = PAID_UNTIL , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = GRADE , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PRICE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = DEPOSIT , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = IN_DEBT , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SKILLS , type = VARCHAR , type_size = 32 , nullable = false , defValue = @DefValue(String = "0;0")),
+                @Field(name = SIEGE_DATE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SIEGE_DAY_OF_WEEK , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SIEGE_HOUR_OF_DAY , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class ClanhallResource extends DataBaseTable<ClanhallResource> {
@@ -48,6 +49,13 @@ public class ClanhallResource extends DataBaseTable<ClanhallResource> {
     public ClanhallResource() {
 super(ClanhallResource.class);
 }
+
+
+    public ClanhallResource(String id,String name){
+        super(ClanhallResource.class);
+        getSTAT_SET().set(ID, id);
+        getSTAT_SET().set(NAME, name);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

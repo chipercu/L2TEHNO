@@ -5,16 +5,17 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.HeroesResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "heroes",
         primary_key = {CHAR_ID},
         fields = {
-                @Field(name = CHAR_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = COUNT , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PLAYED , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ACTIVE , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MESSAGE , data_type = "varchar" , defValue = @DefValue(String = "")),
+                @Field(name = CHAR_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = COUNT , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PLAYED , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ACTIVE , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MESSAGE , type = VARCHAR , type_size = 300 , nullable = false , defValue = @DefValue(String = "")),
         }
 )
 public class HeroesResource extends DataBaseTable<HeroesResource> {
@@ -28,6 +29,12 @@ public class HeroesResource extends DataBaseTable<HeroesResource> {
     public HeroesResource() {
 super(HeroesResource.class);
 }
+
+
+    public HeroesResource(String char_id){
+        super(HeroesResource.class);
+        getSTAT_SET().set(CHAR_ID, char_id);
+    }
 
     public Integer getCharId() {
         return get(CHAR_ID, Integer.class);

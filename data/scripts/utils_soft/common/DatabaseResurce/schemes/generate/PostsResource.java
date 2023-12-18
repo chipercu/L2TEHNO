@@ -5,18 +5,19 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.PostsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "posts",
         primary_key = {},
         fields = {
-                @Field(name = POST_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = POST_OWNER_NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = POST_OWNERID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = POST_DATE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = POST_TOPIC_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = POST_FORUM_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = POST_TXT , data_type = "text"),
+                @Field(name = POST_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = POST_OWNER_NAME , type = VARCHAR , type_size = 255 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = POST_OWNERID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = POST_DATE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = POST_TOPIC_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = POST_FORUM_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = POST_TXT , type = TEXT , type_size = 65535 , nullable = false , defValue = @DefValue(String = "")),
         }
 )
 public class PostsResource extends DataBaseTable<PostsResource> {

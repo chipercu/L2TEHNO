@@ -5,15 +5,16 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CharacterQuestsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "character_quests",
         primary_key = {CHAR_ID,NAME,VAR},
         fields = {
-                @Field(name = CHAR_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = VAR , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = VALUE , data_type = "varchar"),
+                @Field(name = CHAR_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NAME , type = VARCHAR , type_size = 40 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = VAR , type = VARCHAR , type_size = 20 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = VALUE , type = VARCHAR , type_size = 255 , nullable = true , defValue = @DefValue(String = "")),
         }
 )
 public class CharacterQuestsResource extends DataBaseTable<CharacterQuestsResource> {
@@ -26,6 +27,14 @@ public class CharacterQuestsResource extends DataBaseTable<CharacterQuestsResour
     public CharacterQuestsResource() {
 super(CharacterQuestsResource.class);
 }
+
+
+    public CharacterQuestsResource(String char_id,String name,String var){
+        super(CharacterQuestsResource.class);
+        getSTAT_SET().set(CHAR_ID, char_id);
+        getSTAT_SET().set(NAME, name);
+        getSTAT_SET().set(VAR, var);
+    }
 
     public Integer getCharId() {
         return get(CHAR_ID, Integer.class);

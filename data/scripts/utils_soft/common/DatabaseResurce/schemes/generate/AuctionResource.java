@@ -5,19 +5,20 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.AuctionResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "auction",
         primary_key = {},
         fields = {
-                @Field(name = ID , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SELLER_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SELLER_NAME , data_type = "varchar" , defValue = @DefValue(String = "NPC")),
-                @Field(name = SELLER_CLAN_NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = ITEM_NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = STARTING_BID , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = CURRENT_BID , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = END_DATE , data_type = "decimal" , defValue = @DefValue(Double = 0)),
+                @Field(name = ID , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SELLER_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SELLER_NAME , type = VARCHAR , type_size = 50 , nullable = false , defValue = @DefValue(String = "NPC")),
+                @Field(name = SELLER_CLAN_NAME , type = VARCHAR , type_size = 50 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = ITEM_NAME , type = VARCHAR , type_size = 40 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = STARTING_BID , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = CURRENT_BID , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = END_DATE , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0)),
         }
 )
 public class AuctionResource extends DataBaseTable<AuctionResource> {

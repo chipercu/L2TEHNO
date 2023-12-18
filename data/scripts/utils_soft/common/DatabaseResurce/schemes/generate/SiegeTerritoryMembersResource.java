@@ -5,14 +5,15 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.SiegeTerritoryMembersResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "siege_territory_members",
         primary_key = {OBJ__ID},
         fields = {
-                @Field(name = OBJ__ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SIDE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = TYPE , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = OBJ__ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SIDE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = TYPE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class SiegeTerritoryMembersResource extends DataBaseTable<SiegeTerritoryMembersResource> {
@@ -24,6 +25,12 @@ public class SiegeTerritoryMembersResource extends DataBaseTable<SiegeTerritoryM
     public SiegeTerritoryMembersResource() {
 super(SiegeTerritoryMembersResource.class);
 }
+
+
+    public SiegeTerritoryMembersResource(String obj_Id){
+        super(SiegeTerritoryMembersResource.class);
+        getSTAT_SET().set(OBJ__ID, obj_Id);
+    }
 
     public Integer getObjId() {
         return get(OBJ__ID, Integer.class);

@@ -5,21 +5,22 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CharacterMailResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "character_mail",
         primary_key = {LETTER_ID},
         fields = {
-                @Field(name = OBJ_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LETTER_ID , data_type = "int"),
-                @Field(name = SENDER_ID , data_type = "int"),
-                @Field(name = LOCATION , data_type = "varchar"),
-                @Field(name = RECIPIENT_NAMES , data_type = "varchar"),
-                @Field(name = SUBJECT , data_type = "text"),
-                @Field(name = MESSAGE , data_type = "text"),
-                @Field(name = SEND_DATE , data_type = "decimal"),
-                @Field(name = DELETE_DATE , data_type = "decimal"),
-                @Field(name = UNREAD , data_type = "varchar"),
+                @Field(name = OBJ_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LETTER_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = SENDER_ID , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = LOCATION , type = VARCHAR , type_size = 45 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = RECIPIENT_NAMES , type = VARCHAR , type_size = 45 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = SUBJECT , type = TEXT , type_size = 65535 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = MESSAGE , type = TEXT , type_size = 65535 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = SEND_DATE , type = DECIMAL , nullable = true , defValue = @DefValue(Double = NULL)),
+                @Field(name = DELETE_DATE , type = DECIMAL , nullable = true , defValue = @DefValue(Double = NULL)),
+                @Field(name = UNREAD , type = VARCHAR , type_size = 10 , nullable = true , defValue = @DefValue(String = "")),
         }
 )
 public class CharacterMailResource extends DataBaseTable<CharacterMailResource> {
@@ -38,6 +39,12 @@ public class CharacterMailResource extends DataBaseTable<CharacterMailResource> 
     public CharacterMailResource() {
 super(CharacterMailResource.class);
 }
+
+
+    public CharacterMailResource(String letterId){
+        super(CharacterMailResource.class);
+        getSTAT_SET().set(LETTER_ID, letterId);
+    }
 
     public Integer getObjId() {
         return get(OBJ_ID, Integer.class);

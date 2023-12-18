@@ -5,21 +5,22 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.FortsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "forts",
         primary_key = {ID},
         fields = {
-                @Field(name = ID , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NAME , data_type = "varchar"),
-                @Field(name = LAST_SIEGE_DATE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SIEGE_DATE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SKILLS , data_type = "varchar" , defValue = @DefValue(String = "0;0")),
-                @Field(name = OWN_DATE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = STATE , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CASTLE_ID , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MERCENARY_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MERCENARY_LOC , data_type = "varchar"),
+                @Field(name = ID , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NAME , type = VARCHAR , type_size = 45 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = LAST_SIEGE_DATE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SIEGE_DATE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SKILLS , type = VARCHAR , type_size = 32 , nullable = false , defValue = @DefValue(String = "0;0")),
+                @Field(name = OWN_DATE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = STATE , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CASTLE_ID , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MERCENARY_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MERCENARY_LOC , type = VARCHAR , type_size = 45 , nullable = false , defValue = @DefValue(String = "")),
         }
 )
 public class FortsResource extends DataBaseTable<FortsResource> {
@@ -38,6 +39,12 @@ public class FortsResource extends DataBaseTable<FortsResource> {
     public FortsResource() {
 super(FortsResource.class);
 }
+
+
+    public FortsResource(String id){
+        super(FortsResource.class);
+        getSTAT_SET().set(ID, id);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

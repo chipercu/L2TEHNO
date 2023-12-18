@@ -5,14 +5,15 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ClanNoticesResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "clan_notices",
         primary_key = {CLAN_ID},
         fields = {
-                @Field(name = CLAN_ID , data_type = "int"),
-                @Field(name = NOTICE , data_type = "varchar"),
-                @Field(name = ENABLED , data_type = "varchar"),
+                @Field(name = CLAN_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = NOTICE , type = VARCHAR , type_size = 512 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = ENABLED , type = VARCHAR , type_size = 5 , nullable = false , defValue = @DefValue(String = "")),
         }
 )
 public class ClanNoticesResource extends DataBaseTable<ClanNoticesResource> {
@@ -24,6 +25,12 @@ public class ClanNoticesResource extends DataBaseTable<ClanNoticesResource> {
     public ClanNoticesResource() {
 super(ClanNoticesResource.class);
 }
+
+
+    public ClanNoticesResource(String clanID){
+        super(ClanNoticesResource.class);
+        getSTAT_SET().set(CLAN_ID, clanID);
+    }
 
     public Integer getClanID() {
         return get(CLAN_ID, Integer.class);

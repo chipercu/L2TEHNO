@@ -5,15 +5,16 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.RecitemsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "recitems",
         primary_key = {RID,ITEM},
         fields = {
-                @Field(name = RID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ITEM , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = Q , data_type = "int"),
-                @Field(name = HAS_RECIPE , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = RID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ITEM , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = Q , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = HAS_RECIPE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class RecitemsResource extends DataBaseTable<RecitemsResource> {
@@ -26,6 +27,13 @@ public class RecitemsResource extends DataBaseTable<RecitemsResource> {
     public RecitemsResource() {
 super(RecitemsResource.class);
 }
+
+
+    public RecitemsResource(String rid,String item){
+        super(RecitemsResource.class);
+        getSTAT_SET().set(RID, rid);
+        getSTAT_SET().set(ITEM, item);
+    }
 
     public Integer getRid() {
         return get(RID, Integer.class);

@@ -5,14 +5,15 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.BbsLotteryResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "bbs_lottery",
         primary_key = {},
         fields = {
-                @Field(name = COUNT , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = TYPE , data_type = "varchar" , defValue = @DefValue(String = "0")),
-                @Field(name = NAME , data_type = "varchar" , defValue = @DefValue(String = "0")),
+                @Field(name = COUNT , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = TYPE , type = VARCHAR , type_size = 86 , nullable = false , defValue = @DefValue(String = "0")),
+                @Field(name = NAME , type = VARCHAR , type_size = 86 , nullable = false , defValue = @DefValue(String = "0")),
         }
 )
 public class BbsLotteryResource extends DataBaseTable<BbsLotteryResource> {

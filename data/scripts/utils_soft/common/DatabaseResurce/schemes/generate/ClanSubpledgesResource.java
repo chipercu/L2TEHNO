@@ -5,15 +5,16 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ClanSubpledgesResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "clan_subpledges",
         primary_key = {CLAN_ID,TYPE},
         fields = {
-                @Field(name = CLAN_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = TYPE , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = LEADER_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLAN_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = TYPE , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NAME , type = VARCHAR , type_size = 45 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = LEADER_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class ClanSubpledgesResource extends DataBaseTable<ClanSubpledgesResource> {
@@ -26,6 +27,13 @@ public class ClanSubpledgesResource extends DataBaseTable<ClanSubpledgesResource
     public ClanSubpledgesResource() {
 super(ClanSubpledgesResource.class);
 }
+
+
+    public ClanSubpledgesResource(String clan_id,String type){
+        super(ClanSubpledgesResource.class);
+        getSTAT_SET().set(CLAN_ID, clan_id);
+        getSTAT_SET().set(TYPE, type);
+    }
 
     public Integer getClanId() {
         return get(CLAN_ID, Integer.class);

@@ -5,19 +5,20 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.BansResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "bans",
         primary_key = {},
         fields = {
-                @Field(name = ACCOUNT_NAME , data_type = "varchar"),
-                @Field(name = OBJ__ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = BANED , data_type = "varchar"),
-                @Field(name = UNBAN , data_type = "varchar"),
-                @Field(name = REASON , data_type = "varchar"),
-                @Field(name = G_M , data_type = "varchar"),
-                @Field(name = ENDBAN , data_type = "int"),
-                @Field(name = KARMA , data_type = "int"),
+                @Field(name = ACCOUNT_NAME , type = VARCHAR , type_size = 45 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = OBJ__ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = BANED , type = VARCHAR , type_size = 20 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = UNBAN , type = VARCHAR , type_size = 20 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = REASON , type = VARCHAR , type_size = 200 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = G_M , type = VARCHAR , type_size = 35 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = ENDBAN , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = KARMA , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
         }
 )
 public class BansResource extends DataBaseTable<BansResource> {

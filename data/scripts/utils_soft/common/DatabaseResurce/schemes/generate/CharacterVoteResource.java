@@ -5,25 +5,26 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CharacterVoteResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "character_vote",
         primary_key = {},
         fields = {
-                @Field(name = TYPE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = VOTE_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DATE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NICK , data_type = "varchar" , defValue = @DefValue(String = "''''")),
-                @Field(name = MULTIPLER , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HAS_REWARD , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = TYPE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = VOTE_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = _DATE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NICK , type = VARCHAR , type_size = 255 , nullable = false , defValue = @DefValue(String = """""")),
+                @Field(name = MULTIPLER , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HAS_REWARD , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class CharacterVoteResource extends DataBaseTable<CharacterVoteResource> {
 
     public static final String TYPE = "type";
     public static final String VOTE_ID = "vote_id";
-    public static final String DATE = "date";
+    public static final String _DATE = "date";
     public static final String ID = "id";
     public static final String NICK = "nick";
     public static final String MULTIPLER = "multipler";
@@ -40,7 +41,7 @@ super(CharacterVoteResource.class);
         return get(VOTE_ID, Integer.class);
     }
     public Long getDate() {
-        return get(DATE, Long.class);
+        return get(_DATE, Long.class);
     }
     public Integer getId() {
         return get(ID, Integer.class);
@@ -62,7 +63,7 @@ super(CharacterVoteResource.class);
         set(VOTE_ID, value);
     }
     public void setDate(Long value) {
-        set(DATE, value);
+        set(_DATE, value);
     }
     public void setId(Integer value) {
         set(ID, value);

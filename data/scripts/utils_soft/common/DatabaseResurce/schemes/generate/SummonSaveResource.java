@@ -5,20 +5,21 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.SummonSaveResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "summon_save",
         primary_key = {CHAR_OBJ_ID,NPC_ID},
         fields = {
-                @Field(name = CHAR_OBJ_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CLASS_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ITEM_OBJ_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NPC_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LIFE_TIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ITEM_CONSUME_ID_IN_TIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ITEM_CONSUME_COUNT_IN_TIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ITEM_CONSUME_DELAY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = EXP_PENALTY , data_type = "double" , defValue = @DefValue(Double = 0)),
+                @Field(name = CHAR_OBJ_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLASS_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ITEM_OBJ_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NPC_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LIFE_TIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ITEM_CONSUME_ID_IN_TIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ITEM_CONSUME_COUNT_IN_TIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ITEM_CONSUME_DELAY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = EXP_PENALTY , type = DOUBLE , nullable = false , defValue = @DefValue(Double = 0)),
         }
 )
 public class SummonSaveResource extends DataBaseTable<SummonSaveResource> {
@@ -36,6 +37,13 @@ public class SummonSaveResource extends DataBaseTable<SummonSaveResource> {
     public SummonSaveResource() {
 super(SummonSaveResource.class);
 }
+
+
+    public SummonSaveResource(String char_obj_id,String npc_id){
+        super(SummonSaveResource.class);
+        getSTAT_SET().set(CHAR_OBJ_ID, char_obj_id);
+        getSTAT_SET().set(NPC_ID, npc_id);
+    }
 
     public Integer getCharObjId() {
         return get(CHAR_OBJ_ID, Integer.class);

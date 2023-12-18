@@ -5,19 +5,20 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CharacterBookmarksResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "character_bookmarks",
         primary_key = {CHAR__ID,IDX},
         fields = {
-                @Field(name = CHAR__ID , data_type = "int"),
-                @Field(name = IDX , data_type = "tinyint"),
-                @Field(name = NAME , data_type = "varchar"),
-                @Field(name = ACRONYM , data_type = "varchar"),
-                @Field(name = ICON , data_type = "tinyint"),
-                @Field(name = X , data_type = "int"),
-                @Field(name = Y , data_type = "int"),
-                @Field(name = Z , data_type = "int"),
+                @Field(name = CHAR__ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = IDX , type = TINYINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = NAME , type = VARCHAR , type_size = 32 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = ACRONYM , type = VARCHAR , type_size = 4 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = ICON , type = TINYINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = X , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = Y , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = Z , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
         }
 )
 public class CharacterBookmarksResource extends DataBaseTable<CharacterBookmarksResource> {
@@ -34,6 +35,13 @@ public class CharacterBookmarksResource extends DataBaseTable<CharacterBookmarks
     public CharacterBookmarksResource() {
 super(CharacterBookmarksResource.class);
 }
+
+
+    public CharacterBookmarksResource(String char_Id,String idx){
+        super(CharacterBookmarksResource.class);
+        getSTAT_SET().set(CHAR__ID, char_Id);
+        getSTAT_SET().set(IDX, idx);
+    }
 
     public Integer getCharId() {
         return get(CHAR__ID, Integer.class);

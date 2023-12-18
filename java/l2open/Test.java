@@ -6,6 +6,10 @@ import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
+import utils_soft.common.DatabaseResurce.Resource;
+import utils_soft.common.DatabaseResurce.ResourceProvider;
+import utils_soft.common.DatabaseResurce.SchemesGenerator;
+
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
@@ -22,15 +26,16 @@ import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+//import utils_soft.common.DatabaseResurce.schemes.generate.AccountsResource;
 
 public class Test {
 
 
     public static void main(String[] args) throws Exception {
         ConfigSystem.load();
-        testDatabaseResource();
+//        testDatabaseResource();
 //        DATABASE();
-//        SchemesGenerator.generate();
+        SchemesGenerator.generate();
     }
 
 
@@ -53,11 +58,17 @@ public class Test {
         }
     }
 
-    public static void testDatabaseResource() {
-
-
-
-    }
+//    public static void testDatabaseResource() {
+//
+//        Resource<AccountsResource> accountsResourceResource = new ResourceProvider<>(AccountsResource.class);
+//
+//        final List<AccountsResource> all = accountsResourceResource.findAll();
+//
+//        for (AccountsResource accountsResource: all){
+//            System.out.println(accountsResource.getLogin());
+//        }
+//
+//    }
 
     public static void testEncrypt() throws Exception {
         File file = new File("file.txt");

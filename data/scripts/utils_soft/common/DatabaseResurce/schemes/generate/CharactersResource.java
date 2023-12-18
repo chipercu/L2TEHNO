@@ -5,53 +5,54 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CharactersResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "characters",
         primary_key = {OBJ__ID},
         fields = {
-                @Field(name = ACCOUNT_NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = OBJ__ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CHAR_NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = FACE , data_type = "tinyint"),
-                @Field(name = HAIR_STYLE , data_type = "tinyint"),
-                @Field(name = HAIR_COLOR , data_type = "tinyint"),
-                @Field(name = SEX , data_type = "tinyint"),
-                @Field(name = HEADING , data_type = "mediumint"),
-                @Field(name = X , data_type = "mediumint"),
-                @Field(name = Y , data_type = "mediumint"),
-                @Field(name = Z , data_type = "mediumint"),
-                @Field(name = KARMA , data_type = "int"),
-                @Field(name = PVPKILLS , data_type = "int"),
-                @Field(name = PKKILLS , data_type = "int"),
-                @Field(name = CLANID , data_type = "int"),
-                @Field(name = CREATETIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DELETETIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = TITLE , data_type = "varchar"),
-                @Field(name = REC_HAVE , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = REC_LEFT , data_type = "tinyint" , defValue = @DefValue(Integer = 20)),
-                @Field(name = REC_TIMELEFT , data_type = "int" , defValue = @DefValue(Integer = 3600)),
-                @Field(name = ACCESSLEVEL , data_type = "tinyint"),
-                @Field(name = ONLINE , data_type = "tinyint"),
-                @Field(name = ONLINETIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LAST_ACCESS , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LEAVECLAN , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DELETECLAN , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NOCHANNEL , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PLEDGE_TYPE , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PLEDGE_RANK , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LVL_JOINED_ACADEMY , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = APPRENTICE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = KEY_BINDINGS , data_type = "varbinary"),
-                @Field(name = PC_BANG_POINTS , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = VITALITY , data_type = "smallint" , defValue = @DefValue(Integer = 10000)),
-                @Field(name = FAME , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = BOOKMARKS , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HUNT_BONUS , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HUNT_TIMELEFT , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = BOT , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LAST_HWID , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = FRACTION , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
+                @Field(name = ACCOUNT_NAME , type = VARCHAR , type_size = 45 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = OBJ__ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CHAR_NAME , type = VARCHAR , type_size = 35 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = FACE , type = TINYINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = HAIR_STYLE , type = TINYINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = HAIR_COLOR , type = TINYINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = SEX , type = TINYINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = HEADING , type = MEDIUMINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = X , type = MEDIUMINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = Y , type = MEDIUMINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = Z , type = MEDIUMINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = KARMA , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = PVPKILLS , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = PKKILLS , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = CLANID , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = CREATETIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DELETETIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = TITLE , type = VARCHAR , type_size = 16 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = REC_HAVE , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = REC_LEFT , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 20)),
+                @Field(name = REC_TIMELEFT , type = INT , nullable = false , defValue = @DefValue(Integer = 3600)),
+                @Field(name = ACCESSLEVEL , type = TINYINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = ONLINE , type = TINYINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = ONLINETIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LAST_ACCESS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LEAVECLAN , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DELETECLAN , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NOCHANNEL , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PLEDGE_TYPE , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PLEDGE_RANK , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LVL_JOINED_ACADEMY , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = APPRENTICE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = KEY_BINDINGS , type = VARBINARY , type_size = 8192 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = PC_BANG_POINTS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = VITALITY , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 10000)),
+                @Field(name = FAME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = BOOKMARKS , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HUNT_BONUS , type = SMALLINT , nullable = true , defValue = @DefValue(Integer = 0)),
+                @Field(name = HUNT_TIMELEFT , type = SMALLINT , nullable = true , defValue = @DefValue(Integer = 0)),
+                @Field(name = BOT , type = TINYINT , nullable = true , defValue = @DefValue(Integer = 0)),
+                @Field(name = LAST_HWID , type = VARCHAR , type_size = 50 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = FRACTION , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class CharactersResource extends DataBaseTable<CharactersResource> {
@@ -102,6 +103,12 @@ public class CharactersResource extends DataBaseTable<CharactersResource> {
     public CharactersResource() {
 super(CharactersResource.class);
 }
+
+
+    public CharactersResource(String obj_Id){
+        super(CharactersResource.class);
+        getSTAT_SET().set(OBJ__ID, obj_Id);
+    }
 
     public String getAccountName() {
         return get(ACCOUNT_NAME, String.class);

@@ -5,18 +5,19 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ForumsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "forums",
         primary_key = {FORUM_ID},
         fields = {
-                @Field(name = FORUM_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = FORUM_NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = FORUM_PARENT , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = FORUM_POST , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = FORUM_TYPE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = FORUM_PERM , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = FORUM_OWNER_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = FORUM_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = FORUM_NAME , type = VARCHAR , type_size = 255 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = FORUM_PARENT , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = FORUM_POST , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = FORUM_TYPE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = FORUM_PERM , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = FORUM_OWNER_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class ForumsResource extends DataBaseTable<ForumsResource> {
@@ -32,6 +33,12 @@ public class ForumsResource extends DataBaseTable<ForumsResource> {
     public ForumsResource() {
 super(ForumsResource.class);
 }
+
+
+    public ForumsResource(String forum_id){
+        super(ForumsResource.class);
+        getSTAT_SET().set(FORUM_ID, forum_id);
+    }
 
     public Integer getForumId() {
         return get(FORUM_ID, Integer.class);

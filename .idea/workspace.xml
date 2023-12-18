@@ -4,294 +4,150 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="feat: реализован ResourceProvider для работы с БД, сгенерированы таблицы БД">
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AccountsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AiParamsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AllyDataResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AuctionBidResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AuctionResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AutoChatResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AutoChatTextResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BannedIpsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BansResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BbsLotteryResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BbsNewsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BonusResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CastleManorProcureResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CastleManorProductionResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CastleResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharTemplatesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterBlocklistResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterBookmarksResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterEffectsSaveResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterFriendsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterHennasResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterMacrosesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterMailResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterPassResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterPostFriendsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterPremiumItemsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterQuestsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterRecipebookResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSecondaryPasswordResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterShortcutsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSkillsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSkillsSaveResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSubclassesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterVariablesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterVoteResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharactersResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanDataResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanNoticesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanPrivsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanSkillsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanSubpledgesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanWarsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanhallResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClassListResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunityPerformBuffsConfigResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunityPerformBuffsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunityPerformBuffsSchemeResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunityPerformBuffsSchemebuffResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunitySkillsaveResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunitybuffResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ComteleportResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CouplesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CraftcountResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CursedWeaponsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DdosIpsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DominionRewardsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DoorsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DropcountResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DroplistResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/EpicBossSpawnResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FishResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FishrewardResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FortsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ForumsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FourSepulchersSpawnlistResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/GamesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/GlobalTasksResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HellboundResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HennaResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HennaTreesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HeroesDiaryResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HeroesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HwidLockResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemAttributesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemAuctionBidResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemAuctionResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemMallResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemallResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemsDelayedResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/KillcountResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LastimperialtombSpawnlistResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LevelRewardsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LocationsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LockResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LvlupgainResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MailAttachmentsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MailResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MapregionResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MerchantAreasListResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MinionsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MultisellLogResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcBossResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcElementResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcskillsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/OlympiadHistoryResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/OlympiadNoblesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetDataResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetitionsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetsSkillsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PostsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RaidbossPointsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RaidbossStatusResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RandomSpawnLocResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RandomSpawnResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RangResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RecipesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RecitemsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ReferralsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ResidenceFunctionsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ServerVariablesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SevenSignsFestivalResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SevenSignsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SevenSignsStatusResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeClansResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeDoorResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeDoorupgradeResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeGuardsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeTerritoryMembersResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillLearnResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillSpellbooksResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillTreesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SpawnlistResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SummonEffectsSaveResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SummonSaveResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TerritorySpawnlistResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TopicResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentClassListResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentTableResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentTeamsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentVariablesResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/VoteResource.java" afterDir="false" />
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/anotations/DATA_TYPE.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/Temp.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/DataBaseTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/DataBaseTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/Filter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/Resource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/ResourceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/ResourceProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/SchemesGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/SchemesGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/anotations/DefValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/anotations/DefValue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/anotations/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/anotations/Field.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/anotations/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/anotations/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/DropListTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/NpcElementTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/NpcModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/SpawnListTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AccountsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AiParamsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AllyDataTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AuctionBidTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AuctionTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AutoChatTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AutoChatTextTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BannedIpsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BansTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BbsLotteryTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BbsNewsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BonusTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CastleManorProcureTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CastleManorProductionTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CastleTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharTemplatesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterBlocklistTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterBookmarksTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterEffectsSaveTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterFriendsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterHennasTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterMacrosesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterMailTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterPassTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterPostFriendsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterPremiumItemsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterQuestsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterRecipebookTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSecondaryPasswordTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterShortcutsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSkillsSaveTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSkillsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSubclassesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterVariablesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterVoteTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharactersTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanDataTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanNoticesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanPrivsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanSkillsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanSubpledgesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanWarsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanhallTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClassListTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunityPerformBuffsConfigTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunityPerformBuffsSchemeTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunityPerformBuffsSchemebuffTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunityPerformBuffsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunitySkillsaveTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunitybuffTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ComteleportTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CouplesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CraftcountTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CursedWeaponsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DdosIpsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DominionRewardsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DoorsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DropcountTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DroplistTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/EpicBossSpawnTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FishTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FishrewardTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FortsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ForumsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FourSepulchersSpawnlistTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/GamesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/GlobalTasksTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HellboundTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HennaTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HennaTreesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HeroesDiaryTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HeroesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HwidLockTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemAttributesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemAuctionBidTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemAuctionTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemMallTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemallTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemsDelayedTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/KillcountTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LastimperialtombSpawnlistTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LevelRewardsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LocationsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LockTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LvlupgainTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MailAttachmentsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MailTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MapregionTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MerchantAreasListTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MinionsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MultisellLogTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcBossTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcElementTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcskillsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/OlympiadHistoryTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/OlympiadNoblesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetDataTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetitionsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetsSkillsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PostsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RaidbossPointsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RaidbossStatusTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RandomSpawnLocTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RandomSpawnTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RangTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RecipesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RecitemsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ReferralsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ResidenceFunctionsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ServerVariablesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SevenSignsFestivalTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SevenSignsStatusTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SevenSignsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeClansTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeDoorTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeDoorupgradeTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeGuardsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeTerritoryMembersTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillLearnTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillSpellbooksTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillTreesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SpawnlistTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SummonEffectsSaveTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SummonSaveTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TerritorySpawnlistTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TopicTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentClassListTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentTableTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentTeamsTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentVariablesTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/VoteTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AccountsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AccountsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AiParamsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AiParamsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AllyDataResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AllyDataResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AuctionBidResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AuctionBidResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AuctionResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AuctionResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AutoChatResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AutoChatResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AutoChatTextResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/AutoChatTextResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BannedIpsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BannedIpsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BansResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BansResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BbsLotteryResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BbsLotteryResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BbsNewsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BbsNewsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BonusResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/BonusResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CastleManorProcureResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CastleManorProcureResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CastleManorProductionResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CastleManorProductionResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CastleResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CastleResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharTemplatesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharTemplatesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterBlocklistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterBlocklistResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterBookmarksResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterBookmarksResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterEffectsSaveResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterEffectsSaveResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterFriendsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterFriendsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterHennasResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterHennasResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterMacrosesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterMacrosesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterMailResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterMailResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterPassResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterPassResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterPostFriendsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterPostFriendsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterPremiumItemsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterPremiumItemsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterQuestsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterQuestsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterRecipebookResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterRecipebookResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSecondaryPasswordResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSecondaryPasswordResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterShortcutsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterShortcutsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSkillsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSkillsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSkillsSaveResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSkillsSaveResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSubclassesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterSubclassesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterVariablesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterVariablesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterVoteResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharacterVoteResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharactersResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CharactersResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanDataResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanDataResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanNoticesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanNoticesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanPrivsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanPrivsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanSkillsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanSkillsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanSubpledgesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanSubpledgesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanWarsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanWarsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanhallResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClanhallResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClassListResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ClassListResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunityPerformBuffsConfigResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunityPerformBuffsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunityPerformBuffsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunityPerformBuffsSchemeResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunityPerformBuffsSchemebuffResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunitySkillsaveResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunitySkillsaveResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunitybuffResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CommunitybuffResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ComteleportResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ComteleportResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CouplesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CouplesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CraftcountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CraftcountResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CursedWeaponsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/CursedWeaponsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DdosIpsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DdosIpsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DominionRewardsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DominionRewardsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DoorsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DoorsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DropcountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DropcountResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DroplistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/DroplistResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/EpicBossSpawnResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/EpicBossSpawnResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FishResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FishResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FishrewardResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FishrewardResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FortsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FortsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ForumsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ForumsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FourSepulchersSpawnlistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/FourSepulchersSpawnlistResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/GamesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/GamesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/GlobalTasksResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/GlobalTasksResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HellboundResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HellboundResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HennaResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HennaResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HennaTreesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HennaTreesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HeroesDiaryResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HeroesDiaryResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HeroesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HeroesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HwidLockResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/HwidLockResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemAttributesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemAttributesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemAuctionBidResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemAuctionBidResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemAuctionResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemAuctionResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemMallResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemMallResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemallResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemallResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemsDelayedResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemsDelayedResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ItemsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/KillcountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/KillcountResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LastimperialtombSpawnlistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LastimperialtombSpawnlistResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LevelRewardsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LevelRewardsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LocationsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LocationsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LockResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LockResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LvlupgainResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/LvlupgainResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MailAttachmentsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MailAttachmentsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MailResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MailResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MapregionResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MapregionResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MerchantAreasListResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MerchantAreasListResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MinionsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MinionsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MultisellLogResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/MultisellLogResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcBossResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcBossResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcElementResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcElementResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcskillsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/NpcskillsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/OlympiadHistoryResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/OlympiadHistoryResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/OlympiadNoblesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/OlympiadNoblesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetDataResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetDataResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetitionsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetitionsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetsSkillsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PetsSkillsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PostsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/PostsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RaidbossPointsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RaidbossPointsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RaidbossStatusResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RaidbossStatusResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RandomSpawnLocResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RandomSpawnLocResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RandomSpawnResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RandomSpawnResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RangResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RangResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RecipesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RecipesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RecitemsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/RecitemsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ReferralsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ReferralsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ResidenceFunctionsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ResidenceFunctionsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ServerVariablesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/ServerVariablesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SevenSignsFestivalResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SevenSignsFestivalResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SevenSignsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SevenSignsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SevenSignsStatusResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SevenSignsStatusResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeClansResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeClansResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeDoorResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeDoorResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeDoorupgradeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeDoorupgradeResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeGuardsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeGuardsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeTerritoryMembersResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SiegeTerritoryMembersResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillLearnResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillLearnResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillSpellbooksResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillSpellbooksResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillTreesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillTreesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SkillsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SpawnlistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SpawnlistResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SummonEffectsSaveResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SummonEffectsSaveResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SummonSaveResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/SummonSaveResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TerritorySpawnlistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TerritorySpawnlistResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TopicResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TopicResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentClassListResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentClassListResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentTableResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentTableResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentTeamsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentTeamsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentVariablesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/TournamentVariablesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/VoteResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/VoteResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/l2open/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -302,10 +158,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -383,7 +239,7 @@
       <recent name="communityboard" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GameStart">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="GameStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="db" value="jdbc:mysql://localhost/l2tehno?useUnicode=true&amp;characterEncoding=UTF-8" />
@@ -461,9 +317,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.GameStart" />
         <item itemvalue="Application.L2LoginStart" />
-        <item itemvalue="Application.Test" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.GameStart" />
       </list>

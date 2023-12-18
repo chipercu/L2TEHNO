@@ -5,13 +5,14 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ClanWarsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "clan_wars",
         primary_key = {},
         fields = {
-                @Field(name = CLAN1 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CLAN2 , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLAN1 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLAN2 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class ClanWarsResource extends DataBaseTable<ClanWarsResource> {

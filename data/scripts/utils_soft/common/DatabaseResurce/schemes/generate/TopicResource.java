@@ -5,19 +5,20 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.TopicResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "topic",
         primary_key = {},
         fields = {
-                @Field(name = TOPIC_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = TOPIC_FORUM_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = TOPIC_NAME , data_type = "varchar"),
-                @Field(name = TOPIC_DATE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = TOPIC_OWNERNAME , data_type = "varchar" , defValue = @DefValue(String = "0")),
-                @Field(name = TOPIC_OWNERID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = TOPIC_TYPE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = TOPIC_REPLY , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = TOPIC_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = TOPIC_FORUM_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = TOPIC_NAME , type = VARCHAR , type_size = 255 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = TOPIC_DATE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = TOPIC_OWNERNAME , type = VARCHAR , type_size = 255 , nullable = false , defValue = @DefValue(String = "0")),
+                @Field(name = TOPIC_OWNERID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = TOPIC_TYPE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = TOPIC_REPLY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class TopicResource extends DataBaseTable<TopicResource> {

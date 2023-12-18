@@ -5,18 +5,19 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.SkillTreesResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "skill_trees",
         primary_key = {CLASS_ID,SKILL_ID,LEVEL},
         fields = {
-                @Field(name = CLASS_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SKILL_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LEVEL , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = SP , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MIN_LEVEL , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = REP , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLASS_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SKILL_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LEVEL , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NAME , type = VARCHAR , type_size = 50 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = SP , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MIN_LEVEL , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = REP , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class SkillTreesResource extends DataBaseTable<SkillTreesResource> {
@@ -32,6 +33,14 @@ public class SkillTreesResource extends DataBaseTable<SkillTreesResource> {
     public SkillTreesResource() {
 super(SkillTreesResource.class);
 }
+
+
+    public SkillTreesResource(String class_id,String skill_id,String level){
+        super(SkillTreesResource.class);
+        getSTAT_SET().set(CLASS_ID, class_id);
+        getSTAT_SET().set(SKILL_ID, skill_id);
+        getSTAT_SET().set(LEVEL, level);
+    }
 
     public Integer getClassId() {
         return get(CLASS_ID, Integer.class);

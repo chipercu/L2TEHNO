@@ -5,16 +5,17 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.DominionRewardsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "dominion_rewards",
         primary_key = {ID,OBJECT_ID},
         fields = {
-                @Field(name = ID , data_type = "int"),
-                @Field(name = OBJECT_ID , data_type = "int"),
-                @Field(name = STATIC_BADGES , data_type = "int"),
-                @Field(name = KILL_REWARD , data_type = "int"),
-                @Field(name = ONLINE_REWARD , data_type = "int"),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = OBJECT_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = STATIC_BADGES , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = KILL_REWARD , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = ONLINE_REWARD , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
         }
 )
 public class DominionRewardsResource extends DataBaseTable<DominionRewardsResource> {
@@ -28,6 +29,13 @@ public class DominionRewardsResource extends DataBaseTable<DominionRewardsResour
     public DominionRewardsResource() {
 super(DominionRewardsResource.class);
 }
+
+
+    public DominionRewardsResource(String id,String object_id){
+        super(DominionRewardsResource.class);
+        getSTAT_SET().set(ID, id);
+        getSTAT_SET().set(OBJECT_ID, object_id);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

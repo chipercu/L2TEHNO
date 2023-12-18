@@ -5,6 +5,8 @@ import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
 import l2open.gameserver.templates.StatsSet;
+import org.apache.commons.lang.ArrayUtils;
+import org.omg.CosNaming.NamingContextPackage.NotEmpty;
 import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 
@@ -82,11 +84,43 @@ public abstract class DataBaseTable <T>{
         }
         return filter.build().isEmpty() ? new Filter().WHERE(field, getSTAT_SET().getObject(field)) : filter;
     }
+    private Filter FILTER() throws Exception {
+        final Table annotation = _class.getAnnotation(Table.class);
+        if (ArrayUtils.isEmpty(annotation.primary_key())){
+            throw new Exception("Scheme " + annotation.name() + " not available primaryKey");
+        }
+        final Filter filter = new Filter();
+        final List<String> primary_key = Arrays.stream(annotation.primary_key()).collect(Collectors.toList());
+        for (int i = 0; i < primary_key.size(); i++) {
+            if (i == 0) {
+                filter.WHERE(primary_key.get(i), getSTAT_SET().getObject(primary_key.get(i)));
+            } else {
+                filter.AND(primary_key.get(i), getSTAT_SET().getObject(primary_key.get(i)));
+            }
+        }
+        if (filter.build().isEmpty()){
+            throw new Exception("Warring! " + annotation.name() + " | empty filter");
+        }
+
+        return filter;
+    }
 
 
     public void update(String field, Object value){
         try {
             final String query = String.format(RESOURCE_PROVIDER.getUPDATE_QUERY(), RESOURCE_PROVIDER.getTABLE_NAME(), field, value, FILTER(field).build());
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement(query);
+            statement.execute();
+        } catch (Exception ignored) {
+        } finally {
+            DatabaseUtils.closeDatabaseCS(con, statement);
+        }
+    }
+
+    public void delete(){
+        try {
+            final String query = String.format(RESOURCE_PROVIDER.getDELETE_QUERY(), RESOURCE_PROVIDER.getTABLE_NAME(), FILTER().build());
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
             statement.execute();

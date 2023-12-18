@@ -5,18 +5,19 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.DroplistResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "droplist",
         primary_key = {},
         fields = {
-                @Field(name = MOB_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ITEM_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MIN , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = MAX , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = SWEEP , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CHANCE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CATEGORY , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
+                @Field(name = MOB_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ITEM_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MIN , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = MAX , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = SWEEP , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CHANCE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CATEGORY , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class DroplistResource extends DataBaseTable<DroplistResource> {

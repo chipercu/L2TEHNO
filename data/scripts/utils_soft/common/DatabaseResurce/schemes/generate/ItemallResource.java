@@ -5,19 +5,20 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ItemallResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "itemall",
         primary_key = {ID},
         fields = {
-                @Field(name = ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = REUSE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MAGIC_WEAPON , data_type = "smallint" , defValue = @DefValue(Integer = -1)),
-                @Field(name = IS_OLYMPIAD_CAN_USE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = IMMEDIATE_EFFECT , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = EX_IMMEDIATE_EFFECT , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DELAY_SHARE_GROUP , data_type = "int" , defValue = @DefValue(Integer = -1)),
-                @Field(name = IS_PREMIUM , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = REUSE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MAGIC_WEAPON , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = -1)),
+                @Field(name = IS_OLYMPIAD_CAN_USE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = IMMEDIATE_EFFECT , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = EX_IMMEDIATE_EFFECT , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DELAY_SHARE_GROUP , type = INT , nullable = false , defValue = @DefValue(Integer = -1)),
+                @Field(name = IS_PREMIUM , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class ItemallResource extends DataBaseTable<ItemallResource> {
@@ -34,6 +35,12 @@ public class ItemallResource extends DataBaseTable<ItemallResource> {
     public ItemallResource() {
 super(ItemallResource.class);
 }
+
+
+    public ItemallResource(String id){
+        super(ItemallResource.class);
+        getSTAT_SET().set(ID, id);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

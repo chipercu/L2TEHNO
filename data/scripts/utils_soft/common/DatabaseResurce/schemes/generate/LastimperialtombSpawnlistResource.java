@@ -5,18 +5,19 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.LastimperialtombSpawnlistResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "lastimperialtomb_spawnlist",
         primary_key = {NPC_TEMPLATEID,LOCX,LOCY,LOCZ},
         fields = {
-                @Field(name = COUNT , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NPC_TEMPLATEID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOCX , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOCY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOCZ , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HEADING , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = RESPAWN_DELAY , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = COUNT , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NPC_TEMPLATEID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOCX , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOCY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOCZ , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HEADING , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = RESPAWN_DELAY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class LastimperialtombSpawnlistResource extends DataBaseTable<LastimperialtombSpawnlistResource> {
@@ -32,6 +33,15 @@ public class LastimperialtombSpawnlistResource extends DataBaseTable<Lastimperia
     public LastimperialtombSpawnlistResource() {
 super(LastimperialtombSpawnlistResource.class);
 }
+
+
+    public LastimperialtombSpawnlistResource(String npc_templateid,String locx,String locy,String locz){
+        super(LastimperialtombSpawnlistResource.class);
+        getSTAT_SET().set(NPC_TEMPLATEID, npc_templateid);
+        getSTAT_SET().set(LOCX, locx);
+        getSTAT_SET().set(LOCY, locy);
+        getSTAT_SET().set(LOCZ, locz);
+    }
 
     public Integer getCount() {
         return get(COUNT, Integer.class);

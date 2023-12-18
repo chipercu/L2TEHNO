@@ -10,7 +10,24 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target({})
 @Retention(RUNTIME)
 public @interface Field {
+
+    /**
+     * Имя колонки таблицы
+     * Table column name
+     */
     String name();
-    String data_type();
+    DATA_TYPE type();
+    int type_size() default -1;
+    boolean nullable() default false;
     DefValue defValue() default @DefValue;
+    /**
+     *Тип данных в колонке
+     * Column data type
+     */
+
+
+
+//
+
+
 }

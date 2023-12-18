@@ -5,18 +5,19 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.LocationsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "locations",
         primary_key = {LOC_ID,LOC_X,LOC_Y},
         fields = {
-                @Field(name = LOC_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = LOC_X , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOC_Y , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOC_ZMIN , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOC_ZMAX , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = RADIUS , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOC_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NAME , type = VARCHAR , type_size = 50 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = LOC_X , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOC_Y , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOC_ZMIN , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOC_ZMAX , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = RADIUS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class LocationsResource extends DataBaseTable<LocationsResource> {
@@ -32,6 +33,14 @@ public class LocationsResource extends DataBaseTable<LocationsResource> {
     public LocationsResource() {
 super(LocationsResource.class);
 }
+
+
+    public LocationsResource(String loc_id,String loc_x,String loc_y){
+        super(LocationsResource.class);
+        getSTAT_SET().set(LOC_ID, loc_id);
+        getSTAT_SET().set(LOC_X, loc_x);
+        getSTAT_SET().set(LOC_Y, loc_y);
+    }
 
     public Integer getLocId() {
         return get(LOC_ID, Integer.class);

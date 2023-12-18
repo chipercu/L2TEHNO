@@ -5,19 +5,20 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CharacterEffectsSaveResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "character_effects_save",
         primary_key = {CHAR_OBJ_ID,SKILL_ID,CLASS_INDEX},
         fields = {
-                @Field(name = CHAR_OBJ_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SKILL_ID , data_type = "mediumint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SKILL_LEVEL , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = EFFECT_COUNT , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = EFFECT_CUR_TIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DURATION , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ORDER , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CLASS_INDEX , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
+                @Field(name = CHAR_OBJ_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SKILL_ID , type = MEDIUMINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SKILL_LEVEL , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = EFFECT_COUNT , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = EFFECT_CUR_TIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DURATION , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ORDER , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLASS_INDEX , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class CharacterEffectsSaveResource extends DataBaseTable<CharacterEffectsSaveResource> {
@@ -34,6 +35,14 @@ public class CharacterEffectsSaveResource extends DataBaseTable<CharacterEffects
     public CharacterEffectsSaveResource() {
 super(CharacterEffectsSaveResource.class);
 }
+
+
+    public CharacterEffectsSaveResource(String char_obj_id,String skill_id,String class_index){
+        super(CharacterEffectsSaveResource.class);
+        getSTAT_SET().set(CHAR_OBJ_ID, char_obj_id);
+        getSTAT_SET().set(SKILL_ID, skill_id);
+        getSTAT_SET().set(CLASS_INDEX, class_index);
+    }
 
     public Integer getCharObjId() {
         return get(CHAR_OBJ_ID, Integer.class);

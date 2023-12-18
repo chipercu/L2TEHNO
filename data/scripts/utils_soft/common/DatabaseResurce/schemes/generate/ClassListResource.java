@@ -5,15 +5,16 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ClassListResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "class_list",
         primary_key = {ID},
         fields = {
-                @Field(name = CLASS_NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PARENT_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PARENT_ID2 , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLASS_NAME , type = VARCHAR , type_size = 19 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PARENT_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PARENT_ID2 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class ClassListResource extends DataBaseTable<ClassListResource> {
@@ -26,6 +27,12 @@ public class ClassListResource extends DataBaseTable<ClassListResource> {
     public ClassListResource() {
 super(ClassListResource.class);
 }
+
+
+    public ClassListResource(String id){
+        super(ClassListResource.class);
+        getSTAT_SET().set(ID, id);
+    }
 
     public String getClassName() {
         return get(CLASS_NAME, String.class);

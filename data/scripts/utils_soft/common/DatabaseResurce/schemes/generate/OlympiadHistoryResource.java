@@ -5,22 +5,23 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.OlympiadHistoryResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "olympiad_history",
         primary_key = {},
         fields = {
-                @Field(name = OBJECT_ID_1 , data_type = "int"),
-                @Field(name = OBJECT_ID_2 , data_type = "int"),
-                @Field(name = CLASS_ID_1 , data_type = "int"),
-                @Field(name = CLASS_ID_2 , data_type = "int"),
-                @Field(name = NAME_1 , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = NAME_2 , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = GAME_START_TIME , data_type = "bigint"),
-                @Field(name = GAME_TIME , data_type = "int"),
-                @Field(name = GAME_STATUS , data_type = "int"),
-                @Field(name = GAME_TYPE , data_type = "int"),
-                @Field(name = OLD , data_type = "tinyint"),
+                @Field(name = OBJECT_ID_1 , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = OBJECT_ID_2 , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = CLASS_ID_1 , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = CLASS_ID_2 , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = NAME_1 , type = VARCHAR , type_size = 255 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = NAME_2 , type = VARCHAR , type_size = 255 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = GAME_START_TIME , type = BIGINT , nullable = false , defValue = @DefValue(Long = null)),
+                @Field(name = GAME_TIME , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = GAME_STATUS , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = GAME_TYPE , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = OLD , type = TINYINT , nullable = false , defValue = @DefValue(Integer = null)),
         }
 )
 public class OlympiadHistoryResource extends DataBaseTable<OlympiadHistoryResource> {

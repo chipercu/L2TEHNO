@@ -5,23 +5,24 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.RecipesResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "recipes",
         primary_key = {ID},
         fields = {
-                @Field(name = ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NAME , data_type = "varchar"),
-                @Field(name = ITEM , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = FOUNDATION , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = Q , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LVL , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SUCCESS , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = RECID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MP , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = EXP , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SP , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DWARVEN , data_type = "int" , defValue = @DefValue(Integer = 1)),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NAME , type = VARCHAR , type_size = 40 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = ITEM , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = FOUNDATION , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = Q , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LVL , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SUCCESS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = RECID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MP , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = EXP , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SP , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DWARVEN , type = INT , nullable = false , defValue = @DefValue(Integer = 1)),
         }
 )
 public class RecipesResource extends DataBaseTable<RecipesResource> {
@@ -42,6 +43,12 @@ public class RecipesResource extends DataBaseTable<RecipesResource> {
     public RecipesResource() {
 super(RecipesResource.class);
 }
+
+
+    public RecipesResource(String id){
+        super(RecipesResource.class);
+        getSTAT_SET().set(ID, id);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

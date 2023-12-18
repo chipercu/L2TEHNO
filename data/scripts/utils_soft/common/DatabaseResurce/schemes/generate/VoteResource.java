@@ -5,14 +5,15 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.VoteResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "vote",
         primary_key = {ID,H_WI_D,VOTE},
         fields = {
-                @Field(name = ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = H_WI_D , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = VOTE , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = H_WI_D , type = VARCHAR , type_size = 32 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = VOTE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class VoteResource extends DataBaseTable<VoteResource> {
@@ -24,6 +25,14 @@ public class VoteResource extends DataBaseTable<VoteResource> {
     public VoteResource() {
 super(VoteResource.class);
 }
+
+
+    public VoteResource(String id,String HWID,String vote){
+        super(VoteResource.class);
+        getSTAT_SET().set(ID, id);
+        getSTAT_SET().set(H_WI_D, HWID);
+        getSTAT_SET().set(VOTE, vote);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

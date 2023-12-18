@@ -5,20 +5,21 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.TournamentTeamsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "tournament_teams",
         primary_key = {},
         fields = {
-                @Field(name = OBJ_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = TYPE , data_type = "int"),
-                @Field(name = TEAM_ID , data_type = "int"),
-                @Field(name = TEAM_NAME , data_type = "varchar"),
-                @Field(name = LEADER , data_type = "int"),
-                @Field(name = CATEGORY , data_type = "int"),
-                @Field(name = WINS , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOSTS , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = STATUS , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = OBJ_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = TYPE , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = TEAM_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = TEAM_NAME , type = VARCHAR , type_size = 255 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = LEADER , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = CATEGORY , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = WINS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOSTS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = STATUS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class TournamentTeamsResource extends DataBaseTable<TournamentTeamsResource> {

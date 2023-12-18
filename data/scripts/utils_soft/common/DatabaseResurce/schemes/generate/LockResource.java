@@ -5,14 +5,15 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.LockResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "lock",
         primary_key = {LOGIN,STRING},
         fields = {
-                @Field(name = LOGIN , data_type = "varchar"),
-                @Field(name = TYPE , data_type = "enum"),
-                @Field(name = STRING , data_type = "varchar"),
+                @Field(name = LOGIN , type = VARCHAR , type_size = 45 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = TYPE , type = ENUM , type_size = 4 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = STRING , type = VARCHAR , type_size = 32 , nullable = false , defValue = @DefValue(String = "")),
         }
 )
 public class LockResource extends DataBaseTable<LockResource> {
@@ -24,6 +25,13 @@ public class LockResource extends DataBaseTable<LockResource> {
     public LockResource() {
 super(LockResource.class);
 }
+
+
+    public LockResource(String login,String string){
+        super(LockResource.class);
+        getSTAT_SET().set(LOGIN, login);
+        getSTAT_SET().set(STRING, string);
+    }
 
     public String getLogin() {
         return get(LOGIN, String.class);

@@ -5,16 +5,17 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.AllyDataResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "ally_data",
         primary_key = {ALLY_ID},
         fields = {
-                @Field(name = ALLY_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ALLY_NAME , data_type = "varchar"),
-                @Field(name = LEADER_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = EXPELLED_MEMBER , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CREST , data_type = "varbinary"),
+                @Field(name = ALLY_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ALLY_NAME , type = VARCHAR , type_size = 45 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = LEADER_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = EXPELLED_MEMBER , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CREST , type = VARBINARY , type_size = 192 , nullable = true , defValue = @DefValue(String = "")),
         }
 )
 public class AllyDataResource extends DataBaseTable<AllyDataResource> {
@@ -28,6 +29,12 @@ public class AllyDataResource extends DataBaseTable<AllyDataResource> {
     public AllyDataResource() {
 super(AllyDataResource.class);
 }
+
+
+    public AllyDataResource(String ally_id){
+        super(AllyDataResource.class);
+        getSTAT_SET().set(ALLY_ID, ally_id);
+    }
 
     public Integer getAllyId() {
         return get(ALLY_ID, Integer.class);

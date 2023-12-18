@@ -5,13 +5,14 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.SiegeDoorupgradeResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "siege_doorupgrade",
         primary_key = {DOOR_ID},
         fields = {
-                @Field(name = DOOR_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HP , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = DOOR_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HP , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class SiegeDoorupgradeResource extends DataBaseTable<SiegeDoorupgradeResource> {
@@ -22,6 +23,12 @@ public class SiegeDoorupgradeResource extends DataBaseTable<SiegeDoorupgradeReso
     public SiegeDoorupgradeResource() {
 super(SiegeDoorupgradeResource.class);
 }
+
+
+    public SiegeDoorupgradeResource(String doorId){
+        super(SiegeDoorupgradeResource.class);
+        getSTAT_SET().set(DOOR_ID, doorId);
+    }
 
     public Integer getDoorId() {
         return get(DOOR_ID, Integer.class);

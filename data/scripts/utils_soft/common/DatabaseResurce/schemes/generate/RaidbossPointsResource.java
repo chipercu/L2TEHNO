@@ -5,14 +5,15 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.RaidbossPointsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "raidboss_points",
         primary_key = {},
         fields = {
-                @Field(name = OWNER_ID , data_type = "int"),
-                @Field(name = BOSS_ID , data_type = "smallint"),
-                @Field(name = POINTS , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = OWNER_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = BOSS_ID , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = POINTS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class RaidbossPointsResource extends DataBaseTable<RaidbossPointsResource> {

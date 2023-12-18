@@ -5,13 +5,14 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.TournamentVariablesResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "tournament_variables",
         primary_key = {NAME},
         fields = {
-                @Field(name = NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = VALUE , data_type = "varchar"),
+                @Field(name = NAME , type = VARCHAR , type_size = 255 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = VALUE , type = VARCHAR , type_size = 255 , nullable = true , defValue = @DefValue(String = "")),
         }
 )
 public class TournamentVariablesResource extends DataBaseTable<TournamentVariablesResource> {
@@ -22,6 +23,12 @@ public class TournamentVariablesResource extends DataBaseTable<TournamentVariabl
     public TournamentVariablesResource() {
 super(TournamentVariablesResource.class);
 }
+
+
+    public TournamentVariablesResource(String name){
+        super(TournamentVariablesResource.class);
+        getSTAT_SET().set(NAME, name);
+    }
 
     public String getName() {
         return get(NAME, String.class);

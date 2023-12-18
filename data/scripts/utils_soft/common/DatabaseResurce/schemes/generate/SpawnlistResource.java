@@ -5,26 +5,27 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.SpawnlistResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "spawnlist",
         primary_key = {NPC_TEMPLATEID,LOCX,LOCY,LOCZ,LOC_ID,REFLECTION},
         fields = {
-                @Field(name = LOCATION , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = COUNT , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NPC_TEMPLATEID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOCX , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOCY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOCZ , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HEADING , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = RESPAWN_DELAY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = RESPAWN_DELAY_RND , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOC_ID , data_type = "varchar" , defValue = @DefValue(String = "0")),
-                @Field(name = BANED_LOC_ID , data_type = "varchar" , defValue = @DefValue(String = "0")),
-                @Field(name = PERIOD_OF_DAY , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = REFLECTION , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = STAT_PARAM , data_type = "varchar" , defValue = @DefValue(String = "-1")),
-                @Field(name = AI_PARAM , data_type = "text"),
+                @Field(name = LOCATION , type = VARCHAR , type_size = 35 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = COUNT , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NPC_TEMPLATEID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOCX , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOCY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOCZ , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HEADING , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = RESPAWN_DELAY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = RESPAWN_DELAY_RND , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOC_ID , type = VARCHAR , type_size = 325 , nullable = false , defValue = @DefValue(String = "0")),
+                @Field(name = BANED_LOC_ID , type = VARCHAR , type_size = 325 , nullable = false , defValue = @DefValue(String = "0")),
+                @Field(name = PERIOD_OF_DAY , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = REFLECTION , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = STAT_PARAM , type = VARCHAR , type_size = 500 , nullable = false , defValue = @DefValue(String = "-1")),
+                @Field(name = AI_PARAM , type = TEXT , type_size = 65535 , nullable = true , defValue = @DefValue(String = "")),
         }
 )
 public class SpawnlistResource extends DataBaseTable<SpawnlistResource> {
@@ -48,6 +49,17 @@ public class SpawnlistResource extends DataBaseTable<SpawnlistResource> {
     public SpawnlistResource() {
 super(SpawnlistResource.class);
 }
+
+
+    public SpawnlistResource(String npc_templateid,String locx,String locy,String locz,String loc_id,String reflection){
+        super(SpawnlistResource.class);
+        getSTAT_SET().set(NPC_TEMPLATEID, npc_templateid);
+        getSTAT_SET().set(LOCX, locx);
+        getSTAT_SET().set(LOCY, locy);
+        getSTAT_SET().set(LOCZ, locz);
+        getSTAT_SET().set(LOC_ID, loc_id);
+        getSTAT_SET().set(REFLECTION, reflection);
+    }
 
     public String getLocation() {
         return get(LOCATION, String.class);

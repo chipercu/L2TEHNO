@@ -5,20 +5,21 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CursedWeaponsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "cursed_weapons",
         primary_key = {ITEM_ID},
         fields = {
-                @Field(name = ITEM_ID , data_type = "smallint"),
-                @Field(name = PLAYER_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PLAYER_KARMA , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PLAYER_PKKILLS , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NB_KILLS , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = Y , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = Z , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = END_TIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = ITEM_ID , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = PLAYER_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PLAYER_KARMA , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PLAYER_PKKILLS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NB_KILLS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = Y , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = Z , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = END_TIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class CursedWeaponsResource extends DataBaseTable<CursedWeaponsResource> {
@@ -36,6 +37,12 @@ public class CursedWeaponsResource extends DataBaseTable<CursedWeaponsResource> 
     public CursedWeaponsResource() {
 super(CursedWeaponsResource.class);
 }
+
+
+    public CursedWeaponsResource(String item_id){
+        super(CursedWeaponsResource.class);
+        getSTAT_SET().set(ITEM_ID, item_id);
+    }
 
     public Integer getItemId() {
         return get(ITEM_ID, Integer.class);

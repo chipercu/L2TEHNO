@@ -5,16 +5,17 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.BonusResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "bonus",
         primary_key = {OBJ_ID,BONUS_NAME},
         fields = {
-                @Field(name = OBJ_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ACCOUNT , data_type = "varchar" , defValue = @DefValue(String = "-1")),
-                @Field(name = BONUS_NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = BONUS_VALUE , data_type = "float" , defValue = @DefValue(Double = 0)),
-                @Field(name = BONUS_EXPIRE_TIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = OBJ_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ACCOUNT , type = VARCHAR , type_size = 45 , nullable = false , defValue = @DefValue(String = "-1")),
+                @Field(name = BONUS_NAME , type = VARCHAR , type_size = 30 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = BONUS_VALUE , type = FLOAT , nullable = false , defValue = @DefValue(Double = 0)),
+                @Field(name = BONUS_EXPIRE_TIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class BonusResource extends DataBaseTable<BonusResource> {
@@ -28,6 +29,13 @@ public class BonusResource extends DataBaseTable<BonusResource> {
     public BonusResource() {
 super(BonusResource.class);
 }
+
+
+    public BonusResource(String obj_id,String bonus_name){
+        super(BonusResource.class);
+        getSTAT_SET().set(OBJ_ID, obj_id);
+        getSTAT_SET().set(BONUS_NAME, bonus_name);
+    }
 
     public Integer getObjId() {
         return get(OBJ_ID, Integer.class);

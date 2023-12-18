@@ -5,13 +5,14 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ServerVariablesResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "server_variables",
         primary_key = {NAME},
         fields = {
-                @Field(name = NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = VALUE , data_type = "varchar" , defValue = @DefValue(String = "")),
+                @Field(name = NAME , type = VARCHAR , type_size = 86 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = VALUE , type = VARCHAR , type_size = 255 , nullable = false , defValue = @DefValue(String = "")),
         }
 )
 public class ServerVariablesResource extends DataBaseTable<ServerVariablesResource> {
@@ -22,6 +23,12 @@ public class ServerVariablesResource extends DataBaseTable<ServerVariablesResour
     public ServerVariablesResource() {
 super(ServerVariablesResource.class);
 }
+
+
+    public ServerVariablesResource(String name){
+        super(ServerVariablesResource.class);
+        getSTAT_SET().set(NAME, name);
+    }
 
     public String getName() {
         return get(NAME, String.class);

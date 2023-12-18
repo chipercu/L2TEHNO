@@ -5,24 +5,25 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.MultisellLogResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "multisell_log",
         primary_key = {},
         fields = {
-                @Field(name = ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DATE , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = ITEM_ID , data_type = "varchar" , defValue = @DefValue(String = "0")),
-                @Field(name = COUNT , data_type = "varchar" , defValue = @DefValue(String = "0")),
-                @Field(name = D_ITEM_ID , data_type = "varchar" , defValue = @DefValue(String = "0")),
-                @Field(name = D_COUNT , data_type = "varchar" , defValue = @DefValue(String = "0")),
-                @Field(name = NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = _DATE , type = VARCHAR , type_size = 2048 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = ITEM_ID , type = VARCHAR , type_size = 2048 , nullable = false , defValue = @DefValue(String = "0")),
+                @Field(name = COUNT , type = VARCHAR , type_size = 2048 , nullable = false , defValue = @DefValue(String = "0")),
+                @Field(name = D_ITEM_ID , type = VARCHAR , type_size = 2048 , nullable = false , defValue = @DefValue(String = "0")),
+                @Field(name = D_COUNT , type = VARCHAR , type_size = 2048 , nullable = false , defValue = @DefValue(String = "0")),
+                @Field(name = NAME , type = VARCHAR , type_size = 16 , nullable = false , defValue = @DefValue(String = "")),
         }
 )
 public class MultisellLogResource extends DataBaseTable<MultisellLogResource> {
 
     public static final String ID = "id";
-    public static final String DATE = "date";
+    public static final String _DATE = "date";
     public static final String ITEM_ID = "itemId";
     public static final String COUNT = "count";
     public static final String D_ITEM_ID = "dItemId";
@@ -37,7 +38,7 @@ super(MultisellLogResource.class);
         return get(ID, Integer.class);
     }
     public String getDate() {
-        return get(DATE, String.class);
+        return get(_DATE, String.class);
     }
     public String getItemId() {
         return get(ITEM_ID, String.class);
@@ -59,7 +60,7 @@ super(MultisellLogResource.class);
         set(ID, value);
     }
     public void setDate(String value) {
-        set(DATE, value);
+        set(_DATE, value);
     }
     public void setItemId(String value) {
         set(ITEM_ID, value);

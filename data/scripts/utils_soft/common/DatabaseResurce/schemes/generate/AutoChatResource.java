@@ -5,14 +5,15 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.AutoChatResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "auto_chat",
         primary_key = {GROUP_ID,NPC_ID},
         fields = {
-                @Field(name = GROUP_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NPC_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CHAT_DELAY , data_type = "int" , defValue = @DefValue(Integer = -1)),
+                @Field(name = GROUP_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NPC_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CHAT_DELAY , type = INT , nullable = false , defValue = @DefValue(Integer = -1)),
         }
 )
 public class AutoChatResource extends DataBaseTable<AutoChatResource> {
@@ -24,6 +25,13 @@ public class AutoChatResource extends DataBaseTable<AutoChatResource> {
     public AutoChatResource() {
 super(AutoChatResource.class);
 }
+
+
+    public AutoChatResource(String groupId,String npcId){
+        super(AutoChatResource.class);
+        getSTAT_SET().set(GROUP_ID, groupId);
+        getSTAT_SET().set(NPC_ID, npcId);
+    }
 
     public Integer getGroupId() {
         return get(GROUP_ID, Integer.class);

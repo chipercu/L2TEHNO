@@ -5,21 +5,22 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.HeroesDiaryResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "heroes_diary",
         primary_key = {},
         fields = {
-                @Field(name = CHAR_ID , data_type = "int"),
-                @Field(name = TIME , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = ACTION , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PARAM , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = CHAR_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = _TIME , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = ACTION , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PARAM , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class HeroesDiaryResource extends DataBaseTable<HeroesDiaryResource> {
 
     public static final String CHAR_ID = "charId";
-    public static final String TIME = "time";
+    public static final String _TIME = "time";
     public static final String ACTION = "action";
     public static final String PARAM = "param";
 
@@ -31,7 +32,7 @@ super(HeroesDiaryResource.class);
         return get(CHAR_ID, Integer.class);
     }
     public Long getTime() {
-        return get(TIME, Long.class);
+        return get(_TIME, Long.class);
     }
     public Integer getAction() {
         return get(ACTION, Integer.class);
@@ -44,7 +45,7 @@ super(HeroesDiaryResource.class);
         set(CHAR_ID, value);
     }
     public void setTime(Long value) {
-        set(TIME, value);
+        set(_TIME, value);
     }
     public void setAction(Integer value) {
         set(ACTION, value);

@@ -5,22 +5,23 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.HennaResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "henna",
         primary_key = {SYMBOL_ID},
         fields = {
-                @Field(name = SYMBOL_ID , data_type = "tinyint"),
-                @Field(name = SYMBOL_NAME , data_type = "varchar"),
-                @Field(name = DYE_ID , data_type = "smallint"),
-                @Field(name = DYE_AMOUNT , data_type = "tinyint" , defValue = @DefValue(Integer = 10)),
-                @Field(name = PRICE , data_type = "mediumint" , defValue = @DefValue(Integer = 1)),
-                @Field(name = STAT__IN_T , data_type = "tinyint"),
-                @Field(name = STAT__ST_R , data_type = "tinyint"),
-                @Field(name = STAT__CO_N , data_type = "tinyint"),
-                @Field(name = STAT__ME_M , data_type = "tinyint"),
-                @Field(name = STAT__DE_X , data_type = "tinyint"),
-                @Field(name = STAT__WI_T , data_type = "tinyint"),
+                @Field(name = SYMBOL_ID , type = TINYINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = SYMBOL_NAME , type = VARCHAR , type_size = 15 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = DYE_ID , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = DYE_AMOUNT , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 10)),
+                @Field(name = PRICE , type = MEDIUMINT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = STAT__IN_T , type = TINYINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = STAT__ST_R , type = TINYINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = STAT__CO_N , type = TINYINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = STAT__ME_M , type = TINYINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = STAT__DE_X , type = TINYINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = STAT__WI_T , type = TINYINT , nullable = false , defValue = @DefValue(Integer = null)),
         }
 )
 public class HennaResource extends DataBaseTable<HennaResource> {
@@ -40,6 +41,12 @@ public class HennaResource extends DataBaseTable<HennaResource> {
     public HennaResource() {
 super(HennaResource.class);
 }
+
+
+    public HennaResource(String symbol_id){
+        super(HennaResource.class);
+        getSTAT_SET().set(SYMBOL_ID, symbol_id);
+    }
 
     public Integer getSymbolId() {
         return get(SYMBOL_ID, Integer.class);

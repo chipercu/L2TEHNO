@@ -5,18 +5,19 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.AuctionBidResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "auction_bid",
         primary_key = {AUCTION_ID,BIDDER_ID},
         fields = {
-                @Field(name = ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = AUCTION_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = BIDDER_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = BIDDER_NAME , data_type = "varchar"),
-                @Field(name = CLAN_NAME , data_type = "varchar"),
-                @Field(name = MAX_BID , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = TIME_BID , data_type = "bigint" , defValue = @DefValue(Long = 0)),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = AUCTION_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = BIDDER_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = BIDDER_NAME , type = VARCHAR , type_size = 50 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = CLAN_NAME , type = VARCHAR , type_size = 50 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = MAX_BID , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = TIME_BID , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
         }
 )
 public class AuctionBidResource extends DataBaseTable<AuctionBidResource> {
@@ -32,6 +33,13 @@ public class AuctionBidResource extends DataBaseTable<AuctionBidResource> {
     public AuctionBidResource() {
 super(AuctionBidResource.class);
 }
+
+
+    public AuctionBidResource(String auctionId,String bidderId){
+        super(AuctionBidResource.class);
+        getSTAT_SET().set(AUCTION_ID, auctionId);
+        getSTAT_SET().set(BIDDER_ID, bidderId);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

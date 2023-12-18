@@ -5,29 +5,30 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ItemsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "items",
         primary_key = {OBJECT_ID},
         fields = {
-                @Field(name = OBJECT_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = OWNER_ID , data_type = "int"),
-                @Field(name = ITEM_ID , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = VISUAL_ITEM_ID , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NAME , data_type = "varchar"),
-                @Field(name = COUNT , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = ENCHANT_LEVEL , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = VISUAL_ENCHANT_LEVEL , data_type = "smallint" , defValue = @DefValue(Integer = -1)),
-                @Field(name = CLASS , data_type = "enum" , defValue = @DefValue(String = "OTHER")),
-                @Field(name = LOC , data_type = "enum"),
-                @Field(name = LOC_DATA , data_type = "int"),
-                @Field(name = CUSTOM_TYPE1 , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CUSTOM_TYPE2 , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SHADOW_LIFE_TIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = FLAGS , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ENERGY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = TEMPORAL , data_type = "enum" , defValue = @DefValue(Boolean = false)),
-                @Field(name = ENCHANT_TIME , data_type = "bigint" , defValue = @DefValue(Long = 0)),
+                @Field(name = OBJECT_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = OWNER_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = ITEM_ID , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = VISUAL_ITEM_ID , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NAME , type = VARCHAR , type_size = 100 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = COUNT , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = ENCHANT_LEVEL , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = VISUAL_ENCHANT_LEVEL , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = -1)),
+                @Field(name = CLASS , type = ENUM , type_size = 10 , nullable = false , defValue = @DefValue(String = "OTHER")),
+                @Field(name = LOC , type = ENUM , type_size = 13 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = LOC_DATA , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = CUSTOM_TYPE1 , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CUSTOM_TYPE2 , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SHADOW_LIFE_TIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = FLAGS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ENERGY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = TEMPORAL , type = ENUM , type_size = 5 , nullable = false , defValue = @DefValue(Boolean = false)),
+                @Field(name = ENCHANT_TIME , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
         }
 )
 public class ItemsResource extends DataBaseTable<ItemsResource> {
@@ -54,6 +55,12 @@ public class ItemsResource extends DataBaseTable<ItemsResource> {
     public ItemsResource() {
 super(ItemsResource.class);
 }
+
+
+    public ItemsResource(String object_id){
+        super(ItemsResource.class);
+        getSTAT_SET().set(OBJECT_ID, object_id);
+    }
 
     public Integer getObjectId() {
         return get(OBJECT_ID, Integer.class);

@@ -5,13 +5,14 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CharacterPostFriendsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "character_post_friends",
         primary_key = {OBJECT_ID,POST_FRIEND},
         fields = {
-                @Field(name = OBJECT_ID , data_type = "int"),
-                @Field(name = POST_FRIEND , data_type = "int"),
+                @Field(name = OBJECT_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = POST_FRIEND , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
         }
 )
 public class CharacterPostFriendsResource extends DataBaseTable<CharacterPostFriendsResource> {
@@ -22,6 +23,13 @@ public class CharacterPostFriendsResource extends DataBaseTable<CharacterPostFri
     public CharacterPostFriendsResource() {
 super(CharacterPostFriendsResource.class);
 }
+
+
+    public CharacterPostFriendsResource(String object_id,String post_friend){
+        super(CharacterPostFriendsResource.class);
+        getSTAT_SET().set(OBJECT_ID, object_id);
+        getSTAT_SET().set(POST_FRIEND, post_friend);
+    }
 
     public Integer getObjectId() {
         return get(OBJECT_ID, Integer.class);

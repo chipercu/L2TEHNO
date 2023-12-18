@@ -5,69 +5,70 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.NpcResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "npc",
         primary_key = {ID},
         fields = {
-                @Field(name = ORDINAL , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NAME , data_type = "varchar"),
-                @Field(name = TITLE , data_type = "varchar"),
-                @Field(name = CLASS , data_type = "varchar"),
-                @Field(name = RACE , data_type = "varchar" , defValue = @DefValue(String = "none")),
-                @Field(name = COLLISION_RADIUS , data_type = "decimal"),
-                @Field(name = COLLISION_HEIGHT , data_type = "decimal"),
-                @Field(name = LEVEL , data_type = "int" , defValue = @DefValue(Integer = 1)),
-                @Field(name = SEX , data_type = "varchar" , defValue = @DefValue(String = "male")),
-                @Field(name = TYPE , data_type = "varchar" , defValue = @DefValue(String = "L2Npc")),
-                @Field(name = AI_TYPE , data_type = "varchar" , defValue = @DefValue(String = "npc")),
-                @Field(name = ATTACKRANGE , data_type = "int" , defValue = @DefValue(Integer = 40)),
-                @Field(name = HP , data_type = "int" , defValue = @DefValue(Integer = 2444)),
-                @Field(name = BASE_HP_REGEN , data_type = "double" , defValue = @DefValue(Double = 7.500)),
-                @Field(name = MP , data_type = "int" , defValue = @DefValue(Integer = 2444)),
-                @Field(name = BASE_MP_REGEN , data_type = "double" , defValue = @DefValue(Double = 2.700)),
-                @Field(name = STR , data_type = "int" , defValue = @DefValue(Integer = 40)),
-                @Field(name = CON , data_type = "int" , defValue = @DefValue(Integer = 43)),
-                @Field(name = DEX , data_type = "int" , defValue = @DefValue(Integer = 30)),
-                @Field(name = INT , data_type = "int" , defValue = @DefValue(Integer = 21)),
-                @Field(name = WIT , data_type = "int" , defValue = @DefValue(Integer = 20)),
-                @Field(name = MEN , data_type = "int" , defValue = @DefValue(Integer = 10)),
-                @Field(name = EXP , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SP , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PATK , data_type = "int" , defValue = @DefValue(Integer = 500)),
-                @Field(name = PDEF , data_type = "int" , defValue = @DefValue(Integer = 500)),
-                @Field(name = MATK , data_type = "int" , defValue = @DefValue(Integer = 500)),
-                @Field(name = MDEF , data_type = "int" , defValue = @DefValue(Integer = 500)),
-                @Field(name = ATKSPD , data_type = "int" , defValue = @DefValue(Integer = 253)),
-                @Field(name = AGGRO , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MATKSPD , data_type = "int" , defValue = @DefValue(Integer = 500)),
-                @Field(name = RHAND , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LHAND , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ARMOR , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = WALKSPD , data_type = "int" , defValue = @DefValue(Integer = 110)),
-                @Field(name = RUNSPD , data_type = "int" , defValue = @DefValue(Integer = 180)),
-                @Field(name = FACTION_ID , data_type = "varchar"),
-                @Field(name = FACTION_RANGE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DISPLAY_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SHIELD_DEFENSE_RATE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SHIELD_DEFENSE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CORPSE_TIME , data_type = "int" , defValue = @DefValue(Integer = 7)),
-                @Field(name = BASE_RAND_DAM , data_type = "int" , defValue = @DefValue(Integer = 30)),
-                @Field(name = BASE_CRITICAL , data_type = "int" , defValue = @DefValue(Integer = 4)),
-                @Field(name = PHYSICAL_HIT_MODIFY , data_type = "int" , defValue = @DefValue(Integer = 4)),
-                @Field(name = BASE_REUSE_DELAY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PHYSICAL_AVOID_MODIFY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HIT_TIME_FACTOR , data_type = "double" , defValue = @DefValue(Double = 0.60)),
-                @Field(name = IS_DROP_HERBS , data_type = "enum" , defValue = @DefValue(Boolean = false)),
-                @Field(name = SHOTS , data_type = "enum" , defValue = @DefValue(String = "NONE")),
-                @Field(name = MAP_FLAG , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = BOSS_FLAG , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = AGRO_RANGE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = EVENT_FLAG , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CAN_BE_ATTACKED , data_type = "tinyint" , defValue = @DefValue(Integer = 1)),
-                @Field(name = UNDYING , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = BASE_ATTACK_TYPE , data_type = "varchar" , defValue = @DefValue(String = "FIST")),
+                @Field(name = ORDINAL , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NAME , type = VARCHAR , type_size = 45 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = TITLE , type = VARCHAR , type_size = 35 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = CLASS , type = VARCHAR , type_size = 50 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = RACE , type = VARCHAR , type_size = 45 , nullable = false , defValue = @DefValue(String = "none")),
+                @Field(name = COLLISION_RADIUS , type = DECIMAL , nullable = true , defValue = @DefValue(Double = NULL)),
+                @Field(name = COLLISION_HEIGHT , type = DECIMAL , nullable = true , defValue = @DefValue(Double = NULL)),
+                @Field(name = LEVEL , type = INT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = SEX , type = VARCHAR , type_size = 6 , nullable = false , defValue = @DefValue(String = "male")),
+                @Field(name = TYPE , type = VARCHAR , type_size = 30 , nullable = false , defValue = @DefValue(String = "L2Npc")),
+                @Field(name = AI_TYPE , type = VARCHAR , type_size = 50 , nullable = false , defValue = @DefValue(String = "npc")),
+                @Field(name = ATTACKRANGE , type = INT , nullable = false , defValue = @DefValue(Integer = 40)),
+                @Field(name = HP , type = INT , nullable = false , defValue = @DefValue(Integer = 2444)),
+                @Field(name = BASE_HP_REGEN , type = DOUBLE , nullable = false , defValue = @DefValue(Double = 7.500)),
+                @Field(name = MP , type = INT , nullable = false , defValue = @DefValue(Integer = 2444)),
+                @Field(name = BASE_MP_REGEN , type = DOUBLE , nullable = false , defValue = @DefValue(Double = 2.700)),
+                @Field(name = STR , type = INT , nullable = false , defValue = @DefValue(Integer = 40)),
+                @Field(name = CON , type = INT , nullable = false , defValue = @DefValue(Integer = 43)),
+                @Field(name = DEX , type = INT , nullable = false , defValue = @DefValue(Integer = 30)),
+                @Field(name = _INT , type = INT , nullable = false , defValue = @DefValue(Integer = 21)),
+                @Field(name = WIT , type = INT , nullable = false , defValue = @DefValue(Integer = 20)),
+                @Field(name = MEN , type = INT , nullable = false , defValue = @DefValue(Integer = 10)),
+                @Field(name = EXP , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SP , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PATK , type = INT , nullable = false , defValue = @DefValue(Integer = 500)),
+                @Field(name = PDEF , type = INT , nullable = false , defValue = @DefValue(Integer = 500)),
+                @Field(name = MATK , type = INT , nullable = false , defValue = @DefValue(Integer = 500)),
+                @Field(name = MDEF , type = INT , nullable = false , defValue = @DefValue(Integer = 500)),
+                @Field(name = ATKSPD , type = INT , nullable = false , defValue = @DefValue(Integer = 253)),
+                @Field(name = AGGRO , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MATKSPD , type = INT , nullable = false , defValue = @DefValue(Integer = 500)),
+                @Field(name = RHAND , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LHAND , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ARMOR , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = WALKSPD , type = INT , nullable = false , defValue = @DefValue(Integer = 110)),
+                @Field(name = RUNSPD , type = INT , nullable = false , defValue = @DefValue(Integer = 180)),
+                @Field(name = FACTION_ID , type = VARCHAR , type_size = 40 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = FACTION_RANGE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DISPLAY_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SHIELD_DEFENSE_RATE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SHIELD_DEFENSE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CORPSE_TIME , type = INT , nullable = false , defValue = @DefValue(Integer = 7)),
+                @Field(name = BASE_RAND_DAM , type = INT , nullable = false , defValue = @DefValue(Integer = 30)),
+                @Field(name = BASE_CRITICAL , type = INT , nullable = false , defValue = @DefValue(Integer = 4)),
+                @Field(name = PHYSICAL_HIT_MODIFY , type = INT , nullable = false , defValue = @DefValue(Integer = 4)),
+                @Field(name = BASE_REUSE_DELAY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PHYSICAL_AVOID_MODIFY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HIT_TIME_FACTOR , type = DOUBLE , nullable = false , defValue = @DefValue(Double = 0.60)),
+                @Field(name = IS_DROP_HERBS , type = ENUM , type_size = 5 , nullable = false , defValue = @DefValue(Boolean = false)),
+                @Field(name = SHOTS , type = ENUM , type_size = 12 , nullable = false , defValue = @DefValue(String = "NONE")),
+                @Field(name = MAP_FLAG , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = BOSS_FLAG , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = AGRO_RANGE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = EVENT_FLAG , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CAN_BE_ATTACKED , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = UNDYING , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = BASE_ATTACK_TYPE , type = VARCHAR , type_size = 10 , nullable = false , defValue = @DefValue(String = "FIST")),
         }
 )
 public class NpcResource extends DataBaseTable<NpcResource> {
@@ -92,7 +93,7 @@ public class NpcResource extends DataBaseTable<NpcResource> {
     public static final String STR = "str";
     public static final String CON = "con";
     public static final String DEX = "dex";
-    public static final String INT = "int";
+    public static final String _INT = "int";
     public static final String WIT = "wit";
     public static final String MEN = "men";
     public static final String EXP = "exp";
@@ -134,6 +135,12 @@ public class NpcResource extends DataBaseTable<NpcResource> {
     public NpcResource() {
 super(NpcResource.class);
 }
+
+
+    public NpcResource(String id){
+        super(NpcResource.class);
+        getSTAT_SET().set(ID, id);
+    }
 
     public Integer getOrdinal() {
         return get(ORDINAL, Integer.class);
@@ -196,7 +203,7 @@ super(NpcResource.class);
         return get(DEX, Integer.class);
     }
     public Integer getInt() {
-        return get(INT, Integer.class);
+        return get(_INT, Integer.class);
     }
     public Integer getWit() {
         return get(WIT, Integer.class);
@@ -371,7 +378,7 @@ super(NpcResource.class);
         set(DEX, value);
     }
     public void setInt(Integer value) {
-        set(INT, value);
+        set(_INT, value);
     }
     public void setWit(Integer value) {
         set(WIT, value);

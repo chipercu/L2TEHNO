@@ -5,18 +5,19 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ResidenceFunctionsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "residence_functions",
         primary_key = {ID,TYPE},
         fields = {
-                @Field(name = ID , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = TYPE , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LVL , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LEASE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = RATE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = END_TIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = IN_DEBT , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
+                @Field(name = ID , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = TYPE , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LVL , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LEASE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = RATE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = END_TIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = IN_DEBT , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class ResidenceFunctionsResource extends DataBaseTable<ResidenceFunctionsResource> {
@@ -32,6 +33,13 @@ public class ResidenceFunctionsResource extends DataBaseTable<ResidenceFunctions
     public ResidenceFunctionsResource() {
 super(ResidenceFunctionsResource.class);
 }
+
+
+    public ResidenceFunctionsResource(String id,String type){
+        super(ResidenceFunctionsResource.class);
+        getSTAT_SET().set(ID, id);
+        getSTAT_SET().set(TYPE, type);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

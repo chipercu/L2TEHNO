@@ -5,16 +5,17 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CharacterVariablesResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "character_variables",
         primary_key = {OBJ_ID,TYPE,NAME},
         fields = {
-                @Field(name = OBJ_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = TYPE , data_type = "varchar" , defValue = @DefValue(String = "0")),
-                @Field(name = NAME , data_type = "varchar" , defValue = @DefValue(String = "0")),
-                @Field(name = VALUE , data_type = "varchar" , defValue = @DefValue(String = "0")),
-                @Field(name = EXPIRE_TIME , data_type = "bigint" , defValue = @DefValue(Long = 0)),
+                @Field(name = OBJ_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = TYPE , type = VARCHAR , type_size = 86 , nullable = false , defValue = @DefValue(String = "0")),
+                @Field(name = NAME , type = VARCHAR , type_size = 86 , nullable = false , defValue = @DefValue(String = "0")),
+                @Field(name = VALUE , type = VARCHAR , type_size = 500 , nullable = false , defValue = @DefValue(String = "0")),
+                @Field(name = EXPIRE_TIME , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
         }
 )
 public class CharacterVariablesResource extends DataBaseTable<CharacterVariablesResource> {
@@ -28,6 +29,14 @@ public class CharacterVariablesResource extends DataBaseTable<CharacterVariables
     public CharacterVariablesResource() {
 super(CharacterVariablesResource.class);
 }
+
+
+    public CharacterVariablesResource(String obj_id,String type,String name){
+        super(CharacterVariablesResource.class);
+        getSTAT_SET().set(OBJ_ID, obj_id);
+        getSTAT_SET().set(TYPE, type);
+        getSTAT_SET().set(NAME, name);
+    }
 
     public Integer getObjId() {
         return get(OBJ_ID, Integer.class);

@@ -5,22 +5,23 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.LvlupgainResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "lvlupgain",
         primary_key = {CLASSID},
         fields = {
-                @Field(name = CLASSID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DEFAULTHPBASE , data_type = "decimal" , defValue = @DefValue(Double = 0.0)),
-                @Field(name = DEFAULTHPADD , data_type = "decimal" , defValue = @DefValue(Double = 0.00)),
-                @Field(name = DEFAULTHPMOD , data_type = "decimal" , defValue = @DefValue(Double = 0.00)),
-                @Field(name = DEFAULTCPBASE , data_type = "decimal" , defValue = @DefValue(Double = 0.0)),
-                @Field(name = DEFAULTCPADD , data_type = "decimal" , defValue = @DefValue(Double = 0.00)),
-                @Field(name = DEFAULTCPMOD , data_type = "decimal" , defValue = @DefValue(Double = 0.00)),
-                @Field(name = DEFAULTMPBASE , data_type = "decimal" , defValue = @DefValue(Double = 0.0)),
-                @Field(name = DEFAULTMPADD , data_type = "decimal" , defValue = @DefValue(Double = 0.00)),
-                @Field(name = DEFAULTMPMOD , data_type = "decimal" , defValue = @DefValue(Double = 0.00)),
-                @Field(name = CLASS_LVL , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLASSID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DEFAULTHPBASE , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0.0)),
+                @Field(name = DEFAULTHPADD , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0.00)),
+                @Field(name = DEFAULTHPMOD , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0.00)),
+                @Field(name = DEFAULTCPBASE , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0.0)),
+                @Field(name = DEFAULTCPADD , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0.00)),
+                @Field(name = DEFAULTCPMOD , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0.00)),
+                @Field(name = DEFAULTMPBASE , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0.0)),
+                @Field(name = DEFAULTMPADD , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0.00)),
+                @Field(name = DEFAULTMPMOD , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0.00)),
+                @Field(name = CLASS_LVL , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class LvlupgainResource extends DataBaseTable<LvlupgainResource> {
@@ -40,6 +41,12 @@ public class LvlupgainResource extends DataBaseTable<LvlupgainResource> {
     public LvlupgainResource() {
 super(LvlupgainResource.class);
 }
+
+
+    public LvlupgainResource(String classid){
+        super(LvlupgainResource.class);
+        getSTAT_SET().set(CLASSID, classid);
+    }
 
     public Integer getClassid() {
         return get(CLASSID, Integer.class);

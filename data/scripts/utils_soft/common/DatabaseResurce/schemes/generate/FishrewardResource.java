@@ -5,16 +5,17 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.FishrewardResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "fishreward",
         primary_key = {FISHID,REWARDID},
         fields = {
-                @Field(name = FISHID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = REWARDID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MIN , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MAX , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CHANCE , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = FISHID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = REWARDID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MIN , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MAX , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CHANCE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class FishrewardResource extends DataBaseTable<FishrewardResource> {
@@ -28,6 +29,13 @@ public class FishrewardResource extends DataBaseTable<FishrewardResource> {
     public FishrewardResource() {
 super(FishrewardResource.class);
 }
+
+
+    public FishrewardResource(String fishid,String rewardid){
+        super(FishrewardResource.class);
+        getSTAT_SET().set(FISHID, fishid);
+        getSTAT_SET().set(REWARDID, rewardid);
+    }
 
     public Integer getFishid() {
         return get(FISHID, Integer.class);

@@ -5,14 +5,15 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CharacterSecondaryPasswordResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "character_secondary_password",
         primary_key = {ACCOUNT_NAME,VAR},
         fields = {
-                @Field(name = ACCOUNT_NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = VAR , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = VALUE , data_type = "varchar"),
+                @Field(name = ACCOUNT_NAME , type = VARCHAR , type_size = 45 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = VAR , type = VARCHAR , type_size = 20 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = VALUE , type = VARCHAR , type_size = 255 , nullable = true , defValue = @DefValue(String = "")),
         }
 )
 public class CharacterSecondaryPasswordResource extends DataBaseTable<CharacterSecondaryPasswordResource> {
@@ -24,6 +25,13 @@ public class CharacterSecondaryPasswordResource extends DataBaseTable<CharacterS
     public CharacterSecondaryPasswordResource() {
 super(CharacterSecondaryPasswordResource.class);
 }
+
+
+    public CharacterSecondaryPasswordResource(String account_name,String var){
+        super(CharacterSecondaryPasswordResource.class);
+        getSTAT_SET().set(ACCOUNT_NAME, account_name);
+        getSTAT_SET().set(VAR, var);
+    }
 
     public String getAccountName() {
         return get(ACCOUNT_NAME, String.class);

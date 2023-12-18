@@ -5,14 +5,15 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.TournamentClassListResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "tournament_class_list",
         primary_key = {},
         fields = {
-                @Field(name = CLASS_NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = CLASS_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = TYPE , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLASS_NAME , type = VARCHAR , type_size = 19 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = CLASS_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = TYPE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class TournamentClassListResource extends DataBaseTable<TournamentClassListResource> {

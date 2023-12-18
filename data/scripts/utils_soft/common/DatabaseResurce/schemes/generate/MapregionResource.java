@@ -5,28 +5,29 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.MapregionResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "mapregion",
         primary_key = {Y10_PLUS},
         fields = {
-                @Field(name = Y10_PLUS , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X11 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X12 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X13 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X14 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X15 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X16 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X17 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X18 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X19 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X20 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X21 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X22 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X23 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X24 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X25 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X26 , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = Y10_PLUS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X11 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X12 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X13 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X14 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X15 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X16 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X17 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X18 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X19 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X20 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X21 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X22 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X23 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X24 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X25 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X26 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class MapregionResource extends DataBaseTable<MapregionResource> {
@@ -52,6 +53,12 @@ public class MapregionResource extends DataBaseTable<MapregionResource> {
     public MapregionResource() {
 super(MapregionResource.class);
 }
+
+
+    public MapregionResource(String y10_plus){
+        super(MapregionResource.class);
+        getSTAT_SET().set(Y10_PLUS, y10_plus);
+    }
 
     public Integer getY10Plus() {
         return get(Y10_PLUS, Integer.class);

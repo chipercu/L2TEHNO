@@ -5,20 +5,21 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.NpcElementResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "npc_element",
         primary_key = {ID},
         fields = {
-                @Field(name = ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ATK_ELEMENT , data_type = "tinyint" , defValue = @DefValue(Integer = -1)),
-                @Field(name = ELEM_ATK_POWER , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = FIRE_RES , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = WATER_RES , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = WIND_RES , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = EARTH_RES , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HOLY_RES , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DARK_RES , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ATK_ELEMENT , type = TINYINT , nullable = false , defValue = @DefValue(Integer = -1)),
+                @Field(name = ELEM_ATK_POWER , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = FIRE_RES , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = WATER_RES , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = WIND_RES , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = EARTH_RES , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HOLY_RES , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DARK_RES , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class NpcElementResource extends DataBaseTable<NpcElementResource> {
@@ -36,6 +37,12 @@ public class NpcElementResource extends DataBaseTable<NpcElementResource> {
     public NpcElementResource() {
 super(NpcElementResource.class);
 }
+
+
+    public NpcElementResource(String id){
+        super(NpcElementResource.class);
+        getSTAT_SET().set(ID, id);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

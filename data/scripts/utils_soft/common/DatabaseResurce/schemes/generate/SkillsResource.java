@@ -5,53 +5,54 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.SkillsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "skills",
         primary_key = {ID,LEVEL},
         fields = {
-                @Field(name = ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LEVEL , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LEARN , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = OPERATE_TYPE , data_type = "text"),
-                @Field(name = NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = IS_MAGIC , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MAGIC_LEVEL , data_type = "smallint"),
-                @Field(name = ACTIVATE_RATE , data_type = "smallint"),
-                @Field(name = EFFECT_POINT , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MP_CONSUME1 , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MP_CONSUME2 , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HP_CONSUME , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CAST_RANGE , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SKILL_HIT_TIME , data_type = "double" , defValue = @DefValue(Double = 0)),
-                @Field(name = COOL_TIME , data_type = "double"),
-                @Field(name = HIT_CANCEL_TIME , data_type = "double"),
-                @Field(name = POWER , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ENCHANT , data_type = "varchar" , defValue = @DefValue(String = "0")),
-                @Field(name = REUSE , data_type = "int" , defValue = @DefValue(Integer = -1)),
-                @Field(name = OLYMPIAD_USE , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = STATIC_HITTIME , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = STATIC_REUSE , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ABNORMAL_TIME , data_type = "int" , defValue = @DefValue(Integer = -1)),
-                @Field(name = ABNORMAL_TYPE , data_type = "varchar" , defValue = @DefValue(String = "none")),
-                @Field(name = ABNORMAL_LV , data_type = "smallint" , defValue = @DefValue(Integer = -1)),
-                @Field(name = ABNORMAL_INSTANT , data_type = "tinyint" , defValue = @DefValue(Integer = -1)),
-                @Field(name = BUFF_PROTECT_LEVEL , data_type = "tinyint" , defValue = @DefValue(Integer = -1)),
-                @Field(name = TRAIT , data_type = "varchar" , defValue = @DefValue(String = "trait_none")),
-                @Field(name = LV_BONUS_RATE , data_type = "int"),
-                @Field(name = BASIC_PROPERTY , data_type = "varchar"),
-                @Field(name = NEXT_ACTION , data_type = "varchar"),
-                @Field(name = TARGET_TYPE , data_type = "enum" , defValue = @DefValue(String = "none")),
-                @Field(name = AFFECT_SCOPE , data_type = "enum" , defValue = @DefValue(String = "none")),
-                @Field(name = AFFECT_OBJECT , data_type = "enum" , defValue = @DefValue(String = "none")),
-                @Field(name = AFFECT_RANGE , data_type = "int" , defValue = @DefValue(Integer = -1)),
-                @Field(name = AFFECT_LIMIT , data_type = "varchar" , defValue = @DefValue(String = "0;0")),
-                @Field(name = FAN_RANGE , data_type = "varchar" , defValue = @DefValue(String = "0;0;0;0")),
-                @Field(name = EFFECTIVE_RANGE , data_type = "int" , defValue = @DefValue(Integer = -1)),
-                @Field(name = EFFECT_POINT2 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = IRREPLACEABLE_BUFF , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ABNORMAL_VISUAL_EFFECT , data_type = "varchar" , defValue = @DefValue(String = "ave_none")),
-                @Field(name = ICON , data_type = "text"),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LEVEL , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LEARN , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = OPERATE_TYPE , type = TEXT , type_size = 65535 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = NAME , type = VARCHAR , type_size = 100 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = IS_MAGIC , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MAGIC_LEVEL , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = ACTIVATE_RATE , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = EFFECT_POINT , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MP_CONSUME1 , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MP_CONSUME2 , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HP_CONSUME , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CAST_RANGE , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SKILL_HIT_TIME , type = DOUBLE , nullable = false , defValue = @DefValue(Double = 0)),
+                @Field(name = COOL_TIME , type = DOUBLE , nullable = false , defValue = @DefValue(Double = null)),
+                @Field(name = HIT_CANCEL_TIME , type = DOUBLE , nullable = false , defValue = @DefValue(Double = null)),
+                @Field(name = POWER , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ENCHANT , type = VARCHAR , type_size = 50 , nullable = false , defValue = @DefValue(String = "0")),
+                @Field(name = REUSE , type = INT , nullable = true , defValue = @DefValue(Integer = -1)),
+                @Field(name = OLYMPIAD_USE , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = STATIC_HITTIME , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = STATIC_REUSE , type = TINYINT , nullable = true , defValue = @DefValue(Integer = 0)),
+                @Field(name = ABNORMAL_TIME , type = INT , nullable = true , defValue = @DefValue(Integer = -1)),
+                @Field(name = ABNORMAL_TYPE , type = VARCHAR , type_size = 40 , nullable = false , defValue = @DefValue(String = "none")),
+                @Field(name = ABNORMAL_LV , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = -1)),
+                @Field(name = ABNORMAL_INSTANT , type = TINYINT , nullable = true , defValue = @DefValue(Integer = -1)),
+                @Field(name = BUFF_PROTECT_LEVEL , type = TINYINT , nullable = true , defValue = @DefValue(Integer = -1)),
+                @Field(name = TRAIT , type = VARCHAR , type_size = 30 , nullable = false , defValue = @DefValue(String = "trait_none")),
+                @Field(name = LV_BONUS_RATE , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = BASIC_PROPERTY , type = VARCHAR , type_size = 5 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = NEXT_ACTION , type = VARCHAR , type_size = 10 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = TARGET_TYPE , type = ENUM , type_size = 17 , nullable = false , defValue = @DefValue(String = "none")),
+                @Field(name = AFFECT_SCOPE , type = ENUM , type_size = 19 , nullable = false , defValue = @DefValue(String = "none")),
+                @Field(name = AFFECT_OBJECT , type = ENUM , type_size = 20 , nullable = false , defValue = @DefValue(String = "none")),
+                @Field(name = AFFECT_RANGE , type = INT , nullable = false , defValue = @DefValue(Integer = -1)),
+                @Field(name = AFFECT_LIMIT , type = VARCHAR , type_size = 7 , nullable = false , defValue = @DefValue(String = "0;0")),
+                @Field(name = FAN_RANGE , type = VARCHAR , type_size = 16 , nullable = false , defValue = @DefValue(String = "0;0;0;0")),
+                @Field(name = EFFECTIVE_RANGE , type = INT , nullable = false , defValue = @DefValue(Integer = -1)),
+                @Field(name = EFFECT_POINT , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = IRREPLACEABLE_BUFF , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ABNORMAL_VISUAL_EFFECT , type = VARCHAR , type_size = 31 , nullable = false , defValue = @DefValue(String = "ave_none")),
+                @Field(name = ICON , type = TEXT , type_size = 65535 , nullable = false , defValue = @DefValue(String = "")),
         }
 )
 public class SkillsResource extends DataBaseTable<SkillsResource> {
@@ -94,7 +95,7 @@ public class SkillsResource extends DataBaseTable<SkillsResource> {
     public static final String AFFECT_LIMIT = "affect_limit";
     public static final String FAN_RANGE = "fan_range";
     public static final String EFFECTIVE_RANGE = "effective_range";
-    public static final String EFFECT_POINT2 = "effect_point";
+    public static final String EFFECT_POINT = "effect_point";
     public static final String IRREPLACEABLE_BUFF = "irreplaceable_buff";
     public static final String ABNORMAL_VISUAL_EFFECT = "abnormal_visual_effect";
     public static final String ICON = "icon";
@@ -102,6 +103,13 @@ public class SkillsResource extends DataBaseTable<SkillsResource> {
     public SkillsResource() {
 super(SkillsResource.class);
 }
+
+
+    public SkillsResource(String id,String level){
+        super(SkillsResource.class);
+        getSTAT_SET().set(ID, id);
+        getSTAT_SET().set(LEVEL, level);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);
@@ -217,8 +225,8 @@ super(SkillsResource.class);
     public Integer getEffectiveRange() {
         return get(EFFECTIVE_RANGE, Integer.class);
     }
-    public Integer getEffectPoint2() {
-        return get(EFFECT_POINT2, Integer.class);
+    public Integer getEffectPoint() {
+        return get(EFFECT_POINT, Integer.class);
     }
     public Integer getIrreplaceableBuff() {
         return get(IRREPLACEABLE_BUFF, Integer.class);
@@ -344,8 +352,8 @@ super(SkillsResource.class);
     public void setEffectiveRange(Integer value) {
         set(EFFECTIVE_RANGE, value);
     }
-    public void setEffectPoint2(Integer value) {
-        set(EFFECT_POINT2, value);
+    public void setEffectPoint(Integer value) {
+        set(EFFECT_POINT, value);
     }
     public void setIrreplaceableBuff(Integer value) {
         set(IRREPLACEABLE_BUFF, value);

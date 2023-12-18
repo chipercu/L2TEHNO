@@ -5,22 +5,23 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.GamesResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "games",
         primary_key = {ID,IDNR},
         fields = {
-                @Field(name = ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = IDNR , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NUMBER1 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NUMBER2 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PRIZE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = NEWPRIZE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = PRIZE1 , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = PRIZE2 , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = PRIZE3 , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = ENDDATE , data_type = "decimal" , defValue = @DefValue(Double = 0)),
-                @Field(name = FINISHED , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = IDNR , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NUMBER1 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NUMBER2 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PRIZE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = NEWPRIZE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = PRIZE1 , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = PRIZE2 , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = PRIZE3 , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = ENDDATE , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0)),
+                @Field(name = FINISHED , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class GamesResource extends DataBaseTable<GamesResource> {
@@ -40,6 +41,13 @@ public class GamesResource extends DataBaseTable<GamesResource> {
     public GamesResource() {
 super(GamesResource.class);
 }
+
+
+    public GamesResource(String id,String idnr){
+        super(GamesResource.class);
+        getSTAT_SET().set(ID, id);
+        getSTAT_SET().set(IDNR, idnr);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

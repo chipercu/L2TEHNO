@@ -5,28 +5,29 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.AccountsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "accounts",
         primary_key = {LOGIN},
         fields = {
-                @Field(name = LOGIN , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = PASSWORD , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = LASTACTIVE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ACCESS_LEVEL , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LAST_IP , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = LAST_SERVER , data_type = "int" , defValue = @DefValue(Integer = 1)),
-                @Field(name = COMMENTS , data_type = "text"),
-                @Field(name = EMAIL , data_type = "varchar" , defValue = @DefValue(String = "null@null")),
-                @Field(name = PAY_STAT , data_type = "tinyint" , defValue = @DefValue(Integer = 1)),
-                @Field(name = BONUS , data_type = "float" , defValue = @DefValue(Double = 1)),
-                @Field(name = BONUS_EXPIRE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = BAN_EXPIRES , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ALLOW_IPS , data_type = "varchar" , defValue = @DefValue(String = "*")),
-                @Field(name = POINTS , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOCK_EXPIRE , data_type = "int" , defValue = @DefValue(Integer = 604800)),
-                @Field(name = ACTIVATED , data_type = "tinyint" , defValue = @DefValue(Integer = 1)),
-                @Field(name = LAST_HWID , data_type = "varchar" , defValue = @DefValue(String = "")),
+                @Field(name = LOGIN , type = VARCHAR , type_size = 45 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = PASSWORD , type = VARCHAR , type_size = 256 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = LASTACTIVE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ACCESS_LEVEL , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LAST_IP , type = VARCHAR , type_size = 15 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = LAST_SERVER , type = INT , nullable = true , defValue = @DefValue(Integer = 1)),
+                @Field(name = COMMENTS , type = TEXT , type_size = 65535 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = EMAIL , type = VARCHAR , type_size = 45 , nullable = false , defValue = @DefValue(String = "null@null")),
+                @Field(name = PAY_STAT , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = BONUS , type = FLOAT , nullable = false , defValue = @DefValue(Double = 1)),
+                @Field(name = BONUS_EXPIRE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = BAN_EXPIRES , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ALLOW_IPS , type = VARCHAR , type_size = 256 , nullable = false , defValue = @DefValue(String = "*")),
+                @Field(name = POINTS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOCK_EXPIRE , type = INT , nullable = false , defValue = @DefValue(Integer = 604800)),
+                @Field(name = ACTIVATED , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = LAST_HWID , type = VARCHAR , type_size = 50 , nullable = true , defValue = @DefValue(String = "")),
         }
 )
 public class AccountsResource extends DataBaseTable<AccountsResource> {
@@ -52,6 +53,12 @@ public class AccountsResource extends DataBaseTable<AccountsResource> {
     public AccountsResource() {
 super(AccountsResource.class);
 }
+
+
+    public AccountsResource(String login){
+        super(AccountsResource.class);
+        getSTAT_SET().set(LOGIN, login);
+    }
 
     public String getLogin() {
         return get(LOGIN, String.class);

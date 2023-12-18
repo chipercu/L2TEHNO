@@ -5,29 +5,30 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ClanDataResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "clan_data",
         primary_key = {CLAN_ID},
         fields = {
-                @Field(name = CLAN_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CLAN_NAME , data_type = "varchar"),
-                @Field(name = CLAN_LEVEL , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HAS_CASTLE , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HAS_FORTRESS , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HAS_HIDEOUT , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ALLY_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LEADER_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CREST , data_type = "varbinary"),
-                @Field(name = LARGECREST , data_type = "varbinary"),
-                @Field(name = REPUTATION_SCORE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = WAREHOUSE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = EXPELLED_MEMBER , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LEAVED_ALLY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DISSOLVED_ALLY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = AUCTION_BID_AT , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = AIRSHIP , data_type = "smallint" , defValue = @DefValue(Integer = -1)),
-                @Field(name = POINT , data_type = "int" , defValue = @DefValue(Integer = 20)),
+                @Field(name = CLAN_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLAN_NAME , type = VARCHAR , type_size = 45 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = CLAN_LEVEL , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HAS_CASTLE , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HAS_FORTRESS , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HAS_HIDEOUT , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ALLY_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LEADER_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CREST , type = VARBINARY , type_size = 256 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = LARGECREST , type = VARBINARY , type_size = 8192 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = REPUTATION_SCORE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = WAREHOUSE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = EXPELLED_MEMBER , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LEAVED_ALLY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DISSOLVED_ALLY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = AUCTION_BID_AT , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = AIRSHIP , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = -1)),
+                @Field(name = _POINT , type = INT , nullable = false , defValue = @DefValue(Integer = 20)),
         }
 )
 public class ClanDataResource extends DataBaseTable<ClanDataResource> {
@@ -49,11 +50,17 @@ public class ClanDataResource extends DataBaseTable<ClanDataResource> {
     public static final String DISSOLVED_ALLY = "dissolved_ally";
     public static final String AUCTION_BID_AT = "auction_bid_at";
     public static final String AIRSHIP = "airship";
-    public static final String POINT = "point";
+    public static final String _POINT = "point";
 
     public ClanDataResource() {
 super(ClanDataResource.class);
 }
+
+
+    public ClanDataResource(String clan_id){
+        super(ClanDataResource.class);
+        getSTAT_SET().set(CLAN_ID, clan_id);
+    }
 
     public Integer getClanId() {
         return get(CLAN_ID, Integer.class);
@@ -107,7 +114,7 @@ super(ClanDataResource.class);
         return get(AIRSHIP, Integer.class);
     }
     public Integer getPoint() {
-        return get(POINT, Integer.class);
+        return get(_POINT, Integer.class);
     }
 
     public void setClanId(Integer value) {
@@ -162,7 +169,7 @@ super(ClanDataResource.class);
         set(AIRSHIP, value);
     }
     public void setPoint(Integer value) {
-        set(POINT, value);
+        set(_POINT, value);
     }
 
 }

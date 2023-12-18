@@ -5,21 +5,22 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.BbsNewsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "bbs_news",
         primary_key = {ID},
         fields = {
-                @Field(name = ID , data_type = "int"),
-                @Field(name = TYPE , data_type = "tinyint"),
-                @Field(name = TITLE_RU , data_type = "text"),
-                @Field(name = TITLE_EN , data_type = "text"),
-                @Field(name = TEXT_RU , data_type = "text"),
-                @Field(name = TEXT_EN , data_type = "text"),
-                @Field(name = INFO_RU , data_type = "varchar"),
-                @Field(name = INFO_EN , data_type = "varchar"),
-                @Field(name = AUTHOR , data_type = "varchar"),
-                @Field(name = DATE , data_type = "date"),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = TYPE , type = TINYINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = TITLE_RU , type = TEXT , type_size = 65535 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = TITLE_EN , type = TEXT , type_size = 65535 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = TEXT_RU , type = TEXT , type_size = 65535 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = TEXT_EN , type = TEXT , type_size = 65535 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = INFO_RU , type = VARCHAR , type_size = 32 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = INFO_EN , type = VARCHAR , type_size = 32 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = AUTHOR , type = VARCHAR , type_size = 32 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = _DATE , type = DATE , nullable = false , defValue = @DefValue(String = "")),
         }
 )
 public class BbsNewsResource extends DataBaseTable<BbsNewsResource> {
@@ -33,11 +34,17 @@ public class BbsNewsResource extends DataBaseTable<BbsNewsResource> {
     public static final String INFO_RU = "info_ru";
     public static final String INFO_EN = "info_en";
     public static final String AUTHOR = "author";
-    public static final String DATE = "date";
+    public static final String _DATE = "date";
 
     public BbsNewsResource() {
 super(BbsNewsResource.class);
 }
+
+
+    public BbsNewsResource(String id){
+        super(BbsNewsResource.class);
+        getSTAT_SET().set(ID, id);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);
@@ -67,7 +74,7 @@ super(BbsNewsResource.class);
         return get(AUTHOR, String.class);
     }
     public String getDate() {
-        return get(DATE, String.class);
+        return get(_DATE, String.class);
     }
 
     public void setId(Integer value) {
@@ -98,7 +105,7 @@ super(BbsNewsResource.class);
         set(AUTHOR, value);
     }
     public void setDate(String value) {
-        set(DATE, value);
+        set(_DATE, value);
     }
 
 }

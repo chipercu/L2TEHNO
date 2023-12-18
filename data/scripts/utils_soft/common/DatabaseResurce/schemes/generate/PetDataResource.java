@@ -5,41 +5,42 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.PetDataResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "pet_data",
         primary_key = {ID,LEVEL},
         fields = {
-                @Field(name = TYPE , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LEVEL , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = EXP , data_type = "decimal" , defValue = @DefValue(Double = 0)),
-                @Field(name = HP , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MP , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PATK , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PDEF , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MATK , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MDEF , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ACC , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = EVASION , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CRIT , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SPEED , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ATK_SPEED , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CAST_SPEED , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MAX_MEAL , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = BATTLE_MEAL , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NORMAL_MEAL , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOAD_MAX , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HPREGEN , data_type = "decimal" , defValue = @DefValue(Double = 0.00)),
-                @Field(name = MPREGEN , data_type = "decimal" , defValue = @DefValue(Double = 0.00)),
-                @Field(name = GET_EXP_TYPE , data_type = "decimal" , defValue = @DefValue(Double = 0.00)),
-                @Field(name = SPIRITSHOT_COUNT , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SOULSHOT_COUNT , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ITEM , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = FOOD , data_type = "int" , defValue = @DefValue(Integer = -1)),
-                @Field(name = ADD_MEAL , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HUNGRY_LIMIT , data_type = "int" , defValue = @DefValue(Integer = 55)),
-                @Field(name = MOUNTABE , data_type = "enum" , defValue = @DefValue(Boolean = false)),
+                @Field(name = TYPE , type = VARCHAR , type_size = 25 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LEVEL , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = EXP , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0)),
+                @Field(name = HP , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MP , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PATK , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PDEF , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MATK , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MDEF , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ACC , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = EVASION , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CRIT , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SPEED , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ATK_SPEED , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CAST_SPEED , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MAX_MEAL , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = BATTLE_MEAL , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NORMAL_MEAL , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOAD_MAX , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HPREGEN , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0.00)),
+                @Field(name = MPREGEN , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0.00)),
+                @Field(name = GET_EXP_TYPE , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0.00)),
+                @Field(name = SPIRITSHOT_COUNT , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SOULSHOT_COUNT , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ITEM , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = FOOD , type = INT , nullable = false , defValue = @DefValue(Integer = -1)),
+                @Field(name = ADD_MEAL , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HUNGRY_LIMIT , type = INT , nullable = false , defValue = @DefValue(Integer = 55)),
+                @Field(name = MOUNTABE , type = ENUM , type_size = 5 , nullable = false , defValue = @DefValue(Boolean = false)),
         }
 )
 public class PetDataResource extends DataBaseTable<PetDataResource> {
@@ -78,6 +79,13 @@ public class PetDataResource extends DataBaseTable<PetDataResource> {
     public PetDataResource() {
 super(PetDataResource.class);
 }
+
+
+    public PetDataResource(String id,String level){
+        super(PetDataResource.class);
+        getSTAT_SET().set(ID, id);
+        getSTAT_SET().set(LEVEL, level);
+    }
 
     public String getType() {
         return get(TYPE, String.class);

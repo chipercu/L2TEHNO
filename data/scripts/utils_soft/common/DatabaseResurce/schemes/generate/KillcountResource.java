@@ -5,14 +5,15 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.KillcountResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "killcount",
         primary_key = {CHAR_ID,NPC_ID},
         fields = {
-                @Field(name = CHAR_ID , data_type = "int"),
-                @Field(name = NPC_ID , data_type = "smallint"),
-                @Field(name = COUNT , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = CHAR_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = NPC_ID , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = COUNT , type = INT , nullable = true , defValue = @DefValue(Integer = 0)),
         }
 )
 public class KillcountResource extends DataBaseTable<KillcountResource> {
@@ -24,6 +25,13 @@ public class KillcountResource extends DataBaseTable<KillcountResource> {
     public KillcountResource() {
 super(KillcountResource.class);
 }
+
+
+    public KillcountResource(String char_id,String npc_id){
+        super(KillcountResource.class);
+        getSTAT_SET().set(CHAR_ID, char_id);
+        getSTAT_SET().set(NPC_ID, npc_id);
+    }
 
     public Integer getCharId() {
         return get(CHAR_ID, Integer.class);

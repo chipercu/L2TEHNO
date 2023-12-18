@@ -5,16 +5,17 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ClanSkillsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "clan_skills",
         primary_key = {CLAN_ID,SKILL_ID,SQUAD_INDEX},
         fields = {
-                @Field(name = CLAN_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SKILL_ID , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SKILL_LEVEL , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SKILL_NAME , data_type = "varchar"),
-                @Field(name = SQUAD_INDEX , data_type = "smallint" , defValue = @DefValue(Integer = -1)),
+                @Field(name = CLAN_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SKILL_ID , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SKILL_LEVEL , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SKILL_NAME , type = VARCHAR , type_size = 26 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = SQUAD_INDEX , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = -1)),
         }
 )
 public class ClanSkillsResource extends DataBaseTable<ClanSkillsResource> {
@@ -28,6 +29,14 @@ public class ClanSkillsResource extends DataBaseTable<ClanSkillsResource> {
     public ClanSkillsResource() {
 super(ClanSkillsResource.class);
 }
+
+
+    public ClanSkillsResource(String clan_id,String skill_id,String squad_index){
+        super(ClanSkillsResource.class);
+        getSTAT_SET().set(CLAN_ID, clan_id);
+        getSTAT_SET().set(SKILL_ID, skill_id);
+        getSTAT_SET().set(SQUAD_INDEX, squad_index);
+    }
 
     public Integer getClanId() {
         return get(CLAN_ID, Integer.class);

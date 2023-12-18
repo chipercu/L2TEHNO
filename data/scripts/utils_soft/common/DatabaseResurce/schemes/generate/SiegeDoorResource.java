@@ -5,13 +5,14 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.SiegeDoorResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "siege_door",
         primary_key = {ID},
         fields = {
-                @Field(name = UNIT_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = UNIT_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class SiegeDoorResource extends DataBaseTable<SiegeDoorResource> {
@@ -22,6 +23,12 @@ public class SiegeDoorResource extends DataBaseTable<SiegeDoorResource> {
     public SiegeDoorResource() {
 super(SiegeDoorResource.class);
 }
+
+
+    public SiegeDoorResource(String id){
+        super(SiegeDoorResource.class);
+        getSTAT_SET().set(ID, id);
+    }
 
     public Integer getUnitId() {
         return get(UNIT_ID, Integer.class);

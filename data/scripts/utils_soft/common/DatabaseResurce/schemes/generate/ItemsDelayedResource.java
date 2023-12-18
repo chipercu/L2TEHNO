@@ -5,27 +5,28 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ItemsDelayedResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "items_delayed",
         primary_key = {PAYMENT_ID},
         fields = {
-                @Field(name = PAYMENT_ID , data_type = "int"),
-                @Field(name = OWNER_ID , data_type = "int"),
-                @Field(name = ITEM_ID , data_type = "smallint"),
-                @Field(name = COUNT , data_type = "int" , defValue = @DefValue(Integer = 1)),
-                @Field(name = ENCHANT_LEVEL , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ATTRIBUTE , data_type = "smallint" , defValue = @DefValue(Integer = -1)),
-                @Field(name = ATTRIBUTE_LEVEL , data_type = "smallint" , defValue = @DefValue(Integer = -1)),
-                @Field(name = ELEM0 , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ELEM1 , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ELEM2 , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ELEM3 , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ELEM4 , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ELEM5 , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = FLAGS , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PAYMENT_STATUS , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DESCRIPTION , data_type = "varchar"),
+                @Field(name = PAYMENT_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = OWNER_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = ITEM_ID , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = COUNT , type = INT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = ENCHANT_LEVEL , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ATTRIBUTE , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = -1)),
+                @Field(name = ATTRIBUTE_LEVEL , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = -1)),
+                @Field(name = ELEM0 , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ELEM1 , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ELEM2 , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ELEM3 , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ELEM4 , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ELEM5 , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = FLAGS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PAYMENT_STATUS , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DESCRIPTION , type = VARCHAR , type_size = 255 , nullable = true , defValue = @DefValue(String = "")),
         }
 )
 public class ItemsDelayedResource extends DataBaseTable<ItemsDelayedResource> {
@@ -50,6 +51,12 @@ public class ItemsDelayedResource extends DataBaseTable<ItemsDelayedResource> {
     public ItemsDelayedResource() {
 super(ItemsDelayedResource.class);
 }
+
+
+    public ItemsDelayedResource(String payment_id){
+        super(ItemsDelayedResource.class);
+        getSTAT_SET().set(PAYMENT_ID, payment_id);
+    }
 
     public Integer getPaymentId() {
         return get(PAYMENT_ID, Integer.class);

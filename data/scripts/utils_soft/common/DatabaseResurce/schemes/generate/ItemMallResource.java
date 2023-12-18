@@ -5,26 +5,27 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ItemMallResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "item_mall",
         primary_key = {ORD,ITEM_ID},
         fields = {
-                @Field(name = ORD , data_type = "int"),
-                @Field(name = NAME , data_type = "varchar"),
-                @Field(name = ITEM_ID , data_type = "int"),
-                @Field(name = COUNT , data_type = "int" , defValue = @DefValue(Integer = 1)),
-                @Field(name = PRICE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = I_CATEGORY2 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ON_SALE , data_type = "int" , defValue = @DefValue(Integer = 1)),
-                @Field(name = I_START_SALE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = I_END_SALE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = I_START_HOUR , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = I_START_MIN , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = I_END_HOUR , data_type = "int" , defValue = @DefValue(Integer = 23)),
-                @Field(name = I_END_MIN , data_type = "int" , defValue = @DefValue(Integer = 59)),
-                @Field(name = I_STOCK , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = I_MAX_STOCK , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = ORD , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = NAME , type = VARCHAR , type_size = 255 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = ITEM_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = COUNT , type = INT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = PRICE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = I_CATEGORY2 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ON_SALE , type = INT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = I_START_SALE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = I_END_SALE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = I_START_HOUR , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = I_START_MIN , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = I_END_HOUR , type = INT , nullable = false , defValue = @DefValue(Integer = 23)),
+                @Field(name = I_END_MIN , type = INT , nullable = false , defValue = @DefValue(Integer = 59)),
+                @Field(name = I_STOCK , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = I_MAX_STOCK , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class ItemMallResource extends DataBaseTable<ItemMallResource> {
@@ -48,6 +49,13 @@ public class ItemMallResource extends DataBaseTable<ItemMallResource> {
     public ItemMallResource() {
 super(ItemMallResource.class);
 }
+
+
+    public ItemMallResource(String ord,String itemId){
+        super(ItemMallResource.class);
+        getSTAT_SET().set(ORD, ord);
+        getSTAT_SET().set(ITEM_ID, itemId);
+    }
 
     public Integer getOrd() {
         return get(ORD, Integer.class);

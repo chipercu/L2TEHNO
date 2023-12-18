@@ -5,22 +5,23 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.PetitionsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "petitions",
         primary_key = {},
         fields = {
-                @Field(name = SERV_ID , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ACT_TIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PETITION_TYPE , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ACTOR , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOCATION_X , data_type = "mediumint"),
-                @Field(name = LOCATION_Y , data_type = "mediumint"),
-                @Field(name = LOCATION_Z , data_type = "smallint"),
-                @Field(name = PETITION_TEXT , data_type = "text"),
-                @Field(name = S_TR_ACTOR , data_type = "varchar"),
-                @Field(name = S_TR_ACTOR_ACCOUNT , data_type = "varchar"),
-                @Field(name = PETITION_STATUS , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
+                @Field(name = SERV_ID , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ACT_TIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PETITION_TYPE , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ACTOR , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOCATION_X , type = MEDIUMINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = LOCATION_Y , type = MEDIUMINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = LOCATION_Z , type = SMALLINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = PETITION_TEXT , type = TEXT , type_size = 65535 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = S_TR_ACTOR , type = VARCHAR , type_size = 50 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = S_TR_ACTOR_ACCOUNT , type = VARCHAR , type_size = 50 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = PETITION_STATUS , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class PetitionsResource extends DataBaseTable<PetitionsResource> {

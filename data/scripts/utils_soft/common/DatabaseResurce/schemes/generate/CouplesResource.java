@@ -5,17 +5,18 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CouplesResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "couples",
         primary_key = {ID},
         fields = {
-                @Field(name = ID , data_type = "int"),
-                @Field(name = PLAYER1_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PLAYER2_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MARIED , data_type = "varchar"),
-                @Field(name = AFFIANCED_DATE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = WEDDING_DATE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = PLAYER1_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PLAYER2_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MARIED , type = VARCHAR , type_size = 5 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = AFFIANCED_DATE , type = BIGINT , nullable = true , defValue = @DefValue(Long = 0)),
+                @Field(name = WEDDING_DATE , type = BIGINT , nullable = true , defValue = @DefValue(Long = 0)),
         }
 )
 public class CouplesResource extends DataBaseTable<CouplesResource> {
@@ -30,6 +31,12 @@ public class CouplesResource extends DataBaseTable<CouplesResource> {
     public CouplesResource() {
 super(CouplesResource.class);
 }
+
+
+    public CouplesResource(String id){
+        super(CouplesResource.class);
+        getSTAT_SET().set(ID, id);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

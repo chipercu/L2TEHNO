@@ -5,24 +5,25 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.SevenSignsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "seven_signs",
         primary_key = {CHAR_OBJ_ID},
         fields = {
-                @Field(name = CHAR_OBJ_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CABAL , data_type = "enum" , defValue = @DefValue(String = "No Cabal")),
-                @Field(name = SEAL , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DAWN_RED_STONES , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DAWN_GREEN_STONES , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DAWN_BLUE_STONES , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DAWN_ANCIENT_ADENA_AMOUNT , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DAWN_CONTRIBUTION_SCORE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DUSK_RED_STONES , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DUSK_GREEN_STONES , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DUSK_BLUE_STONES , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DUSK_ANCIENT_ADENA_AMOUNT , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DUSK_CONTRIBUTION_SCORE , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = CHAR_OBJ_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CABAL , type = ENUM , type_size = 8 , nullable = false , defValue = @DefValue(String = "No Cabal")),
+                @Field(name = SEAL , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DAWN_RED_STONES , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DAWN_GREEN_STONES , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DAWN_BLUE_STONES , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DAWN_ANCIENT_ADENA_AMOUNT , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DAWN_CONTRIBUTION_SCORE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DUSK_RED_STONES , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DUSK_GREEN_STONES , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DUSK_BLUE_STONES , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DUSK_ANCIENT_ADENA_AMOUNT , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DUSK_CONTRIBUTION_SCORE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class SevenSignsResource extends DataBaseTable<SevenSignsResource> {
@@ -44,6 +45,12 @@ public class SevenSignsResource extends DataBaseTable<SevenSignsResource> {
     public SevenSignsResource() {
 super(SevenSignsResource.class);
 }
+
+
+    public SevenSignsResource(String char_obj_id){
+        super(SevenSignsResource.class);
+        getSTAT_SET().set(CHAR_OBJ_ID, char_obj_id);
+    }
 
     public Integer getCharObjId() {
         return get(CHAR_OBJ_ID, Integer.class);

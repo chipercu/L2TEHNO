@@ -5,18 +5,19 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.GlobalTasksResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "global_tasks",
         primary_key = {ID},
         fields = {
-                @Field(name = ID , data_type = "int"),
-                @Field(name = TASK , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = TYPE , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = LAST_ACTIVATION , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = PARAM1 , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = PARAM2 , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = PARAM3 , data_type = "varchar" , defValue = @DefValue(String = "")),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = TASK , type = VARCHAR , type_size = 50 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = TYPE , type = VARCHAR , type_size = 50 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = LAST_ACTIVATION , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = PARAM1 , type = VARCHAR , type_size = 100 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = PARAM2 , type = VARCHAR , type_size = 100 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = PARAM3 , type = VARCHAR , type_size = 255 , nullable = false , defValue = @DefValue(String = "")),
         }
 )
 public class GlobalTasksResource extends DataBaseTable<GlobalTasksResource> {
@@ -32,6 +33,12 @@ public class GlobalTasksResource extends DataBaseTable<GlobalTasksResource> {
     public GlobalTasksResource() {
 super(GlobalTasksResource.class);
 }
+
+
+    public GlobalTasksResource(String id){
+        super(GlobalTasksResource.class);
+        getSTAT_SET().set(ID, id);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

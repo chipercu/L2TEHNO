@@ -5,24 +5,25 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.FourSepulchersSpawnlistResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "four_sepulchers_spawnlist",
         primary_key = {ID},
         fields = {
-                @Field(name = ID , data_type = "int"),
-                @Field(name = LOCATION , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = COUNT , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NPC_TEMPLATEID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOCX , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOCY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LOCZ , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = RANDOMX , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = RANDOMY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HEADING , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = RESPAWN_DELAY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = KEY_NPC_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SPAWNTYPE , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = LOCATION , type = VARCHAR , type_size = 19 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = COUNT , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NPC_TEMPLATEID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOCX , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOCY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LOCZ , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = RANDOMX , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = RANDOMY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HEADING , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = RESPAWN_DELAY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = KEY_NPC_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SPAWNTYPE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class FourSepulchersSpawnlistResource extends DataBaseTable<FourSepulchersSpawnlistResource> {
@@ -44,6 +45,12 @@ public class FourSepulchersSpawnlistResource extends DataBaseTable<FourSepulcher
     public FourSepulchersSpawnlistResource() {
 super(FourSepulchersSpawnlistResource.class);
 }
+
+
+    public FourSepulchersSpawnlistResource(String id){
+        super(FourSepulchersSpawnlistResource.class);
+        getSTAT_SET().set(ID, id);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

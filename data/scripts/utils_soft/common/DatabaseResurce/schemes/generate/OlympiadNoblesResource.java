@@ -5,23 +5,24 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.OlympiadNoblesResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "olympiad_nobles",
         primary_key = {CHAR_ID},
         fields = {
-                @Field(name = CHAR_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CLASS_ID , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CHAR_NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = OLYMPIAD_POINTS , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = OLYMPIAD_POINTS_PAST , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = OLYMPIAD_POINTS_PAST_STATIC , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = COMPETITIONS_DONE , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = COMPETITIONS_WIN , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = COMPETITIONS_LOOSE , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NONECLASS_COMPETITIONS , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CLASS_COMPETITIONS , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = TEAM_COMPETITIONS , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
+                @Field(name = CHAR_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLASS_ID , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CHAR_NAME , type = VARCHAR , type_size = 45 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = OLYMPIAD_POINTS , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = OLYMPIAD_POINTS_PAST , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = OLYMPIAD_POINTS_PAST_STATIC , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = COMPETITIONS_DONE , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = COMPETITIONS_WIN , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = COMPETITIONS_LOOSE , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NONECLASS_COMPETITIONS , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLASS_COMPETITIONS , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = TEAM_COMPETITIONS , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class OlympiadNoblesResource extends DataBaseTable<OlympiadNoblesResource> {
@@ -42,6 +43,12 @@ public class OlympiadNoblesResource extends DataBaseTable<OlympiadNoblesResource
     public OlympiadNoblesResource() {
 super(OlympiadNoblesResource.class);
 }
+
+
+    public OlympiadNoblesResource(String char_id){
+        super(OlympiadNoblesResource.class);
+        getSTAT_SET().set(CHAR_ID, char_id);
+    }
 
     public Integer getCharId() {
         return get(CHAR_ID, Integer.class);

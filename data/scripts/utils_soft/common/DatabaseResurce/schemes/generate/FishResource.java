@@ -5,22 +5,23 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.FishResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "fish",
         primary_key = {ID,LEVEL},
         fields = {
-                @Field(name = ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = LEVEL , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NAME , data_type = "varchar" , defValue = @DefValue(String = "")),
-                @Field(name = HP , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HPREGEN , data_type = "int" , defValue = @DefValue(Integer = 5)),
-                @Field(name = FISH_TYPE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = FISH_GROUP , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = FISH_GUTS , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = GUTS_CHECK_TIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = WAIT_TIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = COMBAT_TIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = LEVEL , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NAME , type = VARCHAR , type_size = 40 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = HP , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HPREGEN , type = INT , nullable = false , defValue = @DefValue(Integer = 5)),
+                @Field(name = FISH_TYPE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = FISH_GROUP , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = FISH_GUTS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = GUTS_CHECK_TIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = WAIT_TIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = COMBAT_TIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class FishResource extends DataBaseTable<FishResource> {
@@ -40,6 +41,13 @@ public class FishResource extends DataBaseTable<FishResource> {
     public FishResource() {
 super(FishResource.class);
 }
+
+
+    public FishResource(String id,String level){
+        super(FishResource.class);
+        getSTAT_SET().set(ID, id);
+        getSTAT_SET().set(LEVEL, level);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

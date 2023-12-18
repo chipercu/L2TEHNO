@@ -5,16 +5,17 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CharacterPremiumItemsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "character_premium_items",
         primary_key = {},
         fields = {
-                @Field(name = CHAR_ID , data_type = "int"),
-                @Field(name = ITEM_NUM , data_type = "int"),
-                @Field(name = ITEM_ID , data_type = "int"),
-                @Field(name = ITEM_COUNT , data_type = "bigint"),
-                @Field(name = ITEM_SENDER , data_type = "varchar"),
+                @Field(name = CHAR_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = ITEM_NUM , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = ITEM_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = ITEM_COUNT , type = BIGINT , nullable = false , defValue = @DefValue(Long = null)),
+                @Field(name = ITEM_SENDER , type = VARCHAR , type_size = 50 , nullable = false , defValue = @DefValue(String = "")),
         }
 )
 public class CharacterPremiumItemsResource extends DataBaseTable<CharacterPremiumItemsResource> {

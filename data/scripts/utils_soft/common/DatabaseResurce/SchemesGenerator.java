@@ -4,11 +4,12 @@ import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
-import l2open.util.Strings;
+import utils_soft.common.DatabaseResurce.anotations.DATA_TYPE;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.JDBCType;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,8 @@ public class SchemesGenerator {
             classBuilder.append("import utils_soft.common.DatabaseResurce.anotations.Field;\n");
             classBuilder.append("import utils_soft.common.DatabaseResurce.anotations.Table;\n");
             classBuilder.append("import utils_soft.common.DatabaseResurce.DataBaseTable;\n");
-            classBuilder.append("import static utils_soft.common.DatabaseResurce.schemes.generate.").append(className).append(".*;\n\n");
+            classBuilder.append("import static utils_soft.common.DatabaseResurce.schemes.generate.").append(className).append(".*;\n");
+            classBuilder.append("import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;\n\n");
             classBuilder.append("@Table(\n");
             classBuilder.append("        name = \"").append(scheme).append("\",\n");
 
@@ -42,11 +44,19 @@ public class SchemesGenerator {
             for (Column column: columns){
                 String name = convertToSnakeCase(column.name);
                 String type = getType(column.columnType);
-                classBuilder.append("                @Field(name = ").append(name)
-                        .append(" , data_type = \"").append(column.dataType).append("\"");
-                if (column.defaultValue != null){
-                    classBuilder.append(" , defValue = @DefValue(").append(type).append(" = ").append(column.defaultValue).append(")");
+                classBuilder.append("                @Field(name = ").append(name);
+                classBuilder.append(" , type = ").append(column.type);
+
+                if (column.type_size != 0){
+                    classBuilder.append(" , type_size = ").append(column.type_size);
                 }
+
+                classBuilder.append(" , nullable = ").append(column.isNullable);
+
+//                if (column.defaultValue != null){
+//                    classBuilder.append(" , defValue = @DefValue(").append(type).append(" = ").append(column.defaultValue).append(")");
+//                }
+                classBuilder.append(" , defValue = @DefValue(").append(type).append(" = ").append(column.defaultValue).append(")");
                 classBuilder.append("),\n");
             }
             classBuilder.append("        }\n");
@@ -59,6 +69,28 @@ public class SchemesGenerator {
             }
 
             classBuilder.append("\n    public ").append(className).append("() {\n").append("super(").append(className).append(".class);\n}\n\n");
+
+            final long count = columns.stream().filter(column -> column.isPrimaryKey).count();
+
+            if (count > 0){
+                classBuilder.append("\n    public ").append(className).append("(");
+
+
+                final List<Column> notNullable = columns.stream()
+                        .filter(column -> column.isPrimaryKey || (column.isNullable && getType(column.columnType).equals("String") && isEmpty(column.defaultValue)))
+                        .collect(Collectors.toList());
+                List<String> params = new ArrayList<>();
+                for (Column column: notNullable){
+                    params.add(getType(" " + column.columnType) + " " + column.name);
+                }
+                classBuilder.append(String.join(",", params)).append("){\n");
+                classBuilder.append("        super(").append(className).append(".class);\n");
+
+                for (Column column: notNullable){
+                    classBuilder.append("        getSTAT_SET().set(").append(convertToSnakeCase(column.name)).append(", ").append(column.name).append(");\n");
+                }
+                classBuilder.append("    }\n\n");
+            }
 
             for (Column column: columns){
                 String name = convertToSnakeCase(column.name);
@@ -95,6 +127,13 @@ public class SchemesGenerator {
         }
     }
 
+    private static boolean isEmpty(Object defValue){
+        if (defValue == null){
+            return true;
+        }
+        return String.valueOf(defValue).isEmpty();
+    }
+
 
     private static String getType(String name){
         String type = "Object";
@@ -116,7 +155,6 @@ public class SchemesGenerator {
         return type;
     }
 
-
     private static List<Column> getColumns(String schemeName){
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
@@ -128,11 +166,15 @@ public class SchemesGenerator {
             rs = statement.executeQuery();
             while (rs.next()){
                 final String name = rs.getString("COLUMN_NAME");
-                final String data_type = rs.getString("DATA_TYPE");
+                final String dataType = rs.getString("DATA_TYPE").toUpperCase();
+                final DATA_TYPE type = DATA_TYPE.valueOf(dataType);
+                final int type_size = rs.getInt("CHARACTER_MAXIMUM_LENGTH");
                 final String column_type = rs.getString("COLUMN_TYPE");
                 final Object aDefault = rs.getString("COLUMN_DEFAULT");
                 final boolean isPrimaryKey = rs.getString("COLUMN_KEY") != null && rs.getString("COLUMN_KEY").equalsIgnoreCase("PRI");
-                names.add(new Column(name, data_type, aDefault, column_type, isPrimaryKey));
+                final boolean isNullable = rs.getString("IS_NULLABLE").equals("YES");
+
+                names.add(new Column(name, type,type_size, aDefault, column_type, isPrimaryKey, isNullable));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -179,7 +221,14 @@ public class SchemesGenerator {
             return input; // обработка пустых строк или null
         }
         String converted = input.replaceAll("(.)(\\p{Upper})", "$1_$2");
-        return converted.toUpperCase();
+        String upperCase = converted.toUpperCase();
+
+        try {
+            DATA_TYPE enumValue = DATA_TYPE.valueOf(upperCase);
+            upperCase = "_" + upperCase;
+        } catch (IllegalArgumentException ignored) {}
+
+        return upperCase;
     }
 
     public static String convertToCamelCase(String input) {
@@ -205,37 +254,46 @@ public class SchemesGenerator {
 
     public static class Column{
         String name;
-        String dataType;
+        DATA_TYPE type;
+        int type_size;
         Object defaultValue;
         String columnType;
         boolean isPrimaryKey;
+        boolean isNullable;
 
-        public Column(String name, String dataType, Object defaultValue, String columnType, boolean isPrimaryKey) {
+        public Column(String name, DATA_TYPE type, int type_size, Object defaultValue, String columnType, boolean isPrimaryKey, boolean isNullable) {
             this.name = name;
             this.columnType = columnType;
-            this.dataType = dataType;
+            this.type = type;
+            this.type_size = type_size;
             this.defaultValue = getDefaultValue(defaultValue);
             this.isPrimaryKey = isPrimaryKey;
+            this.isNullable = isNullable;
 
         }
 
         private Object getDefaultValue(Object defaultValue){
-            if (defaultValue == null){
-                return null;
-            }
-            if (defaultValue.toString().equalsIgnoreCase("null")) {
-                return null;
-            }
+
 
             final String type = getType(columnType);
             if (type.equals("String")){
+
+                if (defaultValue == null){
+                    return  "\"\"";
+                }
+
                 defaultValue = defaultValue.toString().replaceAll("'", "\"");
-                if (defaultValue.toString().isEmpty()){
-                    defaultValue = "";
+                if (defaultValue.toString().isEmpty() || defaultValue.toString().equalsIgnoreCase("null")){
+                    defaultValue = "\"\"";
                 }
             } else if (type.equals("Boolean")) {
                 return Boolean.parseBoolean(defaultValue.toString());
             }
+
+            if (defaultValue == null){
+                return null;
+            }
+
             return defaultValue;
         }
 

@@ -5,26 +5,27 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CharacterSubclassesResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "character_subclasses",
         primary_key = {CHAR_OBJ_ID,CLASS_ID},
         fields = {
-                @Field(name = CHAR_OBJ_ID , data_type = "int"),
-                @Field(name = CLASS_ID , data_type = "tinyint"),
-                @Field(name = LEVEL , data_type = "tinyint" , defValue = @DefValue(Integer = 1)),
-                @Field(name = EXP , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = SP , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = CUR_HP , data_type = "decimal" , defValue = @DefValue(Double = 0.0000)),
-                @Field(name = CUR_MP , data_type = "decimal" , defValue = @DefValue(Double = 0.0000)),
-                @Field(name = CUR_CP , data_type = "decimal" , defValue = @DefValue(Double = 0.0000)),
-                @Field(name = MAX_HP , data_type = "mediumint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MAX_MP , data_type = "mediumint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = MAX_CP , data_type = "mediumint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ACTIVE , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = IS_BASE , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DEATH_PENALTY , data_type = "tinyint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CERTIFICATION , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
+                @Field(name = CHAR_OBJ_ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = CLASS_ID , type = TINYINT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = LEVEL , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = EXP , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = SP , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = CUR_HP , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0.0000)),
+                @Field(name = CUR_MP , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0.0000)),
+                @Field(name = CUR_CP , type = DECIMAL , nullable = false , defValue = @DefValue(Double = 0.0000)),
+                @Field(name = MAX_HP , type = MEDIUMINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MAX_MP , type = MEDIUMINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = MAX_CP , type = MEDIUMINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ACTIVE , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = IS_BASE , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DEATH_PENALTY , type = TINYINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CERTIFICATION , type = SMALLINT , nullable = true , defValue = @DefValue(Integer = 0)),
         }
 )
 public class CharacterSubclassesResource extends DataBaseTable<CharacterSubclassesResource> {
@@ -48,6 +49,13 @@ public class CharacterSubclassesResource extends DataBaseTable<CharacterSubclass
     public CharacterSubclassesResource() {
 super(CharacterSubclassesResource.class);
 }
+
+
+    public CharacterSubclassesResource(String char_obj_id,String class_id){
+        super(CharacterSubclassesResource.class);
+        getSTAT_SET().set(CHAR_OBJ_ID, char_obj_id);
+        getSTAT_SET().set(CLASS_ID, class_id);
+    }
 
     public Integer getCharObjId() {
         return get(CHAR_OBJ_ID, Integer.class);

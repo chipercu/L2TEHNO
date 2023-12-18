@@ -5,15 +5,16 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.DdosIpsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "ddos_ips",
         primary_key = {IP},
         fields = {
-                @Field(name = IP , data_type = "varchar"),
-                @Field(name = ADMIN , data_type = "varchar"),
-                @Field(name = EXPIRETIME , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = COMMENTS , data_type = "varchar"),
+                @Field(name = IP , type = VARCHAR , type_size = 15 , nullable = false , defValue = @DefValue(String = "")),
+                @Field(name = ADMIN , type = VARCHAR , type_size = 45 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = EXPIRETIME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = COMMENTS , type = VARCHAR , type_size = 255 , nullable = true , defValue = @DefValue(String = "")),
         }
 )
 public class DdosIpsResource extends DataBaseTable<DdosIpsResource> {
@@ -26,6 +27,12 @@ public class DdosIpsResource extends DataBaseTable<DdosIpsResource> {
     public DdosIpsResource() {
 super(DdosIpsResource.class);
 }
+
+
+    public DdosIpsResource(String ip){
+        super(DdosIpsResource.class);
+        getSTAT_SET().set(IP, ip);
+    }
 
     public String getIp() {
         return get(IP, String.class);

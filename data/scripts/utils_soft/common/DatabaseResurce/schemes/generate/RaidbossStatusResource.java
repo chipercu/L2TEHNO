@@ -5,15 +5,16 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.RaidbossStatusResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "raidboss_status",
         primary_key = {ID},
         fields = {
-                @Field(name = ID , data_type = "int"),
-                @Field(name = CURRENT_HP , data_type = "int"),
-                @Field(name = CURRENT_MP , data_type = "int"),
-                @Field(name = RESPAWN_DELAY , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = CURRENT_HP , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = CURRENT_MP , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = RESPAWN_DELAY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class RaidbossStatusResource extends DataBaseTable<RaidbossStatusResource> {
@@ -26,6 +27,12 @@ public class RaidbossStatusResource extends DataBaseTable<RaidbossStatusResource
     public RaidbossStatusResource() {
 super(RaidbossStatusResource.class);
 }
+
+
+    public RaidbossStatusResource(String id){
+        super(RaidbossStatusResource.class);
+        getSTAT_SET().set(ID, id);
+    }
 
     public Integer getId() {
         return get(ID, Integer.class);

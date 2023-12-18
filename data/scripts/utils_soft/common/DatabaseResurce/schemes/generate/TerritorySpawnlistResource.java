@@ -5,18 +5,19 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.TerritorySpawnlistResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "territory_spawnlist",
         primary_key = {},
         fields = {
-                @Field(name = CASTLE_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = NPC_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = Y , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = Z , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HEADING , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = SPAWN_TYPE , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = CASTLE_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = NPC_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = Y , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = Z , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HEADING , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = SPAWN_TYPE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class TerritorySpawnlistResource extends DataBaseTable<TerritorySpawnlistResource> {

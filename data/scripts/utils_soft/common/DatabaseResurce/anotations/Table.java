@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Table {
     String name();
-    String[] primary_key() default {};
+    String[] primary_key();
     Field[] fields();
 
 }

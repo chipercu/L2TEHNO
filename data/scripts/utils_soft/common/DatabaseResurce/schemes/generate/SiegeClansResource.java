@@ -5,14 +5,15 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.SiegeClansResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "siege_clans",
         primary_key = {UNIT_ID,CLAN_ID},
         fields = {
-                @Field(name = UNIT_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CLAN_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = TYPE , data_type = "int"),
+                @Field(name = UNIT_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLAN_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = TYPE , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
         }
 )
 public class SiegeClansResource extends DataBaseTable<SiegeClansResource> {
@@ -24,6 +25,13 @@ public class SiegeClansResource extends DataBaseTable<SiegeClansResource> {
     public SiegeClansResource() {
 super(SiegeClansResource.class);
 }
+
+
+    public SiegeClansResource(String unit_id,String clan_id){
+        super(SiegeClansResource.class);
+        getSTAT_SET().set(UNIT_ID, unit_id);
+        getSTAT_SET().set(CLAN_ID, clan_id);
+    }
 
     public Integer getUnitId() {
         return get(UNIT_ID, Integer.class);

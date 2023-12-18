@@ -5,34 +5,35 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.SevenSignsStatusResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "seven_signs_status",
         primary_key = {},
         fields = {
-                @Field(name = CURRENT_CYCLE , data_type = "int" , defValue = @DefValue(Integer = 1)),
-                @Field(name = FESTIVAL_CYCLE , data_type = "int" , defValue = @DefValue(Integer = 1)),
-                @Field(name = ACTIVE_PERIOD , data_type = "int" , defValue = @DefValue(Integer = 1)),
-                @Field(name = DATE , data_type = "int" , defValue = @DefValue(Integer = 1)),
-                @Field(name = PREVIOUS_WINNER , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DAWN_STONE_SCORE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = DAWN_FESTIVAL_SCORE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = DUSK_STONE_SCORE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = DUSK_FESTIVAL_SCORE , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = AVARICE_OWNER , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = GNOSIS_OWNER , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = STRIFE_OWNER , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = AVARICE_DAWN_SCORE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = GNOSIS_DAWN_SCORE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = STRIFE_DAWN_SCORE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = AVARICE_DUSK_SCORE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = GNOSIS_DUSK_SCORE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = STRIFE_DUSK_SCORE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ACCUMULATED_BONUS0 , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = ACCUMULATED_BONUS1 , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = ACCUMULATED_BONUS2 , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = ACCUMULATED_BONUS3 , data_type = "bigint" , defValue = @DefValue(Long = 0)),
-                @Field(name = ACCUMULATED_BONUS4 , data_type = "bigint" , defValue = @DefValue(Long = 0)),
+                @Field(name = CURRENT_CYCLE , type = INT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = FESTIVAL_CYCLE , type = INT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = ACTIVE_PERIOD , type = INT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = _DATE , type = INT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = PREVIOUS_WINNER , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DAWN_STONE_SCORE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = DAWN_FESTIVAL_SCORE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = DUSK_STONE_SCORE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = DUSK_FESTIVAL_SCORE , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = AVARICE_OWNER , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = GNOSIS_OWNER , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = STRIFE_OWNER , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = AVARICE_DAWN_SCORE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = GNOSIS_DAWN_SCORE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = STRIFE_DAWN_SCORE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = AVARICE_DUSK_SCORE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = GNOSIS_DUSK_SCORE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = STRIFE_DUSK_SCORE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ACCUMULATED_BONUS0 , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = ACCUMULATED_BONUS1 , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = ACCUMULATED_BONUS2 , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = ACCUMULATED_BONUS3 , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
+                @Field(name = ACCUMULATED_BONUS4 , type = BIGINT , nullable = false , defValue = @DefValue(Long = 0)),
         }
 )
 public class SevenSignsStatusResource extends DataBaseTable<SevenSignsStatusResource> {
@@ -40,7 +41,7 @@ public class SevenSignsStatusResource extends DataBaseTable<SevenSignsStatusReso
     public static final String CURRENT_CYCLE = "current_cycle";
     public static final String FESTIVAL_CYCLE = "festival_cycle";
     public static final String ACTIVE_PERIOD = "active_period";
-    public static final String DATE = "date";
+    public static final String _DATE = "date";
     public static final String PREVIOUS_WINNER = "previous_winner";
     public static final String DAWN_STONE_SCORE = "dawn_stone_score";
     public static final String DAWN_FESTIVAL_SCORE = "dawn_festival_score";
@@ -75,7 +76,7 @@ super(SevenSignsStatusResource.class);
         return get(ACTIVE_PERIOD, Integer.class);
     }
     public Integer getDate() {
-        return get(DATE, Integer.class);
+        return get(_DATE, Integer.class);
     }
     public Integer getPreviousWinner() {
         return get(PREVIOUS_WINNER, Integer.class);
@@ -145,7 +146,7 @@ super(SevenSignsStatusResource.class);
         set(ACTIVE_PERIOD, value);
     }
     public void setDate(Integer value) {
-        set(DATE, value);
+        set(_DATE, value);
     }
     public void setPreviousWinner(Integer value) {
         set(PREVIOUS_WINNER, value);

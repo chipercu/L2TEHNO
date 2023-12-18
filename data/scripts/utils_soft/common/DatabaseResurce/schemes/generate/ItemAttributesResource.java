@@ -5,23 +5,24 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.ItemAttributesResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "item_attributes",
         primary_key = {ITEM_ID},
         fields = {
-                @Field(name = ITEM_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = AUG_ATTRIBUTES , data_type = "int" , defValue = @DefValue(Integer = -1)),
-                @Field(name = AUG_SKILL_ID , data_type = "int" , defValue = @DefValue(Integer = -1)),
-                @Field(name = AUG_SKILL_LEVEL , data_type = "int" , defValue = @DefValue(Integer = -1)),
-                @Field(name = ELEM_TYPE , data_type = "tinyint" , defValue = @DefValue(Integer = -1)),
-                @Field(name = ELEM_VALUE , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ELEM0 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ELEM1 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ELEM2 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ELEM3 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ELEM4 , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ELEM5 , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = ITEM_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = AUG_ATTRIBUTES , type = INT , nullable = false , defValue = @DefValue(Integer = -1)),
+                @Field(name = AUG_SKILL_ID , type = INT , nullable = false , defValue = @DefValue(Integer = -1)),
+                @Field(name = AUG_SKILL_LEVEL , type = INT , nullable = false , defValue = @DefValue(Integer = -1)),
+                @Field(name = ELEM_TYPE , type = TINYINT , nullable = false , defValue = @DefValue(Integer = -1)),
+                @Field(name = ELEM_VALUE , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ELEM0 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ELEM1 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ELEM2 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ELEM3 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ELEM4 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ELEM5 , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class ItemAttributesResource extends DataBaseTable<ItemAttributesResource> {
@@ -42,6 +43,12 @@ public class ItemAttributesResource extends DataBaseTable<ItemAttributesResource
     public ItemAttributesResource() {
 super(ItemAttributesResource.class);
 }
+
+
+    public ItemAttributesResource(String itemId){
+        super(ItemAttributesResource.class);
+        getSTAT_SET().set(ITEM_ID, itemId);
+    }
 
     public Integer getItemId() {
         return get(ITEM_ID, Integer.class);

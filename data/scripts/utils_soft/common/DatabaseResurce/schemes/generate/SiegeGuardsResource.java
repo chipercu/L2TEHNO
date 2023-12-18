@@ -5,20 +5,21 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.SiegeGuardsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "siege_guards",
         primary_key = {ID},
         fields = {
-                @Field(name = UNIT_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ID , data_type = "int"),
-                @Field(name = NPC_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = X , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = Y , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = Z , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HEADING , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = RESPAWN_DELAY , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = IS_HIRED , data_type = "int" , defValue = @DefValue(Integer = 1)),
+                @Field(name = UNIT_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ID , type = INT , nullable = false , defValue = @DefValue(Integer = null)),
+                @Field(name = NPC_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = X , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = Y , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = Z , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HEADING , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = RESPAWN_DELAY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = IS_HIRED , type = INT , nullable = false , defValue = @DefValue(Integer = 1)),
         }
 )
 public class SiegeGuardsResource extends DataBaseTable<SiegeGuardsResource> {
@@ -36,6 +37,12 @@ public class SiegeGuardsResource extends DataBaseTable<SiegeGuardsResource> {
     public SiegeGuardsResource() {
 super(SiegeGuardsResource.class);
 }
+
+
+    public SiegeGuardsResource(String id){
+        super(SiegeGuardsResource.class);
+        getSTAT_SET().set(ID, id);
+    }
 
     public Integer getUnitId() {
         return get(UNIT_ID, Integer.class);

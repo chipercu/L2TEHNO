@@ -5,14 +5,15 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.LevelRewardsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "level_rewards",
         primary_key = {OBJECT_ID,CLASS_ID,CLASS_LEVEL},
         fields = {
-                @Field(name = OBJECT_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CLASS_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = CLASS_LEVEL , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = OBJECT_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLASS_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = CLASS_LEVEL , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class LevelRewardsResource extends DataBaseTable<LevelRewardsResource> {
@@ -24,6 +25,14 @@ public class LevelRewardsResource extends DataBaseTable<LevelRewardsResource> {
     public LevelRewardsResource() {
 super(LevelRewardsResource.class);
 }
+
+
+    public LevelRewardsResource(String objectId,String classId,String classLevel){
+        super(LevelRewardsResource.class);
+        getSTAT_SET().set(OBJECT_ID, objectId);
+        getSTAT_SET().set(CLASS_ID, classId);
+        getSTAT_SET().set(CLASS_LEVEL, classLevel);
+    }
 
     public Integer getObjectId() {
         return get(OBJECT_ID, Integer.class);

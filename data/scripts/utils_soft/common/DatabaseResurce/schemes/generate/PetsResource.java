@@ -5,21 +5,22 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.PetsResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "pets",
         primary_key = {ITEM_OBJ_ID},
         fields = {
-                @Field(name = ITEM_OBJ_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = OBJ_ID , data_type = "int"),
-                @Field(name = NAME , data_type = "varchar"),
-                @Field(name = LEVEL , data_type = "tinyint"),
-                @Field(name = CUR_HP , data_type = "mediumint"),
-                @Field(name = CUR_MP , data_type = "mediumint"),
-                @Field(name = EXP , data_type = "bigint"),
-                @Field(name = SP , data_type = "int"),
-                @Field(name = FED , data_type = "smallint"),
-                @Field(name = MAX_FED , data_type = "smallint"),
+                @Field(name = ITEM_OBJ_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = OBJ_ID , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = NAME , type = VARCHAR , type_size = 12 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = LEVEL , type = TINYINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = CUR_HP , type = MEDIUMINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = CUR_MP , type = MEDIUMINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = EXP , type = BIGINT , nullable = true , defValue = @DefValue(Long = NULL)),
+                @Field(name = SP , type = INT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = FED , type = SMALLINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = MAX_FED , type = SMALLINT , nullable = true , defValue = @DefValue(Integer = NULL)),
         }
 )
 public class PetsResource extends DataBaseTable<PetsResource> {
@@ -38,6 +39,12 @@ public class PetsResource extends DataBaseTable<PetsResource> {
     public PetsResource() {
 super(PetsResource.class);
 }
+
+
+    public PetsResource(String item_obj_id){
+        super(PetsResource.class);
+        getSTAT_SET().set(ITEM_OBJ_ID, item_obj_id);
+    }
 
     public Integer getItemObjId() {
         return get(ITEM_OBJ_ID, Integer.class);

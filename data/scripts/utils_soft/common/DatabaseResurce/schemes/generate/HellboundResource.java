@@ -5,16 +5,17 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.HellboundResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "hellbound",
         primary_key = {NAME,HB_POINTS,HB_LEVEL,UNLOCKED,DUMMY},
         fields = {
-                @Field(name = NAME , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HB_POINTS , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = HB_LEVEL , data_type = "int" , defValue = @DefValue(Integer = 1)),
-                @Field(name = UNLOCKED , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = DUMMY , data_type = "int" , defValue = @DefValue(Integer = 0)),
+                @Field(name = NAME , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HB_POINTS , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = HB_LEVEL , type = INT , nullable = false , defValue = @DefValue(Integer = 1)),
+                @Field(name = UNLOCKED , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = DUMMY , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
         }
 )
 public class HellboundResource extends DataBaseTable<HellboundResource> {
@@ -28,6 +29,16 @@ public class HellboundResource extends DataBaseTable<HellboundResource> {
     public HellboundResource() {
 super(HellboundResource.class);
 }
+
+
+    public HellboundResource(String name,String hb_points,String hb_level,String unlocked,String dummy){
+        super(HellboundResource.class);
+        getSTAT_SET().set(NAME, name);
+        getSTAT_SET().set(HB_POINTS, hb_points);
+        getSTAT_SET().set(HB_LEVEL, hb_level);
+        getSTAT_SET().set(UNLOCKED, unlocked);
+        getSTAT_SET().set(DUMMY, dummy);
+    }
 
     public Integer getName() {
         return get(NAME, Integer.class);

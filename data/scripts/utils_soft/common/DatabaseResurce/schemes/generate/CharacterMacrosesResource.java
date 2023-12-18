@@ -5,18 +5,19 @@ import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import static utils_soft.common.DatabaseResurce.schemes.generate.CharacterMacrosesResource.*;
+import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "character_macroses",
         primary_key = {CHAR_OBJ_ID,ID},
         fields = {
-                @Field(name = CHAR_OBJ_ID , data_type = "int" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ID , data_type = "smallint" , defValue = @DefValue(Integer = 0)),
-                @Field(name = ICON , data_type = "tinyint"),
-                @Field(name = NAME , data_type = "varchar"),
-                @Field(name = DESCR , data_type = "varchar"),
-                @Field(name = ACRONYM , data_type = "varchar"),
-                @Field(name = COMMANDS , data_type = "varchar"),
+                @Field(name = CHAR_OBJ_ID , type = INT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ID , type = SMALLINT , nullable = false , defValue = @DefValue(Integer = 0)),
+                @Field(name = ICON , type = TINYINT , nullable = true , defValue = @DefValue(Integer = NULL)),
+                @Field(name = NAME , type = VARCHAR , type_size = 40 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = DESCR , type = VARCHAR , type_size = 80 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = ACRONYM , type = VARCHAR , type_size = 4 , nullable = true , defValue = @DefValue(String = "")),
+                @Field(name = COMMANDS , type = VARCHAR , type_size = 1024 , nullable = true , defValue = @DefValue(String = "")),
         }
 )
 public class CharacterMacrosesResource extends DataBaseTable<CharacterMacrosesResource> {
@@ -32,6 +33,13 @@ public class CharacterMacrosesResource extends DataBaseTable<CharacterMacrosesRe
     public CharacterMacrosesResource() {
 super(CharacterMacrosesResource.class);
 }
+
+
+    public CharacterMacrosesResource(String char_obj_id,String id){
+        super(CharacterMacrosesResource.class);
+        getSTAT_SET().set(CHAR_OBJ_ID, char_obj_id);
+        getSTAT_SET().set(ID, id);
+    }
 
     public Integer getCharObjId() {
         return get(CHAR_OBJ_ID, Integer.class);
