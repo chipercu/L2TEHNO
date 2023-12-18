@@ -12,5 +12,5 @@ public interface Resource<T extends DataBaseTable> {
 
     T update(T entity, String field, Object value) throws NoSuchFieldException, IllegalAccessException;
 
-    T create();
+    T create(FiledSet... fieldsSet) throws InstantiationException, IllegalAccessException;
 }

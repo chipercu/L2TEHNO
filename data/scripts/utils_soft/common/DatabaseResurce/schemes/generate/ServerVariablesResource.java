@@ -1,5 +1,6 @@
 package utils_soft.common.DatabaseResurce.schemes.generate;
 
+import l2open.gameserver.templates.StatsSet;
 import utils_soft.common.DatabaseResurce.anotations.DefValue;
 import utils_soft.common.DatabaseResurce.anotations.Field;
 import utils_soft.common.DatabaseResurce.anotations.Table;
@@ -27,6 +28,7 @@ super(ServerVariablesResource.class);
 
     public ServerVariablesResource(String name){
         super(ServerVariablesResource.class);
+        STAT_SET = new StatsSet();
         getSTAT_SET().set(NAME, name);
     }
 

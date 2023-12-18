@@ -118,6 +118,25 @@ public abstract class DataBaseTable <T>{
         }
     }
 
+    public void create(){
+        final Table annotation = _class.getAnnotation(Table.class);
+        final String columns = Arrays.stream(annotation.fields()).map(Field::name).collect(Collectors.joining(","));
+        final String collect = Arrays.stream(annotation.fields()).map(field -> "?").collect(Collectors.joining(","));
+
+
+        try {
+            final String query = String.format(RESOURCE_PROVIDER.getINSERT_QUERY(), RESOURCE_PROVIDER.getTABLE_NAME(), columns, collect);
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement(query);
+            statement.setVars();
+            statement.execute();
+        } catch (Exception ignored) {
+        } finally {
+            DatabaseUtils.closeDatabaseCS(con, statement);
+        }
+
+    }
+
     public void delete(){
         try {
             final String query = String.format(RESOURCE_PROVIDER.getDELETE_QUERY(), RESOURCE_PROVIDER.getTABLE_NAME(), FILTER().build());

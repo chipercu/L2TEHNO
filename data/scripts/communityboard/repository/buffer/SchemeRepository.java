@@ -57,6 +57,7 @@ public class SchemeRepository {
             statement = con.prepareStatement(stmt);
             statement.setInt(1, scheme.getOwner());
             statement.setString(2, scheme.getName());
+            statement.setVars();
             statement.execute();
         } catch (Exception e) {
             e.printStackTrace();
