@@ -6,9 +6,9 @@ import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
-import utils_soft.common.DatabaseResurce.FiledSet;
-import utils_soft.common.DatabaseResurce.Resource;
-import utils_soft.common.DatabaseResurce.ResourceProvider;
+import utils_soft.common.DatabaseResurce.*;
+import utils_soft.common.DatabaseResurce.schemes.builders.SpawnlistBuilder;
+import utils_soft.common.DatabaseResurce.schemes.resources.SpawnlistResource;
 
 
 import javax.crypto.Cipher;
@@ -26,7 +26,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import utils_soft.common.DatabaseResurce.schemes.generate.ServerVariablesResource;
+
+//import utils_soft.common.DatabaseResurce.schemes.builders.ServerVariablesBuilder;
+
 
 public class Test {
 
@@ -35,7 +37,7 @@ public class Test {
         ConfigSystem.load();
         testDatabaseResource();
 //        DATABASE();
-//        SchemesGenerator.generate();
+//        SchemesGenerator.generate("l2open");
     }
 
 
@@ -58,18 +60,28 @@ public class Test {
         }
     }
 
-    public static void testDatabaseResource() throws InstantiationException, IllegalAccessException {
+    public static void testDatabaseResource() {
+//
+//        Resource<ServerVariablesResource, ServerVariablesBuilder> accountsResourceResource = new ResourceProvider<>(ServerVariablesResource.class);
+//        final List<ServerVariablesResource> all = accountsResourceResource.findAll();
+//        final ServerVariablesResource serverVariablesResource = accountsResourceResource.create(new ServerVariablesBuilder().withName("testname").withValue("asd"));
+//        serverVariablesResource.setValue("1234");
+//        System.out.println(serverVariablesResource);
 
-        Resource<ServerVariablesResource> accountsResourceResource = new ResourceProvider<>(ServerVariablesResource.class);
+        Resource<SpawnlistResource, SpawnlistBuilder> spawnlistResource = new ResourceProvider<>(SpawnlistResource.class);
 
-        final List<ServerVariablesResource> all = accountsResourceResource.findAll();
+        final List<SpawnlistResource> list = spawnlistResource.findList(new Filter().WHERE(SpawnlistResource.NPC_TEMPLATEID, 31691));
 
-        for (ServerVariablesResource accountsResource: all){
-            System.out.println(accountsResource.getName());
-        }
+        final SpawnlistResource spawn = spawnlistResource.create(new SpawnlistBuilder().withLocation("TestCreate").withNpcTemplateid(31691));
 
-        final ServerVariablesResource test = accountsResourceResource.create(
-                new FiledSet(ServerVariablesResource.NAME, "test"));
+        spawn.delete();
+
+        System.out.println(spawn);
+
+
+//        list.forEach(System.out::println);
+
+
     }
 
     public static void testEncrypt() throws Exception {
