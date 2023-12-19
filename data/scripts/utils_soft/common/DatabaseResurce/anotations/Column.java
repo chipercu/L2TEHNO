@@ -9,7 +9,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 @Target({})
 @Retention(RUNTIME)
-public @interface Field {
+public @interface Column {
 
     /**
      * Имя колонки таблицы
@@ -18,16 +18,9 @@ public @interface Field {
     String name();
     DATA_TYPE type();
     int type_size() default -1;
-    boolean nullable() default false;
-    DefValue defValue() default @DefValue;
-    /**
-     *Тип данных в колонке
-     * Column data type
-     */
+    IS_NULLABLE is_null();
+    String defValue() default "";
 
-
-
-//
 
 
 }

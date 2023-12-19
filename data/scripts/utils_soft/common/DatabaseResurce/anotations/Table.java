@@ -11,6 +11,6 @@ import java.lang.annotation.Target;
 public @interface Table {
     String name();
     String[] primary_key();
-    Field[] fields();
+    Column[] fields();
 
 }

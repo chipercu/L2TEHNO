@@ -6,12 +6,14 @@ import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
 import l2open.gameserver.templates.StatsSet;
 import org.apache.commons.lang.ArrayUtils;
-import org.omg.CosNaming.NamingContextPackage.NotEmpty;
-import utils_soft.common.DatabaseResurce.anotations.Field;
+import utils_soft.common.DatabaseResurce.anotations.Column;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
@@ -26,44 +28,50 @@ public abstract class DataBaseTable <T>{
     protected ThreadConnection con = null;
     protected FiltredPreparedStatement statement = null;
     protected Class<T> _class;
-    protected ResourceProvider<?> RESOURCE_PROVIDER;
+    protected ResourceProvider<?, ?> RESOURCE_PROVIDER;
     protected T entity;
 
 
     public DataBaseTable(){
     }
 
-    public DataBaseTable(Class<T> tClass) {
-        _class = tClass;
+    public DataBaseTable(Class<T> resource)  {
+        _class = resource;
+        STAT_SET = new StatsSet();
     }
 
-    protected <R> R get(String field, Class<R> type){
+    protected <R> R get(String field){
         R result = null;
 
         final Table tableAnnotation = _class.getAnnotation(Table.class);
-        final Field[] fields = tableAnnotation.fields();
+        final Column[] columns = tableAnnotation.fields();
 
-        final Field fieldAnnotation = Arrays.stream(fields)
+        final Column columnAnnotation = Arrays.stream(columns)
                 .filter(annotation -> annotation.name().equals(field))
                 .findFirst().orElse(null);
-        if (fieldAnnotation == null){
+        if (columnAnnotation == null){
             throw new NullPointerException("Field " + field + " not present in " + _class.getName());
         }
-        final String key = fieldAnnotation.name();
+        final String key = columnAnnotation.name();
+        final Class<?> type = columnAnnotation.type().getType();
+        final String defValue = columnAnnotation.defValue();
 
-        if (type == String.class){
-            result =  (R) String.valueOf(STAT_SET.getString(key, fieldAnnotation.defValue().String()));
-        } else if (type == Integer.class){
-            result = (R) Integer.valueOf(STAT_SET.getInteger(key, fieldAnnotation.defValue().Integer()));
-        } else if (type == Double.class) {
-            result = (R) Double.valueOf(STAT_SET.getDouble(key, fieldAnnotation.defValue().Double()));
-        } else if (type == Long.class) {
-            result = (R) Long.valueOf(STAT_SET.getLong(key, fieldAnnotation.defValue().Long()));
-        } else if (type == Boolean.class) {
-            result = (R) Boolean.valueOf(STAT_SET.getBool(key, fieldAnnotation.defValue().Boolean()));
+        if (type.equals(Integer.class)) {
+            result =  (R) Integer.valueOf(STAT_SET.getInteger(key, Integer.parseInt(defValue)));
+        } else if (type.equals(Double.class)) {
+            result =  (R) Double.valueOf(STAT_SET.getDouble(key, Double.parseDouble(defValue)));
+        } else if (type.equals(Long.class)) {
+            result =  (R) Long.valueOf(STAT_SET.getLong(key, Long.parseLong(defValue)));
+        } else if (type.equals(Boolean.class)) {
+            result =  (R) Boolean.valueOf(STAT_SET.getBool(key, Boolean.parseBoolean(defValue)));
+        } else if (type.equals(String.class)) {
+            result = (R) STAT_SET.getString(key, defValue);
         }
         return result;
     }
+
+
+
 
     protected void set(String field, Object value){
         update(field, value);
@@ -120,10 +128,8 @@ public abstract class DataBaseTable <T>{
 
     public void create(){
         final Table annotation = _class.getAnnotation(Table.class);
-        final String columns = Arrays.stream(annotation.fields()).map(Field::name).collect(Collectors.joining(","));
+        final String columns = Arrays.stream(annotation.fields()).map(Column::name).collect(Collectors.joining(","));
         final String collect = Arrays.stream(annotation.fields()).map(field -> "?").collect(Collectors.joining(","));
-
-
         try {
             final String query = String.format(RESOURCE_PROVIDER.getINSERT_QUERY(), RESOURCE_PROVIDER.getTABLE_NAME(), columns, collect);
             con = L2DatabaseFactory.getInstance().getConnection();
@@ -134,7 +140,6 @@ public abstract class DataBaseTable <T>{
         } finally {
             DatabaseUtils.closeDatabaseCS(con, statement);
         }
-
     }
 
     public void delete(){
@@ -152,4 +157,9 @@ public abstract class DataBaseTable <T>{
         return STAT_SET;
     }
 
+    @Override
+    public String toString() {
+        final String collect = STAT_SET.getSet().keySet().stream().map(e -> e + "=" + STAT_SET.getSet().get(e)).collect(Collectors.joining(", "));
+        return _class.getSimpleName() + "{" + collect + "}";
+    }
 }

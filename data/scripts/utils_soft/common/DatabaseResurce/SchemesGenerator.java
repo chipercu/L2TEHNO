@@ -5,6 +5,7 @@ import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
 import utils_soft.common.DatabaseResurce.anotations.DATA_TYPE;
+import utils_soft.common.DatabaseResurce.anotations.IS_NULLABLE;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -17,21 +18,21 @@ import java.util.stream.Collectors;
 
 public class SchemesGenerator {
 
-    private static final String SCHEME_NAMES = "SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'l2tehno'";
-    private static final String SCHEME_COLUMNS = "SELECT * FROM information_schema.`COLUMNS` WHERE TABLE_SCHEMA = 'l2tehno' AND TABLE_NAME = '%s'";
+    private static final String SCHEME_NAMES = "SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '%s'";
+    private static final String SCHEME_COLUMNS = "SELECT * FROM information_schema.`COLUMNS` WHERE TABLE_SCHEMA = '%s' AND TABLE_NAME = '%s'";
 
 
-    public static void generate(){
-        final List<String> schemesNames = getSchemesNames();
+    public static void generate(String dbName){
+        final List<String> schemesNames = getSchemesNames(dbName);
         for (String scheme: schemesNames){
             String className = convertToCamelCase(scheme) + "Resource";
-            final List<Column> columns = getColumns(scheme);
-            StringBuilder classBuilder = new StringBuilder("package utils_soft.common.DatabaseResurce.schemes.generate;\n\n");
-            classBuilder.append("import utils_soft.common.DatabaseResurce.anotations.DefValue;\n");
-            classBuilder.append("import utils_soft.common.DatabaseResurce.anotations.Field;\n");
+            final List<Column> columns = getColumns(dbName, scheme);
+            StringBuilder classBuilder = new StringBuilder("package utils_soft.common.DatabaseResurce.schemes.resources;\n\n");
+            classBuilder.append("import utils_soft.common.DatabaseResurce.anotations.Column;\n");
             classBuilder.append("import utils_soft.common.DatabaseResurce.anotations.Table;\n");
             classBuilder.append("import utils_soft.common.DatabaseResurce.DataBaseTable;\n");
-            classBuilder.append("import static utils_soft.common.DatabaseResurce.schemes.generate.").append(className).append(".*;\n");
+            classBuilder.append("import static utils_soft.common.DatabaseResurce.schemes.resources.").append(className).append(".*;\n");
+            classBuilder.append("import static utils_soft.common.DatabaseResurce.anotations.IS_NULLABLE.*;\n");
             classBuilder.append("import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;\n\n");
             classBuilder.append("@Table(\n");
             classBuilder.append("        name = \"").append(scheme).append("\",\n");
@@ -44,20 +45,11 @@ public class SchemesGenerator {
             for (Column column: columns){
                 String name = convertToSnakeCase(column.name);
                 String type = getType(column.columnType);
-                classBuilder.append("                @Field(name = ").append(name);
+                classBuilder.append("                @Column(is_null = ").append(column.is_nullable);
                 classBuilder.append(" , type = ").append(column.type);
-
-                if (column.type_size != 0){
-                    classBuilder.append(" , type_size = ").append(column.type_size);
-                }
-
-                classBuilder.append(" , nullable = ").append(column.isNullable);
-
-//                if (column.defaultValue != null){
-//                    classBuilder.append(" , defValue = @DefValue(").append(type).append(" = ").append(column.defaultValue).append(")");
-//                }
-                classBuilder.append(" , defValue = @DefValue(").append(type).append(" = ").append(column.defaultValue).append(")");
-                classBuilder.append("),\n");
+                classBuilder.append(" , type_size = ").append(column.type_size);
+                classBuilder.append(" , name = ").append(name);
+                classBuilder.append(" , defValue = \"").append(column.defaultValue).append("\"),\n");
             }
             classBuilder.append("        }\n");
             classBuilder.append(")\n");
@@ -68,29 +60,7 @@ public class SchemesGenerator {
                 classBuilder.append("    public static final String ").append(name).append(" = \"").append(column.name).append("\";\n");
             }
 
-            classBuilder.append("\n    public ").append(className).append("() {\n").append("super(").append(className).append(".class);\n}\n\n");
-
-            final long count = columns.stream().filter(column -> column.isPrimaryKey).count();
-
-            if (count > 0){
-                classBuilder.append("\n    public ").append(className).append("(");
-
-
-                final List<Column> notNullable = columns.stream()
-                        .filter(column -> column.isPrimaryKey || (column.isNullable && getType(column.columnType).equals("String") && isEmpty(column.defaultValue)))
-                        .collect(Collectors.toList());
-                List<String> params = new ArrayList<>();
-                for (Column column: notNullable){
-                    params.add(getType(" " + column.columnType) + " " + column.name);
-                }
-                classBuilder.append(String.join(",", params)).append("){\n");
-                classBuilder.append("        super(").append(className).append(".class);\n");
-
-                for (Column column: notNullable){
-                    classBuilder.append("        getSTAT_SET().set(").append(convertToSnakeCase(column.name)).append(", ").append(column.name).append(");\n");
-                }
-                classBuilder.append("    }\n\n");
-            }
+            classBuilder.append("\n    public ").append(className).append("() {\n").append("        super(").append(className).append(".class);\n}\n\n");
 
             for (Column column: columns){
                 String name = convertToSnakeCase(column.name);
@@ -101,7 +71,7 @@ public class SchemesGenerator {
                 }
 
                 classBuilder.append("    public ").append(type).append(" ").append(methodName).append("() {\n");
-                classBuilder.append("        return get(").append(name).append(", ").append(type).append(".class);\n");
+                classBuilder.append("        return get(").append(name).append(");\n");
                 classBuilder.append("    }\n");
             }
             classBuilder.append("\n");
@@ -116,13 +86,53 @@ public class SchemesGenerator {
             }
             classBuilder.append("\n}\n");
 
-            final File file = new File("data/scripts/utils_soft/common/DatabaseResurce/schemes/generate/" + className + ".java");
+            final File file = new File("data/scripts/utils_soft/common/DatabaseResurce/schemes/resources/" + className + ".java");
             try (FileWriter writer = new FileWriter(file)) {
                 writer.write(classBuilder.toString());
             } catch (IOException e) {
                 System.out.println("Ошибка при записи в файл: " + e.getMessage());
             }
 
+            String builderName = className.replace("Resource", "Builder");
+
+            StringBuilder builder = new StringBuilder("package utils_soft.common.DatabaseResurce.schemes.builders;\n\n");
+            builder.append("import utils_soft.common.DatabaseResurce.schemes.ResourceBuilder;\n");
+            builder.append("import utils_soft.common.DatabaseResurce.schemes.resources.").append(className).append(";\n");
+            builder.append("import java.lang.reflect.Field;\n");
+            builder.append("import java.util.NoSuchElementException;\n\n");
+
+            builder.append("public class ").append(builderName).append(" extends ResourceBuilder<").append(className).append("> {\n\n");
+
+            builder.append("    public ").append(builderName).append("() {\n");
+            builder.append("        try {\n");
+            builder.append("            resourceClass = ").append(className).append(".class;\n");
+            builder.append("            resource = resourceClass.newInstance();\n");
+            builder.append("        } catch (InstantiationException | IllegalAccessException e) {\n");
+            builder.append("            throw new RuntimeException(e);\n");
+            builder.append("        }\n");
+            builder.append("    }\n\n");
+
+
+            for (Column column: columns){
+                final Class<?> type = column.type.getType();
+                builder.append("    public ").append(builderName).append(" with").append(convertToCamelCase(column.name)).append("(").append(type.getSimpleName()).append(" value) {\n");
+                builder.append("        try {\n");
+                builder.append("            final Field field = resourceClass.getDeclaredField(\"").append(convertToSnakeCase(column.name)).append("\");\n");
+                builder.append("            field.setAccessible(true);\n");
+                builder.append("            statsSet.set((String) field.get(resource), value);\n");
+                builder.append("        } catch (Exception ignored) {\n");
+                builder.append("        }\n");
+                builder.append("        return this;\n");
+                builder.append("    }\n\n");
+            }
+            builder.append("}\n");
+
+            final File builderFile = new File("data/scripts/utils_soft/common/DatabaseResurce/schemes/builders/" + builderName + ".java");
+            try (FileWriter writer = new FileWriter(builderFile)) {
+                writer.write(builder.toString());
+            } catch (IOException e) {
+                System.out.println("Ошибка при записи в файл: " + e.getMessage());
+            }
 
         }
     }
@@ -155,14 +165,14 @@ public class SchemesGenerator {
         return type;
     }
 
-    private static List<Column> getColumns(String schemeName){
+    private static List<Column> getColumns(String dbName, String schemeName){
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
         ResultSet rs = null;
         List<Column> names = new ArrayList<>();
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
-            statement = con.prepareStatement(String.format(SCHEME_COLUMNS, schemeName));
+            statement = con.prepareStatement(String.format(SCHEME_COLUMNS, dbName, schemeName));
             rs = statement.executeQuery();
             while (rs.next()){
                 final String name = rs.getString("COLUMN_NAME");
@@ -172,9 +182,8 @@ public class SchemesGenerator {
                 final String column_type = rs.getString("COLUMN_TYPE");
                 final Object aDefault = rs.getString("COLUMN_DEFAULT");
                 final boolean isPrimaryKey = rs.getString("COLUMN_KEY") != null && rs.getString("COLUMN_KEY").equalsIgnoreCase("PRI");
-                final boolean isNullable = rs.getString("IS_NULLABLE").equals("YES");
-
-                names.add(new Column(name, type,type_size, aDefault, column_type, isPrimaryKey, isNullable));
+                final IS_NULLABLE is_nullable = IS_NULLABLE.valueOf(rs.getString("IS_NULLABLE"));
+                names.add(new Column(name, type,type_size, aDefault, column_type, isPrimaryKey, is_nullable));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -184,14 +193,14 @@ public class SchemesGenerator {
         return names;
     }
 
-    private static List<String> getSchemesNames(){
+    private static List<String> getSchemesNames(String dbName){
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
         ResultSet rs = null;
         List<String> names = new ArrayList<>();
         try {
             con = L2DatabaseFactory.getInstance().getConnection();
-            statement = con.prepareStatement(SCHEME_NAMES);
+            statement = con.prepareStatement(String.format(SCHEME_NAMES, dbName));
             rs = statement.executeQuery();
             while (rs.next()){
                 final String table_name = rs.getString("TABLE_NAME");
@@ -256,45 +265,23 @@ public class SchemesGenerator {
         String name;
         DATA_TYPE type;
         int type_size;
-        Object defaultValue;
+        String defaultValue;
         String columnType;
         boolean isPrimaryKey;
-        boolean isNullable;
+        IS_NULLABLE is_nullable;
 
-        public Column(String name, DATA_TYPE type, int type_size, Object defaultValue, String columnType, boolean isPrimaryKey, boolean isNullable) {
+        public Column(String name, DATA_TYPE type, int type_size, Object defaultValue, String columnType, boolean isPrimaryKey, IS_NULLABLE is_nullable) {
             this.name = name;
             this.columnType = columnType;
             this.type = type;
             this.type_size = type_size;
             this.defaultValue = getDefaultValue(defaultValue);
             this.isPrimaryKey = isPrimaryKey;
-            this.isNullable = isNullable;
-
+            this.is_nullable = is_nullable;
         }
 
-        private Object getDefaultValue(Object defaultValue){
-
-
-            final String type = getType(columnType);
-            if (type.equals("String")){
-
-                if (defaultValue == null){
-                    return  "\"\"";
-                }
-
-                defaultValue = defaultValue.toString().replaceAll("'", "\"");
-                if (defaultValue.toString().isEmpty() || defaultValue.toString().equalsIgnoreCase("null")){
-                    defaultValue = "\"\"";
-                }
-            } else if (type.equals("Boolean")) {
-                return Boolean.parseBoolean(defaultValue.toString());
-            }
-
-            if (defaultValue == null){
-                return null;
-            }
-
-            return defaultValue;
+        private String getDefaultValue(Object defValue){
+            return String.valueOf(defValue).replaceAll("'", "");
         }
 
     }

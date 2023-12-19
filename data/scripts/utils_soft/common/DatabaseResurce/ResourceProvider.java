@@ -5,8 +5,9 @@ import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
 import l2open.gameserver.templates.StatsSet;
-import utils_soft.common.DatabaseResurce.anotations.DefValue;
+import utils_soft.common.DatabaseResurce.anotations.Column;
 import utils_soft.common.DatabaseResurce.anotations.Table;
+import utils_soft.common.DatabaseResurce.schemes.ResourceBuilder;
 
 import java.lang.reflect.Field;
 import java.sql.ResultSet;
@@ -15,7 +16,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ResourceProvider<T extends DataBaseTable> implements Resource<T> {
+/**
+ * Created by a.kiperku
+ * Date: 15.12.2023
+ */
+
+public class ResourceProvider<T extends DataBaseTable<T>, B extends ResourceBuilder<T>> implements Resource<T, B> {
 
     private String GET_QUERY = "SELECT * FROM %s %s";
     private String UPDATE_QUERY = "UPDATE %s SET %s = %s %s";
@@ -25,17 +31,17 @@ public class ResourceProvider<T extends DataBaseTable> implements Resource<T> {
     private final Field fieldStatSet;
     private final Field resource_provider;
     private final String TABLE_NAME;
-    private Class<T> _class;
+    private final Class<T> resource;
     protected ThreadConnection con = null;
     protected FiltredPreparedStatement statement = null;
 
-    public ResourceProvider(Class<T> _class) {
-        this._class = _class;
+    public ResourceProvider(Class<T> resource) {
+        this.resource = resource;
         try {
-            final Table annotation = _class.getAnnotation(Table.class);
+            final Table annotation = resource.getAnnotation(Table.class);
             TABLE_NAME = annotation.name();
-            fieldStatSet = _class.getSuperclass().getDeclaredField("STAT_SET");
-            resource_provider = _class.getSuperclass().getDeclaredField("RESOURCE_PROVIDER");
+            fieldStatSet = resource.getSuperclass().getDeclaredField("STAT_SET");
+            resource_provider = resource.getSuperclass().getDeclaredField("RESOURCE_PROVIDER");
             fieldStatSet.setAccessible(true);
             resource_provider.setAccessible(true);
         } catch (NoSuchFieldException e) {
@@ -65,7 +71,7 @@ public class ResourceProvider<T extends DataBaseTable> implements Resource<T> {
 
     public T update(T entity, String field, Object value) throws NoSuchFieldException, IllegalAccessException {
 
-        final Table annotation = _class.getAnnotation(Table.class);
+        final Table annotation = resource.getAnnotation(Table.class);
         final Filter filter = new Filter();
         final List<String> primary_key = Arrays.stream(annotation.primary_key()).collect(Collectors.toList());
 
@@ -76,7 +82,6 @@ public class ResourceProvider<T extends DataBaseTable> implements Resource<T> {
                 filter.AND(primary_key.get(i), entity.getSTAT_SET().getObject(primary_key.get(i)));
             }
         }
-
         try {
             final String query = String.format(UPDATE_QUERY, TABLE_NAME, field, value, filter.build());
             con = L2DatabaseFactory.getInstance().getConnection();
@@ -86,41 +91,32 @@ public class ResourceProvider<T extends DataBaseTable> implements Resource<T> {
         } finally {
             DatabaseUtils.closeDatabaseCS(con, statement);
         }
-
         return find(filter);
     }
 
-    public T create(FiledSet... fieldsSet) throws InstantiationException, IllegalAccessException {
-        final Table annotation = _class.getAnnotation(Table.class);
-        final String columns = Arrays.stream(annotation.fields()).map(utils_soft.common.DatabaseResurce.anotations.Field::name).collect(Collectors.joining(","));
-        final String collect = Arrays.stream(annotation.fields()).map(field -> "?").collect(Collectors.joining(","));
-
-        T instance = _class.newInstance();
-        final StatsSet statsSet = new StatsSet();
-
-        for (FiledSet filedSet: fieldsSet){
-            statsSet.set(filedSet.getField(), filedSet.getValue());
-        }
-
-        Arrays.stream(annotation.fields()).forEach(field -> {
-            if (statsSet.getObject(field.name()) == null){
-                statsSet.set(field.name(), field.defValue().String());
-            }
-        });
-        fieldStatSet.set(instance, statsSet);
-        resource_provider.set(instance, this);
-
+    public T create(B builder)  {
+        T build = null;
         try {
-            final String query = String.format(INSERT_QUERY, TABLE_NAME, columns, collect);
+            build = builder.build();
+            build.RESOURCE_PROVIDER = this;
+            final Table annotation = resource.getAnnotation(Table.class);
+            final String columns = Arrays.stream(annotation.fields()).map(Column::name).collect(Collectors.joining(","));
+
+            List<String> values = new ArrayList<>();
+            for (Column column: annotation.fields()){
+               values.add("'" + build.STAT_SET.getObject(column.name()) + "'");
+            }
+            final String join = String.join(", ", values);
+
+            final String query = String.format(INSERT_QUERY, TABLE_NAME, columns, join);
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
-            statement.setVars(statsSet.getSet().values());
             statement.execute();
         } catch (Exception ignored) {
         } finally {
             DatabaseUtils.closeDatabaseCS(con, statement);
         }
-        return instance;
+        return build;
     }
 
 
@@ -133,7 +129,7 @@ public class ResourceProvider<T extends DataBaseTable> implements Resource<T> {
             statement = con.prepareStatement(query);
             rs = statement.executeQuery();
             while (rs.next()) {
-                T instance = _class.newInstance();
+                T instance = resource.newInstance();
                 fieldStatSet.set(instance, new StatsSet(rs));
                 resource_provider.set(instance, this);
                 list.add(instance);
@@ -155,7 +151,7 @@ public class ResourceProvider<T extends DataBaseTable> implements Resource<T> {
             statement = con.prepareStatement(query);
             rs = statement.executeQuery();
             while (rs.next()) {
-                T instance = _class.newInstance();
+                T instance = resource.newInstance();
                 fieldStatSet.set(instance, new StatsSet(rs));
                 resource_provider.set(instance, this);
                 list.add(instance);
@@ -177,7 +173,7 @@ public class ResourceProvider<T extends DataBaseTable> implements Resource<T> {
             statement = con.prepareStatement(query);
             rs = statement.executeQuery();
             if (rs.next()) {
-                instance = _class.newInstance();
+                instance = resource.newInstance();
                 fieldStatSet.set(instance, new StatsSet(rs));
                 resource_provider.set(instance, this);
             }
@@ -188,26 +184,4 @@ public class ResourceProvider<T extends DataBaseTable> implements Resource<T> {
         }
         return instance;
     }
-
-    private StatsSet getStatSet(Filter filter) {
-        ResultSet rs = null;
-        StatsSet statsSet = new StatsSet();
-        try {
-            final String query = String.format(GET_QUERY, TABLE_NAME, filter.build());
-            con = L2DatabaseFactory.getInstance().getConnection();
-            statement = con.prepareStatement(query);
-            rs = statement.executeQuery();
-            if (rs.next()) {
-                statsSet = new StatsSet(rs);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            DatabaseUtils.closeDatabaseCSR(con, statement, rs);
-        }
-        return statsSet;
-    }
-
-
-
 }
