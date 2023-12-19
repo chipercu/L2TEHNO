@@ -7,6 +7,7 @@ import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
 import utils_soft.common.DatabaseResurce.*;
+import utils_soft.common.DatabaseResurce.exceptions.ResourceProvideException;
 import utils_soft.common.DatabaseResurce.schemes.builders.SpawnlistBuilder;
 import utils_soft.common.DatabaseResurce.schemes.resources.SpawnlistResource;
 
@@ -60,7 +61,7 @@ public class Test {
         }
     }
 
-    public static void testDatabaseResource() {
+    public static void testDatabaseResource() throws ResourceProvideException {
 //
 //        Resource<ServerVariablesResource, ServerVariablesBuilder> accountsResourceResource = new ResourceProvider<>(ServerVariablesResource.class);
 //        final List<ServerVariablesResource> all = accountsResourceResource.findAll();
@@ -72,7 +73,7 @@ public class Test {
 
         final List<SpawnlistResource> list = spawnlistResource.findList(new Filter().WHERE(SpawnlistResource.NPC_TEMPLATEID, 31691));
 
-        final SpawnlistResource spawn = spawnlistResource.create(new SpawnlistBuilder().withLocation("TestCreate").withNpcTemplateid(31691));
+        final SpawnlistResource spawn = spawnlistResource.create(new SpawnlistBuilder().withLocation("").withNpcTemplateid(31691));
 
         spawn.delete();
 

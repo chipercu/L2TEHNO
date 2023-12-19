@@ -7,7 +7,7 @@ import l2open.database.ThreadConnection;
 import l2open.gameserver.templates.StatsSet;
 import utils_soft.common.DatabaseResurce.anotations.Column;
 import utils_soft.common.DatabaseResurce.anotations.Table;
-import utils_soft.common.DatabaseResurce.schemes.ResourceBuilder;
+import utils_soft.common.DatabaseResurce.exceptions.ResourceProvideException;
 
 import java.lang.reflect.Field;
 import java.sql.ResultSet;
@@ -94,10 +94,11 @@ public class ResourceProvider<T extends DataBaseTable<T>, B extends ResourceBuil
         return find(filter);
     }
 
-    public T create(B builder)  {
+    public T create(B builder) throws ResourceProvideException {
         T build = null;
         try {
             build = builder.build();
+
             build.RESOURCE_PROVIDER = this;
             final Table annotation = resource.getAnnotation(Table.class);
             final String columns = Arrays.stream(annotation.fields()).map(Column::name).collect(Collectors.joining(","));
@@ -116,6 +117,11 @@ public class ResourceProvider<T extends DataBaseTable<T>, B extends ResourceBuil
         } finally {
             DatabaseUtils.closeDatabaseCS(con, statement);
         }
+
+        if (build == null){
+            throw new ResourceProvideException(resource.getSimpleName() + " not created");
+        }
+
         return build;
     }
 

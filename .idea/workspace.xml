@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="дороботки ResourceProvider&#10;генерация структуры базы" />
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="workspace.xml">
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/exceptions/ResourceProvideException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/Resource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/ResourceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/ResourceProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/SchemesGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/SchemesGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/anotations/DefValue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/ResourceBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/ResourceBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/builders/ServerVariablesBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/builders/ServerVariablesBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/builders/SkillsBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/builders/SkillsBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/builders/SpawnlistBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/common/DatabaseResurce/schemes/builders/SpawnlistBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/Test.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +27,8 @@
       <list>
         <option value="AnnotationType" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -447,7 +459,21 @@
       <option name="project" value="LOCAL" />
       <updated>1702763620482</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="workspace.xml">
+      <created>1702994505161</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1702994505161</updated>
+    </task>
+    <task id="LOCAL-00026" summary="clean">
+      <created>1702994760927</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1702994760928</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +513,9 @@
     <MESSAGE value="MultiSellEditorComponent fix" />
     <MESSAGE value="NpcBuilder ref.1" />
     <MESSAGE value="feat: реализован ResourceProvider для работы с БД, сгенерированы таблицы БД" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: реализован ResourceProvider для работы с БД, сгенерированы таблицы БД" />
+    <MESSAGE value="workspace.xml" />
+    <MESSAGE value="clean" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -501,11 +529,6 @@
           <url>file://$PROJECT_DIR$/data/scripts/ai/FakePlayersAI/PathManager/PathFinder.java</url>
           <line>39</line>
           <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/java/l2open/Test.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

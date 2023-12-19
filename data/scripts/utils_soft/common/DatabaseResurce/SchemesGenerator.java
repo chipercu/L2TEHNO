@@ -96,7 +96,7 @@ public class SchemesGenerator {
             String builderName = className.replace("Resource", "Builder");
 
             StringBuilder builder = new StringBuilder("package utils_soft.common.DatabaseResurce.schemes.builders;\n\n");
-            builder.append("import utils_soft.common.DatabaseResurce.schemes.ResourceBuilder;\n");
+            builder.append("import utils_soft.common.DatabaseResurce.ResourceBuilder;\n");
             builder.append("import utils_soft.common.DatabaseResurce.schemes.resources.").append(className).append(";\n");
             builder.append("import java.lang.reflect.Field;\n");
             builder.append("import java.util.NoSuchElementException;\n\n");

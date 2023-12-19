@@ -1,11 +1,16 @@
-package utils_soft.common.DatabaseResurce.schemes;
+package utils_soft.common.DatabaseResurce;
 
 import l2open.gameserver.templates.StatsSet;
+import utils_soft.NpcEditor.NpcEditorComponent;
 import utils_soft.common.DatabaseResurce.DataBaseTable;
 import utils_soft.common.DatabaseResurce.anotations.Column;
+import utils_soft.common.DatabaseResurce.anotations.IS_NULLABLE;
 import utils_soft.common.DatabaseResurce.anotations.Table;
+import utils_soft.common.DatabaseResurce.exceptions.ResourceProvideException;
 
+import java.time.Year;
 import java.util.NoSuchElementException;
+import java.util.logging.Logger;
 
 /**
  * Created by a.kiperku
@@ -13,19 +18,21 @@ import java.util.NoSuchElementException;
  */
 public abstract class ResourceBuilder<T extends DataBaseTable<T>> {
 
+    protected static Logger _log = Logger.getLogger(ResourceBuilder.class.getName());
+
     protected Class<T> resourceClass;
     protected T resource;
     protected final StatsSet statsSet = new StatsSet();
 
-    public T build() throws InstantiationException, IllegalAccessException{
+    public T build() throws InstantiationException, IllegalAccessException {
         final Table annotation = resourceClass.getAnnotation(Table.class);
         final Column[] columns = annotation.fields();
 
         for (Column column : columns) {
             final Object object = statsSet.getObject(column.name());
-            if (object == null) {
-                if (!column.is_null().isNullable() && (column.defValue().equals("null") || column.defValue().isEmpty())) {
-                    throw new NoSuchElementException(resourceClass.getSimpleName() + "{ " + column.name() + " not defined in builder }");
+            if (object == null || object.toString().isEmpty()) {
+                if (column.is_null() == IS_NULLABLE.NO && (column.defValue().equals("null") || column.defValue().isEmpty())) {
+                    _log.warning(resourceClass.getSimpleName() + "{column '" + column.name() + "' not defined in builder}");
                 }
                 resource.getSTAT_SET().set(column.name(), column.defValue());
             } else {

@@ -1,9 +1,8 @@
 package utils_soft.common.DatabaseResurce.schemes.builders;
 
-import utils_soft.common.DatabaseResurce.schemes.ResourceBuilder;
+import utils_soft.common.DatabaseResurce.ResourceBuilder;
 import utils_soft.common.DatabaseResurce.schemes.resources.SpawnlistResource;
 import java.lang.reflect.Field;
-import java.util.NoSuchElementException;
 
 public class SpawnlistBuilder extends ResourceBuilder<SpawnlistResource> {
 

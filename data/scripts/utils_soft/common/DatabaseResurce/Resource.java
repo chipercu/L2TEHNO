@@ -1,5 +1,7 @@
 package utils_soft.common.DatabaseResurce;
 
+import utils_soft.common.DatabaseResurce.exceptions.ResourceProvideException;
+
 import java.util.List;
 
 public interface Resource<T extends DataBaseTable<T>, B> {
@@ -12,5 +14,5 @@ public interface Resource<T extends DataBaseTable<T>, B> {
 
     T update(T entity, String field, Object value) throws NoSuchFieldException, IllegalAccessException;
 
-    T create(B builder);
+    T create(B builder) throws ResourceProvideException;
 }
