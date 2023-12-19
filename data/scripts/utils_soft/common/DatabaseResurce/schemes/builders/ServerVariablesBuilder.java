@@ -3,6 +3,7 @@ package utils_soft.common.DatabaseResurce.schemes.builders;
 import utils_soft.common.DatabaseResurce.ResourceBuilder;
 import utils_soft.common.DatabaseResurce.schemes.resources.ServerVariablesResource;
 import java.lang.reflect.Field;
+import java.util.NoSuchElementException;
 
 public class ServerVariablesBuilder extends ResourceBuilder<ServerVariablesResource> {
 
@@ -16,22 +17,12 @@ public class ServerVariablesBuilder extends ResourceBuilder<ServerVariablesResou
     }
 
     public ServerVariablesBuilder withName(String value) {
-        try {
-            final Field field = resourceClass.getDeclaredField("NAME");
-            field.setAccessible(true);
-            statsSet.set((String) field.get(resource), value);
-        } catch (Exception ignored) {
-        }
+        with(ServerVariablesResource.NAME, value);
         return this;
     }
 
     public ServerVariablesBuilder withValue(String value) {
-        try {
-            final Field field = resourceClass.getDeclaredField("VALUE");
-            field.setAccessible(true);
-            statsSet.set((String) field.get(resource), value);
-        } catch (Exception ignored) {
-        }
+        with(ServerVariablesResource.VALUE, value);
         return this;
     }
 

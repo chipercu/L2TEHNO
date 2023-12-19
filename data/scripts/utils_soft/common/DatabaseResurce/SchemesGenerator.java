@@ -116,12 +116,13 @@ public class SchemesGenerator {
             for (Column column: columns){
                 final Class<?> type = column.type.getType();
                 builder.append("    public ").append(builderName).append(" with").append(convertToCamelCase(column.name)).append("(").append(type.getSimpleName()).append(" value) {\n");
-                builder.append("        try {\n");
-                builder.append("            final Field field = resourceClass.getDeclaredField(\"").append(convertToSnakeCase(column.name)).append("\");\n");
-                builder.append("            field.setAccessible(true);\n");
-                builder.append("            statsSet.set((String) field.get(resource), value);\n");
-                builder.append("        } catch (Exception ignored) {\n");
-                builder.append("        }\n");
+//                builder.append("        try {\n");
+//                builder.append("            final Field field = resourceClass.getDeclaredField(\"").append(convertToSnakeCase(column.name)).append("\");\n");
+//                builder.append("            field.setAccessible(true);\n");
+//                builder.append("            statsSet.set((String) field.get(resource), value);\n");
+//                builder.append("        } catch (Exception ignored) {\n");
+//                builder.append("        }\n");
+                builder.append("        with(").append(className).append(".").append(convertToSnakeCase(column.name)).append(", value);\n");
                 builder.append("        return this;\n");
                 builder.append("    }\n\n");
             }

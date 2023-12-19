@@ -14,6 +14,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
@@ -23,8 +24,10 @@ import java.util.stream.Collectors;
 
 public class ResourceProvider<T extends DataBaseTable<T>, B extends ResourceBuilder<T>> implements Resource<T, B> {
 
+    protected static Logger _log = Logger.getLogger(ResourceProvider.class.getName());
+
     private String GET_QUERY = "SELECT * FROM %s %s";
-    private String UPDATE_QUERY = "UPDATE %s SET %s = %s %s";
+    private String UPDATE_QUERY = "UPDATE %s SET %s = '%s' %s";
     private String DELETE_QUERY = "DELETE FROM %s %s";
     private String INSERT_QUERY = "INSERT INTO  %s (%s) VALUES (%s)";
 
@@ -94,7 +97,7 @@ public class ResourceProvider<T extends DataBaseTable<T>, B extends ResourceBuil
         return find(filter);
     }
 
-    public T create(B builder) throws ResourceProvideException {
+    public T create(B builder, boolean... log) throws ResourceProvideException {
         T build = null;
         try {
             build = builder.build();
@@ -120,6 +123,9 @@ public class ResourceProvider<T extends DataBaseTable<T>, B extends ResourceBuil
 
         if (build == null){
             throw new ResourceProvideException(resource.getSimpleName() + " not created");
+        }
+        if (log.length > 0 && log[0]){
+            _log.info(this.getClass().getSimpleName() + " -> Create: " + build.toString());
         }
 
         return build;

@@ -38,7 +38,7 @@ public class Test {
         ConfigSystem.load();
         testDatabaseResource();
 //        DATABASE();
-//        SchemesGenerator.generate("l2open");
+//        SchemesGenerator.generate("l2tehno");
     }
 
 
@@ -69,16 +69,16 @@ public class Test {
 //        serverVariablesResource.setValue("1234");
 //        System.out.println(serverVariablesResource);
 
+
+
+
+
+
         Resource<SpawnlistResource, SpawnlistBuilder> spawnlistResource = new ResourceProvider<>(SpawnlistResource.class);
-
         final List<SpawnlistResource> list = spawnlistResource.findList(new Filter().WHERE(SpawnlistResource.NPC_TEMPLATEID, 31691));
-
-        final SpawnlistResource spawn = spawnlistResource.create(new SpawnlistBuilder().withLocation("").withNpcTemplateid(31691));
-
+        final SpawnlistResource spawn = spawnlistResource.create(new SpawnlistBuilder().withLocation("qwe").withNpcTemplateid(31691), true);
+        spawn.setLocation("TestLocation");
         spawn.delete();
-
-        System.out.println(spawn);
-
 
 //        list.forEach(System.out::println);
 

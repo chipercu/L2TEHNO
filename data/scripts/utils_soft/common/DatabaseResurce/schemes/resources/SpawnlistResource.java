@@ -25,7 +25,7 @@ import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
                 @Column(is_null = NO , type = TINYINT , type_size = 0 , name = PERIOD_OF_DAY , defValue = "0"),
                 @Column(is_null = NO , type = SMALLINT , type_size = 0 , name = REFLECTION , defValue = "0"),
                 @Column(is_null = NO , type = VARCHAR , type_size = 500 , name = STAT_PARAM , defValue = "-1"),
-                @Column(is_null = YES , type = TEXT , type_size = 65535 , name = AI_PARAM , defValue = "NULL"),
+                @Column(is_null = YES , type = TEXT , type_size = 65535 , name = AI_PARAM , defValue = "-1"),
         }
 )
 public class SpawnlistResource extends DataBaseTable<SpawnlistResource> {

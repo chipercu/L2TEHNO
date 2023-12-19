@@ -49,7 +49,7 @@ import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
                 @Column(is_null = NO , type = VARCHAR , type_size = 7 , name = AFFECT_LIMIT , defValue = "0;0"),
                 @Column(is_null = NO , type = VARCHAR , type_size = 16 , name = FAN_RANGE , defValue = "0;0;0;0"),
                 @Column(is_null = NO , type = INT , type_size = 0 , name = EFFECTIVE_RANGE , defValue = "-1"),
-                @Column(is_null = NO , type = INT , type_size = 0 , name = EFFECT_POINT , defValue = "0"),
+                @Column(is_null = NO , type = INT , type_size = 0 , name = EFFECT_POINT2 , defValue = "0"),
                 @Column(is_null = NO , type = SMALLINT , type_size = 0 , name = IRREPLACEABLE_BUFF , defValue = "0"),
                 @Column(is_null = NO , type = VARCHAR , type_size = 31 , name = ABNORMAL_VISUAL_EFFECT , defValue = "ave_none"),
                 @Column(is_null = NO , type = TEXT , type_size = 65535 , name = ICON , defValue = "null"),

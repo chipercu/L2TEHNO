@@ -116,26 +116,12 @@ public abstract class DataBaseTable <T>{
 
     public void update(String field, Object value){
         try {
+            getSTAT_SET().getObject(field);
             final String query = String.format(RESOURCE_PROVIDER.getUPDATE_QUERY(), RESOURCE_PROVIDER.getTABLE_NAME(), field, value, FILTER(field).build());
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
             statement.execute();
-        } catch (Exception ignored) {
-        } finally {
-            DatabaseUtils.closeDatabaseCS(con, statement);
-        }
-    }
-
-    public void create(){
-        final Table annotation = _class.getAnnotation(Table.class);
-        final String columns = Arrays.stream(annotation.fields()).map(Column::name).collect(Collectors.joining(","));
-        final String collect = Arrays.stream(annotation.fields()).map(field -> "?").collect(Collectors.joining(","));
-        try {
-            final String query = String.format(RESOURCE_PROVIDER.getINSERT_QUERY(), RESOURCE_PROVIDER.getTABLE_NAME(), columns, collect);
-            con = L2DatabaseFactory.getInstance().getConnection();
-            statement = con.prepareStatement(query);
-            statement.setVars();
-            statement.execute();
+            _log.info(this.getClass().getSimpleName() + " -> Update scheme " + _class.getSimpleName() + " : " + getSTAT_SET().getObject(field) + " -> " + value);
         } catch (Exception ignored) {
         } finally {
             DatabaseUtils.closeDatabaseCS(con, statement);
@@ -148,6 +134,7 @@ public abstract class DataBaseTable <T>{
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
             statement.execute();
+            _log.info(this.getClass().getSimpleName() + " -> Delete " + _class.getSimpleName() + " : " + FILTER().build());
         } catch (Exception ignored) {
         } finally {
             DatabaseUtils.closeDatabaseCS(con, statement);
@@ -159,7 +146,14 @@ public abstract class DataBaseTable <T>{
 
     @Override
     public String toString() {
+        final Table annotation = _class.getAnnotation(Table.class);
+        List<String> values = new ArrayList<>();
+        for (Column column: annotation.fields()){
+            values.add(column.name()+ "=" + STAT_SET.getObject(column.name()));
+        }
+        final String join = String.join(", ", values);
+
         final String collect = STAT_SET.getSet().keySet().stream().map(e -> e + "=" + STAT_SET.getSet().get(e)).collect(Collectors.joining(", "));
-        return _class.getSimpleName() + "{" + collect + "}";
+        return _class.getSimpleName() + "{" + join + "}";
     }
 }

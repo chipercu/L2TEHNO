@@ -14,5 +14,5 @@ public interface Resource<T extends DataBaseTable<T>, B> {
 
     T update(T entity, String field, Object value) throws NoSuchFieldException, IllegalAccessException;
 
-    T create(B builder) throws ResourceProvideException;
+    T create(B builder, boolean... log) throws ResourceProvideException;
 }
