@@ -9,7 +9,7 @@ import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "community_perform_buffs_schemebuff",
-        primary_key = {},
+        primary_key = {SCHEME_ID, BUFF_ID, INDEX_},
         fields = {
                 @Column(is_null = NO , type = INT , type_size = 0 , name = SCHEME_ID , defValue = "null"),
                 @Column(is_null = NO , type = INT , type_size = 0 , name = BUFF_ID , defValue = "null"),

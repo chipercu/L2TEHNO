@@ -12,6 +12,14 @@ public class L2Drop
 	private GArray<L2DropGroup> _drop;
 	private GArray<L2DropGroup> _spoil;
 
+	public GArray<L2DropGroup> get_drop() {
+		return _drop;
+	}
+
+	public GArray<L2DropGroup> get_spoil() {
+		return _spoil;
+	}
+
 	public void addData(L2DropData d)
 	{
 		if(d.isSweep())

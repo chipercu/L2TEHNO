@@ -9,7 +9,7 @@ import static utils_soft.common.DatabaseResurce.anotations.DATA_TYPE.*;
 
 @Table(
         name = "droplist",
-        primary_key = {},
+        primary_key = {MOB_ID,ITEM_ID,CATEGORY,SWEEP},
         fields = {
                 @Column(is_null = NO , type = INT , type_size = 0 , name = MOB_ID , defValue = "0"),
                 @Column(is_null = NO , type = INT , type_size = 0 , name = ITEM_ID , defValue = "0"),

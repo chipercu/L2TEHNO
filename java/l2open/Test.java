@@ -8,7 +8,9 @@ import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
 import utils_soft.common.DatabaseResurce.*;
 import utils_soft.common.DatabaseResurce.exceptions.ResourceProvideException;
+import utils_soft.common.DatabaseResurce.schemes.builders.ServerVariablesBuilder;
 import utils_soft.common.DatabaseResurce.schemes.builders.SpawnlistBuilder;
+import utils_soft.common.DatabaseResurce.schemes.resources.ServerVariablesResource;
 import utils_soft.common.DatabaseResurce.schemes.resources.SpawnlistResource;
 
 
@@ -62,16 +64,13 @@ public class Test {
     }
 
     public static void testDatabaseResource() throws ResourceProvideException {
-//
-//        Resource<ServerVariablesResource, ServerVariablesBuilder> accountsResourceResource = new ResourceProvider<>(ServerVariablesResource.class);
-//        final List<ServerVariablesResource> all = accountsResourceResource.findAll();
-//        final ServerVariablesResource serverVariablesResource = accountsResourceResource.create(new ServerVariablesBuilder().withName("testname").withValue("asd"));
-//        serverVariablesResource.setValue("1234");
-//        System.out.println(serverVariablesResource);
 
-
-
-
+        Resource<ServerVariablesResource, ServerVariablesBuilder> accountsResourceResource = new ResourceProvider<>(ServerVariablesResource.class);
+        final List<ServerVariablesResource> all = accountsResourceResource.findAll();
+        System.out.println(all.size());
+        final ServerVariablesResource serverVariablesResource = accountsResourceResource.create(new ServerVariablesBuilder().withName("testname").withValue("asd"));
+        serverVariablesResource.setValue("1234");
+        System.out.println(serverVariablesResource);
 
 
         Resource<SpawnlistResource, SpawnlistBuilder> spawnlistResource = new ResourceProvider<>(SpawnlistResource.class);

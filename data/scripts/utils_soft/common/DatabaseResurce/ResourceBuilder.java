@@ -1,16 +1,11 @@
 package utils_soft.common.DatabaseResurce;
 
 import l2open.gameserver.templates.StatsSet;
-import utils_soft.NpcEditor.NpcEditorComponent;
-import utils_soft.common.DatabaseResurce.DataBaseTable;
 import utils_soft.common.DatabaseResurce.anotations.Column;
 import utils_soft.common.DatabaseResurce.anotations.IS_NULLABLE;
 import utils_soft.common.DatabaseResurce.anotations.Table;
 import utils_soft.common.DatabaseResurce.exceptions.ResourceProvideException;
 
-import java.lang.reflect.Field;
-import java.time.Year;
-import java.util.NoSuchElementException;
 import java.util.logging.Logger;
 
 /**

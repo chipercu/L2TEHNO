@@ -85,7 +85,8 @@ public class OnActionShift extends Functions implements ScriptFile
 				dialog = dialog.replaceFirst("%killed%", String.valueOf(npc.getTemplate().killscount));
 				dialog = dialog.replaceFirst("%spReward%", String.valueOf(npc.getSpReward()));
 				dialog = dialog.replaceFirst("%xyz%", npc.getLoc().x + " " + npc.getLoc().y + " " + npc.getLoc().z);
-				
+				dialog = dialog.replaceFirst("%objectId%", String.valueOf(npc.getObjectId()));
+
 				if(npc.getSpawnedLoc() != null)
 					dialog = dialog.replaceFirst("%xyzSp%", npc.getSpawnedLoc().x + " " + npc.getSpawnedLoc().y + " " + npc.getSpawnedLoc().z);
 				else

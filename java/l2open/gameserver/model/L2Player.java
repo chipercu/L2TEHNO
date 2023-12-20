@@ -131,6 +131,10 @@ public class L2Player extends L2Playable {
     private String currentEncryptKey;
     private String lastEncryptKey;
 
+    private Location interactLocation;
+    private InteractMode interactMode;
+    private L2NpcInstance interactNpc;
+
 
     public HashMap<Integer, L2SubClass> _classlist = new HashMap<Integer, L2SubClass>(4);
 
@@ -10809,5 +10813,31 @@ public class L2Player extends L2Playable {
             return null;
         }
         return (String) quickVars.get(name);
+    }
+
+    public Location getInteractLocation() {
+        Location loc = new Location(interactLocation.x, interactLocation.y, interactLocation.z);
+        setInteractLocation(null);
+        return loc;
+    }
+
+    public void setInteractLocation(Location interactLocation) {
+        this.interactLocation = interactLocation;
+    }
+
+    public InteractMode getInteractMode() {
+        return interactMode;
+    }
+
+    public void setInteractMode(InteractMode interactMode) {
+        this.interactMode = interactMode;
+    }
+
+    public L2NpcInstance getInteractNpc() {
+        return interactNpc;
+    }
+
+    public void setInteractNpc(L2NpcInstance interactNpc) {
+        this.interactNpc = interactNpc;
     }
 }

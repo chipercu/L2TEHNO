@@ -4,7 +4,7 @@ import utils_soft.common.DatabaseResurce.exceptions.ResourceProvideException;
 
 import java.util.List;
 
-public interface Resource<T extends DataBaseTable<T>, B> {
+public interface Resource<T extends DataBaseTable<T>, B extends ResourceBuilder<T>> {
 
     T find(Filter filter);
 

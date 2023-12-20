@@ -1,6 +1,7 @@
 package utils_soft.common;
 
 import l2open.gameserver.model.L2Player;
+import utils_soft.common.DatabaseResurce.exceptions.ResourceProvideException;
 
 /**
  * Created by a.kiperku
@@ -9,6 +10,6 @@ import l2open.gameserver.model.L2Player;
 @FunctionalInterface
 public interface CommandsFunction {
 
-    void execute(L2Player player, String[] args);
+    void execute(L2Player player, String[] args) throws ResourceProvideException;
 
 }

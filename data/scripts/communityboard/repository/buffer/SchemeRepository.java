@@ -7,11 +7,19 @@ import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
+import utils_soft.common.DatabaseResurce.Filter;
+import utils_soft.common.DatabaseResurce.Resource;
+import utils_soft.common.DatabaseResurce.ResourceProvider;
+import utils_soft.common.DatabaseResurce.schemes.builders.CommunityPerformBuffsSchemeBuilder;
+import utils_soft.common.DatabaseResurce.schemes.builders.CommunityPerformBuffsSchemebuffBuilder;
+import utils_soft.common.DatabaseResurce.schemes.resources.CommunityPerformBuffsSchemeResource;
+import utils_soft.common.DatabaseResurce.schemes.resources.CommunityPerformBuffsSchemebuffResource;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * Created by a.kiperku
@@ -23,31 +31,43 @@ public class SchemeRepository {
     private static final String SCHEME_BUFF_TABLE = "community_perform_buffs_schemebuff";
     private static final String SCHEME_TABLE = "community_perform_buffs_scheme";
 
+    private final Resource<CommunityPerformBuffsSchemeResource, CommunityPerformBuffsSchemeBuilder> schemeResource;
+    private final Resource<CommunityPerformBuffsSchemebuffResource, CommunityPerformBuffsSchemebuffBuilder> schemeBuffResource;
+
+    public SchemeRepository() {
+        this.schemeResource = new ResourceProvider<>(CommunityPerformBuffsSchemeResource.class);
+        this.schemeBuffResource = new ResourceProvider<>(CommunityPerformBuffsSchemebuffResource.class);
+    }
+
     private ThreadConnection con = null;
     private FiltredPreparedStatement statement = null;
 
     public List<Scheme> getAllScheme() {
-        final ArrayList<Scheme> schemes = new ArrayList<>();
-        ResultSet rs = null;
-        try {
-            con = L2DatabaseFactory.getInstance().getConnection();
-            String stmt = "SELECT * FROM " + SCHEME_TABLE;
-            rs = con.prepareStatement(stmt).executeQuery();
-            while (rs.next()) {
-                final Scheme scheme = new Scheme(
-                        rs.getInt("id"),
-                        rs.getInt("owner"),
-                        rs.getString("name")
-                );
+        return schemeResource.findAll().stream()
+                .map(scheme -> new Scheme(scheme.getId(), scheme.getOwner(), scheme.getName()))
+                .collect(Collectors.toList());
 
-                schemes.add(scheme);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            DatabaseUtils.closeDatabaseCSR(con, statement, rs);
-        }
-        return schemes;
+//        final ArrayList<Scheme> schemes = new ArrayList<>();
+//        ResultSet rs = null;
+//        try {
+//            con = L2DatabaseFactory.getInstance().getConnection();
+//            String stmt = "SELECT * FROM " + SCHEME_TABLE;
+//            rs = con.prepareStatement(stmt).executeQuery();
+//            while (rs.next()) {
+//                final Scheme scheme = new Scheme(
+//                        rs.getInt("id"),
+//                        rs.getInt("owner"),
+//                        rs.getString("name")
+//                );
+//
+//                schemes.add(scheme);
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        } finally {
+//            DatabaseUtils.closeDatabaseCSR(con, statement, rs);
+//        }
+//        return schemes;
     }
 
     public Optional<Scheme> createScheme(Scheme scheme) {
@@ -68,28 +88,35 @@ public class SchemeRepository {
     }
 
     public Optional<Scheme> getScheme(int owner, String name) {
-        ResultSet rs = null;
-        try {
-            con = L2DatabaseFactory.getInstance().getConnection();
-            String stmt = "SELECT * FROM " + SCHEME_TABLE +" WHERE owner=? AND name=?";
-            statement = con.prepareStatement(stmt);
-            statement.setInt(1, owner);
-            statement.setString(2, name);
-            rs = statement.executeQuery();
-            if (rs.next()) {
-                Scheme scheme = new Scheme(
-                        rs.getInt("id"),
-                        rs.getInt("owner"),
-                        rs.getString("name")
-                );
-                return Optional.of(scheme);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            DatabaseUtils.closeDatabaseCSR(con, statement, rs);
-        }
-        return Optional.empty();
+
+        final CommunityPerformBuffsSchemeResource buffsScheme = schemeResource.find(new Filter()
+                .WHERE(CommunityPerformBuffsSchemeResource.OWNER, owner)
+                .AND(CommunityPerformBuffsSchemeResource.NAME, name));
+
+        return Optional.of(new Scheme(buffsScheme.getId(), buffsScheme.getOwner(), buffsScheme.getName()));
+
+//        ResultSet rs = null;
+//        try {
+//            con = L2DatabaseFactory.getInstance().getConnection();
+//            String stmt = "SELECT * FROM " + SCHEME_TABLE +" WHERE owner=? AND name=?";
+//            statement = con.prepareStatement(stmt);
+//            statement.setInt(1, owner);
+//            statement.setString(2, name);
+//            rs = statement.executeQuery();
+//            if (rs.next()) {
+//                Scheme scheme = new Scheme(
+//                        rs.getInt("id"),
+//                        rs.getInt("owner"),
+//                        rs.getString("name")
+//                );
+//                return Optional.of(scheme);
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        } finally {
+//            DatabaseUtils.closeDatabaseCSR(con, statement, rs);
+//        }
+//        return Optional.empty();
     }
 
     public void removeScheme(int id) {
@@ -210,16 +237,20 @@ public class SchemeRepository {
     }
 
     public void removeSchemeBuff(int schemeId, int index) {
-        try {
-            con = L2DatabaseFactory.getInstance().getConnection();
-            statement = con.prepareStatement("DELETE FROM " + SCHEME_BUFF_TABLE + " WHERE scheme_id=? AND index_=?");
-            statement.setInt(1, schemeId);
-            statement.setInt(2, index);
-            statement.execute();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            DatabaseUtils.closeConnection(con);
-        }
+        schemeBuffResource.find(new Filter().WHERE(CommunityPerformBuffsSchemebuffResource.SCHEME_ID, schemeId)
+                        .AND(CommunityPerformBuffsSchemebuffResource.INDEX_, index))
+                .delete();
+
+//        try {
+//            con = L2DatabaseFactory.getInstance().getConnection();
+//            statement = con.prepareStatement("DELETE FROM " + SCHEME_BUFF_TABLE + " WHERE scheme_id=? AND index_=?");
+//            statement.setInt(1, schemeId);
+//            statement.setInt(2, index);
+//            statement.execute();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        } finally {
+//            DatabaseUtils.closeConnection(con);
+//        }
     }
 }
