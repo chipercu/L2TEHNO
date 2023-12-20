@@ -1,7 +1,8 @@
 package utils_soft.MultisellEditor;
 
 import l2open.gameserver.model.L2Player;
-import utils_soft.common.CommandsFunction;
+import l2open.extensions.common.CommandsFunction;
+import l2open.database.exceptions.ResourceProvideException;
 
 /**
  * Created by a.kiperku
@@ -32,7 +33,7 @@ public enum MultiSellCommands {
     MultiSellCommands(CommandsFunction component) {
         this.component = component;
     }
-    public void exec(L2Player player, String[] args) {
+    public void exec(L2Player player, String[] args) throws ResourceProvideException {
         component.execute(player, args);
     }
 

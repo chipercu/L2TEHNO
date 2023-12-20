@@ -6,6 +6,7 @@ package l2open.gameserver.model;
  */
 public enum InteractMode {
     TELEPORT_NPC_TO_CURSOR,
+    PET_MOVE_TO,
     CURSOR_LOC,
     ACTION_TO
 }

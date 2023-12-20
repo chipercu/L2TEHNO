@@ -6,12 +6,7 @@ import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
-import utils_soft.common.DatabaseResurce.*;
-import utils_soft.common.DatabaseResurce.exceptions.ResourceProvideException;
-import utils_soft.common.DatabaseResurce.schemes.builders.ServerVariablesBuilder;
-import utils_soft.common.DatabaseResurce.schemes.builders.SpawnlistBuilder;
-import utils_soft.common.DatabaseResurce.schemes.resources.ServerVariablesResource;
-import utils_soft.common.DatabaseResurce.schemes.resources.SpawnlistResource;
+
 
 
 import javax.crypto.Cipher;
@@ -38,7 +33,7 @@ public class Test {
 
     public static void main(String[] args) throws Exception {
         ConfigSystem.load();
-        testDatabaseResource();
+//        testDatabaseResource();
 //        DATABASE();
 //        SchemesGenerator.generate("l2tehno");
     }
@@ -63,26 +58,26 @@ public class Test {
         }
     }
 
-    public static void testDatabaseResource() throws ResourceProvideException {
-
-        Resource<ServerVariablesResource, ServerVariablesBuilder> accountsResourceResource = new ResourceProvider<>(ServerVariablesResource.class);
-        final List<ServerVariablesResource> all = accountsResourceResource.findAll();
-        System.out.println(all.size());
-        final ServerVariablesResource serverVariablesResource = accountsResourceResource.create(new ServerVariablesBuilder().withName("testname").withValue("asd"));
-        serverVariablesResource.setValue("1234");
-        System.out.println(serverVariablesResource);
-
-
-        Resource<SpawnlistResource, SpawnlistBuilder> spawnlistResource = new ResourceProvider<>(SpawnlistResource.class);
-        final List<SpawnlistResource> list = spawnlistResource.findList(new Filter().WHERE(SpawnlistResource.NPC_TEMPLATEID, 31691));
-        final SpawnlistResource spawn = spawnlistResource.create(new SpawnlistBuilder().withLocation("qwe").withNpcTemplateid(31691), true);
-        spawn.setLocation("TestLocation");
-        spawn.delete();
-
-//        list.forEach(System.out::println);
-
-
-    }
+//    public static void testDatabaseResource() throws ResourceProvideException {
+//
+//        Resource<ServerVariablesResource, ServerVariablesBuilder> accountsResourceResource = new ResourceProvider<>(ServerVariablesResource.class);
+//        final List<ServerVariablesResource> all = accountsResourceResource.findAll();
+//        System.out.println(all.size());
+//        final ServerVariablesResource serverVariablesResource = accountsResourceResource.create(new ServerVariablesBuilder().withName("testname").withValue("asd"));
+//        serverVariablesResource.setValue("1234");
+//        System.out.println(serverVariablesResource);
+//
+//
+//        Resource<SpawnlistResource, SpawnlistBuilder> spawnlistResource = new ResourceProvider<>(SpawnlistResource.class);
+//        final List<SpawnlistResource> list = spawnlistResource.findList(new Filter().WHERE(SpawnlistResource.NPC_TEMPLATEID, 31691));
+//        final SpawnlistResource spawn = spawnlistResource.create(new SpawnlistBuilder().withLocation("qwe").withNpcTemplateid(31691), true);
+//        spawn.setLocation("TestLocation");
+//        spawn.delete();
+//
+////        list.forEach(System.out::println);
+//
+//
+//    }
 
     public static void testEncrypt() throws Exception {
         File file = new File("file.txt");

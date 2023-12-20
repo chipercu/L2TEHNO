@@ -4,6 +4,7 @@ import l2open.extensions.scripts.ScriptFile;
 import l2open.gameserver.handler.AdminCommandHandler;
 import l2open.gameserver.handler.IAdminCommandHandler;
 import l2open.gameserver.model.L2Player;
+import l2open.database.exceptions.ResourceProvideException;
 
 /**
  * Created by a.kiperku
@@ -14,7 +15,7 @@ public class MultiSellEditorCommandsManager implements IAdminCommandHandler, Scr
 
 
     @Override
-    public boolean useAdminCommand(Enum comm, String[] args, String fullString, L2Player player) {
+    public boolean useAdminCommand(Enum comm, String[] args, String fullString, L2Player player) throws ResourceProvideException {
         MultiSellCommands command = (MultiSellCommands) comm;
         if (player.isGM()){
             command.exec(player, args);

@@ -6,6 +6,7 @@ import l2open.gameserver.loginservercon.gspackets.ChangeAccessLevel;
 import l2open.gameserver.geodata.GeoEngine;
 import l2open.gameserver.model.InteractMode;
 import l2open.gameserver.model.L2Player;
+import l2open.gameserver.model.L2Summon;
 import l2open.gameserver.model.instances.L2NpcInstance;
 import l2open.gameserver.network.L2GameClient;
 import l2open.gameserver.serverpackets.CharMoveToLocation;
@@ -120,6 +121,14 @@ public class MoveBackwardToLocation extends L2GameClientPacket {
             if (interactNpc != null){
                 interactNpc.teleToLocation(_tx, _ty, _tz);
                 activeChar.setInteractNpc(null);
+            }
+            activeChar.sendActionFailed();
+            return;
+        } else if (activeChar.getInteractMode() == InteractMode.PET_MOVE_TO) {
+            activeChar.setInteractMode(null);
+            final L2Summon pet = activeChar.getPet();
+            if (pet != null){
+                pet.moveToLocation(_tx, _ty, _tz, 10, true);
             }
             activeChar.sendActionFailed();
             return;

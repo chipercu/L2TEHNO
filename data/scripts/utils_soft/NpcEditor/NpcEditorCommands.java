@@ -1,14 +1,15 @@
 package utils_soft.NpcEditor;
 
 import l2open.gameserver.model.L2Player;
-import utils_soft.common.CommandsFunction;
-import utils_soft.common.DatabaseResurce.exceptions.ResourceProvideException;
+import l2open.extensions.common.CommandsFunction;
+import l2open.database.exceptions.ResourceProvideException;
 
 /**
  * Created by a.kiperku
  * Date: 01.12.2023
  */
 public enum NpcEditorCommands {
+    admin_npc_editor_test_move_pet(NpcEditorComponent::testMovePet),
     admin_npc_editor(NpcEditorComponent::showMainPage),
     admin_npc_editor_main_stats(NpcEditorComponent::showMainStats),
     admin_npc_editor_base_stats(NpcEditorComponent::showBaseStats),

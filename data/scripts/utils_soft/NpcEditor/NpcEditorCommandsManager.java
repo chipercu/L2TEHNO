@@ -4,7 +4,7 @@ import l2open.extensions.scripts.ScriptFile;
 import l2open.gameserver.handler.AdminCommandHandler;
 import l2open.gameserver.handler.IAdminCommandHandler;
 import l2open.gameserver.model.L2Player;
-import utils_soft.common.DatabaseResurce.exceptions.ResourceProvideException;
+import l2open.database.exceptions.ResourceProvideException;
 
 /**
  * Created by a.kiperku

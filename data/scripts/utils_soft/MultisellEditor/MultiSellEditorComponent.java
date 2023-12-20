@@ -13,7 +13,7 @@ import l2open.gameserver.templates.L2Item;
 import l2open.gameserver.xml.ItemTemplates;
 import l2open.util.Files;
 import l2open.util.GArray;
-import utils_soft.common.Component;
+import l2open.extensions.common.Component;
 
 import java.io.File;
 import java.io.FileWriter;

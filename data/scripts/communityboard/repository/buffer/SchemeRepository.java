@@ -7,13 +7,13 @@ import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
-import utils_soft.common.DatabaseResurce.Filter;
-import utils_soft.common.DatabaseResurce.Resource;
-import utils_soft.common.DatabaseResurce.ResourceProvider;
-import utils_soft.common.DatabaseResurce.schemes.builders.CommunityPerformBuffsSchemeBuilder;
-import utils_soft.common.DatabaseResurce.schemes.builders.CommunityPerformBuffsSchemebuffBuilder;
-import utils_soft.common.DatabaseResurce.schemes.resources.CommunityPerformBuffsSchemeResource;
-import utils_soft.common.DatabaseResurce.schemes.resources.CommunityPerformBuffsSchemebuffResource;
+import l2open.database.Filter;
+import l2open.database.Resource;
+import l2open.database.ResourceProvider;
+import l2open.database.schemes.builders.CommunityPerformBuffsSchemeBuilder;
+import l2open.database.schemes.builders.CommunityPerformBuffsSchemebuffBuilder;
+import l2open.database.schemes.resources.CommunityPerformBuffsSchemeResource;
+import l2open.database.schemes.resources.CommunityPerformBuffsSchemebuffResource;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -43,7 +43,8 @@ public class SchemeRepository {
     private FiltredPreparedStatement statement = null;
 
     public List<Scheme> getAllScheme() {
-        return schemeResource.findAll().stream()
+        final List<CommunityPerformBuffsSchemeResource> all = schemeResource.findAll();
+        return all.stream()
                 .map(scheme -> new Scheme(scheme.getId(), scheme.getOwner(), scheme.getName()))
                 .collect(Collectors.toList());
 

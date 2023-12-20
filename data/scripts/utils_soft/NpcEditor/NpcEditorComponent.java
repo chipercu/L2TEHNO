@@ -15,19 +15,19 @@ import l2open.util.GArray;
 import l2open.util.Location;
 import utils_soft.NpcEditor.enums.AI_TYPE;
 import utils_soft.NpcEditor.enums.INSTANCE_TYPE;
-import utils_soft.common.Component;
-import utils_soft.common.DatabaseResurce.Filter;
-import utils_soft.common.DatabaseResurce.Resource;
-import utils_soft.common.DatabaseResurce.ResourceProvider;
-import utils_soft.common.DatabaseResurce.exceptions.ResourceProvideException;
-import utils_soft.common.DatabaseResurce.schemes.builders.DroplistBuilder;
-import utils_soft.common.DatabaseResurce.schemes.builders.NpcBuilder;
-import utils_soft.common.DatabaseResurce.schemes.builders.NpcElementBuilder;
-import utils_soft.common.DatabaseResurce.schemes.builders.NpcskillsBuilder;
-import utils_soft.common.DatabaseResurce.schemes.resources.DroplistResource;
-import utils_soft.common.DatabaseResurce.schemes.resources.NpcElementResource;
-import utils_soft.common.DatabaseResurce.schemes.resources.NpcResource;
-import utils_soft.common.DatabaseResurce.schemes.resources.NpcskillsResource;
+import l2open.extensions.common.Component;
+import l2open.database.Filter;
+import l2open.database.Resource;
+import l2open.database.ResourceProvider;
+import l2open.database.exceptions.ResourceProvideException;
+import l2open.database.schemes.builders.DroplistBuilder;
+import l2open.database.schemes.builders.NpcBuilder;
+import l2open.database.schemes.builders.NpcElementBuilder;
+import l2open.database.schemes.builders.NpcskillsBuilder;
+import l2open.database.schemes.resources.DroplistResource;
+import l2open.database.schemes.resources.NpcElementResource;
+import l2open.database.schemes.resources.NpcResource;
+import l2open.database.schemes.resources.NpcskillsResource;
 
 import java.text.DecimalFormat;
 import java.util.Arrays;
@@ -61,16 +61,17 @@ public class NpcEditorComponent extends Component{
         CBWindow(player, main, window_titel);
     }
     public static Table headerTable(int npcId, int npcObjectId){
+        String params = npcId + " " + npcObjectId;
         final Table headerTable = new Table(9, 1);
         headerTable.row(0).col(0).insert(new Button("HOME", actionCom(admin_npc_editor, "none null 0"), 150, 36));
-        headerTable.row(1).col(0).setParams(width(150)).insert(new Button("MainStats", actionCom(admin_npc_editor_main_stats, npcId), 150, 36));
-        headerTable.row(2).col(0).insert(new Button("BaseStats", actionCom(admin_npc_editor_base_stats, npcId), 150, 36));
-        headerTable.row(3).col(0).insert(new Button("Skills", actionCom(admin_npc_editor_skills, npcId + " active"), 150, 36));
-        headerTable.row(4).col(0).insert(new Button("Drop", actionCom(admin_npc_editor_drop, npcId + " DROP"), 150, 36));
-        headerTable.row(5).col(0).insert(new Button("Visual", actionCom(admin_npc_editor_visual, npcId), 150, 36));
-        headerTable.row(6).col(0).insert(new Button("Elements", actionCom(admin_npc_editor_elements, npcId), 150, 36));
-        headerTable.row(7).col(0).insert(new Button("Location", actionCom(admin_npc_editor_location, npcId), 150, 36));
-        headerTable.row(8).col(0).insert(new Button("Other", actionCom(admin_npc_editor_other, npcId), 150, 36));
+        headerTable.row(1).col(0).setParams(width(150)).insert(new Button("MainStats", actionCom(admin_npc_editor_main_stats, params), 150, 36));
+        headerTable.row(2).col(0).insert(new Button("BaseStats", actionCom(admin_npc_editor_base_stats, params ), 150, 36));
+        headerTable.row(3).col(0).insert(new Button("Skills", actionCom(admin_npc_editor_skills, params + " active"), 150, 36));
+        headerTable.row(4).col(0).insert(new Button("Drop", actionCom(admin_npc_editor_drop, params + " DROP"), 150, 36));
+        headerTable.row(5).col(0).insert(new Button("Visual", actionCom(admin_npc_editor_visual, params), 150, 36));
+        headerTable.row(6).col(0).insert(new Button("Elements", actionCom(admin_npc_editor_elements, params), 150, 36));
+        headerTable.row(7).col(0).insert(new Button("Location", actionCom(admin_npc_editor_location, params), 150, 36));
+        headerTable.row(8).col(0).insert(new Button("Other", actionCom(admin_npc_editor_other, params), 150, 36));
         return headerTable;
     }
     public static Table skillTable(int npcId, List<L2Skill> skills){
@@ -337,8 +338,11 @@ public class NpcEditorComponent extends Component{
     }
     public static void showLocation(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
+        int npcObjectId = Integer.parseInt(args[2]);
+        String params = npcId + " " + npcObjectId;
+
         final Table table = new Table(7, 2);
-        basePage(player, npcId,0, table, new Button("Сохранить", actionCom(admin_npc_editor_save_location, ""), 100, 20).build());
+        basePage(player, npcId,0, table, new Button("Сохранить", actionCom(admin_npc_editor_save_location, params), 100, 20).build());
     }
     public static void showOther(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
@@ -515,7 +519,14 @@ public class NpcEditorComponent extends Component{
     }
     public static void saveLocation(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
-        L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
+        int npcObjectId = Integer.parseInt(args[2]);
+//        L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
+
+        L2NpcInstance npc = L2ObjectsStorage.getNpc(npcObjectId);
+        if (npc != null){
+            player.setInteractMode(InteractMode.TELEPORT_NPC_TO_CURSOR);
+            player.setInteractNpc(npc);
+        }
 //        reload(npc);
         showLocation(player, args);
     }
@@ -552,4 +563,7 @@ public class NpcEditorComponent extends Component{
     }
 
 
+    public static void testMovePet(L2Player player, String[] strings) {
+        player.setInteractMode(InteractMode.PET_MOVE_TO);
+    }
 }
