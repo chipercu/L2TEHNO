@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/model/L2ObjectsStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/model/L2ObjectsStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/model/L2WorldRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/model/L2WorldRegion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/tables/SpawnTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/tables/SpawnTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/clientpackets/MoveBackwardToLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/clientpackets/MoveBackwardToLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Summon.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Summon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -525,6 +525,11 @@
           <url>file://$PROJECT_DIR$/data/scripts/ai/FakePlayersAI/PathManager/PathFinder.java</url>
           <line>39</line>
           <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/java/l2open/gameserver/clientpackets/RequestActionUse.java</url>
+          <line>249</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

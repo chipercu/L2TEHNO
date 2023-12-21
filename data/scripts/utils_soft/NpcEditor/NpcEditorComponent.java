@@ -39,17 +39,13 @@ import java.util.stream.Collectors;
 import static l2open.common.Html_Constructor.tags.parameters.Parameters.*;
 import static l2open.common.Html_Constructor.tags.parameters.Position.*;
 import static utils_soft.NpcEditor.NpcEditorCommands.*;
+import static utils_soft.NpcEditor.NpcEditorUtils.*;
 
 public class NpcEditorComponent extends Component{
 
     private static final String backMainBypass = "admin_npc_editor null 0 1";
     private static final String window_titel = "Npc Editor";
     protected static Logger _log = Logger.getLogger(NpcEditorComponent.class.getName());
-
-    private static final Resource<NpcResource, NpcBuilder> npcResource = new ResourceProvider<>(NpcResource.class);
-    private static final Resource<NpcElementResource, NpcElementBuilder> npcElementResource = new ResourceProvider<>(NpcElementResource.class);
-    private static final Resource<DroplistResource, DroplistBuilder> dropListResource = new ResourceProvider<>(DroplistResource.class);
-    private static final Resource<NpcskillsResource, NpcskillsBuilder> npcSkillsResource = new ResourceProvider<>(NpcskillsResource.class);
 
     public NpcEditorComponent() {
     }
@@ -63,16 +59,15 @@ public class NpcEditorComponent extends Component{
     }
     public static Table headerTable(int npcId, int npcObjectId){
         String params = npcId + " " + npcObjectId;
-        final Table headerTable = new Table(9, 1);
+        final Table headerTable = new Table(8, 1);
         headerTable.row(0).col(0).insert(new Button("HOME", actionCom(admin_npc_editor, "none null 0"), 150, 36));
         headerTable.row(1).col(0).setParams(width(150)).insert(new Button("MainStats", actionCom(admin_npc_editor_main_stats, params), 150, 36));
-        headerTable.row(2).col(0).insert(new Button("BaseStats", actionCom(admin_npc_editor_base_stats, params ), 150, 36));
-        headerTable.row(3).col(0).insert(new Button("Skills", actionCom(admin_npc_editor_skills, params + " active"), 150, 36));
-        headerTable.row(4).col(0).insert(new Button("Drop", actionCom(admin_npc_editor_drop, params + " DROP"), 150, 36));
-        headerTable.row(5).col(0).insert(new Button("Visual", actionCom(admin_npc_editor_visual, params), 150, 36));
-        headerTable.row(6).col(0).insert(new Button("Elements", actionCom(admin_npc_editor_elements, params), 150, 36));
-        headerTable.row(7).col(0).insert(new Button("Location", actionCom(admin_npc_editor_location, params), 150, 36));
-        headerTable.row(8).col(0).insert(new Button("Other", actionCom(admin_npc_editor_other, params), 150, 36));
+        headerTable.row(2).col(0).insert(new Button("Skills", actionCom(admin_npc_editor_skills, params + " active"), 150, 36));
+        headerTable.row(3).col(0).insert(new Button("Drop", actionCom(admin_npc_editor_drop, params + " DROP"), 150, 36));
+        headerTable.row(4).col(0).insert(new Button("Visual", actionCom(admin_npc_editor_visual, params), 150, 36));
+        headerTable.row(5).col(0).insert(new Button("Elements", actionCom(admin_npc_editor_elements, params), 150, 36));
+        headerTable.row(6).col(0).insert(new Button("Location", actionCom(admin_npc_editor_location, params), 150, 36));
+        headerTable.row(7).col(0).insert(new Button("Other", actionCom(admin_npc_editor_other, params), 150, 36));
         return headerTable;
     }
     public static Table skillTable(int npcId, List<L2Skill> skills){
@@ -115,7 +110,7 @@ public class NpcEditorComponent extends Component{
         main.row(2).col(0).setParams(height(20));
         return main;
     }
-    public static Table parametersTable(String name, String value, Enum command, int npcId){
+    public static Table parametersTable(String name, String value, NpcEditorCommands command, int npcId){
         final Table table = new Table(1, 4).setParams(border(0));
         table.row(0).col(0).setParams(align(RIGHT), valign(CENTER), width(50)).insert(new Font(Color.BROWN, name + ": "));
         table.row(0).col(1).setParams(align(LEFT), valign(CENTER), width(100)).insert(new Font(Color.BLUE, value));
@@ -129,24 +124,7 @@ public class NpcEditorComponent extends Component{
         String filterValue = args[2].equals("0") ? "" : args[2].equals("null") ? "" : args[2];
         int page = args.length < 4 ? 0 : Integer.parseInt(args[3]);
 
-        List<NpcResource> npcList;
-
-        int offset = page * 17;
-
-        switch (filter) {
-            case "npcname":
-                npcList = npcResource.findList(new Filter().LIKE(NpcResource.NAME, filterValue).ORDER_BY(NpcResource.ID).LIMIT(17).OFFSET(offset));
-                break;
-            case "npcid":
-                npcList = npcResource.findList(new Filter().LIKE(NpcResource.ID, filterValue).ORDER_BY(NpcResource.ID).LIMIT(17).OFFSET(offset));
-                break;
-            case "npctype":
-                npcList = npcResource.findList(new Filter().LIKE(NpcResource.TYPE, filterValue).ORDER_BY(NpcResource.ORDINAL).LIMIT(17).OFFSET(offset));
-                break;
-            default:
-                npcList = npcResource.findList(new Filter().ORDER_BY(NpcResource.ID).LIMIT(17).OFFSET(offset));
-                break;
-        }
+        List<NpcResource> npcList = NpcEditorResource.getInstance().getNpcFilteredList(filter, filterValue, 17,page * 17);
 
         final Table mainTable = new Table(2, 1);
 
@@ -196,7 +174,7 @@ public class NpcEditorComponent extends Component{
     public static void showMainStats(L2Player player, String[] args){
         int npcId = Integer.parseInt(args[1]);
         int npcObjectId = Integer.parseInt(args[2]);
-        final NpcResource npc = npcResource.find(new Filter().WHERE(NpcResource.ID, npcId));
+        final NpcResource npc = NpcEditorResource.getInstance().getNpcResource().find(new Filter().WHERE(NpcResource.ID, npcId));
         final Table table = new Table(20, 2);
         table.row(0).col(0).insert(parametersTable(NpcResource.LEVEL, String.valueOf(npc.getLevel()), admin_npc_editor_save_main_stats, npcId));
         table.row(1).col(0).insert(separator(200));
@@ -233,25 +211,6 @@ public class NpcEditorComponent extends Component{
         main.row(2).col(0).insert(table);
 
         basePage(player, npcId, npcObjectId, main, "");
-    }
-    public static void showBaseStats(L2Player player, String[] args) {
-        int npcId = Integer.parseInt(args[1]);
-        int npcObjectId = Integer.parseInt(args[2]);
-        final NpcResource npc = npcResource.find(new Filter().WHERE(NpcResource.ID, npcId));
-        final Table table = new Table(14, 1);
-        table.row(0).col(0).insert(parametersTable("str", String.valueOf(npc.getStr()), admin_npc_editor_save_main_stats, npcId));
-        table.row(1).col(0).insert(parametersTable("con", String.valueOf(npc.getCon()), admin_npc_editor_save_main_stats, npcId));
-        table.row(2).col(0).insert(parametersTable("dex", String.valueOf(npc.getDex()), admin_npc_editor_save_main_stats, npcId));
-        table.row(3).col(0).insert(parametersTable("int", String.valueOf(npc.getInt()), admin_npc_editor_save_main_stats, npcId));
-        table.row(4).col(0).insert(parametersTable("wit", String.valueOf(npc.getWit()), admin_npc_editor_save_main_stats, npcId));
-        table.row(5).col(0).insert(parametersTable("men", String.valueOf(npc.getMen()), admin_npc_editor_save_main_stats, npcId));
-
-        final Table main = new Table(3, 1);
-        main.row(0).col(0).setParams(height(20));
-        main.row(1).col(0).insert(" ID: " + new Font(Color.GOLD, npcId).build() + " | " + new Font(Color.GREN, npc.getName()).build());
-        main.row(2).col(0).insert(table);
-
-        basePage(player, npcId,npcObjectId, main, "");
     }
     public static void showSkills(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
@@ -303,7 +262,7 @@ public class NpcEditorComponent extends Component{
         table.row(1).col(0).setParams(valign(CENTER), align(CENTER)).insert(new Font(Color.GREN, DROPLIST));
         switch (DROPLIST) {
             case "DROP":
-                final List<DroplistResource> drop = dropListResource
+                final List<DroplistResource> drop = NpcEditorResource.getInstance().getDropListResource()
                         .findList(new Filter().WHERE(DroplistResource.MOB_ID, npcId).AND(DroplistResource.SWEEP, 0))
                         .stream()
                         .filter(droplistResource -> !ItemTemplates.getInstance().getTemplate(droplistResource.getItemId()).isHerb())
@@ -312,15 +271,20 @@ public class NpcEditorComponent extends Component{
                 table.row(2).col(0).insert(dropTable(npcId, drop));
                 break;
             case "SPOIL":
-                final List<DroplistResource> sweep = dropListResource.findList(new Filter().WHERE(DroplistResource.MOB_ID, npcId).AND(DroplistResource.SWEEP, 1));
+                final List<DroplistResource> sweep = NpcEditorResource.getInstance()
+                        .getDropListResource()
+                        .findList(new Filter().WHERE(DroplistResource.MOB_ID, npcId).AND(DroplistResource.SWEEP, 1));
+
                 table.row(2).col(0).insert(dropTable(npcId, sweep));
                 break;
             case "HERBS":
-                final List<DroplistResource> herbs = dropListResource
+                final List<DroplistResource> herbs = NpcEditorResource.getInstance()
+                        .getDropListResource()
                         .findList(new Filter().WHERE(DroplistResource.MOB_ID, npcId).AND(DroplistResource.SWEEP, 0))
                         .stream()
                         .filter(droplistResource -> ItemTemplates.getInstance().getTemplate(droplistResource.getItemId()).isHerb())
                         .collect(Collectors.toList());
+
                 table.row(2).col(0).insert(dropTable(npcId, herbs));
                 break;
         }
@@ -333,8 +297,25 @@ public class NpcEditorComponent extends Component{
     }
     public static void showElements(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
-        final NpcElementResource npc = npcElementResource.find(new Filter().WHERE(NpcElementResource.ID, npcId));
-        final Table table = new Table(7, 2);
+        final NpcResource npc = NpcEditorResource.getInstance().getNpcResource().find(new Filter().WHERE(NpcResource.ID, npcId));
+        final NpcElementResource npcElement = NpcEditorResource.getInstance().getNpcElementResource().find(new Filter().WHERE(NpcElementResource.ID, npcId));
+        final Table table = new Table(20, 2);
+        table.row(2).col(0).insert(parametersTable(NpcElementResource.ATK_ELEMENT, String.valueOf(npcElement.getAtkElement()), admin_npc_editor_save_base_elements, npcId));
+        table.row(2).col(1).insert(parametersTable(NpcElementResource.ELEM_ATK_POWER, String.valueOf(npcElement.getElemAtkPower()), admin_npc_editor_save_base_elements, npcId));
+        table.row(3).col(0).insert(separator(200));
+        table.row(4).col(0).insert(parametersTable(NpcElementResource.FIRE_RES, String.valueOf(npcElement.getFireRes()), admin_npc_editor_save_base_elements, npcId));
+        table.row(4).col(1).insert(parametersTable(NpcElementResource.WATER_RES, String.valueOf(npcElement.getWaterRes()), admin_npc_editor_save_base_elements, npcId));
+        table.row(5).col(0).insert(separator(200));
+        table.row(6).col(0).insert(parametersTable(NpcElementResource.EARTH_RES, String.valueOf(npcElement.getEarthRes()), admin_npc_editor_save_base_elements, npcId));
+        table.row(6).col(1).insert(parametersTable(NpcElementResource.WIND_RES, String.valueOf(npcElement.getWindRes()), admin_npc_editor_save_base_elements, npcId));
+        table.row(7).col(0).insert(separator(200));
+        table.row(8).col(0).insert(parametersTable(NpcElementResource.HOLY_RES, String.valueOf(npcElement.getHolyRes()), admin_npc_editor_save_base_elements, npcId));
+        table.row(8).col(1).insert(parametersTable(NpcElementResource.DARK_RES, String.valueOf(npcElement.getDarkRes()), admin_npc_editor_save_base_elements, npcId));
+
+        final Table main = new Table(3, 1);
+        main.row(0).col(0).setParams(height(20));
+        main.row(1).col(0).insert(" ID: " + new Font(Color.GOLD, npcId).build() + " | " + new Font(Color.GREN, npc.getName()).build());
+        main.row(2).col(0).insert(table);
         basePage(player, npcId,0, table, new Button("Сохранить", actionCom(admin_npc_editor_save_base_elements, ""), 100, 20).build());
     }
     public static void showLocation(L2Player player, String[] args) {
@@ -384,23 +365,10 @@ public class NpcEditorComponent extends Component{
         int npcId = Integer.parseInt(args[1]);
         String stat = args[2];
         String statValue = args[3];
-        final NpcResource npcModel = npcResource.find(new Filter().WHERE(NpcResource.ID, npcId));
+        final NpcResource npcModel = NpcEditorResource.getInstance().getNpcById(npcId);
         npcModel.update(stat, statValue);
-
-        NpcEditorUtils.updateNpcStat(npcId, stat, statValue);
-
-
-
-//        reload(npc);
+        updateNpcStat(npcId, stat, statValue);
         showMainStats(player, args);
-    }
-    public static void saveBaseStats(L2Player player, String[] args) {
-        int npcId = Integer.parseInt(args[1]);
-        String stat = args[2];
-        String statValue = args[3];
-        L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
-//        reload(npc);
-        showBaseStats(player,args);
     }
     public static void addSkills(L2Player player, String[] args) throws ResourceProvideException {
         int npcId = Integer.parseInt(args[1]);
@@ -409,13 +377,10 @@ public class NpcEditorComponent extends Component{
         L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
         L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
         if (skill != null){
+            final NpcskillsResource newSkill = NpcEditorResource.getInstance().getNpcSkillsResource()
+                    .create(new NpcskillsBuilder().withNpcid(npcId).withSkillid(skillId).withLevel(skillLevel));
 
-            final NpcskillsResource newSkill = npcSkillsResource.create(new NpcskillsBuilder().withNpcid(npcId).withSkillid(skillId).withLevel(skillLevel));
-
-//            NpcTable.getTemplate(npcId).addSkill(skill);
             npc.addSkill(skill);
-//            NpcEditorRepository.addSkill(npc, skill);
-//            reload(npc);
             showSkills(player, new String[]{args[0], args[1], skill.isActive() ? "active" : "passive"});
         }
     }
@@ -425,12 +390,11 @@ public class NpcEditorComponent extends Component{
         L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
         L2Skill skill = SkillTable.getInstance().getInfo(skillId, 1);
 
-        final NpcskillsResource npcskillsResource = npcSkillsResource.find(new Filter().WHERE(NpcskillsResource.NPCID, npcId).AND(NpcskillsResource.SKILLID, skillId));
+        final NpcskillsResource npcskillsResource = NpcEditorResource.getInstance().getNpcSkillsResource()
+                .find(new Filter().WHERE(NpcskillsResource.NPCID, npcId).AND(NpcskillsResource.SKILLID, skillId));
         npcskillsResource.delete();
 
-//        NpcTable.getTemplate(npcId).getSkills().remove(skillId);
         npc.removeSkillById(skillId);
-//        NpcEditorRepository.removeSkill(npc, skillId);
 
         showSkills(player, new String[]{args[0], args[1], skill.isActive() ? "active" : "passive"});
     }
@@ -443,14 +407,13 @@ public class NpcEditorComponent extends Component{
 
         final List<L2NpcInstance> allByNpcId = L2ObjectsStorage.getAllByNpcId(npcId, true);
 
-
         final DroplistBuilder droplistBuilder = new DroplistBuilder()
                 .withMobId(npcId)
                 .withItemId(itemId)
                 .withCategory(category)
                 .withSweep(sweep);
 
-        final DroplistResource newDrop = dropListResource.create(droplistBuilder);
+        final DroplistResource newDrop = NpcEditorResource.getInstance().getDropListResource().create(droplistBuilder);
 
         L2NpcTemplate template = NpcTable.getTemplate(npcId);
         final L2DropData dropData = new L2DropData();
@@ -460,7 +423,7 @@ public class NpcEditorComponent extends Component{
             dropData.setChance(newDrop.getChance() * ConfigValue.RateDropCommonItems);
         } else {
             dropData.setItemId(newDrop.getItemId());
-            dropData.setChance(newDrop.getChance() );
+            dropData.setChance(newDrop.getChance());
         }
         dropData.setMinDrop(newDrop.getMin());
         dropData.setMaxDrop(newDrop.getMax());
@@ -476,10 +439,6 @@ public class NpcEditorComponent extends Component{
         }
 
         template.addDropData(dropData);
-
-
-//        NpcRepository.addDrop(npcId, itemId);
-//        reload(npc);
         showDrop(player, args);
     }
     public static void removeDrop(L2Player player, String[] args) {
@@ -489,7 +448,7 @@ public class NpcEditorComponent extends Component{
         int category = Integer.parseInt(args[4]);
         L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
 
-        final DroplistResource drop = dropListResource.find(new Filter()
+        final DroplistResource drop = NpcEditorResource.getInstance().getDropListResource().find(new Filter()
                 .WHERE(DroplistResource.MOB_ID, npcId)
                 .AND(DroplistResource.ITEM_ID, itemId)
                 .AND(DroplistResource.SWEEP, sweep)
@@ -508,9 +467,6 @@ public class NpcEditorComponent extends Component{
                     .ifPresent(d -> dropGroup.getDropItems(false).remove(d));
         }
         drop.delete();
-
-//        NpcEditorRepository.removeDrop(npcId, itemId, isSpoil);
-//        reload(npc);
         showDrop(player, args);
     }
     public static void saveVisual(L2Player player, String[] args) {
@@ -568,11 +524,9 @@ public class NpcEditorComponent extends Component{
 
     }
 
-
     public static void reload(L2NpcInstance npc){
 
     }
-
 
     public static void testMovePet(L2Player player, String[] strings) {
         player.setInteractMode(InteractMode.PET_MOVE_TO);

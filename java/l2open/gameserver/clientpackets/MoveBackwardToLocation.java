@@ -1,5 +1,6 @@
 package l2open.gameserver.clientpackets;
 
+import l2open.common.ThreadPoolManager;
 import l2open.config.ConfigValue;
 import l2open.gameserver.loginservercon.LSConnection;
 import l2open.gameserver.loginservercon.gspackets.ChangeAccessLevel;
@@ -11,6 +12,7 @@ import l2open.gameserver.model.instances.L2NpcInstance;
 import l2open.gameserver.network.L2GameClient;
 import l2open.gameserver.serverpackets.CharMoveToLocation;
 import l2open.gameserver.serverpackets.SystemMessage;
+import l2open.util.Location;
 import l2open.util.Log;
 
 import java.util.logging.Logger;
@@ -118,7 +120,7 @@ public class MoveBackwardToLocation extends L2GameClientPacket {
         } else if (activeChar.getInteractMode() == InteractMode.TELEPORT_NPC_TO_CURSOR) {
             activeChar.setInteractMode(null);
             final L2NpcInstance interactNpc = activeChar.getInteractNpc();
-            if (interactNpc != null){
+            if (interactNpc != null) {
                 interactNpc.teleToLocation(_tx, _ty, _tz);
                 activeChar.setInteractNpc(null);
             }
@@ -127,9 +129,22 @@ public class MoveBackwardToLocation extends L2GameClientPacket {
         } else if (activeChar.getInteractMode() == InteractMode.PET_MOVE_TO) {
             activeChar.setInteractMode(null);
             final L2Summon pet = activeChar.getPet();
-            if (pet != null){
-                pet.moveToLocation(_tx, _ty, _tz, 10, true);
+
+            if (!pet.isMovementDisabled()) {
+                if (pet.getCurrentFed() <= 0.01 * pet.getMaxFed()) {
+                    pet.getPlayer().sendPacket(new SystemMessage(SystemMessage.WHEN_YOUR_PETS_HUNGER_GAUGE_IS_AT_0_YOU_CANNOT_USE_YOUR_PET));
+                    pet._actionAtack = 0;
+                    activeChar.sendActionFailed();
+                    return;
+                }
+                pet.setFollowStatus(false, true);
+                ThreadPoolManager.getInstance().execute(new l2open.common.RunnableImpl() {
+                    public void runImpl() {
+                        pet.moveToLocation(new Location(_tx, _ty, _tz), 50, true);
+                    }
+                });
             }
+            pet._actionAtack = 0;
             activeChar.sendActionFailed();
             return;
         }
