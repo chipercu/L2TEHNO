@@ -8,6 +8,7 @@ import l2open.gameserver.model.*;
 import l2open.gameserver.model.instances.L2NpcInstance;
 import l2open.gameserver.tables.NpcTable;
 import l2open.gameserver.tables.SkillTable;
+import l2open.gameserver.tables.SpawnTable;
 import l2open.gameserver.templates.L2Item;
 import l2open.gameserver.templates.L2NpcTemplate;
 import l2open.gameserver.xml.ItemTemplates;
@@ -373,15 +374,22 @@ public class NpcEditorComponent extends Component{
         CBWindow(player, main, window_titel);
     }
 
+    public static void reloadNpc(L2Player player, String[] args){
+        int npcId = Integer.parseInt(args[1]);
+        SpawnTable.getInstance().reload(npcId);
+        showMainStats(player, args);
+    }
+
     public static void saveMainStats(L2Player player, String[] args) {
         int npcId = Integer.parseInt(args[1]);
         String stat = args[2];
         String statValue = args[3];
         final NpcResource npcModel = npcResource.find(new Filter().WHERE(NpcResource.ID, npcId));
         npcModel.update(stat, statValue);
-//        NpcEditorRepository.updateNpcStat(npcModel, stat);
-//        L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
-//        final L2NpcTemplate template = NpcTable.getTemplate(npcId);
+
+        NpcEditorUtils.updateNpcStat(npcId, stat, statValue);
+
+
 
 //        reload(npc);
         showMainStats(player, args);
@@ -432,6 +440,9 @@ public class NpcEditorComponent extends Component{
         int sweep = Integer.parseInt(args[3]);
         int category = Integer.parseInt(args[4]);
         L2NpcInstance npc = L2ObjectsStorage.getByNpcId(npcId);
+
+        final List<L2NpcInstance> allByNpcId = L2ObjectsStorage.getAllByNpcId(npcId, true);
+
 
         final DroplistBuilder droplistBuilder = new DroplistBuilder()
                 .withMobId(npcId)
