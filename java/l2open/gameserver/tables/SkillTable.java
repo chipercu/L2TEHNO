@@ -137,6 +137,8 @@ public class SkillTable
 			rset = statement.executeQuery();
 
 			int lastid = 0, lastmaxlearn = 0;
+			System.out.println("start");
+			final long currentTimeMillis = System.currentTimeMillis();
 			while(rset.next())
 			{
 				try
@@ -384,6 +386,10 @@ public class SkillTable
 					e1.printStackTrace();
 				}
 			}
+
+
+			System.out.println("finish");
+			System.out.println(System.currentTimeMillis() - currentTimeMillis);
 
 			for(L2Skill[] sl : skills)
 				if(sl != null)

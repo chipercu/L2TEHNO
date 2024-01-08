@@ -23,7 +23,7 @@ public class ResourceProvider<T extends DataBaseTable<T>, B extends ResourceBuil
     protected static Logger _log = Logger.getLogger(ResourceProvider.class.getName());
 
     private String GET_QUERY = "SELECT * FROM %s %s";
-    private String UPDATE_QUERY = "UPDATE %s SET %s = '%s' %s";
+    private String UPDATE_QUERY = "UPDATE %s SET %s %s";
     private String DELETE_QUERY = "DELETE FROM %s %s";
     private String INSERT_QUERY = "INSERT INTO  %s (%s) VALUES (%s)";
 

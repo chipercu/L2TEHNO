@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="NpcEditorResource.java">
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="NpcEditorUtils.updateNpcStat">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/actions/OnActionShift.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/actions/OnActionShift.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/database/DataBaseTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/database/DataBaseTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/database/ResourceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/database/ResourceProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/tables/SkillTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/tables/SkillTable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,6 +291,9 @@
       <workItem from="1702621270365" duration="22350000" />
       <workItem from="1702713731612" duration="33688000" />
       <workItem from="1702805411067" duration="24942000" />
+      <workItem from="1704297907870" duration="6357000" />
+      <workItem from="1704304324438" duration="6815000" />
+      <workItem from="1704730896327" duration="859000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1692529102326</created>
@@ -466,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702994760928</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="NpcEditorUtils.updateNpcStat">
+      <created>1704192963253</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1704192963253</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +526,8 @@
     <MESSAGE value="feat: реализован ResourceProvider для работы с БД, сгенерированы таблицы БД" />
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="clean" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean" />
+    <MESSAGE value="NpcEditorUtils.updateNpcStat" />
+    <option name="LAST_COMMIT_MESSAGE" value="NpcEditorUtils.updateNpcStat" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -524,9 +543,14 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/java/l2open/gameserver/clientpackets/RequestActionUse.java</url>
-          <line>249</line>
-          <option name="timeStamp" value="32" />
+          <url>file://$PROJECT_DIR$/data/scripts/actions/OnActionShift.java</url>
+          <line>516</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorUtils.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

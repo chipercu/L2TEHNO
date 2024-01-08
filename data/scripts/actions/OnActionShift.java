@@ -540,8 +540,7 @@ public class OnActionShift extends Functions implements ScriptFile
 				break;
 		}
 
-		if(ElemAtkPower != 0)
-			dialog.append("<tr><td>Attack Element: "+getElementNameById(((L2NpcTemplate)npc.getTemplate()).atkElement)+"</td><td>").append(ElemAtkPower).append("</td></tr>");
+		dialog.append("<tr><td>Attack Element: "+getElementNameById(((L2NpcTemplate)npc.getTemplate()).atkElement)+"</td><td>").append(ElemAtkPower).append("</td></tr>");
 
 		/*if(FIRE_RECEPTIVE == 0 && WIND_RECEPTIVE == 0 && WATER_RECEPTIVE == 0 && EARTH_RECEPTIVE == 0 && UNHOLY_RECEPTIVE == 0 && SACRED_RECEPTIVE // primary elements
 		== 0 && trait_bleed == 0 && trait_shock // phys debuff

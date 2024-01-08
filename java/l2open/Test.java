@@ -6,7 +6,7 @@ import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
-
+import l2open.gameserver.tables.SkillTable;
 
 
 import javax.crypto.Cipher;
@@ -33,6 +33,8 @@ public class Test {
 
     public static void main(String[] args) throws Exception {
         ConfigSystem.load();
+
+        SkillTable.getInstance();
 //        testDatabaseResource();
 //        DATABASE();
 //        SchemesGenerator.generate("l2tehno");

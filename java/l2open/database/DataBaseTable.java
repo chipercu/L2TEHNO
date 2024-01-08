@@ -7,6 +7,7 @@ import l2open.database.anotations.Column;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -111,11 +112,35 @@ public abstract class DataBaseTable <T>{
     public void update(String field, Object value){
         try {
             getSTAT_SET().getObject(field);
-            final String query = String.format(RESOURCE_PROVIDER.getUPDATE_QUERY(), RESOURCE_PROVIDER.getTABLE_NAME(), field, value, FILTER(field).build());
+            String collectedValues = field + " = '" + value + "'";
+            final String query = String.format(RESOURCE_PROVIDER.getUPDATE_QUERY(), RESOURCE_PROVIDER.getTABLE_NAME(), collectedValues, FILTER(field).build());
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
             statement.execute();
-            _log.info(this.getClass().getSimpleName() + " -> Update scheme " + _class.getSimpleName() + " : " + getSTAT_SET().getObject(field) + " -> " + value);
+            _log.info(this.getClass().getSimpleName() + " -> Update scheme " + _class.getSimpleName() + " : " + field + " " +getSTAT_SET().getObject(field) + " -> " + value);
+        } catch (Exception ignored) {
+        } finally {
+            DatabaseUtils.closeDatabaseCS(con, statement);
+        }
+    }
+
+    public void multiUpdate(HashMap<String, Object> values){
+        try {
+
+            List<String> collectedValues = new ArrayList<>();
+            values.forEach((key, value) -> collectedValues.add(key + " = '" + value + "'"));
+
+            final String join = String.join(",", collectedValues);
+
+            final String query = String.format(RESOURCE_PROVIDER.getUPDATE_QUERY(), RESOURCE_PROVIDER.getTABLE_NAME(), join , FILTER().build());
+            con = L2DatabaseFactory.getInstance().getConnection();
+            statement = con.prepareStatement(query);
+            statement.execute();
+
+            StringBuilder logValues = new StringBuilder();
+            values.forEach((key, value) -> logValues.append("[").append(key).append(" ").append(getSTAT_SET().getObject(key)).append(" -> ").append(value).append("]"));
+
+            _log.info(this.getClass().getSimpleName() + " -> Update scheme " + _class.getSimpleName() + " : " + logValues.toString());
         } catch (Exception ignored) {
         } finally {
             DatabaseUtils.closeDatabaseCS(con, statement);
