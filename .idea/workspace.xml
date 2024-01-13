@@ -4,16 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="NpcEditorUtils.updateNpcStat">
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="NpcEditorComponent.saveLocation">
+      <change afterPath="$PROJECT_DIR$/serverPath.rar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/actions/OnActionShift.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/actions/OnActionShift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/database/DataBaseTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/database/DataBaseTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/database/ResourceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/database/ResourceProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/tables/SkillTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/tables/SkillTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L2TEHNO1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/L2TEHNO1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/FileLogFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/FileLogFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/extensions/MMOInetAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/extensions/MMOInetAddress.java_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/extensions/network/MMOConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/extensions/network/MMOConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/extensions/network/MMOSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/extensions/network/MMOSocket.java_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/GameServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/GameServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/tables/SkillTreeTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/tables/SkillTreeTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/util/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/antlr-2.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dom4j-1.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/geronimo-jta_1.1_spec-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hibernate-commons-annotations-5.0.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hibernate-core-5.0.12.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hibernate-entitymanager-5.0.12.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hibernate-envers-5.0.12.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hibernate-java8-5.0.12.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hibernate-jpamodelgen-5.0.12.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jandex-2.0.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javassist-3.18.1-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jboss-logging-3.3.0.Final.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,34 +75,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;aspect.path.notification.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/High Five/L2TEHNO/lib/hibernate-jpamodelgen-5.0.12.Final.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "aspect.path.notification.shown": "true",
+    "last_opened_file_path": "D:/L2/Interface_23_08_09/ForServersideIntagration/lib/emu-dev.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\High Five\L2TEHNO\data\scripts\communityboard\html\buffer" />
@@ -107,7 +124,7 @@
       <recent name="l2open.gameserver.model.barahlo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GameStart">
+  <component name="RunManager" selected="Application.L2LoginStart">
     <configuration name="GameStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="db" value="jdbc:mysql://localhost/l2tehno?useUnicode=true&amp;characterEncoding=UTF-8" />
@@ -135,7 +152,7 @@
       </envs>
       <option name="MAIN_CLASS_NAME" value="l2open.loginserver.L2LoginStart" />
       <module name="L2TEHNO1" />
-      <option name="VM_PARAMETERS" value="-server -Xbootclasspath/p:lib/jsr167_8.jar -Xms32m -Xmx32m" />
+      <option name="VM_PARAMETERS" value="-server -Xms32m -Xmx32m" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="l2open.loginserver.*" />
@@ -185,8 +202,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GameStart" />
         <item itemvalue="Application.L2LoginStart" />
+        <item itemvalue="Application.GameStart" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.GameStart" />
@@ -293,7 +310,13 @@
       <workItem from="1702805411067" duration="24942000" />
       <workItem from="1704297907870" duration="6357000" />
       <workItem from="1704304324438" duration="6815000" />
-      <workItem from="1704730896327" duration="859000" />
+      <workItem from="1704730896327" duration="4996000" />
+      <workItem from="1704825493187" duration="17000" />
+      <workItem from="1704902060451" duration="4038000" />
+      <workItem from="1704989874901" duration="171000" />
+      <workItem from="1705001632072" duration="345000" />
+      <workItem from="1705073443339" duration="1042000" />
+      <workItem from="1705151181070" duration="1290000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1692529102326</created>
@@ -484,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704192963253</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="NpcEditorComponent.saveLocation">
+      <created>1704731860038</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1704731860038</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +557,8 @@
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="clean" />
     <MESSAGE value="NpcEditorUtils.updateNpcStat" />
-    <option name="LAST_COMMIT_MESSAGE" value="NpcEditorUtils.updateNpcStat" />
+    <MESSAGE value="NpcEditorComponent.saveLocation" />
+    <option name="LAST_COMMIT_MESSAGE" value="NpcEditorComponent.saveLocation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
