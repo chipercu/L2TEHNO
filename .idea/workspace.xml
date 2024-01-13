@@ -4,33 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="NpcEditorComponent.saveLocation">
-      <change afterPath="$PROJECT_DIR$/serverPath.rar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="lib clean">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L2TEHNO1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/L2TEHNO1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/FileLogFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/FileLogFormatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/extensions/MMOInetAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/extensions/MMOInetAddress.java_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/extensions/network/MMOConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/extensions/network/MMOConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/extensions/network/MMOSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/extensions/network/MMOSocket.java_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/GameServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/GameServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/tables/SkillTreeTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/tables/SkillTreeTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/util/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/antlr-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dom4j-1.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/geronimo-jta_1.1_spec-1.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hibernate-commons-annotations-5.0.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hibernate-core-5.0.12.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hibernate-entitymanager-5.0.12.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hibernate-envers-5.0.12.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hibernate-java8-5.0.12.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hibernate-jpamodelgen-5.0.12.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jandex-2.0.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javassist-3.18.1-GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jboss-logging-3.3.0.Final.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +127,7 @@
       </envs>
       <option name="MAIN_CLASS_NAME" value="l2open.loginserver.L2LoginStart" />
       <module name="L2TEHNO1" />
-      <option name="VM_PARAMETERS" value="-server -Xms32m -Xmx32m" />
+      <option name="VM_PARAMETERS" value="-server -Xbootclasspath/p:lib/jsr167_8.jar -Xms32m -Xmx32m" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="l2open.loginserver.*" />
@@ -316,7 +291,7 @@
       <workItem from="1704989874901" duration="171000" />
       <workItem from="1705001632072" duration="345000" />
       <workItem from="1705073443339" duration="1042000" />
-      <workItem from="1705151181070" duration="1290000" />
+      <workItem from="1705151181070" duration="1556000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1692529102326</created>
@@ -514,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704731860038</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="lib clean">
+      <created>1705152644179</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1705152644179</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +515,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="first" />
     <MESSAGE value="PartyMaker htm and" />
     <MESSAGE value="PartyMaker fix party-member, member-info" />
     <MESSAGE value="PartyMaker fix" />
@@ -558,7 +539,8 @@
     <MESSAGE value="clean" />
     <MESSAGE value="NpcEditorUtils.updateNpcStat" />
     <MESSAGE value="NpcEditorComponent.saveLocation" />
-    <option name="LAST_COMMIT_MESSAGE" value="NpcEditorComponent.saveLocation" />
+    <MESSAGE value="lib clean" />
+    <option name="LAST_COMMIT_MESSAGE" value="lib clean" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
