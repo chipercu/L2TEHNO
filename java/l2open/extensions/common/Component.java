@@ -1,9 +1,9 @@
 package l2open.extensions.common;
 
-import l2open.common.Html_Constructor.tags.HtmlBuildInterface;
-import l2open.common.Html_Constructor.tags.Button;
-import l2open.common.Html_Constructor.tags.Img;
-import l2open.common.Html_Constructor.tags.Table;
+import l2open.common.HtmlBuilder.HtmlBuildInterface;
+import l2open.common.HtmlBuilder.Button;
+import l2open.common.HtmlBuilder.Img;
+import l2open.common.HtmlBuilder.Table;
 import l2open.gameserver.model.L2Player;
 import l2open.gameserver.serverpackets.ShowBoard;
 import l2open.gameserver.serverpackets.TutorialShowHtml;
@@ -12,7 +12,7 @@ import l2open.util.GArray;
 import java.util.ArrayList;
 import java.util.List;
 
-import static l2open.common.Html_Constructor.tags.parameters.Parameters.*;
+import static l2open.common.HtmlBuilder.parameters.Parameters.*;
 
 public class Component {
 

@@ -6,13 +6,12 @@ import communityboard.models.buffer.Buff;
 import communityboard.models.buffer.Scheme;
 import communityboard.models.buffer.SchemeBuff;
 import communityboard.service.buffer.BuffService;
-import l2open.common.Html_Constructor.tags.Button;
-import l2open.common.Html_Constructor.tags.Edit;
-import l2open.common.Html_Constructor.tags.Img;
-import l2open.common.Html_Constructor.tags.Table;
-import l2open.common.Html_Constructor.tags.parameters.EditType;
-import l2open.common.Html_Constructor.tags.parameters.Position;
-import l2open.config.ConfigValue;
+import l2open.common.HtmlBuilder.Button;
+import l2open.common.HtmlBuilder.Edit;
+import l2open.common.HtmlBuilder.Img;
+import l2open.common.HtmlBuilder.Table;
+import l2open.common.HtmlBuilder.parameters.EditType;
+import l2open.common.HtmlBuilder.parameters.Position;
 import l2open.gameserver.common.DifferentMethods;
 import l2open.gameserver.model.L2Effect;
 import l2open.gameserver.model.L2Player;
@@ -29,7 +28,7 @@ import java.util.stream.Collectors;
 
 import static communityboard.html.buffer.Elements.backButtonMain;
 import static communityboard.html.buffer.Elements.getFile;
-import static l2open.common.Html_Constructor.tags.parameters.Parameters.*;
+import static l2open.common.HtmlBuilder.parameters.Parameters.*;
 import static l2open.gameserver.communitybbs.Manager.BaseBBSManager.addCustomReplace;
 
 public class BufferComponent {

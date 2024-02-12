@@ -6,12 +6,10 @@ import java.io.File;
 import java.sql.ResultSet;
 import java.util.*;
 
-import l2open.common.Html_Constructor.tags.Button;
-import l2open.common.Html_Constructor.tags.Font;
-import l2open.common.Html_Constructor.tags.Img;
-import l2open.common.Html_Constructor.tags.Table;
-import l2open.common.Html_Constructor.tags.parameters.Color;
-import l2open.common.Html_Constructor.tags.parameters.Position;
+import l2open.common.HtmlBuilder.Button;
+import l2open.common.HtmlBuilder.Img;
+import l2open.common.HtmlBuilder.Table;
+import l2open.common.HtmlBuilder.parameters.Position;
 import l2open.gameserver.cache.Msg;
 
 import l2open.config.ConfigValue;
@@ -48,7 +46,7 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import static l2open.common.Html_Constructor.tags.parameters.Parameters.*;
+import static l2open.common.HtmlBuilder.parameters.Parameters.*;
 
 public class CommunityBoardBuffer extends BaseBBSManager implements ICommunityHandler, ScriptFile {
     public static final TIntArrayList allowBuff = new TIntArrayList(ConfigValue.BufferBuffs); // ConfigValue.BufferOnlyPaBuffs

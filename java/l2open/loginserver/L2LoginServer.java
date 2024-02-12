@@ -2,7 +2,9 @@ package l2open.loginserver;
 
 import l2open.Server;
 import l2open.config.*;
-import l2open.database.L2DatabaseFactory;
+import l2open.database.*;
+import l2open.database.schemes.builders.SkillTreesBuilder;
+import l2open.database.schemes.resources.SkillTreesResource;
 import l2open.extensions.network.SelectorThread;
 import l2open.gameserver.GameServer;
 import l2open.gameserver.taskmanager.MemoryWatchDog;
@@ -20,7 +22,9 @@ import java.io.InputStream;
 import java.net.InetAddress;
 import java.security.GeneralSecurityException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
@@ -184,6 +188,32 @@ public class L2LoginServer {
 
         Util.gc(3, 333);
         _log.info("Free memory " + MemoryWatchDog.getMemFreeMb() + " of " + MemoryWatchDog.getMemMaxMb());
+
+
+        Resource<SkillTreesResource, SkillTreesBuilder> resource = new ResourceProvider<>(SkillTreesResource.class);
+
+        final List<SkillTreesResource> all = resource.findAll();
+
+
+
+
+
+        System.out.println("start SkillTreeTable.getInstance()");
+        long start = System.currentTimeMillis();
+//        SkillTreeTable.getInstance();
+        final ArrayList<String> arrayList = new ArrayList<>();
+
+        for (SkillTreesResource skillTreesResource : all){
+
+            final SkillTreesResource skillTreesResource1 = resource.find(new Filter().WHERE(SkillTreesResource.SKILL_ID, skillTreesResource.getSkillId()).AND(SkillTreesResource.LEVEL, skillTreesResource.getLevel()));
+            arrayList.add(skillTreesResource1.getName());
+
+        }
+
+        System.out.println(arrayList.size());
+
+
+        System.out.println("finish SkillTreeTable.getInstance()" + (System.currentTimeMillis() - start));
     }
 
     private void loadProxy() {

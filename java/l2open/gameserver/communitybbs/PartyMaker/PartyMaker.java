@@ -1,17 +1,14 @@
 package l2open.gameserver.communitybbs.PartyMaker;
 
-import l2open.common.Html_Constructor.tags.Button;
-import l2open.common.Html_Constructor.tags.Font;
-import l2open.common.Html_Constructor.tags.Img;
-import l2open.common.Html_Constructor.tags.parameters.Color;
-import l2open.common.Html_Constructor.tags.parameters.Parameters;
+import l2open.common.HtmlBuilder.Button;
+import l2open.common.HtmlBuilder.Font;
+import l2open.common.HtmlBuilder.Img;
+import l2open.common.HtmlBuilder.parameters.Color;
 import l2open.extensions.scripts.Functions;
 import l2open.extensions.scripts.ScriptFile;
-import l2open.gameserver.cache.Msg;
 import l2open.gameserver.geodata.GeoEngine;
 import l2open.gameserver.listener.CharListenerList;
 import l2open.gameserver.listener.actor.player.OnPlayerPartyLeaveListener;
-import l2open.gameserver.model.L2Character;
 import l2open.gameserver.model.L2ObjectsStorage;
 import l2open.gameserver.model.L2Party;
 import l2open.gameserver.model.L2Player;
@@ -33,7 +30,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-import static l2open.common.Html_Constructor.tags.parameters.Parameters.*;
+import static l2open.common.HtmlBuilder.parameters.Parameters.*;
 import static l2open.gameserver.communitybbs.PartyMaker.PartyMaker.STATUS.*;
 import static l2open.gameserver.model.L2Zone.ZoneType.*;
 

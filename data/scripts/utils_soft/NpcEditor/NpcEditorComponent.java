@@ -1,15 +1,14 @@
 package utils_soft.NpcEditor;
 
-import l2open.common.Html_Constructor.tags.*;
-import l2open.common.Html_Constructor.tags.parameters.Color;
-import l2open.common.Html_Constructor.tags.parameters.EditType;
+import l2open.common.HtmlBuilder.*;
+import l2open.common.HtmlBuilder.parameters.Color;
+import l2open.common.HtmlBuilder.parameters.EditType;
 import l2open.config.ConfigValue;
 import l2open.database.schemes.resources.*;
 import l2open.gameserver.model.*;
 import l2open.gameserver.model.instances.L2NpcInstance;
 import l2open.gameserver.tables.NpcTable;
 import l2open.gameserver.tables.SkillTable;
-import l2open.gameserver.tables.SpawnTable;
 import l2open.gameserver.templates.L2Item;
 import l2open.gameserver.templates.L2NpcTemplate;
 import l2open.gameserver.xml.ItemTemplates;
@@ -28,8 +27,8 @@ import java.util.*;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
-import static l2open.common.Html_Constructor.tags.parameters.Parameters.*;
-import static l2open.common.Html_Constructor.tags.parameters.Position.*;
+import static l2open.common.HtmlBuilder.parameters.Parameters.*;
+import static l2open.common.HtmlBuilder.parameters.Position.*;
 import static utils_soft.NpcEditor.NpcEditorCommands.*;
 import static utils_soft.NpcEditor.NpcEditorUtils.*;
 

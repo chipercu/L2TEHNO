@@ -1,8 +1,8 @@
 package utils_soft.MultisellEditor;
 
-import l2open.common.Html_Constructor.tags.*;
-import l2open.common.Html_Constructor.tags.parameters.Color;
-import l2open.common.Html_Constructor.tags.parameters.EditType;
+import l2open.common.HtmlBuilder.*;
+import l2open.common.HtmlBuilder.parameters.Color;
+import l2open.common.HtmlBuilder.parameters.EditType;
 import l2open.config.ConfigValue;
 import l2open.extensions.scripts.Scripts;
 import l2open.gameserver.model.L2Multisell;
@@ -25,8 +25,8 @@ import java.util.Optional;
 import java.util.function.BiPredicate;
 import java.util.stream.Collectors;
 
-import static l2open.common.Html_Constructor.tags.parameters.Parameters.*;
-import static l2open.common.Html_Constructor.tags.parameters.Position.*;
+import static l2open.common.HtmlBuilder.parameters.Parameters.*;
+import static l2open.common.HtmlBuilder.parameters.Position.*;
 import static l2open.gameserver.model.L2Multisell.MultiSellListContainer;
 import static l2open.loginserver.serverpackets.L2LoginServerPacket._log;
 import static utils_soft.MultisellEditor.MultiSellCommands.*;

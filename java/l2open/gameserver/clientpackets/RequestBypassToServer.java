@@ -150,13 +150,13 @@ public class RequestBypassToServer extends L2GameClientPacket {
                 CommunityBoard.getInstance().handleCommands(getClient(), bp.bypass.substring(4));
             else if (bp.bypass.equals("come_here") && activeChar.isGM())
                 comeHere(getClient());
-            else if (bp.bypass.startsWith("player_help ")){
+            else if (bp.bypass.startsWith("player_help ")) {
                 playerHelp(activeChar, bp.bypass.substring(12));
             }
             //TODO [FUZZY]
             else if (bp.bypass.startsWith("party_maker:")) {
                 PartyMaker.getInstance().handleCommands(getClient(), bp.bypass.substring(12));
-            }else if (bp.bypass.startsWith("path_manager:")){
+            } else if (bp.bypass.startsWith("path_manager:")) {
 //                PathManager.getInstance().handleCommands(getClient(), bp.bypass.substring(13));
             }
 
@@ -259,8 +259,7 @@ public class RequestBypassToServer extends L2GameClientPacket {
                     activeChar.processQuestEvent(p, "", npc);
                 else
                     activeChar.processQuestEvent(p.substring(0, idx), p.substring(idx).trim(), npc);
-            } else if (bp.bypass.startsWith("manor_menu_select?")) // manor_menu_select?ask=1&state=-1&time=0
-            {
+            } else if (bp.bypass.startsWith("manor_menu_select?")) { // manor_menu_select?ask=1&state=-1&time=0
                 L2Object object = activeChar.getTarget();
                 if (object != null && object.isNpc()) {
                     ((L2NpcInstance) object).onBypassFeedback(activeChar, bp.bypass);
@@ -272,8 +271,7 @@ public class RequestBypassToServer extends L2GameClientPacket {
 
                     ((L2NpcInstance) object).MANOR_MENU_SELECTED(activeChar, ask, state, time); // Мб все же когда-то у нас все будет по ПТС)))
                 }
-            } else if (bp.bypass.startsWith("menu_select?")) // menu_select?ask=1&reply=1
-            {
+            } else if (bp.bypass.startsWith("menu_select?")) { // menu_select?ask=1&reply=1
                 int endOfId = bp.bypass.indexOf("&");
                 int reply = 0;
                 int ask = 0;

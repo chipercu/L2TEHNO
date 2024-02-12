@@ -2,22 +2,13 @@ package communityboard.html.buffer;
 
 import communityboard.config.BufferConfig;
 import communityboard.models.buffer.Buff;
-import communityboard.models.buffer.Scheme;
-import communityboard.models.buffer.SchemeBuff;
-import l2open.common.Html_Constructor.tags.Button;
-import l2open.common.Html_Constructor.tags.Img;
-import l2open.config.ConfigValue;
+import l2open.common.HtmlBuilder.Button;
 import l2open.gameserver.model.L2Player;
 import l2open.gameserver.model.L2Skill;
 import l2open.gameserver.tables.SkillTable;
 import l2open.util.Files;
 
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
-import static l2open.common.Html_Constructor.tags.parameters.Parameters.action;
-import static l2open.common.Html_Constructor.tags.parameters.Parameters.value;
+import static l2open.common.HtmlBuilder.parameters.Parameters.action;
 
 public class Elements {
 

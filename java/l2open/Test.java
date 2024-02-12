@@ -9,6 +9,7 @@ import l2open.database.ThreadConnection;
 import l2open.gameserver.tables.SkillTable;
 
 
+
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.BufferedReader;
@@ -32,9 +33,13 @@ public class Test {
 
 
     public static void main(String[] args) throws Exception {
-        ConfigSystem.load();
+        format();
 
-        SkillTable.getInstance();
+
+
+//        ConfigSystem.load();
+//
+//        SkillTable.getInstance();
 //        testDatabaseResource();
 //        DATABASE();
 //        SchemesGenerator.generate("l2tehno");
@@ -167,6 +172,24 @@ public class Test {
 
     private static byte[] base64ToBytes(String str){
         return Base64.getDecoder().decode(str);
+    }
+
+
+    private static void format(){
+
+        String str = "12341234 : ASdasdfasdfasdf";
+
+        String regex = "^(.*?):.*$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(str);
+
+        if (matcher.find()) {
+            String result = matcher.group(1);
+            System.out.println(result);
+        }
+
+
+
     }
 
 
