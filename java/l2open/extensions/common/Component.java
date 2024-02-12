@@ -2,9 +2,8 @@ package l2open.extensions.common;
 
 import l2open.common.HtmlBuilder.*;
 import l2open.common.HtmlBuilder.Button;
-import l2open.common.HtmlBuilder.components.Colors;
+import l2open.common.Html_Builder_JSOUP.utils.Colors;
 import l2open.gameserver.model.L2Player;
-import l2open.gameserver.serverpackets.NpcHtmlMessage;
 import l2open.gameserver.serverpackets.ShowBoard;
 import l2open.gameserver.serverpackets.TutorialShowHtml;
 import l2open.util.GArray;

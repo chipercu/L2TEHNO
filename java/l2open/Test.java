@@ -1,25 +1,17 @@
 package l2open;
 
-import l2open.common.HtmlBuilder.HtmlBuilder;
-import l2open.common.HtmlBuilder.Img;
-import l2open.common.HtmlBuilder.Text;
-import l2open.common.HtmlBuilder.components.ALIGN;
-import l2open.common.HtmlBuilder.components.Colors;
-import l2open.common.HtmlBuilder.components.HSize;
-import l2open.common.HtmlBuilder.components.Position;
-import l2open.common.HtmlBuilder.parameters.Parameters;
-import l2open.common.Html_Builder_JSOUP.Builder;
+import l2open.common.Html_Builder_JSOUP.Elements.enums.ALIGN;
+import l2open.common.Html_Builder_JSOUP.Elements.enums.EditType;
+import l2open.common.Html_Builder_JSOUP.utils.Colors;
+import l2open.common.Html_Builder_JSOUP.Elements.*;
 import l2open.common.Html_Builder_JSOUP.Elements.Button;
-import l2open.common.Html_Builder_JSOUP.Elements.TD;
-import l2open.common.Html_Builder_JSOUP.Elements.TR;
-import l2open.common.Html_Builder_JSOUP.Elements.Table;
-import l2open.common.Html_Builder_JSOUP.HtmlParser;
+import l2open.common.Html_Builder_JSOUP.Elements.Font;
+import l2open.common.Html_Builder_JSOUP.HtmlBuilder;
 import l2open.config.ConfigValue;
 import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
-import org.jsoup.nodes.Element;
 
 
 import javax.crypto.Cipher;
@@ -39,7 +31,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static l2open.common.HtmlBuilder.parameters.Parameters.*;
 import static l2open.extensions.common.Component.partitionList;
 
 //import utils_soft.common.DatabaseResurce.schemes.builders.ServerVariablesBuilder;
@@ -51,7 +42,7 @@ public class Test {
     public static void main(String[] args) throws Exception {
         final File file = new File("data/scripts/events/EventBuffer/pet/songs.htm");
 //        final Builder builder = HtmlParser.parse(file);
-        final Builder builder = new Builder().setTitle("FuzzY123");
+        final HtmlBuilder builder = new HtmlBuilder().setTitle("FuzzY123");
 
         final Table table = builder.addTable().setBgColor(Colors.Blue).setCellPadding(0).setCellSpacing(0).setWidth(100).setHeight(200);
         final TR tr = table.addTR();
@@ -60,14 +51,24 @@ public class Test {
 
         final Table table1 = new Table().setBgColor(Color.PINK);
         table1.addTR().addTD().put(new Button("button1", "bypass -h admin", 32, 32, "asdf", "asdf"));
+        table1.addTR().addTD().put(new Font("text", Color.RED));
 
 
         tr.addTD().setAlign(ALIGN.center).setWidth(100).put(new Button("button2", "bypass -h admin", 32, 32, "asdf", "asdf"));
         tr.addTD().put(table1);
 
+        builder.put(new BR());
+        builder.put(new BR());
+
+        Edit edit = builder.put(new Edit("edit", 50, 20));
+
+        edit.setType(EditType.num).setLength(4);
+
+
+
 
         System.out.println(builder.getDocument());
-
+        System.out.println(edit.getVar());
 
 //        ConfigSystem.load();
 //

@@ -5,24 +5,21 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-import java.io.File;
-import java.io.IOException;
-
 /**
  * Created by a.kiperku
  * Date: 12.02.2024
  */
 
-public class Builder {
+public class HtmlBuilder {
 
     private final Document document;
 
-    public Builder() {
+    public HtmlBuilder() {
         this.document = Jsoup.parse("");
         this.document.getElementsByTag("head").clear();
     }
 
-    public Builder(Document document) {
+    public HtmlBuilder(Document document) {
         this.document = document;
     }
 
@@ -36,12 +33,17 @@ public class Builder {
         return table;
     }
 
-    public Builder setTitle(String title){
+    public HtmlBuilder setTitle(String title){
         final Element element = getDocument().body().getElementsByTag("title").first();
         if (element == null){
             getDocument().body().appendElement("title").text(title);
         }
         return this;
+    }
+
+    public<T extends Element> T put(T element){
+        document.body().appendChild(element);
+        return element;
     }
 
 

@@ -15,11 +15,11 @@ public class HtmlParser {
 
 
 
-    public static Builder parse(File file){
+    public static HtmlBuilder parse(File file){
         try {
             final Document parse = Jsoup.parse(file, "UTF-8");
             parse.getElementsByTag("head").clear();
-            return new Builder(parse);
+            return new HtmlBuilder(parse);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

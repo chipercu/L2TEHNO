@@ -2,7 +2,7 @@ package utils_soft.NpcEditor;
 
 import l2open.common.HtmlBuilder.*;
 import l2open.common.HtmlBuilder.parameters.Color;
-import l2open.common.HtmlBuilder.parameters.EditType;
+import l2open.common.Html_Builder_JSOUP.Elements.enums.EditType;
 import l2open.config.ConfigValue;
 import l2open.database.schemes.resources.*;
 import l2open.gameserver.model.*;

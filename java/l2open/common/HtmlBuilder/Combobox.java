@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Combobox implements HtmlElement {
 
-
+//<combobox width=60 height=10 var="Who" list="Player;Pet">
     private static final String START_EDIT = "       <combobox";
     private static final String CLOSE_PARAM = ">";
     private final List<String> params = new ArrayList<String>();

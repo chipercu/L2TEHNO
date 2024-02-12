@@ -1,4 +1,4 @@
-package l2open.common.HtmlBuilder.parameters;
+package l2open.common.Html_Builder_JSOUP.Elements.enums;
 
 /**
  * Created by a.kiperku

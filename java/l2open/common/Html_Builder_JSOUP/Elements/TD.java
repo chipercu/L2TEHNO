@@ -1,7 +1,7 @@
 package l2open.common.Html_Builder_JSOUP.Elements;
 
-import l2open.common.HtmlBuilder.components.ALIGN;
-import l2open.common.HtmlBuilder.components.VALIGN;
+import l2open.common.Html_Builder_JSOUP.Elements.enums.ALIGN;
+import l2open.common.Html_Builder_JSOUP.Elements.enums.VALIGN;
 import org.jsoup.nodes.Element;
 
 /**

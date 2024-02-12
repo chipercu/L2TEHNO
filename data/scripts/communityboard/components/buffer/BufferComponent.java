@@ -10,7 +10,7 @@ import l2open.common.HtmlBuilder.Button;
 import l2open.common.HtmlBuilder.Edit;
 import l2open.common.HtmlBuilder.Img;
 import l2open.common.HtmlBuilder.Table;
-import l2open.common.HtmlBuilder.parameters.EditType;
+import l2open.common.Html_Builder_JSOUP.Elements.enums.EditType;
 import l2open.common.HtmlBuilder.components.Position;
 import l2open.gameserver.common.DifferentMethods;
 import l2open.gameserver.model.L2Effect;

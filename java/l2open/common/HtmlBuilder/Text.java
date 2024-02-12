@@ -1,6 +1,6 @@
 package l2open.common.HtmlBuilder;
 
-import l2open.common.HtmlBuilder.components.HSize;
+import l2open.common.Html_Builder_JSOUP.Elements.enums.HSize;
 import l2open.common.HtmlBuilder.components.Position;
 
 import java.awt.*;

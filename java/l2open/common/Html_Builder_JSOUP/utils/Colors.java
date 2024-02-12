@@ -1,4 +1,4 @@
-package l2open.common.HtmlBuilder.components;
+package l2open.common.Html_Builder_JSOUP.utils;
 
 import java.awt.*;
 /**

@@ -1,9 +1,7 @@
 package l2open.common.HtmlBuilder;
 
-import l2open.common.HtmlBuilder.components.ALIGN;
-import l2open.common.HtmlBuilder.components.VALIGN;
-import l2open.gameserver.xml.XmlUtils;
-import org.dom4j.DocumentException;
+import l2open.common.Html_Builder_JSOUP.Elements.enums.ALIGN;
+import l2open.common.Html_Builder_JSOUP.Elements.enums.VALIGN;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Attributes;
@@ -15,9 +13,6 @@ import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.StringTokenizer;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by a.kiperku
