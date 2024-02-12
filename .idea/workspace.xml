@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="NpcEditorUtils.updateNpcStat">
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="lib clean">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/actions/OnActionShift.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/actions/OnActionShift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/database/DataBaseTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/database/DataBaseTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/database/ResourceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/database/ResourceProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/tables/SkillTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/tables/SkillTable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,34 +50,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;aspect.path.notification.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/High Five/L2TEHNO/lib/hibernate-jpamodelgen-5.0.12.Final.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "aspect.path.notification.shown": "true",
+    "last_opened_file_path": "D:/L2/Interface_23_08_09/ForServersideIntagration/lib/emu-dev.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\High Five\L2TEHNO\data\scripts\communityboard\html\buffer" />
@@ -107,7 +99,7 @@
       <recent name="l2open.gameserver.model.barahlo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GameStart">
+  <component name="RunManager" selected="Application.L2LoginStart">
     <configuration name="GameStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="db" value="jdbc:mysql://localhost/l2tehno?useUnicode=true&amp;characterEncoding=UTF-8" />
@@ -185,8 +177,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GameStart" />
         <item itemvalue="Application.L2LoginStart" />
+        <item itemvalue="Application.GameStart" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.GameStart" />
@@ -293,7 +285,13 @@
       <workItem from="1702805411067" duration="24942000" />
       <workItem from="1704297907870" duration="6357000" />
       <workItem from="1704304324438" duration="6815000" />
-      <workItem from="1704730896327" duration="859000" />
+      <workItem from="1704730896327" duration="4996000" />
+      <workItem from="1704825493187" duration="17000" />
+      <workItem from="1704902060451" duration="4038000" />
+      <workItem from="1704989874901" duration="171000" />
+      <workItem from="1705001632072" duration="345000" />
+      <workItem from="1705073443339" duration="1042000" />
+      <workItem from="1705151181070" duration="1556000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1692529102326</created>
@@ -484,7 +482,21 @@
       <option name="project" value="LOCAL" />
       <updated>1704192963253</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="NpcEditorComponent.saveLocation">
+      <created>1704731860038</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1704731860038</updated>
+    </task>
+    <task id="LOCAL-00029" summary="lib clean">
+      <created>1705152644179</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1705152644179</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,7 +515,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="first" />
     <MESSAGE value="PartyMaker htm and" />
     <MESSAGE value="PartyMaker fix party-member, member-info" />
     <MESSAGE value="PartyMaker fix" />
@@ -527,7 +538,9 @@
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="clean" />
     <MESSAGE value="NpcEditorUtils.updateNpcStat" />
-    <option name="LAST_COMMIT_MESSAGE" value="NpcEditorUtils.updateNpcStat" />
+    <MESSAGE value="NpcEditorComponent.saveLocation" />
+    <MESSAGE value="lib clean" />
+    <option name="LAST_COMMIT_MESSAGE" value="lib clean" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
