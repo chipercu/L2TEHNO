@@ -4,8 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="lib clean">
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="NpcEditorUtils.updateNpcStat">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/gradle_wrapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/resources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/test.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/BR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/HtmlBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/TEST_FILE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Text.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/components/ALIGN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/components/Colors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/components/HSize.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/components/VALIGN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/l2open/common/Html_Builder_JSOUP/Builder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/l2open/common/Html_Builder_JSOUP/Elements/Button.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/l2open/common/Html_Builder_JSOUP/Elements/TD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/l2open/common/Html_Builder_JSOUP/Elements/TR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/l2open/common/Html_Builder_JSOUP/Elements/Table.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/l2open/common/Html_Builder_JSOUP/HtmlParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jsoup-1.17.2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/html/admin/admin.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/html/admin/admin.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/CommunityBoardBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/CommunityBoardBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/communityboard/components/buffer/BufferComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/communityboard/components/buffer/BufferComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/events/EventBuffer/pet/songs.htm" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/events/EventBuffer/pet/songs.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/MultisellEditor/MultiSellEditorComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/utils_soft/NpcEditor/NpcEditorComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Col.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Col.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Combobox.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Combobox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Edit.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Edit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Font.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Font.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/HtmlBuildInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/HtmlElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Img.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Img.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/MultiEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/MultiEdit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Row.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Row.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/parameters/Parameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/parameters/Parameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/parameters/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/common/HtmlBuilder/components/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/extensions/common/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/extensions/common/Component.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +57,7 @@
       <list>
         <option value="AnnotationType" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Enum" />
         <option value="Class" />
       </list>
@@ -29,9 +70,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.ideaLibSources/greetgo.conf-2.0.5-sources.jar!/kz/greetgo/conf/ConfDir.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
@@ -55,18 +93,19 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "aspect.path.notification.shown": "true",
-    "last_opened_file_path": "D:/L2/Interface_23_08_09/ForServersideIntagration/lib/emu-dev.jar",
+    "last_opened_file_path": "C:/Users/a.kiperku/IdeaProjects/L2TEHNO/lib/jsoup-1.17.2.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "File.Encoding",
@@ -80,11 +119,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\a.kiperku\IdeaProjects\L2TEHNO\lib" />
       <recent name="D:\High Five\L2TEHNO\data\scripts\communityboard\html\buffer" />
       <recent name="D:\High Five\L2TEHNO\data\scripts\services\PremiumBuffer" />
       <recent name="D:\High Five\L2TEHNO\data\html\CommunityBoardPVP\buffer" />
       <recent name="D:\High Five\L2TEHNO\data\scripts\ai\FakePlayersAI\PathManager\html" />
-      <recent name="D:\High Five\L2TEHNO\data\scripts\events" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\High Five\L2TEHNO\data\scripts\communityboard\config" />
@@ -92,14 +131,14 @@
       <recent name="D:\High Five\L2TEHNO" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="l2open.common.HtmlBuilder.components" />
       <recent name="utils_soft.common.DatabaseResurce.schemes.builders" />
       <recent name="communityboard.repository.buffer" />
       <recent name="communityboard.components.buffer" />
       <recent name="communityboard.bufferService" />
-      <recent name="l2open.gameserver.model.barahlo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.L2LoginStart">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="GameStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="db" value="jdbc:mysql://localhost/l2tehno?useUnicode=true&amp;characterEncoding=UTF-8" />
@@ -177,9 +216,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.L2LoginStart" />
         <item itemvalue="Application.GameStart" />
-        <item itemvalue="Application.Test" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.GameStart" />
       </list>
@@ -565,12 +604,23 @@
           <line>66</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/java/l2open/common/HtmlBuilder/HtmlBuilder.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/java/l2open/common/Html_Builder_JSOUP/Elements/TD.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="utils_soft.common.DatabaseResurce.schemes.NpcElementTable" memberName="STAT_SET" />
         <PinnedItemInfo parentTag="java.util.HashMap$Node" memberName="key" />
+        <PinnedItemInfo parentTag="l2open.common.HtmlBuilder.Table" memberName="border" />
         <PinnedItemInfo parentTag="communityboard.CommunityBoardBufferPerform$SkillInfo" memberName="enchantType" />
         <PinnedItemInfo parentTag="communityboard.CommunityBoardBufferPerform$SkillInfo" memberName="enchantsForChange" />
         <PinnedItemInfo parentTag="java.util.HashMap$Node" memberName="value" />

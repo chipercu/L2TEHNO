@@ -9,7 +9,7 @@ import java.util.*;
 import l2open.common.HtmlBuilder.Button;
 import l2open.common.HtmlBuilder.Img;
 import l2open.common.HtmlBuilder.Table;
-import l2open.common.HtmlBuilder.parameters.Position;
+import l2open.common.HtmlBuilder.components.Position;
 import l2open.gameserver.cache.Msg;
 
 import l2open.config.ConfigValue;

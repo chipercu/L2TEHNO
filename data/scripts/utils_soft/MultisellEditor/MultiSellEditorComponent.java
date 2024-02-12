@@ -26,7 +26,7 @@ import java.util.function.BiPredicate;
 import java.util.stream.Collectors;
 
 import static l2open.common.HtmlBuilder.parameters.Parameters.*;
-import static l2open.common.HtmlBuilder.parameters.Position.*;
+import static l2open.common.HtmlBuilder.components.Position.*;
 import static l2open.gameserver.model.L2Multisell.MultiSellListContainer;
 import static l2open.loginserver.serverpackets.L2LoginServerPacket._log;
 import static utils_soft.MultisellEditor.MultiSellCommands.*;

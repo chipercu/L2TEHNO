@@ -1,6 +1,6 @@
 package l2open.common.HtmlBuilder;
 
-public class Button implements HtmlBuildInterface {
+public class Button implements HtmlElement {
    // <button value="MP" action="bypass -h _bbsbufferheal MP $Who" width=40 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
     private String value = "";
     private String action = "";
@@ -38,6 +38,8 @@ public class Button implements HtmlBuildInterface {
     public Button(String value){
         this.value = value;
     }
+
+
 
     public Button(){
     }

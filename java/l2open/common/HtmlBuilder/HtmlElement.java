@@ -1,5 +1,5 @@
 package l2open.common.HtmlBuilder;
 
-public interface HtmlBuildInterface {
+public interface HtmlElement {
     String build();
 }

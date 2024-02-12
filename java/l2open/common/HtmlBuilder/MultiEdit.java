@@ -5,7 +5,7 @@ package l2open.common.HtmlBuilder;
  * Date: 15.08.2023
  */
 
-public class MultiEdit implements HtmlBuildInterface {
+public class MultiEdit implements HtmlElement {
 
     private final int width;
     private final int height;

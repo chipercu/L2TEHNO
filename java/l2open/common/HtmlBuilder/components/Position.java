@@ -1,4 +1,4 @@
-package l2open.common.HtmlBuilder.parameters;
+package l2open.common.HtmlBuilder.components;
 
 public enum Position {
 

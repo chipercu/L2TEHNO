@@ -1,30 +1,46 @@
 package l2open;
 
-import l2open.config.ConfigSystem;
+import l2open.common.HtmlBuilder.HtmlBuilder;
+import l2open.common.HtmlBuilder.Img;
+import l2open.common.HtmlBuilder.Text;
+import l2open.common.HtmlBuilder.components.ALIGN;
+import l2open.common.HtmlBuilder.components.Colors;
+import l2open.common.HtmlBuilder.components.HSize;
+import l2open.common.HtmlBuilder.components.Position;
+import l2open.common.HtmlBuilder.parameters.Parameters;
+import l2open.common.Html_Builder_JSOUP.Builder;
+import l2open.common.Html_Builder_JSOUP.Elements.Button;
+import l2open.common.Html_Builder_JSOUP.Elements.TD;
+import l2open.common.Html_Builder_JSOUP.Elements.TR;
+import l2open.common.Html_Builder_JSOUP.Elements.Table;
+import l2open.common.Html_Builder_JSOUP.HtmlParser;
 import l2open.config.ConfigValue;
 import l2open.database.DatabaseUtils;
 import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
-import l2open.gameserver.tables.SkillTable;
-
+import org.jsoup.nodes.Element;
 
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.Base64;
-import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static l2open.common.HtmlBuilder.parameters.Parameters.*;
+import static l2open.extensions.common.Component.partitionList;
 
 //import utils_soft.common.DatabaseResurce.schemes.builders.ServerVariablesBuilder;
 
@@ -33,8 +49,24 @@ public class Test {
 
 
     public static void main(String[] args) throws Exception {
-        format();
+        final File file = new File("data/scripts/events/EventBuffer/pet/songs.htm");
+//        final Builder builder = HtmlParser.parse(file);
+        final Builder builder = new Builder().setTitle("FuzzY123");
 
+        final Table table = builder.addTable().setBgColor(Colors.Blue).setCellPadding(0).setCellSpacing(0).setWidth(100).setHeight(200);
+        final TR tr = table.addTR();
+        final TD td = tr.addTD().setAlign(ALIGN.center).setWidth(100);
+        final Button put = td.put(new Button("button1", "bypass -h admin", 32, 32, "asdf", "asdf"));
+
+        final Table table1 = new Table().setBgColor(Color.PINK);
+        table1.addTR().addTD().put(new Button("button1", "bypass -h admin", 32, 32, "asdf", "asdf"));
+
+
+        tr.addTD().setAlign(ALIGN.center).setWidth(100).put(new Button("button2", "bypass -h admin", 32, 32, "asdf", "asdf"));
+        tr.addTD().put(table1);
+
+
+        System.out.println(builder.getDocument());
 
 
 //        ConfigSystem.load();
@@ -45,8 +77,17 @@ public class Test {
 //        SchemesGenerator.generate("l2tehno");
     }
 
+    public static List<Color> generateColorPalette() throws IllegalAccessException {
+        List<Color> colorPalette = new ArrayList<>();
+        final Field[] declaredFields = Colors.class.getDeclaredFields();
+        for (Field field : declaredFields){
+            final Color o = (Color) field.get(null);
+            colorPalette.add(o);
+        }
+        return colorPalette;
+    }
 
-    public static void DATABASE(){
+    public static void DATABASE() {
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
         ResultSet rs = null;
@@ -55,7 +96,7 @@ public class Test {
             con = L2DatabaseFactory.getInstance().getConnection();
             statement = con.prepareStatement(query);
             rs = statement.executeQuery();
-            while (rs.next()){
+            while (rs.next()) {
                 System.out.println(rs.getString("TABLE_NAME"));
             }
         } catch (Exception e) {
@@ -116,7 +157,7 @@ public class Test {
 
         String key = "MySecretKey12345";
 
-        for (String bypass: matches){
+        for (String bypass : matches) {
             byte[] encryptedText = encrypt(bypass, key);
             string = string.replace(bypass, bytesToBase64(encryptedText));
         }
@@ -125,7 +166,6 @@ public class Test {
 
         System.out.println(string);
         System.out.println(finishEncriptTime - startEncriptTime);
-
 
 
         long startDecriptTime = System.currentTimeMillis();
@@ -137,7 +177,7 @@ public class Test {
             encryptMatches.add(match);
         }
 
-        for (String bypass: encryptMatches){
+        for (String bypass : encryptMatches) {
             String decryptedText = decrypt(base64ToBytes(bypass), key);
             string = string.replace(bypass, decryptedText);
         }
@@ -170,12 +210,12 @@ public class Test {
         return java.util.Base64.getEncoder().encodeToString(bytes);
     }
 
-    private static byte[] base64ToBytes(String str){
+    private static byte[] base64ToBytes(String str) {
         return Base64.getDecoder().decode(str);
     }
 
 
-    private static void format(){
+    private static void format() {
 
         String str = "12341234 : ASdasdfasdfasdf";
 
@@ -189,11 +229,10 @@ public class Test {
         }
 
 
-
     }
 
 
-    private static void saveBackup(){
+    private static void saveBackup() {
         Date currentDate = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm");
         String formattedDate = dateFormat.format(currentDate);
@@ -221,7 +260,7 @@ public class Test {
 
         }
 
-        String command = "mysqldump -u "+ ConfigValue.Login +" -p"+ ConfigValue.Password + " l2open -r \"" + canonicalPath + formattedDate + ".sql\"";
+        String command = "mysqldump -u " + ConfigValue.Login + " -p" + ConfigValue.Password + " l2open -r \"" + canonicalPath + formattedDate + ".sql\"";
         try {
             Process process = Runtime.getRuntime().exec(command);
             int exitCode = process.waitFor();

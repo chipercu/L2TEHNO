@@ -1,6 +1,6 @@
 package l2open.common.HtmlBuilder;
 
-public class Img implements HtmlBuildInterface {
+public class Img implements HtmlElement {
 
     private String src = "icon.NOICON";
     private int width = 32;

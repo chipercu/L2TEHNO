@@ -7,7 +7,7 @@ import l2open.common.HtmlBuilder.parameters.EditType;
  * Date: 15.08.2023
  */
 
-public class Edit implements HtmlBuildInterface {
+public class Edit implements HtmlElement {
 
     private final String var;
     private final String type;

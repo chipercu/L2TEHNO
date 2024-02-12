@@ -2,6 +2,7 @@ package l2open.common.HtmlBuilder.parameters;
 
 
 import l2open.common.HtmlBuilder.Img;
+import l2open.common.HtmlBuilder.components.Position;
 
 public interface Parameters extends ButtonAction{
 

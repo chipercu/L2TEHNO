@@ -1,14 +1,16 @@
 package l2open.extensions.common;
 
-import l2open.common.HtmlBuilder.HtmlBuildInterface;
+import l2open.common.HtmlBuilder.*;
 import l2open.common.HtmlBuilder.Button;
-import l2open.common.HtmlBuilder.Img;
-import l2open.common.HtmlBuilder.Table;
+import l2open.common.HtmlBuilder.components.Colors;
 import l2open.gameserver.model.L2Player;
+import l2open.gameserver.serverpackets.NpcHtmlMessage;
 import l2open.gameserver.serverpackets.ShowBoard;
 import l2open.gameserver.serverpackets.TutorialShowHtml;
 import l2open.util.GArray;
 
+import java.awt.*;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,20 +25,52 @@ public class Component {
         System.out.println(s.length());
         player.sendPacket(new TutorialShowHtml(s));
     }
-    protected static void showTWindow(L2Player player, HtmlBuildInterface html, String title, String backBypass){
+    protected static void showTWindow(L2Player player, HtmlElement html, String title, String backBypass){
         String s = "<html><body><title>" + title + "</title>" + TWindowCloseButton(backBypass) + html.build() + " </body></html>";
         System.out.println(s.length());
         player.sendPacket(new TutorialShowHtml(s));
     }
-    protected static void TWindow(L2Player player, HtmlBuildInterface html, String title){
+    protected static void TWindow(L2Player player, HtmlElement html, String title){
         String s = "<html><body><title>" + title + "</title>" + html.build() + " </body></html>";
         player.sendPacket(new TutorialShowHtml(s));
     }
 
-    protected static void CBWindow(L2Player player, HtmlBuildInterface html, String title){
+    protected static void CBWindow(L2Player player, HtmlElement html, String title){
         String s = "<html><body><title>" + title + "</title>" + html.build() + " </body></html>";
         ShowBoard.separateAndSend(s, player);
     }
+
+
+    protected static void showColors(L2Player player, String comm){
+        final HtmlBuilder htmlBuilder = new HtmlBuilder("Палитра", false);
+        final List<List<Color>> lists = partitionList(generateColorPalette(), 10);
+        final Table table = new Table(lists.size(), 10);
+        for (int i = 0; i < lists.size(); i++) {
+            final List<Color> colors = lists.get(i);
+            for (int j = 0; j < 10; j++) {
+                final Color color = colors.get(j);
+                String colorHex = String.format("%02x%02x%02x", color.getRed(), color.getGreen(), color.getBlue());
+                table.row(i).col(j).insert("<button value=\"\" action=\"" + comm + colorHex + "\" width=\"15\" height=\"15\" back=\"\" fore=\"\">");
+            }
+        }
+        htmlBuilder.addElement(table);
+        player.sendPacket(new TutorialShowHtml(htmlBuilder.toString()));
+    }
+
+    protected static List<Color> generateColorPalette() {
+        List<Color> colorPalette = new ArrayList<>();
+        final Field[] declaredFields = Colors.class.getDeclaredFields();
+        for (Field field : declaredFields){
+            try {
+                final Color o = (Color) field.get(null);
+                colorPalette.add(o);
+            }catch (IllegalAccessException e) {
+                throw new RuntimeException();
+            }
+        }
+        return colorPalette;
+    }
+
 
     protected static void showTWindow(L2Player player, String html, String backBypass){
         player.sendPacket(new TutorialShowHtml("<html><body>" + TWindowCloseButton(backBypass) + html + " </body></html>"));

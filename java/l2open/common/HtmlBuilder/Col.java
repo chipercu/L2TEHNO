@@ -1,13 +1,21 @@
 package l2open.common.HtmlBuilder;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import l2open.common.HtmlBuilder.components.ALIGN;
+import l2open.common.HtmlBuilder.components.VALIGN;
+
+import java.util.*;
 
 import static l2open.common.HtmlBuilder.parameters.Parameters.*;
-import static l2open.common.HtmlBuilder.parameters.Position.*;
+import static l2open.common.HtmlBuilder.components.Position.*;
 
-public class Col implements HtmlBuildInterface {
+public class Col implements HtmlElement {
+    private int width = 0;
+    private int fixWidth = 0;
+    private int height = 0;
+    private ALIGN align;
+    private VALIGN valign;
+    private List<HtmlElement> elements = new ArrayList<>();
+
     private static final String START_COL = "       <td";
     private static final String END_COL = "</td>\n";
     private static final String CLOSE_PARAM = ">";
@@ -33,7 +41,7 @@ public class Col implements HtmlBuildInterface {
         return this;
     }
 
-    public Col insert(HtmlBuildInterface build){
+    public Col insert(HtmlElement build){
         this.body += build.build();
         return this;
     }
@@ -41,6 +49,65 @@ public class Col implements HtmlBuildInterface {
     public Col setCenter() {
         this.center = true;
         return this;
+    }
+
+    public Col putElement(HtmlElement element){
+        elements.add(element);
+        return this;
+    }
+
+    public Col setWidth(int width) {
+        this.width = width;
+        return this;
+    }
+
+    public Col setFixWidth(int fixWidth) {
+        this.fixWidth = fixWidth;
+        return this;
+    }
+
+    public Col setHeight(int height) {
+        this.height = height;
+        return this;
+    }
+
+    public Col setAlign(ALIGN align) {
+        this.align = align;
+        return this;
+    }
+
+    public Col setValign(VALIGN valign) {
+        this.valign = valign;
+        return this;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder("\n\t\t<td");
+
+        if (width != 0){
+            builder.append(" width=").append(width);
+        }
+        if (fixWidth != 0){
+            builder.append(" fixwidth=").append(fixWidth);
+        }
+        if (height != 0){
+            builder.append(" height=").append(height);
+        }
+        if (align != null){
+            builder.append(" align=\"").append(align.name()).append("\"");
+        }
+        if (valign != null){
+            builder.append(" valign=\"").append(valign.name()).append("\"");
+        }
+        builder.append(">");
+
+        for (HtmlElement element : elements){
+            builder.append(element);
+        }
+
+        builder.append("</td>");
+        return builder.toString();
     }
 
     public String build(){

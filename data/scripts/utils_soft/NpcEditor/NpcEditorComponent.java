@@ -28,7 +28,7 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import static l2open.common.HtmlBuilder.parameters.Parameters.*;
-import static l2open.common.HtmlBuilder.parameters.Position.*;
+import static l2open.common.HtmlBuilder.components.Position.*;
 import static utils_soft.NpcEditor.NpcEditorCommands.*;
 import static utils_soft.NpcEditor.NpcEditorUtils.*;
 
