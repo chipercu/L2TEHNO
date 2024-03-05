@@ -2327,6 +2327,10 @@ public class ConfigValue {
     public static int AltManorMaintenancePeriod = 360000;
     public static int DiffPlayerMobPenalty = 5;
     public static int BasePercentChanceOfSowingSuccess = 90;
+    public static boolean EnableAgationSpoil = false;
+    public static boolean AgationSpoilOnlyPremiumAccount = false;
+    public static int[] AgationsIds = {};
+
 
     /*************************** telnet.properties ***************************/
     public static boolean EnableTelnet = false;
