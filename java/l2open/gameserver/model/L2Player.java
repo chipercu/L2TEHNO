@@ -595,8 +595,11 @@ public class L2Player extends L2Playable {
     public void doAttack(final L2Character target, boolean force) {
         super.doAttack(target, force);
 
-        if (_agathion != null)
+        if (_agathion != null) {
             _agathion.doAction(target);
+            _agathion.doSweep(target);
+        }
+
     }
 
     @Override
@@ -617,11 +620,15 @@ public class L2Player extends L2Playable {
             sendPacket(new ExUseSharedGroupItem(getUseSeed(), getUseSeed(), 5000, 5000));
 
         if (skill.isOffensive() && target != null) {
-            for (L2Cubic cubic : getCubics())
-                if (cubic.getTargetType().startsWith("target") || cubic.getTargetType().startsWith("by_skill"))
+            for (L2Cubic cubic : getCubics()) {
+                if (cubic.getTargetType().startsWith("target") || cubic.getTargetType().startsWith("by_skill")) {
                     cubic.startAttack(target);
-            if (_agathion != null)
+                }
+            }
+            if (_agathion != null) {
                 _agathion.doAction(target);
+                _agathion.doSweep(target);
+            }
         }
     }
 

@@ -938,6 +938,8 @@ public class ConfigValue {
     public static int RewardIdForLoser = 57;
     public static int RewardCountForLoser = 1000;
 
+    public static boolean HideOtherOlympiadPoints = false;
+
     /*************************** Enchant.properties ***************************/
     public static int EnchantMaxMasterYogi = 23;
     public static int EnchantMaxWeapon = 20;

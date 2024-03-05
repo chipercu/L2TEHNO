@@ -6,12 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="Система спойла через агатиона">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/localization/ascii/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/localization/ascii/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/localization/ascii/messages_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/localization/ascii/messages_ru.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/commands/user/OlympiadStat.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/commands/user/OlympiadStat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/config/olympiad.properties" beforeDir="false" afterPath="$PROJECT_DIR$/java/config/olympiad.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/config/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/java/config/server.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/config/spoil.properties" beforeDir="false" afterPath="$PROJECT_DIR$/java/config/spoil.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/config/ConfigValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/config/ConfigValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/ai/L2PlayableAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/ai/L2PlayableAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/model/entity/olympiad/OlympiadTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/model/entity/olympiad/OlympiadTeam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/model/instances/L2AgathionInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/model/instances/L2AgathionInstance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/model/instances/L2MonsterInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/model/instances/L2MonsterInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/skills/skillclasses/Spoil.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/skills/skillclasses/Spoil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,34 +52,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "aspect.path.notification.shown": "true",
-    "last_opened_file_path": "D:/High Five/L2TEHNO/data/scripts/communityboard/html/buffer",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "File.Encoding",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;aspect.path.notification.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/High Five/L2TEHNO/data/scripts/communityboard/html/buffer&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\High Five\L2TEHNO\data\scripts\communityboard\html\buffer" />
@@ -267,6 +271,7 @@
       <workItem from="1700820520367" duration="32494000" />
       <workItem from="1700906590715" duration="10992000" />
       <workItem from="1701004412876" duration="14825000" />
+      <workItem from="1709664207684" duration="1097000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1692529102326</created>
@@ -458,11 +463,6 @@
           <url>file://$PROJECT_DIR$/java/l2open/Test.java</url>
           <line>45</line>
           <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/java/l2open/gameserver/model/instances/L2AgathionInstance.java</url>
-          <line>207</line>
-          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

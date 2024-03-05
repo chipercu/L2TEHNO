@@ -7,6 +7,7 @@ import l2open.gameserver.geodata.GeoEngine;
 import l2open.gameserver.model.*;
 import l2open.gameserver.model.L2Skill.NextAction;
 import l2open.gameserver.model.L2Skill.SkillType;
+import l2open.gameserver.model.instances.L2MonsterInstance;
 import l2open.gameserver.model.items.L2ItemInstance;
 import l2open.gameserver.model.instances.L2DoorInstance;
 import l2open.gameserver.serverpackets.MyTargetSelected;
@@ -854,6 +855,15 @@ public class L2PlayableAI extends L2CharacterAI
 		//if(ConfigValue.DebugOnAction)
 		//	log("DebugOnAction: PLAYABLE_AI:Attack->set:AI_INTENTION_ATTACK");
 		setIntention(AI_INTENTION_ATTACK, target);
+		//Спойл через агатион
+		if (actor.isPlayer() && target.isMonster()){
+			L2Player player = (L2Player) actor;
+			L2MonsterInstance monster = (L2MonsterInstance) target;
+			if (player.getAgathion() != null){
+				player.getAgathion().doSweep(monster);
+			}
+
+		}
 		log("L2PlayableAI(685): Attack 2");
 	}
 
@@ -905,6 +915,15 @@ public class L2PlayableAI extends L2CharacterAI
 		set_dontMove(dontMove);
 		clearNextAction();
 		setIntention(CtrlIntention.AI_INTENTION_CAST, skill, target);
+
+		//Спойл через агатион
+		if (actor.isPlayer() && target.isMonster()){
+			L2Player player = (L2Player) actor;
+			L2MonsterInstance monster = (L2MonsterInstance) target;
+			if (player.getAgathion() != null){
+				player.getAgathion().doSweep(monster);
+			}
+		}
 		//Util.test();
 	}
 

@@ -178,6 +178,41 @@ public class L2AgathionInstance {
 
     }
 
+    public void doSweep(L2Character target){
+
+        L2Player owner = getPlayer();
+        if (_target == target || owner == null || owner == target) {
+            return;
+        }
+
+        if (useSpoil && target.isMonster()) {
+            L2MonsterInstance monster = (L2MonsterInstance) target;
+            if (monster.isSpoiled()) {
+                return;
+            }
+
+            monster.setSpoiled(true, owner); //single target spoil
+            owner.sendPacket(Msg.THE_SPOIL_CONDITION_HAS_BEEN_ACTIVATED);
+            monster.altUseSkill(SkillTable.getInstance().getInfo(254, 10), monster);
+            monster.broadcastSkill(new MagicSkillUse(monster, monster,254,1,  100, 0));
+//
+//
+//            monster.getAroundNpc(250, 200)
+//                    .stream()
+//                    .filter(L2Object::isMonster)
+//                    .map(npcInstance -> (L2MonsterInstance) npcInstance)
+//                    .filter(l2MonsterInstance -> !l2MonsterInstance.isSpoiled())
+//                    .forEach(l2MonsterInstance -> {
+//                        l2MonsterInstance.setSpoiled(true, owner); //single target spoil
+//                        owner.sendPacket(Msg.THE_SPOIL_CONDITION_HAS_BEEN_ACTIVATED);
+//                    });
+
+
+//            owner.altUseSkill(SkillTable.getInstance().getInfo(254, 10), monster); //single target spoil
+//            owner.altUseSkill(SkillTable.getInstance().getInfo(302, 8), monster); //multi target spoil
+        }
+    }
+
     public void doAction(L2Character target) {
         L2Player owner = getPlayer();
         if (_target == target || owner == null || owner == target) {
@@ -198,33 +233,6 @@ public class L2AgathionInstance {
                 _actionTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Action(), 0, 8000);
                 break;
         }
-
-        if (useSpoil && target.isMonster()) {
-            L2MonsterInstance monster = (L2MonsterInstance) target;
-            if (monster.isSpoiled()) {
-                return;
-            }
-
-            monster.setSpoiled(true, owner); //single target spoil
-            owner.sendPacket(Msg.THE_SPOIL_CONDITION_HAS_BEEN_ACTIVATED);
-//
-//
-//            monster.getAroundNpc(250, 200)
-//                    .stream()
-//                    .filter(L2Object::isMonster)
-//                    .map(npcInstance -> (L2MonsterInstance) npcInstance)
-//                    .filter(l2MonsterInstance -> !l2MonsterInstance.isSpoiled())
-//                    .forEach(l2MonsterInstance -> {
-//                        l2MonsterInstance.setSpoiled(true, owner); //single target spoil
-//                        owner.sendPacket(Msg.THE_SPOIL_CONDITION_HAS_BEEN_ACTIVATED);
-//                    });
-
-
-//            owner.altUseSkill(SkillTable.getInstance().getInfo(254, 10), monster); //single target spoil
-//            owner.altUseSkill(SkillTable.getInstance().getInfo(302, 8), monster); //multi target spoil
-        }
-
-
     }
 
     public boolean isUseSpoil() {

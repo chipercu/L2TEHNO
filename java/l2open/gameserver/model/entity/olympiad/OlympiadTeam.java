@@ -292,11 +292,11 @@ public class OlympiadTeam
 
 				loos.getPlayer().sendPacket(new SystemMessage(SystemMessage.C1_HAS_EARNED_S2_POINTS_IN_THE_GRAND_OLYMPIAD_GAMES).addString(getName()).addNumber(pointDiff));
 				loos.getPlayer().sendPacket(new SystemMessage(SystemMessage.C1_HAS_LOST_S2_POINTS_IN_THE_GRAND_OLYMPIAD_GAMES).addString(looseTeam.getName()).addNumber(pointDiff));
-				loos.getPlayer().sendPacket(new ExOlympiadMatchStats(true, this, looseTeam, pointDiff));
+//				loos.getPlayer().sendPacket(new ExOlympiadMatchStats(true, this, looseTeam, pointDiff));
 
 				win.getPlayer().sendPacket(new SystemMessage(SystemMessage.C1_HAS_EARNED_S2_POINTS_IN_THE_GRAND_OLYMPIAD_GAMES).addString(getName()).addNumber(pointDiff));
 				win.getPlayer().sendPacket(new SystemMessage(SystemMessage.C1_HAS_LOST_S2_POINTS_IN_THE_GRAND_OLYMPIAD_GAMES).addString(looseTeam.getName()).addNumber(pointDiff));
-				win.getPlayer().sendPacket(new ExOlympiadMatchStats(true, this, looseTeam, pointDiff));
+//				win.getPlayer().sendPacket(new ExOlympiadMatchStats(true, this, looseTeam, pointDiff));
 				pDiff += pointDiff;
 				Log.add("Olympiad Result: " + loos.getPlayer().getName() + " vs " + win.getPlayer().getName() + " ... " + win.getPlayer().getName() + " win " + pointDiff + " points", "olympiad");
 				l2open.util.Util.test("Olympiad Result: " + loos.getPlayer().getName() + " vs " + win.getPlayer().getName() + " ... " + win.getPlayer().getName() + " win " + pointDiff + " points: ", "olympiad", "olympiad");
@@ -438,7 +438,7 @@ public class OlympiadTeam
 		}
 
 		_game.broadcastPacket(Msg.THE_GAME_ENDED_IN_A_TIE, true, true);
-		_game.broadcastPacket(new ExOlympiadMatchStats(false, this, otherTeam, 2), true, false);
+//		_game.broadcastPacket(new ExOlympiadMatchStats(false, this, otherTeam, 2), true, false);
 
 		Log.add("Olympiad Result: " + getName() + " vs " + otherTeam.getName() + " ... tie", "olympiad");
 	}
