@@ -78,6 +78,17 @@ public class L2AgathionInstance {
         _owner = owner;
         _id = id;
 
+        if (ConfigValue.EnableAgationSpoil && Arrays.stream(ConfigValue.AgationsIds).anyMatch(value -> value == id)) {
+            if (ConfigValue.AgationSpoilOnlyPremiumAccount) {
+                if (owner.getBonus().RATE_XP > 1) {
+                    this.useSpoil = true;
+                }
+            } else {
+                this.useSpoil = true;
+            }
+
+        }
+
         switch (id) {
             case BEASTLY_AGATHION_ID:
                 _skills.add(SkillTable.getInstance().getInfo(5413, 1)); // See a summoned Agathion perform tricks. Beast Farm.
@@ -165,17 +176,6 @@ public class L2AgathionInstance {
 
         owner.sendPacket(new SkillList(owner));
 
-        if (ConfigValue.EnableAgationSpoil && Arrays.stream(ConfigValue.AgationsIds).anyMatch(value -> value == id)) {
-            if (ConfigValue.AgationSpoilOnlyPremiumAccount) {
-                if (owner.getBonus().RATE_XP > 1) {
-                    this.useSpoil = true;
-                }
-            } else {
-                this.useSpoil = true;
-            }
-
-        }
-
     }
 
     public void doAction(L2Character target) {
@@ -205,8 +205,8 @@ public class L2AgathionInstance {
                 return;
             }
 
-//            monster.setSpoiled(true, owner); //single target spoil
-//            owner.sendPacket(Msg.THE_SPOIL_CONDITION_HAS_BEEN_ACTIVATED);
+            monster.setSpoiled(true, owner); //single target spoil
+            owner.sendPacket(Msg.THE_SPOIL_CONDITION_HAS_BEEN_ACTIVATED);
 //
 //
 //            monster.getAroundNpc(250, 200)
@@ -220,8 +220,8 @@ public class L2AgathionInstance {
 //                    });
 
 
-            owner.altUseSkill(SkillTable.getInstance().getInfo(254, 10), monster); //single target spoil
-            owner.altUseSkill(SkillTable.getInstance().getInfo(302, 8), monster); //multi target spoil
+//            owner.altUseSkill(SkillTable.getInstance().getInfo(254, 10), monster); //single target spoil
+//            owner.altUseSkill(SkillTable.getInstance().getInfo(302, 8), monster); //multi target spoil
         }
 
 

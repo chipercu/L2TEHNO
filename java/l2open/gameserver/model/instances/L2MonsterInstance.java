@@ -605,8 +605,9 @@ public class L2MonsterInstance extends L2NpcInstance {
 
             if (ConfigValue.EnableAgationSpoil) {
                 L2Player player = (L2Player) topDamager;
-                if (player.getAgathion() != null && player.getAgathion().isUseSpoil()){
-                    topDamager.altUseSkill(SkillTable.getInstance().getInfo(444, 1), this);
+                if (player.getAgathion() != null && player.getAgathion().isUseSpoil()) {
+                    sweepByAgathion(player);
+//                    topDamager.altUseSkill(SkillTable.getInstance().getInfo(444, 1), this);
                 }
             }
         }
@@ -714,6 +715,69 @@ public class L2MonsterInstance extends L2NpcInstance {
                 item.updateDatabase();
             }
         }
+    }
+
+
+    private void sweepByAgathion(L2Player player) {
+
+        if (!this.isSpoiled(player)) {
+            player.sendPacket(Msg.THERE_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER);
+            return;
+        }
+
+        L2ItemInstance[] items = this.takeSweep();
+
+        if (items == null) {
+            player.getAI().setAttackTarget(null);
+            this.endDecayTask();
+            return;
+        }
+
+        this.setSpoiled(false, null);
+
+        for (L2ItemInstance item : items) {
+            if (player.isInParty() && player.getParty().isDistributeSpoilLoot()) {
+                player.getParty().distributeItem(player, item);
+                continue;
+            }
+
+            long itemCount = item.getCount();
+            if (player.getInventoryLimit() <= player.getInventory().getSize() && (!item.isStackable() || player.getInventory().getItemByItemId(item.getItemId()) == null)) {
+                item.dropToTheGround(player, this);
+                continue;
+            }
+
+            item = player.getInventory().addItem(item);
+            Log.LogItem(player, this, Log.SweepItem, item);
+
+            SystemMessage smsg;
+            if (itemCount == 1) {
+                smsg = new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1);
+                smsg.addItemName(item.getItemId());
+                player.sendPacket(smsg);
+            } else {
+                smsg = new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S2_S1);
+                smsg.addItemName(item.getItemId());
+                smsg.addNumber(itemCount);
+                player.sendPacket(smsg);
+            }
+            if (player.isInParty())
+                if (itemCount == 1) {
+                    smsg = new SystemMessage(SystemMessage.S1_HAS_OBTAINED_S2_BY_USING_SWEEPER);
+                    smsg.addString(player.getName());
+                    smsg.addItemName(item.getItemId());
+                    player.getParty().broadcastToPartyMembers(player, smsg);
+                } else {
+                    smsg = new SystemMessage(SystemMessage.S1_HAS_OBTAINED_3_S2_S_BY_USING_SWEEPER);
+                    smsg.addString(player.getName());
+                    smsg.addItemName(item.getItemId());
+                    smsg.addNumber(itemCount);
+                    player.getParty().broadcastToPartyMembers(player, smsg);
+                }
+        }
+
+        player.getAI().setAttackTarget(null);
+        this.endDecayTask();
     }
 
     @Override
