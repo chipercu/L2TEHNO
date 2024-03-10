@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="Система спойла через агатиона 1.2">
-      <change afterPath="$PROJECT_DIR$/data/scripts/ai/petAssistent/PetAssistance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/items/PetAssistentItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scripts/npc/model/PetAssistanceInstance.java" afterDir="false" />
+    <list default="true" id="c1da81e6-59cb-4933-b6a5-33d04ed06a3f" name="Changes" comment="Система спойла через ассистента 1.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/items/SoulShots.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/items/SoulShots.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stats/cubics/cubicdata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/stats/cubics/cubicdata.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/ai/L2PlayableAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/ai/L2PlayableAI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/model/L2Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/model/L2World.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/model/L2World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/skills/skillclasses/Sweep.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/skills/skillclasses/Sweep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/config/altsettings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/java/config/altsettings.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/config/ConfigValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/config/ConfigValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/clientpackets/TradeDone.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/clientpackets/TradeDone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/l2open/gameserver/clientpackets/TradeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/l2open/gameserver/clientpackets/TradeRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,35 +46,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "aspect.path.notification.shown": "true",
-    "git-widget-placeholder": "L2TEHNO",
-    "last_opened_file_path": "C:/Users/FuzzY/IdeaProjects/L2TEHNO/data/scripts/ai/petAssistent",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "File.Encoding",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;aspect.path.notification.shown&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;L2TEHNO&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/FuzzY/IdeaProjects/L2TEHNO/data/scripts/ai/petAssistent&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\FuzzY\IdeaProjects\L2TEHNO\data\scripts\ai\petAssistent" />
@@ -101,7 +96,7 @@
       <recent name="l2open.gameserver.model.barahlo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.L2LoginStart">
+  <component name="RunManager" selected="Application.GameStart">
     <configuration name="GameStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="db" value="jdbc:mysql://localhost/l2tehno?useUnicode=true&amp;characterEncoding=UTF-8" />
@@ -174,8 +169,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.L2LoginStart" />
         <item itemvalue="Application.GameStart" />
+        <item itemvalue="Application.L2LoginStart" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.L2LoginStart" />
@@ -275,7 +270,8 @@
       <workItem from="1709719571388" duration="614000" />
       <workItem from="1709793465333" duration="1288000" />
       <workItem from="1709972105196" duration="4415000" />
-      <workItem from="1710064352691" duration="25528000" />
+      <workItem from="1710064352691" duration="26026000" />
+      <workItem from="1710094325798" duration="4045000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1692529102326</created>
@@ -411,7 +407,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709666493401</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Система спойла через ассистента 1.0">
+      <option name="closed" value="true" />
+      <created>1710093678535</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1710093678535</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +461,8 @@
     <MESSAGE value="refactoring: CommunityBoardBuffer редактирования схем" />
     <MESSAGE value="Система спойла через агатиона" />
     <MESSAGE value="Система спойла через агатиона 1.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Система спойла через агатиона 1.2" />
+    <MESSAGE value="Система спойла через ассистента 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Система спойла через ассистента 1.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

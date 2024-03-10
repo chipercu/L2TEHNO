@@ -3179,6 +3179,7 @@ public class ConfigValue {
     public static boolean NoInvitePartyForPvp = false;
     public static boolean NoInviteTradeForPvp = false;
     public static boolean NoInviteFriendForPvp = false;
+    public static boolean AutoTrade = false;
     public static int WakeUpBaiumTime = 0;
     public static int EnableLogDamage = 0;
     public static int LogDamageLevelDiff = 0;
