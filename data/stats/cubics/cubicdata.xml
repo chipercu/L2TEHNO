@@ -1996,4 +1996,22 @@
                    skillCond="debuff" />
         </skills>
     </cubic>
+    <cubic id="15" level="1">
+        <set name="slot" val="10" />
+        <set name="duration" val="2400" />
+        <set name="delay" val="1" />
+        <set name="max_count" val="50" />
+        <set name="use_up" val="0" />
+        <set name="power" val="2106.0" />
+        <set name="target_type" val="by_skill" />
+        <set name="op_cond" val="" />
+        <skills>
+            <skill choiseChance="30" skill="4049,8" activateChance="33" castToStatic="true" skillTarget="target"
+                   skillCond="0;30;1000" />
+            <skill choiseChance="20" skill="4052,6" activateChance="45" castToStatic="false" skillTarget="target"
+                   skillCond="0;30;1000" />
+            <skill choiseChance="50" skill="5579,1" activateChance="99" castToStatic="false" skillTarget="master"
+                   skillCond="debuff" />
+        </skills>
+    </cubic>
 </list>

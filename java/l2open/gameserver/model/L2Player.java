@@ -2732,8 +2732,9 @@ public class L2Player extends L2Playable {
                 getParty().distributeAdena(item, this);
             } else {
                 // Нужно обязательно сначало удалить предмет с земли.
-                if (!item.pickupMe(null))
+                if (!item.pickupMe(null)) {
                     return;
+                }
                 getParty().distributeItem(this, item);
             }
 

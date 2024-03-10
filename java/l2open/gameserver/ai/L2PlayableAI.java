@@ -856,14 +856,17 @@ public class L2PlayableAI extends L2CharacterAI
 		//	log("DebugOnAction: PLAYABLE_AI:Attack->set:AI_INTENTION_ATTACK");
 		setIntention(AI_INTENTION_ATTACK, target);
 		//Спойл через агатион
-		if (actor.isPlayer() && target.isMonster()){
-			L2Player player = (L2Player) actor;
-			L2MonsterInstance monster = (L2MonsterInstance) target;
-			if (player.getAgathion() != null){
-				player.getAgathion().doSweep(monster);
-			}
+		if (target != null){
+			if (actor.isPlayer() && target.isMonster()){
+				L2Player player = (L2Player) actor;
+				L2MonsterInstance monster = (L2MonsterInstance) target;
+				if (player.getAgathion() != null){
+					player.getAgathion().doSweep(monster);
+				}
 
+			}
 		}
+
 		log("L2PlayableAI(685): Attack 2");
 	}
 
@@ -917,11 +920,14 @@ public class L2PlayableAI extends L2CharacterAI
 		setIntention(CtrlIntention.AI_INTENTION_CAST, skill, target);
 
 		//Спойл через агатион
-		if (actor.isPlayer() && target.isMonster()){
-			L2Player player = (L2Player) actor;
-			L2MonsterInstance monster = (L2MonsterInstance) target;
-			if (player.getAgathion() != null){
-				player.getAgathion().doSweep(monster);
+
+		if(target != null){
+			if (actor.isPlayer() && target.isMonster()){
+				L2Player player = (L2Player) actor;
+				L2MonsterInstance monster = (L2MonsterInstance) target;
+				if (player.getAgathion() != null){
+					player.getAgathion().doSweep(monster);
+				}
 			}
 		}
 		//Util.test();

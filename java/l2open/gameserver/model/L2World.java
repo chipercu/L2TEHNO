@@ -401,11 +401,13 @@ public class L2World
 			return new GArray<L2Object>(0);
 		GArray<L2WorldRegion> neighbors = currentRegion.getNeighbors();
 		int size = 0;
-		for(L2WorldRegion region : neighbors)
-			size += region.getObjectsSize();
+		for(L2WorldRegion region : neighbors) {
+            size += region.getObjectsSize();
+        }
 		GArray<L2Object> result = new GArray<L2Object>(size);
-		for(L2WorldRegion region : neighbors)
-			region.getObjectsList(result, oid, object.getReflection(), object.getX(), object.getY(), object.getZ(), radius * radius, height);
+		for(L2WorldRegion region : neighbors) {
+            region.getObjectsList(result, oid, object.getReflection(), object.getX(), object.getY(), object.getZ(), radius * radius, height);
+        }
 		return result;
 	}
 
