@@ -9,33 +9,35 @@ import l2open.gameserver.cache.Msg;
 import l2open.gameserver.model.*;
 import l2open.gameserver.model.instances.L2MonsterInstance;
 import l2open.gameserver.model.instances.L2NpcInstance;
+import l2open.gameserver.model.instances.L2PetInstance;
 import l2open.gameserver.model.items.L2ItemInstance;
+import l2open.gameserver.serverpackets.MagicSkillUse;
 import l2open.gameserver.serverpackets.SystemMessage;
 import l2open.gameserver.tables.SkillTable;
 import l2open.util.GArray;
+import l2open.util.Location;
 import l2open.util.Log;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.stream.Collectors;
+
+import static ai.petAssistent.PetAssistentConst.*;
 
 public class PetAssistance extends DefaultAI {
 
     private boolean _thinking = false;
     private ScheduledFuture<?> _actionTask;
     private final L2Player master;
-
-    private static final String pet_spoil_force = "pet_spoil_force";
-    private static final String pet_spoil_single = "pet_spoil_single";
-    private static final String pet_pick = "pet_pick";
-    private static final String pet_pick_only_adena = "pet_pick_only_adena";
-    private static final String pet_pick_herb = "pet_pick_herb";
+    private List<L2MonsterInstance> sweepMonstersList = new ArrayList<>();
+    private List<L2ItemInstance> droppedItemsList = new ArrayList<>();
 
 
     public enum TASK {
         FOLLOW, SPOIL, SWEEP, PICK
     }
-
 
     public PetAssistance(L2Character actor, L2Player master) {
         super(actor);
@@ -49,6 +51,17 @@ public class PetAssistance extends DefaultAI {
             return;
         }
 
+        if (master == null){
+            getActor().deleteMe();
+            return;
+        }
+
+        if (master.isInOfflineMode() || !master.isConnected()){
+            getActor().deleteMe();
+            return;
+        }
+
+
         _thinking = true;
         L2Object masterTarget = master.getTarget();
 
@@ -59,7 +72,10 @@ public class PetAssistance extends DefaultAI {
                 setTask(TASK.PICK, master);
             } else if (masterTarget != null && masterTarget.isMonster()) {
                 L2MonsterInstance monster = (L2MonsterInstance) masterTarget;
-                if (!monster.isDead() && !monster.isSpoiled(master)) {
+                boolean isDead = monster.isDead();
+                boolean spoiled = monster.isSpoiled();
+                boolean spoiledMaster = monster.isSpoiled(master);
+                if (!isDead && !spoiled && !spoiledMaster) {
                     setTask(TASK.SPOIL, monster);
                 } else {
                     setTask(TASK.FOLLOW, master);
@@ -76,75 +92,61 @@ public class PetAssistance extends DefaultAI {
         }
     }
 
+    protected List<Integer> getIgnoreHerbsList(){
+        String var = master.getVar(pet_ignore_herbs);
+        if (var == null || var.isEmpty()){
+            return new ArrayList<>();
+        }
+        return Arrays.stream(var.split(";")).map(Integer::parseInt).collect(Collectors.toList());
+    }
+
     protected boolean checkDroppesItems() {
         if (!master.getVarB(pet_pick)){
             return false;
         }
-
         boolean onlyAdena = master.getVarB(pet_pick_only_adena);
         boolean pickHerb = master.getVarB(pet_pick_herb);
+        List<Integer> ignoreHerbsList = getIgnoreHerbsList();
+
+        List<L2ItemInstance> itemsList = L2World.getAroundObjects(master, 1000, 200)
+                .stream()
+                .filter(L2Object::isItem)
+                .map(l2Object -> (L2ItemInstance) l2Object).collect(Collectors.toList());
+
+        if (itemsList.isEmpty()){
+            return false;
+        }
 
         if (onlyAdena){
-            return L2World.getAroundObjects(master, 1000, 200)
-                    .stream()
-                    .filter(L2Object::isItem)
-                    .map(l2Object -> (L2ItemInstance) l2Object).anyMatch(l2ItemInstance -> l2ItemInstance.getItemId() == 57);
-        }else {
-            if (pickHerb){
-                return L2World.getAroundObjects(master, 1000, 200).stream()
-                        .anyMatch(L2Object::isItem);
-            }else {
-                return L2World.getAroundObjects(master, 1000, 200).stream()
-                        .filter(L2Object::isItem)
-                        .map(l2Object -> (L2ItemInstance) l2Object)
-                        .anyMatch(l2ItemInstance -> !l2ItemInstance.isHerb());
-            }
+            itemsList = itemsList.stream().filter(l2ItemInstance -> l2ItemInstance.getItemId() == 57 || l2ItemInstance.isHerb()).collect(Collectors.toList());
         }
+
+        if (itemsList.isEmpty()){
+            return false;
+        }
+
+        if (pickHerb){
+            itemsList = itemsList.stream().filter(l2ItemInstance -> !ignoreHerbsList.contains(l2ItemInstance.getItemId())).collect(Collectors.toList());
+        }
+        droppedItemsList = itemsList;
+        return !droppedItemsList.isEmpty();
     }
 
     protected boolean checkSweepMobs() {
-        long count = L2World.getAroundObjects(master, 1000, 200)
+        List<L2MonsterInstance> collect = L2World.getAroundObjects(master, 1000, 200)
                 .stream()
                 .filter(L2Object::isMonster)
                 .map(l2Object -> (L2MonsterInstance) l2Object)
                 .filter(l2MonsterInstance -> l2MonsterInstance.isSpoiled(master))
                 .filter(L2Character::isDead)
-                .count();
-        return count > 0;
-    }
-
-
-    protected List<L2MonsterInstance> findSweepMobs() {
-        return L2World.getAroundObjects(master, 1000, 200)
-                .stream()
-                .filter(L2Object::isMonster)
-                .map(l2Object -> (L2MonsterInstance) l2Object)
-                .filter(l2MonsterInstance -> l2MonsterInstance.isSpoiled(master)).collect(Collectors.toList());
-    }
-
-
-    protected L2Object findDroppedItem() {
-        boolean onlyAdena = master.getVarB(pet_pick_only_adena);
-        boolean pickHerb = master.getVarB(pet_pick_herb);
-        if (onlyAdena){
-            return L2World.getAroundObjects(master, 1000, 200).stream()
-                    .filter(L2Object::isItem)
-                    .map(l2Object -> (L2ItemInstance) l2Object)
-                    .filter(l2ItemInstance -> l2ItemInstance.getItemId() == 57)
-                    .findFirst().orElse(null);
+                .collect(Collectors.toList());
+        if (!collect.isEmpty()){
+            this.sweepMonstersList = collect;
+            return true;
         }else {
-            if (pickHerb){
-                return L2World.getAroundObjects(master, 1000, 200).stream().filter(L2Object::isItem).findFirst().orElse(null);
-            }else {
-                return L2World.getAroundObjects(master, 1000, 200).stream()
-                        .filter(L2Object::isItem)
-                        .map(l2Object -> (L2ItemInstance) l2Object)
-                        .filter(l2ItemInstance -> !l2ItemInstance.isHerb())
-                        .findFirst().orElse(null);
-            }
+            return false;
         }
     }
-
 
     protected void setTask(TASK task, L2Character target) {
         if (_actionTask != null) {
@@ -172,6 +174,16 @@ public class PetAssistance extends DefaultAI {
     protected void thinkFollow() {
         L2NpcInstance actor = getActor();
         L2Character target = actor.getFollowTarget();
+
+        if (actor.getDistance(target) > 4000 ){
+            if (target.isTeleporting()){
+                return;
+            }
+            if (actor.getReflectionId() != target.getReflectionId()){
+                actor.setReflection(target.getReflectionId());
+            }
+            actor.teleToLocation(Location.coordsRandomize(target.getLoc(), 50, 100));
+        }
 
         //Находимся слишком далеко цели, либо цель не пригодна для следования, либо не можем перемещаться
         if (target == null || target.isAlikeDead() || actor.getDistance(target) > 4000 || actor.isMovementDisabled()) {
@@ -227,6 +239,7 @@ public class PetAssistance extends DefaultAI {
                         .filter(l2MonsterInstance -> !l2MonsterInstance.isDead())
                         .filter(l2MonsterInstance -> !l2MonsterInstance.isSpoiled())
                         .forEach(l2MonsterInstance -> {
+//                            master.broadcastSkill(new MagicSkillUse(getActor(), target, skill.getId(), 1, 0, 0), true);
                             getActor().doCast(skill, l2MonsterInstance, false);
                             l2MonsterInstance.setSpoiled(true, master);
                             l2MonsterInstance.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, master, 100);
@@ -234,13 +247,20 @@ public class PetAssistance extends DefaultAI {
                         });
             }
             getActor().doCast(skill, target, false);
+//            master.broadcastSkill(new MagicSkillUse(getActor(), target, skill.getId(), 1, 0, 0), true);
+            getActor().altUseSkill(skill, target);
             target.setSpoiled(true, master);
             target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, master, 100);
             target.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, master);
         }
     }
 
-    protected void thinkPick(L2ItemInstance item) {
+    protected void thinkPick() {
+
+        if (droppedItemsList.isEmpty()){
+            return;
+        }
+        L2ItemInstance item = droppedItemsList.get(0);
         if (isPickUp(item)) {
             if (getActor().getDistance3D(item) > 50) {
                 getActor().moveToLocation(item.getLoc(), 20, true);
@@ -318,81 +338,81 @@ public class PetAssistance extends DefaultAI {
         return true;
     }
 
-    protected void useSweep() {
-        List<L2MonsterInstance> sweepMobs = findSweepMobs();
-        for (L2MonsterInstance monster : findSweepMobs()) {
-            thinkSweep(monster);
-        }
-    }
 
+    protected void thinkSweep() {
 
-    protected void thinkSweep(L2MonsterInstance target) {
-        if (getActor().getDistance3D(target) > 50) {
-            getActor().moveToLocation(target.getLoc(), 20, true);
+        if (sweepMonstersList == null || sweepMonstersList.isEmpty()){
             return;
         }
 
-        if (target == null || !target.isDead() || !target.isSpoiled()) {
-            return;
-        }
-        if (!target.isSpoiled(master)) {
-            return;
-        }
-
-        L2ItemInstance[] items = target.takeSweep();
-
-        if (items == null) {
-            master.getAI().setAttackTarget(null);
-            target.endDecayTask();
+        if (getActor().getDistance3D(sweepMonstersList.get(0)) > 50) {
+            getActor().moveToLocation(sweepMonstersList.get(0).getLoc(), 20, true);
             return;
         }
 
-        target.setSpoiled(false, null);
+        for (L2MonsterInstance target : sweepMonstersList){
 
-        for (L2ItemInstance item : items) {
-            if (master.isInParty() && master.getParty().isDistributeSpoilLoot()) {
-                master.getParty().distributeItem(master, item);
-                continue;
+            if (target == null || !target.isDead() || !target.isSpoiled()) {
+                return;
+            }
+            if (!target.isSpoiled(master)) {
+                return;
             }
 
-            long itemCount = item.getCount();
-            if (master.getInventoryLimit() <= master.getInventory().getSize() && (!item.isStackable() || master.getInventory().getItemByItemId(item.getItemId()) == null)) {
-                item.dropToTheGround(master, target);
-                continue;
+            L2ItemInstance[] items = target.takeSweep();
+
+            if (items == null) {
+                master.getAI().setAttackTarget(null);
+                target.endDecayTask();
+                return;
             }
 
-            item = master.getInventory().addItem(item);
-            Log.LogItem(master, target, Log.SweepItem, item);
+            target.setSpoiled(false, null);
 
-            SystemMessage smsg;
-            if (itemCount == 1) {
-                smsg = new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1);
-                smsg.addItemName(item.getItemId());
-                master.sendPacket(smsg);
-            } else {
-                smsg = new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S2_S1);
-                smsg.addItemName(item.getItemId());
-                smsg.addNumber(itemCount);
-                master.sendPacket(smsg);
-            }
-            if (master.isInParty())
+            for (L2ItemInstance item : items) {
+                if (master.isInParty() && master.getParty().isDistributeSpoilLoot()) {
+                    master.getParty().distributeItem(master, item);
+                    continue;
+                }
+
+                long itemCount = item.getCount();
+                if (master.getInventoryLimit() <= master.getInventory().getSize() && (!item.isStackable() || master.getInventory().getItemByItemId(item.getItemId()) == null)) {
+                    item.dropToTheGround(master, target);
+                    continue;
+                }
+
+                item = master.getInventory().addItem(item);
+                Log.LogItem(master, target, Log.SweepItem, item);
+
+                SystemMessage smsg;
                 if (itemCount == 1) {
-                    smsg = new SystemMessage(SystemMessage.S1_HAS_OBTAINED_S2_BY_USING_SWEEPER);
-                    smsg.addString(master.getName());
+                    smsg = new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1);
                     smsg.addItemName(item.getItemId());
-                    master.getParty().broadcastToPartyMembers(master, smsg);
+                    master.sendPacket(smsg);
                 } else {
-                    smsg = new SystemMessage(SystemMessage.S1_HAS_OBTAINED_3_S2_S_BY_USING_SWEEPER);
-                    smsg.addString(master.getName());
+                    smsg = new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S2_S1);
                     smsg.addItemName(item.getItemId());
                     smsg.addNumber(itemCount);
-                    master.getParty().broadcastToPartyMembers(master, smsg);
+                    master.sendPacket(smsg);
                 }
+                if (master.isInParty())
+                    if (itemCount == 1) {
+                        smsg = new SystemMessage(SystemMessage.S1_HAS_OBTAINED_S2_BY_USING_SWEEPER);
+                        smsg.addString(master.getName());
+                        smsg.addItemName(item.getItemId());
+                        master.getParty().broadcastToPartyMembers(master, smsg);
+                    } else {
+                        smsg = new SystemMessage(SystemMessage.S1_HAS_OBTAINED_3_S2_S_BY_USING_SWEEPER);
+                        smsg.addString(master.getName());
+                        smsg.addItemName(item.getItemId());
+                        smsg.addNumber(itemCount);
+                        master.getParty().broadcastToPartyMembers(master, smsg);
+                    }
+            }
+            master.getAI().setAttackTarget(null);
+            target.endDecayTask();
         }
-        master.getAI().setAttackTarget(null);
-        target.endDecayTask();
     }
-
 
     protected class Action extends RunnableImpl {
 
@@ -423,16 +443,11 @@ public class PetAssistance extends DefaultAI {
                     break;
                 }
                 case SWEEP: {
-//                    thinkSweep((L2MonsterInstance) target);
-                    useSweep();
+                    thinkSweep();
                     break;
                 }
                 case PICK: {
-                    L2Object droppedItem = findDroppedItem();
-                    if (droppedItem != null && droppedItem.isItem()) {
-                        thinkPick((L2ItemInstance) droppedItem);
-                    }
-//                    master.sendMessage("pick");
+                    thinkPick();
                     break;
                 }
             }

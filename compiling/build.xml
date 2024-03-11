@@ -246,9 +246,9 @@
 		<copy todir="${build.dist.game}/data" preservelastmodified="true">
 			<fileset dir="../data">
 				<include name="**/*.*"/>
-<!--				<exclude name="**/*.xml"/>-->
-<!--				<exclude name="**/*.htm"/>-->
-<!--				<exclude name="**/*.html"/>-->
+				<exclude name="**/*.xml"/>
+				<exclude name="**/*.htm"/>
+				<exclude name="**/*.html"/>
 				<exclude name="scripts/**/*.java"/>
 			</fileset>
 		</copy>
@@ -324,6 +324,8 @@
 				<include name="scripts/ai/Queen_Ant_Nurse.java"/>
 				<include name="scripts/ItemHandlers.java"/>
 				<include name="scripts/communityboard/manager/*.java"/>
+				<exclude name="**/*.xml"/>
+				<exclude name="**/*.htm"/>
 			</fileset>
 		</copy>
 		
