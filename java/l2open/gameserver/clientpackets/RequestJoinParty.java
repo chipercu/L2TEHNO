@@ -112,7 +112,7 @@ public class RequestJoinParty extends L2GameClientPacket {
         if (!target.isInTransaction()) {
             requestor.setParty(new L2Party(requestor, itemDistribution));
 
-            if (target.getIP().equals(requestor.getIP())){
+            if (target.getIP().equals(requestor.getIP())&& ConfigValue.AutoTrade){
 
                 SystemMessage problem = target.canJoinParty(requestor);
                 if (problem != null) {

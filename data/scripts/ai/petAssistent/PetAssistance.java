@@ -111,7 +111,9 @@ public class PetAssistance extends DefaultAI {
         List<L2ItemInstance> itemsList = L2World.getAroundObjects(master, 1000, 200)
                 .stream()
                 .filter(L2Object::isItem)
-                .map(l2Object -> (L2ItemInstance) l2Object).collect(Collectors.toList());
+                .map(l2Object -> (L2ItemInstance) l2Object)
+                .filter(this::isPickUp)
+                .collect(Collectors.toList());
 
         if (itemsList.isEmpty()){
             return false;
@@ -180,7 +182,8 @@ public class PetAssistance extends DefaultAI {
                 return;
             }
             if (actor.getReflectionId() != target.getReflectionId()){
-                actor.setReflection(target.getReflectionId());
+                actor.deleteMe();
+                return;
             }
             actor.teleToLocation(Location.coordsRandomize(target.getLoc(), 50, 100));
         }
@@ -324,15 +327,15 @@ public class PetAssistance extends DefaultAI {
 
     protected boolean isPickUp(L2ItemInstance item) {
         if (item.getDropTimeOwner() != 0 && item.getItemDropOwner() != null && item.getDropTimeOwner() > System.currentTimeMillis() && master != item.getItemDropOwner() && (!item.getItemDropOwner().isInParty() || !master.isInParty() || master.isInParty() && item.getItemDropOwner().isInParty() && master.getParty() != item.getItemDropOwner().getParty())) {
-            SystemMessage sm;
-            if (item.getItemId() == 57) {
-                sm = new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
-                sm.addNumber(item.getCount());
-            } else {
-                sm = new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1);
-                sm.addItemName(item.getItemId());
-            }
-            master.sendPacket(sm);
+//            SystemMessage sm;
+//            if (item.getItemId() == 57) {
+//                sm = new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
+//                sm.addNumber(item.getCount());
+//            } else {
+//                sm = new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1);
+//                sm.addItemName(item.getItemId());
+//            }
+//            master.sendPacket(sm);
             return false;
         }
         return true;
