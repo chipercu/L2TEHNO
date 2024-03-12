@@ -113,7 +113,7 @@ public final class L2Cubic {
                 if (owner != null && owner.getCubic(getSlot()) != null)
                     owner.deleteCubic(getSlot());
             }
-        }, duration * 1000);
+        }, duration * 1000L);
         actionTask = ThreadPoolManager.getInstance().schedule(new ActionTask(), 1, false);
     }
 

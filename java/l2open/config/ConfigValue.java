@@ -3180,6 +3180,7 @@ public class ConfigValue {
     public static boolean NoInviteTradeForPvp = false;
     public static boolean NoInviteFriendForPvp = false;
     public static boolean AutoTrade = false;
+    public static boolean AutoJoinParty = false;
     public static int WakeUpBaiumTime = 0;
     public static int EnableLogDamage = 0;
     public static int LogDamageLevelDiff = 0;
@@ -5097,6 +5098,9 @@ public class ConfigValue {
     public static boolean HuntinFishing_CheckIp = false;
 
     public static double HitByPoleNextTargetMod = 0.85;
+    public static int AdjustPoleAngle = 0;
+    public static int AdjustPoleRange = 0;
+
     public static boolean Multi_Delevel = false;
     public static boolean FourGobletsSetItemInAllAggroList = false;
 
