@@ -1,5 +1,7 @@
 package l2open.loginserver;
 
+import UI.logger.LoginServerLogViewer;
+import l2open.GmActionsLogHandler;
 import l2open.Server;
 import l2open.config.*;
 import l2open.database.L2DatabaseFactory;
@@ -21,14 +23,13 @@ import java.net.InetAddress;
 import java.security.GeneralSecurityException;
 import java.sql.SQLException;
 import java.util.Iterator;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
+import java.util.logging.*;
 
 import org.dom4j.Document;
 import org.dom4j.Element;
 
 public class L2LoginServer {
-    public static final boolean develop = Boolean.parseBoolean(System.getenv("DEVELOP"));
+    public static boolean develop = Boolean.parseBoolean(System.getenv("DEVELOP"));
     protected static L2LoginServer _instance;
     private Logger _log = Logger.getLogger(L2LoginServer.class.getName());
     private GSConnection _gameServerListener;
@@ -43,6 +44,10 @@ public class L2LoginServer {
     }
 
     public L2LoginServer() {
+
+
+        develop = true;
+
         Server.SERVER_MODE = Server.MODE_LOGINSERVER;
         //      Local Constants
         final String LOG_FOLDER = "log"; // Name of folder for log file
@@ -72,6 +77,14 @@ public class L2LoginServer {
 
         // Load Config
         ConfigSystem.load();
+
+        ConfigValue.develop = true;
+        ConfigValue.Accounts_Password = "68464846l2";
+        ConfigValue.Password = "68464846l2";
+        ConfigValue.Accounts_URL = "jdbc:mysql://localhost/l2tehno?useUnicode=true&characterEncoding=UTF-8";
+        ConfigValue.URL = "jdbc:mysql://localhost/l2tehno?useUnicode=true&characterEncoding=UTF-8";
+        _log.addHandler(new LoginServerLogViewer());
+
         if (ConfigValue.ComboMode) {
             Server.SERVER_MODE = Server.MODE_COMBOSERVER;
             Log.InitGSLoggers();
