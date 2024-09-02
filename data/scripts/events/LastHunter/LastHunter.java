@@ -91,7 +91,7 @@ public class LastHunter extends Functions implements ScriptFile {
     private static GCSArray<HardReference<L2Player>> players_list = new GCSArray<>();
     private static GCSArray<HardReference<L2Player>> live_list = new GCSArray<>();
 
-    private enum WeaponType{
+    private enum WeaponType {
         SHIELD,
         SWORD,
         MAGESWORD,
@@ -192,16 +192,16 @@ public class LastHunter extends Functions implements ScriptFile {
     };
 
     private static final int[] arrows = {
-            1342, 		//Iron Arrow  -  Arrow C
-            1343, 		//Silver Arrow  -  Arrow B
-            1344, 		//Mithril Arrow  -  Arrow A
-            1345, 		//Shining Arrow  -  Arrow S
+            1342,        //Iron Arrow  -  Arrow C
+            1343,        //Silver Arrow  -  Arrow B
+            1344,        //Mithril Arrow  -  Arrow A
+            1345,        //Shining Arrow  -  Arrow S
     };
     private static final int[] bolts = {
-            9634, 		//Steel Bolt  -  Bolt C
-            9635, 		//Silver Bolt  -  Bolt B
-            9636, 		//Mithril Bolt  -  Bolt A
-            9637, 		//Shining Bolt  -  Bolt S
+            9634,        //Steel Bolt  -  Bolt C
+            9635,        //Silver Bolt  -  Bolt B
+            9636,        //Mithril Bolt  -  Bolt A
+            9637,        //Shining Bolt  -  Bolt S
     };
     private static final int[] soulshot = {
             1464,   //Soulshot: C-grade
@@ -215,7 +215,7 @@ public class LastHunter extends Functions implements ScriptFile {
             3951,   //spiritshot: A-grade
             3952,   //spiritshot: S-grade
     };
-    public static int[] LastHunterStart = {0, 0,0, 5,0, 10,0, 15,0, 20,0, 25,0, 30,0, 35,0, 40,0, 45,0, 50,0, 55,0, 60,1, 0,1, 5,1, 10,1, 15,1, 20,1, 25,1, 30,1, 35,1, 40,1, 45,1, 50,1, 55,1, 60,2, 0,2, 5,2, 10,2, 15,2, 20,2, 25,2, 30,2, 35,2, 40,2, 45,2, 50,2, 55,2, 60,3, 0,3, 5,3, 10,3, 15,3, 20,3, 25,3, 30,3, 35,3, 40,3, 45,3, 50,3, 55,3, 60,4, 0,4, 5,4, 10,4, 15,4, 20,4, 25,4, 30,4, 35,4, 40,4, 45,4, 50,4, 55,4, 60,5, 0,5, 5,5, 10,5, 15,5, 20,5, 25,5, 30,5, 35,5, 40,5, 45,5, 50,5, 55,5, 60,6, 0,6, 5,6, 10,6, 15,6, 20,6, 25,6, 30,6, 35,6, 40,6, 45,6, 50,6, 55,6, 60,7, 0,7, 5,7, 10,7, 15,7, 20,7, 25,7, 30,7, 35,7, 40,7, 45,7, 50,7, 55,7, 60,8, 0,8, 5,8, 10,8, 15,8, 20,8, 25,8, 30,8, 35,8, 40,8, 45,8, 50,8, 55,8, 60,9, 0,9, 5,9, 10,9, 15,9, 20,9, 25,9, 30,9, 35,9, 40,9, 45,9, 50,9, 55,9, 60,10, 0,10, 5,10, 10,10, 15,10, 20,10, 25,10, 30,10, 35,10, 40,10, 45,10, 50,10, 55,10, 60,11, 0,11, 5,11, 10,11, 15,11, 20,11, 25,11, 30,11, 35,11, 40,11, 45,11, 50,11, 55,11, 60,12, 0,12, 5,12, 10,12, 15,12, 20,12, 25,12, 30,12, 35,12, 40,12, 45,12, 50,12, 55,12, 60,13, 0,13, 5,13, 10,13, 15,13, 20,13, 25,13, 30,13, 35,13, 40,13, 45,13, 50,13, 55,13, 60,14, 0,14, 5,14, 10,14, 15,14, 20,14, 25,14, 30,14, 35,14, 40,14, 45,14, 50,14, 55,14, 60,15, 0,15, 5,15, 10,15, 15,15, 20,15, 25,15, 30,15, 35,15, 40,15, 45,15, 50,15, 55,15, 60,16, 0,16, 5,16, 10,16, 15,16, 20,16, 25,16, 30,16, 35,16, 40,16, 45,16, 50,16, 55,16, 60,17, 0,17, 5,17, 10,17, 15,17, 20,17, 25,17, 30,17, 35,17, 40,17, 45,17, 50,17, 55,17, 60,18, 0,18, 5,18, 10,18, 15,18, 20,18, 25,18, 30,18, 35,18, 40,18, 45,18, 50,18, 55,18, 60,19, 0,19, 5,19, 10,19, 15,19, 20,19, 25,19, 30,19, 35,19, 40,19, 45,19, 50,19, 55,19, 60,20, 0,20, 5,20, 10,20, 15,20, 20,20, 25,20, 30,20, 35,20, 40,20, 45,20, 50,20, 55,20, 60,21, 0,21, 5,21, 10,21, 15,21, 20,21, 25,21, 30,21, 35,21, 40,21, 45,21, 50,21, 55,21, 60,22, 0,22, 5,22, 10,22, 15,22, 20,22, 25,22, 30,22, 35,22, 40,22, 45,22, 50,22, 55,22, 60,23, 0,23, 5,23, 10,23, 15,23, 20,23, 25,23, 30,23, 35,23, 40,23, 45,23, 50,23, 55};
+    public static int[] LastHunterStart = {0, 0, 0, 5, 0, 10, 0, 15, 0, 20, 0, 25, 0, 30, 0, 35, 0, 40, 0, 45, 0, 50, 0, 55, 0, 60, 1, 0, 1, 5, 1, 10, 1, 15, 1, 20, 1, 25, 1, 30, 1, 35, 1, 40, 1, 45, 1, 50, 1, 55, 1, 60, 2, 0, 2, 5, 2, 10, 2, 15, 2, 20, 2, 25, 2, 30, 2, 35, 2, 40, 2, 45, 2, 50, 2, 55, 2, 60, 3, 0, 3, 5, 3, 10, 3, 15, 3, 20, 3, 25, 3, 30, 3, 35, 3, 40, 3, 45, 3, 50, 3, 55, 3, 60, 4, 0, 4, 5, 4, 10, 4, 15, 4, 20, 4, 25, 4, 30, 4, 35, 4, 40, 4, 45, 4, 50, 4, 55, 4, 60, 5, 0, 5, 5, 5, 10, 5, 15, 5, 20, 5, 25, 5, 30, 5, 35, 5, 40, 5, 45, 5, 50, 5, 55, 5, 60, 6, 0, 6, 5, 6, 10, 6, 15, 6, 20, 6, 25, 6, 30, 6, 35, 6, 40, 6, 45, 6, 50, 6, 55, 6, 60, 7, 0, 7, 5, 7, 10, 7, 15, 7, 20, 7, 25, 7, 30, 7, 35, 7, 40, 7, 45, 7, 50, 7, 55, 7, 60, 8, 0, 8, 5, 8, 10, 8, 15, 8, 20, 8, 25, 8, 30, 8, 35, 8, 40, 8, 45, 8, 50, 8, 55, 8, 60, 9, 0, 9, 5, 9, 10, 9, 15, 9, 20, 9, 25, 9, 30, 9, 35, 9, 40, 9, 45, 9, 50, 9, 55, 9, 60, 10, 0, 10, 5, 10, 10, 10, 15, 10, 20, 10, 25, 10, 30, 10, 35, 10, 40, 10, 45, 10, 50, 10, 55, 10, 60, 11, 0, 11, 5, 11, 10, 11, 15, 11, 20, 11, 25, 11, 30, 11, 35, 11, 40, 11, 45, 11, 50, 11, 55, 11, 60, 12, 0, 12, 5, 12, 10, 12, 15, 12, 20, 12, 25, 12, 30, 12, 35, 12, 40, 12, 45, 12, 50, 12, 55, 12, 60, 13, 0, 13, 5, 13, 10, 13, 15, 13, 20, 13, 25, 13, 30, 13, 35, 13, 40, 13, 45, 13, 50, 13, 55, 13, 60, 14, 0, 14, 5, 14, 10, 14, 15, 14, 20, 14, 25, 14, 30, 14, 35, 14, 40, 14, 45, 14, 50, 14, 55, 14, 60, 15, 0, 15, 5, 15, 10, 15, 15, 15, 20, 15, 25, 15, 30, 15, 35, 15, 40, 15, 45, 15, 50, 15, 55, 15, 60, 16, 0, 16, 5, 16, 10, 16, 15, 16, 20, 16, 25, 16, 30, 16, 35, 16, 40, 16, 45, 16, 50, 16, 55, 16, 60, 17, 0, 17, 5, 17, 10, 17, 15, 17, 20, 17, 25, 17, 30, 17, 35, 17, 40, 17, 45, 17, 50, 17, 55, 17, 60, 18, 0, 18, 5, 18, 10, 18, 15, 18, 20, 18, 25, 18, 30, 18, 35, 18, 40, 18, 45, 18, 50, 18, 55, 18, 60, 19, 0, 19, 5, 19, 10, 19, 15, 19, 20, 19, 25, 19, 30, 19, 35, 19, 40, 19, 45, 19, 50, 19, 55, 19, 60, 20, 0, 20, 5, 20, 10, 20, 15, 20, 20, 20, 25, 20, 30, 20, 35, 20, 40, 20, 45, 20, 50, 20, 55, 20, 60, 21, 0, 21, 5, 21, 10, 21, 15, 21, 20, 21, 25, 21, 30, 21, 35, 21, 40, 21, 45, 21, 50, 21, 55, 21, 60, 22, 0, 22, 5, 22, 10, 22, 15, 22, 20, 22, 25, 22, 30, 22, 35, 22, 40, 22, 45, 22, 50, 22, 55, 22, 60, 23, 0, 23, 5, 23, 10, 23, 15, 23, 20, 23, 25, 23, 30, 23, 35, 23, 40, 23, 45, 23, 50, 23, 55};
     private static final int[] minLevelForCategory = {20, 30, 40, 52, 62, 76};
     private static final int[] maxLevelForCategory = {29, 39, 51, 61, 75, 85};
 
@@ -237,192 +237,192 @@ public class LastHunter extends Functions implements ScriptFile {
     private static ArrayList<L2NpcInstance> mobs = new ArrayList<>();
     private static final Map<String, Integer[]> robe_sets = new HashMap<String, Integer[]>() {{
         put("C", new Integer[]{
-                2414, 		//Full Plate Helmet  -  None C
-                439, 		//Karmian Tunic  -  Magic C
-                471, 		//Karmian Stockings  -  Magic C
-                2454, 		//Karmian Gloves  -  None C
-                2430, 		//Karmian Boots  -  None C
+                2414,        //Full Plate Helmet  -  None C
+                439,        //Karmian Tunic  -  Magic C
+                471,        //Karmian Stockings  -  Magic C
+                2454,        //Karmian Gloves  -  None C
+                2430,        //Karmian Boots  -  None C
         });
         put("B", new Integer[]{
-                2415, 		//Avadon Circlet  -  None B
-                2406, 		//Avadon Robe  -  Magic B
-                5716, 		//Avadon Gloves  -  None B
-                5732, 		//Avadon Boots  -  None B
+                2415,        //Avadon Circlet  -  None B
+                2406,        //Avadon Robe  -  Magic B
+                5716,        //Avadon Gloves  -  None B
+                5732,        //Avadon Boots  -  None B
         });
         put("A", new Integer[]{
-                2419, 		//Majestic Circlet  -  None A
-                2409, 		//Majestic Robe  -  Magic A
-                5776, 		//Majestic Gauntlets  -  None A
-                5788, 		//Majestic Boots  -  None A
+                2419,        //Majestic Circlet  -  None A
+                2409,        //Majestic Robe  -  Magic A
+                5776,        //Majestic Gauntlets  -  None A
+                5788,        //Majestic Boots  -  None A
         });
         put("S80", new Integer[]{
-                15608, 		//Moirai Circlet  -  None S80
-                15611, 		//Moirai Tunic  -  Magic S80
-                15614, 		//Moirai Stockings  -  Magic S80
-                15617, 		//Moirai Gloves  -  None S80
-                15620, 		//Moirai Footwear  -  None S80
+                15608,        //Moirai Circlet  -  None S80
+                15611,        //Moirai Tunic  -  Magic S80
+                15614,        //Moirai Stockings  -  Magic S80
+                15617,        //Moirai Gloves  -  None S80
+                15620,        //Moirai Footwear  -  None S80
         });
     }};
     private static final Map<String, Integer[]> light_sets = new HashMap<String, Integer[]>() {{
         put("C", new Integer[]{
-                2414, 		//Full Plate Helmet  -  None C
-                398, 		//Plated Leather  -  Light C
-                418, 		//Plated Leather Gaiters  -  Light C
-                2455, 		//Plated Leather Gloves  -  None C
-                2431, 		//Plated Leather Boots  -  None C
+                2414,        //Full Plate Helmet  -  None C
+                398,        //Plated Leather  -  Light C
+                418,        //Plated Leather Gaiters  -  Light C
+                2455,        //Plated Leather Gloves  -  None C
+                2431,        //Plated Leather Boots  -  None C
         });
         put("B", new Integer[]{
-                2417, 		//Doom Helmet  -  None B
-                2392, 		//Leather Armor of Doom  -  Light B
-                5723, 		//Doom Gloves  -  None B
-                5739, 		//Doom Boots  -  None B
+                2417,        //Doom Helmet  -  None B
+                2392,        //Leather Armor of Doom  -  Light B
+                5723,        //Doom Gloves  -  None B
+                5739,        //Doom Boots  -  None B
         });
         put("A", new Integer[]{
-                2419, 		//Majestic Circlet  -  None A
-                2395, 		//Majestic Leather Armor  -  Light A
-                5775, 		//Majestic Gauntlets  -  None A
-                5787, 		//Majestic Boots  -  None A
+                2419,        //Majestic Circlet  -  None A
+                2395,        //Majestic Leather Armor  -  Light A
+                5775,        //Majestic Gauntlets  -  None A
+                5787,        //Majestic Boots  -  None A
         });
         put("S80", new Integer[]{
-                15607, 		//Moirai Leather Helmet  -  None S80
-                15610, 		//Moirai Leather Breastplate  -  Light S80
-                15613, 		//Moirai Leather Leggings  -  Light S80
-                15616, 		//Moirai Leather Gloves  -  None S80
-                15619, 		//Moirai Leather Boots  -  None S80
+                15607,        //Moirai Leather Helmet  -  None S80
+                15610,        //Moirai Leather Breastplate  -  Light S80
+                15613,        //Moirai Leather Leggings  -  Light S80
+                15616,        //Moirai Leather Gloves  -  None S80
+                15619,        //Moirai Leather Boots  -  None S80
         });
     }};
     private static final Map<String, Integer[]> heavy_sets = new HashMap<String, Integer[]>() {{
         put("C", new Integer[]{
-                2414, 		//Full Plate Helmet  -  None C
-                356, 		//Full Plate Armor  -  Heavy C
-                2462, 		//Full Plate Gauntlets  -  None C
-                2438, 		//Full Plate Boots  -  None C
+                2414,        //Full Plate Helmet  -  None C
+                356,        //Full Plate Armor  -  Heavy C
+                2462,        //Full Plate Gauntlets  -  None C
+                2438,        //Full Plate Boots  -  None C
         });
         put("B", new Integer[]{
-                2416, 		//Blue Wolf Helmet  -  None B
-                358, 		//Blue Wolf Breastplate  -  Heavy B
-                2380, 		//Blue Wolf Gaiters  -  Heavy B
-                5718, 		//Blue Wolf Gloves  -  None B
-                5734, 		//Blue Wolf Boots  -  None B
+                2416,        //Blue Wolf Helmet  -  None B
+                358,        //Blue Wolf Breastplate  -  Heavy B
+                2380,        //Blue Wolf Gaiters  -  Heavy B
+                5718,        //Blue Wolf Gloves  -  None B
+                5734,        //Blue Wolf Boots  -  None B
         });
         put("A", new Integer[]{
-                2419, 		//Majestic Circlet  -  None A
-                2383, 		//Majestic Plate Armor  -  Heavy A
-                5774, 		//Majestic Gauntlets  -  None A
-                5786, 		//Majestic Boots  -  None A
+                2419,        //Majestic Circlet  -  None A
+                2383,        //Majestic Plate Armor  -  Heavy A
+                5774,        //Majestic Gauntlets  -  None A
+                5786,        //Majestic Boots  -  None A
         });
         put("S80", new Integer[]{
-                15606, 		//Moirai Helmet  -  None S80
-                15609, 		//Moirai Breastplate  -  Heavy S80
-                15612, 		//Moirai Gaiters  -  Heavy S80
-                15615, 		//Moirai Gauntlets  -  None S80
-                15618, 		//Moirai Boots  -  None S80
+                15606,        //Moirai Helmet  -  None S80
+                15609,        //Moirai Breastplate  -  Heavy S80
+                15612,        //Moirai Gaiters  -  Heavy S80
+                15615,        //Moirai Gauntlets  -  None S80
+                15618,        //Moirai Boots  -  None S80
         });
     }};
     private static final Map<String, Integer[]> jewels_sets = new HashMap<String, Integer[]>() {{
         put("C", new Integer[]{
-                886, 		//Ring of Binding  -  None C
-                888, 		//Blessed Ring  -  None C
-                919, 		//Blessed Necklace  -  None C
-                855, 		//Nassen's Earring  -  None C
-                857, 		//Blessed Earring  -  None C
+                886,        //Ring of Binding  -  None C
+                888,        //Blessed Ring  -  None C
+                919,        //Blessed Necklace  -  None C
+                855,        //Nassen's Earring  -  None C
+                857,        //Blessed Earring  -  None C
         });
         put("B", new Integer[]{
-                901, 		//Ring of Holy Spirit  -  None B
-                891, 		//Sage's Ring  -  None B
-                870, 		//Earring of Holy Spirit  -  None B
-                860, 		//Sage's Earring  -  None B
-                932, 		//Necklace of Holy Spirit  -  None B
+                901,        //Ring of Holy Spirit  -  None B
+                891,        //Sage's Ring  -  None B
+                870,        //Earring of Holy Spirit  -  None B
+                860,        //Sage's Earring  -  None B
+                932,        //Necklace of Holy Spirit  -  None B
         });
         put("A", new Integer[]{
-                862, 		//Majestic Earring  -  None A
-                893, 		//Majestic Ring  -  None A
-                924, 		//Majestic Necklace  -  None A
-                868, 		//Earring of Phantom  -  None A
-                899, 		//Ring of Phantom  -  None A
+                862,        //Majestic Earring  -  None A
+                893,        //Majestic Ring  -  None A
+                924,        //Majestic Necklace  -  None A
+                868,        //Earring of Phantom  -  None A
+                899,        //Ring of Phantom  -  None A
         });
         put("S80", new Integer[]{
-                15724, 		//Moirai Earring  -  None S80
-                15723, 		//Moirai Ring  -  None S80
-                15725, 		//Moirai Necklace  -  None S80
-                9455, 		//Dynasty Earrings  -  None S
-                9457, 		//Dynasty Ring  -  None S
+                15724,        //Moirai Earring  -  None S80
+                15723,        //Moirai Ring  -  None S80
+                15725,        //Moirai Necklace  -  None S80
+                9455,        //Dynasty Earrings  -  None S
+                9457,        //Dynasty Ring  -  None S
         });
     }};
 
     private static final Map<WeaponType, Integer[]> weapons_sets = new HashMap<WeaponType, Integer[]>() {{
         put(WeaponType.RAPIER, new Integer[]{9293, 9317, 9354, 10461});
         put(WeaponType.ANCIENTSWORD, new Integer[]{
-                9297, 		//Saber Tooth  -  Ancient Sword C
-                9311, 		//Innominate Victory  -  Ancient Sword B
-                9357, 		//Durendal  -  Ancient Sword A
-                10464, 		//Icarus Wingblade  -  Ancient Sword S80
+                9297,        //Saber Tooth  -  Ancient Sword C
+                9311,        //Innominate Victory  -  Ancient Sword B
+                9357,        //Durendal  -  Ancient Sword A
+                10464,        //Icarus Wingblade  -  Ancient Sword S80
         });
         put(WeaponType.CROSSBOW, new Integer[]{
-                9259, 		//Ballista  -  Crossbow C
-                9326, 		//Hell Hound  -  Crossbow B
-                9363, 		//Screaming Vengeance  -  Crossbow A
-                10469, 		//Icarus Shooter  -  Crossbow S80
+                9259,        //Ballista  -  Crossbow C
+                9326,        //Hell Hound  -  Crossbow B
+                9363,        //Screaming Vengeance  -  Crossbow A
+                10469,        //Icarus Shooter  -  Crossbow S80
         });
         put(WeaponType.MAGESWORD, new Integer[]{
-                6313, 		//Homunkulus's Sword  -  Sword C
-                7722, 		//Sword of Valhalla  -  Sword B
-                5643, 		//Sword of Miracles  -  Sword A
-                10440, 		//Icarus Spirit  -  Sword S80
+                6313,        //Homunkulus's Sword  -  Sword C
+                7722,        //Sword of Valhalla  -  Sword B
+                5643,        //Sword of Miracles  -  Sword A
+                10440,        //Icarus Spirit  -  Sword S80
         });
         put(WeaponType.POLE, new Integer[]{
-                4852, 		//Orcish Poleaxe  -  Pole C
-                4859, 		//Lance  -  Pole B
-                8803, 		//Tiphon's Spear  -  Pole A
-                10450, 		//Icarus Trident  -  Pole S80
+                4852,        //Orcish Poleaxe  -  Pole C
+                4859,        //Lance  -  Pole B
+                8803,        //Tiphon's Spear  -  Pole A
+                10450,        //Icarus Trident  -  Pole S80
         });
         put(WeaponType.DAGGER, new Integer[]{
-                6358, 		//Crystal Dagger  -  Dagger C
-                4778, 		//Kris  -  Dagger B
-                8800, 		//Naga Storm  -  Dagger A
-                10446, 		//Icarus Disperser  -  Dagger S80
+                6358,        //Crystal Dagger  -  Dagger C
+                4778,        //Kris  -  Dagger B
+                8800,        //Naga Storm  -  Dagger A
+                10446,        //Icarus Disperser  -  Dagger S80
         });
         put(WeaponType.BOW, new Integer[]{
-                4815, 		//Elemental Bow  -  Bow C
-                4829, 		//Bow of Peril  -  Bow B
-                8808, 		//Shyeed's Bow  -  Bow A
-                10445, 		//Icarus Spitter  -  Bow S80
+                4815,        //Elemental Bow  -  Bow C
+                4829,        //Bow of Peril  -  Bow B
+                8808,        //Shyeed's Bow  -  Bow A
+                10445,        //Icarus Spitter  -  Bow S80
         });
         put(WeaponType.SWORD, new Integer[]{
-                4708, 		//Samurai Longsword  -  Sword C
-                4717, 		//Sword of Damascus  -  Sword B
-                5648, 		//Dark Legion's Edge  -  Sword A
-                10434, 		//Icarus Sawsword  -  Sword S80
+                4708,        //Samurai Longsword  -  Sword C
+                4717,        //Sword of Damascus  -  Sword B
+                5648,        //Dark Legion's Edge  -  Sword A
+                10434,        //Icarus Sawsword  -  Sword S80
         });
         put(WeaponType.DUAL, new Integer[]{
-                2582, 		//Katana*Katana  -  Dual Sword C
-                2626, 		//Samurai Long Sword*Samurai Long Sword  -  Dual Sword B
-                5706, 		//Damascus*Damascus  -  Dual Sword A
-                10415, 		//Icarus Dual Sword  -  Dual Sword S80
+                2582,        //Katana*Katana  -  Dual Sword C
+                2626,        //Samurai Long Sword*Samurai Long Sword  -  Dual Sword B
+                5706,        //Damascus*Damascus  -  Dual Sword A
+                10415,        //Icarus Dual Sword  -  Dual Sword S80
         });
         put(WeaponType.BIGSWORD, new Integer[]{
-                6347, 		//Berserker Blade  -  Big Sword C
-                4725, 		//Great Sword  -  Big Sword B
-                8791, 		//Sword of Ipos  -  Big Sword A
-                10437, 		//Icarus Heavy Arms  -  Big Sword S80
+                6347,        //Berserker Blade  -  Big Sword C
+                4725,        //Great Sword  -  Big Sword B
+                8791,        //Sword of Ipos  -  Big Sword A
+                10437,        //Icarus Heavy Arms  -  Big Sword S80
         });
         put(WeaponType.BLUNT, new Integer[]{
-                4745, 		//Yaksa Mace  -  Blunt C
-                4753, 		//Art of Battle Axe  -  Blunt B
-                8794, 		//Barakiel's Axe  -  Blunt A
-                10453, 		//Icarus Hammer  -  Blunt S80
+                4745,        //Yaksa Mace  -  Blunt C
+                4753,        //Art of Battle Axe  -  Blunt B
+                8794,        //Barakiel's Axe  -  Blunt A
+                10453,        //Icarus Hammer  -  Blunt S80
         });
         put(WeaponType.FIST, new Integer[]{
-                4800, 		//Knuckle Duster  -  Dual Fist C
-                4806, 		//Bellion Cestus  -  Dual Fist B
-                8810, 		//Sobekk's Hurricane  -  Dual Fist A
-                10459, 		//Icarus Hand  -  Dual Fist S80
+                4800,        //Knuckle Duster  -  Dual Fist C
+                4806,        //Bellion Cestus  -  Dual Fist B
+                8810,        //Sobekk's Hurricane  -  Dual Fist A
+                10459,        //Icarus Hand  -  Dual Fist S80
         });
         put(WeaponType.SHIELD, new Integer[]{
-                2497, 		//Full Plate Shield  -  Shield C
-                633, 		//Zubei's Shield  -  Shield B
-                2498, 		//Shield of Nightmare  -  Shield A
-                15621, 		//Moirai Shield  -  Shield S80
+                2497,        //Full Plate Shield  -  Shield C
+                633,        //Zubei's Shield  -  Shield B
+                2498,        //Shield of Nightmare  -  Shield A
+                15621,        //Moirai Shield  -  Shield S80
         });
 
     }};
@@ -482,7 +482,7 @@ public class LastHunter extends Functions implements ScriptFile {
         }
         Collections.sort(time2);
         long delay = 0;
-        while (time2.size() != 0 && (delay = time2.remove(0)) - cur_time <= 0);
+        while (time2.size() != 0 && (delay = time2.remove(0)) - cur_time <= 0) ;
         if (_startTask != null)
             _startTask.cancel(true);
 
@@ -515,7 +515,7 @@ public class LastHunter extends Functions implements ScriptFile {
 
     public static void equipItems(L2Player player) {
         final ArrayList<L2ItemInstance> itemList = items_collector.get(player);
-        if (itemList != null){
+        if (itemList != null) {
             for (L2ItemInstance itemInstance : itemList) {
                 player.getInventory().equipItem(itemInstance, true);
             }
@@ -545,11 +545,11 @@ public class LastHunter extends Functions implements ScriptFile {
             }
             autoSoulshot(player, player.getInventory().addItem(soulshot[i], 1000));
             autoSoulshot(player, player.getInventory().addItem(spiritshot[i], 1000));
-            if (itemInstance.getItemType().equals(L2Weapon.WeaponType.BOW)){
+            if (itemInstance.getItemType().equals(L2Weapon.WeaponType.BOW)) {
                 final L2ItemInstance arrow = player.getInventory().addItem(arrows[i], 1000);
 //                IItemHandler handler = ItemHandler.getInstance().getItemHandler(arrow.getItemId());
 //                handler.useItem(player, arrow, false);
-            }else if (itemInstance.getItemType().equals(L2Weapon.WeaponType.CROSSBOW)){
+            } else if (itemInstance.getItemType().equals(L2Weapon.WeaponType.CROSSBOW)) {
                 final L2ItemInstance bolt = player.getInventory().addItem(bolts[i], 1000);
 //                IItemHandler handler = ItemHandler.getInstance().getItemHandler(bolt.getItemId());
 //                handler.useItem(player, bolt, false);
@@ -559,6 +559,7 @@ public class LastHunter extends Functions implements ScriptFile {
 
     public void autoSoulshot(L2Player player, L2ItemInstance soulshot) {
         player.addAutoSoulShot(soulshot.getItemId());
+        player.AutoShot();
         player.sendPacket(new ExAutoSoulShot(soulshot.getItemId(), true));
         player.sendPacket(new SystemMessage(SystemMessage.THE_USE_OF_S1_WILL_NOW_BE_AUTOMATED).addString(soulshot.getName()));
         IItemHandler handler = ItemHandler.getInstance().getItemHandler(soulshot.getItemId());
@@ -623,6 +624,7 @@ public class LastHunter extends Functions implements ScriptFile {
             }
         }
     }
+
     public String DialogAppend_36646(Integer val) {
         L2Player player = (L2Player) getSelf();
         String value = "Получить магическую поддержку!";
@@ -652,7 +654,7 @@ public class LastHunter extends Functions implements ScriptFile {
     }
 
     public void onLoad() {
-        if (_active){
+        if (_active) {
             _zone = ZoneManager.getInstance().getZoneById(ZoneType.battle_zone, 9003, false);
             _zone.getListenerEngine().addMethodInvokedListener(_zoneListener);
             initTimer(true);
@@ -663,7 +665,7 @@ public class LastHunter extends Functions implements ScriptFile {
                     player.sendMessage("Load Event : Last Hunter . Start Time : " + Calendar.getInstance().getTime());
                 }
             }
-        }else {
+        } else {
             for (L2Player player : L2ObjectsStorage.getPlayers()) {
                 if (player.isGM()) {
                     player.sendMessage("Load Event : Last Hunter - " + _active);
@@ -682,7 +684,6 @@ public class LastHunter extends Functions implements ScriptFile {
     public void onShutdown() {
         onReload();
     }
-
 
 
     public static boolean isActive() {
@@ -788,7 +789,7 @@ public class LastHunter extends Functions implements ScriptFile {
     public static void sayToAll(String text) {
         L2ObjectsStorage.getPlayers().stream()
                 .filter(Objects::nonNull)
-                .forEach(p -> new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, EVENT_NAME , text));
+                .forEach(p -> new Say2(0, Say2C.CRITICAL_ANNOUNCEMENT, EVENT_NAME, text));
     }
 
     public static void question() {
@@ -959,7 +960,7 @@ public class LastHunter extends Functions implements ScriptFile {
         for (Location loc : spawnPoints) {
             Functions.spawn(loc, points[Rnd.get(points.length)], _eventDuration, reflection.getId());
         }
-        for (Location loc : spawnMobs){
+        for (Location loc : spawnMobs) {
             final L2NpcInstance spawn = Functions.spawn(loc, mob, 30, reflection.getId());
             mobs.add(spawn);
             spawn.setHideName(true);
@@ -998,7 +999,7 @@ public class LastHunter extends Functions implements ScriptFile {
                 L2Player player = ref.get();
                 if (player == null)
                     continue;
-                sayToAll("победитель ивента " +  player.getName());
+                sayToAll("победитель ивента " + player.getName());
                 addItem(player, bonusItemID, bonusItemCount);
                 if (setHero) {
                     setHero(player);
@@ -1020,7 +1021,7 @@ public class LastHunter extends Functions implements ScriptFile {
                 }
             }
             if (max_damager != null) {
-                sayToAll("победитель ивента " +  max_damager.getName());
+                sayToAll("победитель ивента " + max_damager.getName());
                 addItem(max_damager, bonusItemID, bonusItemCount);
                 if (setHero) {
                     setHero(max_damager);
@@ -1069,7 +1070,7 @@ public class LastHunter extends Functions implements ScriptFile {
         healPlayers();
         executeTask("events.LastHunter.LastHunter", "teleportPlayersToSavedCoords", new Object[0], 3000);
         executeTask("events.LastHunter.LastHunter", "autoContinue", new Object[0], 10000);
-        for (L2NpcInstance npc: mobs){
+        for (L2NpcInstance npc : mobs) {
             npc.deleteMe();
         }
     }
@@ -1183,10 +1184,10 @@ public class LastHunter extends Functions implements ScriptFile {
 			if(player.getPet() != null)
 				revengeSkill.getEffects(player, player.getPet(), false, false);*/
             player.p_block_move(true, null);
-           // player.block_hp_mp(true);
-           // player.startAMuted();
-           // player.startPMuted();
-           // player.setParalyzedSkill(true);
+            // player.block_hp_mp(true);
+            // player.startAMuted();
+            // player.startPMuted();
+            // player.setParalyzedSkill(true);
             if (player.getPet() != null) {
                 player.getPet().p_block_move(true, null);
                 player.getPet().block_hp_mp(true);
@@ -1425,8 +1426,8 @@ public class LastHunter extends Functions implements ScriptFile {
             player.setEventReg(false);
             player.can_create_party = true;
 
-            for (L2ItemInstance item: items_antidiup.get(player)){
-                if (item != null){
+            for (L2ItemInstance item : items_antidiup.get(player)) {
+                if (item != null) {
                     player.getInventory().destroyItem(item, 1, true);
                 }
 
@@ -1853,7 +1854,7 @@ public class LastHunter extends Functions implements ScriptFile {
                 if (weapons != null) {
                     addAndEquipItem(player, weapons[0]);
                 }
-                if (shield != null){
+                if (shield != null) {
                     addAndEquipItem(player, shield[0]);
                 }
                 //Надеваем сэт
