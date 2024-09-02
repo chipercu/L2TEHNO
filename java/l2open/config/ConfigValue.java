@@ -205,6 +205,7 @@ public class ConfigValue {
     public static int ChampionRewardHigherLvlItemChance = 0;
     public static float AltRaidRespawnMultiplier = 1f;
     public static boolean AltExpForCraft = false;
+    public static boolean AltCraftMpConsume = false;
     public static int AugmentationNGSkillChance = 15;
     public static boolean PushkinSignsOptions = false;
     public static int ShutdownMsgType = 3;
@@ -533,6 +534,7 @@ public class ConfigValue {
     public static int[] FixRespHourOfAntharas = {};
     public static int[] FixRespHourOfBaium = {};
     public static int[] FixRespHourOfValakas = {};
+    public static int[] ValakasEnterLoc = {203940, -111840, 66};
     public static int FixRespDayOfWeekAntharas = -1;
     public static int FixRespDayOfWeekBaium = -1;
     public static int FixRespDayOfWeekValakas = -1;

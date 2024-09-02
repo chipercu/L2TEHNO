@@ -444,8 +444,9 @@ public class L2MonsterInstance extends L2NpcInstance {
 
     @Override
     public void doDie(final L2Character killer) {
-        if (_dead)
+        if (_dead) {
             return;
+        }
         dieLock.lock();
         try {
             if (minionMaintainTask != null) {
@@ -455,8 +456,9 @@ public class L2MonsterInstance extends L2NpcInstance {
                 } catch (Exception e) {
                 }
             }
-            if (_dead)
+            if (_dead) {
                 return;
+            }
             _dieTime = System.currentTimeMillis();
             _dead = true;
 

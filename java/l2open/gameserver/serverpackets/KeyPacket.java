@@ -26,8 +26,7 @@ public class KeyPacket extends L2GameServerPacket
 		}
 		writeC(0x01);
 		writeB(_key); // TODO[K] - send all key size! Guard key size == 16byte, and him need all!
-		if(ConfigValue.StrixGuardEnable)
-		{
+		if(ConfigValue.StrixGuardEnable) {
 			// TODO[K] - Guard Section
 			//writeC(GuardConfig.MODULE_DRAW_ENABLED ? 0x01 : 0x00);
 			//writeC(GuardConfig.MODULE_DRAW_FPS ? 0x01 : 0x00);
@@ -44,8 +43,7 @@ public class KeyPacket extends L2GameServerPacket
 			writeS(GuardConfig.MODULE_DRAW_TEXT);
 			// TODO[K] - Guard Section
 		}
-		else
-		{
+		else {
 			writeD(0x01);
 			writeD(ConfigValue.LameGuard ? 0x01 : 0x00);
 			writeC(ConfigValue.LameGuard ? 0x01 : 0x00);

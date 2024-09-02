@@ -1,178 +1,442 @@
 <title>L2 Manage Events</title>
-<center><table width=260>
-<tr>
-<td><button value="Main" action="bypass -h admin_admin" width=50 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Events" action="bypass -h admin_show_html events/events.htm" width=50 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Chars" action="bypass -h admin_char_manage" width=50 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Server" action="bypass -h admin_server admserver.htm" width=50 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GM Shop" action="bypass -h admin_gmshop" width=50 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr></table></center>
+<center>
+    <table width=260>
+        <tr>
+            <td>
+                <button value="Main" action="bypass -h admin_admin" width=50 height=20 back="L2UI_CT1.Button_DF_Down"
+                        fore="L2UI_CT1.Button_DF">
+            </td>
+            <td>
+                <button value="Events" action="bypass -h admin_show_html events/events.htm" width=50 height=20
+                        back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+            </td>
+            <td>
+                <button value="Chars" action="bypass -h admin_char_manage" width=50 height=20
+                        back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+            </td>
+            <td>
+                <button value="Server" action="bypass -h admin_server admserver.htm" width=50 height=20
+                        back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+            </td>
+            <td>
+                <button value="GM Shop" action="bypass -h admin_gmshop" width=50 height=20
+                        back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+            </td>
+        </tr>
+    </table>
+</center>
 <br><br><br>
 <table width=285>
-<tr>
-	<td width=140>PlayerAI</td>
-	<td width=45><button value="Start" action="bypass -h scripts_events.DotaEvent.DotaEvent:start_admin" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-	<td width=45><button value="StartAll" action="bypass -h scripts_PlayerAI:startFakePlayerAll 200" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-	<td width=45></td>
-</tr>
-<tr>
-<td width=140>Coffer of Shadows</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.CofferofShadows.CofferofShadows:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.CofferofShadows.CofferofShadows:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr><tr>
-<td width=140>Last Hero</td>
-<td width=45><button value="Manage" action="bypass -h admin_show_html events/lastHero.htm" width=50 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="On" action="bypass -h scripts_events.lastHero.LastHero:activateEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Off" action="bypass -h scripts_events.lastHero.LastHero:deactivateEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr><tr>
-<td width=140>TvT</td>
-<td width=45><button value="Manage" action="bypass -h admin_show_html events/tvt.htm" width=50 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="On" action="bypass -h scripts_events.TvT.TvT:activateEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Off" action="bypass -h scripts_events.TvT.TvT:deactivateEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr><tr>
-<td width=140>CtF</td>
-<td width=45><button value="Manage" action="bypass -h admin_show_html events/ctf.htm" width=50 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="On" action="bypass -h scripts_events.CtF.CtF:activateEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Off" action="bypass -h scripts_events.CtF.CtF:deactivateEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr><tr>
-<td width=140>GvG</td>
-<td width=45><button value="Stats" action="bypass -h scripts_events.GvG.GvG:showStats" width=50 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="On" action="bypass -h scripts_events.GvG.GvG:activateEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Off" action="bypass -h scripts_events.GvG.GvG:deactivateEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr><tr>
-<td width=140>TvT Arena 1</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.TvTArena.TvTArena1:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.TvTArena.TvTArena1:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Tele" action="bypass -h admin_move_to -81786 -45575 -11518" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr><tr>
-<td width=140>TvT Arena 2</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.TvTArena.TvTArena2:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.TvTArena.TvTArena2:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Tele" action="bypass -h admin_move_to -78413 -48155 -11518" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr><tr>
-<td width=140>TvT Arena 3</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.TvTArena.TvTArena3:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.TvTArena.TvTArena3:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Tele" action="bypass -h admin_move_to -79821 -52156 -11518" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr><tr>
-<td width=140>The Flow Of The Horror</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.TheFlowOfTheHorror.TheFlowOfTheHorror:start" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.TheFlowOfTheHorror.TheFlowOfTheHorror:stop" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Wave" action="bypass -h scripts_events.TheFlowOfTheHorror.TheFlowOfTheHorror:spawnNewWave" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr><tr>
-<td width=140>The Fall Harvest</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.TheFallHarvest.TheFallHarvest:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.TheFallHarvest.TheFallHarvest:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr><tr>
-<td width=140>L2 Day</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.l2day.l2day:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.l2day.l2day:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr><tr>
-<td width=140>Five Years Lineage</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.FiveYearsLineage.FiveYearsLineage:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.FiveYearsLineage.FiveYearsLineage:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr><tr>
-<td width=140>L2 Collect Medal</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.glitmedal.glitmedal:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.glitmedal.glitmedal:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr><tr>
-<td width=140>Transport</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.transport.Transport:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.transport.Transport:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr><tr>
-<td width=140>AutoAnnouncer</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.AutoAnnouncer.Announcer:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.AutoAnnouncer.Announcer:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr><tr>
-<td width=140>Christmas</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.Christmas.Christmas:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.Christmas.Christmas:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr><tr>
-<td width=140>Saving Snowman</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.SavingSnowman.SavingSnowman:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.SavingSnowman.SavingSnowman:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr><tr>
-<td width=140>Change of Heart</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.heart.heart:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.heart.heart:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr><tr>
-<td width=140>Tournament</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.tournament.Tournament_battle:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.tournament.Tournament_battle:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr><tr>
-<td width=140>Fantasy Isle</td>
-<td width=45><button value="Start" action="bypass -h scripts_services.FantasyIsle:manualStart" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-<td width=45></td>
-</tr><tr>
-<td width=140>Seed Of Destruction</td>
-<td width=45><button value="Open" action="bypass -h scripts_events.SeedOfDestruction.SeedOfDestruction:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Close" action="bypass -h scripts_events.SeedOfDestruction.SeedOfDestruction:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr><tr>
-<td width=140>March 8</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.March8.March8:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.March8.March8:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr><tr>
-<td width=140>Master Of Enchanting</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.MasterOfEnchanting.MasterOfEnchanting:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.MasterOfEnchanting.MasterOfEnchanting:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr>
-<tr>
-<td width=150>Coins</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.coins.coins:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.coins.coins:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr><tr>
-<td width=150>Rabbits To Riches</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.RabbitsToRiches.RabbitsToRiches:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.RabbitsToRiches.RabbitsToRiches:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr><tr>
-<td width=150>Victorina</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.Viktorina.Viktorina:ForseStart" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.Viktorina.Viktorina:stop" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr>
+    <tr>
+        <td width=140>PlayerAI</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.DotaEvent.DotaEvent:start_admin" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="StartAll" action="bypass -h scripts_PlayerAI:startFakePlayerAll 200" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=150>Battle Pass</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.BattlePass.BattlePass:startEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.BattlePass.BattlePass:stopEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+    </tr>
+    <tr>
+        <td width=140>Coffer of Shadows</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.CofferofShadows.CofferofShadows:startEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.CofferofShadows.CofferofShadows:stopEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=140>Last Hero</td>
+        <td width=45>
+            <button value="Manage" action="bypass -h admin_show_html events/lastHero.htm" width=50 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="On" action="bypass -h scripts_events.lastHero.LastHero:activateEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Off" action="bypass -h scripts_events.lastHero.LastHero:deactivateEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+    </tr>
+    <tr>
+        <td width=140>TvT</td>
+        <td width=45>
+            <button value="Manage" action="bypass -h admin_show_html events/tvt.htm" width=50 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="On" action="bypass -h scripts_events.TvT.TvT:activateEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Off" action="bypass -h scripts_events.TvT.TvT:deactivateEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+    </tr>
+    <tr>
+        <td width=140>CtF</td>
+        <td width=45>
+            <button value="Manage" action="bypass -h admin_show_html events/ctf.htm" width=50 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="On" action="bypass -h scripts_events.CtF.CtF:activateEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Off" action="bypass -h scripts_events.CtF.CtF:deactivateEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+    </tr>
+    <tr>
+        <td width=140>GvG</td>
+        <td width=45>
+            <button value="Stats" action="bypass -h scripts_events.GvG.GvG:showStats" width=50 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="On" action="bypass -h scripts_events.GvG.GvG:activateEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Off" action="bypass -h scripts_events.GvG.GvG:deactivateEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+    </tr>
+    <tr>
+        <td width=140>TvT Arena 1</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.TvTArena.TvTArena1:startEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.TvTArena.TvTArena1:stopEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Tele" action="bypass -h admin_move_to -81786 -45575 -11518" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+    </tr>
+    <tr>
+        <td width=140>TvT Arena 2</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.TvTArena.TvTArena2:startEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.TvTArena.TvTArena2:stopEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Tele" action="bypass -h admin_move_to -78413 -48155 -11518" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+    </tr>
+    <tr>
+        <td width=140>TvT Arena 3</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.TvTArena.TvTArena3:startEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.TvTArena.TvTArena3:stopEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Tele" action="bypass -h admin_move_to -79821 -52156 -11518" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+    </tr>
+    <tr>
+        <td width=140>The Flow Of The Horror</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.TheFlowOfTheHorror.TheFlowOfTheHorror:start" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.TheFlowOfTheHorror.TheFlowOfTheHorror:stop" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Wave" action="bypass -h scripts_events.TheFlowOfTheHorror.TheFlowOfTheHorror:spawnNewWave"
+                    width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+    </tr>
+    <tr>
+        <td width=140>The Fall Harvest</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.TheFallHarvest.TheFallHarvest:startEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.TheFallHarvest.TheFallHarvest:stopEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=140>L2 Day</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.l2day.l2day:startEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.l2day.l2day:stopEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=140>Five Years Lineage</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.FiveYearsLineage.FiveYearsLineage:startEvent"
+                    width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.FiveYearsLineage.FiveYearsLineage:stopEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=140>L2 Collect Medal</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.glitmedal.glitmedal:startEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.glitmedal.glitmedal:stopEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=140>Transport</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.transport.Transport:startEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.transport.Transport:stopEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=140>AutoAnnouncer</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.AutoAnnouncer.Announcer:startEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.AutoAnnouncer.Announcer:stopEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=140>Christmas</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.Christmas.Christmas:startEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.Christmas.Christmas:stopEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=140>Saving Snowman</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.SavingSnowman.SavingSnowman:startEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.SavingSnowman.SavingSnowman:stopEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=140>Change of Heart</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.heart.heart:startEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.heart.heart:stopEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=140>Tournament</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.tournament.Tournament_battle:startEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.tournament.Tournament_battle:stopEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=140>Fantasy Isle</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_services.FantasyIsle:manualStart" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=140>Seed Of Destruction</td>
+        <td width=45>
+            <button value="Open" action="bypass -h scripts_events.SeedOfDestruction.SeedOfDestruction:startEvent"
+                    width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Close" action="bypass -h scripts_events.SeedOfDestruction.SeedOfDestruction:stopEvent"
+                    width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=140>March 8</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.March8.March8:startEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.March8.March8:stopEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=140>Master Of Enchanting</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.MasterOfEnchanting.MasterOfEnchanting:startEvent"
+                    width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.MasterOfEnchanting.MasterOfEnchanting:stopEvent"
+                    width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=150>Coins</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.coins.coins:startEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.coins.coins:stopEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=150>Rabbits To Riches</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.RabbitsToRiches.RabbitsToRiches:startEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.RabbitsToRiches.RabbitsToRiches:stopEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=150>Victorina</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.Viktorina.Viktorina:ForseStart" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.Viktorina.Viktorina:stop" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
 
-<tr>
-<td width=150>Monster Attack</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.MonsterAtack.MonsterAtack:start" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.MonsterAtack.MonsterAtack:stop" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr>
-<tr>
-<td width=150>Protection of Captive</td>
-<td width=45><button value="Start" action="bypass -h scripts_ProtectionOfCaptive.ProtectionOfCaptive:startGame" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr>
-<tr>
-<td width=150>Reach Heaven</td>
-<td width=45><button value="Start" action="bypass -h scripts_ReachHeaven.ReachHeaven:startGame" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_ReachHeaven.ReachHeaven:stopGame" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45></td>
-</tr>
-<tr>
-<td width=150>Simple</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.Simple.Simple:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.Simple.Simple:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr>
-<tr>
-<td width=150>Reward of Honor</td>
-<td width=45><button value="Start" action="bypass -h scripts_events.RewardofHonor.RewardofHonor:startEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=45><button value="Stop" action="bypass -h scripts_events.RewardofHonor.RewardofHonor:stopEvent" width=40 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr>
+    <tr>
+        <td width=150>Monster Attack</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.MonsterAtack.MonsterAtack:start" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.MonsterAtack.MonsterAtack:stop" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=150>Protection of Captive</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_ProtectionOfCaptive.ProtectionOfCaptive:startGame" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=150>Reach Heaven</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_ReachHeaven.ReachHeaven:startGame" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_ReachHeaven.ReachHeaven:stopGame" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45></td>
+    </tr>
+    <tr>
+        <td width=150>Simple</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.Simple.Simple:startEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.Simple.Simple:stopEvent" width=40 height=20
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+    </tr>
+    <tr>
+        <td width=150>Reward of Honor</td>
+        <td width=45>
+            <button value="Start" action="bypass -h scripts_events.RewardofHonor.RewardofHonor:startEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+        <td width=45>
+            <button value="Stop" action="bypass -h scripts_events.RewardofHonor.RewardofHonor:stopEvent" width=40
+                    height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        </td>
+    </tr>
+
 </table>

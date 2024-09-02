@@ -2,7 +2,7 @@ package ai.petAssistent;
 
 public class PetAssistentConst {
 
-    public static final int[] _itemIds = {10663};
+    public static final int[] _itemIds = {10663, 24001};
     public static int[] displayIds = {20326, 31845, 20606, 20617};
 
     public static final String ASSISTENT_IS_SUMMONED = "pet_assistent_isSummoned";

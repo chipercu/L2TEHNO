@@ -571,14 +571,13 @@
 		</for>
 	</skill>
 	<skill id="8430" levels="1" name="Moirai Jacket">
-		<!-- Increases M. Atk. by 8.11%, Casting Spd. by 15%, resistance to Paralysis by 5% and resistance to Fire/Water/Wind/Earth by 1. -->
+		<!-- Increases M. Atk. by 1.5%, resistance to Paralysis by 5% and resistance to Fire/Water/Wind/Earth by 1. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
 			<effect name="p_defence_trait" param="trait_paralyze;5"/>
-			<mul order="0x30" stat="p_magical_attack" val="1.0811"/> <!-- M. Atk. +8.11% -->
-			<mul order="0x30" stat="p_magic_speed" val="1.15"/> <!-- Cast. Spd. +15% -->
+			<mul order="0x30" stat="p_magical_attack" val="1.0150"/> <!-- M. Atk. +8.11% -->
 			<sub order="0x40" stat="waterRcpt" val="1"/>
 			<sub order="0x40" stat="fireRcpt" val="1"/>
 			<sub order="0x40" stat="windRcpt" val="1"/>
@@ -647,8 +646,8 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="p_physical_attack" val="1.0557"/>
-			<mul order="0x30" stat="p_physical_defence" val="1.0557"/>
+			<mul order="0x30" stat="p_physical_attack" val="1.0180"/>
+			<mul order="0x30" stat="p_physical_defence" val="1.0180"/>
 			<add order="0x40" stat="p_max_hp" val="531"/>
 			<effect name="p_defence_trait" param="trait_sleep;28"/>
 			<effect name="p_defence_trait" param="trait_hold;28"/>
@@ -720,8 +719,8 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="p_physical_attack" val="1.0557"/>
-			<mul order="0x30" stat="p_attack_speed" val="1.05"/>
+			<mul order="0x30" stat="p_physical_attack" val="1.0180"/>
+			<mul order="0x30" stat="p_attack_speed" val="1.0180"/>
 			<mul order="0x30" stat="regMp" val="1.05"/>
 			<add order="0x40" stat="p_max_mp" val="347"/>
 		</for>
@@ -780,11 +779,10 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="p_magical_attack" val="1.0847"/>
-			<mul order="0x30" stat="p_magic_speed" val="1.15"/>
-			<mul order="0x30" stat="regMp" val="1.05"/>
-			<effect name="p_defence_trait" param="trait_shock;20"/>
-			<mul order="0x30" stat="concentration" val="0.88"/>
+			<mul order="0x30" stat="p_magical_attack" val="1.0175"/>
+			<mul order="0x30" stat="regMp" val="1.0175"/>
+			<effect name="p_defence_trait" param="trait_shock;10"/>
+			<mul order="0x30" stat="concentration" val="1.00"/>
 		</for>
 	</skill>
 	<skill id="8448" levels="1" name="Vesper Stockings">

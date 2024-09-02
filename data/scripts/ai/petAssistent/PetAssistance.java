@@ -51,12 +51,17 @@ public class PetAssistance extends DefaultAI {
             return;
         }
 
-        if (master == null){
+        if (master == null) {
             getActor().deleteMe();
             return;
         }
 
-        if (master.isInOfflineMode() || !master.isConnected()){
+        if (master.isInOfflineMode() || !master.isConnected()) {
+            getActor().deleteMe();
+            return;
+        }
+
+        if (!containSummonItems()) {
             getActor().deleteMe();
             return;
         }
@@ -92,16 +97,25 @@ public class PetAssistance extends DefaultAI {
         }
     }
 
-    protected List<Integer> getIgnoreHerbsList(){
+    private boolean containSummonItems() {
+        if (master == null) {
+            return false;
+        }
+        List<Integer> InventoryItemsIds = Arrays.stream(master.getInventory().getItems()).map(L2ItemInstance::getItemId).collect(Collectors.toList());
+        return Arrays.stream(_itemIds)
+                .anyMatch(needItem -> InventoryItemsIds.stream().anyMatch(item -> item == needItem));
+    }
+
+    protected List<Integer> getIgnoreHerbsList() {
         String var = master.getVar(pet_ignore_herbs);
-        if (var == null || var.isEmpty()){
+        if (var == null || var.isEmpty()) {
             return new ArrayList<>();
         }
         return Arrays.stream(var.split(";")).map(Integer::parseInt).collect(Collectors.toList());
     }
 
     protected boolean checkDroppesItems() {
-        if (!master.getVarB(pet_pick)){
+        if (!master.getVarB(pet_pick)) {
             return false;
         }
         boolean onlyAdena = master.getVarB(pet_pick_only_adena);
@@ -115,19 +129,19 @@ public class PetAssistance extends DefaultAI {
                 .filter(this::isPickUp)
                 .collect(Collectors.toList());
 
-        if (itemsList.isEmpty()){
+        if (itemsList.isEmpty()) {
             return false;
         }
 
-        if (onlyAdena){
+        if (onlyAdena) {
             itemsList = itemsList.stream().filter(l2ItemInstance -> l2ItemInstance.getItemId() == 57 || l2ItemInstance.isHerb()).collect(Collectors.toList());
         }
 
-        if (itemsList.isEmpty()){
+        if (itemsList.isEmpty()) {
             return false;
         }
 
-        if (pickHerb){
+        if (pickHerb) {
             itemsList = itemsList.stream().filter(l2ItemInstance -> !ignoreHerbsList.contains(l2ItemInstance.getItemId())).collect(Collectors.toList());
         }
         droppedItemsList = itemsList;
@@ -142,10 +156,10 @@ public class PetAssistance extends DefaultAI {
                 .filter(l2MonsterInstance -> l2MonsterInstance.isSpoiled(master))
                 .filter(L2Character::isDead)
                 .collect(Collectors.toList());
-        if (!collect.isEmpty()){
+        if (!collect.isEmpty()) {
             this.sweepMonstersList = collect;
             return true;
-        }else {
+        } else {
             return false;
         }
     }
@@ -177,11 +191,11 @@ public class PetAssistance extends DefaultAI {
         L2NpcInstance actor = getActor();
         L2Character target = actor.getFollowTarget();
 
-        if (actor.getDistance(target) > 4000 ){
-            if (target.isTeleporting()){
+        if (actor.getDistance(target) > 4000) {
+            if (target.isTeleporting()) {
                 return;
             }
-            if (actor.getReflectionId() != target.getReflectionId()){
+            if (actor.getReflectionId() != target.getReflectionId()) {
                 actor.deleteMe();
                 return;
             }
@@ -217,7 +231,7 @@ public class PetAssistance extends DefaultAI {
         } else {
             if (target.getAggroListPlayable().contains(master)) {
                 useSpoil(target);
-            }else {
+            } else {
                 setTask(TASK.FOLLOW, master);
             }
         }
@@ -235,7 +249,7 @@ public class PetAssistance extends DefaultAI {
         if (getActor().getDistance3D(target) > skill.getCastRange()) {
             getActor().moveToLocation(target.getLoc(), 20, true);
         } else {
-            if (!isSingleSpoil){
+            if (!isSingleSpoil) {
                 target.getAroundNpc(250, 100).stream()
                         .filter(L2Object::isMonster)
                         .map(l2NpcInstance -> (L2MonsterInstance) l2NpcInstance)
@@ -260,7 +274,7 @@ public class PetAssistance extends DefaultAI {
 
     protected void thinkPick() {
 
-        if (droppedItemsList.isEmpty()){
+        if (droppedItemsList.isEmpty()) {
             return;
         }
         L2ItemInstance item = droppedItemsList.get(0);
@@ -344,7 +358,7 @@ public class PetAssistance extends DefaultAI {
 
     protected void thinkSweep() {
 
-        if (sweepMonstersList == null || sweepMonstersList.isEmpty()){
+        if (sweepMonstersList == null || sweepMonstersList.isEmpty()) {
             return;
         }
 
@@ -353,7 +367,7 @@ public class PetAssistance extends DefaultAI {
             return;
         }
 
-        for (L2MonsterInstance target : sweepMonstersList){
+        for (L2MonsterInstance target : sweepMonstersList) {
 
             if (target == null || !target.isDead() || !target.isSpoiled()) {
                 return;
