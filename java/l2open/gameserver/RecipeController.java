@@ -9,6 +9,7 @@ import l2open.extensions.Stat;
 import l2open.extensions.multilang.CustomMessage;
 import l2open.gameserver.cache.Msg;
 import l2open.gameserver.model.*;
+import l2open.gameserver.model.base.ClassId;
 import l2open.gameserver.model.items.Inventory;
 import l2open.gameserver.model.items.L2ItemInstance;
 import l2open.gameserver.skills.Stats;
@@ -194,7 +195,11 @@ public class RecipeController
 				}
 			}
 
-			player.reduceCurrentMp(recipeList.getMpCost(), null);
+			if (ConfigValue.AltCraftMpConsume && isCrafter(player) && player.getPrivateStoreType() == L2Player.STORE_PRIVATE_MANUFACTURE){
+				player.reduceCurrentMp(0, null);
+			}else {
+				player.reduceCurrentMp(recipeList.getMpCost(), null);
+			}
 
 			for(L2RecipeComponent recipe : recipes)
 				if(recipe.getQuantity() != 0)
@@ -243,6 +248,13 @@ public class RecipeController
 
 		player.sendStatusUpdate(false, StatusUpdate.CUR_LOAD, StatusUpdate.CUR_MP);
 		player.sendPacket(new RecipeItemMakeInfo(recipeList.getId(), player, success));
+	}
+
+	private boolean isCrafter (L2Player player){
+        return player.getClassId() == ClassId.dwarvenFighter
+                || player.getClassId() == ClassId.artisan
+                || player.getClassId() == ClassId.warsmith
+                || player.getClassId() == ClassId.maestro;
 	}
 
 	/***************************************************************************/
@@ -313,7 +325,11 @@ public class RecipeController
 				}
 			}
 
-			player.reduceCurrentMp(recipeList.getMpCost(), null);
+			if (ConfigValue.AltCraftMpConsume && isCrafter(player) && player.getPrivateStoreType() == L2Player.STORE_PRIVATE_MANUFACTURE){
+				player.reduceCurrentMp(0, null);
+			}else {
+				player.reduceCurrentMp(recipeList.getMpCost(), null);
+			}
 
 			for(L2RecipeComponent recipe : recipes)
 				if(recipe.getQuantity() != 0)

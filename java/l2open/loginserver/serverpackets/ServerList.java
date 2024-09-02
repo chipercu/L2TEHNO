@@ -225,7 +225,7 @@ public final class ServerList extends L2LoginServerPacket
 				writeC(1);
 			}
 
-			writeD(server.port);
+			writeD(server.port - 1);
 			writeC(18); // age limit
 			writeC(server.pvp ? 0x01 : 0x00);
 			writeH(server.currentPlayers);

@@ -12,6 +12,7 @@ import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.util.ArrayDeque;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Queue;
@@ -260,6 +261,8 @@ public class SelectorThread<T extends MMOClient> extends Thread {
         if ((buf = con.getReadBuffer()) == null)
             buf = READ_BUFFER;
 
+
+
         // if we try to to do a read with no space in the buffer it will read 0 bytes
         // going into infinite loop
         if (buf.position() == buf.limit()) {
@@ -269,6 +272,7 @@ public class SelectorThread<T extends MMOClient> extends Thread {
 
             try {
                 result = con.getReadableByteChannel().read(buf);
+              //  System.out.println(Arrays.toString(buf.array()));
             } catch (IOException e) {
                 //error handling goes bellow
             }
@@ -411,10 +415,12 @@ public class SelectorThread<T extends MMOClient> extends Thread {
                 rp.setByteBuffer(buf);
                 rp.setClient(client);
 
-                if (getAcceptFilter() != null)
+                if (getAcceptFilter() != null) {
                     getAcceptFilter().incReceivablePacket(rp, client);
-                if (rp.read())
+                }
+                if (rp.read()) {
                     con.recvPacket(rp);
+                }
 
                 rp.setByteBuffer(null);
             } else if (getAcceptFilter() != null)

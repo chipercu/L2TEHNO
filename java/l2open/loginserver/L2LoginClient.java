@@ -21,224 +21,190 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
-{
-	private static Logger _log = Logger.getLogger(L2LoginClient.class.getName());
+public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>> {
+    private static Logger _log = Logger.getLogger(L2LoginClient.class.getName());
 
-    public static enum LoginClientState
-	{
-		CONNECTED,
-		AUTHED_GG,
-		AUTHED_LOGIN,
-		FAKE_LOGIN
-	}
+    public static enum LoginClientState {
+        CONNECTED,
+        AUTHED_GG,
+        AUTHED_LOGIN,
+        FAKE_LOGIN
+    }
 
-	private LoginClientState _state;
-	public boolean PlayOK = false;
+    private LoginClientState _state;
+    public boolean PlayOK = false;
 
-	// Crypt
-	private LoginCrypt _loginCrypt;
-	private ScrambledKeyPair _scrambledPair;
-	private byte[] _blowfishKey;
+    // Crypt
+    private LoginCrypt _loginCrypt;
+    private ScrambledKeyPair _scrambledPair;
+    private byte[] _blowfishKey;
 
-	
-	private String _account;
-	private int _accessLevel;
-	private int _lastServer;
-	private SessionKey _sessionKey;
-	private int _sessionId;
-	private float _bonus = 1;
-	private int _bonusExpire = 0;
-	private String _ipAddr;
 
-	public int region = -1;
-	public int proxy_add = -1;
+    private String _account;
+    private int _accessLevel;
+    private int _lastServer;
+    private SessionKey _sessionKey;
+    private int _sessionId;
+    private float _bonus = 1;
+    private int _bonusExpire = 0;
+    private String _ipAddr;
 
-	public long[] _connectionStartTime = new long[2];
+    public int region = -1;
+    public int proxy_add = -1;
 
-	private Map<Integer, Integer> _charsOnServers;
-	private Map<Integer, long[]> _charsToDelete;
+    public long[] _connectionStartTime = new long[2];
 
-	public L2LoginClient(MMOConnection<L2LoginClient> con)
-	{
-		super(con);
-		_state = LoginClientState.CONNECTED;
-		
-		_scrambledPair = LoginController.getInstance().getScrambledRSAKeyPair();
-		_blowfishKey = LoginController.getInstance().getBlowfishKey();
-		_connectionStartTime[0] = System.currentTimeMillis();
-		_connectionStartTime[1] = 0L;
-		_loginCrypt = new LoginCrypt();
-		_loginCrypt.setKey(_blowfishKey, false);
-		_sessionId = con.hashCode();
-		_ipAddr = getConnection().getSocket().getInetAddress().getHostAddress();
-		String ip = getIpAddress();
-		if(!ConfigValue.SkipBannedIp && IpManager.getInstance().CheckIp(ip))
-		{
-			close(new AccountKicked(AccountKickedReason.REASON_PERMANENTLY_BANNED));
-			_log.warning("Drop connection from banned IP: " + ip);
-		}
-	}
+    private Map<Integer, Integer> _charsOnServers;
+    private Map<Integer, long[]> _charsToDelete;
 
-	@Override
-	public boolean decrypt(ByteBuffer buf, int size)
-	{
-		boolean ret;
-		try
-		{
-			ret = _loginCrypt.decrypt(buf.array(), buf.position(), size);
-		}
-		catch(IOException e)
-		{
-			e.printStackTrace();
-			closeNow(true);
-			return false;
-		}
+    public L2LoginClient(MMOConnection<L2LoginClient> con) {
+        super(con);
+        _state = LoginClientState.CONNECTED;
 
-		if(!ret)
-		{
-			//_log.warning("Wrong checksum from client: " + toString());
-			closeNow(true);
-		}
+        _scrambledPair = LoginController.getInstance().getScrambledRSAKeyPair();
+        _blowfishKey = LoginController.getInstance().getBlowfishKey();
+        _connectionStartTime[0] = System.currentTimeMillis();
+        _connectionStartTime[1] = 0L;
+        _loginCrypt = new LoginCrypt();
+        _loginCrypt.setKey(_blowfishKey, false);
+        _sessionId = con.hashCode();
+        _ipAddr = getConnection().getSocket().getInetAddress().getHostAddress();
+        String ip = getIpAddress();
+        if (!ConfigValue.SkipBannedIp && IpManager.getInstance().CheckIp(ip)) {
+            close(new AccountKicked(AccountKickedReason.REASON_PERMANENTLY_BANNED));
+            _log.warning("Drop connection from banned IP: " + ip);
+        }
+    }
 
-		return ret;
-	}
+    @Override
+    public boolean decrypt(ByteBuffer buf, int size) {
+        boolean ret;
+        try {
+            ret = _loginCrypt.decrypt(buf.array(), buf.position(), size);
+        } catch (IOException e) {
+            e.printStackTrace();
+            closeNow(true);
+            return false;
+        }
 
-	@Override
-	public boolean encrypt(ByteBuffer buf, int size)
-	{
-		final int offset = buf.position();
-		try
-		{
-			size = _loginCrypt.encrypt(buf.array(), offset, size);
-		}
-		catch(IOException e)
-		{
-			e.printStackTrace();
-			return false;
-		}
+        if (!ret) {
+            //_log.warning("Wrong checksum from client: " + toString());
+            closeNow(true);
+        }
 
-		buf.position(offset + size);
-		return true;
-	}
+        return ret;
+    }
 
-	public LoginClientState getState()
-	{
-		return _state;
-	}
+    @Override
+    public boolean encrypt(ByteBuffer buf, int size) {
+        final int offset = buf.position();
+        try {
+            size = _loginCrypt.encrypt(buf.array(), offset, size);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
 
-	public void setState(LoginClientState state)
-	{
-		_state = state;
-	}
+        buf.position(offset + size);
+        return true;
+    }
 
-	public byte[] getBlowfishKey()
-	{
-		return _blowfishKey;
-	}
+    public LoginClientState getState() {
+        return _state;
+    }
 
-	public byte[] getScrambledModulus()
-	{
-		if(_scrambledPair == null || _scrambledPair._scrambledModulus == null)
-		{
-			closeNow(true);
-			return null;
-		}
+    public void setState(LoginClientState state) {
+        _state = state;
+    }
 
-		return _scrambledPair._scrambledModulus;
-	}
+    public byte[] getBlowfishKey() {
+        return _blowfishKey;
+    }
 
-	public RSAPrivateKey getRSAPrivateKey()
-	{
-		return (RSAPrivateKey) _scrambledPair._pair.getPrivate();
-	}
+    public byte[] getScrambledModulus() {
+        if (_scrambledPair == null || _scrambledPair._scrambledModulus == null) {
+            closeNow(true);
+            return null;
+        }
 
-	public String getAccount()
-	{
-		return _account;
-	}
+        return _scrambledPair._scrambledModulus;
+    }
 
-	public void setAccount(String account)
-	{
-		_account = account;
-	}
+    public RSAPrivateKey getRSAPrivateKey() {
+        return (RSAPrivateKey) _scrambledPair._pair.getPrivate();
+    }
 
-	public void setAccessLevel(int accessLevel)
-	{
-		_accessLevel = accessLevel;
-	}
+    public String getAccount() {
+        return _account;
+    }
 
-	public int getAccessLevel()
-	{
-		return _accessLevel;
-	}
+    public void setAccount(String account) {
+        _account = account;
+    }
 
-	public void setLastServer(int lastServer)
-	{
-		_lastServer = lastServer;
-	}
+    public void setAccessLevel(int accessLevel) {
+        _accessLevel = accessLevel;
+    }
 
-	public int getLastServer()
-	{
-		return _lastServer;
-	}
+    public int getAccessLevel() {
+        return _accessLevel;
+    }
 
-	public void setSessionId(int val)
-	{
-		_sessionId = val;
-	}
+    public void setLastServer(int lastServer) {
+        _lastServer = lastServer;
+    }
 
-	public int getSessionId()
-	{
-		return _sessionId;
-	}
+    public int getLastServer() {
+        return _lastServer;
+    }
 
-	public void setSessionKey(SessionKey sessionKey)
-	{
-		_sessionKey = sessionKey;
-	}
+    public void setSessionId(int val) {
+        _sessionId = val;
+    }
 
-	public SessionKey getSessionKey()
-	{
-		return _sessionKey;
-	}
+    public int getSessionId() {
+        return _sessionId;
+    }
 
-	public void sendPacket(L2LoginServerPacket lsp)
-	{
-		getConnection().sendPacket(lsp);
-	}
+    public void setSessionKey(SessionKey sessionKey) {
+        _sessionKey = sessionKey;
+    }
 
-	public void close(LoginFailReason reason)
-	{
-		if(getConnection() != null)
-			getConnection().close(new LoginFail(reason));
-	}
+    public SessionKey getSessionKey() {
+        return _sessionKey;
+    }
 
-	public void close(L2LoginServerPacket lsp)
-	{
-		if(getConnection() != null)
-			getConnection().close(lsp);
-	}
+    public void sendPacket(L2LoginServerPacket lsp) {
+        getConnection().sendPacket(lsp);
+    }
 
-	@Override
-	public void onDisconnection()
-	{
-		if(ConfigValue.Debug)
-		{
-			_log.info("DISCONNECTED: " + toString());
-			Util.test();
-		}
+    public void close(LoginFailReason reason) {
+        if (getConnection() != null)
+            getConnection().close(new LoginFail(reason));
+    }
 
-		LoginController lc = LoginController.getInstance();
-		if(getState() == LoginClientState.AUTHED_LOGIN && !PlayOK && _account != null && lc.isAccountInLoginServer(_account))
-			lc.removeAuthedLoginClient(_account);
+    public void close(L2LoginServerPacket lsp) {
+        if (getConnection() != null)
+            getConnection().close(lsp);
+    }
 
-		_loginCrypt = null;
-		_scrambledPair = null;
-		_blowfishKey = null;
+    @Override
+    public void onDisconnection() {
+        if (ConfigValue.Debug) {
+            _log.info("DISCONNECTED: " + toString());
+            Util.test();
+        }
 
-		super.onDisconnection();
-	}
+        LoginController lc = LoginController.getInstance();
+        if (getState() == LoginClientState.AUTHED_LOGIN && !PlayOK && _account != null && lc.isAccountInLoginServer(_account))
+            lc.removeAuthedLoginClient(_account);
+
+        _loginCrypt = null;
+        _scrambledPair = null;
+        _blowfishKey = null;
+
+        super.onDisconnection();
+    }
 
 	/*@Override
 	public String toString()
@@ -248,38 +214,32 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 			return "[" + getAccount() + " (" + (address == null ? "disconnected" : address.getHostAddress()) + ")]";
 		return "[" + (address == null ? "disconnected" : address.getHostAddress()) + "]";
 	}*/
-	
-	@Override
-	public String toString()
-	{
-		switch(_state)
-		{
-			case AUTHED_LOGIN:
-				return "[ Account : " + getAccount() + " IP: " + getIpAddress() + "]";
-			default:
-				return "[ State : " + getState() + " IP: " + getIpAddress() + "]";
-		}
-	}
 
-	public void setBonus(float value, int expire)
-	{
-		_bonus = value;
-		_bonusExpire = expire;
-	}
+    @Override
+    public String toString() {
+        switch (_state) {
+            case AUTHED_LOGIN:
+                return "[ Account : " + getAccount() + " IP: " + getIpAddress() + "]";
+            default:
+                return "[ State : " + getState() + " IP: " + getIpAddress() + "]";
+        }
+    }
 
-	public float getBonus()
-	{
-		return _bonus;
-	}
+    public void setBonus(float value, int expire) {
+        _bonus = value;
+        _bonusExpire = expire;
+    }
 
-	public int getBonusExpire()
-	{
-		return _bonusExpire;
-	}
+    public float getBonus() {
+        return _bonus;
+    }
 
-	public String getIpAddress()
-	{
-		return _ipAddr;
+    public int getBonusExpire() {
+        return _bonusExpire;
+    }
+
+    public String getIpAddress() {
+        return _ipAddr;
 		/*try
 		{
 			return getConnection().getSocket().getInetAddress().getHostAddress();
@@ -288,29 +248,25 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 		{
 			return "Null IP";
 		}*/
-	}
+    }
 
-	public void setCharsOnServ(int servId, int chars)
-	{
-		if(_charsOnServers == null)
-			_charsOnServers = new HashMap<Integer, Integer>();
-		_charsOnServers.put(servId, chars);
-	}
+    public void setCharsOnServ(int servId, int chars) {
+        if (_charsOnServers == null)
+            _charsOnServers = new HashMap<Integer, Integer>();
+        _charsOnServers.put(servId, chars);
+    }
 
-	public Map<Integer, Integer> getCharsOnServ()
-	{
-		return _charsOnServers;
-	}
+    public Map<Integer, Integer> getCharsOnServ() {
+        return _charsOnServers;
+    }
 
-	public void setCharsWaitingDelOnServ(int servId, long[] charsToDel)
-	{
-		if(_charsToDelete == null)
-			_charsToDelete = new HashMap<Integer, long[]>();
-		_charsToDelete.put(servId, charsToDel);
-	}
+    public void setCharsWaitingDelOnServ(int servId, long[] charsToDel) {
+        if (_charsToDelete == null)
+            _charsToDelete = new HashMap<Integer, long[]>();
+        _charsToDelete.put(servId, charsToDel);
+    }
 
-	public Map<Integer, long[]> getCharsWaitingDelOnServ()
-	{
-		return _charsToDelete;
-	}
+    public Map<Integer, long[]> getCharsWaitingDelOnServ() {
+        return _charsToDelete;
+    }
 }

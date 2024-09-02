@@ -205,6 +205,7 @@ public class ConfigValue {
     public static int ChampionRewardHigherLvlItemChance = 0;
     public static float AltRaidRespawnMultiplier = 1f;
     public static boolean AltExpForCraft = false;
+    public static boolean AltCraftMpConsume = false;
     public static int AugmentationNGSkillChance = 15;
     public static boolean PushkinSignsOptions = false;
     public static int ShutdownMsgType = 3;
@@ -533,6 +534,7 @@ public class ConfigValue {
     public static int[] FixRespHourOfAntharas = {};
     public static int[] FixRespHourOfBaium = {};
     public static int[] FixRespHourOfValakas = {};
+    public static int[] ValakasEnterLoc = {203940, -111840, 66};
     public static int FixRespDayOfWeekAntharas = -1;
     public static int FixRespDayOfWeekBaium = -1;
     public static int FixRespDayOfWeekValakas = -1;
@@ -937,6 +939,8 @@ public class ConfigValue {
     public static boolean EnableRewardForLoser = false;
     public static int RewardIdForLoser = 57;
     public static int RewardCountForLoser = 1000;
+
+    public static boolean HideOtherOlympiadPoints = false;
 
     /*************************** Enchant.properties ***************************/
     public static int EnchantMaxMasterYogi = 23;
@@ -2327,6 +2331,10 @@ public class ConfigValue {
     public static int AltManorMaintenancePeriod = 360000;
     public static int DiffPlayerMobPenalty = 5;
     public static int BasePercentChanceOfSowingSuccess = 90;
+    public static boolean EnableAgationSpoil = false;
+    public static boolean AgationSpoilOnlyPremiumAccount = false;
+    public static int[] AgationsIds = {};
+
 
     /*************************** telnet.properties ***************************/
     public static boolean EnableTelnet = false;
@@ -3173,6 +3181,8 @@ public class ConfigValue {
     public static boolean NoInvitePartyForPvp = false;
     public static boolean NoInviteTradeForPvp = false;
     public static boolean NoInviteFriendForPvp = false;
+    public static boolean AutoTrade = false;
+    public static boolean AutoJoinParty = false;
     public static int WakeUpBaiumTime = 0;
     public static int EnableLogDamage = 0;
     public static int LogDamageLevelDiff = 0;
@@ -5090,6 +5100,9 @@ public class ConfigValue {
     public static boolean HuntinFishing_CheckIp = false;
 
     public static double HitByPoleNextTargetMod = 0.85;
+    public static int AdjustPoleAngle = 0;
+    public static int AdjustPoleRange = 0;
+
     public static boolean Multi_Delevel = false;
     public static boolean FourGobletsSetItemInAllAggroList = false;
 

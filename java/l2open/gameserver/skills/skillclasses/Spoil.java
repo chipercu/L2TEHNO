@@ -14,16 +14,13 @@ import l2open.gameserver.templates.StatsSet;
 import l2open.util.GArray;
 import l2open.util.Rnd;
 
-public class Spoil extends L2Skill
-{
-    public Spoil(StatsSet set)
-	{
+public class Spoil extends L2Skill {
+    public Spoil(StatsSet set) {
         super(set);
     }
 
     @Override
-    public void useSkill(L2Character activeChar, GArray<L2Character> targets)
-	{
+    public void useSkill(L2Character activeChar, GArray<L2Character> targets) {
         if (!activeChar.isPlayer())
             return;
 
@@ -32,49 +29,44 @@ public class Spoil extends L2Skill
             activeChar.unChargeShots(false);
 
         for (L2Character target : targets)
-            if (target != null && !target.isDead())
-			{
+            if (target != null && !target.isDead()) {
                 if (target.isMonster())
                     if (((L2MonsterInstance) target).isSpoiled())
                         activeChar.sendPacket(Msg.ALREADY_SPOILED);
-                    else
-					{
+                    else {
                         L2MonsterInstance monster = (L2MonsterInstance) target;
                         boolean success;
-						int monsterLevel = monster.getLevel();
-						int modifier = Math.abs(monsterLevel - activeChar.getLevel());
-						double rateOfSpoil = ConfigValue.BasePercentChanceOfSpoilSuccess;
+                        int monsterLevel = monster.getLevel();
+                        int modifier = Math.abs(monsterLevel - activeChar.getLevel());
+                        double rateOfSpoil = ConfigValue.BasePercentChanceOfSpoilSuccess;
 
-						if (modifier > 8)
-							rateOfSpoil = rateOfSpoil - rateOfSpoil * (modifier - 8) * 9 / 100;
+                        if (modifier > 8)
+                            rateOfSpoil = rateOfSpoil - rateOfSpoil * (modifier - 8) * 9 / 100;
 
-						rateOfSpoil = rateOfSpoil * getMagicLevel() / monsterLevel;
+                        rateOfSpoil = rateOfSpoil * getMagicLevel() / monsterLevel;
 
-						if(getId() == 947)
-							rateOfSpoil = 99;
+                        if (getId() == 947)
+                            rateOfSpoil = 99;
 
-						if (rateOfSpoil < ConfigValue.MinimumPercentChanceOfSpoilSuccess)
-							rateOfSpoil = ConfigValue.MinimumPercentChanceOfSpoilSuccess; 
-						else if (rateOfSpoil > 99.)
-							rateOfSpoil = 99.;
+                        if (rateOfSpoil < ConfigValue.MinimumPercentChanceOfSpoilSuccess)
+                            rateOfSpoil = ConfigValue.MinimumPercentChanceOfSpoilSuccess;
+                        else if (rateOfSpoil > 99.)
+                            rateOfSpoil = 99.;
 
-						activeChar.sendMessage(new CustomMessage("l2open.gameserver.skills.skillclasses.Spoil.Chance", activeChar).addNumber((long) rateOfSpoil));
-						success = Rnd.chance(rateOfSpoil);
+                        activeChar.sendMessage(new CustomMessage("l2open.gameserver.skills.skillclasses.Spoil.Chance", activeChar).addNumber((long) rateOfSpoil));
+                        success = Rnd.chance(rateOfSpoil);
 
-                        if(success)
-						{
+                        if (success) {
                             monster.setSpoiled(true, (L2Player) activeChar);
                             activeChar.sendPacket(Msg.THE_SPOIL_CONDITION_HAS_BEEN_ACTIVATED);
-                        }
-						else
+                        } else
                             activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_FAILED).addSkillName(_id, getDisplayLevel()));
                     }
-                if (getPower() > 0)
-				{
+                if (getPower() > 0) {
                     double damage = isMagic() ? Formulas.calcMagicDam(activeChar, target, this, ss, false) : Formulas.calcPhysDam(activeChar, target, this, false, false, ss > 0, false, false, false).damage;
                     target.reduceCurrentHp(damage, activeChar, this, true, true, false, true, false, damage, true, false, false, false);
-					target.doCounterAttack(this, activeChar);
-					Formulas.calcLethalHit(activeChar,target,this);
+                    target.doCounterAttack(this, activeChar);
+                    Formulas.calcLethalHit(activeChar, target, this);
                 }
 
                 getEffects(activeChar, target, false, false);

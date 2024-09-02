@@ -255,6 +255,8 @@ public enum PlayerClass
 		subclassSetMap.put(GrandKhauatari, EnumSet.of(Tyrant));
 		subclassSetMap.put(Dominator, EnumSet.of(Overlord));
 		subclassSetMap.put(Doomcryer, EnumSet.of(Warcryer));
+		subclassSetMap.put(Warsmith, EnumSet.of(BountyHunter));
+		subclassSetMap.put(Maestro, EnumSet.of(BountyHunter));
 	}
 
 	PlayerClass(Race race, ClassType type, ClassLevel level)

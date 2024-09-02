@@ -19,6 +19,7 @@ public class GameCrypt
 
     public void decrypt(byte[] raw, final int offset, final int size)
 	{
+
         if (!_isEnabled)
             return;
 

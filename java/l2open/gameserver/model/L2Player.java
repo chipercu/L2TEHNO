@@ -1,129 +1,310 @@
 package l2open.gameserver.model;
 
-import com.google.gson.annotations.Expose;
-import l2open.gameserver.communitybbs.PartyMaker.PartyMaker;
-import l2open.gameserver.serverpackets.BlockList;
-import l2open.gameserver.serverpackets.ExBlockAddResult;
-import l2open.gameserver.serverpackets.ExBlockRemoveResult;
-import l2open.gameserver.serverpackets.ExVitalityEffectInfo;
-import org.apache.commons.lang3.tuple.ImmutablePair;
-import org.apache.commons.lang3.tuple.Pair;
-import l2open.gameserver.listener.actor.player.OnAnswerListener;
-
 import javolution.util.FastMap;
-
 import l2open.common.RunnableImpl;
 import l2open.common.ThreadPoolManager;
-import l2open.config.*;
-import l2open.database.*;
+import l2open.config.ConfigSystem;
+import l2open.config.ConfigValue;
+import l2open.database.mysql;
 import l2open.extensions.Bonus;
-import l2open.extensions.Stat;
-import l2open.extensions.listeners.MethodCollection;
 import l2open.extensions.multilang.CustomMessage;
 import l2open.extensions.network.SendablePacket;
 import l2open.extensions.scripts.Events;
 import l2open.extensions.scripts.Functions;
 import l2open.extensions.scripts.Scripts;
 import l2open.extensions.scripts.Scripts.ScriptClassAndMethod;
-import l2open.gameserver.GameStart;
 import l2open.gameserver.GameTimeController;
-import l2open.gameserver.RecipeController;
-import l2open.gameserver.ai.*;
+import l2open.gameserver.ai.CtrlEvent;
+import l2open.gameserver.ai.CtrlIntention;
+import l2open.gameserver.ai.DefaultAI;
+import l2open.gameserver.ai.L2CharacterAI;
+import l2open.gameserver.ai.L2PlayableAI;
 import l2open.gameserver.ai.L2PlayableAI.nextAction;
+import l2open.gameserver.ai.L2PlayerAI;
 import l2open.gameserver.cache.Msg;
 import l2open.gameserver.clientpackets.EnterWorld;
 import l2open.gameserver.clientpackets.Say2C;
-import l2open.gameserver.common.*;
-import l2open.gameserver.communitybbs.CommunityBoard;
+import l2open.gameserver.common.DifferentMethods;
 import l2open.gameserver.communitybbs.BB.Forum;
+import l2open.gameserver.communitybbs.CommunityBoard;
 import l2open.gameserver.communitybbs.Manager.ForumsBBSManager;
-import l2open.gameserver.geodata.*;
+import l2open.gameserver.communitybbs.PartyMaker.PartyMaker;
 import l2open.gameserver.handler.IItemHandler;
 import l2open.gameserver.handler.ItemHandler;
 import l2open.gameserver.idfactory.IdFactory;
-import l2open.gameserver.instancemanager.*;
+import l2open.gameserver.instancemanager.CastleManager;
+import l2open.gameserver.instancemanager.ClanHallManager;
+import l2open.gameserver.instancemanager.CoupleManager;
+import l2open.gameserver.instancemanager.CursedWeaponsManager;
+import l2open.gameserver.instancemanager.DimensionalRiftManager;
+import l2open.gameserver.instancemanager.FortressManager;
+import l2open.gameserver.instancemanager.FortressSiegeManager;
+import l2open.gameserver.instancemanager.HandysBlockCheckerManager;
+import l2open.gameserver.instancemanager.InstancedZoneManager;
+import l2open.gameserver.instancemanager.PartyRoomManager;
+import l2open.gameserver.instancemanager.PlayerLevelRewardManager;
+import l2open.gameserver.instancemanager.PlayerManager;
+import l2open.gameserver.instancemanager.PlayerRewardManager;
+import l2open.gameserver.instancemanager.QuestManager;
+import l2open.gameserver.instancemanager.SiegeManager;
+import l2open.gameserver.instancemanager.ZoneManager;
+import l2open.gameserver.listener.PlayerListenerList;
+import l2open.gameserver.listener.actor.player.OnAnswerListener;
 import l2open.gameserver.loginservercon.LSConnection;
 import l2open.gameserver.loginservercon.gspackets.ChangeAccessLevel;
 import l2open.gameserver.model.BypassManager.BypassType;
 import l2open.gameserver.model.BypassManager.DecodedBypass;
 import l2open.gameserver.model.L2Multisell.MultiSellListContainer;
-import l2open.gameserver.model.L2ObjectTasks.*;
+import l2open.gameserver.model.L2ObjectTasks.AutoCpTask;
+import l2open.gameserver.model.L2ObjectTasks.BonusTask;
+import l2open.gameserver.model.L2ObjectTasks.BonusTask2;
+import l2open.gameserver.model.L2ObjectTasks.BotCheck;
+import l2open.gameserver.model.L2ObjectTasks.BroadcastCharInfoTask;
+import l2open.gameserver.model.L2ObjectTasks.EnchantResetCount;
+import l2open.gameserver.model.L2ObjectTasks.EndSitDownTask;
+import l2open.gameserver.model.L2ObjectTasks.EndStandUpTask;
+import l2open.gameserver.model.L2ObjectTasks.InventoryEnableTask;
+import l2open.gameserver.model.L2ObjectTasks.KickTask;
+import l2open.gameserver.model.L2ObjectTasks.LookingForFishTask;
+import l2open.gameserver.model.L2ObjectTasks.PvPFlagTask;
+import l2open.gameserver.model.L2ObjectTasks.ReturnTerritoryFlagTask;
+import l2open.gameserver.model.L2ObjectTasks.TeleportTask;
+import l2open.gameserver.model.L2ObjectTasks.UserInfoTask;
+import l2open.gameserver.model.L2ObjectTasks.WaterTask;
 import l2open.gameserver.model.L2Skill.AddedSkill;
-import l2open.gameserver.model.L2Skill.SkillType;
 import l2open.gameserver.model.L2Skill.SkillTargetType;
+import l2open.gameserver.model.L2Skill.SkillType;
 import l2open.gameserver.model.L2Zone.ZoneType;
-import l2open.gameserver.model.barahlo.*;
-import l2open.gameserver.model.barahlo.academ.*;
-import l2open.gameserver.model.barahlo.academ.dao.*;
-import l2open.gameserver.model.barahlo.attainment.*;
-import l2open.gameserver.model.base.*;
+import l2open.gameserver.model.barahlo.CBBuffSch;
+import l2open.gameserver.model.barahlo.CBBuffSchemePerform;
+import l2open.gameserver.model.barahlo.CBTpSch;
+import l2open.gameserver.model.barahlo.ProtectFunction;
+import l2open.gameserver.model.barahlo.academ.Academicians;
+import l2open.gameserver.model.barahlo.academ.AcademiciansStorage;
+import l2open.gameserver.model.barahlo.academ.AcademyRequest;
+import l2open.gameserver.model.barahlo.academ.AcademyStorage;
+import l2open.gameserver.model.barahlo.academ.dao.AcademiciansDAO;
+import l2open.gameserver.model.barahlo.academ.dao.AcademyRequestDAO;
+import l2open.gameserver.model.barahlo.attainment.Attainment;
+import l2open.gameserver.model.base.ClassId;
+import l2open.gameserver.model.base.Experience;
+import l2open.gameserver.model.base.L2EnchantSkillLearn;
+import l2open.gameserver.model.base.PlayerAccess;
+import l2open.gameserver.model.base.Race;
+import l2open.gameserver.model.base.Transaction;
 import l2open.gameserver.model.base.Transaction.TransactionType;
-import l2open.gameserver.model.entity.*;
+import l2open.gameserver.model.entity.BlockCheckerEngine;
+import l2open.gameserver.model.entity.DimensionalRift;
+import l2open.gameserver.model.entity.Duel;
 import l2open.gameserver.model.entity.Duel.DuelState;
+import l2open.gameserver.model.entity.NevitBlessing;
+import l2open.gameserver.model.entity.Recommendation;
 import l2open.gameserver.model.entity.SevenSignsFestival.DarknessFestival;
 import l2open.gameserver.model.entity.olympiad.CompType;
 import l2open.gameserver.model.entity.olympiad.Olympiad;
 import l2open.gameserver.model.entity.olympiad.OlympiadGame;
-import l2open.gameserver.model.entity.residence.*;
+import l2open.gameserver.model.entity.residence.Castle;
+import l2open.gameserver.model.entity.residence.ClanHall;
+import l2open.gameserver.model.entity.residence.Fortress;
+import l2open.gameserver.model.entity.residence.Residence;
+import l2open.gameserver.model.entity.residence.ResidenceType;
 import l2open.gameserver.model.entity.siege.Siege;
 import l2open.gameserver.model.entity.siege.territory.TerritorySiege;
 import l2open.gameserver.model.entity.vehicle.L2AirShip;
 import l2open.gameserver.model.entity.vehicle.L2Ship;
 import l2open.gameserver.model.entity.vehicle.L2Vehicle;
-import l2open.gameserver.model.instances.*;
-import l2open.gameserver.model.items.*;
+import l2open.gameserver.model.instances.L2AgathionInstance;
+import l2open.gameserver.model.instances.L2ClanHallManagerInstance;
+import l2open.gameserver.model.instances.L2DecoyInstance;
+import l2open.gameserver.model.instances.L2DoorInstance;
+import l2open.gameserver.model.instances.L2FestivalMonsterInstance;
+import l2open.gameserver.model.instances.L2GuardInstance;
+import l2open.gameserver.model.instances.L2HennaInstance;
+import l2open.gameserver.model.instances.L2MinionInstance;
+import l2open.gameserver.model.instances.L2MonsterInstance;
+import l2open.gameserver.model.instances.L2NpcInstance;
+import l2open.gameserver.model.instances.L2PetInstance;
+import l2open.gameserver.model.instances.L2StaticObjectInstance;
+import l2open.gameserver.model.instances.L2TamedBeastInstance;
+import l2open.gameserver.model.instances.L2TerritoryFlagInstance;
+import l2open.gameserver.model.instances.L2TrapInstance;
+import l2open.gameserver.model.items.Inventory;
+import l2open.gameserver.model.items.L2ItemInstance;
 import l2open.gameserver.model.items.L2ItemInstance.ItemLocation;
-import l2open.gameserver.model.items.MailParcelController.Letter;
+import l2open.gameserver.model.items.MailParcelController;
+import l2open.gameserver.model.items.PcFreight;
+import l2open.gameserver.model.items.PcInventory;
+import l2open.gameserver.model.items.PcWarehouse;
+import l2open.gameserver.model.items.Warehouse;
 import l2open.gameserver.model.items.Warehouse.WarehouseType;
 import l2open.gameserver.model.quest.Quest;
 import l2open.gameserver.model.quest.QuestEventType;
 import l2open.gameserver.model.quest.QuestState;
 import l2open.gameserver.network.L2GameClient;
-import l2open.gameserver.serverpackets.*;
+import l2open.gameserver.serverpackets.AbnormalStatusUpdate;
+import l2open.gameserver.serverpackets.BlockList;
+import l2open.gameserver.serverpackets.CameraMode;
+import l2open.gameserver.serverpackets.ChangeWaitType;
+import l2open.gameserver.serverpackets.CharInfo;
+import l2open.gameserver.serverpackets.CharMoveToLocation;
+import l2open.gameserver.serverpackets.ConfirmDlg;
+import l2open.gameserver.serverpackets.DeleteObject;
+import l2open.gameserver.serverpackets.DropItem;
+import l2open.gameserver.serverpackets.EnchantResult;
+import l2open.gameserver.serverpackets.EtcStatusUpdate;
+import l2open.gameserver.serverpackets.ExAirShipInfo;
+import l2open.gameserver.serverpackets.ExAutoSoulShot;
+import l2open.gameserver.serverpackets.ExBR_AgathionEnergyInfoPacket;
+import l2open.gameserver.serverpackets.ExBasicActionList;
+import l2open.gameserver.serverpackets.ExBlockAddResult;
+import l2open.gameserver.serverpackets.ExBlockRemoveResult;
+import l2open.gameserver.serverpackets.ExBrExtraUserInfo;
+import l2open.gameserver.serverpackets.ExChangeNpcState;
+import l2open.gameserver.serverpackets.ExDominionWarStart;
+import l2open.gameserver.serverpackets.ExDuelUpdateUserInfo;
+import l2open.gameserver.serverpackets.ExFishingEnd;
+import l2open.gameserver.serverpackets.ExFishingStart;
+import l2open.gameserver.serverpackets.ExGetOnAirShip;
+import l2open.gameserver.serverpackets.ExMoveToLocationAirShip;
+import l2open.gameserver.serverpackets.ExOlympiadMatchEnd;
+import l2open.gameserver.serverpackets.ExOlympiadMode;
+import l2open.gameserver.serverpackets.ExOlympiadSpelledInfo;
+import l2open.gameserver.serverpackets.ExPCCafePointInfo;
+import l2open.gameserver.serverpackets.ExSetCompassZoneCode;
+import l2open.gameserver.serverpackets.ExStartScenePlayer;
+import l2open.gameserver.serverpackets.ExStorageMaxCount;
+import l2open.gameserver.serverpackets.ExUseSharedGroupItem;
+import l2open.gameserver.serverpackets.ExVitalityEffectInfo;
+import l2open.gameserver.serverpackets.ExVoteSystemInfo;
+import l2open.gameserver.serverpackets.GetItem;
+import l2open.gameserver.serverpackets.GetOnVehicle;
+import l2open.gameserver.serverpackets.HennaInfo;
+import l2open.gameserver.serverpackets.InventoryUpdate;
+import l2open.gameserver.serverpackets.ItemList;
+import l2open.gameserver.serverpackets.L2GameServerPacket;
+import l2open.gameserver.serverpackets.MagicSkillUse;
+import l2open.gameserver.serverpackets.MyTargetSelected;
+import l2open.gameserver.serverpackets.NpcHtmlMessage;
+import l2open.gameserver.serverpackets.NpcInfo;
+import l2open.gameserver.serverpackets.ObserverEnd;
+import l2open.gameserver.serverpackets.ObserverStart;
+import l2open.gameserver.serverpackets.PartySmallWindowUpdate;
+import l2open.gameserver.serverpackets.PartySpelled;
+import l2open.gameserver.serverpackets.PetInfo;
+import l2open.gameserver.serverpackets.PetItemList;
+import l2open.gameserver.serverpackets.PlaySound;
+import l2open.gameserver.serverpackets.PledgeShowMemberListDelete;
+import l2open.gameserver.serverpackets.PledgeShowMemberListUpdate;
+import l2open.gameserver.serverpackets.PrivateStoreListBuy;
+import l2open.gameserver.serverpackets.PrivateStoreListSell;
+import l2open.gameserver.serverpackets.PrivateStoreMsgBuy;
+import l2open.gameserver.serverpackets.PrivateStoreMsgSell;
+import l2open.gameserver.serverpackets.QuestList;
+import l2open.gameserver.serverpackets.RecipeShopMsg;
+import l2open.gameserver.serverpackets.RecipeShopSellList;
+import l2open.gameserver.serverpackets.RelationChanged;
+import l2open.gameserver.serverpackets.Ride;
+import l2open.gameserver.serverpackets.Say2;
+import l2open.gameserver.serverpackets.SendTradeDone;
+import l2open.gameserver.serverpackets.SetupGauge;
+import l2open.gameserver.serverpackets.ShortBuffStatusUpdate;
+import l2open.gameserver.serverpackets.ShortCutInit;
+import l2open.gameserver.serverpackets.ShortCutRegister;
+import l2open.gameserver.serverpackets.ShowBoard;
+import l2open.gameserver.serverpackets.SkillCoolTime;
+import l2open.gameserver.serverpackets.SkillList;
+import l2open.gameserver.serverpackets.Snoop;
+import l2open.gameserver.serverpackets.SocialAction;
+import l2open.gameserver.serverpackets.SpawnItem;
+import l2open.gameserver.serverpackets.SpawnItemPoly;
+import l2open.gameserver.serverpackets.StaticObject;
+import l2open.gameserver.serverpackets.StatusUpdate;
+import l2open.gameserver.serverpackets.SystemMessage;
+import l2open.gameserver.serverpackets.TargetSelected;
+import l2open.gameserver.serverpackets.TargetUnselected;
+import l2open.gameserver.serverpackets.TeleportToLocation;
+import l2open.gameserver.serverpackets.UserInfo;
+import l2open.gameserver.serverpackets.ValidateLocation;
+import l2open.gameserver.serverpackets.VehicleDeparture;
+import l2open.gameserver.serverpackets.VehicleInfo;
 import l2open.gameserver.skills.EffectType;
 import l2open.gameserver.skills.Env;
 import l2open.gameserver.skills.SkillAbnormalType;
 import l2open.gameserver.skills.SkillTimeStamp;
 import l2open.gameserver.skills.Stats;
-import l2open.gameserver.skills.skillclasses.Call;
 import l2open.gameserver.skills.effects.EffectTemplate;
-import l2open.gameserver.skills.funcs.FuncAdd;
+import l2open.gameserver.skills.skillclasses.Call;
 import l2open.gameserver.skills.skillclasses.Charge;
 import l2open.gameserver.skills.skillclasses.Transformation;
-import l2open.gameserver.tables.*;
-import l2open.gameserver.tables.player.*;
-import l2open.gameserver.taskmanager.AutoSaveManager;
+import l2open.gameserver.tables.CharTemplateTable;
+import l2open.gameserver.tables.ClanTable;
+import l2open.gameserver.tables.MapRegion;
+import l2open.gameserver.tables.NpcTable;
+import l2open.gameserver.tables.PetDataTable;
+import l2open.gameserver.tables.ReflectionTable;
+import l2open.gameserver.tables.SkillTable;
+import l2open.gameserver.tables.SkillTreeTable;
+import l2open.gameserver.tables.player.PlayerData;
 import l2open.gameserver.taskmanager.AttainmentTaskManager;
-import l2open.gameserver.taskmanager.BreakWarnManager;
 import l2open.gameserver.taskmanager.LazyPrecisionTaskManager;
 import l2open.gameserver.taskmanager.VitalityManager;
-import l2open.gameserver.templates.*;
+import l2open.gameserver.templates.L2Armor;
 import l2open.gameserver.templates.L2Armor.ArmorType;
+import l2open.gameserver.templates.L2Item;
+import l2open.gameserver.templates.L2PlayerTemplate;
+import l2open.gameserver.templates.L2Weapon;
 import l2open.gameserver.templates.L2Weapon.WeaponType;
 import l2open.gameserver.xml.ItemTemplates;
-import l2open.util.*;
+import l2open.util.ArrayUtils;
+import l2open.util.AutoBan;
+import l2open.util.EffectsComparator;
+import l2open.util.Files;
+import l2open.util.GArray;
+import l2open.util.Location;
+import l2open.util.Log;
+import l2open.util.RateService;
+import l2open.util.Rnd;
+import l2open.util.Util;
 import l2open.util.reference.HardReference;
-
+import l2open.util.РазноеГовно;
 import org.apache.commons.lang3.math.NumberUtils;
+import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.tuple.Pair;
 import org.napile.primitive.Containers;
 import org.napile.primitive.maps.IntObjectMap;
 
 import java.awt.*;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Map.Entry;
-import java.util.concurrent.*;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.ConcurrentSkipListSet;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.Future;
+import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import l2open.gameserver.listener.PlayerListenerList;
-
-import static l2open.gameserver.model.L2Zone.ZoneType.*;
+import static l2open.gameserver.model.L2Zone.ZoneType.Siege;
+import static l2open.gameserver.model.L2Zone.ZoneType.damage;
+import static l2open.gameserver.model.L2Zone.ZoneType.epic;
+import static l2open.gameserver.model.L2Zone.ZoneType.instant_skill;
+import static l2open.gameserver.model.L2Zone.ZoneType.no_landing;
+import static l2open.gameserver.model.L2Zone.ZoneType.other;
+import static l2open.gameserver.model.L2Zone.ZoneType.peace_zone;
+import static l2open.gameserver.model.L2Zone.ZoneType.poison;
+import static l2open.gameserver.model.L2Zone.ZoneType.set_fame;
+import static l2open.gameserver.model.L2Zone.ZoneType.ssq_zone;
+import static l2open.gameserver.model.L2Zone.ZoneType.swamp;
 
 public class L2Player extends L2Playable {
     protected static final Logger _log = Logger.getLogger(L2Player.class.getName());
@@ -595,8 +776,11 @@ public class L2Player extends L2Playable {
     public void doAttack(final L2Character target, boolean force) {
         super.doAttack(target, force);
 
-        if (_agathion != null)
+        if (_agathion != null) {
             _agathion.doAction(target);
+            _agathion.doSweep(target);
+        }
+
     }
 
     @Override
@@ -617,11 +801,15 @@ public class L2Player extends L2Playable {
             sendPacket(new ExUseSharedGroupItem(getUseSeed(), getUseSeed(), 5000, 5000));
 
         if (skill.isOffensive() && target != null) {
-            for (L2Cubic cubic : getCubics())
-                if (cubic.getTargetType().startsWith("target") || cubic.getTargetType().startsWith("by_skill"))
+            for (L2Cubic cubic : getCubics()) {
+                if (cubic.getTargetType().startsWith("target") || cubic.getTargetType().startsWith("by_skill")) {
                     cubic.startAttack(target);
-            if (_agathion != null)
+                }
+            }
+            if (_agathion != null) {
                 _agathion.doAction(target);
+                _agathion.doSweep(target);
+            }
         }
     }
 
@@ -2725,8 +2913,9 @@ public class L2Player extends L2Playable {
                 getParty().distributeAdena(item, this);
             } else {
                 // Нужно обязательно сначало удалить предмет с земли.
-                if (!item.pickupMe(null))
+                if (!item.pickupMe(null)) {
                     return;
+                }
                 getParty().distributeItem(this, item);
             }
 
@@ -4842,11 +5031,13 @@ public class L2Player extends L2Playable {
 
         // Add or update a L2Player skill in the character_skills table of the database
         if (store) {
-            if (ConfigValue.DebugSkillAdd2)
+            if (ConfigValue.DebugSkillAdd2) {
                 Log.logTrace("ADD_STORE|" + newSkill + "|" + oldSkill, "add_skill", getName());
+            }
             PlayerData.getInstance().storeSkill(this, newSkill, oldSkill);
-        } else if (ConfigValue.DebugSkillAdd1)
+        } else if (ConfigValue.DebugSkillAdd1) {
             Log.logTrace("ADD|" + newSkill, "add_skill_no_store2", getName());
+        }
 
         return oldSkill;
     }
